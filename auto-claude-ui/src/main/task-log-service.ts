@@ -7,15 +7,21 @@ import type { TaskLogs, TaskLogPhase, TaskLogStreamChunk, TaskPhaseLog } from '.
  * Service for loading and watching phase-based task logs (task_logs.json)
  *
  * This service provides:
- * - Loading logs from the spec directory
+ * - Loading logs from the spec directory (and worktree spec directory when active)
  * - Watching for log file changes
  * - Emitting streaming updates when logs change
  * - Determining which phase is currently active
+ *
+ * Note: When a task runs in isolated mode (worktrees), the build logs are written to
+ * the worktree's spec directory, not the main project's spec directory. This service
+ * watches both locations and merges logs from both sources.
  */
 export class TaskLogService extends EventEmitter {
   private watchers: Map<string, { watcher: ReturnType<typeof watchFile>; specDir: string }> = new Map();
   private logCache: Map<string, TaskLogs> = new Map();
   private pollIntervals: Map<string, NodeJS.Timeout> = new Map();
+  // Store paths being watched for each specId (main + worktree)
+  private watchedPaths: Map<string, { mainSpecDir: string; worktreeSpecDir: string | null; specsRelPath: string }> = new Map();
 
   // Poll interval for watching log changes (more reliable than fs.watch on some systems)
   private readonly POLL_INTERVAL_MS = 1000;
@@ -25,9 +31,9 @@ export class TaskLogService extends EventEmitter {
   }
 
   /**
-   * Load task logs from a spec directory
+   * Load task logs from a single spec directory
    */
-  loadLogs(specDir: string): TaskLogs | null {
+  loadLogsFromPath(specDir: string): TaskLogs | null {
     const logFile = path.join(specDir, 'task_logs.json');
 
     if (!existsSync(logFile)) {
@@ -37,12 +43,89 @@ export class TaskLogService extends EventEmitter {
     try {
       const content = readFileSync(logFile, 'utf-8');
       const logs = JSON.parse(content) as TaskLogs;
-      this.logCache.set(specDir, logs);
       return logs;
     } catch (error) {
       console.error(`[TaskLogService] Failed to load logs from ${logFile}:`, error);
       return null;
     }
+  }
+
+  /**
+   * Merge logs from main and worktree spec directories
+   */
+  private mergeLogs(mainLogs: TaskLogs | null, worktreeLogs: TaskLogs | null, specDir: string): TaskLogs | null {
+    if (!worktreeLogs) {
+      if (mainLogs) {
+        this.logCache.set(specDir, mainLogs);
+      }
+      return mainLogs;
+    }
+
+    if (!mainLogs) {
+      this.logCache.set(specDir, worktreeLogs);
+      return worktreeLogs;
+    }
+
+    // Merge logs: planning from main, coding/validation from worktree (if available)
+    const mergedLogs: TaskLogs = {
+      spec_id: mainLogs.spec_id,
+      created_at: mainLogs.created_at,
+      updated_at: worktreeLogs.updated_at > mainLogs.updated_at ? worktreeLogs.updated_at : mainLogs.updated_at,
+      phases: {
+        planning: mainLogs.phases.planning || worktreeLogs.phases.planning,
+        // Use worktree logs for coding/validation if they have entries, otherwise fall back to main
+        coding: (worktreeLogs.phases.coding?.entries?.length > 0 || worktreeLogs.phases.coding?.status !== 'pending')
+          ? worktreeLogs.phases.coding
+          : mainLogs.phases.coding,
+        validation: (worktreeLogs.phases.validation?.entries?.length > 0 || worktreeLogs.phases.validation?.status !== 'pending')
+          ? worktreeLogs.phases.validation
+          : mainLogs.phases.validation
+      }
+    };
+
+    this.logCache.set(specDir, mergedLogs);
+    return mergedLogs;
+  }
+
+  /**
+   * Load and merge task logs from main spec dir and worktree spec dir
+   * Planning phase logs are in main spec dir, coding/validation logs may be in worktree
+   *
+   * @param specDir - Main project spec directory
+   * @param projectPath - Optional: Project root path (needed to find worktree if not registered)
+   * @param specsRelPath - Optional: Relative path to specs (e.g., "auto-claude/specs")
+   * @param specId - Optional: Spec ID (needed to find worktree if not registered)
+   */
+  loadLogs(specDir: string, projectPath?: string, specsRelPath?: string, specId?: string): TaskLogs | null {
+    // First try to load from main spec dir
+    const mainLogs = this.loadLogsFromPath(specDir);
+
+    // Check if we have worktree paths registered for this spec
+    const watchedInfo = Array.from(this.watchedPaths.entries()).find(
+      ([_, info]) => info.mainSpecDir === specDir
+    );
+
+    let worktreeSpecDir: string | null = null;
+
+    if (watchedInfo && watchedInfo[1].worktreeSpecDir) {
+      worktreeSpecDir = watchedInfo[1].worktreeSpecDir;
+    } else if (projectPath && specsRelPath && specId) {
+      // Calculate worktree path from provided params
+      worktreeSpecDir = path.join(projectPath, '.worktrees', specId, specsRelPath, specId);
+    }
+
+    if (!worktreeSpecDir) {
+      // No worktree info available
+      if (mainLogs) {
+        this.logCache.set(specDir, mainLogs);
+      }
+      return mainLogs;
+    }
+
+    // Try to load from worktree spec dir
+    const worktreeLogs = this.loadLogsFromPath(worktreeSpecDir);
+
+    return this.mergeLogs(mainLogs, worktreeLogs, specDir);
   }
 
   /**
@@ -72,52 +155,114 @@ export class TaskLogService extends EventEmitter {
 
   /**
    * Start watching a spec directory for log changes
+   * Also watches the worktree spec directory if it exists (for coding/validation phases)
+   *
+   * @param specId - The spec ID (e.g., "013-screenshots-on-tasks")
+   * @param specDir - Main project spec directory
+   * @param projectPath - Optional: Project root path (needed to find worktree)
+   * @param specsRelPath - Optional: Relative path to specs (e.g., "auto-claude/specs")
    */
-  startWatching(specId: string, specDir: string): void {
+  startWatching(specId: string, specDir: string, projectPath?: string, specsRelPath?: string): void {
     // Stop any existing watch
     this.stopWatching(specId);
 
-    const logFile = path.join(specDir, 'task_logs.json');
-    let lastContent = '';
+    const mainLogFile = path.join(specDir, 'task_logs.json');
 
-    // Initial load
-    if (existsSync(logFile)) {
+    // Calculate worktree spec directory path if we have project info
+    // Worktree structure: .worktrees/{specId}/{specsRelPath}/{specId}/
+    let worktreeSpecDir: string | null = null;
+    if (projectPath && specsRelPath) {
+      worktreeSpecDir = path.join(projectPath, '.worktrees', specId, specsRelPath, specId);
+    }
+
+    // Store watched paths for this specId
+    this.watchedPaths.set(specId, {
+      mainSpecDir: specDir,
+      worktreeSpecDir,
+      specsRelPath: specsRelPath || ''
+    });
+
+    let lastMainContent = '';
+    let lastWorktreeContent = '';
+
+    // Initial load from main spec dir
+    if (existsSync(mainLogFile)) {
       try {
-        lastContent = readFileSync(logFile, 'utf-8');
-        this.logCache.set(specDir, JSON.parse(lastContent));
+        lastMainContent = readFileSync(mainLogFile, 'utf-8');
       } catch (e) {
         // Ignore parse errors on initial load
       }
     }
 
-    // Poll for changes (more reliable than fs.watch across platforms)
+    // Initial load from worktree spec dir
+    if (worktreeSpecDir) {
+      const worktreeLogFile = path.join(worktreeSpecDir, 'task_logs.json');
+      if (existsSync(worktreeLogFile)) {
+        try {
+          lastWorktreeContent = readFileSync(worktreeLogFile, 'utf-8');
+        } catch (e) {
+          // Ignore parse errors on initial load
+        }
+      }
+    }
+
+    // Do initial merged load
+    const initialLogs = this.loadLogs(specDir);
+    if (initialLogs) {
+      this.logCache.set(specDir, initialLogs);
+    }
+
+    // Poll for changes in both locations
     const pollInterval = setInterval(() => {
-      if (!existsSync(logFile)) {
-        return;
+      let mainChanged = false;
+      let worktreeChanged = false;
+
+      // Check main spec dir
+      if (existsSync(mainLogFile)) {
+        try {
+          const currentContent = readFileSync(mainLogFile, 'utf-8');
+          if (currentContent !== lastMainContent) {
+            lastMainContent = currentContent;
+            mainChanged = true;
+          }
+        } catch (error) {
+          // Ignore read/parse errors
+        }
       }
 
-      try {
-        const currentContent = readFileSync(logFile, 'utf-8');
+      // Check worktree spec dir
+      if (worktreeSpecDir) {
+        const worktreeLogFile = path.join(worktreeSpecDir, 'task_logs.json');
+        if (existsSync(worktreeLogFile)) {
+          try {
+            const currentContent = readFileSync(worktreeLogFile, 'utf-8');
+            if (currentContent !== lastWorktreeContent) {
+              lastWorktreeContent = currentContent;
+              worktreeChanged = true;
+            }
+          } catch (error) {
+            // Ignore read/parse errors
+          }
+        }
+      }
 
-        if (currentContent !== lastContent) {
-          lastContent = currentContent;
-          const logs = JSON.parse(currentContent) as TaskLogs;
-          const previousLogs = this.logCache.get(specDir);
-          this.logCache.set(specDir, logs);
+      // If either file changed, reload and emit
+      if (mainChanged || worktreeChanged) {
+        const previousLogs = this.logCache.get(specDir);
+        const logs = this.loadLogs(specDir);
 
-          // Emit change event with the new logs
+        if (logs) {
+          // Emit change event with the merged logs
           this.emit('logs-changed', specId, logs);
 
           // Calculate and emit streaming chunks for new entries
           this.emitNewEntries(specId, previousLogs, logs);
         }
-      } catch (error) {
-        // Ignore read/parse errors (file might be mid-write)
       }
     }, this.POLL_INTERVAL_MS);
 
     this.pollIntervals.set(specId, pollInterval);
-    console.log(`[TaskLogService] Started watching ${specId}`);
+    console.log(`[TaskLogService] Started watching ${specId} (main: ${specDir}${worktreeSpecDir ? `, worktree: ${worktreeSpecDir}` : ''})`);
   }
 
   /**
@@ -128,6 +273,7 @@ export class TaskLogService extends EventEmitter {
     if (interval) {
       clearInterval(interval);
       this.pollIntervals.delete(specId);
+      this.watchedPaths.delete(specId);
       console.log(`[TaskLogService] Stopped watching ${specId}`);
     }
   }

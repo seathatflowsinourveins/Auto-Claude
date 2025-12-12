@@ -1162,7 +1162,7 @@ export interface ElectronAPI {
   // Per-spec architecture: Each spec has its own worktree at .worktrees/{spec-name}/
   getWorktreeStatus: (taskId: string) => Promise<IPCResult<WorktreeStatus>>;
   getWorktreeDiff: (taskId: string) => Promise<IPCResult<WorktreeDiff>>;
-  mergeWorktree: (taskId: string) => Promise<IPCResult<WorktreeMergeResult>>;
+  mergeWorktree: (taskId: string, options?: { noCommit?: boolean }) => Promise<IPCResult<WorktreeMergeResult>>;
   discardWorktree: (taskId: string) => Promise<IPCResult<WorktreeDiscardResult>>;
   listWorktrees: (projectId: string) => Promise<IPCResult<WorktreeListResult>>;
 

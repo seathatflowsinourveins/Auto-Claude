@@ -1754,6 +1754,7 @@ export function setupIpcHandlers(
   /**
    * Get task logs from spec directory
    * Returns logs organized by phase (planning, coding, validation)
+   * Also checks worktree spec directory for coding/validation logs
    */
   ipcMain.handle(
     IPC_CHANNELS.TASK_LOGS_GET,
@@ -1772,7 +1773,8 @@ export function setupIpcHandlers(
           return { success: false, error: 'Spec directory not found' };
         }
 
-        const logs = taskLogService.loadLogs(specDir);
+        // Pass project path and specs path so logs can be loaded from worktree too
+        const logs = taskLogService.loadLogs(specDir, project.path, specsRelPath, specId);
         return { success: true, data: logs };
       } catch (error) {
         console.error('Failed to get task logs:', error);
@@ -1805,7 +1807,9 @@ export function setupIpcHandlers(
           return { success: false, error: 'Spec directory not found' };
         }
 
-        taskLogService.startWatching(specId, specDir);
+        // Pass project path and specs relative path so the service can also watch
+        // the worktree spec directory (where coding/validation logs are written)
+        taskLogService.startWatching(specId, specDir, project.path, specsRelPath);
         return { success: true };
       } catch (error) {
         console.error('Failed to start watching task logs:', error);

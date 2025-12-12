@@ -35,6 +35,42 @@ Extract from requirements.json:
 
 ---
 
+## WORKFLOW TYPES
+
+Determine the type of work being requested:
+
+### FEATURE
+- Adding new functionality to the codebase
+- Enhancing existing features with new capabilities
+- Building new UI components, API endpoints, or services
+- Examples: "Add screenshot paste", "Build user dashboard", "Create new API endpoint"
+
+### REFACTOR
+- Replacing existing functionality with a new implementation
+- Migrating from one system/pattern to another
+- Reorganizing code structure while preserving behavior
+- Examples: "Migrate auth from sessions to JWT", "Refactor cache layer to use Redis", "Replace REST with GraphQL"
+
+### INVESTIGATION
+- Debugging unknown issues
+- Root cause analysis for bugs
+- Performance investigations
+- Examples: "Find why page loads slowly", "Debug intermittent crash", "Investigate memory leak"
+
+### MIGRATION
+- Data migrations between systems
+- Database schema changes with data transformation
+- Import/export operations
+- Examples: "Migrate user data to new schema", "Import legacy records", "Export analytics to data warehouse"
+
+### SIMPLE
+- Very small, well-defined changes
+- Single file modifications
+- No architectural decisions needed
+- Examples: "Fix typo", "Update button color", "Change error message"
+
+---
+
 ## COMPLEXITY TIERS
 
 ### SIMPLE
@@ -157,6 +193,7 @@ Create `complexity_assessment.json`:
 cat > complexity_assessment.json << 'EOF'
 {
   "complexity": "[simple|standard|complex]",
+  "workflow_type": "[feature|refactor|investigation|migration|simple]",
   "confidence": [0.0-1.0],
   "reasoning": "[2-3 sentence explanation]",
   
@@ -249,6 +286,7 @@ START
 ```json
 {
   "complexity": "simple",
+  "workflow_type": "simple",
   "confidence": 0.95,
   "reasoning": "Single file UI change with no dependencies or infrastructure impact.",
   "analysis": {
@@ -276,7 +314,7 @@ START
 }
 ```
 
-### Example 2: Standard Task
+### Example 2: Standard Feature Task
 
 **Task**: "Add a new /api/users endpoint that returns paginated user list"
 
@@ -284,6 +322,7 @@ START
 ```json
 {
   "complexity": "standard",
+  "workflow_type": "feature",
   "confidence": 0.85,
   "reasoning": "New API endpoint following existing patterns. Multiple files but contained to backend service.",
   "analysis": {
@@ -306,7 +345,7 @@ START
 }
 ```
 
-### Example 3: Standard + Research Task
+### Example 3: Standard Feature + Research Task
 
 **Task**: "Add Stripe payment integration for subscriptions"
 
@@ -314,6 +353,7 @@ START
 ```json
 {
   "complexity": "standard",
+  "workflow_type": "feature",
   "confidence": 0.80,
   "reasoning": "Single well-documented integration (Stripe). Needs research for correct API usage but scope is contained.",
   "analysis": {
@@ -336,7 +376,38 @@ START
 }
 ```
 
-### Example 4: Complex Task
+### Example 4: Refactor Task
+
+**Task**: "Migrate authentication from session cookies to JWT tokens"
+
+**Assessment**:
+```json
+{
+  "complexity": "standard",
+  "workflow_type": "refactor",
+  "confidence": 0.85,
+  "reasoning": "Replacing existing auth system with JWT. Requires careful migration to avoid breaking existing users. Clear old→new transition.",
+  "analysis": {
+    "scope": {
+      "estimated_files": 8,
+      "estimated_services": 2,
+      "is_cross_cutting": true
+    },
+    "integrations": {
+      "external_services": [],
+      "new_dependencies": ["jsonwebtoken"],
+      "research_needed": false
+    }
+  },
+  "recommended_phases": ["discovery", "requirements", "context", "spec_writing", "planning", "validation"],
+  "flags": {
+    "needs_research": false,
+    "needs_self_critique": false
+  }
+}
+```
+
+### Example 5: Complex Feature Task
 
 **Task**: "Add Graphiti Memory Integration with FalkorDB as an optional layer controlled by .env variables using Docker Compose"
 
@@ -344,6 +415,7 @@ START
 ```json
 {
   "complexity": "complex",
+  "workflow_type": "feature",
   "confidence": 0.90,
   "reasoning": "Multiple integrations (Graphiti, FalkorDB), infrastructure changes (Docker Compose), and new architectural pattern (optional memory layer). Requires research for correct API usage and careful design.",
   "analysis": {

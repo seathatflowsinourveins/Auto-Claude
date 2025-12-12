@@ -80,8 +80,8 @@ class ImplementationPlanner:
         if not services:
             services = list(project_index.get("services", {}).keys())
 
-        # Determine workflow type
-        workflow_type = self._detect_workflow_type(spec_content)
+        # Determine workflow type from multiple sources (priority order)
+        workflow_type = self._determine_workflow_type(spec_content)
 
         self.context = PlannerContext(
             spec_content=spec_content,
@@ -95,10 +95,83 @@ class ImplementationPlanner:
 
         return self.context
 
-    def _detect_workflow_type(self, spec_content: str) -> WorkflowType:
-        """Detect workflow type from spec content."""
+    def _determine_workflow_type(self, spec_content: str) -> WorkflowType:
+        """Determine workflow type from multiple sources.
+        
+        Priority order (highest to lowest):
+        1. requirements.json - User's explicit intent
+        2. complexity_assessment.json - AI's assessment
+        3. spec.md explicit declaration - Spec writer's declaration
+        4. Keyword-based detection - Last resort fallback
+        """
+        type_mapping = {
+            'feature': WorkflowType.FEATURE,
+            'refactor': WorkflowType.REFACTOR,
+            'investigation': WorkflowType.INVESTIGATION,
+            'migration': WorkflowType.MIGRATION,
+            'simple': WorkflowType.SIMPLE,
+        }
+        
+        # 1. Check requirements.json (user's explicit intent)
+        requirements_file = self.spec_dir / "requirements.json"
+        if requirements_file.exists():
+            try:
+                with open(requirements_file) as f:
+                    requirements = json.load(f)
+                declared_type = requirements.get("workflow_type", "").lower()
+                if declared_type in type_mapping:
+                    return type_mapping[declared_type]
+            except (json.JSONDecodeError, KeyError):
+                pass
+        
+        # 2. Check complexity_assessment.json (AI's assessment)
+        assessment_file = self.spec_dir / "complexity_assessment.json"
+        if assessment_file.exists():
+            try:
+                with open(assessment_file) as f:
+                    assessment = json.load(f)
+                declared_type = assessment.get("workflow_type", "").lower()
+                if declared_type in type_mapping:
+                    return type_mapping[declared_type]
+            except (json.JSONDecodeError, KeyError):
+                pass
+        
+        # 3. & 4. Fall back to spec content detection
+        return self._detect_workflow_type_from_spec(spec_content)
+    
+    def _detect_workflow_type_from_spec(self, spec_content: str) -> WorkflowType:
+        """Detect workflow type from spec content (fallback method).
+        
+        Priority:
+        1. Explicit Type: declaration in spec.md
+        2. Keyword-based detection (last resort)
+        """
         content_lower = spec_content.lower()
+        
+        type_mapping = {
+            'feature': WorkflowType.FEATURE,
+            'refactor': WorkflowType.REFACTOR,
+            'investigation': WorkflowType.INVESTIGATION,
+            'migration': WorkflowType.MIGRATION,
+            'simple': WorkflowType.SIMPLE,
+        }
+        
+        # Check for explicit workflow type declaration in spec
+        # Look for patterns like "**Type**: feature" or "Type: refactor"
+        explicit_type_patterns = [
+            r'\*\*type\*\*:\s*(\w+)',      # **Type**: feature
+            r'type:\s*(\w+)',               # Type: feature
+            r'workflow\s*type:\s*(\w+)',    # Workflow Type: feature
+        ]
+        
+        for pattern in explicit_type_patterns:
+            match = re.search(pattern, content_lower)
+            if match:
+                declared_type = match.group(1).strip()
+                if declared_type in type_mapping:
+                    return type_mapping[declared_type]
 
+        # FALLBACK: Keyword-based detection (only if no explicit type found)
         # Investigation indicators
         investigation_keywords = ["bug", "fix", "issue", "broken", "not working", "investigate", "debug"]
         if any(kw in content_lower for kw in investigation_keywords):
@@ -106,19 +179,23 @@ class ImplementationPlanner:
             if "unknown" in content_lower or "intermittent" in content_lower or "random" in content_lower:
                 return WorkflowType.INVESTIGATION
 
-        # Refactor indicators
+        # Refactor indicators - only match if the INTENT is to refactor, not incidental mentions
+        # These should be in headings or task descriptions, not implementation notes
         refactor_keywords = ["migrate", "refactor", "convert", "upgrade", "replace", "move from", "transition"]
-        if any(kw in content_lower for kw in refactor_keywords):
-            return WorkflowType.REFACTOR
+        # Check if refactor keyword appears in a heading or workflow type context
+        for line in spec_content.split('\n'):
+            line_lower = line.lower().strip()
+            # Only trigger on headings or explicit task descriptions
+            if line_lower.startswith(('#', '**', '- [ ]', '- [x]')):
+                if any(kw in line_lower for kw in refactor_keywords):
+                    return WorkflowType.REFACTOR
 
         # Migration indicators (data)
         migration_keywords = ["data migration", "migrate data", "import", "export", "batch"]
         if any(kw in content_lower for kw in migration_keywords):
             return WorkflowType.MIGRATION
 
-        # Simple enhancement indicators (single service, small scope)
-        # Will be determined more precisely after analyzing scope
-
+        # Default to feature
         return WorkflowType.FEATURE
 
     def _extract_feature_name(self) -> str:
