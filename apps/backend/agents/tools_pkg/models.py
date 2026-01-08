@@ -240,6 +240,19 @@ AGENT_CONFIGS = {
         ],
         "thinking_default": "medium",
     },
+    # PR fixer agent - fixes issues from PR review feedback
+    # Has same capabilities as qa_fixer but specialized for PR review loop
+    "pr_fixer": {
+        "tools": BASE_READ_TOOLS + BASE_WRITE_TOOLS + WEB_TOOLS,
+        "mcp_servers": ["context7", "graphiti", "auto-claude"],
+        "mcp_servers_optional": ["linear"],
+        "auto_claude_tools": [
+            TOOL_GET_BUILD_PROGRESS,
+            TOOL_GET_SESSION_CONTEXT,
+            TOOL_RECORD_GOTCHA,
+        ],
+        "thinking_default": "medium",
+    },
     # ═══════════════════════════════════════════════════════════════════════
     # UTILITY PHASES (Minimal, no MCP)
     # ═══════════════════════════════════════════════════════════════════════
