@@ -7,6 +7,12 @@ Service layer for GitHub automation workflows.
 
 from .autofix_processor import AutoFixProcessor
 from .batch_processor import BatchProcessor
+from .bot_verifier import (
+    BotVerifier,
+    get_bot_verifier,
+    is_trusted_bot,
+    require_trusted_bot,
+)
 from .pr_review_engine import PRReviewEngine
 from .prompt_manager import PromptManager
 from .response_parsers import ResponseParser
@@ -19,4 +25,8 @@ __all__ = [
     "TriageEngine",
     "AutoFixProcessor",
     "BatchProcessor",
+    "BotVerifier",
+    "get_bot_verifier",
+    "is_trusted_bot",
+    "require_trusted_bot",
 ]
