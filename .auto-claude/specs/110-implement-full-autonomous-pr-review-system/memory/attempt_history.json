@@ -359,11 +359,23 @@
         }
       ],
       "status": "completed"
+    },
+    "subtask-6-5": {
+      "attempts": [
+        {
+          "session": 31,
+          "timestamp": "2026-01-09T01:06:48.625432",
+          "approach": "Implemented: Create edge case tests for PR lifecycle (PR closed/merged during review, force push, concurrent oper",
+          "success": true,
+          "error": null
+        }
+      ],
+      "status": "completed"
     }
   },
   "stuck_subtasks": [],
   "metadata": {
     "created_at": "2026-01-08T23:13:05.887534",
-    "last_updated": "2026-01-09T01:03:59.627036"
+    "last_updated": "2026-01-09T01:06:48.625460"
   }
 }
