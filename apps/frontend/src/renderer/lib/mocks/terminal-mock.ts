@@ -97,5 +97,12 @@ export const terminalMock = {
   onTerminalOAuthToken: () => () => {},
   onTerminalAuthCreated: () => () => {},
   onTerminalClaudeBusy: () => () => {},
-  onTerminalPendingResume: () => () => {}
+  onTerminalPendingResume: () => () => {},
+  onTerminalProfileChanged: () => () => {},
+  onTerminalOAuthCodeNeeded: () => () => {},
+
+  // OAuth code submission
+  submitOAuthCode: async () => ({
+    success: true
+  })
 };

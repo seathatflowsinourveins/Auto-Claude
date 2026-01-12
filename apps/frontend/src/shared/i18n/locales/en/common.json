@@ -317,5 +317,22 @@
     "done": "Done",
     "failedLabel": "Failed",
     "starting": "Starting..."
+  },
+  "oauth": {
+    "enterCode": "Manual Code Entry (Fallback)",
+    "enterCodeDescription": "This dialog is only needed if the browser didn't redirect automatically. If authentication already completed in your browser, you can close this dialog.",
+    "fallbackNote": "Only use this if you see a \"Paste this into Claude Code\" page in your browser.",
+    "step1": "Complete the authorization in your browser",
+    "step2": "If you see a code page, copy the code shown",
+    "step3": "Paste the code below and click Submit",
+    "codeLabel": "Authorization Code",
+    "codePlaceholder": "Paste your code here (only if needed)...",
+    "codeHint": "The code is a long string shown only if automatic redirect failed",
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "codeSubmitted": "Code Submitted",
+    "codeSubmittedDescription": "Authentication should complete shortly. Check the terminal for confirmation.",
+    "codeSubmitFailed": "Failed to Submit Code",
+    "codeSubmitFailedDescription": "Please try again or copy the code manually to the terminal."
   }
 }

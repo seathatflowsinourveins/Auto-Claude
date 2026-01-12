@@ -106,28 +106,21 @@ export function RateLimitModal() {
       });
 
       if (result.success && result.data) {
-        // Initialize the profile (creates terminal and runs claude setup-token)
-        const initResult = await window.electronAPI.initializeClaudeProfile(result.data.id);
+        // Reload profiles
+        loadClaudeProfiles();
+        setNewProfileName('');
+        // Close the modal
+        hideRateLimitModal();
 
-        if (initResult.success) {
-          // Reload profiles
-          loadClaudeProfiles();
-          setNewProfileName('');
-          // Close the modal so user can see the terminal
-          hideRateLimitModal();
-
-          // Alert the user about the terminal
-          alert(
-            `A terminal has been opened to authenticate "${profileName}".\n\n` +
-            `Steps to complete:\n` +
-            `1. Check the "Agent Terminals" section in the sidebar\n` +
-            `2. Complete the OAuth login in your browser\n` +
-            `3. The token will be saved automatically\n\n` +
-            `Once done, return here and the account will be available.`
-          );
-        } else {
-          alert(`Failed to start authentication: ${initResult.error || 'Please try again.'}`);
-        }
+        // Direct user to Settings to complete authentication
+        alert(
+          `Profile "${profileName}" has been created.\n\n` +
+          `To authenticate this profile:\n` +
+          `1. Go to Settings > Integrations\n` +
+          `2. Find the profile in the Claude Accounts section\n` +
+          `3. Click "Authenticate" to complete login\n\n` +
+          `The account will be available once you complete authentication.`
+        );
       }
     } catch (err) {
       console.error('Failed to add profile:', err);

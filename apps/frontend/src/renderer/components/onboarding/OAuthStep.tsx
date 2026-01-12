@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  Key,
   Eye,
   EyeOff,
   Info,
@@ -25,8 +24,8 @@ import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Card, CardContent } from '../ui/card';
 import { cn } from '../../lib/utils';
+import { AuthTerminal } from '../settings/AuthTerminal';
 import { loadClaudeProfiles as loadGlobalClaudeProfiles } from '../../stores/claude-profile-store';
-import { useClaudeLoginTerminal } from '../../hooks/useClaudeLoginTerminal';
 import type { ClaudeProfile } from '../../../shared/types';
 
 interface OAuthStepProps {
@@ -64,6 +63,14 @@ export function OAuthStep({ onNext, onBack, onSkip }: OAuthStepProps) {
   // Error state
   const [error, setError] = useState<string | null>(null);
 
+  // Auth terminal state - for embedded authentication
+  const [authTerminal, setAuthTerminal] = useState<{
+    terminalId: string;
+    configDir: string;
+    profileId: string;
+    profileName: string;
+  } | null>(null);
+
   // Derived state: check if at least one profile is authenticated
   const hasAuthenticatedProfile = claudeProfiles.some(
     (profile) => profile.oauthToken || (profile.isDefault && profile.configDir)
@@ -91,23 +98,6 @@ export function OAuthStep({ onNext, onBack, onSkip }: OAuthStepProps) {
   // Load Claude profiles on mount
   useEffect(() => {
     loadClaudeProfiles();
-  }, []);
-
-  // Listen for login terminal creation - makes the terminal visible so user can see OAuth flow
-  useClaudeLoginTerminal();
-
-  // Listen for OAuth authentication completion
-  useEffect(() => {
-    const unsubscribe = window.electronAPI.onTerminalOAuthToken(async (info) => {
-      if (info.success && info.profileId) {
-        // Reload profiles to show updated state
-        await loadClaudeProfiles();
-        // Show simple success notification
-        alert(`✅ Profile authenticated successfully!\n\n${info.email ? `Account: ${info.email}` : 'Authentication complete.'}\n\nYou can now use this profile.`);
-      }
-    });
-
-    return unsubscribe;
   }, []);
 
   // Profile management handlers - following patterns from IntegrationSettings.tsx
@@ -141,18 +131,27 @@ export function OAuthStep({ onNext, onBack, onSkip }: OAuthStepProps) {
       });
 
       if (result.success && result.data) {
-        // Initialize the profile (starts OAuth flow)
-        const initResult = await window.electronAPI.initializeClaudeProfile(result.data.id);
+        await loadClaudeProfiles();
+        const savedProfileName = newProfileName.trim();
+        setNewProfileName('');
 
-        if (initResult.success) {
-          await loadClaudeProfiles();
-          setNewProfileName('');
+        // Get terminal config for authentication
+        const authResult = await window.electronAPI.authenticateClaudeProfile(result.data.id);
 
-          // Note: The terminal is now visible in the UI via the onTerminalAuthCreated event
-          // Users can see the 'claude setup-token' output directly
+        if (authResult.success && authResult.data) {
+          setAuthenticatingProfileId(result.data.id);
+
+          // Set up embedded auth terminal
+          setAuthTerminal({
+            terminalId: authResult.data.terminalId,
+            configDir: authResult.data.configDir,
+            profileId: result.data.id,
+            profileName: savedProfileName,
+          });
+
+          console.warn('[OAuthStep] New profile auth terminal ready:', authResult.data);
         } else {
-          await loadClaudeProfiles();
-          alert(`Failed to start authentication: ${initResult.error || 'Please try again.'}`);
+          alert(`Profile created but failed to prepare authentication: ${authResult.error || 'You can authenticate later from the profile list.'}`);
         }
       }
     } catch (err) {
@@ -218,20 +217,59 @@ export function OAuthStep({ onNext, onBack, onSkip }: OAuthStepProps) {
     }
   };
 
+  // Handle auth terminal close
+  const handleAuthTerminalClose = useCallback(() => {
+    setAuthTerminal(null);
+    setAuthenticatingProfileId(null);
+  }, []);
+
+  // Handle auth terminal success
+  const handleAuthTerminalSuccess = useCallback(async (email?: string) => {
+    console.warn('[OAuthStep] Auth success:', email);
+
+    // Close terminal immediately
+    setAuthTerminal(null);
+    setAuthenticatingProfileId(null);
+
+    // Reload profiles to get updated auth state
+    await loadClaudeProfiles();
+  }, []);
+
+  // Handle auth terminal error
+  const handleAuthTerminalError = useCallback((error: string) => {
+    console.error('[OAuthStep] Auth error:', error);
+    // Don't auto-close on error - let user see the error and close manually
+  }, []);
+
   const handleAuthenticateProfile = async (profileId: string) => {
+    // Find the profile name for display
+    const profile = claudeProfiles.find(p => p.id === profileId);
+    const profileName = profile?.name || 'Profile';
+
     setAuthenticatingProfileId(profileId);
     setError(null);
     try {
-      const initResult = await window.electronAPI.initializeClaudeProfile(profileId);
-      if (!initResult.success) {
-        alert(`Failed to start authentication: ${initResult.error || 'Please try again.'}`);
+      // Get terminal config from backend (terminalId and configDir)
+      const result = await window.electronAPI.authenticateClaudeProfile(profileId);
+
+      if (!result.success || !result.data) {
+        alert(`Failed to prepare authentication: ${result.error || 'Please try again.'}`);
+        setAuthenticatingProfileId(null);
+        return;
       }
-      // Note: If successful, the terminal is now visible in the UI via the onTerminalAuthCreated event
-      // Users can see the 'claude setup-token' output and complete OAuth flow directly
+
+      // Set up embedded auth terminal
+      setAuthTerminal({
+        terminalId: result.data.terminalId,
+        configDir: result.data.configDir,
+        profileId,
+        profileName,
+      });
+
+      console.warn('[OAuthStep] Auth terminal ready:', result.data);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to authenticate profile');
       alert('Failed to start authentication. Please try again.');
-    } finally {
       setAuthenticatingProfileId(null);
     }
   };
@@ -588,6 +626,22 @@ export function OAuthStep({ onNext, onBack, onSkip }: OAuthStepProps) {
                       )}
                     </div>
                   ))}
+                </div>
+              )}
+
+              {/* Embedded Auth Terminal */}
+              {authTerminal && (
+                <div className="mb-4">
+                  <div className="rounded-lg border border-primary/30 overflow-hidden" style={{ height: '320px' }}>
+                    <AuthTerminal
+                      terminalId={authTerminal.terminalId}
+                      configDir={authTerminal.configDir}
+                      profileName={authTerminal.profileName}
+                      onClose={handleAuthTerminalClose}
+                      onAuthSuccess={handleAuthTerminalSuccess}
+                      onAuthError={handleAuthTerminalError}
+                    />
+                  </div>
                 </div>
               )}
 
