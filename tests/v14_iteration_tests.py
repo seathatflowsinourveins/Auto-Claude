@@ -213,6 +213,27 @@ class TestOpikTracing:
         content = path.read_text(encoding="utf-8")
         assert "default mode" in content.lower() or "anonymous" in content.lower()
 
+    def test_opik_v14_imports(self):
+        """V14 enhanced observability module must import."""
+        platform_path = str(BASE / "platform")
+        if platform_path not in sys.path:
+            sys.path.insert(0, platform_path)
+        from core.opik_v14 import OpikV14, AgentOptimizer, OutputGuardrail
+        assert OpikV14 is not None
+        assert AgentOptimizer is not None
+        assert OutputGuardrail is not None
+
+    def test_opik_track_decorator_works(self):
+        """@opik.track must execute without error."""
+        import opik
+
+        @opik.track(name="v14_test_probe")
+        def probe():
+            return {"status": "ok"}
+
+        result = probe()
+        assert result["status"] == "ok"
+
 
 # ============================================================================
 # SECTION 7: Letta Cloud Integration
