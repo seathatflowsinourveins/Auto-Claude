@@ -32,7 +32,7 @@ class TestComponentAvailability:
 
     def test_core_module_import(self):
         """Test core module can be imported."""
-        from platform.core import (
+        from core import (
             MemorySystem,
             AgentExecutor,
             ThinkingEngine,
