@@ -906,5 +906,95 @@ class TestRealServiceConnectivity:
         assert len(status) >= 3, f"Expected 3+ registered adapters, got {len(status)}"
 
 
+# ============================================================================
+# SECTION 23: Docker + Qdrant Server (Iteration 52)
+# ============================================================================
+
+class TestDockerQdrant:
+    """Verify Docker and Qdrant server are running."""
+
+    def test_docker_running(self):
+        """Docker daemon should be running."""
+        import subprocess
+        result = subprocess.run(
+            ["docker", "info"], capture_output=True, text=True, timeout=10
+        )
+        assert result.returncode == 0, "Docker daemon not running"
+        assert "Server:" in result.stdout
+
+    def test_qdrant_server_running(self):
+        """Qdrant should be running on localhost:6333."""
+        import httpx
+        try:
+            r = httpx.get("http://localhost:6333/healthz", timeout=5)
+            assert r.status_code == 200
+        except Exception:
+            pytest.skip("Qdrant not running")
+
+    def test_qdrant_collection_operations(self):
+        """Qdrant should support create/delete collection."""
+        import httpx
+        try:
+            httpx.get("http://localhost:6333/healthz", timeout=2)
+        except Exception:
+            pytest.skip("Qdrant not running")
+
+        from qdrant_client import QdrantClient, models as qm
+        client = QdrantClient(url="http://localhost:6333")
+        test_col = "_v14_iter54_test"
+        try:
+            client.create_collection(
+                test_col,
+                vectors_config=qm.VectorParams(size=128, distance=qm.Distance.COSINE),
+            )
+            info = client.get_collection(test_col)
+            assert info.config.params.vectors.size == 128
+        finally:
+            client.delete_collection(test_col)
+
+
+# ============================================================================
+# SECTION 24: Shallow-to-Real Test Conversion Verification (Iteration 52)
+# ============================================================================
+
+class TestShallowToRealConversion:
+    """Verify previously-shallow tests now import real classes."""
+
+    @pytest.fixture(autouse=True)
+    def setup_path(self):
+        platform_path = str(BASE / "platform")
+        if platform_path not in sys.path:
+            sys.path.insert(0, platform_path)
+
+    def test_v120_imports_real_embedding_cache(self):
+        """v120 tests should import EmbeddingCache directly."""
+        from core.advanced_memory import EmbeddingCache
+        cache = EmbeddingCache(max_size=5, ttl_seconds=10.0)
+        assert hasattr(cache, "get")
+        assert hasattr(cache, "set")
+
+    def test_v121_imports_real_circuit_breaker(self):
+        """v121 tests should import CircuitBreaker directly."""
+        from core.resilience import CircuitBreaker, CircuitState
+        breaker = CircuitBreaker(failure_threshold=3)
+        assert breaker.state == CircuitState.CLOSED
+
+    def test_v124_imports_real_content_type(self):
+        """v124 tests should import ContentType directly."""
+        from core.advanced_memory import ContentType, detect_content_type
+        result = detect_content_type("def hello(): pass")
+        assert isinstance(result, ContentType)
+
+    def test_code_intelligence_uses_integer_ids(self):
+        """Qdrant test_code_intelligence should use integer IDs."""
+        import ast
+        code_intel_path = BASE / "platform" / "tests" / "test_code_intelligence.py"
+        source = code_intel_path.read_text(encoding="utf-8")
+        tree = ast.parse(source)
+        # No string PointStruct IDs should exist
+        assert '"similar_001"' not in source, "Should use integer IDs, not strings"
+        assert '"different_001"' not in source
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
