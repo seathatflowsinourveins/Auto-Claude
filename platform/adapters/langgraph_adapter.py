@@ -61,7 +61,8 @@ except ImportError:
 
 # Register adapter status
 from . import register_adapter
-register_adapter("langgraph", LANGGRAPH_AVAILABLE)
+_langgraph_version = getattr(langgraph, "__version__", "unknown") if LANGGRAPH_AVAILABLE else None
+register_adapter("langgraph", LANGGRAPH_AVAILABLE, _langgraph_version)
 
 
 class NodeType(Enum):

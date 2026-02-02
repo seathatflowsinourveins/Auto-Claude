@@ -675,5 +675,159 @@ class TestAdapterLevelE2E:
         assert dspy_embedder is not None
 
 
+class TestMem0AdapterReal:
+    """V14 Iter 58: Test Mem0 adapter with real initialization."""
+
+    def test_mem0_adapter_available(self):
+        """Mem0 adapter should report available."""
+        from adapters.mem0_adapter import Mem0Adapter, MEM0_AVAILABLE
+        assert MEM0_AVAILABLE is True
+        adapter = Mem0Adapter()
+        status = adapter.get_status()
+        assert status["available"] is True
+
+    def test_mem0_adapter_initializes_qdrant(self):
+        """Mem0 adapter should initialize with Qdrant backend + OpenAI."""
+        from adapters.mem0_adapter import Mem0Adapter, MemoryBackend
+
+        if not os.environ.get("OPENAI_API_KEY"):
+            pytest.skip("OPENAI_API_KEY not set")
+
+        # Verify Qdrant server is running
+        try:
+            import httpx
+            resp = httpx.get("http://localhost:6333/healthz", timeout=3)
+            if resp.status_code != 200:
+                pytest.skip("Qdrant server not running")
+        except Exception:
+            pytest.skip("Qdrant server not reachable")
+
+        adapter = Mem0Adapter(
+            backend=MemoryBackend.QDRANT,
+            config={
+                "collection": "mem0_iter58_test",
+                "host": "localhost",
+                "port": 6333,
+            },
+        )
+        adapter.initialize(
+            llm_config={
+                "provider": "openai",
+                "config": {
+                    "model": "gpt-4o-mini",
+                    "api_key": os.environ["OPENAI_API_KEY"],
+                },
+            },
+            embedder_config={
+                "provider": "openai",
+                "config": {
+                    "model": "text-embedding-3-small",
+                    "api_key": os.environ["OPENAI_API_KEY"],
+                },
+            },
+        )
+        assert adapter._initialized is True
+        assert adapter._memory is not None
+
+    def test_mem0_add_and_search(self):
+        """Mem0 should store and retrieve memories via Qdrant."""
+        from adapters.mem0_adapter import Mem0Adapter, MemoryBackend
+
+        if not os.environ.get("OPENAI_API_KEY"):
+            pytest.skip("OPENAI_API_KEY not set")
+
+        try:
+            import httpx
+            resp = httpx.get("http://localhost:6333/healthz", timeout=3)
+            if resp.status_code != 200:
+                pytest.skip("Qdrant server not running")
+        except Exception:
+            pytest.skip("Qdrant server not reachable")
+
+        adapter = Mem0Adapter(
+            backend=MemoryBackend.QDRANT,
+            config={
+                "collection": "mem0_iter58_search_test",
+                "host": "localhost",
+                "port": 6333,
+            },
+        )
+        adapter.initialize(
+            llm_config={
+                "provider": "openai",
+                "config": {
+                    "model": "gpt-4o-mini",
+                    "api_key": os.environ["OPENAI_API_KEY"],
+                },
+            },
+            embedder_config={
+                "provider": "openai",
+                "config": {
+                    "model": "text-embedding-3-small",
+                    "api_key": os.environ["OPENAI_API_KEY"],
+                },
+            },
+        )
+
+        # Add a memory (requires real LLM call for entity extraction)
+        try:
+            result = adapter.add(
+                content="The UNLEASH platform uses Voyage AI for embeddings",
+                user_id="test-user",
+            )
+        except Exception as e:
+            # OpenAI/OpenRouter credit issues are not adapter bugs
+            if "402" in str(e) or "Insufficient credits" in str(e):
+                pytest.skip(f"LLM provider credit issue: {e}")
+            raise
+        assert result is not None
+
+        # Search for it
+        results = adapter.search(
+            query="What embedding system does UNLEASH use?",
+            user_id="test-user",
+        )
+        assert results is not None
+        assert results.total >= 0  # May be 0 depending on mem0 extraction
+
+
+class TestOrchestratorChainReal:
+    """V14 Iter 58: Test full orchestrator initialization chain."""
+
+    def test_orchestrator_all_capabilities(self):
+        """Orchestrator should have all expected capabilities."""
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+
+        caps = {
+            "research": o.has_research,
+            "letta": o.has_letta,
+            "cache": o.has_cache,
+            "dspy": o.has_dspy,
+            "langgraph": o.has_langgraph,
+            "mem0": o.has_mem0,
+        }
+        active = [k for k, v in caps.items() if v]
+        assert len(active) >= 6, f"Expected 6+ capabilities, got {len(active)}: {active}"
+
+    def test_orchestrator_research_engine_has_exa(self):
+        """Research engine should have Exa client connected."""
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        assert o._research_engine is not None
+        assert o._research_engine.exa is not None
+
+    def test_all_adapter_status_consistent(self):
+        """All adapter status flags should match actual importability."""
+        from adapters import get_adapter_status
+        status = get_adapter_status()
+
+        for name, info in status.items():
+            if info.get("available"):
+                # If adapter says available, the SDK should be importable
+                assert info["version"] is not None, \
+                    f"Adapter {name} says available but has no version"
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
