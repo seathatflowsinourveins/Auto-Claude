@@ -686,14 +686,11 @@ class TestMem0AdapterReal:
         status = adapter.get_status()
         assert status["available"] is True
 
-    def test_mem0_adapter_initializes_qdrant(self):
-        """Mem0 adapter should initialize with Qdrant backend + OpenAI."""
-        from adapters.mem0_adapter import Mem0Adapter, MemoryBackend
-
-        if not os.environ.get("OPENAI_API_KEY"):
-            pytest.skip("OPENAI_API_KEY not set")
-
-        # Verify Qdrant server is running
+    @pytest.fixture(autouse=True)
+    def check_qdrant_and_groq(self):
+        """Ensure Qdrant server and Groq API key are available."""
+        if not os.environ.get("GROQ_API_KEY"):
+            pytest.skip("GROQ_API_KEY not set")
         try:
             import httpx
             resp = httpx.get("http://localhost:6333/healthz", timeout=3)
@@ -702,27 +699,32 @@ class TestMem0AdapterReal:
         except Exception:
             pytest.skip("Qdrant server not reachable")
 
+    def test_mem0_adapter_initializes_qdrant(self):
+        """Mem0 adapter should initialize with Qdrant + Groq + HuggingFace."""
+        from adapters.mem0_adapter import Mem0Adapter, MemoryBackend
+
         adapter = Mem0Adapter(
             backend=MemoryBackend.QDRANT,
             config={
-                "collection": "mem0_iter58_test",
+                "collection": "mem0_iter60_init_test",
                 "host": "localhost",
                 "port": 6333,
+                "embedding_model_dims": 384,
             },
         )
         adapter.initialize(
             llm_config={
-                "provider": "openai",
+                "provider": "groq",
                 "config": {
-                    "model": "gpt-4o-mini",
-                    "api_key": os.environ["OPENAI_API_KEY"],
+                    "model": "llama-3.1-8b-instant",
+                    "api_key": os.environ["GROQ_API_KEY"],
                 },
             },
             embedder_config={
-                "provider": "openai",
+                "provider": "huggingface",
                 "config": {
-                    "model": "text-embedding-3-small",
-                    "api_key": os.environ["OPENAI_API_KEY"],
+                    "model": "sentence-transformers/all-MiniLM-L6-v2",
+                    "embedding_dims": 384,
                 },
             },
         )
@@ -730,65 +732,66 @@ class TestMem0AdapterReal:
         assert adapter._memory is not None
 
     def test_mem0_add_and_search(self):
-        """Mem0 should store and retrieve memories via Qdrant."""
+        """Mem0 E2E: add memory via Groq LLM, search via HuggingFace embeddings."""
         from adapters.mem0_adapter import Mem0Adapter, MemoryBackend
+        from qdrant_client import QdrantClient
 
-        if not os.environ.get("OPENAI_API_KEY"):
-            pytest.skip("OPENAI_API_KEY not set")
+        collection = "mem0_iter60_e2e_test"
 
+        # Clean up any leftover collection with wrong dims
         try:
-            import httpx
-            resp = httpx.get("http://localhost:6333/healthz", timeout=3)
-            if resp.status_code != 200:
-                pytest.skip("Qdrant server not running")
+            qc = QdrantClient(url="http://localhost:6333")
+            qc.delete_collection(collection)
         except Exception:
-            pytest.skip("Qdrant server not reachable")
+            pass
 
         adapter = Mem0Adapter(
             backend=MemoryBackend.QDRANT,
             config={
-                "collection": "mem0_iter58_search_test",
+                "collection": collection,
                 "host": "localhost",
                 "port": 6333,
+                "embedding_model_dims": 384,
             },
         )
         adapter.initialize(
             llm_config={
-                "provider": "openai",
+                "provider": "groq",
                 "config": {
-                    "model": "gpt-4o-mini",
-                    "api_key": os.environ["OPENAI_API_KEY"],
+                    "model": "llama-3.1-8b-instant",
+                    "api_key": os.environ["GROQ_API_KEY"],
                 },
             },
             embedder_config={
-                "provider": "openai",
+                "provider": "huggingface",
                 "config": {
-                    "model": "text-embedding-3-small",
-                    "api_key": os.environ["OPENAI_API_KEY"],
+                    "model": "sentence-transformers/all-MiniLM-L6-v2",
+                    "embedding_dims": 384,
                 },
             },
         )
 
-        # Add a memory (requires real LLM call for entity extraction)
-        try:
-            result = adapter.add(
-                content="The UNLEASH platform uses Voyage AI for embeddings",
-                user_id="test-user",
-            )
-        except Exception as e:
-            # OpenAI/OpenRouter credit issues are not adapter bugs
-            if "402" in str(e) or "Insufficient credits" in str(e):
-                pytest.skip(f"LLM provider credit issue: {e}")
-            raise
+        # Add a memory (real Groq LLM call for entity extraction)
+        result = adapter.add(
+            content="The UNLEASH platform uses Voyage AI for embeddings",
+            user_id="test-user-iter60",
+        )
         assert result is not None
 
         # Search for it
         results = adapter.search(
             query="What embedding system does UNLEASH use?",
-            user_id="test-user",
+            user_id="test-user-iter60",
         )
         assert results is not None
-        assert results.total >= 0  # May be 0 depending on mem0 extraction
+        assert results.total >= 1, f"Expected at least 1 result, got {results.total}"
+
+        # Cleanup
+        try:
+            qc = QdrantClient(url="http://localhost:6333")
+            qc.delete_collection(collection)
+        except Exception:
+            pass
 
 
 class TestOrchestratorChainReal:

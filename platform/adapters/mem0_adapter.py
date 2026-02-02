@@ -151,13 +151,16 @@ class Mem0Adapter:
                 },
             }
         elif self.backend == MemoryBackend.QDRANT:
+            qdrant_cfg = {
+                "collection_name": self.config.get("collection", "unleashed"),
+                "host": self.config.get("host", "localhost"),
+                "port": self.config.get("port", 6333),
+            }
+            if self.config.get("embedding_model_dims"):
+                qdrant_cfg["embedding_model_dims"] = self.config["embedding_model_dims"]
             config["vector_store"] = {
                 "provider": "qdrant",
-                "config": {
-                    "collection_name": self.config.get("collection", "unleashed"),
-                    "host": self.config.get("host", "localhost"),
-                    "port": self.config.get("port", 6333),
-                },
+                "config": qdrant_cfg,
             }
         elif self.backend == MemoryBackend.PINECONE:
             config["vector_store"] = {
