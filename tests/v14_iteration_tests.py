@@ -608,5 +608,42 @@ class TestAdditionalSDKs:
             pytest.skip("NeMo Guardrails incompatible with Python 3.14")
 
 
+# ============================================================================
+# SECTION 17: Unified Confidence + Learning Engine
+# ============================================================================
+
+class TestUnifiedConfidence:
+    """Verify unified confidence scoring system."""
+
+    @pytest.fixture(autouse=True)
+    def setup_path(self):
+        platform_path = str(BASE / "platform")
+        if platform_path not in sys.path:
+            sys.path.insert(0, platform_path)
+
+    def test_confidence_scorer(self):
+        from core.unified_confidence import get_confidence_scorer
+        scorer = get_confidence_scorer()
+        assert scorer is not None
+
+    def test_pattern_store_create(self):
+        from core.unified_confidence import PatternStore, PatternType
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmpdir:
+            store = PatternStore(storage_path=Path(tmpdir) / "patterns.json")
+            p = store.create(
+                pattern_id="test-pattern-1",
+                pattern_type=PatternType.ERROR_RESOLUTION,
+                initial_confidence=0.8,
+            )
+            assert p is not None
+            assert len(store.patterns) >= 1
+
+    def test_learning_engine_imports(self):
+        from core.learning import LearningEngine
+        le = LearningEngine()
+        assert le is not None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
