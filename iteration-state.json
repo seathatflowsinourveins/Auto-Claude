@@ -10,7 +10,9 @@
       "V14 Gap scan complete: 9/9 core modules importing, Letta Cloud connected",
       "V14 Letta Cloud learnings block updated with iteration state",
       "V14 Direction: platform namespace collision documented (stdlib shadow)",
-      "V14 Next: Opik tracing integration, cross-session memory wiring, V13 Phase 7 tests"
+      "V14 Next: DSPy integration, self-improvement Letta wiring, V13 Phase 7 tests",
+      "V14 Iter 5: Fixed ragas.metrics -> ragas.metrics.collections (Context7 verified)",
+      "V14 Iter 5: Warnings reduced from 25 to 2 (only upstream pydantic v1 remain)"
     ],
     "v14_infrastructure": [
       "Git repo initialized at 8f998e7 (1562 files)",
