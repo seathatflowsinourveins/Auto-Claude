@@ -48,7 +48,7 @@ class TestComponentAvailability:
     def test_async_executor_import(self):
         """Test async executor components."""
         try:
-            from platform.core import (
+            from core import (
                 V2_ASYNC_AVAILABLE,
                 AsyncExecutor,
                 TaskQueue,
@@ -62,7 +62,7 @@ class TestComponentAvailability:
     def test_caching_import(self):
         """Test caching components."""
         try:
-            from platform.core import (
+            from core import (
                 V2_CACHING_AVAILABLE,
                 MemoryCache,
                 TieredCache,
@@ -76,7 +76,7 @@ class TestComponentAvailability:
     def test_monitoring_import(self):
         """Test monitoring components."""
         try:
-            from platform.core import (
+            from core import (
                 V2_MONITORING_AVAILABLE,
                 MetricRegistry,
                 Tracer,
@@ -92,7 +92,7 @@ class TestComponentAvailability:
     def test_security_import(self):
         """Test security components."""
         try:
-            from platform.core import (
+            from core import (
                 V2_SECURITY_AVAILABLE,
                 SecurityManager,
                 InputValidator,
@@ -108,7 +108,7 @@ class TestComponentAvailability:
     def test_secrets_import(self):
         """Test secrets management components."""
         try:
-            from platform.core import (
+            from core import (
                 V2_SECRETS_AVAILABLE,
                 SecretsManager,
                 MemorySecretBackend,
