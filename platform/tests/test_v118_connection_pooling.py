@@ -2,21 +2,13 @@
 """
 V118 Optimization Test: Connection Pooling for HTTP Clients
 
-This test validates that HTTP clients use connection pooling:
-1. Shared client instances (not new client per request)
-2. Proper httpx.Limits configuration
-3. Connection reuse across calls
+Tests that HTTP clients use connection pooling by actually importing
+and testing the classes - not by grepping file contents.
 
-Expected Gains:
-- Latency reduction: -90% per-request overhead
-- Throughput: +500% concurrent requests
-- Resource efficiency: -99% TCP connection creation
-
-Test Date: 2026-01-30
+Test Date: 2026-01-30, Updated: 2026-02-02 (V14 Iter 50)
 """
 
 import os
-import re
 import sys
 import pytest
 
@@ -24,138 +16,100 @@ import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 
-class TestConnectionPoolingPatterns:
-    """Test suite for connection pooling pattern fixes."""
+class TestConnectionPoolingReal:
+    """Test connection pooling by importing and testing real classes."""
 
-    def test_advanced_memory_uses_shared_client(self):
-        """Verify OpenAIEmbeddingProvider uses shared client."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Should have _shared_client class variable
-        assert "_shared_client" in content, \
-            "advanced_memory.py should have _shared_client for connection pooling"
-
-        # Should have _get_client method
-        assert "_get_client" in content, \
-            "advanced_memory.py should have _get_client method"
-
-        # Should NOT have "async with httpx.AsyncClient()" in embed methods
-        # Look for the pattern in the OpenAIEmbeddingProvider class section
-        openai_section_start = content.find("class OpenAIEmbeddingProvider")
-        openai_section_end = content.find("class ", openai_section_start + 1)
-        if openai_section_end == -1:
-            openai_section_end = len(content)
-
-        openai_section = content[openai_section_start:openai_section_end]
-
-        # Count occurrences of bad pattern
-        bad_pattern_count = len(re.findall(r"async with httpx\.AsyncClient\(\)", openai_section))
-        assert bad_pattern_count == 0, \
-            f"OpenAIEmbeddingProvider should not create new clients per request (found {bad_pattern_count})"
-
-    def test_model_router_uses_shared_client(self):
-        """Verify OllamaClient uses shared client."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "adapters", "model_router.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Should have _shared_client class variable
-        assert "_shared_client" in content, \
-            "model_router.py should have _shared_client for connection pooling"
-
-        # Should have _get_client method
-        assert "_get_client" in content, \
-            "model_router.py should have _get_client method"
-
-        # Should have httpx.Limits configuration
-        assert "httpx.Limits" in content, \
-            "model_router.py should configure httpx.Limits for connection pooling"
-
-
-class TestConnectionPoolConfiguration:
-    """Test connection pool configuration values."""
-
-    def test_advanced_memory_pool_limits(self):
-        """Verify OpenAIEmbeddingProvider has proper pool limits."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Should have max_connections configured
-        assert "max_connections=" in content, \
-            "advanced_memory.py should configure max_connections"
-
-        # Should have max_keepalive_connections configured
-        assert "max_keepalive_connections=" in content, \
-            "advanced_memory.py should configure max_keepalive_connections"
-
-    def test_model_router_pool_limits(self):
-        """Verify OllamaClient has proper pool limits."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "adapters", "model_router.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Should have max_connections configured
-        assert "max_connections=" in content, \
-            "model_router.py should configure max_connections"
-
-
-class TestSharedClientBehavior:
-    """Test that shared client pattern works correctly."""
-
-    def test_openai_provider_client_reuse(self):
-        """Test that OpenAIEmbeddingProvider reuses client."""
+    def test_openai_provider_has_shared_client(self):
+        """OpenAIEmbeddingProvider class should have _shared_client attribute."""
         try:
             from core.advanced_memory import OpenAIEmbeddingProvider
         except ImportError:
-            pytest.skip("advanced_memory module not importable")
+            pytest.skip("advanced_memory not importable")
 
-        # Create two instances
+        # Class-level shared client should exist
+        assert hasattr(OpenAIEmbeddingProvider, "_shared_client"), \
+            "OpenAIEmbeddingProvider should have _shared_client class variable"
+
+    def test_openai_provider_has_get_client_method(self):
+        """OpenAIEmbeddingProvider should have _get_client method."""
+        try:
+            from core.advanced_memory import OpenAIEmbeddingProvider
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
+
+        provider = OpenAIEmbeddingProvider(api_key="test-key")
+        assert hasattr(provider, "_get_client"), \
+            "OpenAIEmbeddingProvider should have _get_client method"
+        assert callable(provider._get_client)
+
+    def test_openai_provider_client_reuse(self):
+        """Multiple OpenAIEmbeddingProvider instances should share the same client."""
+        try:
+            from core.advanced_memory import OpenAIEmbeddingProvider
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
+
         provider1 = OpenAIEmbeddingProvider(api_key="test-key-1")
         provider2 = OpenAIEmbeddingProvider(api_key="test-key-2")
 
-        # Both should use the same shared client
         client1 = provider1._get_client()
         client2 = provider2._get_client()
 
         assert client1 is client2, \
             "Multiple OpenAIEmbeddingProvider instances should share the same client"
 
-    def test_ollama_client_reuse(self):
-        """Test that OllamaClient reuses client."""
+    def test_openai_provider_client_is_httpx(self):
+        """Shared client should be an httpx.AsyncClient."""
+        try:
+            from core.advanced_memory import OpenAIEmbeddingProvider
+            import httpx
+        except ImportError:
+            pytest.skip("advanced_memory or httpx not importable")
+
+        provider = OpenAIEmbeddingProvider(api_key="test-key")
+        client = provider._get_client()
+        assert isinstance(client, httpx.AsyncClient), \
+            f"Expected httpx.AsyncClient, got {type(client).__name__}"
+
+    def test_ollama_client_has_shared_client(self):
+        """OllamaClient class should have _shared_client attribute."""
         try:
             from adapters.model_router import OllamaClient
         except ImportError:
-            pytest.skip("model_router module not importable")
+            pytest.skip("model_router not importable")
 
-        # Create two instances
+        assert hasattr(OllamaClient, "_shared_client"), \
+            "OllamaClient should have _shared_client class variable"
+
+    def test_ollama_client_reuse(self):
+        """Multiple OllamaClient instances should share the same httpx client."""
+        try:
+            from adapters.model_router import OllamaClient
+        except ImportError:
+            pytest.skip("model_router not importable")
+
         client1 = OllamaClient(base_url="http://localhost:11434")
         client2 = OllamaClient(base_url="http://localhost:11434")
 
-        # Both should use the same shared client
         httpx_client1 = client1._get_client()
         httpx_client2 = client2._get_client()
 
         assert httpx_client1 is httpx_client2, \
             "Multiple OllamaClient instances should share the same httpx client"
+
+    def test_ollama_client_is_httpx_async(self):
+        """OllamaClient's shared client should be an httpx.AsyncClient."""
+        try:
+            from adapters.model_router import OllamaClient
+            import httpx
+        except ImportError:
+            pytest.skip("model_router or httpx not importable")
+
+        client = OllamaClient(base_url="http://localhost:11434")
+        httpx_client = client._get_client()
+
+        assert isinstance(httpx_client, httpx.AsyncClient), \
+            f"Expected httpx.AsyncClient, got {type(httpx_client).__name__}"
 
 
 if __name__ == "__main__":
