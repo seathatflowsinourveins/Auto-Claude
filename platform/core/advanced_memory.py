@@ -390,8 +390,8 @@ class MemoryMetrics:
         # Add circuit breaker stats if OpenAIEmbeddingProvider is available
         try:
             stats["circuit_breaker"]["openai"] = OpenAIEmbeddingProvider.get_circuit_stats()
-        except Exception:
-            pass
+        except Exception as e:
+            stats["circuit_breaker"]["openai_error"] = str(e)
 
         return stats
 

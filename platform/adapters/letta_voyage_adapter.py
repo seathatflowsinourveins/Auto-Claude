@@ -27,7 +27,7 @@ import asyncio
 import os
 import time
 from dataclasses import dataclass, field
-from typing import Any, Callable, Dict, List, Optional, Protocol, TypeVar
+from typing import Any, Callable, Dict, List, Optional
 from contextlib import contextmanager, asynccontextmanager
 import structlog
 

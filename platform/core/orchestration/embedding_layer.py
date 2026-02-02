@@ -9,12 +9,11 @@ Real implementation using voyageai SDK - no mocks, no fallbacks.
 
 import asyncio
 import hashlib
-import json
 import os
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 import structlog
 
@@ -252,7 +251,7 @@ class QdrantVectorStore:
 
     def __init__(
         self,
-        url: str = "localhost:6333",
+        url: str = os.environ.get("QDRANT_URL", "localhost:6333"),
         api_key: Optional[str] = None,
         prefer_grpc: bool = False,
     ):
