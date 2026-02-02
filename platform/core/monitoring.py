@@ -492,7 +492,7 @@ class Tracer:
     _instance: Optional["Tracer"] = None
     _lock = threading.Lock()
 
-    def __new__(cls) -> "Tracer":
+    def __new__(cls, *args, **kwargs) -> "Tracer":
         with cls._lock:
             if cls._instance is None:
                 cls._instance = super().__new__(cls)
