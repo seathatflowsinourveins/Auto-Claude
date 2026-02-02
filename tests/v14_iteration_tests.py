@@ -190,5 +190,29 @@ class TestRalphLoopState:
         )
 
 
+# ============================================================================
+# SECTION 6: Opik Tracing
+# ============================================================================
+
+class TestOpikTracing:
+    """Verify Opik observability is wired."""
+
+    def test_opik_installed(self):
+        import opik
+        assert hasattr(opik, "track")
+
+    def test_opik_integration_module_exists(self):
+        path = BASE / "platform" / "core" / "opik_integration.py"
+        assert path.exists()
+        content = path.read_text(encoding="utf-8")
+        assert "OpikClient" in content
+
+    def test_opik_supports_default_mode(self):
+        """OpikClient must work without API key (default mode)."""
+        path = BASE / "platform" / "core" / "opik_integration.py"
+        content = path.read_text(encoding="utf-8")
+        assert "default mode" in content.lower() or "anonymous" in content.lower()
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])

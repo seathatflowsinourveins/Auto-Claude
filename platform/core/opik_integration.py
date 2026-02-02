@@ -151,25 +151,34 @@ class OpikClient:
         self._initialized = True
 
     def _connect(self) -> None:
-        """Initialize Opik connection."""
-        if not self.config.enabled or not self.config.api_key:
-            logger.warning("Opik disabled or API key not configured")
+        """Initialize Opik connection.
+
+        Works in two modes:
+        - With API key: Connects to Comet Cloud workspace
+        - Without API key: Uses Opik's default/anonymous tracing mode
+        """
+        if not self.config.enabled:
+            logger.warning("Opik disabled via config")
             self.status = OpikClientStatus.DISCONNECTED
             return
 
         try:
             import opik
 
-            # Configure Opik with force=True to avoid interactive prompts
-            opik.configure(
-                api_key=self.config.api_key,
-                workspace=self.config.workspace,
-                force=True,  # Skip interactive workspace confirmation
-            )
+            if self.config.api_key:
+                # Cloud mode with API key
+                opik.configure(
+                    api_key=self.config.api_key,
+                    workspace=self.config.workspace,
+                    force=True,
+                )
+                logger.info(f"Opik connected to workspace: {self.config.workspace}")
+            else:
+                # Anonymous/default mode - @track still works for local tracing
+                logger.info("Opik initialized in default mode (no API key)")
 
             self._opik = opik
             self.status = OpikClientStatus.CONNECTED
-            logger.info(f"Opik connected to workspace: {self.config.workspace}")
 
         except ImportError:
             logger.warning("Opik package not installed. Run: pip install opik")
