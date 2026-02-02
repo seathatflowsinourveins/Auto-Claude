@@ -454,5 +454,33 @@ class TestLangGraphIntegration:
         assert graph is not None
 
 
+# ============================================================================
+# SECTION 12: P1/P2 SDK Verification
+# ============================================================================
+
+class TestP1SDKs:
+    """Verify P1 Important SDKs are functional."""
+
+    def test_mem0_imports(self):
+        from mem0 import Memory
+        assert Memory is not None
+
+    def test_ragas_metrics(self):
+        from ragas.metrics import faithfulness
+        assert faithfulness is not None
+
+    def test_deepeval_metrics(self):
+        from deepeval.metrics import AnswerRelevancyMetric
+        assert AnswerRelevancyMetric is not None
+
+    def test_guardrails_ai(self):
+        from guardrails import Guard
+        assert Guard is not None
+
+    def test_crawl4ai(self):
+        from crawl4ai import AsyncWebCrawler
+        assert AsyncWebCrawler is not None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
