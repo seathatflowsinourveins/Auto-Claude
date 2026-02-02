@@ -1997,7 +1997,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
         """Initialize V2 SDK adapters."""
         # DSPy Adapter
         try:
-            from ..adapters.dspy_adapter import DSPyAdapter, DSPY_AVAILABLE
+            from adapters.dspy_adapter import DSPyAdapter, DSPY_AVAILABLE
             if DSPY_AVAILABLE:
                 self._dspy = DSPyAdapter()
                 logger.info("[ECOSYSTEM V2] DSPy adapter available")
@@ -2006,7 +2006,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
 
         # LangGraph Adapter
         try:
-            from ..adapters.langgraph_adapter import LangGraphAdapter, LANGGRAPH_AVAILABLE
+            from adapters.langgraph_adapter import LangGraphAdapter, LANGGRAPH_AVAILABLE
             if LANGGRAPH_AVAILABLE:
                 self._langgraph = LangGraphAdapter()
                 logger.info("[ECOSYSTEM V2] LangGraph adapter available")
@@ -2015,7 +2015,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
 
         # Mem0 Adapter
         try:
-            from ..adapters.mem0_adapter import Mem0Adapter, MEM0_AVAILABLE
+            from adapters.mem0_adapter import Mem0Adapter, MEM0_AVAILABLE
             if MEM0_AVAILABLE:
                 self._mem0 = Mem0Adapter()
                 logger.info("[ECOSYSTEM V2] Mem0 adapter available")
@@ -2024,7 +2024,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
 
         # llm-reasoners Adapter
         try:
-            from ..adapters.llm_reasoners_adapter import (
+            from adapters.llm_reasoners_adapter import (
                 LLMReasonersAdapter,
                 LLM_REASONERS_AVAILABLE,
             )
@@ -2036,7 +2036,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
 
         # Deep Research Pipeline
         try:
-            from ..pipelines.deep_research_pipeline import (
+            from pipelines.deep_research_pipeline import (
                 DeepResearchPipeline,
                 PIPELINE_AVAILABLE,
             )
@@ -2048,7 +2048,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
 
         # Self-Improvement Pipeline
         try:
-            from ..pipelines.self_improvement_pipeline import (
+            from pipelines.self_improvement_pipeline import (
                 SelfImprovementPipeline,
                 PIPELINE_AVAILABLE as SI_AVAILABLE,
             )
@@ -2168,7 +2168,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
             return {"success": False, "error": "LangGraph not available"}
 
         try:
-            from ..adapters.langgraph_adapter import create_linear_workflow
+            from adapters.langgraph_adapter import create_linear_workflow
 
             adapter = create_linear_workflow(steps)
             adapter.compile(name)
@@ -2279,7 +2279,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
             return {"success": False, "error": "llm-reasoners not available"}
 
         try:
-            from ..adapters.llm_reasoners_adapter import ReasoningAlgorithm
+            from adapters.llm_reasoners_adapter import ReasoningAlgorithm
 
             algo_map = {
                 "mcts": ReasoningAlgorithm.MCTS,
@@ -2334,7 +2334,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
             return {"success": False, "error": "Deep Research Pipeline not available"}
 
         try:
-            from ..pipelines.deep_research_pipeline import ResearchDepth
+            from pipelines.deep_research_pipeline import ResearchDepth
 
             depth_map = {
                 "quick": ResearchDepth.QUICK,
@@ -2385,7 +2385,7 @@ class EcosystemOrchestratorV2(EcosystemOrchestrator):
             return {"success": False, "error": "Self-Improvement Pipeline not available"}
 
         try:
-            from ..pipelines.self_improvement_pipeline import (
+            from pipelines.self_improvement_pipeline import (
                 Workflow,
                 ImprovementStrategy,
             )

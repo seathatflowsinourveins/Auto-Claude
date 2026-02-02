@@ -645,5 +645,60 @@ class TestUnifiedConfidence:
         assert le is not None
 
 
+# ============================================================================
+# SECTION 18: V2 Adapter Wiring (Iteration 33)
+# ============================================================================
+
+class TestV2AdapterWiring:
+    """Verify V2 adapters are wired into EcosystemOrchestrator."""
+
+    @pytest.fixture(autouse=True)
+    def setup_path(self):
+        platform_path = str(BASE / "platform")
+        if platform_path not in sys.path:
+            sys.path.insert(0, platform_path)
+
+    def test_orchestrator_has_dspy(self):
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        assert o.has_dspy, "DSPy adapter should be wired into orchestrator"
+
+    def test_orchestrator_has_langgraph(self):
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        assert o.has_langgraph, "LangGraph adapter should be wired into orchestrator"
+
+    def test_orchestrator_has_mem0(self):
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        assert o.has_mem0, "Mem0 adapter should be wired into orchestrator"
+
+    def test_dspy_adapter_functional(self):
+        from adapters.dspy_adapter import DSPyAdapter
+        adapter = DSPyAdapter()
+        assert adapter._available is True
+        assert adapter.model_name is not None
+
+    def test_langgraph_adapter_functional(self):
+        from adapters.langgraph_adapter import LangGraphAdapter
+        adapter = LangGraphAdapter()
+        assert adapter._available is True
+
+    def test_mem0_adapter_functional(self):
+        from adapters.mem0_adapter import Mem0Adapter
+        adapter = Mem0Adapter()
+        assert adapter._available is True
+
+    def test_v2_status_shows_adapters(self):
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        status = o.v2_status()
+        assert "adapters" in status
+        adapters = status["adapters"]
+        assert adapters["dspy"]["available"] is True
+        assert adapters["langgraph"]["available"] is True
+        assert adapters["mem0"]["available"] is True
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
