@@ -214,5 +214,39 @@ class TestOpikTracing:
         assert "default mode" in content.lower() or "anonymous" in content.lower()
 
 
+# ============================================================================
+# SECTION 7: Letta Cloud Integration
+# ============================================================================
+
+class TestLettaCloudIntegration:
+    """Verify Letta Cloud cross-session memory."""
+
+    def test_cross_session_memory_module_exists(self):
+        path = BASE / "platform" / "core" / "cross_session_memory.py"
+        assert path.exists()
+        content = path.read_text(encoding="utf-8")
+        assert "letta_sync" in content
+        assert "CrossSessionMemory" in content
+
+    def test_cross_session_memory_has_letta_sync(self):
+        """Must have Letta Cloud sync method."""
+        path = BASE / "platform" / "core" / "cross_session_memory.py"
+        content = path.read_text(encoding="utf-8")
+        assert "_sync_to_letta" in content
+        assert "passages.create" in content
+
+    def test_advanced_memory_has_letta(self):
+        path = BASE / "platform" / "core" / "advanced_memory.py"
+        assert path.exists()
+        content = path.read_text(encoding="utf-8")
+        assert "Letta" in content or "letta" in content
+
+    def test_letta_agent_id_configured(self):
+        """ECOSYSTEM agent ID must be in cross-session memory."""
+        path = BASE / "platform" / "core" / "cross_session_memory.py"
+        content = path.read_text(encoding="utf-8")
+        assert "agent-daee71d2" in content
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
