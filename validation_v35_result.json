@@ -1,11 +1,11 @@
 {
-  "python_version": "3.14.0",
-  "timestamp": "2026-01-24T23:27:23.800633",
+  "python_version": "3.14.2",
+  "timestamp": "2026-02-02T06:11:44.546517",
   "total_sdks": 36,
   "native_sdks": 27,
   "compat_layers": 9,
-  "passed": 36,
-  "failed": 0,
+  "passed": 34,
+  "failed": 2,
   "layers": {
     "L0": {
       "total": 3,
@@ -15,14 +15,18 @@
     },
     "L1": {
       "total": 6,
-      "passed": 6,
-      "failed": [],
+      "passed": 5,
+      "failed": [
+        "controlflow"
+      ],
       "compat_count": 1
     },
     "L2": {
       "total": 4,
-      "passed": 4,
-      "failed": [],
+      "passed": 3,
+      "failed": [
+        "letta"
+      ],
       "compat_count": 1
     },
     "L3": {
@@ -95,8 +99,8 @@
       "layer": "L1",
       "name": "controlflow",
       "is_compat": false,
-      "passed": true,
-      "error": null
+      "passed": false,
+      "error": "cannot import name 'ModelProfile' from 'langchain_core.language_models' (C:\\Users\\42\\AppData\\Roaming"
     },
     {
       "layer": "L1",
@@ -144,8 +148,8 @@
       "layer": "L2",
       "name": "letta",
       "is_compat": false,
-      "passed": true,
-      "error": null
+      "passed": false,
+      "error": "No module named 'letta'"
     },
     {
       "layer": "L2",
@@ -316,5 +320,5 @@
       "error": null
     }
   ],
-  "percentage": 100.0
+  "percentage": 94.4
 }
