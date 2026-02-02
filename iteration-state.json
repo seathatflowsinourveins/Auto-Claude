@@ -1,7 +1,7 @@
 {
   "version": "14.0",
-  "iteration": 55,
-  "last_updated": "2026-02-02T13:40:00Z",
+  "iteration": 61,
+  "last_updated": "2026-02-02T16:30:00Z",
   "target": "platform/core/ralph_loop.py",
   "loop_architecture": "ITERATION_LOOP_V14.md",
   "goals": {
@@ -37,7 +37,15 @@
       "V14 Iter 36: Recovered v123 provider integration tests (15/15)",
       "V14 Iter 37: Fixed namespace imports in 3 test files (recovered 10 skips)",
       "V14 Iter 38: E2E orchestrator + metrics integration tests (107/107)",
-      "V14 MILESTONE: 1440 tests (107 V14 + 1333 platform), 10 skip, 0 fail"
+      "V14 MILESTONE: 1440 tests (107 V14 + 1333 platform), 10 skip, 0 fail",
+      "V14 Iter 40: Fixed 40 adapter SDK integration tests (relative imports)",
+      "V14 Iter 43: Added adapter auto-registration on package import",
+      "V14 Iter 44: Created pytest.ini (exclude vendor SDKs, enable asyncio auto)",
+      "V14 Iter 45: FIRST real service integration tests (23 tests, actual API calls)",
+      "V14 Iter 46: Created core/orchestration/embedding_layer.py (fixed VOYAGE_AVAILABLE=False)",
+      "V14 Iter 47: 30 real API tests (Voyage, Letta, DSPy, LangGraph, Exa, MemoryMetrics)",
+      "V14 Iter 48: Added Voyage + service connectivity tests to v14 suite (118/118 + 2 skip)",
+      "V14 MILESTONE: 1543 tests (118 V14 + 1425 platform), 10 skip, 0 fail, 30 real API tests"
     ],
     "v14_infrastructure": [
       "Git repo initialized at 8f998e7 (1562 files)",
