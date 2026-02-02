@@ -325,20 +325,70 @@ class TestRealAdapterAvailability:
         assert MEM0_AVAILABLE is True
         import mem0  # Actually importable
 
-    def test_voyage_adapter_broken(self):
-        """HONEST: Voyage adapter VOYAGE_AVAILABLE is False due to missing embedding_layer module.
-
-        This documents a known issue: core.orchestration.embedding_layer doesn't exist,
-        so VOYAGE_AVAILABLE is always False even though voyageai SDK works fine.
-        """
+    def test_voyage_adapter_available(self):
+        """Voyage adapter VOYAGE_AVAILABLE is True now that embedding_layer exists."""
         from adapters.dspy_voyage_retriever import VOYAGE_AVAILABLE
-        # Documenting the bug: this SHOULD be True but isn't
-        assert VOYAGE_AVAILABLE is False, \
-            "If this fails, the embedding_layer module was created - update this test!"
+        assert VOYAGE_AVAILABLE is True, \
+            "VOYAGE_AVAILABLE should be True (core.orchestration.embedding_layer created in V14 Iter 46)"
 
-        # But the raw SDK works
+        from adapters.letta_voyage_adapter import VOYAGE_AVAILABLE as LV
+        assert LV is True, "Letta-Voyage adapter should also be available"
+
+        # And the raw SDK works
         import voyageai
         assert voyageai is not None
+
+
+class TestRealEmbeddingLayer:
+    """Test the core.orchestration.embedding_layer with REAL Voyage AI API."""
+
+    @pytest.fixture(autouse=True)
+    def check_voyage_key(self):
+        if not os.environ.get("VOYAGE_API_KEY"):
+            pytest.skip("VOYAGE_API_KEY not set")
+
+    @pytest.mark.asyncio
+    async def test_embedding_layer_real_api(self):
+        """Create embedding layer and make real Voyage API call."""
+        from core.orchestration.embedding_layer import create_embedding_layer, InputType
+
+        layer = create_embedding_layer(model="voyage-3", cache_enabled=True)
+        await layer.initialize()
+
+        result = await layer.embed(["test embedding"], input_type=InputType.QUERY)
+        assert len(result.embeddings) == 1
+        assert len(result.embeddings[0]) == 1024
+        assert result.total_tokens > 0
+        assert result.model == "voyage-3"
+
+    @pytest.mark.asyncio
+    async def test_embedding_layer_cache(self):
+        """Verify cache returns cached results on repeated calls."""
+        from core.orchestration.embedding_layer import create_embedding_layer, InputType
+
+        layer = create_embedding_layer(model="voyage-3", cache_enabled=True)
+        await layer.initialize()
+
+        # First call - real API
+        r1 = await layer.embed(["cache test"], input_type=InputType.DOCUMENT)
+        assert r1.cached is False
+
+        # Second call - should be cached
+        r2 = await layer.embed(["cache test"], input_type=InputType.DOCUMENT)
+        assert r2.cached is True
+        assert layer._cache_hits >= 1
+
+    @pytest.mark.asyncio
+    async def test_embedding_layer_batch(self):
+        """Test batch embedding through the layer."""
+        from core.orchestration.embedding_layer import create_embedding_layer, InputType
+
+        layer = create_embedding_layer(model="voyage-3")
+        await layer.initialize()
+
+        texts = ["doc one", "doc two", "doc three"]
+        result = await layer.embed(texts, input_type=InputType.DOCUMENT)
+        assert len(result.embeddings) == 3
 
 
 class TestRealOrchestratorIntegration:
