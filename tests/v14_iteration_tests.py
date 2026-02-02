@@ -315,5 +315,45 @@ class TestSelfImprovement:
         assert "agent-daee71d2" in SelfImprovementOrchestrator.LETTA_AGENT_ID
 
 
+# ============================================================================
+# SECTION 9: End-to-End Integration
+# ============================================================================
+
+class TestEndToEndIntegration:
+    """Verify cross-component integration."""
+
+    @pytest.fixture(autouse=True)
+    def setup_path(self):
+        platform_path = str(BASE / "platform")
+        if platform_path not in sys.path:
+            sys.path.insert(0, platform_path)
+
+    def test_self_improvement_letta_sync_capability(self):
+        """SelfImprovementOrchestrator must support letta_sync parameter."""
+        from core.self_improvement import SelfImprovementOrchestrator, HAS_LETTA
+        orch = SelfImprovementOrchestrator(session_id="test", letta_sync=True)
+        assert orch.letta_sync == HAS_LETTA  # True only if letta_client available
+
+    def test_core_module_count(self):
+        """Must have at least 12 importable core modules."""
+        import importlib
+        modules = [
+            "core.ralph_loop", "core.learning", "core.self_improvement",
+            "core.cross_session_memory", "core.memory_tiers",
+            "core.unified_confidence", "core.opik_integration",
+            "core.opik_v14", "core.advanced_memory",
+            "core.v14_optimizations", "core.v50_integration",
+            "core.code_intel_observability",
+        ]
+        imported = 0
+        for mod in modules:
+            try:
+                importlib.import_module(mod)
+                imported += 1
+            except Exception:
+                pass
+        assert imported >= 12, f"Only {imported}/12 core modules importing"
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
