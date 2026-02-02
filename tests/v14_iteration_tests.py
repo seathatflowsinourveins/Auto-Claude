@@ -334,6 +334,21 @@ class TestEndToEndIntegration:
         orch = SelfImprovementOrchestrator(session_id="test", letta_sync=True)
         assert orch.letta_sync == HAS_LETTA  # True only if letta_client available
 
+    def test_cross_session_memory_write_read_cycle(self):
+        """CrossSessionMemory must persist across instances."""
+        import tempfile
+        from core.cross_session_memory import CrossSessionMemory
+        with tempfile.TemporaryDirectory() as tmpdir:
+            csm = CrossSessionMemory(base_path=Path(tmpdir))
+            mem = csm.add(content="V14 test memory", memory_type="learning", importance=0.9)
+            assert mem.id is not None
+            results = csm.search("V14 test")
+            assert len(results) >= 1
+            # Reload and verify persistence
+            csm2 = CrossSessionMemory(base_path=Path(tmpdir))
+            results2 = csm2.search("V14")
+            assert len(results2) >= 1
+
     def test_core_module_count(self):
         """Must have at least 12 importable core modules."""
         import importlib
