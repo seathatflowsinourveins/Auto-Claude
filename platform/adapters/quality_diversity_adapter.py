@@ -13,7 +13,7 @@ Verified against official docs 2026-01-30:
 """
 
 from typing import Optional, Callable, Any, Dict, List, Tuple
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
 import logging
 import numpy as np

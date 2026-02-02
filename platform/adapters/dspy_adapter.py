@@ -12,10 +12,8 @@ Stars: 31,600 | Version: 3.1.0 | License: MIT
 """
 
 import os
-import sys
 from typing import Any, Dict, List, Optional, Callable
 from dataclasses import dataclass, field
-from abc import ABC, abstractmethod
 
 # Check DSPy availability
 DSPY_AVAILABLE = False

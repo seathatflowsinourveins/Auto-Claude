@@ -21,10 +21,8 @@ Repository: https://github.com/chonkie-inc/chonkie
 Docs: https://docs.chonkie.ai/
 """
 
-from __future__ import annotations
-
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional
 from enum import Enum
 import structlog
 

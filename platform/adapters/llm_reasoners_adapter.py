@@ -19,10 +19,9 @@ Stars: 2,300 | License: MIT
 """
 
 import os
-from typing import Any, Dict, List, Optional, Callable, Tuple, Union
+from typing import Any, Dict, List, Optional, Union
 from dataclasses import dataclass, field
 from enum import Enum
-from abc import ABC, abstractmethod
 
 # Check llm-reasoners availability
 LLM_REASONERS_AVAILABLE = False
@@ -37,7 +36,8 @@ except ImportError:
 
 # Register adapter status
 from . import register_adapter
-register_adapter("llm_reasoners", LLM_REASONERS_AVAILABLE)
+_reasoners_version = getattr(reasoners, "__version__", "unknown") if LLM_REASONERS_AVAILABLE else None
+register_adapter("llm_reasoners", LLM_REASONERS_AVAILABLE, _reasoners_version)
 
 
 class ReasoningAlgorithm(Enum):

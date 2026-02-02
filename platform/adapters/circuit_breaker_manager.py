@@ -20,17 +20,16 @@ import sys
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Dict, Optional, Any, Callable
-from enum import Enum
 import threading
 import logging
 
 # Import CircuitBreaker from resilience module
 try:
-    from ..core.resilience import CircuitBreaker, CircuitState, CircuitStats
+    from ..core.resilience import CircuitBreaker, CircuitState
 except ImportError:
     # Fallback for direct execution
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from core.resilience import CircuitBreaker, CircuitState, CircuitStats
+    from core.resilience import CircuitBreaker, CircuitState
 
 logger = logging.getLogger(__name__)
 

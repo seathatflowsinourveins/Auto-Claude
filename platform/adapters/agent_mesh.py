@@ -21,11 +21,9 @@ Research-verified (2026-01-30):
 from __future__ import annotations
 
 import asyncio
-import json
-import time
 import uuid
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from enum import Enum
 from typing import Any, Callable, Awaitable, Optional, Dict, List, Set
 import logging
@@ -112,7 +110,7 @@ class AgentInfo:
     @property
     def is_stale(self) -> bool:
         """Check if heartbeat is stale (>30s)."""
-        return datetime.utcnow() - self.last_heartbeat > timedelta(seconds=30)
+        return datetime.now(timezone.utc) - self.last_heartbeat > timedelta(seconds=30)
 
 
 @dataclass
@@ -582,7 +580,7 @@ class AgentMesh:
         # Update task state
         task.assigned_agent = selected.agent_id
         task.status = "assigned"
-        task.started_at = datetime.utcnow()
+        task.started_at = datetime.now(timezone.utc)
 
         # Update agent status
         selected.status = AgentStatus.BUSY
@@ -618,7 +616,7 @@ class AgentMesh:
 
         task = self._tasks[task_id]
         task.status = "completed"
-        task.completed_at = datetime.utcnow()
+        task.completed_at = datetime.now(timezone.utc)
         task.result = result
 
         # Update agent status
@@ -792,7 +790,7 @@ class AgentMesh:
             try:
                 for agent_id in list(self._agents.keys()):
                     agent = self._agents[agent_id]
-                    agent.last_heartbeat = datetime.utcnow()
+                    agent.last_heartbeat = datetime.now(timezone.utc)
 
                     await self.broadcast(
                         sender_id=agent_id,

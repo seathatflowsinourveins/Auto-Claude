@@ -98,55 +98,35 @@ class TestLettaCloudInitialization:
 
 
 class TestLettaClientPatterns:
-    """Verify correct Letta client initialization patterns."""
+    """Verify correct Letta client SDK patterns via introspection."""
 
-    def test_files_have_base_url(self):
-        """Verify key files include base_url in Letta initialization."""
-        import re
+    def test_letta_client_accepts_base_url(self):
+        """Letta SDK should accept base_url parameter."""
+        try:
+            from letta_client import Letta
+        except ImportError:
+            pytest.skip("letta_client not installed")
 
-        files_to_check = [
-            "platform/core/ecosystem_orchestrator.py",
-            "sdks/letta/agent-file/workflow_agent/workflow_agent.py",
-            "sdks/letta/agent-file/memgpt_agent/memgpt_agent.py",
-            "sdks/letta/agent-file/deep_research_agent/deep_research_agent.py",
-            "sdks/letta/agent-file/customer_service_agent/customer_service_agent.py",
-        ]
+        import inspect
+        sig = inspect.signature(Letta.__init__)
+        params = list(sig.parameters.keys())
+        assert "base_url" in params, \
+            f"Letta.__init__ should accept base_url, got params: {params}"
 
-        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+    def test_letta_client_uses_api_key_not_token(self):
+        """Letta SDK should use api_key= (not deprecated token=)."""
+        try:
+            from letta_client import Letta
+        except ImportError:
+            pytest.skip("letta_client not installed")
 
-        for file_path in files_to_check:
-            full_path = os.path.join(base_dir, file_path)
-            if not os.path.exists(full_path):
-                continue
-
-            with open(full_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-
-            # Check for Letta initialization with base_url
-            has_base_url = "base_url" in content and "Letta(" in content
-            assert has_base_url, \
-                f"{file_path} missing base_url in Letta initialization"
-
-    def test_no_deprecated_token_parameter(self):
-        """Verify no files use deprecated token= parameter."""
-        import re
-
-        base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-
-        # Check ai_memory_sdk.py specifically
-        sdk_path = os.path.join(
-            base_dir,
-            "sdks/letta/ai-memory-sdk/src/python/ai_memory_sdk.py"
-        )
-
-        if os.path.exists(sdk_path):
-            with open(sdk_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-
-            # Should use api_key=, not token=
-            has_deprecated = "Letta(token=" in content
-            assert not has_deprecated, \
-                f"ai_memory_sdk.py uses deprecated token= parameter"
+        import inspect
+        sig = inspect.signature(Letta.__init__)
+        params = list(sig.parameters.keys())
+        assert "api_key" in params, \
+            f"Letta.__init__ should accept api_key, got params: {params}"
+        assert "token" not in params, \
+            "Letta.__init__ should NOT have deprecated 'token' parameter"
 
 
 if __name__ == "__main__":

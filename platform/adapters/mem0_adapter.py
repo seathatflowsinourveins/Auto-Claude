@@ -14,7 +14,7 @@ Stars: 45,700 | Version: 1.0.0 | License: MIT
 """
 
 import os
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import Enum
