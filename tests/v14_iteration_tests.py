@@ -370,5 +370,38 @@ class TestEndToEndIntegration:
         assert imported >= 12, f"Only {imported}/12 core modules importing"
 
 
+# ============================================================================
+# SECTION 10: DSPy Integration
+# ============================================================================
+
+class TestDSPyIntegration:
+    """Verify DSPy 2.6.5 is functional."""
+
+    def test_dspy_imports(self):
+        import dspy
+        assert hasattr(dspy, "Predict")
+        assert hasattr(dspy, "ChainOfThought")
+        assert hasattr(dspy, "Signature")
+
+    def test_dspy_version(self):
+        import dspy
+        assert dspy.__version__.startswith("2.6")
+
+    def test_dspy_miprov2_available(self):
+        from dspy.teleprompt import MIPROv2
+        assert MIPROv2 is not None
+
+    def test_dspy_signature_creation(self):
+        import dspy
+        sig = dspy.Signature("question -> answer")
+        assert sig is not None
+
+    def test_dspy_predict_module(self):
+        import dspy
+        sig = dspy.Signature("question -> answer")
+        pred = dspy.Predict(sig)
+        assert pred is not None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
