@@ -700,5 +700,59 @@ class TestV2AdapterWiring:
         assert adapters["mem0"]["available"] is True
 
 
+# ============================================================================
+# SECTION 19: V2 Pipelines + Full Status (Iteration 34)
+# ============================================================================
+
+class TestV2Pipelines:
+    """Verify V2 pipelines are wired into EcosystemOrchestrator."""
+
+    @pytest.fixture(autouse=True)
+    def setup_path(self):
+        platform_path = str(BASE / "platform")
+        if platform_path not in sys.path:
+            sys.path.insert(0, platform_path)
+
+    def test_deep_research_pipeline_wired(self):
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        assert o.has_deep_research_pipeline
+
+    def test_self_improvement_pipeline_wired(self):
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        assert o.has_self_improvement_pipeline
+
+    def test_v2_status_complete(self):
+        """V2 status should show all adapters and pipelines."""
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        status = o.v2_status()
+        # All sections present
+        assert "adapters" in status
+        assert "pipelines" in status
+        # Pipelines wired
+        assert status["pipelines"]["deep_research"]["available"] is True
+        assert status["pipelines"]["self_improvement"]["available"] is True
+
+    def test_full_orchestrator_capabilities(self):
+        """Orchestrator should have research + letta + cache + 3 adapters + 2 pipelines."""
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        capabilities = {
+            "research": o.has_research,
+            "letta": o.has_letta,
+            "cache": o.has_cache,
+            "dspy": o.has_dspy,
+            "langgraph": o.has_langgraph,
+            "mem0": o.has_mem0,
+            "deep_research_pipeline": o.has_deep_research_pipeline,
+            "self_improvement_pipeline": o.has_self_improvement_pipeline,
+        }
+        # At least 8 capabilities should be True
+        active = sum(1 for v in capabilities.values() if v)
+        assert active >= 8, f"Expected 8+ capabilities, got {active}: {capabilities}"
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
