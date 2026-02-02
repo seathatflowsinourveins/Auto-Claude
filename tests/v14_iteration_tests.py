@@ -403,5 +403,56 @@ class TestDSPyIntegration:
         assert pred is not None
 
 
+# ============================================================================
+# SECTION 11: LiteLLM, Instructor, LangGraph
+# ============================================================================
+
+class TestLiteLLMIntegration:
+    """Verify LiteLLM multi-provider gateway."""
+
+    def test_litellm_imports(self):
+        import litellm
+        assert hasattr(litellm, "completion")
+        assert hasattr(litellm, "acompletion")
+        assert hasattr(litellm, "embedding")
+
+    def test_litellm_provider_list(self):
+        import litellm
+        assert hasattr(litellm, "provider_list")
+        assert len(litellm.provider_list) > 5
+
+
+class TestInstructorIntegration:
+    """Verify Instructor structured output library."""
+
+    def test_instructor_imports(self):
+        import instructor
+        assert hasattr(instructor, "from_anthropic")
+        assert hasattr(instructor, "from_openai")
+
+    def test_instructor_version(self):
+        import instructor
+        assert instructor.__version__.startswith("1.")
+
+
+class TestLangGraphIntegration:
+    """Verify LangGraph stateful agent framework."""
+
+    def test_langgraph_state_graph(self):
+        from langgraph.graph import StateGraph, END
+        assert StateGraph is not None
+        assert END is not None
+
+    def test_langgraph_graph_creation(self):
+        from langgraph.graph import StateGraph, END
+        from typing import TypedDict
+
+        class State(TypedDict):
+            value: str
+
+        graph = StateGraph(State)
+        assert graph is not None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
