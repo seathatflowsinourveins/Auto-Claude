@@ -572,7 +572,7 @@ class LettaOpikIntegration:
 
         Usage:
             from letta_client import Letta
-            from platform.core.opik_integration import LettaOpikIntegration
+            from core.opik_integration import LettaOpikIntegration
 
             client = Letta(api_key=..., base_url=...)
             integration = LettaOpikIntegration()

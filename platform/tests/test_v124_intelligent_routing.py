@@ -97,7 +97,7 @@ class TestContentDetectionBehavior:
     def test_detect_python_code(self):
         """Test detection of Python code."""
         try:
-            from platform.core.advanced_memory import detect_content_type, ContentType
+            from core.advanced_memory import detect_content_type, ContentType
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -116,7 +116,7 @@ class TestContentDetectionBehavior:
     def test_detect_javascript_code(self):
         """Test detection of JavaScript code."""
         try:
-            from platform.core.advanced_memory import detect_content_type, ContentType
+            from core.advanced_memory import detect_content_type, ContentType
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -135,7 +135,7 @@ class TestContentDetectionBehavior:
     def test_detect_natural_text(self):
         """Test detection of natural language text."""
         try:
-            from platform.core.advanced_memory import detect_content_type, ContentType
+            from core.advanced_memory import detect_content_type, ContentType
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -150,7 +150,7 @@ class TestContentDetectionBehavior:
     def test_detect_multilingual_content(self):
         """Test detection of multilingual content."""
         try:
-            from platform.core.advanced_memory import detect_content_type, ContentType
+            from core.advanced_memory import detect_content_type, ContentType
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -169,7 +169,7 @@ class TestContentDetectionBehavior:
     def test_detect_unknown_for_short_text(self):
         """Test that short text returns UNKNOWN."""
         try:
-            from platform.core.advanced_memory import detect_content_type, ContentType
+            from core.advanced_memory import detect_content_type, ContentType
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -244,7 +244,7 @@ class TestEmbeddingRouterBehavior:
     def test_router_initialization(self):
         """Test EmbeddingRouter initializes correctly."""
         try:
-            from platform.core.advanced_memory import EmbeddingRouter
+            from core.advanced_memory import EmbeddingRouter
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -260,7 +260,7 @@ class TestEmbeddingRouterBehavior:
     def test_router_prefer_local(self):
         """Test router with prefer_local flag."""
         try:
-            from platform.core.advanced_memory import EmbeddingRouter
+            from core.advanced_memory import EmbeddingRouter
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -276,7 +276,7 @@ class TestEmbeddingRouterBehavior:
     async def test_router_embed_local(self):
         """Test router embedding with local provider."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 create_embedding_router,
                 ContentType,
             )
@@ -298,7 +298,7 @@ class TestEmbeddingRouterBehavior:
     async def test_router_embed_with_force_type(self):
         """Test router with forced content type."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 create_embedding_router,
                 ContentType,
             )
@@ -318,7 +318,7 @@ class TestEmbeddingRouterBehavior:
     async def test_router_batch_embed(self):
         """Test router batch embedding."""
         try:
-            from platform.core.advanced_memory import create_embedding_router
+            from core.advanced_memory import create_embedding_router
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -346,7 +346,7 @@ class TestRoutingStats:
     async def test_stats_by_content_type(self):
         """Test that stats track content type correctly."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 create_embedding_router,
                 ContentType,
             )
@@ -369,7 +369,7 @@ class TestRoutingStats:
     async def test_stats_reset(self):
         """Test that stats can be reset."""
         try:
-            from platform.core.advanced_memory import create_embedding_router
+            from core.advanced_memory import create_embedding_router
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 

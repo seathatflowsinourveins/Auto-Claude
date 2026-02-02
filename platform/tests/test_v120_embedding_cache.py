@@ -154,7 +154,7 @@ class TestEmbeddingCacheBehavior:
     def test_cache_basic_operations(self):
         """Test basic cache get/set operations."""
         try:
-            from platform.core.advanced_memory import EmbeddingCache
+            from core.advanced_memory import EmbeddingCache
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -178,7 +178,7 @@ class TestEmbeddingCacheBehavior:
     def test_cache_ttl_expiration(self):
         """Test TTL-based cache expiration."""
         try:
-            from platform.core.advanced_memory import EmbeddingCache
+            from core.advanced_memory import EmbeddingCache
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -202,7 +202,7 @@ class TestEmbeddingCacheBehavior:
     def test_cache_lru_eviction(self):
         """Test LRU eviction when at capacity."""
         try:
-            from platform.core.advanced_memory import EmbeddingCache
+            from core.advanced_memory import EmbeddingCache
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -231,7 +231,7 @@ class TestEmbeddingCacheBehavior:
     def test_cache_stats(self):
         """Test cache statistics tracking."""
         try:
-            from platform.core.advanced_memory import EmbeddingCache
+            from core.advanced_memory import EmbeddingCache
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -253,7 +253,7 @@ class TestEmbeddingCacheBehavior:
     def test_cache_clear(self):
         """Test cache clear operation."""
         try:
-            from platform.core.advanced_memory import EmbeddingCache
+            from core.advanced_memory import EmbeddingCache
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -278,7 +278,7 @@ class TestEmbeddingCacheIntegration:
     async def test_global_cache_shared(self):
         """Test that global cache is shared across operations."""
         try:
-            from platform.core.advanced_memory import _embedding_cache
+            from core.advanced_memory import _embedding_cache
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -291,7 +291,7 @@ class TestEmbeddingCacheIntegration:
     def test_cache_key_uniqueness(self):
         """Test that cache keys are unique for different text/model combos."""
         try:
-            from platform.core.advanced_memory import EmbeddingCache
+            from core.advanced_memory import EmbeddingCache
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 

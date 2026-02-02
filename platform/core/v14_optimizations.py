@@ -9,7 +9,7 @@ Key Optimizations:
 4. Opik tracing integration
 
 Usage:
-    from platform.core.v14_optimizations import V14Optimizer
+    from core.v14_optimizations import V14Optimizer
     optimizer = V14Optimizer()
     await optimizer.enable_sleeptime_all_agents()
     health = await optimizer.parallel_health_check()

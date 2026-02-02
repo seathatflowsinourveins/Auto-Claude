@@ -79,7 +79,7 @@ class TestLettaCloudInitialization:
     def test_ecosystem_orchestrator_initialization(self):
         """Test that ecosystem_orchestrator uses Cloud base_url."""
         try:
-            from platform.core.ecosystem_orchestrator import EcosystemOrchestrator
+            from core.ecosystem_orchestrator import EcosystemOrchestrator
 
             orchestrator = EcosystemOrchestrator()
             status = orchestrator.status

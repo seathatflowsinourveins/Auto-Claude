@@ -13,7 +13,7 @@ Features:
 - Dashboard for metrics visibility
 
 Usage:
-    from platform.core.code_intel_observability import (
+    from core.code_intel_observability import (
         trace_embedding,
         trace_search,
         CodeIntelMetrics,

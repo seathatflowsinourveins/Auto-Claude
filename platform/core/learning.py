@@ -13,7 +13,7 @@ Key Concepts:
 - Instinct: A learned pattern with confidence score that decays without reinforcement
 
 Usage:
-    from platform.core.learning import LearningEngine, Pattern
+    from core.learning import LearningEngine, Pattern
 
     engine = LearningEngine()
 

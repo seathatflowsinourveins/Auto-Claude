@@ -127,7 +127,7 @@ class TestSentenceTransformerProvider:
     async def test_local_provider_embed(self):
         """Test local sentence-transformers embedding."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 SentenceTransformerEmbeddingProvider,
                 reset_memory_metrics,
             )
@@ -155,7 +155,7 @@ class TestSentenceTransformerProvider:
     async def test_local_provider_batch(self):
         """Test local batch embedding."""
         try:
-            from platform.core.advanced_memory import SentenceTransformerEmbeddingProvider
+            from core.advanced_memory import SentenceTransformerEmbeddingProvider
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -183,7 +183,7 @@ class TestSentenceTransformerProvider:
     async def test_local_provider_caching(self):
         """Test that local provider uses cache."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 SentenceTransformerEmbeddingProvider,
                 _embedding_cache,
                 get_memory_stats,
@@ -223,7 +223,7 @@ class TestFactoryFunction:
     def test_factory_auto_detects_voyage(self):
         """Test factory auto-detects Voyage models."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 create_embedding_provider,
                 VoyageEmbeddingProvider,
             )
@@ -241,7 +241,7 @@ class TestFactoryFunction:
     def test_factory_auto_detects_openai(self):
         """Test factory auto-detects OpenAI models."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 create_embedding_provider,
                 OpenAIEmbeddingProvider,
             )
@@ -259,7 +259,7 @@ class TestFactoryFunction:
     def test_factory_auto_detects_local(self):
         """Test factory auto-detects local models."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 create_embedding_provider,
                 SentenceTransformerEmbeddingProvider,
             )
@@ -277,7 +277,7 @@ class TestFactoryFunction:
     def test_factory_provider_override(self):
         """Test factory respects provider_type override."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 create_embedding_provider,
                 LocalEmbeddingProvider,
             )
@@ -298,7 +298,7 @@ class TestVoyageProvider:
     def test_voyage_provider_initialization(self):
         """Test Voyage provider initializes correctly."""
         try:
-            from platform.core.advanced_memory import VoyageEmbeddingProvider
+            from core.advanced_memory import VoyageEmbeddingProvider
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -309,7 +309,7 @@ class TestVoyageProvider:
     def test_voyage_provider_circuit_breaker(self):
         """Test Voyage provider has circuit breaker."""
         try:
-            from platform.core.advanced_memory import VoyageEmbeddingProvider
+            from core.advanced_memory import VoyageEmbeddingProvider
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -329,7 +329,7 @@ class TestProviderIntegration:
     async def test_providers_record_metrics(self):
         """Test that all providers record metrics correctly."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 LocalEmbeddingProvider,
                 get_memory_stats,
                 reset_memory_metrics,
@@ -350,7 +350,7 @@ class TestProviderIntegration:
     async def test_sentence_transformer_records_metrics(self):
         """Test sentence-transformers records metrics."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 SentenceTransformerEmbeddingProvider,
                 get_memory_stats,
                 reset_memory_metrics,

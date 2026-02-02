@@ -14,7 +14,7 @@ Integrates with:
 - Letta agents (sleep-time, memory persistence)
 
 Usage:
-    from platform.core.opik_v14 import OpikV14, AgentOptimizer, OutputGuardrail
+    from core.opik_v14 import OpikV14, AgentOptimizer, OutputGuardrail
 
     optimizer = AgentOptimizer()
     guardrail = OutputGuardrail()
@@ -50,7 +50,7 @@ from pydantic import BaseModel, Field
 # Import base Opik integration - handle different import paths
 # Python's built-in 'platform' module shadows our directory, so we use multiple fallbacks
 try:
-    from platform.core.opik_integration import (
+    from core.opik_integration import (
         OpikClient,
         OpikConfig,
         get_opik_client,

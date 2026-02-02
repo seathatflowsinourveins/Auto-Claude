@@ -115,7 +115,7 @@ except ImportError as e:
 
 # Try to import local cross-session memory
 try:
-    from platform.core.cross_session_memory import CrossSessionMemory
+    from core.cross_session_memory import CrossSessionMemory
     CROSS_SESSION_AVAILABLE = True
 except ImportError:
     try:

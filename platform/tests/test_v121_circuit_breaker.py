@@ -157,7 +157,7 @@ class TestCircuitBreakerBehavior:
     def test_circuit_breaker_states(self):
         """Test CircuitBreaker state transitions."""
         try:
-            from platform.core.resilience import CircuitBreaker, CircuitState
+            from core.resilience import CircuitBreaker, CircuitState
         except ImportError:
             pytest.skip("resilience module not importable")
 
@@ -174,7 +174,7 @@ class TestCircuitBreakerBehavior:
     async def test_circuit_opens_on_failures(self):
         """Test that circuit opens after consecutive failures."""
         try:
-            from platform.core.resilience import CircuitBreaker, CircuitState, CircuitOpenError
+            from core.resilience import CircuitBreaker, CircuitState, CircuitOpenError
         except ImportError:
             pytest.skip("resilience module not importable")
 
@@ -205,7 +205,7 @@ class TestCircuitBreakerBehavior:
     async def test_circuit_tracks_stats(self):
         """Test that circuit breaker tracks statistics."""
         try:
-            from platform.core.resilience import CircuitBreaker
+            from core.resilience import CircuitBreaker
         except ImportError:
             pytest.skip("resilience module not importable")
 
@@ -230,7 +230,7 @@ class TestCircuitBreakerBehavior:
     def test_openai_provider_circuit_stats_method(self):
         """Test that OpenAIEmbeddingProvider has circuit stats."""
         try:
-            from platform.core.advanced_memory import OpenAIEmbeddingProvider
+            from core.advanced_memory import OpenAIEmbeddingProvider
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -252,7 +252,7 @@ class TestCircuitBreakerIntegration:
     async def test_cache_bypasses_circuit_breaker(self):
         """Test that cache hits bypass the circuit breaker."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 OpenAIEmbeddingProvider,
                 _embedding_cache,
             )

@@ -124,7 +124,7 @@ class TestSharedClientBehavior:
     def test_openai_provider_client_reuse(self):
         """Test that OpenAIEmbeddingProvider reuses client."""
         try:
-            from platform.core.advanced_memory import OpenAIEmbeddingProvider
+            from core.advanced_memory import OpenAIEmbeddingProvider
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 

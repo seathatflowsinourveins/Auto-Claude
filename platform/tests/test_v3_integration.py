@@ -37,7 +37,7 @@ class TestV3ModuleImports:
     def test_import_ultimate_orchestrator(self):
         """Test ultimate_orchestrator module import."""
         try:
-            from platform.core.ultimate_orchestrator import (
+            from core.ultimate_orchestrator import (
                 SDKLayer,
                 ExecutionResult,
                 UltimateOrchestrator,
@@ -53,7 +53,7 @@ class TestV3ModuleImports:
     def test_import_cross_session_memory(self):
         """Test cross_session_memory module import."""
         try:
-            from platform.core.cross_session_memory import (
+            from core.cross_session_memory import (
                 Memory,
                 CrossSessionMemory,
                 get_memory_store,
@@ -69,7 +69,7 @@ class TestV3ModuleImports:
     def test_import_unified_pipeline(self):
         """Test unified_pipeline module import."""
         try:
-            from platform.core.unified_pipeline import (
+            from core.unified_pipeline import (
                 PipelineStatus,
                 Pipeline,
                 DeepResearchPipeline,
@@ -86,7 +86,7 @@ class TestV3ModuleImports:
     def test_import_ralph_loop(self):
         """Test ralph_loop module import."""
         try:
-            from platform.core.ralph_loop import (
+            from core.ralph_loop import (
                 IterationResult,
                 LoopState,
                 RalphLoop,
@@ -111,7 +111,7 @@ class TestSDKLayers:
     def test_sdk_layer_enum(self):
         """Test SDKLayer enum has all 7 layers."""
         try:
-            from platform.core.ultimate_orchestrator import SDKLayer
+            from core.ultimate_orchestrator import SDKLayer
 
             expected_layers = [
                 "OPTIMIZATION",
@@ -141,7 +141,7 @@ class TestCrossSessionMemory:
     def test_memory_dataclass(self):
         """Test Memory dataclass creation."""
         try:
-            from platform.core.cross_session_memory import Memory
+            from core.cross_session_memory import Memory
 
             memory = Memory(
                 id="test-123",
@@ -163,7 +163,7 @@ class TestCrossSessionMemory:
     def test_memory_serialization(self):
         """Test memory to/from dict conversion."""
         try:
-            from platform.core.cross_session_memory import Memory
+            from core.cross_session_memory import Memory
 
             memory = Memory(
                 id="test-456",
@@ -191,7 +191,7 @@ class TestCrossSessionMemory:
     def test_memory_store_creation(self):
         """Test CrossSessionMemory store creation."""
         try:
-            from platform.core.cross_session_memory import CrossSessionMemory
+            from core.cross_session_memory import CrossSessionMemory
 
             with tempfile.TemporaryDirectory() as tmpdir:
                 store = CrossSessionMemory(storage_dir=Path(tmpdir))
@@ -203,7 +203,7 @@ class TestCrossSessionMemory:
     def test_memory_add_and_search(self):
         """Test adding and searching memories."""
         try:
-            from platform.core.cross_session_memory import CrossSessionMemory
+            from core.cross_session_memory import CrossSessionMemory
 
             with tempfile.TemporaryDirectory() as tmpdir:
                 store = CrossSessionMemory(storage_dir=Path(tmpdir))
@@ -237,7 +237,7 @@ class TestUnifiedPipeline:
     def test_pipeline_status_enum(self):
         """Test PipelineStatus enum."""
         try:
-            from platform.core.unified_pipeline import PipelineStatus
+            from core.unified_pipeline import PipelineStatus
 
             assert PipelineStatus.PENDING is not None
             assert PipelineStatus.RUNNING is not None
@@ -249,7 +249,7 @@ class TestUnifiedPipeline:
     def test_pipeline_step_creation(self):
         """Test PipelineStep creation."""
         try:
-            from platform.core.unified_pipeline import PipelineStep, PipelineStatus
+            from core.unified_pipeline import PipelineStep, PipelineStatus
 
             step = PipelineStep(
                 name="test_step",
@@ -267,7 +267,7 @@ class TestUnifiedPipeline:
     def test_pipeline_factory(self):
         """Test PipelineFactory.list_pipelines()."""
         try:
-            from platform.core.unified_pipeline import PipelineFactory
+            from core.unified_pipeline import PipelineFactory
 
             pipelines = PipelineFactory.list_pipelines()
             assert isinstance(pipelines, list)
@@ -280,7 +280,7 @@ class TestUnifiedPipeline:
     def test_custom_pipeline_creation(self):
         """Test creating a custom pipeline."""
         try:
-            from platform.core.unified_pipeline import Pipeline
+            from core.unified_pipeline import Pipeline
 
             pipeline = Pipeline("custom_test")
             pipeline.add_step("step1", "optimization", "predict", prompt="test1")
@@ -302,7 +302,7 @@ class TestRalphLoop:
     def test_iteration_result_dataclass(self):
         """Test IterationResult dataclass."""
         try:
-            from platform.core.ralph_loop import IterationResult
+            from core.ralph_loop import IterationResult
 
             result = IterationResult(
                 iteration=1,
@@ -324,7 +324,7 @@ class TestRalphLoop:
     def test_loop_state_serialization(self):
         """Test LoopState to/from dict."""
         try:
-            from platform.core.ralph_loop import LoopState, IterationResult
+            from core.ralph_loop import LoopState, IterationResult
 
             state = LoopState(
                 loop_id="test-loop-123",
@@ -353,7 +353,7 @@ class TestRalphLoop:
     def test_ralph_loop_creation(self):
         """Test RalphLoop instantiation."""
         try:
-            from platform.core.ralph_loop import RalphLoop
+            from core.ralph_loop import RalphLoop
 
             with tempfile.TemporaryDirectory() as tmpdir:
                 loop = RalphLoop(
@@ -371,7 +371,7 @@ class TestRalphLoop:
     def test_ralph_loop_callbacks(self):
         """Test RalphLoop callback registration."""
         try:
-            from platform.core.ralph_loop import RalphLoop
+            from core.ralph_loop import RalphLoop
 
             with tempfile.TemporaryDirectory() as tmpdir:
                 loop = RalphLoop("Test", 10, checkpoint_dir=Path(tmpdir))
@@ -394,7 +394,7 @@ class TestRalphLoop:
     def test_checkpoint_listing(self):
         """Test list_checkpoints function."""
         try:
-            from platform.core.ralph_loop import list_checkpoints
+            from core.ralph_loop import list_checkpoints
 
             with tempfile.TemporaryDirectory() as tmpdir:
                 # Create a fake checkpoint
@@ -426,7 +426,7 @@ class TestExecutionResult:
     def test_success_result(self):
         """Test successful execution result."""
         try:
-            from platform.core.ultimate_orchestrator import ExecutionResult
+            from core.ultimate_orchestrator import ExecutionResult
 
             result = ExecutionResult(
                 success=True,
@@ -443,7 +443,7 @@ class TestExecutionResult:
     def test_failure_result(self):
         """Test failed execution result."""
         try:
-            from platform.core.ultimate_orchestrator import ExecutionResult
+            from core.ultimate_orchestrator import ExecutionResult
 
             result = ExecutionResult(
                 success=False,
@@ -469,7 +469,7 @@ class TestV3Integration:
     async def test_orchestrator_memory_integration(self):
         """Test that orchestrator can use memory layer."""
         try:
-            from platform.core.ultimate_orchestrator import UltimateOrchestrator, SDKLayer
+            from core.ultimate_orchestrator import UltimateOrchestrator, SDKLayer
 
             with tempfile.TemporaryDirectory() as tmpdir:
                 orch = UltimateOrchestrator()
@@ -490,8 +490,8 @@ class TestV3Integration:
     async def test_pipeline_uses_orchestrator(self):
         """Test that pipelines use the orchestrator."""
         try:
-            from platform.core.unified_pipeline import Pipeline
-            from platform.core.ultimate_orchestrator import UltimateOrchestrator
+            from core.unified_pipeline import Pipeline
+            from core.ultimate_orchestrator import UltimateOrchestrator
 
             pipeline = Pipeline("integration_test")
 
@@ -516,7 +516,7 @@ class TestV3Performance:
     def test_memory_search_performance(self):
         """Test memory search is fast enough."""
         try:
-            from platform.core.cross_session_memory import CrossSessionMemory
+            from core.cross_session_memory import CrossSessionMemory
             import time
 
             with tempfile.TemporaryDirectory() as tmpdir:
@@ -543,7 +543,7 @@ class TestV3Performance:
     def test_ralph_loop_checkpoint_performance(self):
         """Test checkpoint save/load is fast."""
         try:
-            from platform.core.ralph_loop import RalphLoop, LoopState
+            from core.ralph_loop import RalphLoop, LoopState
             import time
 
             with tempfile.TemporaryDirectory() as tmpdir:
@@ -589,7 +589,7 @@ class TestV4Adapters:
     def test_import_v4_adapters(self):
         """Test that all V4 adapters can be imported."""
         try:
-            from platform.core.ultimate_orchestrator import (
+            from core.ultimate_orchestrator import (
                 CogneeAdapter,
                 AdalFlowAdapter,
                 Crawl4AIAdapter,
@@ -612,7 +612,7 @@ class TestV4Adapters:
     async def test_cognee_adapter_initialization(self):
         """Test Cognee adapter initializes correctly."""
         try:
-            from platform.core.ultimate_orchestrator import CogneeAdapter, SDKConfig, SDKLayer
+            from core.ultimate_orchestrator import CogneeAdapter, SDKConfig, SDKLayer
 
             config = SDKConfig("cognee", SDKLayer.MEMORY, metadata={"v4": True})
             adapter = CogneeAdapter(config)
@@ -627,7 +627,7 @@ class TestV4Adapters:
     async def test_agot_adapter_reasoning(self):
         """Test AGoT adapter reasoning operation."""
         try:
-            from platform.core.ultimate_orchestrator import (
+            from core.ultimate_orchestrator import (
                 AGoTAdapter, SDKConfig, SDKLayer, ExecutionContext
             )
 
@@ -654,7 +654,7 @@ class TestV4Adapters:
     async def test_crawl4ai_adapter_speed(self):
         """Test Crawl4AI adapter 4x speed improvement."""
         try:
-            from platform.core.ultimate_orchestrator import (
+            from core.ultimate_orchestrator import (
                 Crawl4AIAdapter, SDKConfig, SDKLayer, ExecutionContext
             )
 
@@ -675,7 +675,7 @@ class TestV4Adapters:
     async def test_evotorch_gpu_evolution(self):
         """Test EvoTorch GPU-accelerated evolution."""
         try:
-            from platform.core.ultimate_orchestrator import (
+            from core.ultimate_orchestrator import (
                 EvoTorchAdapter, SDKConfig, SDKLayer, ExecutionContext
             )
 
@@ -701,7 +701,7 @@ class TestV4Adapters:
     async def test_qdax_jax_map_elites(self):
         """Test QDax JAX-accelerated MAP-Elites."""
         try:
-            from platform.core.ultimate_orchestrator import (
+            from core.ultimate_orchestrator import (
                 QDaxAdapter, SDKConfig, SDKLayer, ExecutionContext
             )
 
@@ -731,7 +731,7 @@ class TestV4Integration:
     async def test_orchestrator_v4_methods(self):
         """Test V4-specific orchestrator methods."""
         try:
-            from platform.core.ultimate_orchestrator import UltimateOrchestrator
+            from core.ultimate_orchestrator import UltimateOrchestrator
 
             orch = UltimateOrchestrator()
             await orch.initialize()
@@ -759,7 +759,7 @@ class TestV4Integration:
     async def test_v4_stats(self):
         """Test V4-specific statistics retrieval."""
         try:
-            from platform.core.ultimate_orchestrator import UltimateOrchestrator
+            from core.ultimate_orchestrator import UltimateOrchestrator
 
             orch = UltimateOrchestrator()
             await orch.initialize()

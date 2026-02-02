@@ -194,7 +194,7 @@ class TestMemoryMetricsBehavior:
     def test_metrics_class_initialization(self):
         """Test MemoryMetrics initializes correctly."""
         try:
-            from platform.core.advanced_memory import MemoryMetrics
+            from core.advanced_memory import MemoryMetrics
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -217,7 +217,7 @@ class TestMemoryMetricsBehavior:
     def test_record_embed_call(self):
         """Test recording embedding calls."""
         try:
-            from platform.core.advanced_memory import MemoryMetrics
+            from core.advanced_memory import MemoryMetrics
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -256,7 +256,7 @@ class TestMemoryMetricsBehavior:
     def test_record_embed_error(self):
         """Test recording embedding errors."""
         try:
-            from platform.core.advanced_memory import MemoryMetrics
+            from core.advanced_memory import MemoryMetrics
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -270,7 +270,7 @@ class TestMemoryMetricsBehavior:
     def test_cache_eviction_tracking(self):
         """Test cache eviction tracking."""
         try:
-            from platform.core.advanced_memory import MemoryMetrics
+            from core.advanced_memory import MemoryMetrics
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -286,7 +286,7 @@ class TestMemoryMetricsBehavior:
     def test_search_recording(self):
         """Test search operation recording."""
         try:
-            from platform.core.advanced_memory import MemoryMetrics
+            from core.advanced_memory import MemoryMetrics
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -302,7 +302,7 @@ class TestMemoryMetricsBehavior:
     def test_get_all_stats(self):
         """Test comprehensive stats retrieval."""
         try:
-            from platform.core.advanced_memory import MemoryMetrics
+            from core.advanced_memory import MemoryMetrics
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -341,7 +341,7 @@ class TestMemoryMetricsBehavior:
     def test_latency_percentiles(self):
         """Test latency percentile calculations."""
         try:
-            from platform.core.advanced_memory import MemoryMetrics
+            from core.advanced_memory import MemoryMetrics
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -370,7 +370,7 @@ class TestHelperFunctions:
     def test_get_memory_stats(self):
         """Test get_memory_stats helper function."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 get_memory_stats,
                 reset_memory_metrics,
             )
@@ -392,7 +392,7 @@ class TestHelperFunctions:
     def test_get_embedding_cache_stats(self):
         """Test get_embedding_cache_stats helper function."""
         try:
-            from platform.core.advanced_memory import get_embedding_cache_stats
+            from core.advanced_memory import get_embedding_cache_stats
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -406,7 +406,7 @@ class TestHelperFunctions:
     def test_reset_memory_metrics(self):
         """Test reset_memory_metrics helper function."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 get_memory_stats,
                 reset_memory_metrics,
                 LocalEmbeddingProvider,
@@ -444,7 +444,7 @@ class TestMetricsIntegration:
     async def test_local_provider_records_metrics(self):
         """Test LocalEmbeddingProvider records metrics on embed."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 LocalEmbeddingProvider,
                 get_memory_stats,
                 reset_memory_metrics,
@@ -473,7 +473,7 @@ class TestMetricsIntegration:
     async def test_cache_hit_records_correctly(self):
         """Test that cache hits are recorded correctly."""
         try:
-            from platform.core.advanced_memory import (
+            from core.advanced_memory import (
                 OpenAIEmbeddingProvider,
                 _embedding_cache,
                 get_memory_stats,

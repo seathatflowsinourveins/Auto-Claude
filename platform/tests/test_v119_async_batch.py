@@ -88,7 +88,7 @@ class TestAsyncBatchBehavior:
     async def test_local_provider_embed_batch_parallel(self):
         """Test that LocalEmbeddingProvider.embed_batch runs in parallel."""
         try:
-            from platform.core.advanced_memory import LocalEmbeddingProvider
+            from core.advanced_memory import LocalEmbeddingProvider
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -113,7 +113,7 @@ class TestAsyncBatchBehavior:
     async def test_semantic_index_add_batch(self):
         """Test SemanticIndex.add_batch functionality."""
         try:
-            from platform.core.advanced_memory import SemanticIndex, LocalEmbeddingProvider
+            from core.advanced_memory import SemanticIndex, LocalEmbeddingProvider
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -144,7 +144,7 @@ class TestAsyncBatchBehavior:
     async def test_add_batch_vs_sequential_consistency(self):
         """Test that add_batch produces same results as sequential adds."""
         try:
-            from platform.core.advanced_memory import SemanticIndex, LocalEmbeddingProvider
+            from core.advanced_memory import SemanticIndex, LocalEmbeddingProvider
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 
@@ -180,7 +180,7 @@ class TestAsyncBatchPerformance:
     async def test_batch_speedup(self):
         """Verify batch processing is faster than sequential."""
         try:
-            from platform.core.advanced_memory import LocalEmbeddingProvider
+            from core.advanced_memory import LocalEmbeddingProvider
         except ImportError:
             pytest.skip("advanced_memory module not importable")
 

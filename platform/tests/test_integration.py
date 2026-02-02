@@ -131,7 +131,7 @@ class TestCachingIntegration:
     def memory_cache(self):
         """Create a memory cache for testing."""
         try:
-            from platform.core.caching import MemoryCache
+            from core.caching import MemoryCache
             return MemoryCache(max_size=1000, default_ttl=60.0)
         except ImportError:
             pytest.skip("Caching not available")
@@ -177,7 +177,7 @@ class TestSecurityIntegration:
     def security_manager(self):
         """Create a security manager for testing."""
         try:
-            from platform.core.security import SecurityManager, SecurityConfig
+            from core.security import SecurityManager, SecurityConfig
             config = SecurityConfig(
                 enable_audit_log=True,
                 enable_rate_limiting=True,
@@ -261,7 +261,7 @@ class TestSecretsIntegration:
     def secrets_manager(self):
         """Create a secrets manager for testing."""
         try:
-            from platform.core.secrets import (
+            from core.secrets import (
                 SecretsManager,
                 MemorySecretBackend,
                 SecretType
@@ -273,7 +273,7 @@ class TestSecretsIntegration:
 
     def test_secret_set_get(self, secrets_manager):
         """Test setting and getting secrets."""
-        from platform.core.secrets import SecretType
+        from core.secrets import SecretType
 
         secrets_manager.set(
             "api_key",
@@ -325,7 +325,7 @@ class TestMonitoringIntegration:
     def metric_registry(self):
         """Create a metric registry for testing."""
         try:
-            from platform.core.monitoring import MetricRegistry
+            from core.monitoring import MetricRegistry
             registry = MetricRegistry()
             registry.reset()  # Clear any existing metrics
             return registry
@@ -382,7 +382,7 @@ class TestMonitoringIntegration:
     def tracer(self):
         """Create a tracer for testing."""
         try:
-            from platform.core.monitoring import Tracer
+            from core.monitoring import Tracer
             return Tracer("test_service")
         except ImportError:
             pytest.skip("Monitoring not available")
@@ -409,7 +409,7 @@ class TestObservabilityIntegration:
     def observability(self):
         """Create observability instance for testing."""
         try:
-            from platform.core.observability import (
+            from core.observability import (
                 Observability,
                 ObservabilityConfig,
                 LogLevel,
@@ -460,7 +460,7 @@ class TestConfigurationIntegration:
     def config_manager(self):
         """Create a configuration manager for testing."""
         try:
-            from platform.core.config_validation import (
+            from core.config_validation import (
                 ConfigurationManager,
                 create_platform_config_schema
             )
@@ -506,9 +506,9 @@ class TestEndToEndIntegration:
     async def test_full_request_flow(self):
         """Test a complete request flow through all components."""
         try:
-            from platform.core.security import SecurityManager, SecurityConfig
-            from platform.core.caching import MemoryCache
-            from platform.core.monitoring import MetricRegistry, Counter
+            from core.security import SecurityManager, SecurityConfig
+            from core.caching import MemoryCache
+            from core.monitoring import MetricRegistry, Counter
 
             # Setup components
             security = SecurityManager(SecurityConfig())
@@ -617,7 +617,7 @@ class TestPerformance:
     async def test_cache_performance(self):
         """Test cache performance with many operations."""
         try:
-            from platform.core.caching import MemoryCache
+            from core.caching import MemoryCache
             cache = MemoryCache(max_size=10000)
 
             # Write 1000 entries
@@ -635,7 +635,7 @@ class TestPerformance:
     def test_security_validation_performance(self):
         """Test security validation performance."""
         try:
-            from platform.core.security import SecurityManager, SecurityConfig
+            from core.security import SecurityManager, SecurityConfig
             security = SecurityManager(SecurityConfig())
 
             # Validate 1000 inputs
