@@ -188,9 +188,17 @@ class TestMemoryMetricsPatterns:
             "Should have reset_memory_metrics function"
 
 
-@pytest.mark.skip(reason="Tests expect public attrs (embed_calls) but implementation uses private (_embed_calls) with observability instruments")
 class TestMemoryMetricsBehavior:
     """Test actual behavior of memory metrics."""
+
+    @pytest.fixture(autouse=True)
+    def reset_metrics(self):
+        """Reset metrics singleton before each test."""
+        try:
+            from core.advanced_memory import reset_memory_metrics
+            reset_memory_metrics()
+        except ImportError:
+            pass
 
     def test_metrics_class_initialization(self):
         """Test MemoryMetrics initializes correctly."""
@@ -365,7 +373,6 @@ class TestMemoryMetricsBehavior:
         assert 950 < stats["embedding"]["latency_p99_ms"] < 1010
 
 
-@pytest.mark.skip(reason="Tests expect 'embedding' stats key but get_memory_stats returns 'cache'/'circuit_breaker'")
 class TestHelperFunctions:
     """Test V122 helper functions."""
 
@@ -439,7 +446,6 @@ class TestHelperFunctions:
         assert stats_after["embedding"]["errors"] == 0
 
 
-@pytest.mark.skip(reason="MemoryMetrics uses Prometheus-style instruments, tests expect simple integer counters")
 class TestMetricsIntegration:
     """Test metrics integration with other V1xx optimizations."""
 
@@ -469,8 +475,7 @@ class TestMetricsIntegration:
         assert stats["embedding"]["calls"] > initial_calls
 
         # Should have recorded latency
-        assert len(stats["embedding"].get("latency_p50_ms", 0)) >= 0 or \
-               stats["embedding"].get("latency_p50_ms", 0) >= 0
+        assert stats["embedding"].get("latency_p50_ms", 0) >= 0
 
     @pytest.mark.asyncio
     async def test_cache_hit_records_correctly(self):

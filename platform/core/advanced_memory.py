@@ -101,6 +101,20 @@ class MemoryMetrics:
 
         self._initialized = True
 
+        # Internal tracking counters (for get_all_stats and testing)
+        self._internal_embed_calls = 0
+        self._internal_embed_errors = 0
+        self._internal_embed_tokens = 0
+        self._internal_embed_cache_hits = 0
+        self._internal_embed_cache_misses = 0
+        self._internal_embed_latencies: list = []
+        self._internal_search_calls = 0
+        self._internal_search_latencies: list = []
+        self._internal_cache_size = 0
+        self._internal_cache_ttl_evictions = 0
+        self._internal_cache_lru_evictions = 0
+        self._internal_circuit_state = "closed"
+
         if not OBSERVABILITY_AVAILABLE:
             self._embed_calls = None
             self._embed_latency = None
@@ -205,6 +219,15 @@ class MemoryMetrics:
         tokens_used: int = 0,
     ) -> None:
         """Record an embedding operation."""
+        # Internal tracking (always runs)
+        self._internal_embed_calls += 1
+        self._internal_embed_latencies.append(latency_seconds)
+        self._internal_embed_tokens += tokens_used
+        if cache_hit:
+            self._internal_embed_cache_hits += 1
+        else:
+            self._internal_embed_cache_misses += 1
+
         if not OBSERVABILITY_AVAILABLE:
             return
 
@@ -231,16 +254,22 @@ class MemoryMetrics:
         error_type: str,
     ) -> None:
         """Record an embedding error."""
+        self._internal_embed_errors += 1
         if self._embed_errors:
             self._embed_errors.inc(provider=provider, model=model, error_type=error_type)
 
     def update_cache_size(self, size: int) -> None:
         """Update current cache size."""
+        self._internal_cache_size = size
         if self._cache_size:
             self._cache_size.set(size)
 
     def record_cache_eviction(self, reason: str) -> None:
         """Record a cache eviction (LRU or TTL)."""
+        if reason == "ttl":
+            self._internal_cache_ttl_evictions += 1
+        elif reason == "lru":
+            self._internal_cache_lru_evictions += 1
         if self._cache_evictions:
             self._cache_evictions.inc(reason=reason)
 
@@ -263,6 +292,8 @@ class MemoryMetrics:
 
     def record_search(self, index: str, latency_seconds: float) -> None:
         """Record a semantic search operation."""
+        self._internal_search_calls += 1
+        self._internal_search_latencies.append(latency_seconds)
         if self._search_calls:
             self._search_calls.inc(index=index)
         if self._search_latency:
@@ -273,12 +304,87 @@ class MemoryMetrics:
         if self._consolidation_calls:
             self._consolidation_calls.inc(strategy=strategy)
 
-    @staticmethod
-    def get_all_stats() -> Dict[str, Any]:
+    # Public property accessors for internal counters
+    @property
+    def embed_calls(self) -> int:
+        return self._internal_embed_calls
+
+    @property
+    def embed_errors(self) -> int:
+        return self._internal_embed_errors
+
+    @property
+    def embed_tokens_total(self) -> int:
+        return self._internal_embed_tokens
+
+    @property
+    def embed_cache_hits(self) -> int:
+        return self._internal_embed_cache_hits
+
+    @property
+    def embed_cache_misses(self) -> int:
+        return self._internal_embed_cache_misses
+
+    @property
+    def embed_latencies(self) -> list:
+        return self._internal_embed_latencies
+
+    @property
+    def search_calls(self) -> int:
+        return self._internal_search_calls
+
+    @property
+    def search_latencies(self) -> list:
+        return self._internal_search_latencies
+
+    @property
+    def cache_ttl_evictions(self) -> int:
+        return self._internal_cache_ttl_evictions
+
+    @property
+    def cache_lru_evictions(self) -> int:
+        return self._internal_cache_lru_evictions
+
+    @property
+    def circuit_state(self) -> str:
+        return self._internal_circuit_state
+
+    def _compute_percentile(self, latencies: list, p: float) -> float:
+        """Compute latency percentile in milliseconds."""
+        if not latencies:
+            return 0.0
+        sorted_l = sorted(latencies)
+        idx = int(len(sorted_l) * p / 100.0)
+        idx = min(idx, len(sorted_l) - 1)
+        return sorted_l[idx] * 1000.0  # convert to ms
+
+    def get_all_stats(self) -> Dict[str, Any]:
         """Get comprehensive memory system statistics."""
         stats = {
-            "cache": _embedding_cache.stats,
-            "circuit_breaker": {},
+            "embedding": {
+                "calls": self._internal_embed_calls,
+                "errors": self._internal_embed_errors,
+                "tokens_total": self._internal_embed_tokens,
+                "cache_hits": self._internal_embed_cache_hits,
+                "cache_misses": self._internal_embed_cache_misses,
+                "latency_p50_ms": self._compute_percentile(self._internal_embed_latencies, 50),
+                "latency_p95_ms": self._compute_percentile(self._internal_embed_latencies, 95),
+                "latency_p99_ms": self._compute_percentile(self._internal_embed_latencies, 99),
+            },
+            "cache": {
+                **(_embedding_cache.stats if _embedding_cache else {}),
+                "size": self._internal_cache_size,
+                "ttl_evictions": self._internal_cache_ttl_evictions,
+                "lru_evictions": self._internal_cache_lru_evictions,
+            },
+            "circuit_breaker": {
+                "state": self._internal_circuit_state,
+            },
+            "search": {
+                "calls": self._internal_search_calls,
+                "latency_p50_ms": self._compute_percentile(self._internal_search_latencies, 50),
+                "latency_p95_ms": self._compute_percentile(self._internal_search_latencies, 95),
+            },
         }
 
         # Add circuit breaker stats if OpenAIEmbeddingProvider is available
@@ -288,6 +394,21 @@ class MemoryMetrics:
             pass
 
         return stats
+
+    def reset(self) -> None:
+        """Reset all internal counters (for testing)."""
+        self._internal_embed_calls = 0
+        self._internal_embed_errors = 0
+        self._internal_embed_tokens = 0
+        self._internal_embed_cache_hits = 0
+        self._internal_embed_cache_misses = 0
+        self._internal_embed_latencies = []
+        self._internal_search_calls = 0
+        self._internal_search_latencies = []
+        self._internal_cache_size = 0
+        self._internal_cache_ttl_evictions = 0
+        self._internal_cache_lru_evictions = 0
+        self._internal_circuit_state = "closed"
 
 
 # Global metrics instance (V122)
@@ -2720,8 +2841,7 @@ def reset_memory_metrics() -> None:
     Useful for benchmarking or starting fresh measurement periods.
     Note: This resets metrics only, not the actual cache contents.
     """
-    global _memory_metrics
-    _memory_metrics = MemoryMetrics()
+    _memory_metrics.reset()
 
 
 # =============================================================================
