@@ -554,5 +554,126 @@ class TestFullPipelineE2E:
         assert agents[0].id is not None
 
 
+class TestAdapterLevelE2E:
+    """V14 Iter 53: Test actual adapter initialization chains with real APIs."""
+
+    @pytest.fixture(autouse=True)
+    def check_voyage_key(self):
+        if not os.environ.get("VOYAGE_API_KEY"):
+            pytest.skip("VOYAGE_API_KEY not set")
+
+    @pytest.mark.asyncio
+    async def test_voyage_embedder_full_init_chain(self):
+        """VoyageEmbedder: init creates EmbeddingLayer, layer calls real API."""
+        from adapters.dspy_voyage_retriever import VoyageEmbedder
+
+        embedder = VoyageEmbedder(model="voyage-3")
+        assert embedder._initialized is False
+        assert embedder._embedding_layer is None
+
+        await embedder.initialize()
+
+        assert embedder._initialized is True
+        assert embedder._embedding_layer is not None
+        assert embedder._embedding_layer._initialized is True
+
+    def test_voyage_embedder_sync_callable(self):
+        """VoyageEmbedder.__call__ works synchronously for DSPy compatibility."""
+        from adapters.dspy_voyage_retriever import VoyageEmbedder
+        import asyncio
+
+        embedder = VoyageEmbedder(model="voyage-3")
+        asyncio.run(embedder.initialize())
+
+        # Call as function (DSPy pattern)
+        result = embedder(["sync call test"])
+        assert len(result) == 1
+        assert len(result[0]) == 1024
+
+    @pytest.mark.asyncio
+    async def test_qdrant_server_pipeline_e2e(self):
+        """Full Qdrant SERVER pipeline (not in-memory): embed -> store -> search."""
+        import httpx
+        try:
+            httpx.get("http://localhost:6333/healthz", timeout=2)
+        except Exception:
+            pytest.skip("Qdrant not running at localhost:6333")
+
+        from core.orchestration.embedding_layer import (
+            create_embedding_layer, InputType, QdrantVectorStore,
+        )
+        from qdrant_client import QdrantClient, models as qm
+
+        layer = create_embedding_layer(model="voyage-3")
+        await layer.initialize()
+
+        # Use real Qdrant server (not in-memory)
+        collection = "e2e_iter53_test"
+        qclient = QdrantClient(url="http://localhost:6333")
+
+        # Create collection
+        try:
+            qclient.delete_collection(collection)
+        except Exception:
+            pass
+        qclient.create_collection(
+            collection,
+            vectors_config=qm.VectorParams(size=1024, distance=qm.Distance.COSINE),
+        )
+
+        try:
+            docs = [
+                "Python async/await enables concurrent IO operations",
+                "Rust ownership model prevents memory safety bugs",
+                "The recipe for chocolate cake uses butter and cocoa",
+            ]
+            result = await layer.embed(docs, input_type=InputType.DOCUMENT)
+            points = [
+                qm.PointStruct(id=i, vector=vec, payload={"text": doc})
+                for i, (vec, doc) in enumerate(zip(result.embeddings, docs))
+            ]
+            qclient.upsert(collection, points=points)
+
+            # Verify storage
+            info = qclient.get_collection(collection)
+            assert info.points_count == 3
+
+            # Search
+            qr = await layer.embed(["async concurrency in Python"], input_type=InputType.QUERY)
+            hits = qclient.query_points(collection, query=qr.embeddings[0], limit=2)
+            assert len(hits.points) == 2
+            # Python doc should rank above cooking
+            assert hits.points[0].id in [0, 1], f"Expected programming doc first, got id={hits.points[0].id}"
+        finally:
+            qclient.delete_collection(collection)
+
+    @pytest.mark.asyncio
+    async def test_letta_voyage_adapter_status(self):
+        """LettaVoyageAdapter.get_status() returns correct availability."""
+        from adapters.letta_voyage_adapter import LettaVoyageAdapter
+
+        adapter = LettaVoyageAdapter()
+        status = adapter.get_status()
+
+        assert status["voyage_available"] is True
+        assert status["letta_available"] is True
+
+    def test_dspy_embedder_callable_pattern(self):
+        """Verify VoyageEmbedder works with dspy.Embedder pattern."""
+        try:
+            import dspy
+            from adapters.dspy_voyage_retriever import VoyageEmbedder
+            import asyncio
+        except ImportError:
+            pytest.skip("dspy or VoyageEmbedder not importable")
+
+        embedder = VoyageEmbedder(model="voyage-3")
+        asyncio.run(embedder.initialize())
+
+        # Create DSPy Embedder wrapping our VoyageEmbedder
+        dspy_embedder = dspy.Embedder(embedder.embed_sync)
+        assert dspy_embedder is not None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
