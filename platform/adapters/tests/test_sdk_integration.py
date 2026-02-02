@@ -82,25 +82,25 @@ class TestSDKAvailability:
 
     def test_letta_availability_flag_exists(self):
         """Letta availability flag should exist."""
-        from ..letta_voyage_adapter import LETTA_AVAILABLE, VOYAGE_AVAILABLE
+        from adapters.letta_voyage_adapter import LETTA_AVAILABLE, VOYAGE_AVAILABLE
         assert isinstance(LETTA_AVAILABLE, bool)
         assert isinstance(VOYAGE_AVAILABLE, bool)
 
     def test_dspy_availability_flag_exists(self):
         """DSPy availability flag should exist."""
-        from ..dspy_voyage_retriever import DSPY_AVAILABLE, VOYAGE_AVAILABLE
+        from adapters.dspy_voyage_retriever import DSPY_AVAILABLE, VOYAGE_AVAILABLE
         assert isinstance(DSPY_AVAILABLE, bool)
         assert isinstance(VOYAGE_AVAILABLE, bool)
 
     def test_opik_availability_flag_exists(self):
         """Opik availability flag should exist."""
-        from ..opik_tracing_adapter import OPIK_AVAILABLE, ANTHROPIC_AVAILABLE
+        from adapters.opik_tracing_adapter import OPIK_AVAILABLE, ANTHROPIC_AVAILABLE
         assert isinstance(OPIK_AVAILABLE, bool)
         assert isinstance(ANTHROPIC_AVAILABLE, bool)
 
     def test_temporal_availability_flag_exists(self):
         """Temporal availability flag should exist."""
-        from ..temporal_workflow_activities import TEMPORAL_AVAILABLE
+        from adapters.temporal_workflow_activities import TEMPORAL_AVAILABLE
         assert isinstance(TEMPORAL_AVAILABLE, bool)
 
 
@@ -113,7 +113,7 @@ class TestLettaVoyageAdapter:
 
     def test_context_snippet_creation(self):
         """Test ContextSnippet data class."""
-        from ..letta_voyage_adapter import ContextSnippet
+        from adapters.letta_voyage_adapter import ContextSnippet
 
         snippet = ContextSnippet(
             id="test1",
@@ -130,7 +130,7 @@ class TestLettaVoyageAdapter:
 
     def test_memory_block_creation(self):
         """Test MemoryBlock data class."""
-        from ..letta_voyage_adapter import MemoryBlock
+        from adapters.letta_voyage_adapter import MemoryBlock
 
         block = MemoryBlock(
             name="test_block",
@@ -145,7 +145,7 @@ class TestLettaVoyageAdapter:
 
     def test_learning_session_tracking(self):
         """Test LearningSession interaction tracking."""
-        from ..letta_voyage_adapter import LearningSession
+        from adapters.letta_voyage_adapter import LearningSession
         import time
 
         session = LearningSession(
@@ -165,7 +165,7 @@ class TestLettaVoyageAdapter:
     @pytest.mark.asyncio
     async def test_voyage_context_client_format_blocks(self, mock_embedding_layer):
         """Test VoyageContextClient formatting."""
-        from ..letta_voyage_adapter import VoyageContextClient, ContextSnippet
+        from adapters.letta_voyage_adapter import VoyageContextClient, ContextSnippet
 
         # Create mock adapter
         mock_adapter = MagicMock()
@@ -186,7 +186,7 @@ class TestLettaVoyageAdapter:
 
     def test_empty_snippets_format(self):
         """Test formatting with no snippets."""
-        from ..letta_voyage_adapter import VoyageContextClient
+        from adapters.letta_voyage_adapter import VoyageContextClient
 
         mock_adapter = MagicMock()
         client = VoyageContextClient(mock_adapter)
@@ -204,7 +204,7 @@ class TestDSPyVoyageRetriever:
 
     def test_retrieved_passage_creation(self):
         """Test RetrievedPassage data class."""
-        from ..dspy_voyage_retriever import RetrievedPassage
+        from adapters.dspy_voyage_retriever import RetrievedPassage
 
         passage = RetrievedPassage(
             text="Test passage content",
@@ -219,7 +219,7 @@ class TestDSPyVoyageRetriever:
 
     def test_retriever_config_defaults(self):
         """Test RetrieverConfig default values."""
-        from ..dspy_voyage_retriever import RetrieverConfig
+        from adapters.dspy_voyage_retriever import RetrieverConfig
 
         config = RetrieverConfig()
 
@@ -230,7 +230,7 @@ class TestDSPyVoyageRetriever:
 
     def test_retriever_config_custom(self):
         """Test RetrieverConfig custom values."""
-        from ..dspy_voyage_retriever import RetrieverConfig
+        from adapters.dspy_voyage_retriever import RetrieverConfig
 
         config = RetrieverConfig(
             model="voyage-3-large",
@@ -246,7 +246,7 @@ class TestDSPyVoyageRetriever:
 
     def test_voyage_embedder_callable(self):
         """Test VoyageEmbedder is callable for DSPy compatibility."""
-        from ..dspy_voyage_retriever import VoyageEmbedder
+        from adapters.dspy_voyage_retriever import VoyageEmbedder
 
         embedder = VoyageEmbedder(model="voyage-4-large")
 
@@ -265,7 +265,7 @@ class TestOpikTracing:
 
     def test_trace_metadata_creation(self):
         """Test TraceMetadata data class."""
-        from ..opik_tracing_adapter import TraceMetadata
+        from adapters.opik_tracing_adapter import TraceMetadata
 
         metadata = TraceMetadata(
             sdk_name="voyage",
@@ -280,7 +280,7 @@ class TestOpikTracing:
 
     def test_metric_result_creation(self):
         """Test MetricResult data class."""
-        from ..opik_tracing_adapter import MetricResult
+        from adapters.opik_tracing_adapter import MetricResult
 
         result = MetricResult(
             name="test_metric",
@@ -295,7 +295,7 @@ class TestOpikTracing:
 
     def test_voyage_embedding_metric_empty_docs(self):
         """Test VoyageEmbeddingMetric with no documents."""
-        from ..opik_tracing_adapter import VoyageEmbeddingMetric
+        from adapters.opik_tracing_adapter import VoyageEmbeddingMetric
 
         metric = VoyageEmbeddingMetric()
         result = metric.score(
@@ -309,7 +309,7 @@ class TestOpikTracing:
 
     def test_voyage_embedding_metric_scoring(self):
         """Test VoyageEmbeddingMetric scoring logic."""
-        from ..opik_tracing_adapter import VoyageEmbeddingMetric
+        from adapters.opik_tracing_adapter import VoyageEmbeddingMetric
 
         metric = VoyageEmbeddingMetric()
         result = metric.score(
@@ -327,7 +327,7 @@ class TestOpikTracing:
 
     def test_letta_memory_metric(self):
         """Test LettaMemoryMetric scoring."""
-        from ..opik_tracing_adapter import LettaMemoryMetric
+        from adapters.opik_tracing_adapter import LettaMemoryMetric
 
         metric = LettaMemoryMetric()
         result = metric.score(
@@ -345,7 +345,7 @@ class TestOpikTracing:
 
     def test_dspy_optimization_metric(self):
         """Test DSPyOptimizationMetric scoring."""
-        from ..opik_tracing_adapter import DSPyOptimizationMetric
+        from adapters.opik_tracing_adapter import DSPyOptimizationMetric
 
         metric = DSPyOptimizationMetric()
         result = metric.score(
@@ -360,7 +360,7 @@ class TestOpikTracing:
 
     def test_opik_tracer_status(self):
         """Test OpikTracer status reporting."""
-        from ..opik_tracing_adapter import OpikTracer
+        from adapters.opik_tracing_adapter import OpikTracer
 
         tracer = OpikTracer(project_name="test-project")
         status = tracer.get_status()
@@ -371,7 +371,7 @@ class TestOpikTracing:
 
     def test_track_sdk_operation_decorator(self):
         """Test track_sdk_operation decorator works."""
-        from ..opik_tracing_adapter import track_sdk_operation
+        from adapters.opik_tracing_adapter import track_sdk_operation
 
         @track_sdk_operation("test", "operation")
         def sync_function(x: int) -> int:
@@ -398,7 +398,7 @@ class TestTemporalWorkflowActivities:
 
     def test_activity_result_creation(self):
         """Test ActivityResult data class."""
-        from ..temporal_workflow_activities import ActivityResult
+        from adapters.temporal_workflow_activities import ActivityResult
 
         result = ActivityResult(
             success=True,
@@ -413,7 +413,7 @@ class TestTemporalWorkflowActivities:
 
     def test_embedding_activity_input(self):
         """Test EmbeddingActivityInput data class."""
-        from ..temporal_workflow_activities import EmbeddingActivityInput
+        from adapters.temporal_workflow_activities import EmbeddingActivityInput
 
         input_data = EmbeddingActivityInput(
             texts=["text1", "text2"],
@@ -426,7 +426,7 @@ class TestTemporalWorkflowActivities:
 
     def test_search_activity_input(self):
         """Test SearchActivityInput data class."""
-        from ..temporal_workflow_activities import SearchActivityInput
+        from adapters.temporal_workflow_activities import SearchActivityInput
 
         input_data = SearchActivityInput(
             query="test query",
@@ -439,7 +439,7 @@ class TestTemporalWorkflowActivities:
 
     def test_memory_activity_input(self):
         """Test MemoryActivityInput data class."""
-        from ..temporal_workflow_activities import MemoryActivityInput
+        from adapters.temporal_workflow_activities import MemoryActivityInput
 
         input_data = MemoryActivityInput(
             query="recall memories",
@@ -452,7 +452,7 @@ class TestTemporalWorkflowActivities:
 
     def test_retry_policies_exist(self):
         """Test retry policies are defined."""
-        from ..temporal_workflow_activities import (
+        from adapters.temporal_workflow_activities import (
             STANDARD_RETRY,
             CRITICAL_RETRY,
             LIGHT_RETRY,
@@ -474,9 +474,9 @@ class TestCrossSDKIntegration:
 
     def test_data_type_compatibility(self):
         """Test data types are compatible across SDKs."""
-        from ..letta_voyage_adapter import ContextSnippet
-        from ..dspy_voyage_retriever import RetrievedPassage
-        from ..opik_tracing_adapter import MetricResult
+        from adapters.letta_voyage_adapter import ContextSnippet
+        from adapters.dspy_voyage_retriever import RetrievedPassage
+        from adapters.opik_tracing_adapter import MetricResult
 
         # Create instances
         snippet = ContextSnippet(id="1", content="test", score=0.9)
@@ -495,7 +495,7 @@ class TestCrossSDKIntegration:
 
     def test_opik_metrics_for_all_sdks(self):
         """Test Opik has metrics for all SDKs."""
-        from ..opik_tracing_adapter import (
+        from adapters.opik_tracing_adapter import (
             VoyageEmbeddingMetric,
             LettaMemoryMetric,
             DSPyOptimizationMetric,
@@ -515,7 +515,7 @@ class TestCrossSDKIntegration:
 
     def test_adapter_registration_pattern(self):
         """Test all adapters use the same registration pattern."""
-        from .. import get_adapter_status
+        from adapters import get_adapter_status
 
         status = get_adapter_status()
 
@@ -540,7 +540,7 @@ class TestErrorHandling:
 
     def test_letta_adapter_not_initialized_error(self):
         """Test LettaVoyageAdapter raises when not initialized."""
-        from ..letta_voyage_adapter import LettaVoyageAdapter
+        from adapters.letta_voyage_adapter import LettaVoyageAdapter
 
         adapter = LettaVoyageAdapter()
 
@@ -549,7 +549,7 @@ class TestErrorHandling:
 
     def test_voyage_embedder_not_initialized_error(self):
         """Test VoyageEmbedder raises when not initialized."""
-        from ..dspy_voyage_retriever import VoyageEmbedder
+        from adapters.dspy_voyage_retriever import VoyageEmbedder
 
         embedder = VoyageEmbedder()
 
@@ -558,7 +558,7 @@ class TestErrorHandling:
 
     def test_activity_result_error_state(self):
         """Test ActivityResult properly represents errors."""
-        from ..temporal_workflow_activities import ActivityResult
+        from adapters.temporal_workflow_activities import ActivityResult
 
         result = ActivityResult(
             success=False,
@@ -580,7 +580,7 @@ class TestPerformance:
 
     def test_snippet_xml_generation_speed(self):
         """Test XML generation is fast enough."""
-        from ..letta_voyage_adapter import ContextSnippet
+        from adapters.letta_voyage_adapter import ContextSnippet
         import time
 
         snippets = [
@@ -598,7 +598,7 @@ class TestPerformance:
 
     def test_metric_scoring_speed(self):
         """Test metric scoring is fast."""
-        from ..opik_tracing_adapter import VoyageEmbeddingMetric
+        from adapters.opik_tracing_adapter import VoyageEmbeddingMetric
         import time
 
         metric = VoyageEmbeddingMetric()
@@ -627,7 +627,7 @@ class TestFactoryFunctions:
 
     def test_letta_factory_function(self):
         """Test create_letta_voyage_adapter factory."""
-        from ..letta_voyage_adapter import create_letta_voyage_adapter
+        from adapters.letta_voyage_adapter import create_letta_voyage_adapter
 
         adapter = create_letta_voyage_adapter(
             qdrant_url="localhost:6333",
@@ -639,7 +639,7 @@ class TestFactoryFunctions:
 
     def test_opik_get_tracer(self):
         """Test get_tracer singleton pattern."""
-        from ..opik_tracing_adapter import get_tracer
+        from adapters.opik_tracing_adapter import get_tracer
 
         tracer1 = get_tracer()
         tracer2 = get_tracer()
@@ -657,7 +657,7 @@ class TestModuleExports:
 
     def test_letta_exports(self):
         """Test letta_voyage_adapter exports."""
-        from ..letta_voyage_adapter import __all__
+        from adapters.letta_voyage_adapter import __all__
 
         expected = [
             "LettaVoyageAdapter",
@@ -670,7 +670,7 @@ class TestModuleExports:
 
     def test_dspy_exports(self):
         """Test dspy_voyage_retriever exports."""
-        from ..dspy_voyage_retriever import __all__
+        from adapters.dspy_voyage_retriever import __all__
 
         expected = [
             "VoyageEmbedder",
@@ -683,7 +683,7 @@ class TestModuleExports:
 
     def test_opik_exports(self):
         """Test opik_tracing_adapter exports."""
-        from ..opik_tracing_adapter import __all__
+        from adapters.opik_tracing_adapter import __all__
 
         expected = [
             "OpikTracer",
@@ -696,7 +696,7 @@ class TestModuleExports:
 
     def test_temporal_exports(self):
         """Test temporal_workflow_activities exports."""
-        from ..temporal_workflow_activities import __all__
+        from adapters.temporal_workflow_activities import __all__
 
         expected = [
             "ActivityResult",
