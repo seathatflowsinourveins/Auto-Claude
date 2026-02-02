@@ -827,5 +827,84 @@ class TestOrchestratorEndToEnd:
         assert count >= 3, f"Expected 3+ adapters, got {count}"
 
 
+# ============================================================================
+# SECTION 21: Voyage AI Embedding Layer (Iteration 46)
+# ============================================================================
+
+class TestVoyageEmbeddingLayer:
+    """Verify core.orchestration.embedding_layer exists and VOYAGE_AVAILABLE is True."""
+
+    def test_embedding_layer_module_exists(self):
+        """The embedding_layer module must exist."""
+        path = BASE / "platform" / "core" / "orchestration" / "embedding_layer.py"
+        assert path.exists(), "core/orchestration/embedding_layer.py missing"
+
+    def test_embedding_layer_imports(self):
+        """All expected classes must be importable."""
+        from core.orchestration.embedding_layer import (
+            EmbeddingLayer,
+            EmbeddingConfig,
+            EmbeddingModel,
+            InputType,
+            EmbeddingResult,
+            UnleashVectorAdapter,
+            QdrantVectorStore,
+            create_embedding_layer,
+        )
+        assert EmbeddingLayer is not None
+        assert create_embedding_layer is not None
+
+    def test_dspy_voyage_retriever_available(self):
+        """dspy_voyage_retriever VOYAGE_AVAILABLE must be True."""
+        from adapters.dspy_voyage_retriever import VOYAGE_AVAILABLE
+        assert VOYAGE_AVAILABLE is True, "VOYAGE_AVAILABLE should be True"
+
+    def test_letta_voyage_adapter_available(self):
+        """letta_voyage_adapter VOYAGE_AVAILABLE must be True."""
+        from adapters.letta_voyage_adapter import VOYAGE_AVAILABLE
+        assert VOYAGE_AVAILABLE is True, "VOYAGE_AVAILABLE should be True"
+
+    def test_embedding_model_enum(self):
+        """EmbeddingModel enum should have Voyage models."""
+        from core.orchestration.embedding_layer import EmbeddingModel
+        assert EmbeddingModel.VOYAGE_3.value == "voyage-3"
+        assert EmbeddingModel.VOYAGE_3.dimension == 1024
+
+    def test_create_embedding_layer_factory(self):
+        """create_embedding_layer should return an EmbeddingLayer."""
+        from core.orchestration.embedding_layer import create_embedding_layer, EmbeddingLayer
+        layer = create_embedding_layer(model="voyage-3")
+        assert isinstance(layer, EmbeddingLayer)
+
+
+# ============================================================================
+# SECTION 22: Real Service Connectivity (Iteration 47)
+# ============================================================================
+
+class TestRealServiceConnectivity:
+    """Verify real API keys are available for services."""
+
+    def test_voyage_api_key_set(self):
+        """VOYAGE_API_KEY must be in environment."""
+        key = os.environ.get("VOYAGE_API_KEY", "")
+        assert len(key) > 10, "VOYAGE_API_KEY not set or too short"
+
+    def test_letta_api_key_set(self):
+        """LETTA_API_KEY must be in environment."""
+        key = os.environ.get("LETTA_API_KEY", "")
+        assert len(key) > 10, "LETTA_API_KEY not set or too short"
+
+    def test_exa_api_key_set(self):
+        """EXA_API_KEY must be in environment."""
+        key = os.environ.get("EXA_API_KEY", "")
+        assert len(key) > 10, "EXA_API_KEY not set or too short"
+
+    def test_adapter_registration_populated(self):
+        """Adapter registry should have entries after import."""
+        from adapters import get_adapter_status
+        status = get_adapter_status()
+        assert len(status) >= 3, f"Expected 3+ registered adapters, got {len(status)}"
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
