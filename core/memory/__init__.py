@@ -100,13 +100,13 @@ try:
     if str(platform_path) not in sys.path:
         sys.path.insert(0, str(platform_path))
 
-    from platform.core.memory import (
+    from core.memory import (
         CoreMemory,
         ArchivalMemory,
         TemporalGraph,
         MemorySystem,
     )
-    from platform.core.advanced_memory import (
+    from core.advanced_memory import (
         AdvancedMemorySystem,
         SemanticIndex,
         MemoryConsolidator,

@@ -139,8 +139,8 @@ def validate_memory_modules() -> tuple[int, int]:
 
     # Platform Memory (optional)
     try:
-        from platform.core.memory import MemorySystem
-        from platform.core.advanced_memory import AdvancedMemorySystem
+        from core.memory import MemorySystem
+        from core.advanced_memory import AdvancedMemorySystem
         print_status("platform/core/memory.py", True, "MemorySystem available")
         passed += 1
     except Exception as e:
