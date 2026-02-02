@@ -1,0 +1,110 @@
+{
+  "job": {
+    "job_id": "research-0001-20260119034823",
+    "query": "MCP server integration best practices for AI agents",
+    "status": "completed",
+    "priority": "normal",
+    "sources_count": 9,
+    "max_sources": 10,
+    "created_at": "2026-01-19T08:48:23.656876+00:00",
+    "started_at": "2026-01-19T08:48:23.656884+00:00",
+    "completed_at": "2026-01-19T08:48:31.575671+00:00",
+    "duration_seconds": 7.918787,
+    "error": null,
+    "synthesis_length": 2217
+  },
+  "sources": [
+    {
+      "url": "https://bytebridge.medium.com/what-it-takes-to-run-mcp-model-context-protocol-in-production-3bbf19413f69",
+      "title": "What It Takes to Run MCP (Model Context Protocol) in Production",
+      "content": "",
+      "source_type": "exa",
+      "score": null,
+      "scraped": false,
+      "scraped_length": 0,
+      "timestamp": "2026-01-19T08:48:25.432318+00:00"
+    },
+    {
+      "url": "https://scalesec.com/blog/mcp-server-security-best-practices",
+      "title": "MCP Server Security Best Practices for Safer AI Adoption - ScaleSec",
+      "content": "",
+      "source_type": "exa",
+      "score": null,
+      "scraped": false,
+      "scraped_length": 0,
+      "timestamp": "2026-01-19T08:48:25.432331+00:00"
+    },
+    {
+      "url": "https://www.cerbos.dev/news/securing-ai-agents-model-context-protocol",
+      "title": "AI Agents, the Model Context Protocol, and the Future of ... - Cerbos",
+      "content": "",
+      "source_type": "exa",
+      "score": null,
+      "scraped": false,
+      "scraped_length": 0,
+      "timestamp": "2026-01-19T08:48:25.432335+00:00"
+    },
+    {
+      "url": "https://bix-tech.com/multi-user-ai-agents-with-an-mcp-server-a-practical-blueprint-for-secure-scalable-collaboration/",
+      "title": "Multi-User AI Agents with an MCP Server: A Practical Blueprint for Secure, Scalable Collaboration",
+      "content": "",
+      "source_type": "exa",
+      "score": null,
+      "scraped": false,
+      "scraped_length": 0,
+      "timestamp": "2026-01-19T08:48:25.432338+00:00"
+    },
+    {
+      "url": "https://mcp-best-practice.github.io/mcp-best-practice/best-practice/",
+      "title": "MCP Best Practices \u00b6",
+      "content": "",
+      "source_type": "exa",
+      "score": null,
+      "scraped": false,
+      "scraped_length": 0,
+      "timestamp": "2026-01-19T08:48:25.432342+00:00"
+    },
+    {
+      "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "title": "Code execution with MCP: building more efficient AI agents - Anthropic",
+      "content": "In this blog we'll explore how code execution can enable agents to interact with MCP servers more efficiently, handling more tools while using ...",
+      "source_type": "firecrawl",
+      "score": 0.5,
+      "scraped": true,
+      "scraped_length": 15330,
+      "timestamp": "2026-01-19T08:48:26.526631+00:00"
+    },
+    {
+      "url": "https://medium.com/@ananyavhegde2001/building-smarter-ai-agents-with-mcp-servers-a-practical-guide-3f40bbdffc3b",
+      "title": "Building Smarter AI Agents with MCP Servers: A Practical Guide",
+      "content": "Write custom code to read files; Build API wrappers for external services; Handle state management between the model and tools; Do this again ...",
+      "source_type": "firecrawl",
+      "score": 0.5,
+      "scraped": true,
+      "scraped_length": 25055,
+      "timestamp": "2026-01-19T08:48:26.526642+00:00"
+    },
+    {
+      "url": "https://www.stackhawk.com/blog/mcp-server-security-best-practices/",
+      "title": "MCP Security: Navigating LLM and AI-Agent Integrations for AppSec ...",
+      "content": "Learn MCP security best practices, risks, and how to secure MCP servers. Protect against prompt injection, RCE, and emerging AI-driven ...",
+      "source_type": "firecrawl",
+      "score": 0.5,
+      "scraped": false,
+      "scraped_length": 0,
+      "timestamp": "2026-01-19T08:48:26.526643+00:00"
+    },
+    {
+      "url": "https://www.reddit.com/r/AI_Agents/comments/1l7ux7d/is_it_good_practice_to_use_mcp_to_connect_ai/",
+      "title": "Is it good practice to use MCP to connect AI agents? - Reddit",
+      "content": "Using MCP to connect AI agents can be a good practice, especially when you need to enable specific functionalities or access external tools and data.",
+      "source_type": "firecrawl",
+      "score": 0.5,
+      "scraped": false,
+      "scraped_length": 0,
+      "timestamp": "2026-01-19T08:48:26.526645+00:00"
+    }
+  ],
+  "synthesis": "# Research: MCP server integration best practices for AI agents\n*Completed: N/A*\n\n## Sources Found: 9\n\n### Exa Results (5)\n- [What It Takes to Run MCP (Model Context Protocol) in Production](https://bytebridge.medium.com/what-it-takes-to-run-mcp-model-context-protocol-in-production-3bbf19413f69)\n- [MCP Server Security Best Practices for Safer AI Adoption - ScaleSec](https://scalesec.com/blog/mcp-server-security-best-practices)\n- [AI Agents, the Model Context Protocol, and the Future of ... - Cerbos](https://www.cerbos.dev/news/securing-ai-agents-model-context-protocol)\n- [Multi-User AI Agents with an MCP Server: A Practical Blueprint for Secure, Scalable Collaboration](https://bix-tech.com/multi-user-ai-agents-with-an-mcp-server-a-practical-blueprint-for-secure-scalable-collaboration/)\n- [MCP Best Practices \u00b6](https://mcp-best-practice.github.io/mcp-best-practice/best-practice/)\n\n### Firecrawl Results (4)\n- [Code execution with MCP: building more efficient AI agents - Anthropic](https://www.anthropic.com/engineering/code-execution-with-mcp)\n  > In this blog we'll explore how code execution can enable agents to interact with MCP servers more efficiently, handling more tools while using ......\n- [Building Smarter AI Agents with MCP Servers: A Practical Guide](https://medium.com/@ananyavhegde2001/building-smarter-ai-agents-with-mcp-servers-a-practical-guide-3f40bbdffc3b)\n  > Write custom code to read files; Build API wrappers for external services; Handle state management between the model and tools; Do this again ......\n- [MCP Security: Navigating LLM and AI-Agent Integrations for AppSec ...](https://www.stackhawk.com/blog/mcp-server-security-best-practices/)\n  > Learn MCP security best practices, risks, and how to secure MCP servers. Protect against prompt injection, RCE, and emerging AI-driven ......\n- [Is it good practice to use MCP to connect AI agents? - Reddit](https://www.reddit.com/r/AI_Agents/comments/1l7ux7d/is_it_good_practice_to_use_mcp_to_connect_ai/)\n  > Using MCP to connect AI agents can be a good practice, especially when you need to enable specific functionalities or access external tools and data....\n\n## Scraped Content (2 pages)\nTotal content: 40,385 characters\n",
+  "saved_at": "2026-01-19T08:48:31.576102+00:00"
+}

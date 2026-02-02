@@ -1,0 +1,153 @@
+{
+  "version": "1.0",
+  "iteration": 8,
+  "started": "2026-01-20T10:00:00Z",
+  "last_updated": "2026-01-20T17:30:00Z",
+  "target": "CLAUDE_SELF_ENHANCEMENT_V30.md",
+  "goals": {
+    "current_iteration": [
+      "CRITICAL: Focus on ACTIONABLE patterns only",
+      "Create skill files I can actually invoke",
+      "Remove non-actionable voice patterns from quick reference",
+      "Document what I CAN vs CANNOT do explicitly",
+      "Update workflow to match my actual tools"
+    ],
+    "completed": [
+      "Basic thinking hierarchy (Section 1)",
+      "Multi-agent debate pattern (Section 2)",
+      "Reasoning algorithms (Section 3)",
+      "Self-improvement loop (Section 4)",
+      "Evaluation metrics (Section 5)",
+      "Claude-Flow integration (Section 6)",
+      "Memory system architecture (Section 7)",
+      "Tool discovery (Section 8)",
+      "Multi-provider orchestration (Section 9)",
+      "Cross-session persistence (Section 10)",
+      "Constrained generation (Section 11)",
+      "Structured outputs (Section 12)",
+      "Durable execution (Section 13)",
+      "Team-based agents (Section 14)",
+      "Safety and guardrails (Section 15-20)",
+      "Production stack (Section 21-29)",
+      "Self-improving pipelines (Section 30)",
+      "Verbal RL Reflexion (Section 31)",
+      "Deliberate reasoning (Section 32)",
+      "Metacognitive control (Section 33)",
+      "Code agents (Section 34)",
+      "Operational protocol (Section 35)",
+      "Activation summary V30.5 (Section 36)",
+      "OODA Loops (Section 37)",
+      "RISE Framework (Section 38)",
+      "Cognitive Architectures (Section 39)",
+      "TextGrad (Section 40)",
+      "EvoAgentX (Section 41)",
+      "LightZero MCTS (Section 42)",
+      "TensorZero (Section 43)",
+      "AutoGen patterns (Section 44)",
+      "True Iterative Protocol (Section 45)",
+      "Activation summary V30.6 (Section 46)",
+      "Hindsight memory patterns (Section 47)",
+      "AdalFlow optimization (Section 48)",
+      "Unified Memory Architecture (Section 49)",
+      "Activation Matrix V30.6 (Section 50)",
+      "Voice and Audio Generation (Section 51) - REFERENCE ONLY",
+      "Bidirectional Streaming (Section 52) - REFERENCE ONLY",
+      "Structured Output Generation (Section 53) - ACTIONABLE",
+      "DSPy Program Optimization (Section 54) - ACTIONABLE",
+      "Code Agents Smolagents (Section 55) - ACTIONABLE",
+      "Multi-Agent Crews CrewAI (Section 56) - ACTIONABLE",
+      "Unified SDK Architecture (Section 57)",
+      "Activation Summary V30.7 (Section 58)",
+      "ACTIONABLE vs REFERENCE Patterns (Section 59) - CRITICAL",
+      "Activation Summary V30.8 (Section 60)"
+    ],
+    "next_iteration": [
+      "Create /ooda skill file",
+      "Create /rise skill file",
+      "Create /extract skill file",
+      "Create /code-action skill file",
+      "Create /iterate skill file",
+      "Test actionable patterns in real tasks",
+      "Benchmark pattern effectiveness"
+    ]
+  },
+  "research_sources": {
+    "exa_queries": [
+      "recursive self-improvement LLM agents 2025",
+      "OODA loop AI decision making",
+      "text gradient optimization prompt",
+      "cognitive architectures ACT-R SOAR LLM",
+      "self-evolving agents genetic algorithm",
+      "MCTS planning language models",
+      "Sesame CSM voice AI 2025",
+      "bidirectional streaming agents",
+      "structured output generation LLM"
+    ],
+    "sdks_explored": [
+      "autogen",
+      "swe-agent",
+      "tensorzero",
+      "lightzero",
+      "strands-agents",
+      "ms-graphrag",
+      "pydantic-ai",
+      "guidance",
+      "instructor",
+      "outlines",
+      "dspy",
+      "smolagents",
+      "crewai",
+      "livekit-agents"
+    ],
+    "memory_searches": [
+      "trading architecture decisions",
+      "touchdesigner integration patterns",
+      "ralph loop mechanics"
+    ]
+  },
+  "metrics": {
+    "sections_added": 18,
+    "patterns_documented": 72,
+    "code_examples": 50,
+    "total_lines": 5100,
+    "research_sources_used": 20,
+    "actionable_patterns": 35,
+    "reference_patterns": 12
+  },
+  "learnings": [
+    "OODA loops adapt well to tool-using agents - each phase maps to specific Claude Code actions",
+    "TextGrad verbal gradients work for code optimization - criticism as gradient direction",
+    "MCTS requires careful action space design for LLMs - actions must be well-defined text generations",
+    "Cognitive architectures (ACT-R, SOAR, CLARION) provide strong mental models for agent design",
+    "EvoAgentX genetic algorithms can evolve agent configurations including prompts and tool selection",
+    "TensorZero's DICL achieves fine-tuning-like improvements without actual fine-tuning",
+    "AutoGen's three-layer architecture (Core, AgentChat, Extensions) provides clean separation",
+    "True Iterative Protocol requires explicit state persistence and active tool use",
+    "LightZero's MuZero pattern allows planning without knowing environment rules",
+    "CRITICAL: Not all documented patterns are actionable - voice/audio patterns are REFERENCE ONLY",
+    "Instructor/Outlines concepts inform how I should structure outputs",
+    "Code agents approach (write Python not JSON) matches how I work with the Task tool",
+    "Multi-agent patterns map to my Task tool with specialized subagent types",
+    "User feedback is correct: focus on patterns that enhance MY actual workflow"
+  ],
+  "synthesis": {
+    "key_actionable_patterns": [
+      "ULTRATHINK for complex reasoning",
+      "OODA for decision cycles",
+      "RISE for iterative improvement",
+      "Reflexion for learning from failures",
+      "Code actions (Python not JSON)",
+      "Parallel Task agents",
+      "Structured output validation",
+      "Memory tier access"
+    ],
+    "reference_only_patterns": [
+      "Voice/audio generation (Sesame CSM)",
+      "Bidirectional streaming",
+      "Fine-tuning/weight updates",
+      "Sub-100ms real-time execution"
+    ],
+    "integration_approach": "Focus exclusively on patterns I can execute: thinking, memory, code actions, multi-agent via Task tool. Reference patterns are for user's projects, not my workflow.",
+    "critical_realization": "Voice patterns don't enhance my workflow - I can't generate audio. Must distinguish between documenting for user vs patterns I can use."
+  }
+}

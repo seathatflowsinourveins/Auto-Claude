@@ -1,0 +1,201 @@
+# Ultimate Autonomous Platform - Production Docker Compose
+# Brings up all platform components with proper networking
+#
+# Usage:
+#   docker-compose up -d              # Start all services
+#   docker-compose ps                 # Check status
+#   docker-compose logs -f qdrant     # Follow specific logs
+#   docker-compose down               # Stop all services
+#
+# Services:
+#   - qdrant: Vector database for swarm memory
+#   - neo4j: Graph database for knowledge graph
+#   - letta: Memory persistence server
+#   - redis: Optional caching layer
+#
+# Networks:
+#   - platform-network: Internal communication between services
+
+version: "3.9"
+
+services:
+  # =============================================================================
+  # QDRANT - Vector Database
+  # =============================================================================
+  qdrant:
+    image: qdrant/qdrant:v1.7.4
+    container_name: uap-qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"   # REST API
+      - "6334:6334"   # gRPC API
+    volumes:
+      - qdrant-data:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__GRPC_PORT=6334
+      - QDRANT__CLUSTER__ENABLED=false
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:6333/collections"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - platform-network
+    labels:
+      - "com.uap.component=vector-db"
+      - "com.uap.service=qdrant"
+
+  # =============================================================================
+  # NEO4J - Graph Database
+  # =============================================================================
+  neo4j:
+    image: neo4j:5.15.0
+    container_name: uap-neo4j
+    restart: unless-stopped
+    ports:
+      - "7474:7474"   # HTTP
+      - "7687:7687"   # Bolt
+    volumes:
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+      - neo4j-plugins:/plugins
+    environment:
+      - NEO4J_AUTH=neo4j/alphaforge2024
+      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+      - NEO4J_dbms_security_procedures_allowlist=apoc.*
+      - NEO4J_dbms_memory_heap_initial__size=512m
+      - NEO4J_dbms_memory_heap_max__size=1G
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:7474"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks:
+      - platform-network
+    labels:
+      - "com.uap.component=graph-db"
+      - "com.uap.service=neo4j"
+
+  # =============================================================================
+  # LETTA - Memory Persistence Server
+  # =============================================================================
+  letta:
+    image: letta/letta:latest
+    container_name: uap-letta
+    restart: unless-stopped
+    ports:
+      - "8283:8283"
+    volumes:
+      - letta-data:/root/.letta
+    environment:
+      - LETTA_SERVER_PORT=8283
+      - LETTA_DEBUG=false
+    depends_on:
+      qdrant:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8283/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    networks:
+      - platform-network
+    labels:
+      - "com.uap.component=memory"
+      - "com.uap.service=letta"
+
+  # =============================================================================
+  # REDIS - Caching Layer (Optional)
+  # =============================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: uap-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - platform-network
+    labels:
+      - "com.uap.component=cache"
+      - "com.uap.service=redis"
+
+  # =============================================================================
+  # PLATFORM MONITOR - Health Checking Dashboard
+  # =============================================================================
+  # Uncomment to enable a simple monitoring interface
+  # monitor:
+  #   build:
+  #     context: ../scripts
+  #     dockerfile: Dockerfile.monitor
+  #   container_name: uap-monitor
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - qdrant
+  #     - neo4j
+  #     - letta
+  #   environment:
+  #     - QDRANT_URL=http://qdrant:6333
+  #     - NEO4J_URI=bolt://neo4j:7687
+  #     - LETTA_URL=http://letta:8283
+  #   networks:
+  #     - platform-network
+
+# =============================================================================
+# VOLUMES
+# =============================================================================
+volumes:
+  qdrant-data:
+    name: uap-qdrant-data
+    labels:
+      - "com.uap.volume=qdrant-storage"
+
+  neo4j-data:
+    name: uap-neo4j-data
+    labels:
+      - "com.uap.volume=neo4j-data"
+
+  neo4j-logs:
+    name: uap-neo4j-logs
+    labels:
+      - "com.uap.volume=neo4j-logs"
+
+  neo4j-plugins:
+    name: uap-neo4j-plugins
+    labels:
+      - "com.uap.volume=neo4j-plugins"
+
+  letta-data:
+    name: uap-letta-data
+    labels:
+      - "com.uap.volume=letta-data"
+
+  redis-data:
+    name: uap-redis-data
+    labels:
+      - "com.uap.volume=redis-cache"
+
+# =============================================================================
+# NETWORKS
+# =============================================================================
+networks:
+  platform-network:
+    name: uap-network
+    driver: bridge
+    labels:
+      - "com.uap.network=internal"

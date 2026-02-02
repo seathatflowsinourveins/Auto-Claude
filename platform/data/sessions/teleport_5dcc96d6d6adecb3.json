@@ -1,0 +1,48 @@
+{
+  "session_id": "5dcc96d6d6adecb3",
+  "exported_at": "2026-01-30T08:01:24.559297+00:00",
+  "knowledge_base": {
+    "01_style.md": "# Coding Style & Conventions\n\n## Language Preferences\n- Primary: Python 3.11+, TypeScript\n- Type hints: Always required\n- Async: Preferred for I/O\n\n## Naming Conventions\n- Functions: snake_case\n- Classes: PascalCase\n- Constants: UPPER_SNAKE_CASE\n- Private: _leading_underscore\n\n## Formatting\n- Line length: 100 characters\n- Indentation: 4 spaces (Python), 2 spaces (TypeScript)\n- Quotes: Double quotes for strings\n\n## Documentation\n- Docstrings: Google style\n- Comments: Only when logic isn't self-evident\n- Type annotations: Inline preferred\n",
+    "02_principles.md": "# Development Principles\n\n## V10 Philosophy\n1. **Verified**: Everything tested, nothing assumed\n2. **Minimal**: No unnecessary complexity\n3. **Seamless**: Invisible infrastructure\n\n## Design Principles\n- SOLID principles\n- Composition over inheritance\n- Explicit over implicit\n- Fail fast, fail loud\n\n## Code Quality\n- Tests before features\n- Refactor continuously\n- Document decisions (ADRs)\n- Review before commit\n",
+    "03_architecture.md": "# System Architecture\n\n## Layer Structure\n1. Presentation (CLI/API)\n2. Application (Use Cases)\n3. Domain (Business Logic)\n4. Infrastructure (External Services)\n\n## Patterns Used\n- Repository pattern for data access\n- Circuit breaker for resilience\n- Event sourcing for audit\n- CQRS for complex queries\n\n## Integration Points\n- MCP servers for external tools\n- Letta for memory persistence\n- Qdrant for vector search\n- Neo4j for knowledge graph\n",
+    "04_domain.md": "# Domain Language\n\n## Core Concepts\n- **Ralph Loop**: Autonomous improvement iteration\n- **Sleep-time compute**: Background processing during idle\n- **Warm start**: Pre-computed context loading\n- **Trinity Pattern**: Skills + Hooks + Agents\n\n## Entity Definitions\n- **Session**: A single Claude Code interaction\n- **Memory Block**: Persistent knowledge unit\n- **Insight**: Auto-generated observation\n- **Workflow**: Multi-step automation\n\n## Abbreviations\n- UAP: Ultimate Autonomous Platform\n- MCP: Model Context Protocol\n- V10: Version 10 (current architecture)\n",
+    "05_workflows.md": "# Common Workflows\n\n## Feature Development\n1. Research existing patterns\n2. Create plan in PLAN.md\n3. Implement with TDD\n4. Update documentation\n5. Create PR with summary\n\n## Bug Fixing\n1. Reproduce the issue\n2. Write failing test\n3. Fix the bug\n4. Verify fix doesn't break others\n5. Document root cause\n\n## Ralph Loop Iteration\n1. Check ecosystem status\n2. Research improvements\n3. Implement changes\n4. Validate with tests\n5. Update GOALS_TRACKING.md\n",
+    "06_decisions.md": "# Key Decisions (ADRs)\n\n## ADR-001: Use Pydantic for Data Models\n- **Status**: Accepted\n- **Context**: Need structured data with validation\n- **Decision**: Use Pydantic v2 for all data classes\n- **Rationale**: Type safety, serialization, IDE support\n\n## ADR-002: Async-First Design\n- **Status**: Accepted\n- **Context**: Many I/O operations (MCP, HTTP, DB)\n- **Decision**: Use async/await throughout\n- **Rationale**: Better resource utilization, concurrency\n\n## ADR-003: Windows Compatibility\n- **Status**: Accepted\n- **Context**: Development on Windows 11\n- **Decision**: ASCII-safe output, Path handling\n- **Rationale**: Consistent cross-platform behavior\n",
+    "07_patterns.md": "# Code Patterns\n\n## Async Context Manager\n```python\nasync def __aenter__(self):\n    await self.connect()\n    return self\n\nasync def __aexit__(self, *args):\n    await self.disconnect()\n```\n\n## Circuit Breaker\n```python\n@circuit_breaker(failure_threshold=5, reset_timeout=60)\nasync def call_external_service():\n    ...\n```\n\n## Retry with Backoff\n```python\n@with_retry(max_attempts=3, backoff_factor=2.0)\nasync def flaky_operation():\n    ...\n```\n\n## Structured Logging\n```python\nlogger.info(\"operation_completed\",\n    operation=\"create_session\",\n    duration_ms=elapsed,\n    result=\"success\")\n```\n",
+    "08_testing.md": "# Testing Strategy\n\n## Test Pyramid\n- Unit tests: 70% (fast, isolated)\n- Integration tests: 20% (component interaction)\n- E2E tests: 10% (full workflows)\n\n## Naming Convention\n- test_<function>_<scenario>_<expected>\n- Example: test_create_session_valid_input_returns_id\n\n## Fixtures\n- Use pytest fixtures for setup\n- Scope: function (default), module, session\n- Async fixtures with pytest-asyncio\n\n## Mocking\n- Mock external services\n- Use responses for HTTP\n- Use fakeredis for Redis\n",
+    "09_context.md": "# Project Context\n\n## Current Focus\n- Ralph Loop iterations (target: 20+)\n- Sleep-time compute integration\n- Trinity Pattern implementation\n\n## Active Tasks\n- [ ] Session continuity module\n- [ ] Performance optimization\n- [ ] Documentation updates\n\n## Recent Changes\n- Created sleeptime_compute.py\n- Created auto_validate.py\n- Fixed Windows compatibility issues\n\n## Blockers\n- Letta server not running (Docker)\n- Need to test with real MCP servers\n"
+  },
+  "session_context": {
+    "session_id": "5dcc96d6d6adecb3",
+    "state": "active",
+    "started_at": "2026-01-19T03:32:23.560579+00:00",
+    "project_name": "UltimateAutonomousPlatform",
+    "knowledge_loaded": [
+      "01_style.md",
+      "02_principles.md",
+      "03_architecture.md",
+      "04_domain.md",
+      "05_workflows.md",
+      "06_decisions.md",
+      "07_patterns.md",
+      "08_testing.md",
+      "09_context.md"
+    ],
+    "active_workflows": [],
+    "memory_blocks": 0,
+    "insights_available": 0,
+    "trinity_status": {
+      "skills_count": 0,
+      "hooks_count": 8,
+      "agents_count": 0
+    }
+  },
+  "memory_snapshot": {},
+  "active_tasks": [],
+  "environment": {
+    "platform": "win32",
+    "python_version": "3.12.11",
+    "v10_dir": "Z:\\insider\\AUTO CLAUDE\\unleash\\platform",
+    "project_name": "UltimateAutonomousPlatform"
+  }
+}

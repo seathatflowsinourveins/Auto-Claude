@@ -1,0 +1,108 @@
+[project]
+name = "unleash-platform"
+version = "1.0.0"
+description = "Unified SDK Integration Platform - 34 Best-of-Breed SDKs across 8 Layers"
+requires-python = ">=3.11"
+readme = "README.md"
+
+dependencies = [
+    # Core dependencies only - SDKs installed per phase
+    "structlog>=24.1.0",
+    "httpx>=0.26.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+# Phase 2: Protocol Layer (Layer 0)
+protocol = [
+    "mcp>=0.1.0",
+    "anthropic>=0.18.0",
+    "openai>=1.12.0",
+    "litellm>=1.30.0",
+    "fastmcp>=0.1.0",
+]
+
+# Phase 3: Orchestration Layer (Layer 1)
+# CVE-2025-64439: langgraph>=1.0.1, langgraph-checkpoint>=3.0.0 required for RCE fix
+orchestration = [
+    "temporalio>=1.4.0",
+    "langgraph>=1.0.1",
+    "langgraph-checkpoint>=3.0.0",
+    "crewai>=0.28.0",
+    "pyautogen>=0.2.0",
+]
+
+# Phase 4: Memory Layer (Layer 2)
+memory = [
+    "letta>=0.3.0",
+    "zep-python>=2.0.0",
+    "mem0ai>=0.0.20",
+]
+
+# Phase 5: Intelligence Layer (Layers 3-4)
+intelligence = [
+    "instructor>=1.0.0",
+    "outlines>=0.0.40",
+    "pydantic-ai>=0.0.10",
+    "dspy-ai>=2.4.0",
+]
+
+# Phase 6: Observability Layer (Layer 5)
+observability = [
+    "langfuse>=2.0.0",
+    "opik>=1.0.0",
+    "arize-phoenix>=3.0.0",
+    "deepeval>=0.21.0",
+    "ragas>=0.1.0",
+    "promptfoo>=0.1.0",
+]
+
+# Phase 7: Safety Layer (Layer 6)
+safety = [
+    "guardrails-ai>=0.4.0",
+    "llm-guard>=0.3.0",
+    "nemoguardrails>=0.8.0",
+]
+
+# Phase 8: Processing & Knowledge Layer (Layers 7-8)
+processing = [
+    "aider-chat>=0.30.0",
+    "crawl4ai>=0.3.0",
+    "graphrag>=0.3.0",
+    "ribs>=0.7.0",
+]
+
+# All SDKs combined
+all = [
+    "unleash-platform[protocol,orchestration,memory,intelligence,observability,safety,processing]",
+]
+
+# Development dependencies
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "mypy>=1.8.0",
+    "ruff>=0.2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true

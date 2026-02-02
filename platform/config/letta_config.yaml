@@ -1,0 +1,61 @@
+# Letta Memory Configuration
+# Part of the V33 Unified Memory Architecture
+
+# Letta Cloud Settings
+cloud:
+  enabled: true
+  api_url: "https://api.letta.com/v1"
+  api_key: ${LETTA_API_KEY}  # Set via environment variable
+
+# Agent Configuration
+agent:
+  default_name: "unleash-agent"
+  system_prompt: |
+    You are the memory agent for the Unleash SDK Platform.
+    You maintain context across sessions and help with:
+    - Project decisions and rationale
+    - Code patterns and conventions
+    - User preferences and workflows
+    - Technical learnings and insights
+
+# Memory Block Configuration
+memory_blocks:
+  system_persona:
+    max_tokens: 3000
+    description: "Agent identity and capabilities"
+  user_context:
+    max_tokens: 2000
+    description: "User preferences and context"
+  task_state:
+    max_tokens: 2000
+    description: "Current task and progress"
+  working_memory:
+    max_tokens: 5000
+    description: "Active session context"
+
+# Archival Memory Settings
+archival:
+  enabled: true
+  max_passages: 10000
+  embedding_model: "text-embedding-3-small"
+  chunk_size: 512
+  overlap: 50
+
+# Sync Settings
+sync:
+  auto_sync: true
+  sync_interval_seconds: 300
+  sync_on_close: true
+  conflict_resolution: "latest_wins"
+
+# Sleep-Time Compute
+sleep_compute:
+  enabled: true
+  consolidation_strategy: "hierarchical"
+  summary_interval_hours: 24
+  importance_threshold: 0.3
+
+# Logging
+logging:
+  level: "INFO"
+  include_api_calls: false

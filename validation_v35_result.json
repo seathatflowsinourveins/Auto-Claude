@@ -1,0 +1,320 @@
+{
+  "python_version": "3.14.0",
+  "timestamp": "2026-01-24T23:27:23.800633",
+  "total_sdks": 36,
+  "native_sdks": 27,
+  "compat_layers": 9,
+  "passed": 36,
+  "failed": 0,
+  "layers": {
+    "L0": {
+      "total": 3,
+      "passed": 3,
+      "failed": [],
+      "compat_count": 0
+    },
+    "L1": {
+      "total": 6,
+      "passed": 6,
+      "failed": [],
+      "compat_count": 1
+    },
+    "L2": {
+      "total": 4,
+      "passed": 4,
+      "failed": [],
+      "compat_count": 1
+    },
+    "L3": {
+      "total": 5,
+      "passed": 5,
+      "failed": [],
+      "compat_count": 1
+    },
+    "L4": {
+      "total": 2,
+      "passed": 2,
+      "failed": [],
+      "compat_count": 1
+    },
+    "L5": {
+      "total": 7,
+      "passed": 7,
+      "failed": [],
+      "compat_count": 2
+    },
+    "L6": {
+      "total": 2,
+      "passed": 2,
+      "failed": [],
+      "compat_count": 2
+    },
+    "L7": {
+      "total": 3,
+      "passed": 3,
+      "failed": [],
+      "compat_count": 1
+    },
+    "L8": {
+      "total": 4,
+      "passed": 4,
+      "failed": [],
+      "compat_count": 0
+    }
+  },
+  "details": [
+    {
+      "layer": "L0",
+      "name": "anthropic",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L0",
+      "name": "openai",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L0",
+      "name": "mcp",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L1",
+      "name": "langgraph",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L1",
+      "name": "controlflow",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L1",
+      "name": "pydantic_ai",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L1",
+      "name": "instructor",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L1",
+      "name": "autogen_agentchat",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L1",
+      "name": "crewai_compat",
+      "is_compat": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L2",
+      "name": "mem0",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L2",
+      "name": "graphiti_core",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L2",
+      "name": "letta",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L2",
+      "name": "zep_compat",
+      "is_compat": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L3",
+      "name": "pydantic",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L3",
+      "name": "guidance",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L3",
+      "name": "mirascope",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L3",
+      "name": "ell",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L3",
+      "name": "outlines_compat",
+      "is_compat": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L4",
+      "name": "dspy",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L4",
+      "name": "agentlite_compat",
+      "is_compat": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L5",
+      "name": "opik",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L5",
+      "name": "deepeval",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L5",
+      "name": "ragas",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L5",
+      "name": "logfire",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L5",
+      "name": "opentelemetry",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L5",
+      "name": "langfuse_compat",
+      "is_compat": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L5",
+      "name": "phoenix_compat",
+      "is_compat": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L6",
+      "name": "llm_guard_compat",
+      "is_compat": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L6",
+      "name": "nemoguardrails_compat",
+      "is_compat": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L7",
+      "name": "docling",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L7",
+      "name": "markitdown",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L7",
+      "name": "aider_compat",
+      "is_compat": true,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L8",
+      "name": "llama_index",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L8",
+      "name": "haystack",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L8",
+      "name": "firecrawl",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    },
+    {
+      "layer": "L8",
+      "name": "lightrag",
+      "is_compat": false,
+      "passed": true,
+      "error": null
+    }
+  ],
+  "percentage": 100.0
+}

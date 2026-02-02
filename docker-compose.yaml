@@ -1,0 +1,141 @@
+# Unleash V35 Docker Compose Configuration
+# Phase 15: Production Deployment
+#
+# Usage:
+#   docker-compose up -d          # Start all services
+#   docker-compose logs -f        # View logs
+#   docker-compose down           # Stop all services
+#   docker-compose ps             # Check status
+
+version: '3.8'
+
+services:
+  # ============================================================
+  # Main Unleash Service
+  # ============================================================
+  unleash:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    image: unleash:v35
+    container_name: unleash-v35
+    restart: unless-stopped
+
+    # Environment variables from .env file
+    env_file:
+      - .env
+
+    # Override environment (optional)
+    environment:
+      - UNLEASH_ENV=production
+      - UNLEASH_LOG_LEVEL=${UNLEASH_LOG_LEVEL:-INFO}
+
+    # Persistent storage
+    volumes:
+      - unleash-data:/home/unleash/.unleash
+      - unleash-indices:/home/unleash/.unleash/indices
+
+    # Network
+    ports:
+      - "${UNLEASH_PORT:-8000}:8000"
+
+    # Health check
+    healthcheck:
+      test: ["CMD", "python", "core/health.py", "-q"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+    # Resource limits (optional)
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+        reservations:
+          cpus: '0.5'
+          memory: 1G
+
+  # ============================================================
+  # Redis Cache (Optional)
+  # ============================================================
+  redis:
+    image: redis:7-alpine
+    container_name: unleash-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    profiles:
+      - with-cache
+
+  # ============================================================
+  # PostgreSQL Database (Optional)
+  # ============================================================
+  postgres:
+    image: postgres:16-alpine
+    container_name: unleash-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: unleash
+      POSTGRES_USER: ${POSTGRES_USER:-unleash}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-unleash}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-unleash}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    profiles:
+      - with-database
+
+  # ============================================================
+  # Qdrant Vector Database (Optional)
+  # ============================================================
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: unleash-qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant-data:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__GRPC_PORT=6334
+    profiles:
+      - with-vectors
+
+# ============================================================
+# Volumes
+# ============================================================
+volumes:
+  unleash-data:
+    driver: local
+  unleash-indices:
+    driver: local
+  redis-data:
+    driver: local
+  postgres-data:
+    driver: local
+  qdrant-data:
+    driver: local
+
+# ============================================================
+# Networks
+# ============================================================
+networks:
+  default:
+    name: unleash-network
+    driver: bridge

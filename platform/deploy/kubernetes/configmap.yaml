@@ -1,0 +1,55 @@
+# Ultimate Autonomous Platform - Configuration
+# Centralized configuration for all platform components
+#
+# Usage:
+#   kubectl apply -f configmap.yaml -n uap
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: uap-config
+  namespace: uap
+  labels:
+    app.kubernetes.io/name: ultimate-autonomous-platform
+    app.kubernetes.io/component: config
+data:
+  # Qdrant Configuration
+  QDRANT_URL: "http://qdrant:6333"
+  QDRANT_GRPC_URL: "http://qdrant:6334"
+
+  # Neo4j Configuration
+  NEO4J_URI: "bolt://neo4j:7687"
+  NEO4J_USER: "neo4j"
+
+  # Letta Configuration
+  LETTA_URL: "http://letta:8283"
+  LETTA_DEBUG: "false"
+
+  # Redis Configuration
+  REDIS_URL: "redis://redis:6379"
+
+  # Platform Settings
+  LOG_LEVEL: "INFO"
+  CIRCUIT_BREAKER_THRESHOLD: "3"
+  CIRCUIT_BREAKER_TIMEOUT: "30"
+  RETRY_MAX_ATTEMPTS: "3"
+  RETRY_BASE_DELAY: "1.0"
+
+---
+# Secrets for sensitive configuration
+apiVersion: v1
+kind: Secret
+metadata:
+  name: uap-secrets
+  namespace: uap
+  labels:
+    app.kubernetes.io/name: ultimate-autonomous-platform
+    app.kubernetes.io/component: secrets
+type: Opaque
+stringData:
+  # Neo4j Password (change in production!)
+  NEO4J_PASSWORD: "alphaforge2024"
+
+  # Add API keys here as needed
+  # ANTHROPIC_API_KEY: "your-key-here"
+  # OPENAI_API_KEY: "your-key-here"

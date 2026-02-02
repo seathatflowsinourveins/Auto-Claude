@@ -1,0 +1,187 @@
+{
+  "timestamp": "2026-01-19T03:46:14.121818+00:00",
+  "duration_ms": 4466.90929999977,
+  "system_info": {
+    "python_version": "3.12.11 (main, Aug 18 2025, 19:17:54) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "win32",
+    "timestamp": "2026-01-19T03:46:14.121818+00:00",
+    "cpu_count": 64,
+    "cpu_percent": 2.5,
+    "memory_total_gb": 127.84003067016602,
+    "memory_available_gb": 103.75655746459961,
+    "memory_percent": 18.8,
+    "disk_total_gb": 3726.0058555603027,
+    "disk_free_gb": 556.5789489746094
+  },
+  "timings": [
+    {
+      "name": "ecosystem_orchestrator.py",
+      "duration_ms": 167.08310000012716,
+      "start_time": 3016.6326212,
+      "end_time": 3016.7997043,
+      "memory_delta_mb": 0.19140625,
+      "cpu_percent": 0.0,
+      "metadata": {}
+    },
+    {
+      "name": "auto_validate.py",
+      "duration_ms": 3903.3682999997836,
+      "start_time": 3016.8000298,
+      "end_time": 3020.7033981,
+      "memory_delta_mb": 0.00390625,
+      "cpu_percent": 0.0,
+      "metadata": {}
+    },
+    {
+      "name": "sleeptime_compute.py",
+      "duration_ms": 199.45169999982681,
+      "start_time": 3020.7037866,
+      "end_time": 3020.9032383,
+      "memory_delta_mb": 0.0,
+      "cpu_percent": 0.0,
+      "metadata": {}
+    },
+    {
+      "name": "session_continuity.py",
+      "duration_ms": 197.00620000003255,
+      "start_time": 3020.9036434,
+      "end_time": 3021.1006496,
+      "memory_delta_mb": 0.0,
+      "cpu_percent": 0.0,
+      "metadata": {}
+    }
+  ],
+  "profiles": [
+    {
+      "profile_type": "cpu",
+      "duration_ms": 167.08310000012716,
+      "timestamp": "2026-01-19T03:46:09.814410+00:00",
+      "function_stats": [],
+      "memory_stats": null,
+      "async_stats": {
+        "exit_code": 1,
+        "stdout_lines": 1,
+        "stderr_lines": 5
+      },
+      "hotspots": []
+    },
+    {
+      "profile_type": "<circular ref: ProfileType>",
+      "duration_ms": 3903.3682999997836,
+      "timestamp": "2026-01-19T03:46:13.718638+00:00",
+      "function_stats": [],
+      "memory_stats": null,
+      "async_stats": {
+        "exit_code": 1,
+        "stdout_lines": 101,
+        "stderr_lines": 1
+      },
+      "hotspots": []
+    },
+    {
+      "profile_type": "<circular ref: ProfileType>",
+      "duration_ms": 199.45169999982681,
+      "timestamp": "2026-01-19T03:46:13.918176+00:00",
+      "function_stats": [],
+      "memory_stats": null,
+      "async_stats": {
+        "exit_code": 2,
+        "stdout_lines": 1,
+        "stderr_lines": 5
+      },
+      "hotspots": []
+    },
+    {
+      "profile_type": "<circular ref: ProfileType>",
+      "duration_ms": 197.00620000003255,
+      "timestamp": "2026-01-19T03:46:14.115380+00:00",
+      "function_stats": [],
+      "memory_stats": null,
+      "async_stats": {
+        "exit_code": 2,
+        "stdout_lines": 1,
+        "stderr_lines": 4
+      },
+      "hotspots": []
+    }
+  ],
+  "memory": {
+    "timestamp": "2026-01-19T03:46:14.121818+00:00",
+    "rss_mb": 29.3828125,
+    "vms_mb": 20.046875,
+    "heap_mb": 0.03355979919433594,
+    "gc_objects": 22039,
+    "top_allocations": [
+      {
+        "file": "<frozen importlib._bootstrap_external>:757",
+        "size_kb": 3.5693359375,
+        "count": 31
+      },
+      {
+        "file": "C:\\Users\\42\\AppData\\Roaming\\uv\\python\\cpython-3.12.11-windows-x86_64-none\\Lib\\encodings\\cp1252.py:17",
+        "size_kb": 2.4921875,
+        "count": 9
+      },
+      {
+        "file": "C:\\Users\\42\\AppData\\Roaming\\uv\\python\\cpython-3.12.11-windows-x86_64-none\\Lib\\encodings\\cp1252.py:25",
+        "size_kb": 2.3203125,
+        "count": 10
+      },
+      {
+        "file": "C:\\Users\\42\\AppData\\Roaming\\uv\\python\\cpython-3.12.11-windows-x86_64-none\\Lib\\encodings\\cp1252.py:28",
+        "size_kb": 2.1015625,
+        "count": 8
+      },
+      {
+        "file": "C:\\Users\\42\\AppData\\Roaming\\uv\\python\\cpython-3.12.11-windows-x86_64-none\\Lib\\encodings\\cp1252.py:21",
+        "size_kb": 2.1015625,
+        "count": 8
+      },
+      {
+        "file": "C:\\Users\\42\\AppData\\Roaming\\uv\\python\\cpython-3.12.11-windows-x86_64-none\\Lib\\encodings\\cp1252.py:9",
+        "size_kb": 2.1015625,
+        "count": 8
+      },
+      {
+        "file": "Z:\\insider\\AUTO CLAUDE\\unleash\\v10_optimized\\scripts\\performance.py:290",
+        "size_kb": 1.6875,
+        "count": 19
+      },
+      {
+        "file": "C:\\Users\\42\\AppData\\Roaming\\uv\\python\\cpython-3.12.11-windows-x86_64-none\\Lib\\tracemalloc.py:173",
+        "size_kb": 1.3525390625,
+        "count": 10
+      },
+      {
+        "file": "C:\\Users\\42\\AppData\\Roaming\\uv\\python\\cpython-3.12.11-windows-x86_64-none\\Lib\\subprocess.py:1538",
+        "size_kb": 1.19921875,
+        "count": 24
+      },
+      {
+        "file": "Z:\\insider\\AUTO CLAUDE\\unleash\\v10_optimized\\scripts\\performance.py:672",
+        "size_kb": 1.171875,
+        "count": 8
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "level": "medium",
+      "category": "Latency",
+      "title": "Moderate Latency: auto_validate.py",
+      "description": "Operation took 3903ms",
+      "impact": "May impact responsiveness",
+      "action": "Review for optimization opportunities",
+      "code_location": null
+    }
+  ],
+  "summary": {
+    "total_recommendations": 1,
+    "by_level": {
+      "medium": 1
+    },
+    "by_category": {
+      "Latency": 1
+    }
+  }
+}

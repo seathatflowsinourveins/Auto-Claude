@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "_comment": "V10.3 - Letta Cloud Integration (letta_sync_v2.py)",
+  "_version": "10.3.0",
+  "_updated": "2026-01-30",
+  "_philosophy": "Minimal config, maximum functionality. Only verified components.",
+
+  "model": "sonnet",
+  
+  "env": {
+    "LETTA_URL": "${LETTA_URL:-https://api.letta.com}",
+    "LETTA_API_KEY": "${LETTA_API_KEY}",
+    "LETTA_LOCAL_URL": "http://localhost:8283",
+    "PROJECT_DIR": "${PWD}"
+  },
+
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write(src/**)",
+      "Write(tests/**)",
+      "Write(docs/**)",
+      "Write(.claude/**)",
+      "Write(CLAUDE.local.md)",
+      "Bash(npm run *)",
+      "Bash(npm test*)",
+      "Bash(npm install*)",
+      "Bash(yarn *)",
+      "Bash(pnpm *)",
+      "Bash(uv *)",
+      "Bash(pip install *)",
+      "Bash(python -m pytest*)",
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git branch*)",
+      "Bash(cargo build*)",
+      "Bash(cargo test*)",
+      "mcp__filesystem__*",
+      "mcp__memory__*",
+      "mcp__eslint__*",
+      "mcp__context7__*"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(del /s *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(sudo *)",
+      "Bash(chmod 777*)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/secrets/**)",
+      "Read(**/*_secret*)",
+      "Read(**/*_key*)",
+      "Write(.env)",
+      "Write(.git/**)"
+    ]
+  },
+
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_HOOKS_DIR}/letta_sync_v2.py\" start"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_HOOKS_DIR}/letta_sync_v2.py\" end"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_HOOKS_DIR}/memory_consolidate.py\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "mcp__*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_HOOKS_DIR}/mcp_guard.py\""
+          }
+        ]
+      },
+      {
+        "matcher": "Bash(*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_HOOKS_DIR}/bash_guard.py\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"${CLAUDE_HOOKS_DIR}/audit_log.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

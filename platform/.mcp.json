@@ -1,0 +1,150 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/mcp-config.json",
+  "mcpServers": {
+    "__comment_core": "=== CORE SERVICES ===",
+
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "Z:/insider/AUTO CLAUDE/unleash"],
+      "description": "File operations for unleash platform"
+    },
+
+    "memory": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "description": "Key-value memory store"
+    },
+
+    "sequential-thinking": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Extended reasoning chains"
+    },
+
+    "__comment_code_intelligence": "=== CODE INTELLIGENCE (UNIFIED 5-LAYER ARCHITECTURE) ===",
+
+    "narsil": {
+      "type": "stdio",
+      "command": "narsil-mcp",
+      "args": [
+        "--project", "Z:/insider/AUTO CLAUDE/unleash",
+        "--languages", "python,typescript,javascript,go,rust",
+        "--enable-security",
+        "--enable-call-graphs"
+      ],
+      "env": {
+        "VOYAGE_API_KEY": "${VOYAGE_API_KEY}",
+        "NARSIL_CACHE_DIR": "Z:/insider/AUTO CLAUDE/unleash/.narsil-cache"
+      },
+      "description": "PRIMARY L1: 76-tool Rust MCP - neural search, taint analysis, call graphs, security (2 GiB/s)"
+    },
+
+    "lsp-python": {
+      "type": "stdio",
+      "command": "mcp-language-server",
+      "args": ["-lsp", "pyright"],
+      "description": "L0 Real-time: Python LSP bridge - go-to-definition, references, diagnostics (<18ms)"
+    },
+
+    "lsp-typescript": {
+      "type": "stdio",
+      "command": "mcp-language-server",
+      "args": ["-lsp", "typescript-language-server", "--stdio"],
+      "description": "L0 Real-time: TypeScript/JavaScript LSP bridge - code intelligence"
+    },
+
+    "deepcontext": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["@wildcard-ai/deepcontext"],
+      "env": {
+        "QDRANT_URL": "http://localhost:6333",
+        "JINA_API_KEY": "${JINA_API_KEY}",
+        "WILDCARD_API_KEY": "${WILDCARD_API_KEY}"
+      },
+      "description": "L2 Semantic: Symbol-aware semantic search with hybrid retrieval (40% token reduction)"
+    },
+
+    "code-index": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["code-index-mcp", "--project-path", "Z:/insider/AUTO CLAUDE/unleash"],
+      "description": "L4 Indexing: 48-language code indexing with tree-sitter + SQLite FTS5"
+    },
+
+    "__comment_web": "=== WEB & RESEARCH ===",
+
+    "firecrawl": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "description": "AI-powered web scraping: crawl, scrape, extract, map sites",
+      "env": {
+        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}",
+        "FIRECRAWL_RETRY_MAX_ATTEMPTS": "5"
+      }
+    },
+
+    "exa": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "exa-mcp-server",
+        "tools=web_search_exa,get_code_context_exa,crawling_exa,company_research_exa,deep_researcher_start,deep_researcher_check"
+      ],
+      "env": {
+        "EXA_API_KEY": "${EXA_API_KEY}"
+      },
+      "description": "AI-powered web search with semantic understanding and deep research"
+    },
+
+    "__comment_memory": "=== MEMORY & PERSISTENCE ===",
+
+    "letta": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@letta-ai/letta-mcp"],
+      "env": {
+        "LETTA_BASE_URL": "http://localhost:8283"
+      },
+      "description": "Letta memory persistence server with hierarchical memory"
+    },
+
+    "qdrant": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-qdrant",
+        "--collection-name", "unleash_code",
+        "--qdrant-url", "http://localhost:6333",
+        "--embedding-model", "sentence-transformers/all-MiniLM-L6-v2"
+      ],
+      "description": "L2 Semantic: Vector database for code embeddings (15ms queries)"
+    },
+
+    "__comment_legacy": "=== LEGACY (Migration in Progress) ===",
+
+    "serena": {
+      "type": "stdio",
+      "command": "python",
+      "args": [
+        "C:/Users/42/.claude/scripts/serena-dynamic.py",
+        "--enable-web-dashboard", "true"
+      ],
+      "env": {
+        "SERENA_PROJECT": "unleash"
+      },
+      "description": "LEGACY: Slow startup (60+ sec) - keep for memories only, use narsil+lsp for code intelligence"
+    }
+  },
+  "globalShortcuts": {
+    "platform-status": "uv run scripts/ecosystem_orchestrator.py --quick",
+    "ralph-iterate": "uv run scripts/ralph_loop.py iterate",
+    "validate": "uv run scripts/auto_validate.py --quick",
+    "index-codebase": "narsil-mcp index --project Z:/insider/AUTO CLAUDE/unleash"
+  }
+}

@@ -1,0 +1,112 @@
+# Unleash V35 Production Configuration
+# Phase 15: Production Deployment
+
+version: "35.0.0"
+environment: production
+
+# L0 Protocol - Direct LLM Operations
+protocol:
+  default_provider: anthropic
+  default_model: claude-sonnet-4-20250514
+  fallback_model: claude-haiku-4-20250514
+  max_tokens: 4096
+  timeout: 60
+  retry:
+    max_attempts: 3
+    backoff_factor: 2
+    backoff_max: 30
+
+# L1 Orchestration - Multi-Agent Workflows
+orchestration:
+  default_framework: langgraph
+  checkpoint_enabled: true
+  max_iterations: 50
+  timeout: 300
+
+# L2 Memory - Persistent Memory
+memory:
+  provider: mem0
+  persistence: true
+  storage_path: ~/.unleash/memory
+  max_history: 1000
+  cleanup_interval: 86400  # 24 hours
+
+# L3 Structured - Typed Output Generation
+structured:
+  validator: instructor
+  schema_cache: true
+  cache_ttl: 3600
+  strict_mode: true
+
+# L4 Reasoning - Agent Reasoning
+reasoning:
+  provider: dspy
+  max_hops: 5
+  trace_enabled: true
+
+# L5 Observability - Tracing and Evaluation
+observability:
+  enabled: true
+  provider: langfuse
+  sample_rate: 1.0
+  export_interval: 60
+  trace_retention_days: 30
+  metrics:
+    enabled: true
+    endpoint: null  # Set via METRICS_ENDPOINT env var
+
+# L6 Safety - Content Scanning and Guardrails
+safety:
+  enabled: true
+  scanner: scanner_compat
+  guardrails: rails_compat
+  block_on_failure: true
+  log_violations: true
+  categories:
+    - prompt_injection
+    - jailbreak
+    - toxicity
+    - pii
+
+# L7 Processing - Document Operations
+processing:
+  converter: markitdown
+  max_file_size_mb: 50
+  supported_formats:
+    - pdf
+    - docx
+    - pptx
+    - xlsx
+    - html
+    - md
+
+# L8 Knowledge - RAG and Indexing
+knowledge:
+  index_path: ~/.unleash/indices
+  embedding_model: text-embedding-3-small
+  chunk_size: 1000
+  chunk_overlap: 200
+  max_results: 10
+
+# Logging Configuration
+logging:
+  level: INFO
+  format: json
+  output: stdout
+  include_timestamp: true
+  include_trace_id: true
+
+# Rate Limiting
+rate_limits:
+  requests_per_minute: 60
+  tokens_per_minute: 100000
+  concurrent_requests: 10
+
+# Health Check
+health:
+  enabled: true
+  interval: 30
+  timeout: 10
+  endpoints:
+    - /health
+    - /ready

@@ -1,0 +1,148 @@
+# Ultimate Autonomous Platform - Neo4j Graph Database
+# Knowledge graph storage for Graphiti bi-temporal queries
+#
+# Usage:
+#   kubectl apply -f neo4j.yaml -n uap
+#   kubectl port-forward svc/neo4j 7474:7474 7687:7687 -n uap
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: neo4j-data
+  namespace: uap
+  labels:
+    app.kubernetes.io/name: neo4j
+    app.kubernetes.io/component: graph-db
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: standard
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: neo4j-logs
+  namespace: uap
+  labels:
+    app.kubernetes.io/name: neo4j
+    app.kubernetes.io/component: graph-db
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: standard
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neo4j
+  namespace: uap
+  labels:
+    app.kubernetes.io/name: neo4j
+    app.kubernetes.io/component: graph-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: neo4j
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: neo4j
+        app.kubernetes.io/component: graph-db
+    spec:
+      containers:
+        - name: neo4j
+          image: neo4j:5.15.0
+          ports:
+            - name: http
+              containerPort: 7474
+              protocol: TCP
+            - name: bolt
+              containerPort: 7687
+              protocol: TCP
+          env:
+            - name: NEO4J_AUTH
+              valueFrom:
+                secretKeyRef:
+                  name: uap-secrets
+                  key: NEO4J_PASSWORD
+            - name: NEO4J_PLUGINS
+              value: '["apoc"]'
+            - name: NEO4J_apoc_export_file_enabled
+              value: "true"
+            - name: NEO4J_apoc_import_file_enabled
+              value: "true"
+            - name: NEO4J_apoc_import_file_use__neo4j__config
+              value: "true"
+            - name: NEO4J_dbms_security_procedures_allowlist
+              value: "apoc.*"
+            - name: NEO4J_dbms_memory_heap_initial__size
+              value: "512m"
+            - name: NEO4J_dbms_memory_heap_max__size
+              value: "1G"
+          volumeMounts:
+            - name: data
+              mountPath: /data
+            - name: logs
+              mountPath: /logs
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "500m"
+            limits:
+              memory: "2Gi"
+              cpu: "2000m"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 60
+            periodSeconds: 30
+            timeoutSeconds: 10
+            failureThreshold: 5
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 10
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: neo4j-data
+        - name: logs
+          persistentVolumeClaim:
+            claimName: neo4j-logs
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: neo4j
+  namespace: uap
+  labels:
+    app.kubernetes.io/name: neo4j
+    app.kubernetes.io/component: graph-db
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 7474
+      targetPort: http
+      protocol: TCP
+    - name: bolt
+      port: 7687
+      targetPort: bolt
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: neo4j

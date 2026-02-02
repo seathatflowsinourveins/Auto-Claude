@@ -1,0 +1,17 @@
+# Ultimate Autonomous Platform - Kubernetes Namespace
+# Creates isolated namespace for all platform components
+#
+# Usage:
+#   kubectl apply -f namespace.yaml
+#   kubectl get ns uap
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: uap
+  labels:
+    app.kubernetes.io/name: ultimate-autonomous-platform
+    app.kubernetes.io/component: infrastructure
+    app.kubernetes.io/managed-by: kubectl
+  annotations:
+    description: "Ultimate Autonomous Platform - AI Development Infrastructure"

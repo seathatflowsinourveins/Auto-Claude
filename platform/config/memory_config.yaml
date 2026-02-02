@@ -1,0 +1,121 @@
+# Unified Memory Configuration
+# V33 Architecture - Multi-Provider Memory Layer
+
+# Default Settings
+defaults:
+  provider: "local"
+  tier: "archival"
+  importance: 0.5
+  auto_sync: true
+
+# Provider Configuration
+providers:
+  # Local Three-Tier Memory
+  local:
+    enabled: true
+    priority: 1
+    storage_path: "./data/memory"
+
+    # Core Memory (always in-context)
+    core:
+      max_total_tokens: 12000
+      blocks:
+        system_persona: 3000
+        user_context: 2000
+        task_state: 2000
+        working_memory: 5000
+
+    # Archival Memory (vector-retrieved)
+    archival:
+      enabled: true
+      backend: "local"
+      max_entries: 50000
+      categories:
+        - episodic
+        - semantic
+        - procedural
+
+    # Temporal Graph (knowledge graph)
+    temporal:
+      enabled: true
+      storage_file: "temporal_graph.json"
+      contradiction_handling: "version"
+
+  # Mem0 Provider
+  mem0:
+    enabled: true
+    priority: 2
+    api_key: ${MEM0_API_KEY}
+    options:
+      user_id: "default"
+      auto_tag: true
+
+  # Zep Provider
+  zep:
+    enabled: true
+    priority: 3
+    api_url: ${ZEP_API_URL}
+    api_key: ${ZEP_API_KEY}
+    session_timeout_hours: 24
+
+  # Letta Provider
+  letta:
+    enabled: true
+    priority: 4
+    config_file: "letta_config.yaml"
+
+# Embedding Configuration
+embeddings:
+  provider: "openai"
+  model: "text-embedding-3-small"
+  dimensions: 1536
+  fallback_provider: "local"
+  cache_embeddings: true
+  cache_ttl_hours: 168  # 1 week
+
+# Semantic Search Settings
+search:
+  default_limit: 10
+  min_score: 0.3
+  rerank_results: true
+  cross_provider: true
+  dedup_threshold: 0.95
+
+# Consolidation Settings
+consolidation:
+  enabled: true
+  strategy: "hierarchical"
+  schedule:
+    hourly: false
+    daily: true
+    weekly: true
+  thresholds:
+    age_days: 7
+    min_access_count: 1
+    importance_cutoff: 0.2
+
+# Import Scoring (for cross-session bootstrap)
+import_scoring:
+  weights:
+    type: 0.35
+    content: 0.30
+    temporal: 0.20
+    source: 0.15
+  type_scores:
+    decisions: 1.0
+    patterns: 0.85
+    validations: 0.7
+    info: 0.4
+  source_scores:
+    claude-mem: 0.9
+    serena: 0.85
+    episodic: 0.8
+    unified: 0.75
+    local: 0.6
+
+# Logging
+logging:
+  level: "INFO"
+  log_queries: false
+  log_stores: true
+  metrics_enabled: true

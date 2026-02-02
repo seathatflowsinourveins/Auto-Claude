@@ -1,0 +1,111 @@
+# Ultimate Autonomous Platform - Qdrant Vector Database
+# High-performance vector similarity search for swarm memory
+#
+# Usage:
+#   kubectl apply -f qdrant.yaml -n uap
+#   kubectl port-forward svc/qdrant 6333:6333 -n uap
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: qdrant-data
+  namespace: uap
+  labels:
+    app.kubernetes.io/name: qdrant
+    app.kubernetes.io/component: vector-db
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: standard
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qdrant
+  namespace: uap
+  labels:
+    app.kubernetes.io/name: qdrant
+    app.kubernetes.io/component: vector-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: qdrant
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: qdrant
+        app.kubernetes.io/component: vector-db
+    spec:
+      containers:
+        - name: qdrant
+          image: qdrant/qdrant:v1.7.4
+          ports:
+            - name: http
+              containerPort: 6333
+              protocol: TCP
+            - name: grpc
+              containerPort: 6334
+              protocol: TCP
+          env:
+            - name: QDRANT__SERVICE__GRPC_PORT
+              value: "6334"
+            - name: QDRANT__CLUSTER__ENABLED
+              value: "false"
+          volumeMounts:
+            - name: data
+              mountPath: /qdrant/storage
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "2Gi"
+              cpu: "1000m"
+          livenessProbe:
+            httpGet:
+              path: /collections
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 30
+            timeoutSeconds: 10
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /collections
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: qdrant-data
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: qdrant
+  namespace: uap
+  labels:
+    app.kubernetes.io/name: qdrant
+    app.kubernetes.io/component: vector-db
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 6333
+      targetPort: http
+      protocol: TCP
+    - name: grpc
+      port: 6334
+      targetPort: grpc
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: qdrant

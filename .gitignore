@@ -1,0 +1,81 @@
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+
+# Test and tool caches
+.pytest_cache/
+.narsil-cache/
+.deepeval/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archived directories (large reference repos)
+.archived/
+
+# Virtual environments
+.venv/
+venv/
+
+# Windows reserved filenames
+nul
+NUL
+
+# Secrets
+secrets/
+*.key
+*.pem
+
+# Large data
+*.sqlite
+*.db
+*.pkl
+
+# Node
+node_modules/
+
+# Claude flow regenerable state
+.claude-flow/daemon-state.json
+.claude-flow/metrics/
+.claude-flow/security/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# External SDK clones (large, tracked separately or as submodules)
+stack/
+sdks/
+platform/sdks/
+platform/docs/official/sdks/
+platform/docs/official/specs/
+
+# Embedded repo clones
+apps/.git
+claude-context/.git
+code-index-mcp/.git
