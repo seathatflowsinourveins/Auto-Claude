@@ -248,5 +248,51 @@ class TestLettaCloudIntegration:
         assert "agent-daee71d2" in content
 
 
+# ============================================================================
+# SECTION 8: Self-Improvement Integration
+# ============================================================================
+
+class TestSelfImprovement:
+    """Verify self-improvement infrastructure."""
+
+    @pytest.fixture(autouse=True)
+    def setup_path(self):
+        platform_path = str(BASE / "platform")
+        if platform_path not in sys.path:
+            sys.path.insert(0, platform_path)
+
+    def test_self_improvement_imports_with_confidence(self):
+        """unified_confidence must load (fixed import path)."""
+        from core.self_improvement import HAS_CONFIDENCE
+        assert HAS_CONFIDENCE, "unified_confidence not loading - import path broken"
+
+    def test_letta_client_available(self):
+        """Letta client must be importable for persistence."""
+        from core.self_improvement import HAS_LETTA
+        assert HAS_LETTA, "letta_client not importable"
+
+    def test_friction_detector_works(self):
+        """Friction detection must trigger on 2+ repeated errors."""
+        from core.self_improvement import SelfImprovementOrchestrator
+        orch = SelfImprovementOrchestrator(session_id="test-v14")
+        f1 = orch.friction_detector.detect_repeated_error("TestError", "same msg")
+        assert f1 is None, "Should not trigger on first error"
+        f2 = orch.friction_detector.detect_repeated_error("TestError", "same msg")
+        assert f2 is not None, "Should trigger on second occurrence"
+        assert f2.occurrence_count == 2
+
+    def test_pattern_store_available(self):
+        """Pattern store must be initialized when HAS_CONFIDENCE is True."""
+        from core.self_improvement import SelfImprovementOrchestrator, HAS_CONFIDENCE
+        if HAS_CONFIDENCE:
+            orch = SelfImprovementOrchestrator(session_id="test-v14")
+            assert orch.pattern_store is not None
+
+    def test_letta_agent_id_in_orchestrator(self):
+        """ECOSYSTEM agent ID must be configured."""
+        from core.self_improvement import SelfImprovementOrchestrator
+        assert "agent-daee71d2" in SelfImprovementOrchestrator.LETTA_AGENT_ID
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])

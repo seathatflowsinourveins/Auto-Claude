@@ -29,7 +29,7 @@ from pydantic import BaseModel, Field
 
 # Import unified confidence if available
 try:
-    from platform.core.unified_confidence import (
+    from core.unified_confidence import (
         PatternConfidence as _PatternConfidence,
         PatternStore as _PatternStore,
         PatternType as _PatternType,
@@ -48,6 +48,14 @@ except ImportError:
     PatternConfidence = None  # type: ignore
     get_confidence_scorer = None  # type: ignore
     ConfidenceLevel = None  # type: ignore
+
+# Optional Letta Cloud persistence
+try:
+    from letta_client import Letta as _LettaClient
+    HAS_LETTA = True
+except ImportError:
+    HAS_LETTA = False
+    _LettaClient = None  # type: ignore
 
 logger = logging.getLogger(__name__)
 
@@ -622,10 +630,14 @@ class SelfImprovementOrchestrator:
     - Pattern storage via unified confidence
     """
 
+    # Default Letta agent for UNLEASH ecosystem
+    LETTA_AGENT_ID = "agent-daee71d2-193b-485e-bda4-ee44752635fe"
+
     def __init__(
         self,
         session_id: Optional[str] = None,
-        storage_dir: Optional[Path] = None
+        storage_dir: Optional[Path] = None,
+        letta_sync: bool = False,
     ):
         self.session_id = session_id or datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
         self.storage_dir = storage_dir or Path.home() / ".claude" / "learnings"
@@ -642,6 +654,10 @@ class SelfImprovementOrchestrator:
         else:
             self.pattern_store = None
             self.confidence_scorer = None
+
+        # Letta Cloud persistence
+        self.letta_sync = letta_sync and HAS_LETTA
+        self._letta_client = None
 
         # Metrics
         self.metrics = SessionMetrics(session_id=self.session_id)
@@ -816,6 +832,48 @@ class SelfImprovementOrchestrator:
         results = self.reflexion_engine.search(query, limit)
         self.on_memory_query(len(results) > 0)
         return results
+
+    # -------------------------------------------------------------------------
+    # Letta Cloud Persistence
+    # -------------------------------------------------------------------------
+
+    def _get_letta_client(self):
+        """Lazy-init Letta client."""
+        if self._letta_client is None and self.letta_sync and HAS_LETTA:
+            import os
+            api_key = os.environ.get("LETTA_API_KEY")
+            if api_key:
+                self._letta_client = _LettaClient(api_key=api_key)
+        return self._letta_client
+
+    def sync_to_letta(self) -> bool:
+        """Persist session learnings to Letta Cloud archival memory."""
+        client = self._get_letta_client()
+        if not client:
+            return False
+
+        try:
+            summary = self.get_session_summary()
+            text = json.dumps(summary, indent=2, default=str)
+            client.agents.passages.create(
+                agent_id=self.LETTA_AGENT_ID,
+                text=f"[self-improvement] Session {self.session_id}\n{text}",
+                tags=["self-improvement", "session-learnings", f"session-{self.session_id}"],
+            )
+            logger.info(f"Synced session {self.session_id} learnings to Letta Cloud")
+
+            # Sync high-confidence corrections
+            for correction in self.corrections:
+                client.agents.passages.create(
+                    agent_id=self.LETTA_AGENT_ID,
+                    text=f"[correction] {correction.category}: {correction.wrong} → {correction.correct} (source: {correction.source})",
+                    tags=["correction", correction.category],
+                )
+
+            return True
+        except Exception as e:
+            logger.error(f"Failed to sync to Letta Cloud: {e}")
+            return False
 
     # -------------------------------------------------------------------------
     # Session Summary
