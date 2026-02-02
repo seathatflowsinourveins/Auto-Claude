@@ -320,7 +320,6 @@ class TestVoyageProvider:
         assert "total_calls" in stats
 
 
-@pytest.mark.skip(reason="MemoryMetrics singleton doesn't track embedding provider calls (structural mismatch)")
 class TestProviderIntegration:
     """Test provider integration with memory system."""
 
@@ -343,7 +342,7 @@ class TestProviderIntegration:
         await provider.embed("Test text")
 
         stats = get_memory_stats()
-        assert stats.get("cache", stats.get("embedding", {})).get("calls", stats.get("cache", {}).get("total_calls", 0)) >= 1, "Should record local provider calls"
+        assert stats["embedding"]["calls"] >= 1, "Should record local provider calls"
 
     @pytest.mark.asyncio
     async def test_sentence_transformer_records_metrics(self):
@@ -364,7 +363,7 @@ class TestProviderIntegration:
             await provider.embed("Test sentence")
 
             stats = get_memory_stats()
-            assert stats.get("cache", stats.get("embedding", {})).get("calls", stats.get("cache", {}).get("total_calls", 0)) >= 1
+            assert stats["embedding"]["calls"] >= 1
 
         except RuntimeError as e:
             if "sentence-transformers not installed" in str(e):
