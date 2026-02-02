@@ -316,7 +316,7 @@ class TestContentDetectionGroundTruth:
     def test_python_code_detection(self):
         """Test Python code is detected as CODE."""
         try:
-            from advanced_memory import ContentType, detect_content_type
+            from core.advanced_memory import ContentType, detect_content_type
         except ImportError:
             pytest.skip("advanced_memory not available")
 
@@ -332,7 +332,7 @@ def fibonacci(n):
     def test_javascript_code_detection(self):
         """Test JavaScript code is detected as CODE."""
         try:
-            from advanced_memory import ContentType, detect_content_type
+            from core.advanced_memory import ContentType, detect_content_type
         except ImportError:
             pytest.skip("advanced_memory not available")
 
@@ -348,7 +348,7 @@ const getData = async () => {
     def test_plain_text_detection(self):
         """Test plain text is detected as TEXT."""
         try:
-            from advanced_memory import ContentType, detect_content_type
+            from core.advanced_memory import ContentType, detect_content_type
         except ImportError:
             pytest.skip("advanced_memory not available")
 
@@ -359,7 +359,7 @@ const getData = async () => {
     def test_multilingual_detection(self):
         """Test non-English text is detected as MULTILINGUAL."""
         try:
-            from advanced_memory import ContentType, detect_content_type
+            from core.advanced_memory import ContentType, detect_content_type
         except ImportError:
             pytest.skip("advanced_memory not available")
 
@@ -370,7 +370,7 @@ const getData = async () => {
     def test_empty_text_detection(self):
         """Test empty text returns UNKNOWN."""
         try:
-            from advanced_memory import ContentType, detect_content_type
+            from core.advanced_memory import ContentType, detect_content_type
         except ImportError:
             pytest.skip("advanced_memory not available")
 

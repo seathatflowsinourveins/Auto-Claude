@@ -564,7 +564,7 @@ class TestAdapterIntegration:
     def test_adapter_registry_import(self):
         """Test adapter registry can be imported."""
         try:
-            from platform.adapters import get_adapter_status
+            from adapters import get_adapter_status
             status = get_adapter_status()
             assert isinstance(status, dict)
         except ImportError:
@@ -573,7 +573,7 @@ class TestAdapterIntegration:
     def test_pipeline_registry_import(self):
         """Test pipeline registry can be imported."""
         try:
-            from platform.pipelines import get_pipeline_status
+            from pipelines import get_pipeline_status
             status = get_pipeline_status()
             assert isinstance(status, dict)
         except ImportError:
@@ -590,7 +590,7 @@ class TestCLIIntegration:
     def test_cli_import(self):
         """Test CLI can be imported."""
         try:
-            from platform.cli import cli, main
+            from cli import cli, main
             assert cli is not None
             assert main is not None
         except ImportError:
@@ -599,7 +599,7 @@ class TestCLIIntegration:
     def test_cli_parser_creation(self):
         """Test CLI parser can be created."""
         try:
-            from platform.cli.main import create_parser
+            from cli.main import create_parser
             parser = create_parser()
             assert parser is not None
         except ImportError:

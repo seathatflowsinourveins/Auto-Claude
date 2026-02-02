@@ -142,7 +142,7 @@ class TestSharedClientBehavior:
     def test_ollama_client_reuse(self):
         """Test that OllamaClient reuses client."""
         try:
-            from platform.adapters.model_router import OllamaClient
+            from adapters.model_router import OllamaClient
         except ImportError:
             pytest.skip("model_router module not importable")
 
