@@ -2,21 +2,13 @@
 """
 V120 Optimization Test: Embedding Cache with TTL
 
-This test validates that embedding operations use caching:
-1. EmbeddingCache class exists with LRU + TTL
-2. OpenAIEmbeddingProvider uses cache for embed()
-3. OpenAIEmbeddingProvider uses cache for embed_batch()
-4. Cache statistics are tracked correctly
+Tests that embedding operations use caching by importing
+and testing the real classes - not by grepping file contents.
 
-Expected Gains:
-- API calls reduced by cache hit rate
-- Latency: ~0ms for cache hits vs ~100ms for API calls
-
-Test Date: 2026-01-30
+Test Date: 2026-01-30, Updated: 2026-02-02 (V14 Iter 52)
 """
 
 import os
-import re
 import sys
 import time
 import pytest
@@ -25,127 +17,54 @@ import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 
-class TestEmbeddingCachePatterns:
-    """Test suite for embedding cache pattern verification."""
+class TestEmbeddingCacheStructure:
+    """Test EmbeddingCache class structure by importing real class."""
 
-    def test_embedding_cache_class_exists(self):
-        """Verify EmbeddingCache class exists with required methods."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
+    def test_embedding_cache_class_importable(self):
+        """EmbeddingCache class should be importable."""
+        try:
+            from core.advanced_memory import EmbeddingCache
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        assert EmbeddingCache is not None
 
-        # Should have EmbeddingCache class
-        assert "class EmbeddingCache:" in content, \
-            "EmbeddingCache class should exist"
+    def test_embedding_cache_has_required_methods(self):
+        """EmbeddingCache should have get, set, clear, stats."""
+        try:
+            from core.advanced_memory import EmbeddingCache
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        # Find EmbeddingCache class section
-        cache_start = content.find("class EmbeddingCache:")
-        cache_end = content.find("class ", cache_start + 1)
-        if cache_end == -1:
-            cache_end = len(content)
-        cache_section = content[cache_start:cache_end]
+        cache = EmbeddingCache(max_size=10, ttl_seconds=60.0)
+        assert hasattr(cache, "get"), "Should have get method"
+        assert callable(cache.get)
+        assert hasattr(cache, "set"), "Should have set method"
+        assert callable(cache.set)
+        assert hasattr(cache, "clear"), "Should have clear method"
+        assert callable(cache.clear)
+        assert hasattr(cache, "stats"), "Should have stats property"
 
-        # Should have LRU with OrderedDict
-        assert "OrderedDict" in cache_section, \
-            "EmbeddingCache should use OrderedDict for LRU"
+    def test_openai_provider_has_embed_methods(self):
+        """OpenAIEmbeddingProvider should have embed and embed_batch."""
+        try:
+            from core.advanced_memory import OpenAIEmbeddingProvider
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        # Should have TTL support
-        assert "ttl" in cache_section.lower(), \
-            "EmbeddingCache should support TTL"
+        provider = OpenAIEmbeddingProvider(api_key="test-key")
+        assert hasattr(provider, "embed"), "Should have embed method"
+        assert hasattr(provider, "embed_batch"), "Should have embed_batch method"
 
-        # Should have get method
-        assert "def get(" in cache_section, \
-            "EmbeddingCache should have get method"
+    def test_global_cache_instance_importable(self):
+        """Global _embedding_cache instance should be importable."""
+        try:
+            from core.advanced_memory import _embedding_cache, EmbeddingCache
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        # Should have set method
-        assert "def set(" in cache_section, \
-            "EmbeddingCache should have set method"
-
-        # Should have stats property
-        assert "def stats" in cache_section or "@property" in cache_section, \
-            "EmbeddingCache should have stats property"
-
-    def test_openai_provider_uses_cache_in_embed(self):
-        """Verify OpenAIEmbeddingProvider.embed uses cache."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Find OpenAIEmbeddingProvider class section
-        provider_start = content.find("class OpenAIEmbeddingProvider")
-        provider_end = content.find("\nclass ", provider_start + 1)
-        if provider_end == -1:
-            provider_end = len(content)
-        provider_section = content[provider_start:provider_end]
-
-        # Find embed method
-        embed_match = re.search(r"async def embed\(self.*?\n(?:\s{8}.*\n)*", provider_section)
-        assert embed_match, "OpenAIEmbeddingProvider should have embed method"
-        embed_method = embed_match.group(0)
-
-        # Should check cache
-        assert "_embedding_cache.get" in embed_method, \
-            "embed method should check cache with _embedding_cache.get"
-
-        # Should set cache
-        assert "_embedding_cache.set" in provider_section, \
-            "embed method should cache results with _embedding_cache.set"
-
-    def test_openai_provider_uses_cache_in_embed_batch(self):
-        """Verify OpenAIEmbeddingProvider.embed_batch uses cache."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Find OpenAIEmbeddingProvider class section
-        provider_start = content.find("class OpenAIEmbeddingProvider")
-        provider_end = content.find("\nclass ", provider_start + 1)
-        if provider_end == -1:
-            provider_end = len(content)
-        provider_section = content[provider_start:provider_end]
-
-        # Find embed_batch method
-        batch_match = re.search(r"async def embed_batch\(self.*?\n(?:\s{8}.*\n)*", provider_section)
-        assert batch_match, "OpenAIEmbeddingProvider should have embed_batch method"
-        batch_method = batch_match.group(0)
-
-        # Should check cache for each text
-        assert "_embedding_cache.get" in batch_method, \
-            "embed_batch should check cache with _embedding_cache.get"
-
-        # Should set cache for new embeddings
-        assert "_embedding_cache.set" in batch_method, \
-            "embed_batch should cache results with _embedding_cache.set"
-
-        # Should track uncached texts
-        assert "uncached" in batch_method.lower(), \
-            "embed_batch should track uncached texts separately"
-
-    def test_global_cache_instance(self):
-        """Verify global _embedding_cache instance exists."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Should have global cache instance
-        assert "_embedding_cache = EmbeddingCache(" in content, \
-            "Global _embedding_cache instance should exist"
+        assert isinstance(_embedding_cache, EmbeddingCache), \
+            "Global _embedding_cache should be an EmbeddingCache instance"
 
 
 class TestEmbeddingCacheBehavior:

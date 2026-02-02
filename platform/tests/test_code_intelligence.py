@@ -56,8 +56,16 @@ class TestQdrantFunctionality:
 
     @pytest.fixture
     def qdrant_client(self):
-        from qdrant_client import QdrantClient
-        return QdrantClient(QDRANT_URL)
+        from qdrant_client import QdrantClient, models as qm
+        client = QdrantClient(QDRANT_URL)
+        # Ensure collection exists
+        collections = [c.name for c in client.get_collections().collections]
+        if QDRANT_COLLECTION not in collections:
+            client.create_collection(
+                QDRANT_COLLECTION,
+                vectors_config=qm.VectorParams(size=EXPECTED_DIMENSION, distance=qm.Distance.COSINE),
+            )
+        return client
 
     def test_qdrant_is_running(self, qdrant_client):
         """Verify Qdrant responds to health check."""
@@ -90,7 +98,7 @@ class TestQdrantFunctionality:
         """
         from qdrant_client.models import PointStruct
 
-        test_id = "test_functional_vector_001"
+        test_id = 999001
         test_vector = [0.1] * EXPECTED_DIMENSION
         test_payload = {"file_path": "test.py", "content": "def test(): pass"}
 
@@ -129,16 +137,19 @@ class TestQdrantFunctionality:
         """
         from qdrant_client.models import PointStruct
 
-        # Insert test vectors - one similar, one different
-        similar_vector = [0.9] * EXPECTED_DIMENSION
-        different_vector = [0.1] * EXPECTED_DIMENSION
-        query_vector = [0.85] * EXPECTED_DIMENSION  # Similar to similar_vector
+        # Insert test vectors - one similar to query direction, one different
+        # Use different DIRECTIONS, not just magnitudes (cosine ignores magnitude)
+        import random
+        random.seed(42)
+        similar_vector = [random.gauss(0.8, 0.1) for _ in range(EXPECTED_DIMENSION)]
+        query_vector = [v + random.gauss(0, 0.05) for v in similar_vector]  # Close direction
+        different_vector = [random.gauss(-0.5, 0.3) for _ in range(EXPECTED_DIMENSION)]  # Far direction
 
         qdrant_client.upsert(
             collection_name=QDRANT_COLLECTION,
             points=[
-                PointStruct(id="similar_001", vector=similar_vector, payload={"type": "similar"}),
-                PointStruct(id="different_001", vector=different_vector, payload={"type": "different"}),
+                PointStruct(id=999002, vector=similar_vector, payload={"type": "similar"}),
+                PointStruct(id=999003, vector=different_vector, payload={"type": "different"}),
             ],
         )
 
@@ -159,7 +170,7 @@ class TestQdrantFunctionality:
         # Cleanup
         qdrant_client.delete(
             collection_name=QDRANT_COLLECTION,
-            points_selector=["similar_001", "different_001"],
+            points_selector=[999002, 999003],
         )
 
 
@@ -285,18 +296,18 @@ class TestEndToEndSearch:
         qdrant = QdrantClient(QDRANT_URL)
 
         test_codes = [
-            ("auth_code", "def authenticate_user(username, password): return check_credentials(username, password)"),
-            ("db_code", "def query_database(sql): return connection.execute(sql).fetchall()"),
-            ("api_code", "def fetch_api_data(url): return requests.get(url).json()"),
+            (999010, "auth_code", "def authenticate_user(username, password): return check_credentials(username, password)"),
+            (999011, "db_code", "def query_database(sql): return connection.execute(sql).fetchall()"),
+            (999012, "api_code", "def fetch_api_data(url): return requests.get(url).json()"),
         ]
 
         # Embed and store test code
-        for code_id, code in test_codes:
+        for point_id, code_id, code in test_codes:
             result = voyage.embed([code], model="voyage-code-3", input_type="document")
             qdrant.upsert(
                 collection_name=QDRANT_COLLECTION,
                 points=[PointStruct(
-                    id=f"test_{code_id}",
+                    id=point_id,
                     vector=result.embeddings[0],
                     payload={"file_path": f"{code_id}.py", "content": code},
                 )],
@@ -319,7 +330,7 @@ class TestEndToEndSearch:
             # Cleanup
             qdrant.delete(
                 collection_name=QDRANT_COLLECTION,
-                points_selector=[f"test_{code_id}" for code_id, _ in test_codes],
+                points_selector=[pid for pid, _, _ in test_codes],
             )
 
 

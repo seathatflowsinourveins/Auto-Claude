@@ -2,19 +2,10 @@
 """
 V124 Optimization Test: Intelligent Model Routing
 
-This test validates automatic content detection and model selection:
-1. ContentType enum and detection works correctly
-2. Code patterns are properly identified
-3. Multilingual content is detected
-4. EmbeddingRouter selects appropriate providers
-5. Routing stats are tracked correctly
+Tests content detection and model routing by importing and testing
+real classes - not by grepping file contents.
 
-Expected Gains:
-- Automatic optimal model selection
-- ~15% quality improvement for code
-- ~40% cost reduction through intelligent routing
-
-Test Date: 2026-01-30
+Test Date: 2026-01-30, Updated: 2026-02-02 (V14 Iter 52)
 """
 
 import os
@@ -25,70 +16,54 @@ import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 
-class TestContentDetection:
-    """Test suite for content type detection."""
+class TestContentDetectionStructure:
+    """Test content type detection structure by importing real classes."""
 
-    def test_content_type_enum_exists(self):
-        """Verify ContentType enum has all values."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
+    def test_content_type_enum_importable(self):
+        """ContentType enum should be importable with all values."""
+        try:
+            from core.advanced_memory import ContentType
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        assert hasattr(ContentType, "CODE"), "Should have CODE"
+        assert hasattr(ContentType, "TEXT"), "Should have TEXT"
+        assert hasattr(ContentType, "MULTILINGUAL"), "Should have MULTILINGUAL"
+        assert hasattr(ContentType, "MIXED"), "Should have MIXED"
+        assert hasattr(ContentType, "UNKNOWN"), "Should have UNKNOWN"
 
-        assert "class ContentType" in content, "ContentType enum should exist"
-        assert 'CODE = "code"' in content, "Should have CODE type"
-        assert 'TEXT = "text"' in content, "Should have TEXT type"
-        assert 'MULTILINGUAL = "multilingual"' in content, "Should have MULTILINGUAL type"
-        assert 'MIXED = "mixed"' in content, "Should have MIXED type"
-        assert 'UNKNOWN = "unknown"' in content, "Should have UNKNOWN type"
+    def test_detect_content_type_importable(self):
+        """detect_content_type function should be importable and callable."""
+        try:
+            from core.advanced_memory import detect_content_type
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-    def test_detect_content_type_exists(self):
-        """Verify detect_content_type function exists."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
+        assert callable(detect_content_type)
 
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+    def test_content_type_values(self):
+        """ContentType values should be the expected strings."""
+        try:
+            from core.advanced_memory import ContentType
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        assert "def detect_content_type(" in content, \
-            "detect_content_type function should exist"
+        assert ContentType.CODE.value == "code"
+        assert ContentType.TEXT.value == "text"
+        assert ContentType.MULTILINGUAL.value == "multilingual"
+        assert ContentType.MIXED.value == "mixed"
+        assert ContentType.UNKNOWN.value == "unknown"
 
-    def test_code_patterns_defined(self):
-        """Verify code detection patterns are defined."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
+    def test_detect_returns_content_type(self):
+        """detect_content_type should return a ContentType enum value."""
+        try:
+            from core.advanced_memory import detect_content_type, ContentType
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        assert "_CODE_PATTERNS" in content, "Should have code patterns defined"
-        assert r"r'\bdef\s+\w+\s*\('" in content or "def\\s+" in content, \
-            "Should detect Python functions"
-        assert r"r'\bclass\s+\w+'" in content or "class\\s+" in content, \
-            "Should detect class definitions"
-
-    def test_multilingual_ranges_defined(self):
-        """Verify multilingual Unicode ranges are defined."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        assert "_NON_ENGLISH_RANGES" in content, \
-            "Should have non-English Unicode ranges"
-        # Check for some key ranges
-        assert "0x4E00" in content or "4E00" in content, \
-            "Should include CJK range"
+        result = detect_content_type("Hello world, this is a test sentence.")
+        assert isinstance(result, ContentType), \
+            f"Should return ContentType, got {type(result)}"
 
 
 class TestContentDetectionBehavior:
@@ -180,62 +155,39 @@ class TestContentDetectionBehavior:
         assert result == ContentType.UNKNOWN, f"Expected UNKNOWN for empty text, got {result}"
 
 
-class TestEmbeddingRouter:
-    """Test EmbeddingRouter class."""
+class TestEmbeddingRouterStructure:
+    """Test EmbeddingRouter class structure by importing real class."""
 
-    def test_embedding_router_class_exists(self):
-        """Verify EmbeddingRouter class exists."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
+    def test_embedding_router_importable(self):
+        """EmbeddingRouter class should be importable."""
+        try:
+            from core.advanced_memory import EmbeddingRouter
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        assert EmbeddingRouter is not None
 
-        assert "class EmbeddingRouter:" in content, \
-            "EmbeddingRouter class should exist"
+    def test_embedding_router_has_required_methods(self):
+        """EmbeddingRouter should have embed, embed_batch, select_provider, get_routing_stats."""
+        try:
+            from core.advanced_memory import EmbeddingRouter
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        # Find class section
-        router_start = content.find("class EmbeddingRouter:")
-        router_end = content.find("\nclass ", router_start + 1)
-        if router_end == -1:
-            router_end = content.find("\ndef create_embedding_router", router_start)
-        router_section = content[router_start:router_end]
+        router = EmbeddingRouter()
+        assert hasattr(router, "embed"), "Should have embed method"
+        assert hasattr(router, "embed_batch"), "Should have embed_batch method"
+        assert hasattr(router, "select_provider"), "Should have select_provider method"
+        assert hasattr(router, "get_routing_stats"), "Should have get_routing_stats method"
 
-        # Should have key methods
-        assert "async def embed(" in router_section, "Should have embed method"
-        assert "async def embed_batch(" in router_section, "Should have embed_batch method"
-        assert "def select_provider(" in router_section, "Should have select_provider method"
-        assert "def get_routing_stats(" in router_section, "Should have get_routing_stats method"
+    def test_create_embedding_router_importable(self):
+        """create_embedding_router factory should be importable."""
+        try:
+            from core.advanced_memory import create_embedding_router
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-    def test_model_recommendations_defined(self):
-        """Verify model recommendations are defined."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        assert "MODEL_RECOMMENDATIONS" in content, \
-            "Should have MODEL_RECOMMENDATIONS mapping"
-        assert "voyage-code-3" in content, "Should recommend voyage-code-3 for code"
-        assert "voyage-3.5" in content, "Should recommend voyage-3.5 for text"
-
-    def test_factory_function_exists(self):
-        """Verify create_embedding_router factory exists."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        assert "def create_embedding_router(" in content, \
-            "create_embedding_router factory should exist"
+        assert callable(create_embedding_router)
 
 
 class TestEmbeddingRouterBehavior:

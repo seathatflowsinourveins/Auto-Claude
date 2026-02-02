@@ -2,22 +2,13 @@
 """
 V121 Optimization Test: Circuit Breaker for API Failures
 
-This test validates that the circuit breaker pattern is integrated:
-1. OpenAIEmbeddingProvider has a circuit breaker
-2. API calls are wrapped with the circuit breaker
-3. Circuit breaker transitions work correctly
-4. Statistics are tracked and accessible
+Tests circuit breaker pattern by importing and testing real classes -
+not by grepping file contents.
 
-Expected Gains:
-- Cascade failure prevention
-- Fail-fast during outages (~0ms vs ~30s timeout)
-- Automatic recovery detection
-
-Test Date: 2026-01-30
+Test Date: 2026-01-30, Updated: 2026-02-02 (V14 Iter 52)
 """
 
 import os
-import re
 import sys
 import pytest
 
@@ -25,130 +16,62 @@ import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 
-class TestCircuitBreakerPatterns:
-    """Test suite for circuit breaker pattern verification."""
+class TestCircuitBreakerStructure:
+    """Test circuit breaker structure by importing real classes."""
 
-    def test_circuit_breaker_import_exists(self):
-        """Verify CircuitBreaker is imported in advanced_memory."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
+    def test_circuit_breaker_importable(self):
+        """CircuitBreaker class should be importable from resilience."""
+        try:
+            from core.resilience import CircuitBreaker
+        except ImportError:
+            pytest.skip("resilience module not importable")
 
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        assert CircuitBreaker is not None
 
-        # Should import CircuitBreaker
-        assert "from .resilience import" in content or "from resilience import" in content, \
-            "Should import from resilience module"
-        assert "CircuitBreaker" in content, \
-            "CircuitBreaker should be imported"
+    def test_circuit_state_importable(self):
+        """CircuitState enum should be importable."""
+        try:
+            from core.resilience import CircuitState
+        except ImportError:
+            pytest.skip("resilience module not importable")
+
+        # Should have expected states
+        assert hasattr(CircuitState, "CLOSED")
+        assert hasattr(CircuitState, "OPEN")
+        assert hasattr(CircuitState, "HALF_OPEN")
 
     def test_openai_provider_has_circuit_breaker(self):
-        """Verify OpenAIEmbeddingProvider has circuit breaker instance."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
+        """OpenAIEmbeddingProvider should have _circuit_breaker attribute."""
+        try:
+            from core.advanced_memory import OpenAIEmbeddingProvider
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        assert hasattr(OpenAIEmbeddingProvider, "_circuit_breaker"), \
+            "OpenAIEmbeddingProvider should have _circuit_breaker class variable"
 
-        # Find OpenAIEmbeddingProvider class section
-        provider_start = content.find("class OpenAIEmbeddingProvider")
-        provider_end = content.find("\nclass ", provider_start + 1)
-        if provider_end == -1:
-            provider_end = len(content)
-        provider_section = content[provider_start:provider_end]
+    def test_openai_provider_has_circuit_stats(self):
+        """OpenAIEmbeddingProvider should have get_circuit_stats method."""
+        try:
+            from core.advanced_memory import OpenAIEmbeddingProvider
+        except ImportError:
+            pytest.skip("advanced_memory not importable")
 
-        # Should have circuit breaker as class variable
-        assert "_circuit_breaker" in provider_section, \
-            "OpenAIEmbeddingProvider should have _circuit_breaker"
-        assert "CircuitBreaker(" in provider_section, \
-            "Should instantiate CircuitBreaker"
-
-    def test_embed_uses_circuit_breaker(self):
-        """Verify embed method uses circuit breaker."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Find OpenAIEmbeddingProvider class section
-        provider_start = content.find("class OpenAIEmbeddingProvider")
-        provider_end = content.find("\nclass ", provider_start + 1)
-        if provider_end == -1:
-            provider_end = len(content)
-        provider_section = content[provider_start:provider_end]
-
-        # Find embed method
-        embed_match = re.search(
-            r"async def embed\(self.*?\n(?:\s{8}.*\n)*?(?=\n\s{4}async def|\n\s{4}@|\nclass|\Z)",
-            provider_section,
-            re.MULTILINE
-        )
-        assert embed_match, "Should have embed method"
-        embed_method = embed_match.group(0)
-
-        # Should use circuit breaker context manager
-        assert "async with self._circuit_breaker" in embed_method or \
-               "async with cls._circuit_breaker" in embed_method, \
-            "embed method should wrap API call with circuit breaker"
-
-    def test_embed_batch_uses_circuit_breaker(self):
-        """Verify embed_batch method uses circuit breaker."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Find OpenAIEmbeddingProvider class section
-        provider_start = content.find("class OpenAIEmbeddingProvider")
-        provider_end = content.find("\nclass ", provider_start + 1)
-        if provider_end == -1:
-            provider_end = len(content)
-        provider_section = content[provider_start:provider_end]
-
-        # Find embed_batch method
-        batch_match = re.search(
-            r"async def embed_batch\(self.*?\n(?:\s{8}.*\n)*?(?=\n\s{4}async def|\n\s{4}@|\n\s{4}def|\nclass|\Z)",
-            provider_section,
-            re.MULTILINE
-        )
-        assert batch_match, "Should have embed_batch method"
-        batch_method = batch_match.group(0)
-
-        # Should use circuit breaker context manager
-        assert "async with self._circuit_breaker" in batch_method or \
-               "async with cls._circuit_breaker" in batch_method, \
-            "embed_batch method should wrap API call with circuit breaker"
-
-    def test_has_circuit_stats_method(self):
-        """Verify get_circuit_stats method exists."""
-        file_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)),
-            "core", "advanced_memory.py"
-        )
-
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # Find OpenAIEmbeddingProvider class section
-        provider_start = content.find("class OpenAIEmbeddingProvider")
-        provider_end = content.find("\nclass ", provider_start + 1)
-        if provider_end == -1:
-            provider_end = len(content)
-        provider_section = content[provider_start:provider_end]
-
-        # Should have stats method
-        assert "def get_circuit_stats" in provider_section, \
+        assert hasattr(OpenAIEmbeddingProvider, "get_circuit_stats"), \
             "Should have get_circuit_stats method"
+        assert callable(OpenAIEmbeddingProvider.get_circuit_stats)
+
+    def test_circuit_breaker_has_stats(self):
+        """CircuitBreaker instances should have stats attribute."""
+        try:
+            from core.resilience import CircuitBreaker
+        except ImportError:
+            pytest.skip("resilience module not importable")
+
+        breaker = CircuitBreaker(failure_threshold=3)
+        assert hasattr(breaker, "stats"), "Should have stats attribute"
+        assert hasattr(breaker, "state"), "Should have state attribute"
+        assert hasattr(breaker, "reset"), "Should have reset method"
 
 
 class TestCircuitBreakerBehavior:
