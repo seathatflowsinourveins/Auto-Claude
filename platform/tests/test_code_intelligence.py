@@ -46,6 +46,14 @@ class TestQdrantFunctionality:
     BAD:  Just checking if port is open or collection exists
     """
 
+    @pytest.fixture(autouse=True)
+    def _require_qdrant(self):
+        import httpx
+        try:
+            httpx.get(f"{QDRANT_URL}/healthz", timeout=2)
+        except Exception:
+            pytest.skip("Qdrant not running at " + QDRANT_URL)
+
     @pytest.fixture
     def qdrant_client(self):
         from qdrant_client import QdrantClient
@@ -239,6 +247,14 @@ class TestEmbeddingFunctionality:
     reason="VOYAGE_API_KEY not set"
 )
 class TestEndToEndSearch:
+    @pytest.fixture(autouse=True)
+    def _require_qdrant(self):
+        import httpx
+        try:
+            httpx.get(f"{QDRANT_URL}/healthz", timeout=2)
+        except Exception:
+            pytest.skip("Qdrant not running at " + QDRANT_URL)
+
     """
     Test end-to-end semantic search FUNCTIONALITY.
 
