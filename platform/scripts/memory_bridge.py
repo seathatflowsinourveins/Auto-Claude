@@ -43,7 +43,7 @@ except ImportError:
     GRAPHITI_AVAILABLE = False
 
 try:
-    from letta import Letta
+    from letta_client import Letta
     LETTA_AVAILABLE = True
 except ImportError:
     try:

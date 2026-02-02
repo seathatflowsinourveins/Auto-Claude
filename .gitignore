@@ -67,6 +67,12 @@ node_modules/
 
 # Logs
 *.log
+logs/
+platform/logs/
+
+# Performance benchmarks and reports (auto-generated)
+platform/data/performance/
+platform/data/reports/
 
 # External SDK clones (large, tracked separately or as submodules)
 stack/

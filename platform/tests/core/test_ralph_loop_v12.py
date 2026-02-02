@@ -17,8 +17,8 @@ from pathlib import Path
 from datetime import datetime, timezone
 import pytest
 
-# Add parent path for imports
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add platform/ path for imports (two levels up from tests/core/)
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 # Direct import (must be after sys.path modification)
 from core.ralph_loop import RalphLoop, LoopState

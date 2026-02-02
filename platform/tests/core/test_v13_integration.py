@@ -11,8 +11,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-# Add parent to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent))
+# Add platform/ path for imports (two levels up from tests/core/)
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from core.ralph_loop import (
     RalphLoop,

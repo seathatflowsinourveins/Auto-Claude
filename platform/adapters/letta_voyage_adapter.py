@@ -43,8 +43,8 @@ LETTA_AVAILABLE = False
 letta_sdk = None
 
 try:
-    # Letta Agentic Learning SDK
-    import letta as letta_sdk
+    # Letta SDK (letta-client 1.7.7+)
+    import letta_client as letta_sdk
     LETTA_AVAILABLE = True
 except ImportError:
     pass

@@ -8,11 +8,11 @@ import asyncio
 import sys
 from pathlib import Path
 
-# Ensure the core module is importable
-sys.path.insert(0, str(Path(__file__).parent))
+# Ensure the core module is importable (add platform/ dir, two levels up)
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 import pytest
-from memory_tiers import (
+from core.memory_tiers import (
     MemoryTier,
     MemoryPriority,
     MemoryAccessPattern,

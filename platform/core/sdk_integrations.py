@@ -237,13 +237,10 @@ LETTA_AVAILABLE = False
 LettaClient = None
 
 try:
-    _add_sdk_path("letta")
-    # Letta client is typically used via REST API
-    # Check if letta package is available
-    import letta
-    LettaClient = letta
+    from letta_client import Letta
+    LettaClient = Letta
     LETTA_AVAILABLE = True
-    logger.info("Letta SDK loaded successfully")
+    logger.info("Letta SDK (letta-client) loaded successfully")
 except ImportError as e:
     logger.debug(f"Letta not available: {e}")
 
