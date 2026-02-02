@@ -543,5 +543,42 @@ class TestSuiteHealth:
         assert hasattr(mod, "RalphLoop")
 
 
+# ============================================================================
+# SECTION 15: Ecosystem Orchestrator
+# ============================================================================
+
+class TestEcosystemOrchestrator:
+    """Verify EcosystemOrchestrator components."""
+
+    @pytest.fixture(autouse=True)
+    def setup_path(self):
+        platform_path = str(BASE / "platform")
+        if platform_path not in sys.path:
+            sys.path.insert(0, platform_path)
+
+    def test_orchestrator_imports(self):
+        from core.ecosystem_orchestrator import (
+            EcosystemOrchestrator,
+            EcosystemOrchestratorV2,
+            get_orchestrator_v2,
+        )
+        assert issubclass(EcosystemOrchestratorV2, EcosystemOrchestrator)
+
+    def test_orchestrator_has_research(self):
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        assert o.has_research
+
+    def test_orchestrator_has_letta(self):
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        assert o.has_letta
+
+    def test_orchestrator_has_cache(self):
+        from core.ecosystem_orchestrator import get_orchestrator_v2
+        o = get_orchestrator_v2()
+        assert o.has_cache
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
