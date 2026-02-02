@@ -480,5 +480,79 @@ class TestRealOrchestratorIntegration:
         assert status["adapters"]["mem0"]["available"] is True
 
 
+class TestFullPipelineE2E:
+    """End-to-end: Voyage AI embed -> Qdrant in-memory -> Semantic Search."""
+
+    @pytest.fixture(autouse=True)
+    def check_voyage_key(self):
+        if not os.environ.get("VOYAGE_API_KEY"):
+            pytest.skip("VOYAGE_API_KEY not set")
+
+    @pytest.mark.asyncio
+    async def test_embed_store_search_pipeline(self):
+        """Full pipeline: embed documents, store in Qdrant, search semantically."""
+        from core.orchestration.embedding_layer import create_embedding_layer, InputType
+        from qdrant_client import QdrantClient, models as qm
+
+        # Create embedding layer with real Voyage AI
+        layer = create_embedding_layer(model="voyage-3", cache_enabled=True)
+        await layer.initialize()
+
+        # Create Qdrant in-memory (no server needed)
+        qclient = QdrantClient(location=":memory:")
+        qclient.create_collection(
+            "e2e_test",
+            vectors_config=qm.VectorParams(size=1024, distance=qm.Distance.COSINE),
+        )
+
+        # Embed real documents
+        documents = [
+            "Machine learning is a subset of artificial intelligence",
+            "Neural networks process data through layers of nodes",
+            "The weather today is sunny with mild temperatures",
+        ]
+        result = await layer.embed(documents, input_type=InputType.DOCUMENT)
+        assert len(result.embeddings) == 3
+        assert result.total_tokens > 0
+
+        # Store in Qdrant
+        points = [
+            qm.PointStruct(id=i, vector=vec, payload={"text": doc})
+            for i, (vec, doc) in enumerate(zip(result.embeddings, documents))
+        ]
+        qclient.upsert("e2e_test", points=points)
+
+        # Semantic search
+        query = "How do AI systems learn?"
+        qr = await layer.embed([query], input_type=InputType.QUERY)
+        hits = qclient.query_points("e2e_test", query=qr.embeddings[0], limit=2)
+
+        assert len(hits.points) == 2
+        # AI docs should rank higher than weather
+        top_id = hits.points[0].id
+        assert top_id in [0, 1], f"Expected AI doc in top result, got id={top_id}"
+
+    @pytest.mark.asyncio
+    async def test_voyage_letta_cross_service(self):
+        """Verify Voyage embeddings and Letta Cloud can both be used in same session."""
+        from core.orchestration.embedding_layer import create_embedding_layer, InputType
+        from letta_client import Letta
+
+        # Voyage AI
+        layer = create_embedding_layer(model="voyage-3")
+        await layer.initialize()
+        result = await layer.embed(["cross-service test"], input_type=InputType.QUERY)
+        assert len(result.embeddings[0]) == 1024
+
+        # Letta Cloud (in same session)
+        client = Letta(api_key=os.environ.get("LETTA_API_KEY", ""))
+        agents = list(client.agents.list())
+        assert len(agents) > 0
+
+        # Both services work together
+        assert result.total_tokens > 0
+        assert agents[0].id is not None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
