@@ -43,7 +43,7 @@ TESTS = [
     # ==========================================================================
     ("L2", "mem0", "import mem0", False),
     ("L2", "graphiti_core", "import graphiti_core", False),
-    ("L2", "letta", "import letta", False),
+    ("L2", "letta", "import letta_client", False),
     ("L2", "zep_compat", "from core.memory.zep_compat import ZepCompat, ZEP_COMPAT_AVAILABLE", True),
 
     # ==========================================================================

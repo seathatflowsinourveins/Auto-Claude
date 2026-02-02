@@ -1,11 +1,11 @@
 {
   "python_version": "3.14.2",
-  "timestamp": "2026-02-02T06:11:44.546517",
+  "timestamp": "2026-02-02T06:36:26.719896",
   "total_sdks": 36,
   "native_sdks": 27,
   "compat_layers": 9,
-  "passed": 34,
-  "failed": 2,
+  "passed": 35,
+  "failed": 1,
   "layers": {
     "L0": {
       "total": 3,
@@ -23,10 +23,8 @@
     },
     "L2": {
       "total": 4,
-      "passed": 3,
-      "failed": [
-        "letta"
-      ],
+      "passed": 4,
+      "failed": [],
       "compat_count": 1
     },
     "L3": {
@@ -148,8 +146,8 @@
       "layer": "L2",
       "name": "letta",
       "is_compat": false,
-      "passed": false,
-      "error": "No module named 'letta'"
+      "passed": true,
+      "error": null
     },
     {
       "layer": "L2",
@@ -320,5 +318,5 @@
       "error": null
     }
   ],
-  "percentage": 94.4
+  "percentage": 97.2
 }
