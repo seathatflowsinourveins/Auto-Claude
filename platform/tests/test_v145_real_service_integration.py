@@ -832,5 +832,64 @@ class TestOrchestratorChainReal:
                     f"Adapter {name} says available but has no version"
 
 
+class TestRealGroqAPI:
+    """V14 Iter 61: Test Groq API connectivity."""
+
+    @pytest.fixture(autouse=True)
+    def check_groq_key(self):
+        if not os.environ.get("GROQ_API_KEY"):
+            pytest.skip("GROQ_API_KEY not set")
+
+    def test_groq_chat_completion(self):
+        """Make a real Groq API call."""
+        from groq import Groq
+        client = Groq()
+        resp = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            max_tokens=20,
+            messages=[{"role": "user", "content": "Say hello in 3 words"}],
+        )
+        assert resp.choices is not None
+        assert len(resp.choices) >= 1
+        assert resp.choices[0].message.content is not None
+        assert len(resp.choices[0].message.content) > 0
+
+    def test_groq_model_list(self):
+        """Groq should return available models."""
+        from groq import Groq
+        client = Groq()
+        models = client.models.list()
+        model_ids = [m.id for m in models.data]
+        assert len(model_ids) > 0
+        # Should have at least one llama model
+        llama_models = [m for m in model_ids if "llama" in m.lower()]
+        assert len(llama_models) > 0, f"No llama models found in: {model_ids[:5]}"
+
+
+class TestRealDeepSeekAPI:
+    """V14 Iter 61: Test DeepSeek API connectivity."""
+
+    @pytest.fixture(autouse=True)
+    def check_deepseek_key(self):
+        if not os.environ.get("DEEPSEEK_API_KEY"):
+            pytest.skip("DEEPSEEK_API_KEY not set")
+
+    def test_deepseek_chat_completion(self):
+        """Make a real DeepSeek API call."""
+        import openai
+        client = openai.OpenAI(
+            api_key=os.environ["DEEPSEEK_API_KEY"],
+            base_url="https://api.deepseek.com",
+        )
+        resp = client.chat.completions.create(
+            model="deepseek-chat",
+            max_tokens=20,
+            messages=[{"role": "user", "content": "Say hello in 3 words"}],
+        )
+        assert resp.choices is not None
+        assert len(resp.choices) >= 1
+        assert resp.choices[0].message.content is not None
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])

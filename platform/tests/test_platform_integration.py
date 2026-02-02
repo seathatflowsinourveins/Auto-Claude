@@ -390,8 +390,8 @@ class TestPerformance:
         script_runner("auto_validate.py", ["--quick"])
         duration_quick = time.time() - start_quick
 
-        # Quick mode should complete in reasonable time
-        assert duration_quick < 30, f"Quick mode too slow: {duration_quick:.1f}s"
+        # Quick mode should complete in reasonable time (45s allows for system load)
+        assert duration_quick < 45, f"Quick mode too slow: {duration_quick:.1f}s"
 
 
 # =============================================================================

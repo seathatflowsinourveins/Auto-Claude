@@ -41,8 +41,11 @@ from __future__ import annotations
 import asyncio
 import hashlib
 import json
+import logging
 import time
 from collections import defaultdict
+
+logger = logging.getLogger(__name__)
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
@@ -227,8 +230,8 @@ class RegistryClient:
                 # Return empty result on error
                 return RegistrySearchResult()
 
-        except Exception:
-            # Fall back to local cache or empty result
+        except Exception as e:
+            logger.debug("Registry search failed, returning empty: %s", e)
             return RegistrySearchResult()
 
     async def get_server(self, name: str) -> Optional[RegistryEntry]:
@@ -247,8 +250,8 @@ class RegistryClient:
                 self._set_cached(cache_key, data)
                 return RegistryEntry(**data)
 
-        except Exception:
-            pass
+        except Exception as e:
+            logger.debug("Registry entry lookup failed: %s", e)
 
         return None
 
@@ -346,8 +349,8 @@ class CapabilityNegotiator:
             elif transport in (TransportType.HTTP_SSE, TransportType.STREAMABLE_HTTP):
                 capabilities = await self._negotiate_http(server_name, url)
 
-        except Exception:
-            # Return minimal capabilities on error
+        except Exception as e:
+            logger.warning("Capability negotiation failed for %s: %s", server_name, e)
             capabilities.discovered_at = time.time()
             capabilities.discovery_duration_ms = (time.time() - start_time) * 1000
 
@@ -428,9 +431,9 @@ class CapabilityNegotiator:
                 capabilities.prompts = await self._query_stdio_prompts(process)
 
         except asyncio.TimeoutError:
-            pass
-        except Exception:
-            pass
+            logger.debug("Stdio negotiation timed out")
+        except Exception as e:
+            logger.debug("Stdio negotiation error: %s", e)
 
         return capabilities
 
@@ -467,8 +470,8 @@ class CapabilityNegotiator:
                             input_schema=tool_data.get("inputSchema", {}),
                         ))
 
-        except Exception:
-            pass
+        except Exception as e:
+            logger.debug("Tool discovery failed: %s", e)
 
         return tools
 
@@ -506,8 +509,8 @@ class CapabilityNegotiator:
                             mime_type=res_data.get("mimeType", "application/json"),
                         ))
 
-        except Exception:
-            pass
+        except Exception as e:
+            logger.debug("Resource discovery failed: %s", e)
 
         return resources
 
@@ -544,8 +547,8 @@ class CapabilityNegotiator:
                             arguments=prompt_data.get("arguments", []),
                         ))
 
-        except Exception:
-            pass
+        except Exception as e:
+            logger.debug("Prompt discovery failed: %s", e)
 
         return prompts
 
@@ -632,8 +635,8 @@ class CapabilityNegotiator:
                                 arguments=prompt_data.get("arguments", []),
                             ))
 
-            except Exception:
-                pass
+            except Exception as e:
+                logger.debug("HTTP capability discovery failed: %s", e)
 
         return capabilities
 
@@ -814,8 +817,8 @@ class ConnectionPool:
 
             if conn.client:
                 await conn.client.aclose()
-        except Exception:
-            pass
+        except Exception as e:
+            logger.debug("Connection cleanup error: %s", e)
 
     async def _cleanup_loop(self) -> None:
         """Background cleanup loop."""
@@ -956,7 +959,8 @@ class MCPDiscovery:
             self._manager.register_server(config)
             return True
 
-        except Exception:
+        except Exception as e:
+            logger.warning("Server registration failed: %s", e)
             return False
 
     async def negotiate_capabilities(self, server_name: str) -> Optional[ServerCapabilities]:
