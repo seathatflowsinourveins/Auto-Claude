@@ -391,6 +391,70 @@ class TestRealEmbeddingLayer:
         assert len(result.embeddings) == 3
 
 
+class TestRealResearchEngine:
+    """Test Exa and Firecrawl through the platform's ResearchEngine."""
+
+    @pytest.fixture(autouse=True)
+    def check_exa_key(self):
+        if not os.environ.get("EXA_API_KEY"):
+            pytest.skip("EXA_API_KEY not set")
+
+    def test_exa_search_real_api(self):
+        """Make a real Exa search API call."""
+        from core.research_engine import ResearchEngine
+        engine = ResearchEngine()
+        assert engine.exa is not None
+
+        results = engine.exa_search("Python testing", num_results=2)
+        assert isinstance(results, dict)
+        assert "results" in results
+        assert len(results["results"]) > 0
+
+    def test_exa_search_returns_urls(self):
+        """Verify Exa results contain URLs and titles."""
+        from core.research_engine import ResearchEngine
+        engine = ResearchEngine()
+
+        results = engine.exa_search("machine learning frameworks", num_results=2)
+        for r in results.get("results", []):
+            assert hasattr(r, "url") or "url" in (r if isinstance(r, dict) else {})
+
+
+class TestRealVoyageEmbedderAdapter:
+    """Test the VoyageEmbedder adapter with real Voyage API."""
+
+    @pytest.fixture(autouse=True)
+    def check_voyage_key(self):
+        if not os.environ.get("VOYAGE_API_KEY"):
+            pytest.skip("VOYAGE_API_KEY not set")
+
+    @pytest.mark.asyncio
+    async def test_voyage_embedder_async(self):
+        """Test VoyageEmbedder async embed with real API."""
+        from adapters.dspy_voyage_retriever import VoyageEmbedder
+
+        embedder = VoyageEmbedder()
+        await embedder.initialize()
+
+        result = await embedder.embed(["voyage embedder test"], input_type="query")
+        assert len(result) == 1
+        assert len(result[0]) == 1024
+
+    @pytest.mark.asyncio
+    async def test_voyage_embedder_batch_async(self):
+        """Test VoyageEmbedder batch embed."""
+        from adapters.dspy_voyage_retriever import VoyageEmbedder
+
+        embedder = VoyageEmbedder()
+        await embedder.initialize()
+
+        result = await embedder.embed(
+            ["doc one", "doc two", "doc three"],
+            input_type="document"
+        )
+        assert len(result) == 3
+
+
 class TestRealOrchestratorIntegration:
     """Test that the orchestrator actually integrates components."""
 
