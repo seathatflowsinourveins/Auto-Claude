@@ -159,3 +159,22 @@ __all__ = [
     "get_opik_tracer",
     "get_temporal_sdk_client",
 ]
+
+
+# Auto-register adapters on import (populates ADAPTER_STATUS)
+def _auto_register():
+    """Import adapters to trigger their register_adapter() calls."""
+    _adapter_modules = [
+        ("dspy_adapter", "DSPyAdapter", "DSPY_AVAILABLE"),
+        ("langgraph_adapter", "LangGraphAdapter", "LANGGRAPH_AVAILABLE"),
+        ("mem0_adapter", "Mem0Adapter", "MEM0_AVAILABLE"),
+        ("llm_reasoners_adapter", "LLMReasonersAdapter", "LLM_REASONERS_AVAILABLE"),
+    ]
+    for mod_name, _, _ in _adapter_modules:
+        try:
+            __import__(f"adapters.{mod_name}")
+        except (ImportError, Exception):
+            pass
+
+
+_auto_register()
