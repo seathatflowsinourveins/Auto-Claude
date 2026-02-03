@@ -1,0 +1,54 @@
+[
+  {
+    "query": "AI Agent Architectures: ReAct vs MCTS vs Tree-of-Thought",
+    "agents": 5,
+    "sources": 34,
+    "confidence": 0.98,
+    "tools": [
+      "tavily",
+      "context7",
+      "perplexity",
+      "exa"
+    ],
+    "latency_ms": 15339.344024658203,
+    "key_findings": [
+      "[tavily] ReAct combines reasoning and action, Tree of Thought explores multiple paths, and MCTS uses Monte Carlo Tree Search for decision-making",
+      "[perplexity-reasoning] ### ReAct\n**ReAct (Reasoning and Acting)** is a prompting paradigm for LLMs that interleaves **verbal reasoning traces (thoughts)** with **tool-using actions** in a dynamic loop: Thought \u2192 Action \u2192 Observation \u2192 repeat until a final answer.[1][3][5] This enables agents to handle complex, multi-step tasks by grounding reasoning in real-world interactions, such as searching or calculating, rather than relying solely on internal knowledge.[1][3] Implemented via structured prompts (e.g., \"Thought:\", \"Action:\", \"Observation:\"), it maintains context through appended history for coherence and excels in tasks requiring dynamic adaptation, like multi-hop QA.[1][3][5]\n\n**Strengths**: High transparency (visible reasoning), adaptability to new information, avoids overconfident errors by verifying via actions.[3]  \n**Weaknesses**: Can be inefficient for long tasks due to repeated LLM calls; relies on prompt parsing which may fail with weaker models.[1][3]  \n**Use cases**: Interactive environments, tool-heavy workflows (e.g., news validation via search).[1]\n\n### MCTS (Monte Carlo Tree Search)\n**MCTS** is a search algorithm originating from game AI (e.g., AlphaGo) that builds a search tree by iteratively simulating random playouts from the current state, selecting promising branches via statistics like UCT (Upper Confidence Bound for Trees).[No direct coverage in results; inferred from standard knowledge as a tree-based planning method often contrasted with LLM agents.] It explores (expand nodes), simulates (rollouts), backpropagates wins/losses, and balances exploration vs",
+      "[context7] Title: React\n\nURL Source: https://react.dev/\n\nMarkdown Content:\nReact\n===============\n\n[![Image 1: logo by @sawaratsuki1004](https://react.dev/_next/image?url=%2Fimages%2Fuwu.png&w=128&q=75)](https://react.dev/)\n\n[React](https://react.dev/)\n\n[v 19.2](https://react.dev/versions)\n\nSearch\u2318Ctrl K\n\n[Learn](https://react.dev/learn)\n\n[Reference](https://react.dev/reference/react)\n\n[Community](https://react.dev/community)\n\n[Blog](https://react.dev/blog)\n\n[](https://react.dev/community/translations)\n\n[](https://github.com/facebook/react/releases)\n\n![Image 2: logo by @sawaratsuki1004](https://react.dev/_next/image?url=%2Fimages%2Fuwu.png&w=640&q=75)\n\nReact\n=====\n\nThe library for web and native user interfaces\n\n[Learn React](https://react.dev/learn)[API Reference](https://react.dev/reference/react)\n\nCreate user interfaces from components\n--------------------------------------\n\nReact lets you build user interfaces out of individual pieces called components"
+    ]
+  },
+  {
+    "query": "Vector Database Comparison: Qdrant vs Pinecone vs Weaviate vs Milvus",
+    "agents": 4,
+    "sources": 33,
+    "confidence": 0.98,
+    "tools": [
+      "tavily",
+      "perplexity",
+      "exa"
+    ],
+    "latency_ms": 17375.582218170166,
+    "key_findings": [
+      "[tavily] Pinecone is fully managed, easy to start; Milvus excels in performance and scalability; Weaviate offers hybrid search and modular design; Qdrant is cost-effective and efficient for many workloads.",
+      "[perplexity-reasoning] # Vector Database Comparison: Qdrant vs Pinecone vs Weaviate vs Milvus\n\nLet me break down these four leading vector databases across key dimensions to help you understand their strengths and appropriate use cases.\n\n## Performance\n\n**Query Latency:** Qdrant and Pinecone lead with the fastest response times[2][3]",
+      "[tavily] I was curious about some vector databases, a key component of AI/ RAG apps, this weekend, here is a quick comparison and summary"
+    ]
+  },
+  {
+    "query": "LLM Fine-tuning: LoRA vs QLoRA vs Full Fine-tuning Trade-offs",
+    "agents": 4,
+    "sources": 30,
+    "confidence": 0.98,
+    "tools": [
+      "tavily",
+      "perplexity",
+      "exa"
+    ],
+    "latency_ms": 12390.950441360474,
+    "key_findings": [
+      "[perplexity-reasoning] # LLM Fine-Tuning Trade-offs: LoRA vs QLoRA vs Full Fine-Tuning\n\nThe choice between these three fine-tuning approaches depends on balancing **computational resources, training speed, model quality, and accuracy requirements** for your specific use case.\n\n## Resource Requirements\n\n**Full Fine-Tuning** demands the highest computational investment, requiring 16+ GB of VRAM per 1GB of model size and 60GB+ of VRAM for a 7B parameter model[2]",
+      "[tavily] The models will forget some of the facts they knew before fine-tuning",
+      "[tavily] Three methods dominate LLM fine-tuning: full fine-tuning delivers maximum accuracy but costs more; LoRA cuts costs by 80% with adapters; QLoRA makes 70B models trainable on a single GPU"
+    ]
+  }
+]
