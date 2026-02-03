@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:09:51.728075",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 82
+  },
+  "results": [
+    {
+      "topic": "Diffusion models: DDPM, score-based generative",
+      "area": "diffusion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Score-Based Generative Modeling through Stochastic Differential Equations - ADS",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] encapsulates previous approaches in score-based generative modeling and diffusion probabilistic modeling, allowing for n"
+      ],
+      "latency": 4.523222923278809
+    },
+    {
+      "topic": "Stable Diffusion: latent diffusion, architecture",
+      "area": "diffusion",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] arXiv reCAPTCHA\n[![Cornell University]] \n[We gratefully acknowledge support from\nthe Simons Foundation and member instit"
+      ],
+      "latency": 4.844769477844238
+    },
+    {
+      "topic": "Classifier-free guidance: conditional generation",
+      "area": "diffusion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Classifier-Free Guidance Strategy",
+        "[exa-h] > Classifier-free guidance has become a staple for conditional generation with denoising diffusion models. However, a co"
+      ],
+      "latency": 5.898309707641602
+    },
+    {
+      "topic": "Consistency models: one-step generation",
+      "area": "diffusion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Consistency models",
+        "[exa-h] causes slow generation. To overcome this limita\u0002tion, we propose consistency models, a new fam\u0002ily of models that genera"
+      ],
+      "latency": 5.834153890609741
+    },
+    {
+      "topic": "Generative adversarial networks: GAN fundamentals",
+      "area": "gan",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Generative Adversarial Networks",
+        "[exa] Generative Adversarial Networks - ADS",
+        "[exa-h] > We propose a new framework for estimating generative models via an adversarial process, in which we simultaneously tra"
+      ],
+      "latency": 3.827934980392456
+    },
+    {
+      "topic": "StyleGAN: style-based generator architecture",
+      "area": "gan",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Neural and Evolutionary Computing",
+        "[exa] ",
+        "[exa-h] > Abstract:We propose an alternative generator architecture for generative adversarial networks, borrowing from style tr"
+      ],
+      "latency": 3.964179754257202
+    },
+    {
+      "topic": "Conditional GANs: pix2pix, image-to-image",
+      "area": "gan",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Image-to-Image Translation with Conditional Adversarial Networks - ADS",
+        "[exa] Try our code",
+        "[exa-h] We investigate conditional adversarial networks as a general-purpose solution to image-to-image translation problems. Th"
+      ],
+      "latency": 4.0804219245910645
+    },
+    {
+      "topic": "GAN training stability: mode collapse, techniques",
+      "area": "gan",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > We propose studying GAN training dynamics as regret minimization, which is in contrast to the popular view that there "
+      ],
+      "latency": 3.534050941467285
+    },
+    {
+      "topic": "Variational autoencoders: latent space learning",
+      "area": "vae",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > In just three years, Variational Autoencoders (VAEs) have emerged as one of the most popular approaches to unsupervise"
+      ],
+      "latency": 8.437443256378174
+    },
+    {
+      "topic": "VQ-VAE: discrete latent representations",
+      "area": "vae",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] model that learns such discrete representations. Our model, the Vector Quantised\u0002Variational AutoEncoder (VQ-VAE), diffe"
+      ],
+      "latency": 5.96112060546875
+    },
+    {
+      "topic": "Normalizing flows: invertible transformations",
+      "area": "vae",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Normalizing flows provide a general mechanism for defining expressive probability distributions, only requiring the sp"
+      ],
+      "latency": 4.86212420463562
+    },
+    {
+      "topic": "Beta-VAE: disentangled representations",
+      "area": "vae",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] beta-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework",
+        "[exa] \u03b2-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework",
+        "[exa-h] Learning an interpretable factorised representation of the independent data generative factors of the world without supe"
+      ],
+      "latency": 5.7516090869903564
+    },
+    {
+      "topic": "Autoregressive generation: GPT-style decoding",
+      "area": "text",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Text generation",
+        "[exa] GPT-4 Technical Report",
+        "[exa-h] # Text generation\nLearn how to prompt a model to generate text.\nCopy page\nWith the OpenAI API, you can use a[large langu"
+      ],
+      "latency": 7.610809803009033
+    },
+    {
+      "topic": "Non-autoregressive: parallel text generation",
+      "area": "text",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Abstract:Non-autoregressive (NAR) generation, which is first proposed in neural machine translation (NMT) to speed up "
+      ],
+      "latency": 3.7182765007019043
+    },
+    {
+      "topic": "Constrained generation: format, length, style",
+      "area": "text",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > We consider the task of text generation in language models with constraints specified in natural language. To this end"
+      ],
+      "latency": 4.542159557342529
+    },
+    {
+      "topic": "Controllable generation: steering model outputs",
+      "area": "text",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome - AISteer360",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] attention reweighting, parameter-efficient fine-tuning, reward-driven decoding, etc.), the toolkit structures methods (h"
+      ],
+      "latency": 3.750394582748413
+    },
+    {
+      "topic": "Image generation: photorealism, artistic styles",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] DALL\u00b7E: Creating images from text",
+        "[exa-h] > In fine art, especially painting, humans have mastered the skill to create unique visual experiences through composing"
+      ],
+      "latency": 3.8613533973693848
+    },
+    {
+      "topic": "Video generation: temporal consistency, motion",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > In this paper, we address the challenge of generating temporally consistent videos with motion guidance. While many ex"
+      ],
+      "latency": 7.773662090301514
+    },
+    {
+      "topic": "3D generation: NeRF, Gaussian splatting, meshes",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] that render efficiently in real-time 3D engines. On Mip\u0002NeRF360, it boosts PSNR by +0.69 dB over the current\nstate-of-th"
+      ],
+      "latency": 4.214632034301758
+    },
+    {
+      "topic": "Molecule generation: drug discovery, materials",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reinvent 4: Modern AI\u2013driven generative molecule design",
+        "[exa] Quantitative Biology > Quantitative Methods",
+        "[exa-h] REINVENT 4 is a modern open-source generative AI framework for the design of small molecules. The software utilizes recu"
+      ],
+      "latency": 5.357851505279541
+    }
+  ]
+}

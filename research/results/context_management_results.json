@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:26:50.813010",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 97
+  },
+  "results": [
+    {
+      "topic": "128K+ context handling: Gemini, Claude, GPT-4 Turbo strategies",
+      "area": "longcontext",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Long context \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Long context \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Most generative models created in the last few years were only capable of\nprocessing 8,000 tokens at a time. Newer model"
+      ],
+      "latency": 10.599150896072388
+    },
+    {
+      "topic": "Context window optimization: priority ordering, relevance sorting",
+      "area": "longcontext",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Current language models often fail to incorporate long contexts efficiently during generation. We show that a major co"
+      ],
+      "latency": 7.6409173011779785
+    },
+    {
+      "topic": "Lost in the middle: attention patterns, position bias mitigation",
+      "area": "longcontext",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Found in the middle: Calibrating Positional Attention Bias Improves Long Context Utilization",
+        "[exa-h] > Large language models (LLMs), even when specifically trained to process long input contexts, struggle to capture relev"
+      ],
+      "latency": 8.242619752883911
+    },
+    {
+      "topic": "Needle in haystack: retrieval accuracy in long contexts",
+      "area": "longcontext",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > As the context limits of Large Language Models (LLMs) increase, the range of possible applications and downstream func"
+      ],
+      "latency": 7.753007650375366
+    },
+    {
+      "topic": "Progressive summarization: hierarchical, incremental summary",
+      "area": "summarization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] HiStruct+: Improving Extractive Text Summarization with Hierarchical Structure Information - ACL Anthology",
+        "[exa-h] > Transformer-based language models usually treat texts as linear sequences. However, most texts also have an inherent h"
+      ],
+      "latency": 7.524460315704346
+    },
+    {
+      "topic": "Conversation summarization: key points, entity tracking",
+      "area": "summarization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to use conversation summarization",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] * **Chapter title and narrative (general conversation)**are designed to summarize a conversation into chapter titles, an"
+      ],
+      "latency": 9.0889151096344
+    },
+    {
+      "topic": "Document summarization: extractive, abstractive, hybrid",
+      "area": "summarization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Abstractive vs. Extractive Summarization: An Experimental Review",
+        "[exa] ",
+        "[exa-h] Text summarization is a subtask of natural language processing referring to the automatic creation of a concise and flue"
+      ],
+      "latency": 9.14669132232666
+    },
+    {
+      "topic": "Map-reduce summarization: parallel processing, merging",
+      "area": "summarization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] key/value pair to generate a set of intermediate key/value\npairs, and a reduce function that merges all intermediate\nval"
+      ],
+      "latency": 7.687029123306274
+    },
+    {
+      "topic": "LLMLingua: prompt compression, selective context pruning",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] reduce cost, this paper presents LLMLingua, a coarse-to-fine prompt compression method that involves a budget controller"
+      ],
+      "latency": 7.114542007446289
+    },
+    {
+      "topic": "Context distillation: key information extraction",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Sequence-to-sequence tasks often benefit from long contexts, but the quadratic complexity of self-attention in standar"
+      ],
+      "latency": 9.377219915390015
+    },
+    {
+      "topic": "Semantic compression: embedding-based deduplication",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] \"SemDeDup: Data-efficient learning at web-scale through semantic deduplication.\"",
+        "[exa] SemDeDup: Data-efficient learning at web-scale through semantic\n  deduplication",
+        "[exa-h] - [Amro Abbas], [Kushal Tirumala], [Daniel Simig], [Surya Ganguli], [Ari S. Morcos]: SemDeDup: Data-efficient learning a"
+      ],
+      "latency": 8.369029521942139
+    },
+    {
+      "topic": "Token-efficient formatting: structured vs prose trade-offs",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] JSON vs. YAML vs. Markdown: The Token Benchmarks",
+        "[exa] Format Comparison",
+        "[exa-h] While this doesn't save tokens, it improves**Perceived Latency**(UI Efficiency).\n## 6. Summary and Key Takeaways\n1. **Pr"
+      ],
+      "latency": 8.629903078079224
+    },
+    {
+      "topic": "Prompt caching: Anthropic, OpenAI prefix caching",
+      "area": "caching",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Prompt caching",
+        "[exa] Prompt Caching 101",
+        "[exa-h] * The first 1,024 tokens in the prompt must be identical.\nRequests are routed based on a hash of the initial prefix of a"
+      ],
+      "latency": 8.001815557479858
+    },
+    {
+      "topic": "KV cache: memory management, cache eviction policies",
+      "area": "caching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] KV Cache Eviction Policies for Long-Running LLM Sessions",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Key\u2013Value (KV) caches are the silent performance backbone of modern LLM inference. They make long-context generation fea"
+      ],
+      "latency": 7.316970109939575
+    },
+    {
+      "topic": "Semantic caching: embedding similarity for cache hits",
+      "area": "caching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Semantic caches return cached responses for semantically similar prompts to\nreduce LLM inference latency and cost. They "
+      ],
+      "latency": 5.405680894851685
+    },
+    {
+      "topic": "Response caching: TTL, invalidation, cache warming",
+      "area": "caching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] HTTP Caching",
+        "[exa] Hypertext Transfer Protocol (HTTP/1.1): Caching",
+        "[exa-h] document defines aspects of HTTP related to caching and reusing response messages."
+      ],
+      "latency": 9.283565759658813
+    },
+    {
+      "topic": "Working memory: conversation buffer, sliding window",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Changing concepts of working memory",
+        "[exa] Computational principles of working memory in sentence comprehension",
+        "[exa-h] Working memory is widely considered to be limited in capacity, holding a fixed, small number of items, such as Miller's "
+      ],
+      "latency": 7.437345743179321
+    },
+    {
+      "topic": "Episodic memory: event storage, temporal retrieval",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Episodic Memory System: Neurocircuitry and Disorders",
+        "[exa] Theories of episodic memory",
+        "[exa-h] The ability to encode and retrieve our daily personal experiences, called episodic memory, is supported by the circuitry"
+      ],
+      "latency": 3.533078908920288
+    },
+    {
+      "topic": "Semantic memory: knowledge graphs, entity relations",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Knowledge Graphs",
+        "[exa] ",
+        "[exa-h] ## Keywords\nknowledge graphs, graph databases, knowledge graph embeddings, graph neural networks, ontologies, knowledge "
+      ],
+      "latency": 4.026222229003906
+    },
+    {
+      "topic": "Procedural memory: learned skills, tool usage patterns",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Memory: Procedural Memory, Skill, Perceptual-Motor Learning, and Awareness",
+        "[exa] Procedural Learning: Humans",
+        "[exa-h] This article focuses on how behavioral routines or procedures are learned and stored in memory. It departs from the real"
+      ],
+      "latency": 3.7404556274414062
+    }
+  ]
+}

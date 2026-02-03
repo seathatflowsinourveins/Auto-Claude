@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:48:59.261398",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 96
+  },
+  "results": [
+    {
+      "topic": "PDF parsing for LLMs: extracting text, tables, images",
+      "area": "pdf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > PDF documents have the potential to provide trillions of novel, high-quality tokens for training language models. Howe"
+      ],
+      "latency": 9.666156530380249
+    },
+    {
+      "topic": "PDF chunking strategies: page-aware, semantic splitting",
+      "area": "pdf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Chunking PDFs and Multimodal Documents: Efficient Methods for Handling Text, Tables, and Images for RAG Applications",
+        "[exa-h] > Document chunking is a critical task in natural language processing (NLP) that involves dividing a document into meani"
+      ],
+      "latency": 9.083336353302002
+    },
+    {
+      "topic": "PDF layout understanding: multi-column, headers, footers",
+      "area": "pdf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Header and Footer Extraction by Page-Association",
+        "[exa-h] printing command according to a fixed set of labels describ\u0002ing a document layout feature. Examples of such labels are\nt"
+      ],
+      "latency": 11.723001718521118
+    },
+    {
+      "topic": "Unstructured.io: comprehensive document parsing",
+      "area": "pdf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Your GenAI data partner.",
+        "[exa] Welcome to Unstructured!",
+        "[exa-h] Parse, chunk, embed, and enrich data.\n* 64+ File Types\n* Chunking, Enrichment, Embedding\n* Open AI, Anthropic, + more In"
+      ],
+      "latency": 9.08443307876587
+    },
+    {
+      "topic": "OCR for documents: Tesseract, cloud APIs, accuracy",
+      "area": "ocr",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tesseract User Manual",
+        "[exa] Enterprise Document OCR \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Tesseract is an open source[text recognition (OCR)] Engine, available under the[Apache 2.0 license].\n* Major version 5 i"
+      ],
+      "latency": 9.530251264572144
+    },
+    {
+      "topic": "Document image preprocessing: deskew, binarization",
+      "area": "ocr",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Adaptive document image binarization",
+        "[exa] OCR binarization and image pre-processing for searching historical documents",
+        "[exa-h] A new method is presented for adaptive[document image] [binarization], where the page is considered as a collection of s"
+      ],
+      "latency": 10.035961151123047
+    },
+    {
+      "topic": "Handwriting recognition: extracting handwritten text",
+      "area": "ocr",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Recognize your users' handwriting \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Digital ink recognition \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] The Handwriting Recognition API allows you to convert handwriting (ink) from your users into text.\nSome operating system"
+      ],
+      "latency": 9.246333360671997
+    },
+    {
+      "topic": "Table extraction from images: structure recognition",
+      "area": "ocr",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Overview - PaddleOCR Documentation",
+        "[exa-h] Layout Analysis model, we introduce ultra light-weight detector PP-PicoDet and knowledge distillation algorithm FGD for "
+      ],
+      "latency": 8.353007793426514
+    },
+    {
+      "topic": "Document classification: categorizing document types",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Guide to Document Classification: Using Machine Learning, Deep Learning & OCR",
+        "[exa] A Practical Guide to Document Classification Methods",
+        "[exa-h] Document classification is the process of automatically assigning a document to a predefined category based on its conte"
+      ],
+      "latency": 9.923181295394897
+    },
+    {
+      "topic": "Key-value extraction: invoices, receipts, forms",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Form-like documents like invoices, receipts, purchase orders\nand tax forms are widely used in day-to-day business work\u0002f"
+      ],
+      "latency": 8.94569993019104
+    },
+    {
+      "topic": "Document QA: answering questions about documents",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Ask your documents: Document AI and PaLM2 for question answering",
+        "[exa-h] see the recent survey (Mialon et al., 2023).\n2.2 Question Answering\nMuch of the existing work in QA does not ground\nthe "
+      ],
+      "latency": 7.693089008331299
+    },
+    {
+      "topic": "Multi-document reasoning: synthesizing across files",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Retrieval-augmented generation (RAG) can supplement large language models (LLMs) by integrating external knowledge. Ho"
+      ],
+      "latency": 7.4187376499176025
+    },
+    {
+      "topic": "LlamaParse: multimodal document parsing",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview of LlamaParse",
+        "[exa] Overview of LlamaParse | LlamaCloud Documentation",
+        "[exa-h] * **Multimodal & Custom Output**- Accurately extract tables, charts, images, and diagrams into structured formats. Use c"
+      ],
+      "latency": 8.43690538406372
+    },
+    {
+      "topic": "Azure Document Intelligence: enterprise parsing",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Azure Document Intelligence in Foundry Tools",
+        "[exa] Document analysis: Extract structured content",
+        "[exa-h] Document Intelligence is a powerful AI tool within Foundry Tools (formerly Azure AI Services) that enables organizations"
+      ],
+      "latency": 5.494281530380249
+    },
+    {
+      "topic": "AWS Textract: document analysis at scale",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Textract",
+        "[exa] What is Amazon Textract?",
+        "[exa-h] Amazon Textract can extract relevant data such as contact information, items purchased, and vendor name, from almost any"
+      ],
+      "latency": 4.7845354080200195
+    },
+    {
+      "topic": "Google Document AI: form parsing, entity extraction",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Extraction overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Form Parser \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] * Foundation model\n* Custom model based\n* Custom template based\n* [Layout Parser] \n## Form Parser\nForm Parser extracts k"
+      ],
+      "latency": 3.558337926864624
+    },
+    {
+      "topic": "Document RAG pipelines: ingestion to retrieval",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Documents | The most advanced AI retrieval system.  Agentic Retrieval-Augmented Generation (RAG) with a RESTful API.",
+        "[exa] Parse PDFs in a retrieval-augmented generation pipeline",
+        "[exa-h] - Processing multiple documents simultaneously\n - Building responsive web applications\n - Integrating with other async f"
+      ],
+      "latency": 9.12371301651001
+    },
+    {
+      "topic": "Document preprocessing: cleaning, normalization",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Comparison of text preprocessing methods",
+        "[exa] Text Preprocessing: Complete Guide to Tokenization, Normalization & Cleaning for NLP",
+        "[exa-h] exist situations where the text preprocessing needs to be customized for better analysis results. Hence, we discuss the "
+      ],
+      "latency": 6.536457061767578
+    },
+    {
+      "topic": "Metadata extraction: dates, authors, titles",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] New Methods for Metadata Extraction from Scientific Literature - ADS",
+        "[exa] ",
+        "[exa-h] addresses these problems by proposing an automatic, accurate and flexible algorithm for extracting wide range of metadat"
+      ],
+      "latency": 6.5522072315216064
+    },
+    {
+      "topic": "Document versioning: tracking changes over time",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Changes and revisions overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] What is document version control?",
+        "[exa-h] Google Drive maintains an automatic history of modifications, which can help\nusers track file changes and content revisi"
+      ],
+      "latency": 7.8464226722717285
+    }
+  ]
+}

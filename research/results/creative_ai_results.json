@@ -1,0 +1,248 @@
+{
+  "timestamp": "2026-02-03T01:54:26.264953",
+  "stats": {
+    "sources": 194,
+    "vectors": 174,
+    "findings": 85
+  },
+  "results": [
+    {
+      "topic": "AI creative writing: story generation, narrative AI",
+      "area": "writing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] GPT-5: Creative Writing",
+        "[exa] AI Story Generator",
+        "[exa-h] Creative writing with GPT-5 | OpenAI\n[Skip to main content] \nLog in\n[\n] \nSwitch to\n* [ChatGPT(opens in a new window)] \n*"
+      ],
+      "latency": 9.082201957702637
+    },
+    {
+      "topic": "Copywriting AI: marketing copy, ad generation",
+      "area": "writing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Ad Copy Generator: Powered by AI",
+        "[exa] AI purpose-built for Copywriting",
+        "[exa-h] [Start Free Trial] Start Free Trial\nStart Free Trial\n[Get A Demo] Get A Demo\nGet A Demo\n## Write Copy That Converts with"
+      ],
+      "latency": 6.6876256465911865
+    },
+    {
+      "topic": "Scriptwriting AI: dialogue, screenplay assistance",
+      "area": "writing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI-Powered   Writing Assistant",
+        "[exa] Turn your ideas into complete screenplays",
+        "[exa-h] Video showing AI assistant in action: The AI suggests dialogue improvements, helps with character consistency, and provi"
+      ],
+      "latency": 6.638429641723633
+    },
+    {
+      "topic": "Poetry generation: style transfer, verse creation",
+      "area": "writing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > State-of-the-art poetry generation systems are often complex. They either consist of task-specific model pipelines, in"
+      ],
+      "latency": 7.091986417770386
+    },
+    {
+      "topic": "Text-to-image: Midjourney, DALL-E, Stable Diffusion",
+      "area": "visual",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Midjourney",
+        "[exa] Image generation",
+        "[exa-h] We hope our work will help tell stories of a humane future that we all want to be a part of, and convince you that we ar"
+      ],
+      "latency": 8.433708906173706
+    },
+    {
+      "topic": "Style transfer: artistic rendering of images",
+      "area": "visual",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > In fine art, especially painting, humans have mastered the skill to create unique visual experiences through composing"
+      ],
+      "latency": 7.444967269897461
+    },
+    {
+      "topic": "AI art tools: Canva AI, Adobe Firefly features",
+      "area": "visual",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to Generative AI",
+        "[exa] Welcome to Generative AI",
+        "[exa-h] ## Adobe Firefly\u2014 our AI art generator"
+      ],
+      "latency": 7.3115620613098145
+    },
+    {
+      "topic": "3D generation: AI-assisted 3D modeling, texturing",
+      "area": "visual",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We introduce Edify 3D, an advanced solution designed for high-quality 3D asset generation. Our method first synthesize"
+      ],
+      "latency": 8.087509393692017
+    },
+    {
+      "topic": "AI music composition: Suno, Udio, melody generation",
+      "area": "music",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Udio | AI Music Generator - Official Website",
+        "[exa] From Idea to Professional Music",
+        "[exa-h] Udio | AI Music Generator - Official Website"
+      ],
+      "latency": 5.683013677597046
+    },
+    {
+      "topic": "Music production AI: mixing, mastering assistance",
+      "area": "music",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Loudlink | AI Music Mastering",
+        "[exa] RoEx: AI Mixing and Mastering Services For Musicians, Producers and Content Creators",
+        "[exa-h] No. Loudlink does not use other artists\u2019 music for training. Unlike diffusion systems that must be trained on large audi"
+      ],
+      "latency": 5.558734178543091
+    },
+    {
+      "topic": "Sound design AI: effect creation, audio synthesis",
+      "area": "music",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Solutions for Everywhere Your Sounds Shows Up | Stable Audio 2.5 \u2014 Stability AI",
+        "[exa] Stable Audio: Fast Timing-Conditioned Latent Audio Diffusion",
+        "[exa-h] Trained with[state-of-the-art techniques] pioneered by the Stable Audio research team, Stable Audio 2.5 introduces advan"
+      ],
+      "latency": 5.1186888217926025
+    },
+    {
+      "topic": "Voice synthesis: singing, voice cloning for music",
+      "area": "music",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Sound",
+        "[exa] Computer Science > Sound",
+        "[exa-h] > Controllable human voice generation, particularly for expressive domains like singing, remains a significant challenge"
+      ],
+      "latency": 3.9445011615753174
+    },
+    {
+      "topic": "AI video generation: Sora, Runway, Pika Labs",
+      "area": "video",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Creating video from text",
+        "[exa] The new Sora app",
+        "[exa-h] ##### Research techniques\nSora is a diffusion model, which generates a video by starting off with one that looks like st"
+      ],
+      "latency": 3.7274622917175293
+    },
+    {
+      "topic": "Video editing AI: auto-edit, scene detection",
+      "area": "video",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CutMagic - Auto Scene Change Detection",
+        "[exa] Auto Scene Cut Detector",
+        "[exa-h] ## Frequently Asked Questions\nWhat is CutMagic?\nCutMagic is an AI-powered tool by quso.ai that automates scene change de"
+      ],
+      "latency": 6.103634595870972
+    },
+    {
+      "topic": "Deepfakes and ethics: face synthesis, detection",
+      "area": "video",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Deepfakes and beyond: A Survey of face manipulation and fake detection",
+        "[exa-h] > Deepfake is a technology dedicated to creating highly realistic facial images and videos under specific conditions, wh"
+      ],
+      "latency": 4.0784595012664795
+    },
+    {
+      "topic": "Animation AI: motion generation, lip sync",
+      "area": "video",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We present MagicInfinite, a novel diffusion Transformer (DiT) framework that overcomes traditional portrait animation "
+      ],
+      "latency": 5.210659980773926
+    },
+    {
+      "topic": "AI as creative collaborator: human-AI co-creation",
+      "area": "workflow",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Human-AI Co-Creation: A New Interaction Paradigm for Human-AI Interaction",
+        "[exa-h] As artificial intelligence (AI) continues to evolve from a back-end computational tool into an \ninteractive, generative "
+      ],
+      "latency": 5.058757305145264
+    },
+    {
+      "topic": "Prompt engineering for art: crafting creative prompts",
+      "area": "workflow",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Civitai\u2019s Prompt-Crafting Guide: Part 1 \u2013 Basics",
+        "[exa] Art Prompt Generator: The Complete Guide - ART PROMPT GENERATOR",
+        "[exa-h] Prompt-Crafting guide will walk you through the steps required to take your from never-having-prompted, to Prompt Master"
+      ],
+      "latency": 4.6991612911224365
+    },
+    {
+      "topic": "Creative AI ethics: copyright, attribution, ownership",
+      "area": "workflow",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Copyright and Artificial Intelligence",
+        "[exa-h] This Report by the U.S. Copyright Office addresses the legal and policy issues related to \nartificial intelligence (\u201cAI\u201d"
+      ],
+      "latency": 6.9843738079071045
+    },
+    {
+      "topic": "AI in game development: asset generation, NPC dialogue",
+      "area": "workflow",
+      "sources": 5,
+      "vectors": 5,
+      "findings": [
+        "[tavily] AI enhances game development by generating dynamic NPC dialogues and procedural assets, leading to more immersive and varied gaming experiences. It also speeds up development and reduces costs."
+      ],
+      "latency": 4.414484977722168
+    }
+  ]
+}

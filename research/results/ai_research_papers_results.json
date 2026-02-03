@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:40:05.672424",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Scaling laws for LLMs: Chinchilla, compute-optimal training",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > We investigate the optimal model size and number of tokens for training a transformer language model under a given com"
+      ],
+      "latency": 11.286519289016724
+    },
+    {
+      "topic": "Mixture of experts: MoE architecture, routing strategies",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Sparsely-activated Mixture-of-experts (MoE) models allow the number of parameters to greatly increase while keeping th"
+      ],
+      "latency": 12.179853439331055
+    },
+    {
+      "topic": "State space models: Mamba, S4, linear attention alternatives",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Foundation models, now powering most of the exciting applications in deep learning, are almost universally based on the\n"
+      ],
+      "latency": 7.170823574066162
+    },
+    {
+      "topic": "Retrieval-augmented language models: REALM, RETRO, Atlas",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Large language models have shown impressive few-shot results on a wide range of tasks. However, when knowledge is key "
+      ],
+      "latency": 8.764657020568848
+    },
+    {
+      "topic": "Chain-of-thought research: emergent abilities, prompting",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] steps\u2014significantly improves the ability of large language models to perform\ncomplex reasoning. In particular, we show h"
+      ],
+      "latency": 8.439549446105957
+    },
+    {
+      "topic": "Tool-augmented reasoning: Toolformer, Gorilla, API-Bank",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] Search\n[![arXiv logo]] \n[![Cornell University Logo]] \nopen search\nGO\nopen navigation menu\n# Computer Science \\> Computat"
+      ],
+      "latency": 8.553665161132812
+    },
+    {
+      "topic": "Mathematical reasoning: Minerva, Llemma, theorem proving",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > Informal mathematics has been central to modern large language model (LLM) reasoning, offering flexibility and enablin"
+      ],
+      "latency": 9.379298686981201
+    },
+    {
+      "topic": "Code reasoning: AlphaCode, CodeChain, program synthesis",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Competition-Level Code Generation with AlphaCode",
+        "[exa-h] arXiv reCAPTCHA\n[![Cornell University]] \n[We gratefully acknowledge support from\nthe Simons Foundation and member instit"
+      ],
+      "latency": 10.391515731811523
+    },
+    {
+      "topic": "Vision-language models: Flamingo, BLIP-2, LLaVA architecture",
+      "area": "multimodal",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Building models that can be rapidly adapted to novel tasks using only a handful of\nannotated examples is an open challen"
+      ],
+      "latency": 8.15304684638977
+    },
+    {
+      "topic": "Unified multimodal: Gemini, GPT-4V, native multimodal training",
+      "area": "multimodal",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 2. Model Architecture\nGemini models build on top of Transformer decoders (Vaswani et al., 2017b) that are enhanced\nwith "
+      ],
+      "latency": 7.311457872390747
+    },
+    {
+      "topic": "Video understanding: VideoLLM, long video comprehension",
+      "area": "multimodal",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We introduce Neptune, a benchmark for long video understanding that requires reasoning over long time horizons and acr"
+      ],
+      "latency": 7.131836414337158
+    },
+    {
+      "topic": "3D understanding: PointLLM, spatial reasoning with LLMs",
+      "area": "multimodal",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] How to Enable LLM with 3D Capacity? A Survey of Spatial Reasoning in LLM",
+        "[exa-h] > 3D Large Language Models (LLMs) leveraging spatial information in point clouds for 3D spatial reasoning attract great "
+      ],
+      "latency": 7.649038314819336
+    },
+    {
+      "topic": "Efficient transformers: FlashAttention, xFormers, linear attention",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] and are thus slower than highly optimized implementations of softmax attention. This work describes a hardware-efficient"
+      ],
+      "latency": 9.073610544204712
+    },
+    {
+      "topic": "Knowledge distillation: teacher-student, self-distillation",
+      "area": "efficiency",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] [Submitted on 9 Jun 2021 ([v1]), last revised 21 Jun 2022 (this version, v2)]\n# Title:Knowledge distillation: A good tea"
+      ],
+      "latency": 8.307490110397339
+    },
+    {
+      "topic": "Quantization research: GPTQ, AWQ, SmoothQuant",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > We introduce GPTAQ, a novel finetuning-free quantization method for compressing large-scale transformer architectures."
+      ],
+      "latency": 6.753805637359619
+    },
+    {
+      "topic": "Speculative decoding: draft models, tree attention",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] DySpec: Faster Speculative Decoding with \n Dynamic Token Tree Structure",
+        "[exa-h] > Abstract:Autoregressive language models demonstrate excellent performance in various scenarios. However, the inference"
+      ],
+      "latency": 7.448016881942749
+    },
+    {
+      "topic": "Long context research: RoPE scaling, position interpolation",
+      "area": "emerging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Position Interpolation: Extending LLM Context Length with RoPE Scaling",
+        "[exa] ",
+        "[exa-h] [Position Interpolation], introduced by Chen et al. in 2023, offers an elegant solution: instead of extrapolating to uns"
+      ],
+      "latency": 6.838106393814087
+    },
+    {
+      "topic": "Continual learning for LLMs: avoiding catastrophic forgetting",
+      "area": "emerging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Large language models (LLMs) are not amenable to frequent re-training, due to high training costs arising from their m"
+      ],
+      "latency": 7.170502185821533
+    },
+    {
+      "topic": "Personalized LLMs: user adaptation, preference learning",
+      "area": "emerging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Reinforcement Learning from Human Feedback (RLHF) is widely used to align Language Models (LMs) with human preferences"
+      ],
+      "latency": 6.30570125579834
+    },
+    {
+      "topic": "World models: Sora, video generation, physical understanding",
+      "area": "emerging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Video generation models as world simulators",
+        "[exa-h] > OpenAI's Sora highlights the potential of video generation for developing world models that adhere to fundamental phys"
+      ],
+      "latency": 10.164791584014893
+    }
+  ]
+}

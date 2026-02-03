@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:33:42.957318",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Docker for LLM apps: multi-stage builds, layer caching",
+      "area": "containers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Optimize cache usage in builds",
+        "[exa] Docker build cache",
+        "[exa-h] `$docker buildx build --cache-fromtype=registry,ref=user/app:buildcache .`\n```\n## [Summary] \nOptimizing cache usage in b"
+      ],
+      "latency": 8.943149328231812
+    },
+    {
+      "topic": "GPU containers: NVIDIA runtime, CUDA drivers",
+      "area": "containers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] User Guide \uf0c1",
+        "[exa] User Guide \uf0c1",
+        "[exa-h] The NVIDIA Container Toolkit provides different options for enumerating GPUs and the capabilities that are supported\nfor"
+      ],
+      "latency": 7.735769510269165
+    },
+    {
+      "topic": "Container optimization: image size, startup time",
+      "area": "containers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Building best practices",
+        "[exa] Cost-effective resources",
+        "[exa-h] * [Guides] \n* [Reference] \n# Building best practices\nCopy as Markdown\nOpen MarkdownAsk Docs AIClaudeOpen in Claude\nTable"
+      ],
+      "latency": 7.686028480529785
+    },
+    {
+      "topic": "Container registries: ECR, GCR, artifact management",
+      "area": "containers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is Amazon Elastic Container Registry?",
+        "[exa] Concepts and components of Amazon ECR",
+        "[exa-h] Amazon Elastic Container Registry (Amazon ECR) is an AWS managed container image registry service that is secure,\nscalab"
+      ],
+      "latency": 9.116218090057373
+    },
+    {
+      "topic": "Kubernetes for LLM: deployments, services, ingress",
+      "area": "kubernetes",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Serve an LLM with GKE Inference Gateway \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Using Kubernetes \u00b6",
+        "[exa-h] This tutorial describes how to deploy a large language model (LLM) on Google Kubernetes Engine (GKE) with the GKE Infere"
+      ],
+      "latency": 7.539639711380005
+    },
+    {
+      "topic": "GPU scheduling in K8s: node affinity, resource quotas",
+      "area": "kubernetes",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Schedule GPUs",
+        "[exa] Assigning Pods to Nodes",
+        "[exa-h] `apiVersion:v1kind:Podmetadata:name:example-vector-addspec:restartPolicy:OnFailure# You can use Kubernetes node affinity"
+      ],
+      "latency": 11.71029257774353
+    },
+    {
+      "topic": "Horizontal pod autoscaling: custom metrics, scaling policies",
+      "area": "kubernetes",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Horizontal Pod Autoscaling",
+        "[exa] HorizontalPodAutoscaler",
+        "[exa-h] If you use the`v2`HorizontalPodAutoscaler API, you can use the`behavior`field\n(see the[API reference])\nto configure sepa"
+      ],
+      "latency": 9.033342838287354
+    },
+    {
+      "topic": "K8s operators for ML: KServe, Seldon, Triton",
+      "area": "kubernetes",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview of Seldon Core Components \u00b6",
+        "[exa] Production-ready ML Serving Framework",
+        "[exa-h] * Easy way to containerise ML models using our language wrappers or pre-packaged inference servers.\n* Out of the box end"
+      ],
+      "latency": 9.952412366867065
+    },
+    {
+      "topic": "AWS Lambda for LLM: cold starts, memory, timeout",
+      "area": "serverless",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding the Lambda execution environment lifecycle",
+        "[exa] Troubleshoot configuration issues in Lambda",
+        "[exa-h] Permissions, resources, credentials, and environment variables are shared between the function and the\nextensions.\n#####"
+      ],
+      "latency": 8.777564287185669
+    },
+    {
+      "topic": "Modal for ML: GPU serverless, scaling, caching",
+      "area": "serverless",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Modal: High-performance AI infrastructure",
+        "[exa] The  fastest  way  to  scale  Inference",
+        "[exa-h] Bring your own image or build one in Python, scale resources as needed, and leverage state-of-the-art GPUs like H100s & "
+      ],
+      "latency": 5.575255870819092
+    },
+    {
+      "topic": "Replicate for inference: model hosting, auto-scaling",
+      "area": "serverless",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deployments",
+        "[exa] Inference Endpoints (dedicated)",
+        "[exa-h] * Auto-scaling: Scale from zero to hundreds of instances based on traffic\n* Always-on instances: Keep models warm to eli"
+      ],
+      "latency": 7.665564775466919
+    },
+    {
+      "topic": "RunPod serverless: GPU instances, endpoints",
+      "area": "serverless",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dedicated Serverless GPU API\u00a0endpoints",
+        "[exa] Dedicated Serverless GPU API\u00a0endpoints",
+        "[exa-h] Redefining cloud compute with speed, scale, and innovation.\n] \n[\nCareers\nJoin our mission to build the launchpad for AI "
+      ],
+      "latency": 5.992173910140991
+    },
+    {
+      "topic": "Load balancing for LLM: round-robin, least connections",
+      "area": "loadbalancing",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Request routing #",
+        "[exa] Using nginx as HTTP load balancer",
+        "[exa-h] The default router uses the Power of Two Choices algorithm to:\n1. Randomly sample two replicas.\n2. Route to the replica "
+      ],
+      "latency": 9.663093566894531
+    },
+    {
+      "topic": "Request routing: model version, A/B testing",
+      "area": "loadbalancing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Testing models with production variants",
+        "[exa] Configure Body-Based Routing \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] ## Model A/B test example\nPerforming A/B testing between a new model and an old model with production traffic can be an "
+      ],
+      "latency": 9.270441770553589
+    },
+    {
+      "topic": "Health checks: readiness, liveness, startup probes",
+      "area": "loadbalancing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Configure Liveness, Readiness and Startup Probes",
+        "[exa] Liveness, Readiness, and Startup Probes",
+        "[exa-h] This page shows how to configure liveness, readiness and startup probes for containers.\nFor more information about probe"
+      ],
+      "latency": 8.783770561218262
+    },
+    {
+      "topic": "Connection pooling: persistent connections, keep-alive",
+      "area": "loadbalancing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] HTTP/1.1: Connections",
+        "[exa] Connection management in HTTP/1.x",
+        "[exa-h] ### 8.2Message Transmission Requirements\n### 8.2.1Persistent Connections and Flow Control\nHTTP/1.1 servers SHOULD mainta"
+      ],
+      "latency": 9.232612609863281
+    },
+    {
+      "topic": "Predictive auto-scaling: traffic forecasting, pre-warming",
+      "area": "autoscaling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Predictive scaling for\n            Amazon EC2 Auto Scaling",
+        "[exa] Scaling based on predictions \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] patterns in traffic flows. It uses this information to forecast future capacity needs so\nAmazon EC2 Auto Scaling can pro"
+      ],
+      "latency": 5.831995725631714
+    },
+    {
+      "topic": "Queue-based scaling: SQS, RabbitMQ, task backlog",
+      "area": "autoscaling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scaling policy based on Amazon SQS",
+        "[exa] Amazon SQS best practices",
+        "[exa-h] tracking scaling policy using metric math].\nYou can scale your Auto Scaling group in response to changes in system load "
+      ],
+      "latency": 7.360814332962036
+    },
+    {
+      "topic": "Cost-optimized scaling: spot instances, preemptible VMs",
+      "area": "autoscaling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Spot VMs \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Spot VMs \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] stop or delete (*preempt*) Spot VMs to reclaim the capacity\nat any time. Spot VMs are the latest version of[preemptible "
+      ],
+      "latency": 9.756288290023804
+    },
+    {
+      "topic": "Multi-region deployment: latency optimization, failover",
+      "area": "autoscaling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multi-regional deployment on Compute Engine \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Multi-regional deployment on Compute Engine \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] available regions. If data is replicated synchronously, the recovery time\nobjective (RTO) is near zero.\n### Low latency "
+      ],
+      "latency": 7.246966600418091
+    }
+  ]
+}

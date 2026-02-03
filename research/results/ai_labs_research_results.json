@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:40:43.148711",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 89
+  },
+  "results": [
+    {
+      "topic": "OpenAI research: GPT, DALL-E, o1",
+      "area": "labs",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] text inputs and producing text outputs. Such models are an important area of study as they have the\npotential to be used"
+      ],
+      "latency": 7.678812503814697
+    },
+    {
+      "topic": "Anthropic research: Claude, constitutional AI",
+      "area": "labs",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Claude\u2019s Constitution",
+        "[exa] Claude's new constitution",
+        "[exa-h] proposals for how companies and other organizations might design and adopt AI constitutions."
+      ],
+      "latency": 6.74065637588501
+    },
+    {
+      "topic": "DeepMind research: AlphaFold, Gemini",
+      "area": "labs",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Advancing cutting-edge AI capabilities",
+        "[exa] Introducing Gemini 2.0: our new AI model for the agentic era",
+        "[exa-h] AlphaFold, an AI model from Google DeepMind, is revolutionizing our understanding of proteins, the building blocks of li"
+      ],
+      "latency": 8.288031816482544
+    },
+    {
+      "topic": "Meta AI research: Llama, FAIR",
+      "area": "labs",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLaMA: Open and Efficient Foundation Language Models",
+        "[exa] LLaMA: Open and Efficient Foundation Language Models - Meta Research",
+        "[exa-h] We introduce LLaMA, a collection of founda- tion language models ranging from 7B to 65B parameters. We train our models "
+      ],
+      "latency": 4.795562028884888
+    },
+    {
+      "topic": "Google AI research: Transformer, BERT",
+      "area": "tech",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "[exa] ",
+        "[exa-h] We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations fro"
+      ],
+      "latency": 5.123141527175903
+    },
+    {
+      "topic": "Microsoft Research: AI, Azure OpenAI",
+      "area": "tech",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The next chapter of the Microsoft\u2013OpenAI partnership",
+        "[exa] The next chapter of the Microsoft\u2013OpenAI partnership",
+        "[exa-h] The agreement preserves key elements that have fueled this successful partnership\u2014meaning OpenAI remains Microsoft\u2019s fro"
+      ],
+      "latency": 7.841169357299805
+    },
+    {
+      "topic": "NVIDIA AI: GPU computing, research",
+      "area": "tech",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Research at NVIDIA",
+        "[exa] AI-Aided Engineering",
+        "[exa-h] CUDA\u00ae is a parallel computing platform and programming model developed by NVIDIA for general computing on GPUs. CUDA-X\u2122 "
+      ],
+      "latency": 10.244304895401001
+    },
+    {
+      "topic": "Apple ML research: on-device AI",
+      "area": "tech",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Apple Intelligence Foundation Language Models",
+        "[exa-h] designed to support 16 different languages. Our latest foundation models include\na compact, approximately 3-billion-para"
+      ],
+      "latency": 7.093113899230957
+    },
+    {
+      "topic": "Stanford HAI: human-centered AI",
+      "area": "academic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About | Stanford HAI",
+        "[exa] Initiative:  Human-Centered Artificial Intelligence",
+        "[exa-h] Stanford HAI\u2019s mission is to advance AI research, education, policy, and practice to improve the human condition. We bel"
+      ],
+      "latency": 7.369638681411743
+    },
+    {
+      "topic": "MIT CSAIL: AI research lab",
+      "area": "academic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science and Artificial Intelligence Laboratory (CSAIL)",
+        "[exa] About | MIT CSAIL",
+        "[exa-h] * [Explore all research areas] \n* [AI and Society] \n* [AI for Healthcare and Life Sciences] \n* [Artificial Intelligence "
+      ],
+      "latency": 6.698929786682129
+    },
+    {
+      "topic": "Berkeley AI: BAIR lab research",
+      "area": "academic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Robotics and AI Lab @ BAIR",
+        "[exa] Discover BAIR, the world's most advanced academic AI research lab.",
+        "[exa-h] To that end, we work on learning algorithms, robotics, and computer vision.\nCopyright \u00a9 UC Berkeley RAIL Lab 2017"
+      ],
+      "latency": 6.025559425354004
+    },
+    {
+      "topic": "CMU AI: machine learning research",
+      "area": "academic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Carnegie Mellon University School of Computer Science",
+        "[exa] Carnegie Mellon University School of Computer Science",
+        "[exa-h] Our faculty members lead research efforts on the most important problems facing machine learning today. We've included d"
+      ],
+      "latency": 8.090349197387695
+    },
+    {
+      "topic": "Mila: Montreal AI lab, Bengio",
+      "area": "international",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About Mila",
+        "[exa] About Mila",
+        "[exa-h] Yoshua Bengio, a Quebec researcher who specializes in AI at the Universit\u00e9 de Montr\u00e9al, is one of the precursors of deep"
+      ],
+      "latency": 5.536565065383911
+    },
+    {
+      "topic": "FAIR Paris: Facebook AI Research",
+      "area": "international",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] FAIR Paris",
+        "[exa] ",
+        "[exa-h] Facebook is seeking Research Interns to join Facebook AI Research (FAIR) Paris. We are committed to advancing the field "
+      ],
+      "latency": 4.91665506362915
+    },
+    {
+      "topic": "DeepMind London: UK AI research",
+      "area": "international",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Strengthening our partnership with the UK government to support prosperity and security in the AI era",
+        "[exa] We work on some of the most complex and interesting \u2028challenges in AI",
+        "[exa-h] To help turbocharge scientific discovery, we will establish Google DeepMind\u2019s first automated laboratory in the UK in 20"
+      ],
+      "latency": 2.9169023036956787
+    },
+    {
+      "topic": "Tsinghua AI: Chinese AI research",
+      "area": "international",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Research Groups-College of Al, Tsinghua University",
+        "[exa] Dialogue with Masters",
+        "[exa-h] Email: collegeai@mail.tsinghua.edu.cn@AI, Tsinghua University, All Rights Reserved.\nTOP"
+      ],
+      "latency": 6.363610029220581
+    },
+    {
+      "topic": "EleutherAI: open source AI research",
+      "area": "specialized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] EleutherAI",
+        "[exa] EleutherAI",
+        "[exa-h] As models get smarter, humans won't always be able to independently check if a model's claims are true or false. We aim "
+      ],
+      "latency": 3.9122440814971924
+    },
+    {
+      "topic": "Hugging Face research: open ML",
+      "area": "specialized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Economies of Open Intelligence: Tracing Power & Participation in the Model Ecosystem",
+        "[exa] Holistic Evaluation of Language Models",
+        "[exa-h] The analysis of Hugging Face Model Hub data reveals shifts in the open model economy, including declining US industry do"
+      ],
+      "latency": 4.123126745223999
+    },
+    {
+      "topic": "AI2: Allen Institute AI",
+      "area": "specialized",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Open Coding\u00a0Agents",
+        "[exa] About us  -  We\u2019re Ai2",
+        "[exa-h] We partner with the UW's Paul G. Allen School of Computer Science & Engineering on a wide variety of our foundational an"
+      ],
+      "latency": 5.286519289016724
+    },
+    {
+      "topic": "Redwood Research: AI safety",
+      "area": "specialized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pioneering threat assessment and mitigation for AI systems",
+        "[exa] Our Research",
+        "[exa-h] In the coming years or decades, AI systems will very plausibly match or exceed human capabilities across most intellectu"
+      ],
+      "latency": 4.219364881515503
+    }
+  ]
+}

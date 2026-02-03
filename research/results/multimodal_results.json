@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:09:41.162090",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "GPT-4V and Claude vision: image understanding, OCR, chart analysis",
+      "area": "vision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Claude Vision: Practical Use Cases for Images, PDFs, and Diagrams",
+        "[exa] Vision - Claude API Docs",
+        "[exa-h] [Claude Vision] refers to the multimodal capabilities built into Anthropic\u2019s Claude models, enabling them to interpret v"
+      ],
+      "latency": 10.087743997573853
+    },
+    {
+      "topic": "CLIP embeddings: image-text similarity, zero-shot classification",
+      "area": "vision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CLIP: Connecting text and images",
+        "[exa] ",
+        "[exa-h] Illustration:Justin Jay Wang\nLoading\u2026\nShare\nWe\u2019re introducing a neural network called CLIP which efficiently learns visu"
+      ],
+      "latency": 8.886106729507446
+    },
+    {
+      "topic": "Document understanding: layout analysis, table extraction, form parsing",
+      "area": "vision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Multimedia",
+        "[exa] Document AI (Intelligent Document Processing)",
+        "[exa-h] detection, content extraction (including text, tables, and mathematical expressions), and multi-modal data integration a"
+      ],
+      "latency": 9.048164367675781
+    },
+    {
+      "topic": "Visual question answering: grounding, spatial reasoning",
+      "area": "vision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Visual7W: Grounded Question Answering in Images - ADS",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Previous works have established a loose, global association between QA sentences and images. However, many questions and"
+      ],
+      "latency": 9.363021850585938
+    },
+    {
+      "topic": "Whisper for transcription: real-time, batch, language detection",
+      "area": "audio",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing Whisper",
+        "[exa] Configuration options",
+        "[exa-h] Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervise"
+      ],
+      "latency": 10.98539662361145
+    },
+    {
+      "topic": "Text-to-speech with LLMs: voice cloning, emotion, SSML",
+      "area": "audio",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Speech generation (text-to-speech)",
+        "[exa] Text-to-Speech (TTS)",
+        "[exa-h] The**Gemini Native Audio Generation Text-to-Speech (TTS)**model differentiates\nitself from traditional TTS models by usi"
+      ],
+      "latency": 13.033799648284912
+    },
+    {
+      "topic": "Audio understanding: music analysis, sound classification",
+      "area": "audio",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] librosa \uf0c1",
+        "[exa] librosa \u2014 librosa 0.9.1 documentation",
+        "[exa-h] McFee, Brian, Colin Raffel, Dawen Liang, Daniel PW Ellis, Matt McVicar, Eric Battenberg, and Oriol Nieto.\n\u201clibrosa: Audi"
+      ],
+      "latency": 8.629061460494995
+    },
+    {
+      "topic": "Voice assistants with LLMs: wake word, dialogue management",
+      "area": "audio",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AURA: Agent for Understanding, Reasoning, and\nAutomated Tool Use in Voice-Driven Tasks",
+        "[exa] ",
+        "[exa-h] dynamic tool invocation and multi-turn conversation. AURA combines open-weight ASR, TTS, and LLMs in a cascaded pipeline"
+      ],
+      "latency": 9.373259782791138
+    },
+    {
+      "topic": "Code interpreters: sandboxed execution, state management",
+      "area": "code",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build a stateful, sandboxed code interpreter",
+        "[exa] Vercel Sandbox",
+        "[exa-h] [View on GitHub] \nCopy page\n# Build a stateful, sandboxed code interpreter\nThis example demonstrates how to build a stat"
+      ],
+      "latency": 7.446892976760864
+    },
+    {
+      "topic": "Jupyter notebook agents: cell execution, output capture",
+      "area": "code",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Executing notebooks #",
+        "[exa-h] ## Repository files navigation\n\n# nbclient\n\n**NBClient** lets you **execute** notebooks.\n\nA client library for programma"
+      ],
+      "latency": 11.24378252029419
+    },
+    {
+      "topic": "E2B sandboxes: secure code execution, file system access",
+      "area": "code",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] SDK Reference - E2B",
+        "[exa] SDK Reference - E2B",
+        "[exa-h] SDK Reference - E2B\nSearch in docs...K\n[] \n[Documentation] \n[] \n[Documentation] \n### [Sandbox] \nE2B cloud sandbox is a s"
+      ],
+      "latency": 12.678956747055054
+    },
+    {
+      "topic": "Docker-based code execution: isolation, resource limits",
+      "area": "code",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Resource constraints",
+        "[exa] Resource constraints",
+        "[exa-h] * [Guides] \n* [Reference] \n# Resource constraints\nCopy as Markdown\nOpen MarkdownAsk Docs AIClaudeOpen in Claude\nTable of"
+      ],
+      "latency": 8.635110139846802
+    },
+    {
+      "topic": "Screen understanding agents: UI navigation, form filling",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] From Pixels to UI Actions: Learning to Follow Instructions via Graphical User Interfaces",
+        "[exa-h] **OmniParser**is a comprehensive method for parsing user interface screenshots into structured and easy-to-understand el"
+      ],
+      "latency": 8.719181299209595
+    },
+    {
+      "topic": "Browser automation with vision: Playwright + LLM",
+      "area": "agents",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Browser Automation | Playwright",
+        "[exa] Introduction to Playwright MCP | Playwright",
+        "[exa-h] This enables Large Language Models (LLMs) like GPT or Claude to understand and interact with web pages using structured "
+      ],
+      "latency": 10.225430727005005
+    },
+    {
+      "topic": "Robotic process automation with LLMs: workflow extraction",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] > The rapidly evolving field of Robotic Process Automation (RPA) has made significant strides in automating repetitive p"
+      ],
+      "latency": 7.598596096038818
+    },
+    {
+      "topic": "Multi-modal RAG: image + text retrieval and generation",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > Recent multimodal models such as DALL-E and CM3 have achieved remarkable progress in text-to-image and image-to-text g"
+      ],
+      "latency": 8.179049491882324
+    },
+    {
+      "topic": "ImageBind: unified embeddings across 6 modalities",
+      "area": "unified",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ImageBind: One Embedding Space To Bind Them All - ADS",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] We present ImageBind, an approach to learn a joint embedding across six different modalities - images, text, audio, dept"
+      ],
+      "latency": 7.3447182178497314
+    },
+    {
+      "topic": "Gemini multi-modal: native multi-modal understanding",
+      "area": "unified",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > In this report, we introduce the Gemini 1.5 family of models, representing the next generation of highly compute-effic"
+      ],
+      "latency": 8.935058116912842
+    },
+    {
+      "topic": "LLaVA: visual instruction tuning for open models",
+      "area": "unified",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] tuning on such generated data, we introduce LLaVA: Large Language and Vision Assistant, an end-to-end trained large mult"
+      ],
+      "latency": 8.601827144622803
+    },
+    {
+      "topic": "Unified-IO: single model for vision, language, audio",
+      "area": "unified",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unified-IO 2: Scaling Autoregressive Multimodal Models with Vision, Language, Audio, and Action",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] We presentUnified-IO 2, the first autoregressive multimodal model that is capable of understanding and generating images"
+      ],
+      "latency": 8.578100442886353
+    }
+  ]
+}

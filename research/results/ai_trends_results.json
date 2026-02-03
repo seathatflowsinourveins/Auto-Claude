@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:22:28.590262",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 92
+  },
+  "results": [
+    {
+      "topic": "AI market size 2025: industry growth projections",
+      "area": "market",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] State of AI 2025 Report",
+        "[exa] Gartner Forecasts Worldwide GenAI Spending to Reach $644 Billion in 2025",
+        "[exa-h] # State of AI 2025 Report\nFrom AI agent acquisitions to $200B+ in funding, we look at key changes in the AI landscape us"
+      ],
+      "latency": 9.494253873825073
+    },
+    {
+      "topic": "AI investment trends: venture capital, funding",
+      "area": "market",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] State of Venture 2025",
+        "[exa] State of AI 2025 Report",
+        "[exa-h] # State of Venture 2025\nFunding reached its highest level since 2022, with AI nearing 50% of the total. Mega-rounds drov"
+      ],
+      "latency": 6.0455358028411865
+    },
+    {
+      "topic": "AI adoption enterprise: digital transformation",
+      "area": "market",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The state of AI in 2025: Agents, innovation, and transformation",
+        "[exa] ",
+        "[exa-h] **Three years since the introduction of gen\u00a0AI tools**triggered a new era of artificial intelligence, nearly nine out of"
+      ],
+      "latency": 6.0572826862335205
+    },
+    {
+      "topic": "AI competitive landscape: major players",
+      "area": "market",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OpenAI Unveils More Advanced Model as Race With Google Heats Up",
+        "[exa] Can OpenAI Respond After Google Closes the A.I. Technology Gap?",
+        "[exa-h] Once the undisputed leader in AI development, OpenAI is facing renewed competition from Google and Anthropic, both of wh"
+      ],
+      "latency": 3.5340359210968018
+    },
+    {
+      "topic": "AI agents 2025: autonomous systems, agentic AI",
+      "area": "technical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Agentic AI Needs a Systems Theory",
+        "[exa-h] What is it? Agentic artificial intelligence (AI) builds upon the \ncapabilities of generative AI to not just create conte"
+      ],
+      "latency": 4.971803903579712
+    },
+    {
+      "topic": "Multimodal AI: vision, audio, text integration",
+      "area": "technical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] [Submitted on 19 Dec 2023 ([v1]), last revised 9 May 2025 (this version, v5)]\n# Title:Gemini: A Family of Highly Capable"
+      ],
+      "latency": 3.6439433097839355
+    },
+    {
+      "topic": "Long context models: million token windows",
+      "area": "technical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] What is a long context window?",
+        "[exa-h] > Long-context capabilities are essential for a wide range of applications, including document and video understanding, "
+      ],
+      "latency": 4.796474456787109
+    },
+    {
+      "topic": "Small language models: efficient, on-device",
+      "area": "technical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] datasets, and training algorithms. In addition, we evaluate their capabilities in various domains, including commonsense"
+      ],
+      "latency": 5.878872632980347
+    },
+    {
+      "topic": "AI copilots: productivity assistants everywhere",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Microsoft AI: Copilot",
+        "[exa] An AI companion for everyone",
+        "[exa-h] [**Member of Technical Staff, Machine Learning Engineer**] \n\nMountain View, US\n\n[**Member of Technical Staff \u2013 AI Produc"
+      ],
+      "latency": 4.470382928848267
+    },
+    {
+      "topic": "AI in enterprise: business transformation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Reinventing enterprise models in the age of generative AI",
+        "[exa-h] enterprise to achieve broader, more impactful outcomes. \nScaling includes integrating AI into diverse business \nprocesse"
+      ],
+      "latency": 4.1096532344818115
+    },
+    {
+      "topic": "AI personalization: individualized experiences",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI personalization",
+        "[exa] Personalization Done Right",
+        "[exa-h] AI personalization refers to the use of[artificial intelligence (AI)] to tailor messaging, product recommendations and s"
+      ],
+      "latency": 9.271028757095337
+    },
+    {
+      "topic": "AI automation: workflow, process automation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is Workflow Automation?",
+        "[exa] AI Workflows: What They Are and Why They Matter for Businesses",
+        "[exa-h] Workflow automation is the process of using software to perform business processes and tasks without human involvement. "
+      ],
+      "latency": 8.599050521850586
+    },
+    {
+      "topic": "AI regulation 2025: global policy trends",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] AI governance is a global issue that requires international co-operation to be effective.\nInternational AI governance re"
+      ],
+      "latency": 9.165342569351196
+    },
+    {
+      "topic": "AI talent: skills gap, workforce changes",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Agents, robots, and us: Skill partnerships in the age of AI",
+        "[exa] ",
+        "[exa-h] Employers are already adjusting. Demand for AI fluency\u2014the ability to use and manage AI tools\u2014has jumped nearly sevenfol"
+      ],
+      "latency": 8.187281370162964
+    },
+    {
+      "topic": "AI costs: training, inference economics",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Economics of AI",
+        "[exa] The rising costs of training frontier AI models",
+        "[exa-h] **Training and inference are economically different activities.**Training is episodic, bursty, and risky (the run may no"
+      ],
+      "latency": 8.492011070251465
+    },
+    {
+      "topic": "AI reliability: hallucination, accuracy",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Why language models hallucinate",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] At OpenAI, we\u2019re working hard to make AI systems more useful and reliable. Even as language models become more capable, "
+      ],
+      "latency": 9.055604219436646
+    },
+    {
+      "topic": "AGI progress: artificial general intelligence",
+      "area": "future",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] ",
+        "[exa-h] > The lack of a concrete definition for Artificial General Intelligence (AGI) obscures the gap between today's specializ"
+      ],
+      "latency": 8.518018007278442
+    },
+    {
+      "topic": "AI safety research: alignment, control",
+      "area": "future",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] # Title:An Approach to Technical AGI Safety and Security"
+      ],
+      "latency": 7.53035044670105
+    },
+    {
+      "topic": "AI and jobs: workforce automation impact",
+      "area": "future",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Agents, robots, and us: Skill partnerships in the age of AI",
+        "[exa] Generative AI and jobs: A 2025 update",
+        "[exa-h] * **Work in the future will be a partnership between people, agents, and robots\u2014all powered by AI.**Today\u2019s technologies"
+      ],
+      "latency": 7.94893217086792
+    },
+    {
+      "topic": "AI breakthroughs expected: research directions",
+      "area": "future",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] how they can be adapted to specific robot designs, tasks, environments; which challenges must be overcome. This article "
+      ],
+      "latency": 8.740679264068604
+    }
+  ]
+}

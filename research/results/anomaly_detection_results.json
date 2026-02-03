@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:48:57.227712",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 96
+  },
+  "results": [
+    {
+      "topic": "Embedding-based anomaly detection: semantic outliers",
+      "area": "embeddings",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Identifying Semantically Deviating Outlier Documents",
+        "[exa] Unsupervised Anomaly Detection From Semantic Similarity Scores - ADS",
+        "[exa-h] develop a generative model to identify frequent and characteristic semantic regions in the word embedding space to repre"
+      ],
+      "latency": 7.391139268875122
+    },
+    {
+      "topic": "Clustering for anomalies: DBSCAN, isolation forest",
+      "area": "embeddings",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] IsolationForest #",
+        "[exa] IsolationForest example #",
+        "[exa-h] The IsolationForest \u2018isolates\u2019 observations by randomly selecting a feature\nand then randomly selecting a split value be"
+      ],
+      "latency": 7.350351810455322
+    },
+    {
+      "topic": "Autoencoder anomaly detection: reconstruction error",
+      "area": "embeddings",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Variational Autoencoder based Anomaly Detection using Reconstruction Probability",
+        "[exa] Anomaly Detection with Robust Deep Autoencoders",
+        "[exa-h] * [Jinwon An],[Sungzoon Cho] \n* Published2015\n* Computer Science\nTLDR\nThe reconstruction probability has a theoretical b"
+      ],
+      "latency": 7.5280091762542725
+    },
+    {
+      "topic": "Contrastive learning for anomalies: self-supervised",
+      "area": "embeddings",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Novel Contrastive Learning Framework for Self-Supervised Anomaly Detection | IEEE Conference Publication | IEEE Xplore",
+        "[exa] ",
+        "[exa-h] A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing te"
+      ],
+      "latency": 9.530473470687866
+    },
+    {
+      "topic": "LLM for log analysis: detecting unusual patterns",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LogLLaMA: Transformer-based log anomaly detection with LLaMA",
+        "[exa] Computer Science > Software Engineering",
+        "[exa-h] Log anomaly detection refers to the task that distinguishes the anomalous log messages from normal log messages. Transfo"
+      ],
+      "latency": 10.623572587966919
+    },
+    {
+      "topic": "Text anomaly detection: unusual content identification",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Anomaly detection refers to the task of identifying docu\u0002ments, or segments of text, that are unusual or different\nfrom "
+      ],
+      "latency": 6.539546251296997
+    },
+    {
+      "topic": "Semantic drift detection: content changes over time",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Semantic change detection (i.e., identify\u0002ing words whose meaning has changed\nover time) started emerging as a grow\u0002ing "
+      ],
+      "latency": 8.774298191070557
+    },
+    {
+      "topic": "LLM-based root cause analysis: explaining anomalies",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Software Engineering",
+        "[exa] GALA: Can Graph-Augmented Large Language Model Agentic Workflows Elevate Root Cause Analysis?",
+        "[exa-h] > Ensuring the reliability and availability of cloud services necessitates efficient root cause analysis (RCA) for cloud"
+      ],
+      "latency": 9.451617240905762
+    },
+    {
+      "topic": "AI for threat detection: network security patterns",
+      "area": "security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Framework for Evaluating Emerging Cyberattack Capabilities of AI",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] As frontier AI models become more capable, evaluating their potential to enable cyberattacks is crucial for ensuring the"
+      ],
+      "latency": 8.02115797996521
+    },
+    {
+      "topic": "User behavior analytics: detecting compromised accounts",
+      "area": "security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel",
+        "[exa] Anomalies detected by the Microsoft Sentinel machine learning engine",
+        "[exa-h] an asset is compromised."
+      ],
+      "latency": 7.045729160308838
+    },
+    {
+      "topic": "Phishing detection with AI: email and URL analysis",
+      "area": "security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How Email security detects phish",
+        "[exa] Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender",
+        "[exa-h] Email security uses a variety of factors to determine whether a given email message, a web domain or URL, or specific ne"
+      ],
+      "latency": 8.607298612594604
+    },
+    {
+      "topic": "Malware classification: behavioral analysis with ML",
+      "area": "security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PLOS One",
+        "[exa] ",
+        "[exa-h] Malware classification is a challenging task due to the constantly evolving nature of malicious software. Traditional si"
+      ],
+      "latency": 8.59436583518982
+    },
+    {
+      "topic": "Transaction fraud detection: real-time scoring",
+      "area": "fraud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stripe logo",
+        "[exa] Stripe logo",
+        "[exa-h] Radar is Stripe\u2019s fraud prevention solution that protects businesses against online credit card fraud. It is powered by "
+      ],
+      "latency": 7.686655044555664
+    },
+    {
+      "topic": "Account takeover detection: session anomalies",
+      "area": "fraud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Suspicious session behavior",
+        "[exa] Account takeover insights",
+        "[exa-h] Working as part of a fraud detection team, you need to be able to quickly identify when a customer\u2019s account is taken ov"
+      ],
+      "latency": 7.353968620300293
+    },
+    {
+      "topic": "Synthetic identity detection: fake profile identification",
+      "area": "fraud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] and sometimes, real information, such as names and Social Security \nnumbers (SSNs), to create new identities \u2013 which the"
+      ],
+      "latency": 8.921614408493042
+    },
+    {
+      "topic": "Click fraud detection: bot vs human patterns",
+      "area": "fraud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] liveness-proofs by running machine learning models on advertise\u0002ment clickstreams to distinguish bots from humans. As a "
+      ],
+      "latency": 5.7515857219696045
+    },
+    {
+      "topic": "AIOps anomaly detection: infrastructure monitoring",
+      "area": "operations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Anomaly detection",
+        "[exa] Learn about detecting anomalies to predict failure",
+        "[exa-h] Dynatrace continuously monitors the performance of every aspect of your applications, services, and infrastructure to au"
+      ],
+      "latency": 7.137694358825684
+    },
+    {
+      "topic": "Predictive maintenance: equipment failure prediction",
+      "area": "operations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Predictive maintenance",
+        "[exa] Predictive maintenance: A complete guide for data and analytics teams",
+        "[exa-h] **Predictive maintenance**(**PdM**)[[1]] techniques are designed to help determine the condition of in-service equipment"
+      ],
+      "latency": 5.719864368438721
+    },
+    {
+      "topic": "Time series anomaly detection: Prophet, ARIMA + AI",
+      "area": "operations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa] Prophet | Forecasting at scale.",
+        "[exa-h] repository shows superior performance over not only well-established statistical alternatives (such as ETS, ARIMA, TBATS"
+      ],
+      "latency": 3.724435567855835
+    },
+    {
+      "topic": "Alert fatigue reduction: smart anomaly prioritization",
+      "area": "operations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa] Alert Prioritisation in Security Operations Centres: A Systematic Survey on Criteria and Methods",
+        "[exa-h] a phenomenon known as alert fatigue. Large collections of imprecise sensors, an inability to adapt to known false positi"
+      ],
+      "latency": 8.177822828292847
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:55:19.550516",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 83
+  },
+  "results": [
+    {
+      "topic": "SSO integration for LLM applications: SAML, OIDC, OAuth2",
+      "area": "auth",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] \u2728 Event Hooks for SSO Login",
+        "[exa] Single Sign-On (SSO)",
+        "[exa-h] **Custom UI SSO Sign-in Handler**|You have an OAuth proxy (oauth2-proxy, Gatekeeper, Vouch, etc.) in front of LiteLLM|Pa"
+      ],
+      "latency": 3.7564022541046143
+    },
+    {
+      "topic": "Role-based access control for AI: permissions, scopes, policies",
+      "area": "auth",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Guide to Attribute Based Access Control (ABAC) Definition and Considerations",
+        "[exa] Permissions management",
+        "[exa-h] [Includes updates as of February 25, 2019] This document provides Federal agencies with a definition of attribute based "
+      ],
+      "latency": 5.666192293167114
+    },
+    {
+      "topic": "API key management: rotation, scoping, rate limiting per tenant",
+      "area": "auth",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Best practices for managing API keys \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Best practices for managing API keys \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] compromised API key.\n## Rotate your API keys periodically\nPeriodically create new API keys, update your applications to "
+      ],
+      "latency": 4.100221872329712
+    },
+    {
+      "topic": "Multi-tenant LLM deployment: isolation, resource allocation",
+      "area": "auth",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multitenancy and Azure OpenAI in Foundry Models",
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa-h] When you have a multitenant system that uses Azure OpenAI, you need to determine the level of isolation that your tenant"
+      ],
+      "latency": 3.6910035610198975
+    },
+    {
+      "topic": "GDPR compliance for LLMs: data deletion, consent, portability",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Right to erasure",
+        "[exa] Right to data portability",
+        "[exa-h] * the personal data is no longer necessary for the purpose which you originally collected or processed it for;\n* you are"
+      ],
+      "latency": 4.695770502090454
+    },
+    {
+      "topic": "HIPAA compliance: PHI handling, audit trails, encryption",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Title 45",
+        "[exa] Title 45",
+        "[exa-h] information."
+      ],
+      "latency": 12.490825891494751
+    },
+    {
+      "topic": "SOC 2 compliance for AI: security controls, monitoring",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 2017 Trust Services Criteria (With Revised Points of Focus \u2013 2022)",
+        "[exa] SOC 2\u00ae - SOC for Service Organizations: Trust Services Criteria",
+        "[exa-h] To gain access to exclusive content, your first step is to join the[AICPA & CIMA.] \n## Mentioned in this article\n### Top"
+      ],
+      "latency": 4.744819641113281
+    },
+    {
+      "topic": "AI governance frameworks: model cards, datasheets, risk assessment",
+      "area": "compliance",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Additional resources related to the Framework are included in the AI RMF Playbook,\nwhich is available via the NIST AI RM"
+      ],
+      "latency": 3.7198808193206787
+    },
+    {
+      "topic": "Enterprise search integration: Elasticsearch, Solr, OpenSearch with LLMs",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unifying Elastic vector database and LLM functions for intelligent query",
+        "[exa] Beyond vectors: Intelligent hybrid search with LLM agents in Elasticsearch",
+        "[exa-h] Combining the power of Large Language Models functions with Elasticsearch search templates ushers in capabilities for qu"
+      ],
+      "latency": 5.538298845291138
+    },
+    {
+      "topic": "Data lake integration: Databricks, Snowflake, BigQuery with RAG",
+      "area": "data",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Cortex Search \u00b6",
+        "[exa] RAG (Retrieval Augmented Generation) on  Databricks",
+        "[exa-h] Cortex Search enables low-latency, high-quality \u201cfuzzy\u201d search over your Snowflake data.\nIt powers a broad array of sear"
+      ],
+      "latency": 4.167237758636475
+    },
+    {
+      "topic": "CRM integration: Salesforce, HubSpot with LLM assistants",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] HubSpot launches first CRM deep research connector with ChatGPT",
+        "[exa] Access HubSpot context in ChatGPT",
+        "[exa-h] HubSpot and OpenAI launch first CRM deep research connector for ChatGPT"
+      ],
+      "latency": 7.474895000457764
+    },
+    {
+      "topic": "Document management: SharePoint, Confluence, Notion with RAG",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Manage your files in one place with document integrations",
+        "[exa] Microsoft SharePoint & OneDrive AI Connector (beta)",
+        "[exa-h] Use Notion\u2019s connected workspace to connect your docs, improve organization, and share ideas with your team.\n\n[Get Notio"
+      ],
+      "latency": 6.419436931610107
+    },
+    {
+      "topic": "Enterprise logging: Splunk, Datadog, ELK for LLM observability",
+      "area": "audit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLM and agentic AI observability",
+        "[exa] LLM Observability",
+        "[exa-h] To keep your LLM-powered applications reliable, efficient, cost-effective, and easy to troubleshoot, Elastic provides a "
+      ],
+      "latency": 4.480268716812134
+    },
+    {
+      "topic": "Audit trails for AI: decision logging, provenance tracking",
+      "area": "audit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Governance Trace Embedding: Encoding Accountability Metadata in Agentic AI Outputs",
+        "[exa-h] propose LLM audit trails as a sociotechnical mechanism for continuous accountability. An audit trail is a chronological,"
+      ],
+      "latency": 5.021279335021973
+    },
+    {
+      "topic": "Cost allocation: chargeback models, department billing",
+      "area": "audit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Building a cost allocation strategy",
+        "[exa] What is chargeback?",
+        "[exa-h] Create account and cost structure for the resources being deployed in AWS. Establish\nthe relationship between costs from"
+      ],
+      "latency": 5.687718152999878
+    },
+    {
+      "topic": "Usage analytics: adoption metrics, ROI measurement",
+      "area": "audit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Power BI implementation planning: Adoption tracking",
+        "[exa] ",
+        "[exa-h] * **[Usage metrics reports] **: Track information about report usage and[workspace activities]. For example, this ready-"
+      ],
+      "latency": 6.6066343784332275
+    },
+    {
+      "topic": "Private cloud LLM deployment: Azure OpenAI, AWS Bedrock, GCP Vertex",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Open models overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Overview of self-deployed models \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] including Llama, DeepSeek, Mistral, and Qwen, in Google Cloud. This document\nprovides an overview of Vertex AI offerings"
+      ],
+      "latency": 4.06862473487854
+    },
+    {
+      "topic": "On-premise LLM: vLLM, TGI, Ollama enterprise deployment",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Production deployment with Llama",
+        "[exa] Self-hosted Llama deployments for regulated industries",
+        "[exa-h] Deploying and operating Llama models at scale requires a comprehensive approach that spans infrastructure, model selecti"
+      ],
+      "latency": 8.924757719039917
+    },
+    {
+      "topic": "Hybrid deployment: cloud + on-prem routing based on data sensitivity",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Networking for hybrid and multi-cloud workloads: Reference architectures \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Hybrid Connectivity",
+        "[exa-h] than one place, such as on-premises and the cloud, or in multiple cloud\nenvironments.\n## Lift-and-shift architecture\nThe"
+      ],
+      "latency": 4.362613916397095
+    },
+    {
+      "topic": "Air-gapped LLM deployment: offline models, local inference",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Offline AI Agents",
+        "[exa] Air Gap Deployment for NVIDIA NIM for LLMs #",
+        "[exa-h] **Deploy on Local Hardware or Secured Enclaves**\nRun our models on high-performance local servers, edge devices, or secu"
+      ],
+      "latency": 3.895963668823242
+    }
+  ]
+}

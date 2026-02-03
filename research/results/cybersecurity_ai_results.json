@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:08:19.102910",
+  "stats": {
+    "sources": 200,
+    "vectors": 190,
+    "findings": 95
+  },
+  "results": [
+    {
+      "topic": "AI threat detection: anomaly-based intrusion detection",
+      "area": "threat",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] An overview of anomaly detection techniques: Existing solutions and latest technological trends",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] As advances in networking technology help to connect the distant corners of the globe and as the Internet continues to e"
+      ],
+      "latency": 9.216268539428711
+    },
+    {
+      "topic": "Malware classification: deep learning for detection",
+      "area": "threat",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] A New Malware Classification Framework Based on Deep Learning Algorithms",
+        "[exa-h] This research work investigates comprehensive machine learning and deep learning techniques for malware classification, "
+      ],
+      "latency": 7.6429784297943115
+    },
+    {
+      "topic": "Phishing detection: NLP-based email security",
+      "area": "threat",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] such advanced threats. This research proposes an approach to detect phishing attacks on email systems, which deploys \nna"
+      ],
+      "latency": 9.571462631225586
+    },
+    {
+      "topic": "Network traffic analysis: AI for DDoS prevention",
+      "area": "threat",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Mitigating DDoS Attacks via AI Detection and SDN Response",
+        "[exa] Detecting and Mitigating DDoS Attacks with AI: A Survey - ADS",
+        "[exa-h] The purpose of this work is to present a conceptual work of architecture that will monitor the network traffic, analyze "
+      ],
+      "latency": 7.715444087982178
+    },
+    {
+      "topic": "Vulnerability assessment AI: CVE analysis, prioritization",
+      "area": "vulnerability",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Vulnerability Priority Rating: Boost risk prioritization with AI-driven insights",
+        "[exa] Rapid7 Fills Gaps in the CVE Assessment Process with AI-Generated Vulnerability Scoring in Exposure Command",
+        "[exa-h] ### Exploit likelihood modeling\n\nVPR leverages artificial intelligence, machine learning and real-world exploit data to "
+      ],
+      "latency": 8.506556987762451
+    },
+    {
+      "topic": "Penetration testing AI: automated red team tools",
+      "area": "vulnerability",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PentestGPT - Autonomous Penetration Testing",
+        "[exa] Automated targeted penetration testing for\u00a0 security teams",
+        "[exa-h] Autonomous penetration testing powered by large language models.\nFrom reconnaissance to exploitation, fully automated.\n["
+      ],
+      "latency": 9.247636556625366
+    },
+    {
+      "topic": "Code security scanning: SAST/DAST with AI",
+      "area": "vulnerability",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Find, prioritize, and auto-fix issues with dev-focused SAST solutions",
+        "[exa] Responsible use of Copilot Autofix for code scanning",
+        "[exa-h] Find and auto-fix the most critical unsafe code up to 50x faster, with pre-validated fixes from a static application sec"
+      ],
+      "latency": 8.222796440124512
+    },
+    {
+      "topic": "Fuzzing with AI: intelligent test case generation",
+      "area": "vulnerability",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] > Generation-based fuzzing produces appropriate test cases according to specifications of input grammars and semantic co"
+      ],
+      "latency": 7.365467309951782
+    },
+    {
+      "topic": "SOAR platforms: security orchestration, automation",
+      "area": "soc",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Security Orchestration, Automation, and Response (SOAR)",
+        "[exa] Security Orchestration, Automation, and Response (SOAR)",
+        "[exa-h] Security orchestration, automation, and response (SOAR) is a category of security solutions that integrate and automate "
+      ],
+      "latency": 7.837122440338135
+    },
+    {
+      "topic": "Alert triage AI: reducing alert fatigue",
+      "area": "soc",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa] Alert fatigue reduction with AI agents",
+        "[exa-h] a phenomenon known as alert fatigue. Large collections of imprecise sensors, an inability to adapt to known false positi"
+      ],
+      "latency": 11.406333446502686
+    },
+    {
+      "topic": "Incident response automation: playbook execution",
+      "area": "soc",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automate threat response with playbooks in Microsoft Sentinel",
+        "[exa] Automate and run Microsoft Sentinel playbooks",
+        "[exa-h] Security operations centers (SOCs) face a constant stream of security alerts and incidents. Managing these efficiently i"
+      ],
+      "latency": 8.535629749298096
+    },
+    {
+      "topic": "Threat intelligence: AI-driven CTI platforms",
+      "area": "soc",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Announcing Threat AI: Security\u2019s First Agentic Threat Intelligence System",
+        "[exa] Know your adversary. Stop the breach.",
+        "[exa-h] CrowdStrike is unveiling groundbreaking innovations across Counter Adversary Operations. Threat AI, a system of AI-power"
+      ],
+      "latency": 9.098179578781128
+    },
+    {
+      "topic": "AI fraud detection: behavioral biometrics, anomalies",
+      "area": "identity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Behavioral analytics for fraud detection",
+        "[exa] AI-Driven Real-Time Fraud Detection in Digital Banking Using Explainable Graph Neural Networks and Behavioral Biometrics",
+        "[exa-h] Behavioral analytics is anonymized data that focuses on identifying a user\u2019s digital intent. Behavioral biometrics build"
+      ],
+      "latency": 9.01561450958252
+    },
+    {
+      "topic": "User behavior analytics: insider threat detection",
+      "area": "identity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Advanced threat detection with User and Entity Behavior Analytics (UEBA) in Microsoft Sentinel",
+        "[exa] User and Entity Behavior Analytics (UEBA)",
+        "[exa-h] As Microsoft Sentinel collects logs and alerts from all of your connected data sources, UEBA uses artificial intelligenc"
+      ],
+      "latency": 10.35859751701355
+    },
+    {
+      "topic": "Identity verification: AI-powered KYC, liveness",
+      "area": "identity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Confidently Onboard Good Customers",
+        "[exa] Biometric Verification",
+        "[exa-h] Defend against injection attacks, synthetic identities and deepfakes with liveness detection for biometrics and ID docum"
+      ],
+      "latency": 6.772301435470581
+    },
+    {
+      "topic": "Zero trust AI: continuous authentication models",
+      "area": "identity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Abstract\nZero Trust Security Architectures (ZTSA) represent a paradigm shift in cybersecurity by eliminating implicit tr"
+      ],
+      "latency": 8.613820791244507
+    },
+    {
+      "topic": "CrowdStrike Falcon: AI endpoint protection",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CrowdStrike Falcon\u00ae AI Detection and Response Data Sheet",
+        "[exa] The Agentic Security Platform. \nUnified and built to secure the AI revolution.",
+        "[exa-h] With one lightweight sensor and one console, Falcon AIDR protects every part of your AI ecosystem: endpoints, applicatio"
+      ],
+      "latency": 8.514067649841309
+    },
+    {
+      "topic": "Darktrace: autonomous cyber AI defense",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Securing AI Starts",
+        "[exa] The essential cybersecurity platform",
+        "[exa-h] Rather than teaching an AI system what an \u2018attack\u2019 looks like, training it on large data lakes of thousands of organizat"
+      ],
+      "latency": 4.743530750274658
+    },
+    {
+      "topic": "SentinelOne: AI-powered EDR/XDR",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Singularity \u2122  Platform",
+        "[exa] Singularity \u2122  XDR",
+        "[exa-h] [] \n#### 96% Would Recommend for EDR and EPP\n* 4.8/5 rating for endpoint protection platforms and endpoint detection and"
+      ],
+      "latency": 4.635206460952759
+    },
+    {
+      "topic": "Snyk: AI-assisted developer security",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Snyk AI Security Platform",
+        "[exa] Innovate with AI. Securely.",
+        "[exa-h] Snyk\u2019s AI-native and agentic platform helps organizations secure and govern development to unleash productivity, reduce "
+      ],
+      "latency": 4.660269498825073
+    }
+  ]
+}

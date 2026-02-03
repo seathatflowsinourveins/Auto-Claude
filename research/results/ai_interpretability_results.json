@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:40:57.180515",
+  "stats": {
+    "sources": 197,
+    "vectors": 197,
+    "findings": 91
+  },
+  "results": [
+    {
+      "topic": "Mechanistic interpretability: reverse engineering",
+      "area": "mechanistic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 2 Open problems in mechanistic interpretability methods and foundations 7\n2.1 Reverse engineering: Identifying the roles"
+      ],
+      "latency": 8.644548892974854
+    },
+    {
+      "topic": "Circuits: feature circuits in neural nets",
+      "area": "mechanistic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding neural networks through sparse circuits",
+        "[exa] ",
+        "[exa-h] ![Diagram comparing dense circuits and sparse circuits. The dense version shows two rows of nodes with many interconnect"
+      ],
+      "latency": 8.733733892440796
+    },
+    {
+      "topic": "Superposition: feature superposition",
+      "area": "mechanistic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Superposition principle",
+        "[exa-h] > Neural networks often pack many unrelated concepts into a single neuron - a puzzling phenomenon known as 'polysemantic"
+      ],
+      "latency": 4.544890880584717
+    },
+    {
+      "topic": "Induction heads: in-context learning mechanism",
+      "area": "mechanistic",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] On the Emergence of Induction Heads for In-Context Learning",
+        "[exa-h] > \"Induction heads\" are attention heads that implement a simple algorithm to complete token sequences like [A][B] ... [A"
+      ],
+      "latency": 8.203415632247925
+    },
+    {
+      "topic": "Feature visualization: understanding neurons",
+      "area": "features",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Feature Visualization",
+        "[exa] ",
+        "[exa-h] As it matures, two major threads of research have begun to coalesce: feature visualization and attribution.\n![]![] \n**Fe"
+      ],
+      "latency": 3.895439863204956
+    },
+    {
+      "topic": "Sparse autoencoders: feature extraction",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] A novel sparse auto-encoder for deep unsupervised learning | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] arXiv reCAPTCHA\n[![Cornell University]] \n[We gratefully acknowledge support from\nthe Simons Foundation and member instit"
+      ],
+      "latency": 7.98352837562561
+    },
+    {
+      "topic": "Activation patching: causal intervention",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Towards Best Practices of Activation Patching in Language Models: Metrics and Methods",
+        "[exa-h] Activation patching (also referred to as Interchange Intervention, Causal Tracing, Resample Ablation,\nor Causal Mediatio"
+      ],
+      "latency": 9.502586364746094
+    },
+    {
+      "topic": "Probing: linear probes for concepts",
+      "area": "features",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] Understanding intermediate layers using linear classifier probes",
+        "[exa-h] The initial motivation for linear classifier probes was related to a reflection about the nature of\ninformation (in the "
+      ],
+      "latency": 5.197461366653442
+    },
+    {
+      "topic": "Attribution methods: saliency, gradient",
+      "area": "attribution",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We study the problem of attributing the prediction of a deep network to its input features, a problem previously studi"
+      ],
+      "latency": 9.180996894836426
+    },
+    {
+      "topic": "SHAP: Shapley values for ML",
+      "area": "attribution",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to the SHAP documentation \uf0c1",
+        "[exa] Welcome to the SHAP documentation \uf0c1",
+        "[exa-h] any machine learning model. It connects optimal credit allocation with local explanations\nusing the classic Shapley valu"
+      ],
+      "latency": 9.524415731430054
+    },
+    {
+      "topic": "Integrated gradients: feature importance",
+      "area": "attribution",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Axiomatic Attribution for Deep Networks",
+        "[exa-h] 3. Our Method: Integrated Gradients\nWe are now ready to describe our technique. Intuitively,\nour technique combines the "
+      ],
+      "latency": 9.684863567352295
+    },
+    {
+      "topic": "Attention visualization: transformer interpretation",
+      "area": "attribution",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Human-Computer Interaction",
+        "[exa-h] present a new visualization technique designed to help researchers understand the self-attention mechanism in transforme"
+      ],
+      "latency": 8.856770277023315
+    },
+    {
+      "topic": "TransformerLens: mechanistic analysis",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] TransformerLens #",
+        "[exa] Getting Started #",
+        "[exa-h] This is a library for doing [mechanistic interpretability] of GPT-2 Style language models. The goal of mechanistic inter"
+      ],
+      "latency": 4.670315742492676
+    },
+    {
+      "topic": "Captum: PyTorch interpretability",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Captum \u00b7 Model Interpretability for PyTorch",
+        "[exa] Captum Tutorials",
+        "[exa-h] Supports most types of PyTorch models and can be used with minimal modification to the original neural network.\n![] \n## "
+      ],
+      "latency": 4.637407302856445
+    },
+    {
+      "topic": "LIME: local interpretable explanations",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] \u201cWhy Should I Trust you?\u201d Explaining the Predictions of Any Classifier",
+        "[exa-h] can be used to transform an untrustworthy model or prediction into a trustworthy one. In this work, we propose LIME, a n"
+      ],
+      "latency": 4.392754077911377
+    },
+    {
+      "topic": "Anthropic interpretability: research tools",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing Bloom: an open source tool for automated behavioral evaluations",
+        "[exa] Open-sourcing circuit tracing tools",
+        "[exa-h] ## Related content\n### How AI assistance impacts the formation of coding skills\n[Read more] \n### Disempowerment patterns"
+      ],
+      "latency": 3.679093360900879
+    },
+    {
+      "topic": "Scaling monosemanticity: dictionary learning",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Towards Monosemanticity: Decomposing Language Models With Dictionary Learning",
+        "[exa] ",
+        "[exa-h] In Toy Models of Superposition, we described [three strategies] \u00a0to finding a sparse and interpretable set of features i"
+      ],
+      "latency": 5.49713397026062
+    },
+    {
+      "topic": "Polysemanticity: neurons multiple meanings",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic encoding during language comprehension at single-cell resolution",
+        "[exa] Semantic encoding during language comprehension at single-cell resolution",
+        "[exa-h] ## Selectivity of neurons to specific word meanings"
+      ],
+      "latency": 3.642174005508423
+    },
+    {
+      "topic": "Toy models: understanding simple systems",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Underactuated Robotics",
+        "[exa] A Toy Model of Thermodynamic Behavior",
+        "[exa-h] Why a pendulum? In part, because the dynamics of a majority of our\nmulti-link robotics manipulators are simply the dynam"
+      ],
+      "latency": 7.892374277114868
+    },
+    {
+      "topic": "Interpretability at scale: large models",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Machine learning (ML) and natural language processing\n(NLP) have seen a rapid expansion in recent years, due\nto the avai"
+      ],
+      "latency": 11.222911596298218
+    }
+  ]
+}

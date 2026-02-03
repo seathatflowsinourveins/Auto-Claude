@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:22:12.699385",
+  "stats": {
+    "sources": 197,
+    "vectors": 197,
+    "findings": 94
+  },
+  "results": [
+    {
+      "topic": "GPT-4 Turbo: latest OpenAI model capabilities",
+      "area": "openai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Models | OpenAI API",
+        "[exa] GPT-4 Turbo Model | OpenAI API",
+        "[exa-h] GPT-4o mini Realtime\nSmaller realtime model for text and audio inputs and outputs\n] [\nGPT-4o Realtime\nModel capable of r"
+      ],
+      "latency": 6.201582670211792
+    },
+    {
+      "topic": "GPT-4 Vision: multimodal understanding",
+      "area": "openai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] GPT-4V(ision) system card",
+        "[exa] ",
+        "[exa-h] GPT\u20114 with vision (GPT\u20114V) enables users to instruct GPT\u20114 to analyze image inputs provided by the user, and is the late"
+      ],
+      "latency": 7.05624794960022
+    },
+    {
+      "topic": "GPT-4o: omni model, voice, vision",
+      "area": "openai",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Hello GPT-4o",
+        "[exa] ",
+        "[exa-h] GPT\u20114o (\u201co\u201d for \u201comni\u201d) is a step towards much more natural human-computer interaction\u2014it accepts as input any combinati"
+      ],
+      "latency": 4.4973485469818115
+    },
+    {
+      "topic": "OpenAI o1: reasoning models, chain of thought",
+      "area": "openai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reasoning models",
+        "[exa] Learning to reason with LLMs",
+        "[exa-h] **Reasoning models**like[GPT-5] are LLMs trained with reinforcement learning to perform reasoning. Reasoning models[thin"
+      ],
+      "latency": 4.646840333938599
+    },
+    {
+      "topic": "Claude 3 Opus: Anthropic flagship model",
+      "area": "anthropic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Claude 3 Opus, our most intelligent model, sets a new standard on measures of reasoning, math, and coding.\nBoth Opus and"
+      ],
+      "latency": 3.833635091781616
+    },
+    {
+      "topic": "Claude 3.5 Sonnet: balanced performance",
+      "area": "anthropic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Claude 3.5 Sonnet Benchmark: The Complete Performance Analysis and User Guide",
+        "[exa] Claude 3.5 Sonnet Benchmark: The Complete Performance Analysis and User Guide",
+        "[exa-h] ## What Makes Claude 3.5 Sonnet Special?\nClaude 3.5 Sonnet represents a breakthrough in balancing**intelligence with eff"
+      ],
+      "latency": 8.104953289031982
+    },
+    {
+      "topic": "Claude Haiku: fast, efficient model",
+      "area": "anthropic",
+      "sources": 8,
+      "vectors": 8,
+      "findings": [
+        "[exa] Choosing the right model",
+        "[exa] Claude 3 Haiku",
+        "[exa-h] For many applications, starting with a faster, more cost-effective model like Claude Haiku 4.5 can be the optimal approa"
+      ],
+      "latency": 8.260948181152344
+    },
+    {
+      "topic": "Constitutional AI: Anthropic safety approach",
+      "area": "anthropic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Claude\u2019s Constitution",
+        "[exa] ",
+        "[exa-h] ### Our approach to Claude\u2019s constitution"
+      ],
+      "latency": 3.6637380123138428
+    },
+    {
+      "topic": "Gemini Ultra: Google largest model",
+      "area": "google",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing Gemini: our largest and most capable AI model",
+        "[exa] ",
+        "[exa-h] * **Gemini Ultra**\u2014 our largest and most capable model for highly complex tasks.\n* **Gemini Pro**\u2014 our best model for sc"
+      ],
+      "latency": 3.7418086528778076
+    },
+    {
+      "topic": "Gemini Pro: Google production model",
+      "area": "google",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Gemini 2.5 Pro Preview Model Card",
+        "[exa-h] Last updated: June 27, 2025\nModel Information\nDescription: Gemini 2.5 Pro is the next iteration in the Gemini 2.0 series"
+      ],
+      "latency": 4.8931872844696045
+    },
+    {
+      "topic": "Gemini Flash: Google fast inference",
+      "area": "google",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gemini models",
+        "[exa] Gemini 3 Flash: frontier intelligence built for speed",
+        "[exa-h] FAST AND INTELLIGENT\n## Gemini 2.5 Flash\nOur best model in terms of price-performance, offering well-rounded capabilitie"
+      ],
+      "latency": 6.5983288288116455
+    },
+    {
+      "topic": "PaLM 2: Google foundational LLM",
+      "area": "google",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing PaLM 2",
+        "[exa] ",
+        "[exa-h] ## Introducing PaLM 2\nBuilding on[this work], today we\u2019re introducing[PaLM 2], our next generation language model. PaLM "
+      ],
+      "latency": 9.229945421218872
+    },
+    {
+      "topic": "Llama 3: Meta open source LLM",
+      "area": "open",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Llama 3",
+        "[exa] Introducing Meta Llama 3: The most capable openly available LLM to date",
+        "[exa-h] Llama includes multilingual text-only models (1B, 3B), including quantized versions, text-image models (11B, 90B) and Ll"
+      ],
+      "latency": 5.942879676818848
+    },
+    {
+      "topic": "Mistral Large: European open model",
+      "area": "open",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing   Mistral 3",
+        "[exa] Mistral's latest open-source release bets on smaller models over large ones - here's why",
+        "[exa-h] Today, we announce Mistral 3, the next generation of Mistral models. Mistral 3 includes three state-of-the-art small, de"
+      ],
+      "latency": 5.736294746398926
+    },
+    {
+      "topic": "Mixtral: mixture of experts model",
+      "area": "open",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Twenty Years of Mixture of Experts",
+        "[exa-h] # Title:Mixtral of Experts"
+      ],
+      "latency": 6.050266742706299
+    },
+    {
+      "topic": "Command R+: Cohere open model",
+      "area": "open",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cohere\u2019s Command R+ Model",
+        "[exa] Cohere\u2019s Command R+ Model",
+        "[exa-h] * [Command R+ August 2024 Release] \n* [Unique Command R+ Model Capabilities] \n* [Multilingual Capabilities] \n* [Retrieva"
+      ],
+      "latency": 6.982792615890503
+    },
+    {
+      "topic": "Stable Diffusion 3: latest image generation",
+      "area": "specialized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stable Diffusion 3: Research Paper",
+        "[exa] Our most powerful image model yet.",
+        "[exa-h] * Today, we\u2019re publishing our[research paper] that dives into the underlying technology powering Stable Diffusion 3.\n* S"
+      ],
+      "latency": 7.390786170959473
+    },
+    {
+      "topic": "DALL-E 3: OpenAI image model",
+      "area": "specialized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] DALL\u00b7E 3 Model | OpenAI API",
+        "[exa] DALL\u00b7E 3 | OpenAI",
+        "[exa-h] DALL\u00b7E is an AI system that creates realistic images and art from a natural language description. DALL\u00b7E 3 currently sup"
+      ],
+      "latency": 8.46705937385559
+    },
+    {
+      "topic": "Whisper v3: speech recognition model",
+      "area": "specialized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] openai \n\t \n\t\t / \n\n whisper-large-v3 \n\t \n\t\t \n\t\t\t \n\n\t\t\n\t\t like \n\t 5.36k \n\n \n\t \n\t\t\t Follow \n\t\t \n\t\t OpenAI \n\t 31.1k",
+        "[exa] gallionlabs \n\t \n\t\t / \n\n whisper-large-v3 \n\t \n\t\t \n\t\t\t \n\n\t\t\n\t\t like \n\t 0",
+        "[exa-h] Whisper is a state-of-the-art model for automatic speech recognition (ASR) and speech translation, proposed in the paper"
+      ],
+      "latency": 7.541693449020386
+    },
+    {
+      "topic": "CodeLlama: Meta code generation",
+      "area": "specialized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Code Llama, a state-of-the-art large language model for coding",
+        "[exa] Code Llama: Open Foundation Models for Code",
+        "[exa-h] Code Llama is a code-specialized version of Llama 2 that was created by further training Llama 2 on its code-specific da"
+      ],
+      "latency": 5.400805950164795
+    }
+  ]
+}

@@ -13,7 +13,7 @@ Creates an audit trail of all Write and Edit operations.
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict
 
@@ -24,7 +24,7 @@ def get_log_file() -> Path:
     log_dir.mkdir(parents=True, exist_ok=True)
     
     # Daily log rotation
-    today = datetime.utcnow().strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     return log_dir / f"audit_{today}.jsonl"
 
 
@@ -79,7 +79,7 @@ def main():
     
     # Create audit event
     event = {
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "session_id": session_id,
         "tool": tool_name,
         "file_path": file_info["file_path"],

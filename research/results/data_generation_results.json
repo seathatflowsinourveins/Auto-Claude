@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:51:09.888261",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "LLM data generation: synthetic training",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Synthetic data generation has recently emerged as a promising approach for enhancing the capabilities of large languag"
+      ],
+      "latency": 10.042700290679932
+    },
+    {
+      "topic": "Self-instruct: automated instruction",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Self-Instruct: Aligning Language Models with Self-Generated Instructions - ACL Anthology",
+        "[exa-h] We introduce Self-Instruct, a framework for improving the instruction-following capabilities of pretrained language mode"
+      ],
+      "latency": 7.786602973937988
+    },
+    {
+      "topic": "Evol-Instruct: complexity evolution",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantitative Biology > Populations and Evolution",
+        "[exa] ",
+        "[exa-h] > We study open-ended evolution by focusing on computational and information-processing dynamics underlying major evolut"
+      ],
+      "latency": 8.156353950500488
+    },
+    {
+      "topic": "WizardLM: instruction generation",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] creating large amounts of instruction data with varying levels of complexity using\nLLM instead of humans. Starting with "
+      ],
+      "latency": 7.231135606765747
+    },
+    {
+      "topic": "Data filtering: quality control",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Biodiversity Data Use",
+        "[exa] ",
+        "[exa-h] All searches have a set of filters that can be used for finding the data you need, and occurrence searches have a set of"
+      ],
+      "latency": 8.416805982589722
+    },
+    {
+      "topic": "Decontamination: benchmark leakage",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Guide for Decontaminating Buildings, Structures, and Equipment at Superfund Sites",
+        "[exa] ",
+        "[exa-h] This report presents information on decontamination of buildings, struc-\ntures, and equipment at Superfund sites. Decont"
+      ],
+      "latency": 6.326160192489624
+    },
+    {
+      "topic": "Diversity sampling: coverage",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A toolkit for capturing a representative and equitable sample in health research",
+        "[exa] Statistical Quality Standard A3: Developing and Implementing a Sample Design",
+        "[exa-h] REP-EQUITY toolkit describes seven steps for investigators to consider in facilitating representative and equitable samp"
+      ],
+      "latency": 9.135972499847412
+    },
+    {
+      "topic": "Human verification: labeling",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cost-effective data labeling at scale",
+        "[exa] Human labeling",
+        "[exa-h] ###### hCaptcha is designed to solve the most labor intensive problem in machine learning; labeling massive amounts of d"
+      ],
+      "latency": 8.937171459197998
+    },
+    {
+      "topic": "Text augmentation: paraphrasing",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Paraphrase Generation: A Survey of the State of the Art - ACL Anthology",
+        "[exa-h] Thompson and Post, 2020a), and semantic pars\u0002ing (Berant and Liang, 2014; Cao et al., 2020).\nAnd it is also a good way f"
+      ],
+      "latency": 7.955672025680542
+    },
+    {
+      "topic": "Back-translation: multilingual",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding Back-Translation at Scale - ACL Anthology",
+        "[exa] ",
+        "[exa-h] An effective method to improve neural machine translation with monolingual data is to augment the parallel training corp"
+      ],
+      "latency": 10.558642387390137
+    },
+    {
+      "topic": "Style transfer: domain adaptation",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > Gatys et al. recently introduced a neural algorithm that renders a content image in the style of another image, achiev"
+      ],
+      "latency": 8.105932712554932
+    },
+    {
+      "topic": "Noise injection: robustness",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Implicit adversarial data augmentation and robustness with Noise-based Learning",
+        "[exa-h] > We introduce Noise Injection Node Regularization (NINR), a method of injecting structured noise into Deep Neural Netwo"
+      ],
+      "latency": 6.46117091178894
+    },
+    {
+      "topic": "OpenHermes: synthetic chat",
+      "area": "datasets",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Datasets: \n\t\t\t\t \n\t\t\t \n\n\t\t\t\n\n \n\t \n\t \n\t\t\n\n teknium \n\t \n\t\t / \n\n OpenHermes-2.5 \n\t \n\t\t \n\t\t\t \n\n\t\t\n\t\t like \n\t 793",
+        "[exa] Datasets: \n\t\t\t\t \n\t\t\t \n\n\t\t\t\n\n \n\t \n\t \n\t\t\n\n teknium \n\t \n\t\t / \n\n OpenHermes-2.5 \n\t \n\t\t \n\t\t\t \n\n\t\t\n\t\t like \n\t 777",
+        "[exa-h] \"value\": \"This is a chat between 2 characters: Luciano, Alexander Hamilton\\\\n\\\\nLuciano: Meet our charismatic male chef,"
+      ],
+      "latency": 6.837000846862793
+    },
+    {
+      "topic": "Capybara: curated instruction",
+      "area": "datasets",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learn  coding  and create mesmerizing  \n         AR experiences",
+        "[exa] How to Play Capybara Go",
+        "[exa-h] Your browser does not support the video tag.Your browser does not support the video tag.\nEasy as Drag-and-Drop\nYour brow"
+      ],
+      "latency": 6.478672027587891
+    },
+    {
+      "topic": "SlimOrca: deduplicated data",
+      "area": "datasets",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] slimorca_dataset \u2014 torchtune 0.5 documentation",
+        "[exa] slimorca_dataset \u2014 TorchTune documentation",
+        "[exa-h] Support for [SlimOrca-style] \nfamily of conversational datasets."
+      ],
+      "latency": 6.838186979293823
+    },
+    {
+      "topic": "Airoboros: GPT-4 generated",
+      "area": "datasets",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] ",
+        "[exa-h] Resetting focus\nYou signed in with another tab or window.[Reload] to refresh your session.You signed out in another tab "
+      ],
+      "latency": 9.877839803695679
+    },
+    {
+      "topic": "Privacy synthetic: differential privacy",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa] Differential privacy",
+        "[exa-h] (DP) is a well established framework for reasoning about and limiting information leakage, and is a gold standard for pr"
+      ],
+      "latency": 9.922232389450073
+    },
+    {
+      "topic": "PII removal: sensitive data",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Guidance Regarding Methods for De-identification of Protected Health Information in Accordance with the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule",
+        "[exa] De-Identifying Government Datasets: Techniques and Governance",
+        "[exa-h] (ii) Documents the methods and results of the analysis that justify such determination; or\n***The second is the \u201cSafe Ha"
+      ],
+      "latency": 8.378939867019653
+    },
+    {
+      "topic": "Federated data: distributed training",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Federated learning",
+        "[exa] TensorFlow Federated",
+        "[exa-h] **Federated learning**(also known as**collaborative learning**) is a[machine learning] technique in a setting where mult"
+      ],
+      "latency": 12.466077089309692
+    },
+    {
+      "topic": "Anonymization: data protection",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Anonymisation",
+        "[exa] About this guidance",
+        "[exa-h] * [What is identifiability?] \n* [What are the key indicators of identifiability?] \n* [What is the \u201cspectrum of identifia"
+      ],
+      "latency": 8.838769435882568
+    }
+  ]
+}

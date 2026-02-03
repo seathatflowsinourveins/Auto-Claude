@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:09:49.605357",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 79
+  },
+  "results": [
+    {
+      "topic": "SHAP: Shapley values for feature importance",
+      "area": "local",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to the SHAP documentation \uf0c1",
+        "[exa] Welcome to the SHAP documentation \uf0c1",
+        "[exa-h] any machine learning model. It connects optimal credit allocation with local explanations\nusing the classic Shapley valu"
+      ],
+      "latency": 6.296740531921387
+    },
+    {
+      "topic": "LIME: local interpretable model explanations",
+      "area": "local",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] \u201cWhy Should I Trust you?\u201d Explaining the Predictions of Any Classifier",
+        "[exa-h] can be used to transform an untrustworthy model or prediction into a trustworthy one. In this work, we propose LIME, a n"
+      ],
+      "latency": 4.636772155761719
+    },
+    {
+      "topic": "Attention visualization: transformer interpretability",
+      "area": "local",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Human-Computer Interaction",
+        "[exa-h] present a new visualization technique designed to help researchers understand the self-attention mechanism in transforme"
+      ],
+      "latency": 4.513455629348755
+    },
+    {
+      "topic": "Saliency maps: gradient-based explanations",
+      "area": "local",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Conference item",
+        "[exa-h] > This paper addresses the visualisation of image classification models, learnt using deep Convolutional Networks (ConvN"
+      ],
+      "latency": 5.063062906265259
+    },
+    {
+      "topic": "Feature importance: global model explanations",
+      "area": "global",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding Global Feature Contributions With Additive Importance Measures - ADS",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] Understanding the inner workings of complex machine learning models is a long-standing problem and most recent research "
+      ],
+      "latency": 5.578034400939941
+    },
+    {
+      "topic": "Decision trees: inherently interpretable models",
+      "area": "global",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] 9 \u00a0  Decision Tree",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Decision trees are very interpretable \u2013as long as they are short.**The number of terminal nodes increases quickly with d"
+      ],
+      "latency": 6.091401100158691
+    },
+    {
+      "topic": "Rule extraction: converting neural nets to rules",
+      "area": "global",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NN2Rules: Extracting Rule List from Neural Networks - ADS",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] We present an algorithm, NN2Rules, to convert a trained neural network into a rule list. Rule lists are more interpretab"
+      ],
+      "latency": 3.5511484146118164
+    },
+    {
+      "topic": "Concept-based explanations: high-level features",
+      "area": "global",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Let's confirm you are human",
+        "[exa] Towards Automatic Concept-based Explanations",
+        "[exa-h] Complete the security check before continuing. This step verifies that you are not a bot, which helps to protect your ac"
+      ],
+      "latency": 5.694890022277832
+    },
+    {
+      "topic": "Chain-of-thought: reasoning transparency",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > We explore how generating a chain of thought -- a series of intermediate reasoning steps -- significantly improves the"
+      ],
+      "latency": 4.8050360679626465
+    },
+    {
+      "topic": "Mechanistic interpretability: neural circuits",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Circuit Tracing: Revealing Computational Graphs in Language Models",
+        "[exa-h] > Through considerable effort and intuition, several recent works have reverse-engineered nontrivial behaviors of transf"
+      ],
+      "latency": 3.7430498600006104
+    },
+    {
+      "topic": "Probing classifiers: understanding representations",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding intermediate layers using linear classifier probes - ADS",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] Neural network models have a reputation for being black boxes. We propose to monitor the features at every layer of a mo"
+      ],
+      "latency": 3.5992414951324463
+    },
+    {
+      "topic": "Attribution methods: token importance",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] A significant challenge in designing an attribution tech\u0002nique is that they are hard to evaluate empirically. As we\ndisc"
+      ],
+      "latency": 4.6343865394592285
+    },
+    {
+      "topic": "Algorithmic fairness: bias detection, mitigation",
+      "area": "fairness",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Fairness and machine learning",
+        "[exa] AI Fairness 360: An extensible toolkit for detecting and mitigating algorithmic bias",
+        "[exa-h] 4|[Relative notions of\nfairness] |[PDF] |\n|We explore the normative underpinnings of objections to systematic\ndifference"
+      ],
+      "latency": 5.25148606300354
+    },
+    {
+      "topic": "Fairness metrics: demographic parity, equalized odds",
+      "area": "fairness",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > We propose a criterion for discrimination against a specified sensitive attribute in supervised learning, where the go"
+      ],
+      "latency": 4.320697784423828
+    },
+    {
+      "topic": "Counterfactual fairness: causal reasoning",
+      "area": "fairness",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Counterfactual Fairness",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] orientation. Since this past data may be biased, machine learning predictors must account for this to avoid perpetuating"
+      ],
+      "latency": 4.380330324172974
+    },
+    {
+      "topic": "Bias auditing: model assessment tools",
+      "area": "fairness",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Bias and Fairness Audit Toolkit for Machine Learning \u00b6",
+        "[exa] AI Fairness 360",
+        "[exa-h] Aequitas is an open-source bias audit toolkit for machine learning developers, analysts, and policymakers to audit machi"
+      ],
+      "latency": 4.385216951370239
+    },
+    {
+      "topic": "Captum: PyTorch interpretability library",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Captum \u00b7 Model Interpretability for PyTorch",
+        "[exa] Captum API Reference \u00b6",
+        "[exa-h] Supports most types of PyTorch models and can be used with minimal modification to the original neural network.\n![] \n## "
+      ],
+      "latency": 4.248466491699219
+    },
+    {
+      "topic": "What-If Tool: Google model exploration",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What-If Tool",
+        "[exa] What-If Tool",
+        "[exa-h] Using WIT, you can test performance in hypothetical situations, analyze the importance of different data features, and v"
+      ],
+      "latency": 5.692793846130371
+    },
+    {
+      "topic": "AI Act compliance: European AI regulation",
+      "area": "tools",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] AI Act | Shaping Europe\u2019s digital future",
+        "[exa] ",
+        "[exa-h] The[AI Act] (Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence) is the first-ever compre"
+      ],
+      "latency": 3.6559462547302246
+    },
+    {
+      "topic": "Model cards: documentation for transparency",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Model Cards Explained",
+        "[exa] ",
+        "[exa-h] Model cards are simple, structured overviews of how an advanced AI model was designed and evaluated, and serve as key ar"
+      ],
+      "latency": 4.631880283355713
+    }
+  ]
+}

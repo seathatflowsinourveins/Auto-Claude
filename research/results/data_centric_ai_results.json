@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:36:38.916066",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 87
+  },
+  "results": [
+    {
+      "topic": "Data quality: cleaning, validation, consistency",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] AMP Lab \u2013 UC Berkeley",
+        "[exa-h] In this tutorial, we shed some light on some of the founda\u0002tional aspects and trends in qualitative data cleaning effort"
+      ],
+      "latency": 5.319053649902344
+    },
+    {
+      "topic": "Data profiling: understanding datasets",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome - YData Profiling",
+        "[exa] About data profiling \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] `ydata-profiling`is a leading package for data profiling, that automates and standardizes the generation of detailed rep"
+      ],
+      "latency": 4.62720251083374
+    },
+    {
+      "topic": "Data drift: distribution shift detection",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > When monitoring machine learning systems, two-sample tests of homogeneity form the foundation upon which existing appr"
+      ],
+      "latency": 8.696757793426514
+    },
+    {
+      "topic": "Data versioning: DVC, dataset management",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Get Started with DVC",
+        "[exa] DVC Project",
+        "[exa-h] [Data Pipelines] [Metrics, Parameters, and Plots] \n[Experiment Management] \n[Experiment Tracking] [Experimenting Using P"
+      ],
+      "latency": 4.2374255657196045
+    },
+    {
+      "topic": "Data labeling: annotation best practices",
+      "area": "labeling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data Labeling: The Authoritative Guide",
+        "[exa] Data annotation guidelines and best practices",
+        "[exa-h] This guide focuses on the most common types of data labels and the best practices for high quality so that you can get t"
+      ],
+      "latency": 3.402588129043579
+    },
+    {
+      "topic": "Weak supervision: programmatic labeling",
+      "area": "labeling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] data programming in which users express weak supervision strategies or domain heuristics as labeling functions, which ar"
+      ],
+      "latency": 4.957119464874268
+    },
+    {
+      "topic": "Label noise: handling noisy labels",
+      "area": "labeling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learning with Noisy Labels",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Do not remove: This comment is monitored to verify that the site is working properly"
+      ],
+      "latency": 10.237719774246216
+    },
+    {
+      "topic": "Crowdsourcing: scale labeling",
+      "area": "labeling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data Engine",
+        "[exa] Getting Started with Scale",
+        "[exa-h] Data engine is the process of improving machine learning models with high quality, diverse and large datasets powered by"
+      ],
+      "latency": 7.665783882141113
+    },
+    {
+      "topic": "Data augmentation: expanding training data",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] A survey on Image Data Augmentation for Deep Learning",
+        "[exa-h] > Data augmentation is a series of techniques that generate high-quality artificial data by manipulating existing data s"
+      ],
+      "latency": 7.178035736083984
+    },
+    {
+      "topic": "Text augmentation: paraphrase, backtranslation",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] et al., 2018a,b). Besides monolingual data, var\u0002ious approaches have been introduced to benefit\nfrom parallel data in ot"
+      ],
+      "latency": 3.714728593826294
+    },
+    {
+      "topic": "Image augmentation: transforms, mixup",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to use CutMix and MixUp \u00b6",
+        "[exa] ",
+        "[exa-h] * [![]] \nShortcuts\n# How to use CutMix and MixUp[\u00b6] \nNote\nTry on[Colab] or[go to the end] to download the full example c"
+      ],
+      "latency": 8.455461740493774
+    },
+    {
+      "topic": "Synthetic data generation: AI-created data",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > The recent surge in research focused on generating synthetic data from large language models (LLMs), especially for sc"
+      ],
+      "latency": 9.219119787216187
+    },
+    {
+      "topic": "Dataset curation: selection, filtering",
+      "area": "curation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] How to Appraise and Select Research Data for Curation",
+        "[exa-h] > Selecting high-quality pre-training data is important for creating capable language models, but existing methods rely "
+      ],
+      "latency": 9.854217529296875
+    },
+    {
+      "topic": "Deduplication: removing duplicates",
+      "area": "curation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Find and remove duplicates",
+        "[exa] What Is Data Deduplication? Methods and Benefits",
+        "[exa-h] Sometimes duplicate data is useful, sometimes it just makes it harder to understand your data. Use conditional formattin"
+      ],
+      "latency": 8.70665717124939
+    },
+    {
+      "topic": "Data pruning: removing unhelpful examples",
+      "area": "curation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Recent success in deep learning has partially been driven by training increasingly overparametrized networks on ever l"
+      ],
+      "latency": 5.4875640869140625
+    },
+    {
+      "topic": "Curriculum learning: data ordering",
+      "area": "curation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > The rapid advancement of Large Language Models (LLMs) has improved text understanding and generation but poses challen"
+      ],
+      "latency": 8.249876737594604
+    },
+    {
+      "topic": "Snorkel: programmatic labeling platform",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Programmatic labeling",
+        "[exa] Label and annotate data for training AI/ML models up to 100x faster",
+        "[exa-h] Snorkel\u2019s programmatic labeling technology has been developed and deployed with Google, Intel, DARPA, Stanford Medicine,"
+      ],
+      "latency": 3.4664995670318604
+    },
+    {
+      "topic": "Great Expectations: data validation",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Everything you need to",
+        "[exa] Everything you need to",
+        "[exa-h] GX Core is a flexible, Python-based framework that fits right into your data workflows. Write tests that reflect your bu"
+      ],
+      "latency": 4.235233545303345
+    },
+    {
+      "topic": "Cleanlab: data-centric AI",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Most AI & Analytics are impaired by data issues. Now AI can help you fix them.",
+        "[exa] Keep AI mistakes away from your customers.",
+        "[exa-h] ## The future of AI is Data-Centric"
+      ],
+      "latency": 3.408661127090454
+    },
+    {
+      "topic": "Lilac: data curation tool",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Lilac - Better data, better AI",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] ## Fuzzy-concept search with refinement\n\n[Learn more] \n\n# Lilac Garden\n\n# Blazing fastdataset computations\n\n## Cluster a"
+      ],
+      "latency": 3.983485698699951
+    }
+  ]
+}

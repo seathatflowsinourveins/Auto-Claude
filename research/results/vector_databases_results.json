@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:56:57.004894",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 83
+  },
+  "results": [
+    {
+      "topic": "Qdrant: HNSW indexing, quantization, payload filtering",
+      "area": "qdrant",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Indexing - Qdrant",
+        "[exa] Combining Vector Search and Filtering",
+        "[exa-h] A key feature of Qdrant is the effective combination of vector and traditional indexes. It is essential to have this bec"
+      ],
+      "latency": 6.0058348178863525
+    },
+    {
+      "topic": "Qdrant collections: sharding, replication, on-disk storage",
+      "area": "qdrant",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Storage - Qdrant",
+        "[exa] Distributed deployment",
+        "[exa-h] ```\n## Payload storage\nQdrant supports two types of payload storages: InMemory and OnDisk.\nInMemory payload storage is o"
+      ],
+      "latency": 6.082403898239136
+    },
+    {
+      "topic": "Qdrant search: dense, sparse, hybrid, multi-vector",
+      "area": "qdrant",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Hybrid and Multi-Stage Queries",
+        "[exa] Vectors - Qdrant",
+        "[exa-h] For example, in text search, it is often useful to combine dense and sparse vectors to get the best of both worlds: sema"
+      ],
+      "latency": 6.332359313964844
+    },
+    {
+      "topic": "Qdrant optimization: batch upsert, prefetch, scroll",
+      "area": "qdrant",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Optimizing Qdrant Performance: Three Scenarios",
+        "[exa-h] https://qdrant.tech/documentation/tutorials-develop/bulk-upload/"
+      ],
+      "latency": 3.0815062522888184
+    },
+    {
+      "topic": "Pinecone: serverless, pods, namespaces, metadata filtering",
+      "area": "pinecone",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Implement multitenancy",
+        "[exa] Indexing overview",
+        "[exa-h] [Multitenancy] is a software architecture where a single instance of a system serves multiple customers, or tenants, whi"
+      ],
+      "latency": 3.973846435546875
+    },
+    {
+      "topic": "Pinecone hybrid search: sparse-dense vectors, BM25",
+      "area": "pinecone",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Hybrid search",
+        "[exa] Hybrid search",
+        "[exa-h] To store both dense and sparse vectors in a single index, use the[`create\\_index`] operation, setting the`vector\\_type`t"
+      ],
+      "latency": 4.680719375610352
+    },
+    {
+      "topic": "Pinecone Assistant: RAG-as-a-service, file upload",
+      "area": "pinecone",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Files in Pinecone Assistant",
+        "[exa] Upload file to assistant",
+        "[exa-h] Before you can chat with the assistant, you need to[upload files]. The files provide your assistant with context and inf"
+      ],
+      "latency": 4.090575933456421
+    },
+    {
+      "topic": "Pinecone inference: embedding API, reranking",
+      "area": "pinecone",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Rerank results",
+        "[exa] Rerank results",
+        "[exa-h] ```\n## [\u200b\n] \nReranking models\nPinecone hosts several reranking models so it\u2019s easy to manage two-stage vector retrieval "
+      ],
+      "latency": 5.29586124420166
+    },
+    {
+      "topic": "Weaviate: schema, classes, properties, vectorizers",
+      "area": "weaviate",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Collection definitions (schemas)",
+        "[exa] Hands-on Weaviate with Python",
+        "[exa-h] This tutorial will guide you through the process of defining a schema for your data, including commonly used settings an"
+      ],
+      "latency": 5.36188006401062
+    },
+    {
+      "topic": "Weaviate modules: text2vec, img2vec, multi2vec",
+      "area": "weaviate",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Modules | Weaviate Documentation",
+        "[exa] Reference - Modules",
+        "[exa-h] ![Weaviate module ecosystem] \n### Vectorizer & Ranker modules[\u200b] \nVectorizer modules, like the`text2vec-\\*`,`multi2vec-\\"
+      ],
+      "latency": 8.384473323822021
+    },
+    {
+      "topic": "Weaviate GraphQL: Get, Aggregate, Explore queries",
+      "area": "weaviate",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Aggregate | Weaviate Documentation",
+        "[exa] Aggregate | Weaviate Documentation",
+        "[exa-h] This page covers aggregation queries. They are collectively referred to as`Aggregate`queries within.\nAn`Aggregate`query "
+      ],
+      "latency": 4.615423202514648
+    },
+    {
+      "topic": "Weaviate generative: RAG queries, grouped tasks",
+      "area": "weaviate",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Query and search",
+        "[exa] Retrieval Augmented Generation (RAG)",
+        "[exa-h] Combine keyword (BM25F) and vector similarity search results with fusion algorithms.\n] [\nRetrieval Augmented Generation "
+      ],
+      "latency": 3.4088480472564697
+    },
+    {
+      "topic": "Milvus: collections, partitions, segments, indexes",
+      "area": "milvus",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Manage Partitions Milvus v2.4.x documentation",
+        "[exa] Manage Partitions",
+        "[exa-h] A partition in Milvus represents a sub-division of a collection. This functionality allows the physical storage of a col"
+      ],
+      "latency": 5.3421735763549805
+    },
+    {
+      "topic": "Milvus indexing: IVF_FLAT, HNSW, DISKANN, GPU indexes",
+      "area": "milvus",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] In-memory Index | Milvus Documentation",
+        "[exa] Milvus vector database documentation",
+        "[exa-h] These types of indexes include `FLAT`, `IVF_FLAT`, `IVF_PQ`, `IVF_SQ8`, `HNSW`, `HNSW_SQ`, `HNSW_PQ`, `HNSW_PRQ`, and `S"
+      ],
+      "latency": 4.322882413864136
+    },
+    {
+      "topic": "Milvus Lite: embedded, serverless, edge deployment",
+      "area": "milvus",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview of Milvus Deployment Options Milvus v2.5.x documentation",
+        "[exa] Run Milvus Lite Locally Milvus v2.5.x documentation",
+        "[exa-h] - **Local Search on Edge Devices**\n\nFor searching through private or sensitive on edge devices, you can deploy Milvus Li"
+      ],
+      "latency": 4.352566242218018
+    },
+    {
+      "topic": "Milvus search: ANN, range, hybrid, multi-vector",
+      "area": "milvus",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Range Search | Milvus Documentation",
+        "[exa] Range Search Milvus v2.5.x documentation",
+        "[exa-h] When executing a Range Search request, Milvus uses the most similar vectors to the query vector from the ANN Search resu"
+      ],
+      "latency": 3.7000327110290527
+    },
+    {
+      "topic": "Vector index tuning: HNSW ef, M parameters, recall vs speed",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] A practical guide to selecting HNSW hyperparameters",
+        "[exa-h] You signed in with another tab or window.[Reload] to refresh your session.You signed out in another tab or window.[Reloa"
+      ],
+      "latency": 4.684787273406982
+    },
+    {
+      "topic": "Quantization: scalar, product, binary quantization trade-offs",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Lossy Compression Basics and Quantization",
+        "[exa] ",
+        "[exa-h] The size of the codebook will be21bit/symbol\u00d72symbol/code-vector=4. Generalizing, we can have codebook of sizeN=2R\u2217kfor "
+      ],
+      "latency": 5.583943843841553
+    },
+    {
+      "topic": "Multi-tenancy: namespace isolation, metadata partitioning",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multitenancy \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Implement multi-tenancy in Spanner \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] for each tenant while still using:\n* a single project\n* a single logical structure for the kinds\n* a single set of index"
+      ],
+      "latency": 11.18815302848816
+    },
+    {
+      "topic": "Vector database benchmarking: ANN-benchmarks, latency profiles",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ANN Benchmark",
+        "[exa] ANN Benchmark",
+        "[exa-h] This vector database benchmark is designed to measure and illustrate Weaviate's Approximate Nearest Neighbor (ANN) perfo"
+      ],
+      "latency": 12.994082927703857
+    }
+  ]
+}

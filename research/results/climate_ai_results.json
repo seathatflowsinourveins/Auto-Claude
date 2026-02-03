@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:05:56.614453",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "AI climate modeling: weather prediction, forecasting",
+      "area": "modeling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A foundation model for the Earth system",
+        "[exa] Physics > Atmospheric and Oceanic Physics",
+        "[exa-h] Reliable forecasting of the Earth system is essential for mitigating natural disasters and supporting human progress. Tr"
+      ],
+      "latency": 8.90486454963684
+    },
+    {
+      "topic": "Earth system models: atmospheric, oceanic simulation",
+      "area": "modeling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] National Aeronautics and Space Administration",
+        "[exa] GFDL Earth System Models",
+        "[exa-h] [Earth Sciences Division] \n## GISS Earth System Model: ModelE\nSince 2004, the GISS series of coupled atmosphere-ocean mo"
+      ],
+      "latency": 12.45767593383789
+    },
+    {
+      "topic": "Extreme weather prediction: hurricanes, floods, fires",
+      "area": "modeling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NATIONAL HURRICANE CENTER and \n  CENTRAL PACIFIC HURRICANE CENTER",
+        "[exa] ",
+        "[exa-h] Issuance will resume on May 15th or as necessary.|**[Tropical Weather Discussion] **\n1215 UTC Mon Feb 2 2026|\n|\nThere ar"
+      ],
+      "latency": 9.590798616409302
+    },
+    {
+      "topic": "Climate downscaling: regional climate projections",
+      "area": "modeling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NASA Earth Exchange Downscaled Climate Projections 30 Arcseconds CMIP6",
+        "[exa] ",
+        "[exa-h] We describe the latest version of the NASA Earth eXchange Downscaled Climate Projections 30 arcseconds (NEX-DCP30-CMIP6)"
+      ],
+      "latency": 8.288021802902222
+    },
+    {
+      "topic": "Smart grid AI: demand response, load balancing",
+      "area": "energy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A comprehensive review of artificial intelligence approaches for smart grid integration and optimization \u2606",
+        "[exa] A deep learning and IoT-driven framework for real-time adaptive resource allocation and grid optimization in smart energy systems",
+        "[exa-h] sources. This state-of-the-art review presents artificial intelligence-based solutions to improve EMS, focusing on optim"
+      ],
+      "latency": 7.33186149597168
+    },
+    {
+      "topic": "Renewable energy forecasting: solar, wind prediction",
+      "area": "energy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Solar and Wind Forecasting",
+        "[exa] Solar and Wind Forecasting",
+        "[exa-h] As solar and wind power become more common, forecasting that is integrated into energy\nmanagement systems is increasingl"
+      ],
+      "latency": 7.0922040939331055
+    },
+    {
+      "topic": "Building energy optimization: HVAC, lighting control",
+      "area": "energy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About Building Controls",
+        "[exa] ",
+        "[exa-h] Building operation seeks to ensure comfortable conditions for occupants, maintain healthy indoor air quality, and minimi"
+      ],
+      "latency": 7.945849418640137
+    },
+    {
+      "topic": "Electric vehicle charging: smart scheduling, V2G",
+      "area": "energy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Electric Vehicle Smart-Charge Management and Flexibility Analysis",
+        "[exa] ",
+        "[exa-h] NLR researchers investigate smart-charge management strategies to reduce consumer charging costs and utility expenses fo"
+      ],
+      "latency": 7.7804601192474365
+    },
+    {
+      "topic": "Carbon footprint AI: emissions calculation, tracking",
+      "area": "carbon",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Carbon Footprint reporting methodology",
+        "[exa] Carbontracker",
+        "[exa-h] The Google Cloud customer-specific carbon footprint report (the\n\"Carbon Footprint report\"), is calculated automatically."
+      ],
+      "latency": 9.55500054359436
+    },
+    {
+      "topic": "Carbon capture optimization: DAC, CCS efficiency",
+      "area": "carbon",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Carbon removal efficiency and energy requirement of engineered carbon removal technologies",
+        "[exa] Optimization of a combined power plant CO 2  capture and direct air capture concept for flexible power plant operation \u2020",
+        "[exa-h] For non-biomass CDR approaches, CO2stored in products is considered equivalent to CO2originating from the atmosphere:\nCD"
+      ],
+      "latency": 9.095649480819702
+    },
+    {
+      "topic": "Supply chain emissions: Scope 1, 2, 3 tracking",
+      "area": "carbon",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scope 3 Inventory Guidance",
+        "[exa] Scope 3 Calculation Guidance | GHG Protocol",
+        "[exa-h] ![Scope 3 Calculation Method] \n## Supply Chain Guidance"
+      ],
+      "latency": 6.634315490722656
+    },
+    {
+      "topic": "Carbon credit verification: satellite monitoring",
+      "area": "carbon",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Approach - Climate TRACE | Climate TRACE",
+        "[exa] Approach - Climate TRACE | Climate TRACE",
+        "[exa-h] That allows us to produce a detailed, timely, and independent global inventory of emissions from every country and terri"
+      ],
+      "latency": 7.509004831314087
+    },
+    {
+      "topic": "Biodiversity monitoring: species detection, tracking",
+      "area": "biodiversity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Comprehensive Overview of Technologies for Species and Habitat Monitoring and Conservation",
+        "[exa] REVIEW: Wildlife camera trapping: a review and recommendations for linking surveys to ecological processes - ADS",
+        "[exa-h] The range of technologies currently used in biodiversity conservation is staggering, with innovative uses often adopted "
+      ],
+      "latency": 8.235374927520752
+    },
+    {
+      "topic": "Precision agriculture: crop yield, pest prediction",
+      "area": "biodiversity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Crop yield prediction in agriculture: A comprehensive review of machine learning and deep learning approaches, with insights for future research and sustainability",
+        "[exa-h] using deep learning and machine learning (ML) techniques aid in understanding\nthe combined effects of pests, nutrient an"
+      ],
+      "latency": 8.650537729263306
+    },
+    {
+      "topic": "Deforestation detection: satellite image analysis",
+      "area": "biodiversity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Terrestrial Applications part 1",
+        "[exa] Terrestrial Applications part 1",
+        "[exa-h] The purpose of this chapter is to present a spectral unmixing algorithm and the Normalized Difference Fraction Index (ND"
+      ],
+      "latency": 7.869323253631592
+    },
+    {
+      "topic": "Ocean health monitoring: marine ecosystem AI",
+      "area": "biodiversity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI-enhanced real-time monitoring of marine pollution: part 1-A state-of-the-art and scoping review",
+        "[exa] IBM and partners open-source a new AI model for monitoring Earth\u2019s oceans",
+        "[exa-h] Marine pollution, especially from oil spills and litter, poses significant threats to marine ecosystems, aquaculture and"
+      ],
+      "latency": 6.773399829864502
+    },
+    {
+      "topic": "Climate TRACE: emissions tracking platform",
+      "area": "platforms",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Approach - Climate TRACE | Climate TRACE",
+        "[exa] Approach - Climate TRACE | Climate TRACE",
+        "[exa-h] That allows us to produce a detailed, timely, and independent global inventory of emissions from every country and terri"
+      ],
+      "latency": 7.459855794906616
+    },
+    {
+      "topic": "Google DeepMind weather: GraphCast, GenCast",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] GraphCast: AI model for faster and more accurate global weather forecasting",
+        "[exa] Open access models for WeatherNext \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] GraphCast joins other state-of-the-art weather prediction systems from Google DeepMind and Google Research, including a "
+      ],
+      "latency": 9.038612604141235
+    },
+    {
+      "topic": "Microsoft Planetary Computer: environmental AI",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Home | Planetary Computer",
+        "[exa] The Microsoft Planetary Computer - Developer Support",
+        "[exa-h] Supporting sustainability decision-making with the power of the cloudThe Planetary Computer combines a multi-petabyte ca"
+      ],
+      "latency": 6.640414476394653
+    },
+    {
+      "topic": "ClimateAI: enterprise climate risk platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ClimateLens\u2122: The World\u2019s First Enterprise Climate Resilience Platform",
+        "[exa] Make Climate Risk Understandable, Measurable, and Actionable",
+        "[exa-h] The ClimateLens platform combines AI, advanced machine learning, and data points from multiple sources to generate actio"
+      ],
+      "latency": 6.792947769165039
+    }
+  ]
+}

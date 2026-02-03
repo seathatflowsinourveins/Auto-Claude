@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:58:35.628385",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Sora: OpenAI video generation",
+      "area": "generation",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Creating video from text",
+        "[exa] Video generation with Sora",
+        "[exa-h] ##### Research techniques\nSora is a diffusion model, which generates a video by starting off with one that looks like st"
+      ],
+      "latency": 7.81350040435791
+    },
+    {
+      "topic": "Runway Gen-3: video synthesis",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing Gen-4.5 A new frontier for   video generation.",
+        "[exa] Introducing Gen-3 Alpha: A New Frontier for Video Generation",
+        "[exa-h] ## A new kind of creative toolkit with everything you need to generate any video, image or piece of content you want.\n##"
+      ],
+      "latency": 7.850700855255127
+    },
+    {
+      "topic": "Pika Labs: AI video creation",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pika Labs: Complete Guide to the Idea-to-Video Platform",
+        "[exa] Pika AI Free AI Video Generator Platform",
+        "[exa-h] * **Company:**Pika Labs (often branded as**Pika**/**Pika AI**)\n* **Product:**Pika.art \u2013 web-based AI video generator\n* *"
+      ],
+      "latency": 6.863989353179932
+    },
+    {
+      "topic": "Kling: video diffusion model",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Kling-Foley: Multimodal Diffusion Transformer for High-Quality Video-to-Audio Generation",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] We propose Kling-Foley, a large-scale multimodal Video-to-Audio generation model that synthesizes high-quality audio syn"
+      ],
+      "latency": 8.313193082809448
+    },
+    {
+      "topic": "Video captioning: description",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] UCF-CAP, Video Captioning in the Wild | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] > Video detailed captioning is a key task which aims to generate comprehensive and coherent textual descriptions of vide"
+      ],
+      "latency": 6.809096336364746
+    },
+    {
+      "topic": "Video QA: temporal reasoning",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Temporal logical understanding, a core facet of human cognition, plays a pivotal role in capturing complex sequential "
+      ],
+      "latency": 7.968159437179565
+    },
+    {
+      "topic": "Action recognition: activity AI",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Trending Papers",
+        "[exa] Trending Papers",
+        "[exa-h] Agentic reasoning redefines large language models as autonomous agents capable of planning, acting, and learning through"
+      ],
+      "latency": 8.431047201156616
+    },
+    {
+      "topic": "Video summarization: key moments",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Video Summarization Overview - ADS",
+        "[exa-h] > The rapid expansion of video content across a variety of industries, including social media, education, entertainment,"
+      ],
+      "latency": 9.74200701713562
+    },
+    {
+      "topic": "VideoLLaMA: video language model",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Transformers",
+        "[exa-h] > In this paper, we propose VideoLLaMA3, a more advanced multimodal foundation model for image and video understanding. "
+      ],
+      "latency": 7.141557455062866
+    },
+    {
+      "topic": "Video-ChatGPT: multimodal video",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Voice with real-time video in ChatGPT",
+        "[exa-h] > Conversation agents fueled by Large Language Models (LLMs) are providing a new way to interact with visual data. While"
+      ],
+      "latency": 7.154432058334351
+    },
+    {
+      "topic": "Gemini video: Google multimodal",
+      "area": "models",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] The capabilities of multimodal AI | Gemini Demo",
+        "[exa] An  overview  of the Gemini app",
+        "[exa-h] shortened for brevity.\\n\\nSubscribe to our Channel: \u00a0\u00a0\u00a0/\u00a0google\u00a0\u00a0\\r\\nTweet with us on X: \u00a0\u00a0/\u00a0google\u00a0\u00a0\\r\\nFollow us on In"
+      ],
+      "latency": 7.469074487686157
+    },
+    {
+      "topic": "GPT-4V video: vision frames",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Processing and narrating a video with GPT-4.1-mini's visual capabilities and GPT-4o TTS API",
+        "[exa] GPT-4V(ision) system card",
+        "[exa-h] This notebook demonstrates how to use GPT's visual capabilities with a video. Although GPT-4.1-mini doesn't take videos "
+      ],
+      "latency": 6.04987359046936
+    },
+    {
+      "topic": "Temporal modeling: frame sequence",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Abstract:We present a general-purpose framework for image modelling and vision tasks based on probabilistic frame pred"
+      ],
+      "latency": 7.420283317565918
+    },
+    {
+      "topic": "Video diffusion: frame generation",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Diffusion models have achieved remarkable progress on image-to-video (I2V) generation, while their noise-to-data gener"
+      ],
+      "latency": 8.24503469467163
+    },
+    {
+      "topic": "Frame interpolation: smooth video",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Motion interpolation",
+        "[exa] A comprehensive survey on video frame interpolation techniques",
+        "[exa-h] **Motion interpolation**,**motion-compensated frame interpolation**(**MCFI**), or**frame generation**, is a form of[vide"
+      ],
+      "latency": 8.343242645263672
+    },
+    {
+      "topic": "Video compression: efficient encoding",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Electrical Engineering and Systems Science > Image and Video Processing",
+        "[exa] Electrical Engineering and Systems Science > Image and Video Processing",
+        "[exa-h] > The AV1 video compression format is developed by the Alliance for Open Media consortium. It achieves more than 30% red"
+      ],
+      "latency": 7.4576098918914795
+    },
+    {
+      "topic": "Video editing AI: automated edits",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The AI Editing Assistant for All",
+        "[exa] AI makes a rough cut from all your footage",
+        "[exa-h] 1. Upload all of your footage to a media library. K2 uses AI models like GPT and Gemini and the latest technology to ana"
+      ],
+      "latency": 7.091816425323486
+    },
+    {
+      "topic": "Sports analytics: game analysis",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Football - Sportlogiq",
+        "[exa] The P-F-R Win Probability Model",
+        "[exa-h] All processing is done via Amazon Web Services and access to our raw data is streamlined into your existing workflows\n##"
+      ],
+      "latency": 7.396281480789185
+    },
+    {
+      "topic": "Surveillance AI: security video",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Extra Protection Without the Payroll",
+        "[exa] Extra Protection Without the Payroll",
+        "[exa-h] # Deploy AI agents that standardize your operations, coach your team, and execute real-time actions 24/7. From live secu"
+      ],
+      "latency": 8.002339363098145
+    },
+    {
+      "topic": "Content moderation: video safety",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Ofcom's video-sharing platform framework: a guide for industry",
+        "[exa-h] Guidance for providers on measures to protect users from harmful material \n4 \n\u2022 measures relating to terms and condition"
+      ],
+      "latency": 7.262654066085815
+    }
+  ]
+}

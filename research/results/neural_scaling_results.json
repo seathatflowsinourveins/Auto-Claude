@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:31:53.689512",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 87
+  },
+  "results": [
+    {
+      "topic": "Neural scaling laws: Chinchilla, compute optimal",
+      "area": "laws",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] parameters on 5 to 500 billion tokens, we find that for compute-optimal training, the model size and\nthe number of train"
+      ],
+      "latency": 7.716596364974976
+    },
+    {
+      "topic": "Power law scaling: loss vs compute/data",
+      "area": "laws",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] or the optimally allocated compute budget Cmin (see Figure 1):\n1. For models with a limited number of parameters, traine"
+      ],
+      "latency": 6.570306062698364
+    },
+    {
+      "topic": "Scaling exponents: model size, data, compute",
+      "area": "laws",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] or the optimally allocated compute budget Cmin (see Figure 1):\n1. For models with a limited number of parameters, traine"
+      ],
+      "latency": 3.9629199504852295
+    },
+    {
+      "topic": "Scaling predictions: extrapolating performance",
+      "area": "laws",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > The remarkable progress in deep learning in recent years is largely driven by improvements in scale, where bigger mode"
+      ],
+      "latency": 5.777953624725342
+    },
+    {
+      "topic": "Emergent abilities: capabilities at scale",
+      "area": "emergent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Emergent Abilities in LLMs",
+        "[exa-h] > Large Language Models (LLMs) are leading a new technological revolution as one of the most promising research streams "
+      ],
+      "latency": 2.1035022735595703
+    },
+    {
+      "topic": "Phase transitions: sudden capability gains",
+      "area": "emergent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] deeper understanding of the mechanisms may be revealed.\n197\n198 M. J. Spivey, S. E. Anderson & R. Dale\nA phase transitio"
+      ],
+      "latency": 5.68556022644043
+    },
+    {
+      "topic": "In-context learning: few-shot emergence",
+      "area": "emergent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] A Survey on In-context Learning",
+        "[exa-h] models. A key challenge in evaluating emergent abilities is that they are confounded by model competencies that arise th"
+      ],
+      "latency": 3.529038906097412
+    },
+    {
+      "topic": "Chain-of-thought: reasoning emergence",
+      "area": "emergent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] steps\u2014significantly improves the ability of large language models to perform\ncomplex reasoning. In particular, we show h"
+      ],
+      "latency": 5.18303370475769
+    },
+    {
+      "topic": "Distributed training: data, model parallel",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Distributed Training \u00b6",
+        "[exa] Strategies for distributed training",
+        "[exa-h] Distributed training can have different flavors of parallelization depending on your use-case with the most common being"
+      ],
+      "latency": 8.336696863174438
+    },
+    {
+      "topic": "3D parallelism: combining strategies",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Parallel depth-merge: A paradigm for hidden surface removal",
+        "[exa] ",
+        "[exa-h] - ### [An efficient parallel algorithm for visible-surface detection in 3D graphics display] \n\n\n\n1998, International Jou"
+      ],
+      "latency": 5.505908727645874
+    },
+    {
+      "topic": "Gradient accumulation: effective batch size",
+      "area": "training",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Effective Training Techniques \u00b6",
+        "[exa] Effective Training Techniques \u00b6",
+        "[exa-h] # Effective Training Techniques[\u00b6] \nLightning implements various techniques to help during training that can help make t"
+      ],
+      "latency": 4.369792461395264
+    },
+    {
+      "topic": "Training stability: large batch normalization",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] conducted experiments to show empirically that the \"generalization gap\" stems from the relatively small number of update"
+      ],
+      "latency": 7.9711363315582275
+    },
+    {
+      "topic": "Mixture of experts: sparse scaling",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Mixture of Experts (MoE) models have become central to scaling large language models, yet their mechanistic difference"
+      ],
+      "latency": 3.71354603767395
+    },
+    {
+      "topic": "Flash attention: memory efficient",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > The computational and memory demands of vanilla attention scale quadratically with the sequence length $N$, posing sig"
+      ],
+      "latency": 7.194841146469116
+    },
+    {
+      "topic": "Gradient checkpointing: memory-compute tradeoff",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gradient checkpointing with jax.checkpoint (jax.remat)",
+        "[exa] ",
+        "[exa-h] **TL;DR**Use the[`jax.checkpoint()`] decorator (aliased as`jax.remat()`) with[`jax.grad()`] to control which intermediat"
+      ],
+      "latency": 3.6252169609069824
+    },
+    {
+      "topic": "Tensor parallelism: layer splitting",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Large Scale Transformer model training with Tensor Parallel (TP) #",
+        "[exa] Large Scale Transformer model training with Tensor Parallel (TP) #",
+        "[exa-h] PyTorch Tensor Parallel APIs offers a set of module level primitives (`ParallelStyle`) to configure the sharding for eac"
+      ],
+      "latency": 10.38452410697937
+    },
+    {
+      "topic": "Chinchilla: compute-optimal training",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Training Compute-Optimal Large Language Models",
+        "[exa] ",
+        "[exa-h] ranging from 70 million to over 16 billion parameters on 5 to 500 billion tokens, we find that for compute-optimal train"
+      ],
+      "latency": 6.914278268814087
+    },
+    {
+      "topic": "GPT-4 scaling: multimodal at scale",
+      "area": "research",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] robust reasoning skills by exposing it to structured logic and problem-solving processes.\n\u2022 Multimodal Data \u2013 Our datase"
+      ],
+      "latency": 4.274829626083374
+    },
+    {
+      "topic": "PaLM scaling: 540B parameters",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance",
+        "[exa] Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance",
+        "[exa-h] PaLM demonstrates the scaling capability of the[Pathways system] to thousands of accelerator chips across two TPU v4 Pod"
+      ],
+      "latency": 5.01834774017334
+    },
+    {
+      "topic": "DeepMind scaling: frontier research",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing the Frontier Safety Framework",
+        "[exa] ",
+        "[exa-h] ## The framework\nThe first version of the Framework announced today builds on our[research] on[evaluating] critical capa"
+      ],
+      "latency": 8.779017210006714
+    }
+  ]
+}

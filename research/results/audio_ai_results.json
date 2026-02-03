@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:58:30.361113",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 97
+  },
+  "results": [
+    {
+      "topic": "Whisper: OpenAI speech recognition",
+      "area": "speech_recognition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing Whisper",
+        "[exa] Whisper (speech recognition system)",
+        "[exa-h] Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervise"
+      ],
+      "latency": 9.18159818649292
+    },
+    {
+      "topic": "AssemblyAI: transcription API",
+      "area": "speech_recognition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transcribe audio",
+        "[exa] Overview | AssemblyAI | Documentation",
+        "[exa-h] * Streaming API\n[Sign In] \nLight\n[API Reference] [Transcripts] \n# Transcribe audio\nCopy page\nPOST\nhttps://api.assemblyai"
+      ],
+      "latency": 8.226377487182617
+    },
+    {
+      "topic": "Deepgram: real-time ASR",
+      "area": "speech_recognition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Live Audio | Deepgram's Docs",
+        "[exa] Speech to Text API for next-level apps",
+        "[exa-h] [API Reference] [Speech to Text] \n# Live Audio\nCopy page\nWSS\nwss://api.deepgram.com/v1/listen\nHandshake\nURL|wss://api.de"
+      ],
+      "latency": 7.0996925830841064
+    },
+    {
+      "topic": "Google Speech: cloud transcription",
+      "area": "speech_recognition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Speech-to-Text",
+        "[exa] Cloud Speech-to-Text overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] \ue8b6\n*search**send*\n[Docs] [Support] \n[Console] \n[Sign in] \nStart free[] \n[Cloud Speech-to-Text] \nStart free[] \nContact us["
+      ],
+      "latency": 8.29894733428955
+    },
+    {
+      "topic": "ElevenLabs: voice synthesis",
+      "area": "text_to_speech",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ElevenLabs Documentation",
+        "[exa] ElevenLabs Documentation",
+        "[exa-h] ### Developers\nLearn how to integrate ElevenLabs with examples and tutorials\n] \n## Meet the models\n[\nEleven v3\nOur most "
+      ],
+      "latency": 6.725322961807251
+    },
+    {
+      "topic": "OpenAI TTS: text to speech",
+      "area": "text_to_speech",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Text to speech",
+        "[exa] Audio | OpenAI API Reference",
+        "[exa-h] # Text to speech\nLearn how to turn text into lifelike spoken audio.\nCopy page\nThe Audio API provides a[`speech`] endpoin"
+      ],
+      "latency": 7.949049472808838
+    },
+    {
+      "topic": "XTTS: multilingual voice",
+      "area": "text_to_speech",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] XTTS: a Massively Multilingual Zero-Shot Text-to-Speech Model",
+        "[exa] XTTS - coqui-tts 0.28.0.dev0 documentation",
+        "[exa-h] ###### keywords:\nSpeech Synthesis, Text-to-Speech, Multilingual Zero-shot Multi-speaker TTS, Speaker Adaptation, Cross-l"
+      ],
+      "latency": 6.145509481430054
+    },
+    {
+      "topic": "Bark: Suno text-to-audio",
+      "area": "text_to_speech",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] How to Use Suno Bark: A Step-by-Step Guide",
+        "[exa-h] Bark is a transformer-based text-to-audio model created by [Suno]. Bark can generate highly realistic, multilingual spee"
+      ],
+      "latency": 7.722895383834839
+    },
+    {
+      "topic": "Voice cloning: speaker embedding",
+      "area": "voice_cloning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > We describe a neural network-based system for text-to-speech (TTS) synthesis that is able to generate speech audio in "
+      ],
+      "latency": 9.810433387756348
+    },
+    {
+      "topic": "VALL-E: neural codec language",
+      "area": "voice_cloning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] VALL-E Family",
+        "[exa-h] > This paper introduces VALL-E 2, the latest advancement in neural codec language models that marks a milestone in zero-"
+      ],
+      "latency": 6.064512252807617
+    },
+    {
+      "topic": "RVC: retrieval voice conversion",
+      "area": "voice_cloning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Retrieval-based Voice Conversion",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] **Retrieval-based Voice Conversion**(**RVC**) is an[open source] voice conversion[AI] algorithm that enables realistic s"
+      ],
+      "latency": 6.529179334640503
+    },
+    {
+      "topic": "So-VITS-SVC: singing voice",
+      "area": "voice_cloning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] The singing voice conversion model uses SoftVC content encoder to extract speech features from the source audio. These f"
+      ],
+      "latency": 6.84197735786438
+    },
+    {
+      "topic": "Suno AI: music generation",
+      "area": "music",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Everything You Need To Know about Suno AI (The AI Music Generator)",
+        "[exa] Suno (platform)",
+        "[exa-h] ## **What Is Suno AI?**\nAt its core,**Suno AI**is a text-to-music engine. You type what you want the song to be about\u2014ma"
+      ],
+      "latency": 6.21838903427124
+    },
+    {
+      "topic": "Udio: AI music creation",
+      "area": "music",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Udio | AI Music Generator - Official Website",
+        "[exa] Udio: AI Music Maker & Studio",
+        "[exa-h] Udio | AI Music Generator - Official Website"
+      ],
+      "latency": 5.60958456993103
+    },
+    {
+      "topic": "MusicGen: Meta audio model",
+      "area": "music",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transformers",
+        "[exa] What is MusicGen?",
+        "[exa-h] The MusicGen model was proposed in the paper[Simple and Controllable Music Generation] by Jade Copet, Felix Kreuk, Itai "
+      ],
+      "latency": 6.299517869949341
+    },
+    {
+      "topic": "AudioCraft: Meta audio AI",
+      "area": "music",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AudioCraft - Meta AI",
+        "[exa] AudioCraft: AI research for audio",
+        "[exa-h] AudioCraft is a single-stop code base for all your generative audio needs: music, sound effects, and compression after t"
+      ],
+      "latency": 8.027491092681885
+    },
+    {
+      "topic": "Real-time translation: speech-to-speech",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Join conversation",
+        "[exa] Real-time speech-to-speech translation",
+        "[exa-h] Privacy & CookiesServices agreementContract summaryFAQReport issuesThird Party NoticeDownload diagnostic logs24.3.1.35\n!"
+      ],
+      "latency": 8.013721227645874
+    },
+    {
+      "topic": "Podcast AI: audio editing",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Descript: AI-Powered Podcast &amp; Audio Editor",
+        "[exa] AI Video Editor",
+        "[exa-h] Descript lets you record, edit, and publish podcasts with the power of AI. While most podcast editing software forces yo"
+      ],
+      "latency": 7.4050681591033936
+    },
+    {
+      "topic": "Audio captioning: sound description",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] AudioCaps: Generating Captions for Audios in the Wild | AudioCaps: Generating Captions for Audios in the Wild",
+        "[exa-h] Seoul National University, Seoul, Korea\n{cdjkim,byeongchang.kim}@vision.snu.ac.kr {lhm1442,gunhee}@snu.ac.kr\nAbstract\nWe"
+      ],
+      "latency": 4.978153944015503
+    },
+    {
+      "topic": "Voice assistants: conversational AI",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is Conversational AI?",
+        "[exa] Conversational user interface",
+        "[exa-h] Conversational artificial intelligence (AI) is a technology that makes software capable of understanding and responding "
+      ],
+      "latency": 8.318403244018555
+    }
+  ]
+}

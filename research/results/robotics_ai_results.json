@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:03:41.250431",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Robot learning from demonstration: imitation learning",
+      "area": "learning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] An Algorithmic Perspective on Imitation Learning - ADS",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] As robots and other intelligent agents move from simple environments and problems to more complex, unstructured settings"
+      ],
+      "latency": 9.540642499923706
+    },
+    {
+      "topic": "Reinforcement learning for robots: sim-to-real transfer",
+      "area": "learning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Sim-To-Real Transfer of Robotic Control with Dynamics Randomization",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] has been a subject of intense interest in robotics, as it offers\nthe potential of applying powerful algorithms that have"
+      ],
+      "latency": 9.430270433425903
+    },
+    {
+      "topic": "Language-conditioned robot control: natural language commands",
+      "area": "learning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] > Generalist robots that can perform a range of different tasks in open-world settings must be able to not only reason a"
+      ],
+      "latency": 9.904779434204102
+    },
+    {
+      "topic": "Foundation models for robotics: RT-2, PaLM-E",
+      "area": "learning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PaLM-E: An Embodied Multimodal Language Model",
+        "[exa] PaLM-E: An embodied multimodal language model",
+        "[exa-h] Our largest model, PaLM-E-562B with 562B parameters, in addition to being trained on robotics tasks, is a visual-languag"
+      ],
+      "latency": 7.031630992889404
+    },
+    {
+      "topic": "Robot grasping with AI: object detection, grasp planning",
+      "area": "manipulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] > Robotic grasping is a cornerstone capability of embodied systems. Many methods directly output grasps from partial inf"
+      ],
+      "latency": 9.56609058380127
+    },
+    {
+      "topic": "Dexterous manipulation: multi-finger robot hands",
+      "area": "manipulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] ",
+        "[exa-h] > General-purpose robots should possess human-like dexterity and agility to perform tasks with the same versatility as u"
+      ],
+      "latency": 8.082493782043457
+    },
+    {
+      "topic": "Tool use in robots: learning to use objects",
+      "area": "manipulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] \"improvisational\" tool use: a robot is presented with novel objects and a user-specified goal (e.g., sweep some clutter "
+      ],
+      "latency": 6.462076187133789
+    },
+    {
+      "topic": "Assembly tasks: pick-and-place, insertion, screwing",
+      "area": "manipulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] ",
+        "[exa-h] > We introduce RAMP, an open-source robotics benchmark inspired by real-world industrial assembly tasks. RAMP consists o"
+      ],
+      "latency": 8.447199583053589
+    },
+    {
+      "topic": "3D perception for robots: point clouds, depth sensing",
+      "area": "perception",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Range Sensing",
+        "[exa] DSpace@MIT",
+        "[exa-h] ) structure of the world from the viewpoint of the sensor, usually measuring the depth to the nearest surfaces. These me"
+      ],
+      "latency": 8.195748090744019
+    },
+    {
+      "topic": "Object recognition: real-time detection for manipulation",
+      "area": "perception",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] > Many everyday mobile manipulation tasks require precise interaction with small objects, such as grasping a knob to ope"
+      ],
+      "latency": 7.446865558624268
+    },
+    {
+      "topic": "Scene understanding: spatial reasoning for robots",
+      "area": "perception",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] > Spatial understanding is a crucial capability that enables robots to perceive their surroundings, reason about their e"
+      ],
+      "latency": 7.85847020149231
+    },
+    {
+      "topic": "Tactile sensing: force feedback, texture recognition",
+      "area": "perception",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] Making sure you're not a bot!",
+        "[exa-h] > Touch is a crucial sensing modality that provides rich information about object properties and interactions with the p"
+      ],
+      "latency": 7.466187000274658
+    },
+    {
+      "topic": "Motion planning: path finding, trajectory optimization",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Planning Algorithms / Motion Planning",
+        "[exa] Planning Algorithms / Motion Planning",
+        "[exa-h] RRTs, feedback planning, plan-and-transform method, path-constrained\ntrajectory planning, gradient-based trajectory opti"
+      ],
+      "latency": 7.752866983413696
+    },
+    {
+      "topic": "Task planning with LLMs: high-level reasoning for robots",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] > Recent advancements in Large Language Models (LLMs) have sparked a revolution across many research fields. In robotics"
+      ],
+      "latency": 9.333742618560791
+    },
+    {
+      "topic": "Multi-robot coordination: swarm robotics, collaboration",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A review of swarm robotics tasks",
+        "[exa] Swarm Robotics",
+        "[exa-h] Usually, swarm systems allow agents to execute collective tasks more efficiently than each individual alone can do; in s"
+      ],
+      "latency": 8.890949964523315
+    },
+    {
+      "topic": "Human-robot interaction: safety, intent prediction",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Inferring Human Intent and Predicting Human Action in Human\u2013Robot Collaboration",
+        "[exa] now publishers - A Survey of Methods for Safe Human-Robot Interaction",
+        "[exa-h] Researchers in human\u2013robot collaboration have extensively studied methods for inferring human intentions and predicting "
+      ],
+      "latency": 9.195707321166992
+    },
+    {
+      "topic": "ROS 2 for AI: robot operating system integration",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ros2ai \ud83e\udd16",
+        "[exa] ROS 2 Documentation \uf0c1",
+        "[exa-h] # ros2ai \ud83e\udd16[ros2ai] is anext-generation[ROS 2] command line interface extension with[OpenAI] and[Ollama].\nsee[overview sl"
+      ],
+      "latency": 7.496474027633667
+    },
+    {
+      "topic": "Isaac Sim: NVIDIA robot simulation and training",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA Isaac Sim",
+        "[exa] NVIDIA Isaac Sim",
+        "[exa-h] Isaac Sim facilitates three essential workflows: generating synthetic data for training or post-training robot models us"
+      ],
+      "latency": 6.797091722488403
+    },
+    {
+      "topic": "PyBullet and MuJoCo: physics simulation for learning",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MuJoCo",
+        "[exa] PyBullet \u2013 Physics Simulation for Robotics &amp; AI Research | Py.AI",
+        "[exa-h] MuJoCo makes it possible to scale up computationally-intensive techniques such optimal control, physically-consistent st"
+      ],
+      "latency": 9.977980375289917
+    },
+    {
+      "topic": "Edge AI for robots: on-device inference, latency",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Real-time open-vocabulary perception for mobile robots on edge devices: a systematic analysis of the accuracy-latency trade-off",
+        "[exa] Edge AI for Real-Time Robotic Systems: Architectures, Deployment Strategies, and Performance Optimization",
+        "[exa-h] in optimizing a real-time robotic perception pipeline on the NVIDIA Jetson AGX Orin 64GB platform. We investigate the re"
+      ],
+      "latency": 6.0940492153167725
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:15:30.739643",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 89
+  },
+  "results": [
+    {
+      "topic": "Satellite image analysis: land use, change detection",
+      "area": "satellite",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Interpreting Image Series",
+        "[exa] Land Change Detection",
+        "[exa-h] This chapter introduces change detection mapping. It will teach you how to make a two-date land cover change map using i"
+      ],
+      "latency": 6.51838755607605
+    },
+    {
+      "topic": "Object detection in aerial imagery: buildings, vehicles",
+      "area": "satellite",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > In the past decade, object detection has achieved significant progress in natural images but not in aerial images, due"
+      ],
+      "latency": 9.636446714401245
+    },
+    {
+      "topic": "Crop monitoring: satellite-based yield estimation",
+      "area": "satellite",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Early season prediction of within-field crop yield variability by assimilating CubeSat data into a crop model",
+        "[exa] Versatile crop yield estimator",
+        "[exa-h] ## Highlights\n\n- \u2022\nCubeSat-based LAI maps were integrated into APSIM using a particle filter.\n\n- \u2022\nAssimilating cubesat "
+      ],
+      "latency": 4.126709222793579
+    },
+    {
+      "topic": "Disaster assessment: damage mapping from imagery",
+      "area": "satellite",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Detection methods and Damage Assessment\n            \n            \n            \n            - Copernicus EMS Mapping\n             | Copernicus EMS On Demand Mapping",
+        "[exa] ",
+        "[exa-h] Various methodologies already exist at national and international level for damage assessment of building structures (e."
+      ],
+      "latency": 5.101423740386963
+    },
+    {
+      "topic": "AI-powered cartography: automated map generation",
+      "area": "gis",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] user\u2019s speci\ue002ed inputs (e.g. texts, images, sketches, or geodata), the\ngenerative AI models can automatically generate m"
+      ],
+      "latency": 9.81449556350708
+    },
+    {
+      "topic": "Address parsing: geocoding, normalization",
+      "area": "gis",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Geocoding Addresses Best Practices \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Address Validation API overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Send feedback# Geocoding Addresses Best PracticesStay organized with collectionsSave and categorize content based on you"
+      ],
+      "latency": 8.645323514938354
+    },
+    {
+      "topic": "Geospatial entity extraction: NLP for locations",
+      "area": "gis",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] GeospaCy: A tool for extraction and geographical referencing of spatial expressions in textual data - ACL Anthology",
+        "[exa-h] of exemplary geoparsing modules. Here, the fo\u0002cus lies on showcasing the interplay between the\nmodules and not on method"
+      ],
+      "latency": 8.262601137161255
+    },
+    {
+      "topic": "Map matching: GPS trace alignment",
+      "area": "gis",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Current map-matching algorithms for transport applications: State-of-the art and future research directions",
+        "[exa] ",
+        "[exa-h] Map-matching algorithms integrate positioning data with spatial [road network] data (roadway centrelines) to identify th"
+      ],
+      "latency": 3.5062732696533203
+    },
+    {
+      "topic": "Location analytics: foot traffic, mobility patterns",
+      "area": "location",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Industry-Leading Location Intelligence & Data Solutions",
+        "[exa] Insights to Grow Your Business",
+        "[exa-h] [Try the Data] \n![Location Analytics icon] \nFoot Traffic Data\n![] \n![visualization with the image of the city of the Loc"
+      ],
+      "latency": 10.13465666770935
+    },
+    {
+      "topic": "Site selection: retail, real estate optimization",
+      "area": "location",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Retail Site Selection Guide",
+        "[exa] Site Suitability",
+        "[exa-h] The right location can drive traffic, sales, and brand awareness. Read this guide to learn the 6 factors to consider for"
+      ],
+      "latency": 7.838269948959351
+    },
+    {
+      "topic": "Geofencing: location-based triggers, automation",
+      "area": "location",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is geofencing and how to make location-based reminders with IFTTT",
+        "[exa] What is geofencing marketing?",
+        "[exa-h] Geofencing\u2014the use of GPS, RFID, Wi-Fi, or cellular data to create virtual boundaries that detect when a device enters o"
+      ],
+      "latency": 6.93655252456665
+    },
+    {
+      "topic": "Points of interest: discovery, categorization",
+      "area": "location",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Point of interest",
+        "[exa] Points of Interest (POI): a commentary on the state of the art, challenges, and prospects for the future",
+        "[exa-h] However, websites exist that specialize in the collection, verification, management and distribution of POI which[end-us"
+      ],
+      "latency": 6.524157762527466
+    },
+    {
+      "topic": "Route optimization: multi-stop, constraints",
+      "area": "navigation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Vehicle Routing \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Vehicle Routing Problem \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] * OR-Tools addresses various Vehicle Routing Problems (VRPs), including TSP, VRP with capacity and time constraints, and"
+      ],
+      "latency": 8.253762483596802
+    },
+    {
+      "topic": "Indoor positioning: WiFi, BLE localization",
+      "area": "navigation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] \u2022 Section III: We provide different technologies with par\u0002ticular emphasis on wireless technologies that can be\nused for"
+      ],
+      "latency": 8.917356729507446
+    },
+    {
+      "topic": "HD maps for AVs: high-definition mapping",
+      "area": "navigation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Accelerating the Future of Autonomous Vehicles",
+        "[exa] Exploring HD Mapping that Scales. Nuro introduces a scalable HD mapping\u2026 | by Nuro Team | Nuro | Medium",
+        "[exa-h] NVIDIA Omniverse Blueprint for AV Simulation enables the ability to build and enhance digital twins from [real-world sen"
+      ],
+      "latency": 5.102406978607178
+    },
+    {
+      "topic": "Crowd-sourced mapping: user-contributed data",
+      "area": "navigation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OpenStreetMap",
+        "[exa] OpenStreetMap",
+        "[exa-h] about roads, trails, caf\u00e9s, railway stations, and much more, all over the world.\n## Local Knowledge\nOpenStreetMap emphas"
+      ],
+      "latency": 5.675156831741333
+    },
+    {
+      "topic": "Google Earth Engine: planetary-scale analysis",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Google Earth Engine",
+        "[exa] Google \n     \n   Earth Engine",
+        "[exa-h] Google Cloud empowers everyone to run large-scale parallel processing using many thousands of computers. Combining Earth"
+      ],
+      "latency": 5.698235750198364
+    },
+    {
+      "topic": "Planet Labs: daily satellite imagery",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI-Powered Earth Intelligence",
+        "[exa] Planet Solutions",
+        "[exa-h] Planet revolutionized the Earth observation industry with the highest frequency satellite imagery data commercially avai"
+      ],
+      "latency": 6.501452207565308
+    },
+    {
+      "topic": "Esri ArcGIS: spatial analytics platform",
+      "area": "platforms",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Geospatial Platform | ArcGIS GIS Software for Business &amp; Government",
+        "[exa] Geospatial Platform | ArcGIS GIS Software for Business &amp; Government",
+        "[exa-h] Perform spatial modeling and analysis with data from any source, enriched by geography. AI-infused workflows power advan"
+      ],
+      "latency": 4.123527765274048
+    },
+    {
+      "topic": "Mapbox: location data platform, SDKs",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Maps that do more",
+        "[exa] Mapbox Documentation",
+        "[exa-h] View recordings \u2192] \nTRUSTED BY THE INDUSTRY LEADERS\n![] \n[\nView customer stories\u2192\n] \n## Bring location to life with beau"
+      ],
+      "latency": 4.754024267196655
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:19:23.528543",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Real-time ML inference: latency optimization",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA TensorRT Documentation #",
+        "[exa] Overview of inference best practices on GKE \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] NVIDIA TensorRT is an SDK for optimizing and accelerating deep learning inference on NVIDIA GPUs. It takes trained model"
+      ],
+      "latency": 11.981831073760986
+    },
+    {
+      "topic": "Model serving optimization: batching, caching",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Performance Guide \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] > Large language models (LLMs) have excelled in various applications, yet serving them at scale is challenging due to th"
+      ],
+      "latency": 9.763882637023926
+    },
+    {
+      "topic": "ONNX Runtime: cross-platform inference",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to ONNX Runtime",
+        "[exa] Accelerated\n\t\t\t\t\t Edge   \n\t\t\t\t\tMachine Learning",
+        "[exa-h] ONNX Runtime is a cross-platform machine-learning model accelerator, with a flexible interface to integrate hardware-spe"
+      ],
+      "latency": 6.517673969268799
+    },
+    {
+      "topic": "TensorRT: NVIDIA inference optimization",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA TensorRT Documentation #",
+        "[exa] NVIDIA TensorRT",
+        "[exa-h] NVIDIA TensorRT is an SDK for optimizing and accelerating deep learning inference on NVIDIA GPUs. It takes trained model"
+      ],
+      "latency": 8.484805583953857
+    },
+    {
+      "topic": "Streaming ML: online learning, incremental models",
+      "area": "streaming",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] critical, the training of models becomes time-constrained. Parallelized batch offline training, although horizontally sc"
+      ],
+      "latency": 10.68541932106018
+    },
+    {
+      "topic": "Real-time feature computation: feature stores",
+      "area": "streaming",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI agents trained on your business data",
+        "[exa] Introduction",
+        "[exa-h] ### Intelligent data processing for batch and real time\nImplement a single solution for all of your ETL use cases that a"
+      ],
+      "latency": 7.307494401931763
+    },
+    {
+      "topic": "Change data capture: ML on data streams",
+      "area": "streaming",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CDC in Production: An Operating Guide",
+        "[exa] Flink CDC",
+        "[exa-h] Change data capture as a design pattern is[seeing widespread adoption] as a means of replicating primary database state "
+      ],
+      "latency": 8.314065933227539
+    },
+    {
+      "topic": "Complex event processing: pattern detection",
+      "area": "streaming",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] FlinkCEP - Complex event processing for Flink\n   #",
+        "[exa] FlinkCEP - Complex event processing for Flink\n   #",
+        "[exa-h] It allows you to detect event patterns in an endless stream of events, giving you the opportunity to get hold of what\u2019s "
+      ],
+      "latency": 9.24747109413147
+    },
+    {
+      "topic": "Real-time fraud detection: transaction scoring",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to use Redis for Transaction risk scoring (in Fraud Detection) | Redis",
+        "[exa] Stripe logo",
+        "[exa-h] \"Transaction risk scoring\" is a method of leveraging data science, machine learning, and statistical analysis to continu"
+      ],
+      "latency": 7.742689847946167
+    },
+    {
+      "topic": "Live video analytics: object tracking, counting",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Object Counting using Ultralytics YOLO26",
+        "[exa] Occupancy analytics guide \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Object counting with[Ultralytics YOLO26] involves accurate identification and counting of specific objects in videos and"
+      ],
+      "latency": 8.12809944152832
+    },
+    {
+      "topic": "Real-time personalization: recommendation serving",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Guidance for Near Real-Time Personalized Recommendations on AWS",
+        "[exa] Technologies behind real-time personalization",
+        "[exa-h] This Guidance helps businesses build a real-time recommendation pipeline using Amazon Personalize. The pipeline creates "
+      ],
+      "latency": 7.98895525932312
+    },
+    {
+      "topic": "Predictive maintenance: real-time anomaly detection",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Predictive maintenance: A complete guide for data and analytics teams",
+        "[exa] Microsoft for Manufacturing documentation",
+        "[exa-h] Predictive maintenance is a proactive approach that uses condition data, statistical methods, and machine learning to es"
+      ],
+      "latency": 6.811460733413696
+    },
+    {
+      "topic": "GPU inference optimization: memory, compute",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Memory Usage of TensorRT-LLM #",
+        "[exa-h] On the GPU, forward and backward propagation of these layers is expected to be limited by\nmemory transfer times.\nThe rea"
+      ],
+      "latency": 9.287325620651245
+    },
+    {
+      "topic": "Inference acceleration: quantization, pruning",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Neural networks are both computationally intensive and memory intensive, making them difficult to deploy on embedded s"
+      ],
+      "latency": 6.573890447616577
+    },
+    {
+      "topic": "Load balancing ML: request routing",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Request routing #",
+        "[exa] Load Balancing in the Datacenter",
+        "[exa-h] Ray Serve LLM provides customizable request routing to optimize request distribution across replicas for different workl"
+      ],
+      "latency": 8.814557552337646
+    },
+    {
+      "topic": "Auto-scaling inference: demand-based scaling",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Best practices for autoscaling large language model (LLM) inference workloads with GPUs on Google Kubernetes Engine (GKE) \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Best practices for autoscaling large language model (LLM) inference workloads with TPUs \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] suitable metrics to set up your[Horizontal Pod Autoscaler] (HPA) for your inference workloads on GKE.\nHPA is an efficien"
+      ],
+      "latency": 7.281233310699463
+    },
+    {
+      "topic": "Triton Inference Server: ML serving",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA Triton Inference Server #",
+        "[exa] NVIDIA Triton Inference Server #",
+        "[exa-h] Triton Inference Server is an open source inference serving software that streamlines\nAI inferencing. Triton Inference S"
+      ],
+      "latency": 7.346184968948364
+    },
+    {
+      "topic": "TF Serving: TensorFlow model deployment",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Serving Models",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] TensorFlow Serving is a flexible, high-performance serving system for machine\nlearning models, designed for production e"
+      ],
+      "latency": 8.69137692451477
+    },
+    {
+      "topic": "BentoML: ML serving framework",
+      "area": "platforms",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] BentoML Documentation \u00b6",
+        "[exa] BentoML Documentation \u00b6",
+        "[exa-h] BentoML is a**Unified Inference Platform**for deploying and scaling AI models with production-grade reliability, all wit"
+      ],
+      "latency": 7.982416391372681
+    },
+    {
+      "topic": "Seldon Core: ML deployment platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Production-ready ML Serving Framework",
+        "[exa] Seldon Core Contribution Guide - Take Control of ML and AI Complexity",
+        "[exa-h] Seldon Core 2 is a Kubernetes-native framework for deploying and managing machine learning (ML) and Large Language Model"
+      ],
+      "latency": 4.651095151901245
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:40:13.734271",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "AI workflow patterns: sequential, parallel, conditional",
+      "area": "design",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI agent orchestration patterns",
+        "[exa] Pattern 4: Multi-stage AI workflow",
+        "[exa-h] [] ## Sequential orchestration\nThe sequential orchestration pattern chains AI agents in a predefined, linear order. Each"
+      ],
+      "latency": 9.248201131820679
+    },
+    {
+      "topic": "State machines for AI: transitions, guards, actions",
+      "area": "design",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] #  Transitions",
+        "[exa] #  Guarded Transitions",
+        "[exa-h] Transitions define how the machine reacts to[events]. To learn more, see the section in our[introduction to statecharts]"
+      ],
+      "latency": 10.576527118682861
+    },
+    {
+      "topic": "Error handling in workflows: retry, fallback, compensation",
+      "area": "design",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Failure handling in practice: Master Workflow retry logic for resilient applications",
+        "[exa] Activity and workflow retries",
+        "[exa-h] ```\n## Wrapping up[#] \nErrors and failures don't have to be scary. Thinking about where the error occurs and how long it"
+      ],
+      "latency": 7.649433135986328
+    },
+    {
+      "topic": "Long-running workflows: checkpointing, resumption",
+      "area": "design",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Managing very long-running Workflows",
+        "[exa] Checkpointing and Resuming Workflows",
+        "[exa-h] There are[two limits in Temporal] that keep a single Workflow execution from actually running forever: 50Ki (51,200) Eve"
+      ],
+      "latency": 8.699835777282715
+    },
+    {
+      "topic": "Temporal for AI workflows: activities, signals, queries",
+      "area": "orchestration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Handling Signals, Queries, & Updates",
+        "[exa] What is a Temporal Activity?",
+        "[exa-h] * [![] Handle Queries in PHP] feature-guide\n* [Handling Messages] \n* [Message handler concurrency] \n* [Message handler p"
+      ],
+      "latency": 8.727552652359009
+    },
+    {
+      "topic": "Apache Airflow for ML: DAGs, operators, sensors",
+      "area": "orchestration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Sensors \u2014 Airflow 3.1.6 Documentation",
+        "[exa] Operators \u00b6",
+        "[exa-h] Sensors are a special type of[Operator] that are designed to do exactly one thing - wait for something to occur. It can "
+      ],
+      "latency": 9.150281429290771
+    },
+    {
+      "topic": "Prefect for AI pipelines: flows, tasks, deployments",
+      "area": "orchestration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction",
+        "[exa] Flows - Prefect",
+        "[exa-h] Prefect is an open-source orchestration engine that turns your Python functions into production-grade data pipelines wit"
+      ],
+      "latency": 6.827244281768799
+    },
+    {
+      "topic": "Dagster for ML: assets, ops, jobs, schedules",
+      "area": "orchestration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Jobs | Dagster Docs",
+        "[exa] Jobs | Dagster Docs",
+        "[exa-h] Jobs are supported for both asset definitions and ops, but the usage for each concept is unique. Refer to the following "
+      ],
+      "latency": 6.897739410400391
+    },
+    {
+      "topic": "n8n for AI automation: nodes, workflows, triggers",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Advanced AI #",
+        "[exa] Build an AI chat agent with n8n #",
+        "[exa-h] Related documentation and tools.\n### Node types[#] \nThis feature uses[Cluster nodes]: groups of[root] and[sub] nodes tha"
+      ],
+      "latency": 6.66706657409668
+    },
+    {
+      "topic": "Zapier AI: natural language automation, AI actions",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Actions  Beta",
+        "[exa] Introduction",
+        "[exa-h] AI Actions is a tool for builders to equip AI platforms (or custom integrations) with the ability to run any\nZapier acti"
+      ],
+      "latency": 9.296020030975342
+    },
+    {
+      "topic": "Make (Integromat): scenarios, modules, AI integration",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to build AI agents with Make",
+        "[exa] AI automation and control at scale",
+        "[exa-h] In this guide, you\u2019ll learn how to build an agent from scratch. We\u2019ll walk through setting up the agent, adding scenario"
+      ],
+      "latency": 8.068599462509155
+    },
+    {
+      "topic": "API orchestration: composite services, aggregation",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pattern: API Composition",
+        "[exa] API composition pattern",
+        "[exa-h] Implement a query by defining an*API Composer*, which invoking the services that own the data and performs an in-memory "
+      ],
+      "latency": 9.246753215789795
+    },
+    {
+      "topic": "Document processing workflows: extraction, validation, routing",
+      "area": "business",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build a document processing pipeline with Workflows",
+        "[exa] Guidance for Intelligent Document Processing on AWS",
+        "[exa-h] If you are using Document AI to build workflows that involve several steps to process documents, you might want to use s"
+      ],
+      "latency": 8.650874376296997
+    },
+    {
+      "topic": "Customer support automation: ticket routing, response generation",
+      "area": "business",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI-powered ticketing system",
+        "[exa] Deliver world-class customer support with flexible automation",
+        "[exa-h] Enhance agent efficiency with omnichannel routing that automatically assigns tickets to the most qualified agents. Admin"
+      ],
+      "latency": 9.237769365310669
+    },
+    {
+      "topic": "Content workflows: generation, review, publication",
+      "area": "business",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Ultimate Guide to Content Approval Workflows",
+        "[exa] Content Workflow Management: The Essential Guide for 2026",
+        "[exa-h] A content approval workflow is a map of the review process that content goes through between conceptualization and publi"
+      ],
+      "latency": 10.514117240905762
+    },
+    {
+      "topic": "Data enrichment pipelines: entity resolution, classification",
+      "area": "business",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Progress Documentation",
+        "[exa-h] Entity resolution isn\u2019t a one-off task - it\u2019s an ongoing process. An ER pipeline helps you operationalize everything fro"
+      ],
+      "latency": 9.053879261016846
+    },
+    {
+      "topic": "Human-in-the-loop workflows: approval, review, escalation",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Get started with approvals",
+        "[exa] Create a Human Review Workflow",
+        "[exa-h] With the approvals capability in Power Automate, you can automate sign-off requests and combine human decision-making fo"
+      ],
+      "latency": 8.531493425369263
+    },
+    {
+      "topic": "Event-driven AI: triggers, webhooks, real-time processing",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Webhooks and server-side controls",
+        "[exa] Webhooks | OpenAI API",
+        "[exa-h] 2. OpenAI sends a webhook to your application\u2019s backend webhook URL, notifying your app of the state of the session. The"
+      ],
+      "latency": 6.828738212585449
+    },
+    {
+      "topic": "Batch vs streaming workflows: trade-offs, hybrid approaches",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Batch vs. streaming data processing in  Databricks",
+        "[exa] Batch vs. streaming data processing in  Databricks",
+        "[exa-h] The table below outlines the pros and cons of batch and streaming processing and the different product features that sup"
+      ],
+      "latency": 11.785799980163574
+    },
+    {
+      "topic": "Workflow observability: tracing, metrics, debugging",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Monitor workflows \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Incident Debugging Workflow",
+        "[exa-h] executions, and understand the behavior, health, and performance of your\napplications.\nBy default, Workflows is configur"
+      ],
+      "latency": 8.73503065109253
+    }
+  ]
+}

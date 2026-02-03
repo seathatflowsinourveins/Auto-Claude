@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:48:45.205034",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 96
+  },
+  "results": [
+    {
+      "topic": "Embedding similarity for recommendations: item2vec, user2vec",
+      "area": "embeddings",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Microsoft Word - item_recsys_poster.docx",
+        "[exa] Item2Vec: Neural Item Embeddings to enhance recommendations",
+        "[exa-h] that demonstrate the effectiveness of the Item2vec method and \nshow it is competitive with SVD. \n1. INTRODUCTION \nComput"
+      ],
+      "latency": 10.642854690551758
+    },
+    {
+      "topic": "Two-tower models: separate user and item encoders",
+      "area": "embeddings",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Two-Tower Model for Recommendation Systems: A Deep Dive",
+        "[exa] Two-Tower (Neural Retrieval)",
+        "[exa-h] The Two-Tower model is a foundational architecture for large-scale recommendation systems, built to efficiently retrieve"
+      ],
+      "latency": 7.733828067779541
+    },
+    {
+      "topic": "LLM embeddings for recs: using text representations",
+      "area": "embeddings",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] arXiv reCAPTCHA\n[![Cornell University]] \n[We gratefully acknowledge support from\nthe Simons Foundation and member instit"
+      ],
+      "latency": 6.194471836090088
+    },
+    {
+      "topic": "Real-time embedding updates: incremental learning",
+      "area": "embeddings",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Can embeddings be updated in real time?",
+        "[exa] How are embeddings updated for streaming data?",
+        "[exa-h] and are not real-time. However, techniques like incremental updates, online learning, or dynamic embedding storage can e"
+      ],
+      "latency": 9.139817714691162
+    },
+    {
+      "topic": "Matrix factorization: SVD, NMF for recommendations",
+      "area": "collaborative",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Recommendation System \u2013 Matrix Factorization (SVD) Explained",
+        "[exa] Matrix factorization \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] ## Concluding Remarks\nThis article outlined the intuition, mathematics and implementation behind matrix factorization, i"
+      ],
+      "latency": 9.79118800163269
+    },
+    {
+      "topic": "Neural collaborative filtering: deep learning approaches",
+      "area": "collaborative",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Neural Graph Collaborative Filtering - ADS",
+        "[exa-h] less scrutiny. In this work, we strive to develop techniques\nbased on neural networks to tackle the key problem in rec\u0002o"
+      ],
+      "latency": 8.0512113571167
+    },
+    {
+      "topic": "Graph neural networks for recs: user-item graphs",
+      "area": "collaborative",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Graph Convolutional Neural Networks for Web-Scale Recommender Systems - ADS",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] Recent advancements in deep neural networks for graph-structured data have led to state-of-the-art performance on recomm"
+      ],
+      "latency": 8.825990438461304
+    },
+    {
+      "topic": "Cold start problem: handling new users and items",
+      "area": "collaborative",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Language-Model Prior Overcomes Cold-Start Items",
+        "[exa-h] [59]. There are three categories of the cold-start recommendation\nproblem: a) new users, b) new items, or c) new users a"
+      ],
+      "latency": 6.727019309997559
+    },
+    {
+      "topic": "Content-based filtering with LLMs: understanding items",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] > Personalized content-based recommender systems have become indispensable tools for users to navigate through the vast "
+      ],
+      "latency": 7.669155597686768
+    },
+    {
+      "topic": "Feature extraction for recommendations: automated features",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is Featuretools? #",
+        "[exa] What is Featuretools? #",
+        "[exa-h] ![Featuretools] \n**Featuretools**is a framework to perform automated feature engineering. It excels at transforming temp"
+      ],
+      "latency": 5.7920122146606445
+    },
+    {
+      "topic": "Cross-modal recommendations: text, image, audio",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] A Comprehensive Survey on Multimodal Recommender Systems: Taxonomy, Evaluation, and Future Directions",
+        "[exa-h] > Abstract:Personalized recommendation serves as a ubiquitous channel for users to discover information tailored to thei"
+      ],
+      "latency": 8.028221845626831
+    },
+    {
+      "topic": "Knowledge graph recommendations: using structured data",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] An overview of knowledge graph-based recommendation systems",
+        "[exa] ",
+        "[exa-h] start and sparse data. To address these challenges, the integration of Knowledge Graphs with recommendation systems has "
+      ],
+      "latency": 8.293000936508179
+    },
+    {
+      "topic": "LLM as recommender: conversational recommendations",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] > A Conversational Recommender System (CRS) offers increased transparency and control to users by enabling them to engag"
+      ],
+      "latency": 7.106624126434326
+    },
+    {
+      "topic": "Prompt-based recommendations: natural language queries",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] ",
+        "[exa-h] GQR uses an LLM as its foundation and does not require to be trained or fine-tuned to tackle the query recommendation pr"
+      ],
+      "latency": 6.384570360183716
+    },
+    {
+      "topic": "RAG for recommendations: retrieval-augmented suggestions",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ARAG: Agentic Retrieval Augmented Generation for Personalized Recommendation",
+        "[exa] Knowledge Graph Retrieval-Augmented Generation for LLM-based Recommendation",
+        "[exa-h] Retrieval-Augmented Generation (RAG) has shown promise in en\u0002hancing recommendation systems by incorporating external co"
+      ],
+      "latency": 9.828734397888184
+    },
+    {
+      "topic": "Explanation generation: why this recommendation",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Abstract\nWe introduce four principles for explainable artificial intelligence (AI) that comprise fun\u0002damental properties"
+      ],
+      "latency": 3.706738233566284
+    },
+    {
+      "topic": "Recommendation serving: real-time inference at scale",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] A Practical Guide to Building an Online Recommendation System",
+        "[exa-h] > Building a scalable and real-time recommendation system is vital for many businesses driven by time-sensitive customer"
+      ],
+      "latency": 4.508021116256714
+    },
+    {
+      "topic": "A/B testing recommendations: measuring impact",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 1. Choose a metric to test for and grab the baseline rate for that metric\n2. Choose a statistical significance level (sa"
+      ],
+      "latency": 3.468358039855957
+    },
+    {
+      "topic": "Diversity in recommendations: avoiding filter bubbles",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] What is Media Diversity and Do Recommender Systems Have It?",
+        "[exa-h] > Recommender systems are effective tools for mitigating information overload and have seen extensive applications acros"
+      ],
+      "latency": 4.673722743988037
+    },
+    {
+      "topic": "Recommendation feedback loops: continuous improvement",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OPS11-BP03 Implement feedback loops",
+        "[exa] OPS11-BP03 Implement feedback loops",
+        "[exa-h] Feedback loops provide actionable insights that drive decision making. Build feedback loops into your procedures and wor"
+      ],
+      "latency": 7.988932132720947
+    }
+  ]
+}

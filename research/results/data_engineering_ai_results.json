@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:08:20.827823",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 94
+  },
+  "results": [
+    {
+      "topic": "AI-assisted ETL: automated data transformation",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI ETL: How Artificial Intelligence Automates Data Pipelines",
+        "[exa] Transforming data with AI: use cases, examples, and challenges",
+        "[exa-h] AI ETL combines artificial intelligence with extract, transform, and load processes to automate[data integration]. Moder"
+      ],
+      "latency": 9.161983251571655
+    },
+    {
+      "topic": "Data pipeline orchestration: Airflow, Dagster, Prefect",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction",
+        "[exa] What is Airflow\u00ae?",
+        "[exa-h] Prefect is an open-source orchestration engine that turns your Python functions into production-grade data pipelines wit"
+      ],
+      "latency": 11.421882629394531
+    },
+    {
+      "topic": "Streaming data processing: Kafka, Flink with AI",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Develop Real-Time, Context-Aware AI Systems",
+        "[exa] Build AI with Confluent Intelligence in Confluent Cloud \uf0c1",
+        "[exa-h] Confluent Intelligence enables AI systems to continuously learn from historical data and act in real time. Use it to bui"
+      ],
+      "latency": 8.286688804626465
+    },
+    {
+      "topic": "Data mesh architecture: decentralized data products",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data Mesh Principles and Logical Architecture",
+        "[exa] How to Move Beyond a Monolithic Data Lake to a Distributed Data\n  Mesh",
+        "[exa-h] quality and integrity guarantees needed to make data usable : 1) domain-oriented\ndecentralized data ownership and archit"
+      ],
+      "latency": 10.865727186203003
+    },
+    {
+      "topic": "Automated data quality: anomaly detection, validation",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Auto data quality overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Enterprise Data Quality for All Data Types",
+        "[exa-h] BigQuery tables. You can automate the data scanning, validate data\nagainst defined rules, and log alerts if your data do"
+      ],
+      "latency": 10.419335842132568
+    },
+    {
+      "topic": "Data profiling with AI: schema inference, statistics",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About data profiling \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Profile your data",
+        "[exa-h] Profiling is like getting a detailed health report for your data. It gives you\nkey statistics, such as common values, ho"
+      ],
+      "latency": 8.69621753692627
+    },
+    {
+      "topic": "Data lineage tracking: impact analysis, provenance",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About data lineage \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] What is data lineage?",
+        "[exa-h] shows you where your data comes from (the origin), where it travels (the\ndestinations), and all the changes or transform"
+      ],
+      "latency": 9.701855182647705
+    },
+    {
+      "topic": "Master data management: entity resolution, deduplication",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 1  -  Principles of Entity Resolution",
+        "[exa] (Almost) all of entity resolution",
+        "[exa-h] Linking is appending a common identifier to reference instances to denote the decision that they are equivalent. Identit"
+      ],
+      "latency": 10.472434282302856
+    },
+    {
+      "topic": "Automated feature engineering: AutoML feature discovery",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learned Feature Importance Scores for Automated Feature Engineering",
+        "[exa] ",
+        "[exa-h] Feature engineering has demonstrated substantial utility for many machine learning workflows, such as in the small data "
+      ],
+      "latency": 9.156014919281006
+    },
+    {
+      "topic": "Feature stores: Feast, Tecton, real-time features",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction",
+        "[exa] Introduction",
+        "[exa-h] * **Make features consistently available for training and serving**by managing an*offline store*(to process historical d"
+      ],
+      "latency": 10.219818353652954
+    },
+    {
+      "topic": "Feature selection: AI-driven relevance ranking",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Top- k k  Feature Importance Ranking",
+        "[exa] ",
+        "[exa-h] Accurate ranking of important features is a fundamental challenge in interpretable machine learning with critical applic"
+      ],
+      "latency": 7.587680339813232
+    },
+    {
+      "topic": "Time series features: lag, rolling, aggregation",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Forecasting Features #",
+        "[exa] Lagged features for time series forecasting #",
+        "[exa-h] Time series forecasting involves learning from historical data observations to predict future values.\nFeature-engine\u2019s o"
+      ],
+      "latency": 7.169314384460449
+    },
+    {
+      "topic": "Natural language to SQL: text-to-query systems",
+      "area": "transformation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] At the core of our technique is a new NL-based program synthesis methodology that combines semantic\nparsing techniques f"
+      ],
+      "latency": 7.331125259399414
+    },
+    {
+      "topic": "Schema mapping AI: automated data integration",
+      "area": "transformation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Towards Scalable Schema Mapping using Large Language Models",
+        "[exa] Towards Scalable Schema Mapping Using Large Language Models",
+        "[exa-h] integration systems. These systems often rely on manually written\nschema mappings, which are complex, source-specific, a"
+      ],
+      "latency": 7.889420032501221
+    },
+    {
+      "topic": "Data normalization: AI-powered standardization",
+      "area": "transformation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Normalization \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Tracer | 404",
+        "[exa-h] entity. It normalize the literal text. Normalization often breaks the text value\nup into sub-fields.\nThis contain the da"
+      ],
+      "latency": 4.205005168914795
+    },
+    {
+      "topic": "Unstructured to structured: document extraction",
+      "area": "transformation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Extraction overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Document AI overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Layout Parser transforms documents in various formats into structured\nrepresentations, making content like paragraphs, t"
+      ],
+      "latency": 6.3165857791900635
+    },
+    {
+      "topic": "dbt with AI: automated data transformations",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transforming data with AI: use cases, examples, and challenges",
+        "[exa] About dbt Copilot  Starter Enterprise Enterprise +",
+        "[exa-h] ## Accelerate your data transformations with AI today\nUsed wisely, AI-enhanced data transformation workflows can dramati"
+      ],
+      "latency": 4.4874267578125
+    },
+    {
+      "topic": "Databricks AI: lakehouse, ML integration",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI and machine learning on Databricks",
+        "[exa] AI and machine learning on Databricks",
+        "[exa-h] Scale machine learning operations with automated workflows, CI/CD integration, and production-ready pipelines.\n* * [Mode"
+      ],
+      "latency": 3.5464987754821777
+    },
+    {
+      "topic": "Snowflake AI: data cloud, cortex features",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Snowflake  Cortex AI",
+        "[exa] Snowflake Cortex AI: Accelerating Financial Services with Agentic AI",
+        "[exa-h] ###### FEATURE\n# SnowflakeCortex AI\n## Turn conversations, documents and images into intelligent insights with AI next t"
+      ],
+      "latency": 6.514169454574585
+    },
+    {
+      "topic": "Fivetran: automated data connectors, sync",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Moving data. Powering  innovation.",
+        "[exa] What are the differences between Connectors and Activations?",
+        "[exa-h] Our automated, high-performance pipelines reliably move critical business data from 700+ sources including SaaS applicat"
+      ],
+      "latency": 4.914283275604248
+    }
+  ]
+}

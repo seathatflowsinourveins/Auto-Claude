@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:56:48.045712",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 83
+  },
+  "results": [
+    {
+      "topic": "Microsoft GraphRAG: community detection, entity extraction, summarization",
+      "area": "graph",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to GraphRAG",
+        "[exa] Project GraphRAG",
+        "[exa-h] * Extract all entities, relationships, and key claims from the TextUnits."
+      ],
+      "latency": 6.50685977935791
+    },
+    {
+      "topic": "Knowledge graph construction: entity linking, relation extraction",
+      "area": "graph",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Knowledge Graphs",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] languages by which they can be queried. The third chapter describes how the resulting data graph can be enhanced with no"
+      ],
+      "latency": 6.065610408782959
+    },
+    {
+      "topic": "LightRAG: lightweight graph-based retrieval augmentation",
+      "area": "graph",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] LightRAG: Simple and Fast Retrieval-Augmented Generation - ACL Anthology",
+        "[exa-h] which can lead to fragmented answers that fail to capture complex inter-dependencies. To address these challenges, we pr"
+      ],
+      "latency": 3.4839022159576416
+    },
+    {
+      "topic": "Graph neural networks for RAG: node embeddings, message passing",
+      "area": "graph",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] GNN-RAG: Graph Neural Retrieval for Large Language Model Reasoning - ADS",
+        "[exa-h] > Retrieval-augmented generation (RAG) has proven effective in integrating knowledge into large language models (LLMs). "
+      ],
+      "latency": 6.263692617416382
+    },
+    {
+      "topic": "RAPTOR: recursive abstractive processing for tree retrieval",
+      "area": "hierarchical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Deep Learning Monitor",
+        "[exa-h] # Title:RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval\nAuthors:[Parth Sarthi],[Salman Abdullah],["
+      ],
+      "latency": 4.669105291366577
+    },
+    {
+      "topic": "Multi-level summarization: document, section, chunk hierarchies",
+      "area": "hierarchical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 2 Hierarchical Summarization\nWe propose a new task for large-scale summariza\u0002tion called hierarchical summarization. Inp"
+      ],
+      "latency": 8.640705585479736
+    },
+    {
+      "topic": "Tree-based indexing: clustering, parent-child retrieval",
+      "area": "hierarchical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] CD-Tree: A clustering-based dynamic indexing and retrieval approach",
+        "[exa-h] The considerations for representing hierarchical data in rela\u0002tional systems differ somewhat from special-purpose system"
+      ],
+      "latency": 4.1041786670684814
+    },
+    {
+      "topic": "Long-context RAG: 128K+ token handling, sliding windows",
+      "area": "hierarchical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] from aligned instruct model, pushing the boundaries of context lengths from 128K to 1M, 2M, and 4M tokens. Our approach "
+      ],
+      "latency": 3.6775078773498535
+    },
+    {
+      "topic": "ColBERT: late interaction, maxsim, passage retrieval",
+      "area": "dense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Xiong et al., 2020; Qu et al., 2021). Col\u0002BERT\u2019s (Khattab and Zaharia, 2020) late inter\u0002action paradigm addresses this t"
+      ],
+      "latency": 4.025458574295044
+    },
+    {
+      "topic": "Dense passage retrieval (DPR): bi-encoder training, hard negatives",
+      "area": "dense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Optimizing Dense Retrieval Model Training with Hard Negatives",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] This work theoretically investigates different training strategies for DR models and tries to explain why hard negative "
+      ],
+      "latency": 9.228032350540161
+    },
+    {
+      "topic": "Sentence transformers: fine-tuning, domain adaptation",
+      "area": "dense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Training Overview \uf0c1",
+        "[exa] ",
+        "[exa-h] Consider looking for base models that are designed on your language and/or domain of interest. For example,[FacebookAI/x"
+      ],
+      "latency": 6.3627471923828125
+    },
+    {
+      "topic": "Matryoshka embeddings: flexible dimensionality, truncation",
+      "area": "dense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Matryoshka Embeddings",
+        "[exa] Matryoshka-Adaptor: Unsupervised and Supervised Tuning for Smaller Embedding Dimensions - ADS",
+        "[exa-h] Copied!\n|\nBest viewed on desktopfor optimal interactive experience\n# [Matryoshka Embeddings] \nMatryoshka embeddings enab"
+      ],
+      "latency": 4.148353576660156
+    },
+    {
+      "topic": "Hybrid search: BM25 + dense fusion, reciprocal rank fusion",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Improving information retrieval in the Elastic Stack: Hybrid retrieval",
+        "[exa-h] > We study hybrid search in text retrieval where lexical and semantic search are fused together with the intuition that "
+      ],
+      "latency": 4.194504261016846
+    },
+    {
+      "topic": "Sparse-dense hybrid: SPLADE, learned sparse retrieval",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learned sparse retrieval",
+        "[exa] Towards Effective and Efficient Sparse Neural Information Retrieval",
+        "[exa-h] SPLADE (Sparse Lexical and Expansion Model) is a neural retrieval model that learns sparse vector representations for qu"
+      ],
+      "latency": 10.982645750045776
+    },
+    {
+      "topic": "Re-ranking: cross-encoder, ColBERT, listwise ranking",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] > jina-reranker-v3 is a 0.6B-parameter multilingual listwise reranker that introduces a novel \"last but not late\" intera"
+      ],
+      "latency": 3.5270884037017822
+    },
+    {
+      "topic": "Query expansion: HyDE, pseudo-relevance feedback",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Relevance feedback and query expansion",
+        "[exa-h] > Recent approaches that leverage large language models (LLMs) for pseudo-relevance feedback (PRF) have generally not ut"
+      ],
+      "latency": 4.119355916976929
+    },
+    {
+      "topic": "Vision-language RAG: CLIP retrieval, image understanding",
+      "area": "multimodal",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] more scalable and modular way, we propose a retrieval-augmented multimodal model, which enables a base multimodal model "
+      ],
+      "latency": 3.482555866241455
+    },
+    {
+      "topic": "Table RAG: table parsing, structured data retrieval",
+      "area": "multimodal",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] TabRAG: Tabular Document Retrieval \n via Structured Language Representations",
+        "[exa-h] to these challenges, we introduce TableRAG, a Retrieval-Augmented Generation (RAG) framework specifically designed for L"
+      ],
+      "latency": 9.920154333114624
+    },
+    {
+      "topic": "Code RAG: syntax-aware chunking, AST-based retrieval",
+      "area": "multimodal",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] AST Parsing. To support syntax-aware chunk\u0002ing, we leverage the Abstract Syntax Tree (AST)\nrepresentation of code. An AS"
+      ],
+      "latency": 3.7819652557373047
+    },
+    {
+      "topic": "Audio RAG: transcription retrieval, speaker diarization",
+      "area": "multimodal",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] VoxRAG: A Step Toward Transcription-Free RAG Systems in Spoken Question Answering",
+        "[exa-h] > Today, we are open-sourcing our core speech recognition and diarization models for non-commercial use. We are releasin"
+      ],
+      "latency": 8.813687562942505
+    }
+  ]
+}

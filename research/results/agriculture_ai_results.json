@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:13:14.575274",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 93
+  },
+  "results": [
+    {
+      "topic": "Precision agriculture: site-specific management",
+      "area": "precision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Precision Agriculture: An Introduction",
+        "[exa-h] Management\n\u25cf Data acquistion and \nanalysis\n\u25cf Decision support \nsystem\n\u25cf Increased attention \nto management\n\u25cf Learning cu"
+      ],
+      "latency": 7.341813087463379
+    },
+    {
+      "topic": "Soil analysis AI: nutrient mapping, health assessment",
+      "area": "precision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] On-site soil analysis: A novel approach combining NIR spectroscopy, remote sensing and deep learning - ADS",
+        "[exa] AI\u2013Remote Sensing for Soil Variability Mapping and Precision Agrochemical Management: A Comprehensive Review of Methods, Limitations, and Climate-Smart Applications",
+        "[exa-h] models to predict the main soil properties controlling soil health in the field. These include the soil texture (clay, s"
+      ],
+      "latency": 8.194885969161987
+    },
+    {
+      "topic": "Variable rate application: fertilizer, pesticide optimization",
+      "area": "precision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Variable Rate Technology and Its Application in Precision Agriculture",
+        "[exa] Variable Rate Applications in Decision Agriculture",
+        "[exa-h] The main aim of this publication is to discuss the concept of variable rate technology (VRT), and its components associa"
+      ],
+      "latency": 9.934914827346802
+    },
+    {
+      "topic": "Yield mapping: harvest data analysis",
+      "area": "precision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Yield Monitoring and Mapping",
+        "[exa] Site-specific Farming: Yield Mapping and Use of Yield Map Data",
+        "[exa-h] Yield maps are one of the most valuable sources of spatial data for precision agriculture. In developing these maps, it "
+      ],
+      "latency": 8.33372449874878
+    },
+    {
+      "topic": "Crop disease detection: plant pathology AI",
+      "area": "crops",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Recent advances in plant disease detection: challenges and opportunities",
+        "[exa] Deep learning and computer vision in plant disease detection: a comprehensive review of techniques, models, and trends in precision agriculture",
+        "[exa-h] Plant diseases cause approximately 220 billion USD in annual agricultural losses, driving demand for automated detection"
+      ],
+      "latency": 6.737465143203735
+    },
+    {
+      "topic": "Weed detection: automated identification, mapping",
+      "area": "crops",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] advancements-in-weed-mapping-a-systematic-review - Ask this paper | Bohrium",
+        "[exa-h] > Weed mapping plays a critical role in precision management by providing accurate and timely data on weed distribution,"
+      ],
+      "latency": 9.863316774368286
+    },
+    {
+      "topic": "Crop yield prediction: satellite, drone imagery",
+      "area": "crops",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Field-scale crop yield prediction using multi-temporal WorldView-3 and PlanetScope satellite data and deep learning",
+        "[exa] ",
+        "[exa-h] Our work presented one of the very first studies on using satellite imagery for field-scale yield prediction using 2D an"
+      ],
+      "latency": 6.812705755233765
+    },
+    {
+      "topic": "Phenotyping: plant trait analysis AI",
+      "area": "crops",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Deep Learning in Image-Based Plant Phenotyping",
+        "[exa-h] is attributed to the increased innovation and availability of new technologies which can enable the\nhigh-throughput phen"
+      ],
+      "latency": 9.391083717346191
+    },
+    {
+      "topic": "Livestock monitoring: health, behavior tracking",
+      "area": "livestock",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PLOS One",
+        "[exa] Advancements in Intelligent Monitoring Technologies for Behavioral, Physiological, and Biomarker Analysis in Cattle Health: A Review",
+        "[exa-h] ### Activity monitoring to detect BRD"
+      ],
+      "latency": 8.744851350784302
+    },
+    {
+      "topic": "Animal recognition: individual identification",
+      "area": "livestock",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Perspectives on Individual Animal Identification from Biology and Computer Vision",
+        "[exa] (PDF) Perspectives on Individual Animal Identification from Biology and Computer Vision",
+        "[exa-h] Identifying individual animals is crucial for many biological investigations. In response to some of the limitations of "
+      ],
+      "latency": 10.798600435256958
+    },
+    {
+      "topic": "Feed optimization: nutrition, efficiency AI",
+      "area": "livestock",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Linking Animal Feed Formulation to Milk Quantity, Quality, and Animal Health Through Data-Driven Decision-Making",
+        "[exa] Exploring the potential of artificial intelligence in feed formulation to advance poultry health and One-Health",
+        "[exa-h] Precision feed formulation is essential to improve livestock health, productivity, and milk quality, which directly affe"
+      ],
+      "latency": 6.0637311935424805
+    },
+    {
+      "topic": "Disease prediction: early warning systems",
+      "area": "livestock",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 7 Toward the Development of Disease Early Warning Systems",
+        "[exa] Quality criteria for the evaluation of climate-informed early warning systems for infectious diseases",
+        "[exa-h] An early warning system is an instrument for communicating information about impending risks to vulnerable people before"
+      ],
+      "latency": 6.819436073303223
+    },
+    {
+      "topic": "Agricultural drones: spraying, monitoring, mapping",
+      "area": "automation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Drones in Precision Agriculture: A Comprehensive Review of Applications, Technologies, and Challenges",
+        "[exa] Precision Agriculture Technology: Choosing a UAV and Sensor for Agricultural Applications",
+        "[exa-h] navigation and communication systems. We analyze diagnostic applications, such as crop monitoring and multispectral mapp"
+      ],
+      "latency": 3.8276708126068115
+    },
+    {
+      "topic": "Autonomous tractors: self-driving farm equipment",
+      "area": "automation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Why Do I Need Autonomy?",
+        "[exa] Autonomy",
+        "[exa-h] ## Fully Autonomous Tractor\nImagine. A tractor that not only thinks, it sees. A tractor that's always ready to work. A t"
+      ],
+      "latency": 4.307039499282837
+    },
+    {
+      "topic": "Harvesting robots: fruit picking, selective harvest",
+      "area": "automation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] Selective Harvesting Robotics: Current Research, Trends, and Future Directions",
+        "[exa-h] > Challenges in strawberry picking made selective harvesting robotic technology demanding. However, selective harvesting"
+      ],
+      "latency": 7.96635890007019
+    },
+    {
+      "topic": "Greenhouse automation: climate, irrigation control",
+      "area": "automation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Irrigating Greenhouse Crops",
+        "[exa] IGrow: A Smart Agriculture Solution to Autonomous Greenhouse Control - ADS",
+        "[exa-h] Various types of automatic irrigation control systems have been designed where the frequency and duration of watering ar"
+      ],
+      "latency": 10.47236442565918
+    },
+    {
+      "topic": "Climate Corporation: digital agriculture platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Empowering Farmers\n       \n       \n        The all-in-one digital farming solution",
+        "[exa] SOLUTIONS\n       \n       \n        Unlock your farm's potential",
+        "[exa-h] Dealersopen\\_in\\_new\n] [\nGrowersopen\\_in\\_new\n] [\nGrowersopen\\_in\\_new\n] \n![dealer discount] \nclose\n![FieldView product "
+      ],
+      "latency": 9.260721683502197
+    },
+    {
+      "topic": "John Deere: precision ag technology",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Agriculture Technology | Precision Ag | John Deere",
+        "[exa] Agriculture Technology | Precision Ag | John Deere",
+        "[exa-h] From machine performance to field management to data analysis, John Deere is the industry leader in providing farmers th"
+      ],
+      "latency": 5.634528398513794
+    },
+    {
+      "topic": "Farmers Edge: AI-powered farm management",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Enterprise AgTech, Redefined",
+        "[exa] Farmers Edge: Experience Agriculture's Most Connected Platform",
+        "[exa-h] #### Agriculture\nOptimizing farm productivity through unified data and field-level intelligence.\n[Learn More >] \n#### Fo"
+      ],
+      "latency": 3.7939391136169434
+    },
+    {
+      "topic": "Prospera Technologies: computer vision for farming",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prospera",
+        "[exa] Prospera.ag",
+        "[exa-h] Transforming the way food is grown through data & artificial intelligence. Prospera develops computer vision technologie"
+      ],
+      "latency": 6.101547956466675
+    }
+  ]
+}

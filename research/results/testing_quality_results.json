@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:33:42.243842",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "LLM unit testing: deterministic outputs, seed control",
+      "area": "unit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to make your completions outputs consistent with the new seed parameter",
+        "[exa] LLM-42 : Enabling Determinism in LLM Inference with Verified Speculation",
+        "[exa-h] The Chat Completions and Completions APIs are non-deterministic by default (which means model outputs may differ from re"
+      ],
+      "latency": 11.256147861480713
+    },
+    {
+      "topic": "Prompt unit tests: input/output validation, edge cases",
+      "area": "unit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unit testing",
+        "[exa] Testing and CI/CD #",
+        "[exa-h] (4)!user\\_prompts:list[tuple[str,int]],conn:DatabaseConn):\"\"\"Run weather forecast for a list of user prompts and save.\"\""
+      ],
+      "latency": 9.450194120407104
+    },
+    {
+      "topic": "Mock LLM responses: fixtures, recorded responses",
+      "area": "unit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Fake LLM \u2014 langchain-contrib 0.0.4 documentation",
+        "[exa-h] 1. `responses`: Maps input prompts to predefined responses\n2. `defaults`: Contains default configurations like the unkno"
+      ],
+      "latency": 9.370595455169678
+    },
+    {
+      "topic": "Assertion patterns: semantic similarity, structure validation",
+      "area": "unit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Assertion Query",
+        "[exa] ",
+        "[exa-h] There are a number of circumstances in which it is useful to test for patterns in a dataset. The most common is likely t"
+      ],
+      "latency": 10.091285705566406
+    },
+    {
+      "topic": "RAG integration tests: retrieval + generation pipeline",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Testset Generation for RAG",
+        "[exa] Building RAG with Gemini File Search",
+        "[exa-h] [![Visualization with Ragas Dashboard]] \n## A Deeper Look\nNow that we have a seen how to generate a testset, let's take "
+      ],
+      "latency": 11.252776861190796
+    },
+    {
+      "topic": "Agent integration tests: tool calls, state management",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Testing Agents  \u200b",
+        "[exa] What is Scenario?",
+        "[exa-h] This guide covers testing approaches for AgenticGoKit applications, from unit testing individual agents to integration t"
+      ],
+      "latency": 8.390120267868042
+    },
+    {
+      "topic": "API integration tests: rate limits, error handling",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Best practices for using the REST API",
+        "[exa] Stripe logo",
+        "[exa-h] Follow these best practices when using GitHub's API.\nView page as Markdown\n## In this article\n## [Avoid polling] \nYou sh"
+      ],
+      "latency": 8.78770112991333
+    },
+    {
+      "topic": "End-to-end testing: full pipeline validation",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is end-to-end (E2E) testing?",
+        "[exa] End-to-end Testing",
+        "[exa-h] The final step of E2E testing involves harnessing the power of automation to see that automated tests are properly integ"
+      ],
+      "latency": 5.895127773284912
+    },
+    {
+      "topic": "Golden dataset testing: expected outputs, diff detection",
+      "area": "regression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Golden Testing \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] golden package - gotest.tools/v3/golden - Go Packages",
+        "[exa-h] same name as their test target, suffixed with`\\_goldens`:\n```\n`path/\nto/\nsome\\_test.py\nsome\\_test\\_goldens/\ntest\\_case\\_"
+      ],
+      "latency": 7.8933186531066895
+    },
+    {
+      "topic": "Model version comparison: A/B testing, metrics tracking",
+      "area": "regression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Testing models with production variants",
+        "[exa] MLflow GenAI: Ship High-quality GenAI, Fast",
+        "[exa-h] ## Model A/B test example\nPerforming A/B testing between a new model and an old model with production traffic can be an "
+      ],
+      "latency": 8.335814237594604
+    },
+    {
+      "topic": "Prompt regression: detecting quality degradation",
+      "area": "regression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Evals API Use-case - Detecting prompt regressions",
+        "[exa] Prompt regression testing: Preventing quality decay",
+        "[exa-h] In the following eval, we are going to focus on the task of**detecting if my prompt change is a regression**.\nOur use-ca"
+      ],
+      "latency": 6.920234441757202
+    },
+    {
+      "topic": "Performance regression: latency, throughput monitoring",
+      "area": "regression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Instrumentation",
+        "[exa] Prometheus - Monitoring system & time series database",
+        "[exa-h] An online-serving system is one where a human or another system is expecting an\nimmediate response. For example, most da"
+      ],
+      "latency": 6.940452337265015
+    },
+    {
+      "topic": "Response quality scoring: relevance, coherence, accuracy",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Response Quality Metrics",
+        "[exa] ",
+        "[exa-h] Response quality metrics help you measure how well your AI system answers user questions, follows instructions, and prov"
+      ],
+      "latency": 9.964891195297241
+    },
+    {
+      "topic": "Hallucination detection: factual verification, citation check",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] offers a practical solution for making LLMs more trustworthy\nin applications where getting facts wrong isn\u2019t an option.\n"
+      ],
+      "latency": 6.9363977909088135
+    },
+    {
+      "topic": "Toxicity and safety scoring: content moderation metrics",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Our model learns to predict whether a given sample vio\u0002lates any of 8 chosen categories, including all the top cate\u0002gori"
+      ],
+      "latency": 8.382782697677612
+    },
+    {
+      "topic": "Custom evaluation metrics: domain-specific quality",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Evaluation best practices",
+        "[exa] Define your evaluation metrics \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] 1. **Define eval objective**. What's the success criteria for the eval?\n2. **Collect dataset**. Which data will help you"
+      ],
+      "latency": 8.070342540740967
+    },
+    {
+      "topic": "LLM tests in CI/CD: GitHub Actions, parallel execution",
+      "area": "cicd",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Running variations of jobs in a workflow - GitHub Docs",
+        "[exa] CI/CD for LLM apps: Run tests with Evidently + GitHub actions",
+        "[exa-h] ## [Defining the maximum number of concurrent jobs] \n\nTo set the maximum number of jobs that can run simultaneously when"
+      ],
+      "latency": 9.568676948547363
+    },
+    {
+      "topic": "Test data management: versioning, synthetic generation",
+      "area": "cicd",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction #",
+        "[exa] The future of software testing depends on high-quality test data",
+        "[exa-h] extract the database model, learn all of the necessary information from the database, and generate a Synthetic copy\nthat"
+      ],
+      "latency": 7.126946449279785
+    },
+    {
+      "topic": "Cost-aware testing: sampling strategies, budget limits",
+      "area": "cicd",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Methodology",
+        "[exa] ",
+        "[exa-h] > A/B testing is a core tool for decision-making in business experimentation, particularly in digital platforms and mark"
+      ],
+      "latency": 6.781976699829102
+    },
+    {
+      "topic": "Continuous monitoring: production quality alerts",
+      "area": "cicd",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Monitoring Distributed Systems",
+        "[exa] Practical Alerting from Time-Series Data",
+        "[exa-h] Edited by Betsy Beyer\nGoogle\u2019s SRE teams have some basic principles and best practices for building successful[monitorin"
+      ],
+      "latency": 7.161572694778442
+    }
+  ]
+}

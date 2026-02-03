@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:51:13.309870",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "NVIDIA DGX: AI supercomputer",
+      "area": "hardware",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA DGX Platform",
+        "[exa] NVIDIA DGX Systems",
+        "[exa-h] Built from the ground up for enterprise AI, the NVIDIA DGX\u2122 platform, featuring[NVIDIA DGX SuperPOD\u2122,] combines the best"
+      ],
+      "latency": 10.163641452789307
+    },
+    {
+      "topic": "GPU clusters: multi-node training",
+      "area": "hardware",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multinode Training #",
+        "[exa] Inside multi-node training: How to scale model training across GPU clusters",
+        "[exa-h] * Code changes (and things to keep in mind) when moving from single-node to multinode training.\nView the code used in th"
+      ],
+      "latency": 7.140671730041504
+    },
+    {
+      "topic": "NVLink: high-speed interconnect",
+      "area": "hardware",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA NVLink and NVLink Switch",
+        "[exa] NVIDIA NVLink and NVLink Switch",
+        "[exa-h] NVLink is a 3.6 TB/s bidirectional, direct GPU-to-GPU interconnect that scales multi-GPU input and output (IO) within a "
+      ],
+      "latency": 7.776761770248413
+    },
+    {
+      "topic": "InfiniBand: RDMA networking",
+      "area": "hardware",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About InfiniBand\u2122",
+        "[exa] InfiniBand\u2122 Architecture Specification",
+        "[exa-h] A true fabric architecture, InfiniBand leverages switched, point-to-point channels with data transfers that generally le"
+      ],
+      "latency": 8.535258531570435
+    },
+    {
+      "topic": "DeepSpeed: ZeRO optimization",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ZeRO \u2014 DeepSpeed 0.18.5 documentation",
+        "[exa] ZeRO \u2014 DeepSpeed 0.18.6 documentation",
+        "[exa-h] replicating them. By doing this, it boosts memory efficiency compared to\nclassic data-parallelism while retaining its co"
+      ],
+      "latency": 10.399511814117432
+    },
+    {
+      "topic": "FSDP: fully sharded data parallel",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa] ",
+        "[exa-h] industry leaders, resulting in an implicit technical barrier for the wider community to access and leverage these techno"
+      ],
+      "latency": 7.044201135635376
+    },
+    {
+      "topic": "Megatron-LM: model parallelism",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] and frameworks that are still under development.\nIn this work, we implement a simple and efficient model\nparallel approa"
+      ],
+      "latency": 9.622420072555542
+    },
+    {
+      "topic": "Ray Train: distributed training",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Ray Train: Scalable Model Training #",
+        "[exa] Ray Train: Scalable Model Training #",
+        "[exa-h] Ray Train allows you to scale model training code from a single machine to a cluster of machines in the cloud, and abstr"
+      ],
+      "latency": 7.649925470352173
+    },
+    {
+      "topic": "Data parallelism: batch distribution",
+      "area": "parallelism",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Strategies for distributed training",
+        "[exa] Distributed #",
+        "[exa-h] Distributed training is usually split by two approaches: data parallel and model parallel.*Data parallel*is the most com"
+      ],
+      "latency": 7.145172357559204
+    },
+    {
+      "topic": "Model parallelism: layer splitting",
+      "area": "parallelism",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core",
+        "[exa-h] > Large language model inference is both memory-intensive and time-consuming, often requiring distributed algorithms to "
+      ],
+      "latency": 7.8812596797943115
+    },
+    {
+      "topic": "Pipeline parallelism: stage execution",
+      "area": "parallelism",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pipeline lifecycle \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] How pipeline executions work",
+        "[exa-h] The Dataflow service automatically parallelizes and distributes\nthe processing logic in your pipeline to the workers you"
+      ],
+      "latency": 8.717747449874878
+    },
+    {
+      "topic": "Tensor parallelism: matrix sharding",
+      "area": "parallelism",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Large Scale Transformer model training with Tensor Parallel (TP) #",
+        "[exa] Large Scale Transformer model training with Tensor Parallel (TP) #",
+        "[exa-h] PyTorch Tensor Parallel APIs offers a set of module level primitives (`ParallelStyle`) to configure the sharding for eac"
+      ],
+      "latency": 11.772384405136108
+    },
+    {
+      "topic": "Gradient checkpointing: memory saving",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gradient checkpointing with jax.checkpoint (jax.remat)",
+        "[exa] torch.utils.checkpoint #",
+        "[exa-h] In both[`jax.linearize()`] and[`jax.vjp()`], there is flexibility in how and when some values are computed. Different ch"
+      ],
+      "latency": 7.747633457183838
+    },
+    {
+      "topic": "Mixed precision: FP16 BF16 training",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Train With Mixed Precision",
+        "[exa] ",
+        "[exa-h] Mixed precisionis the combined use of different numerical precisions in a computational method.\nHalf precision(also know"
+      ],
+      "latency": 12.006235122680664
+    },
+    {
+      "topic": "Communication optimization: allreduce",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Collective Operations \uf0c1",
+        "[exa] Distributed communication package - torch.distributed #",
+        "[exa-h] Failure to do so will result in undefined behavior, including hangs, crashes, or data corruption.\n## AllReduce[\uf0c1] \nThe A"
+      ],
+      "latency": 6.960748910903931
+    },
+    {
+      "topic": "Activation offloading: CPU memory",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CPU Offloading #",
+        "[exa] CPU Offloading #",
+        "[exa-h] CPU Offloading in Megatron Bridge is a feature that reduces the peak memory usage of the GPU by offloading activations a"
+      ],
+      "latency": 7.487155199050903
+    },
+    {
+      "topic": "AWS P5 instances: H100 clusters",
+      "area": "cloud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon EC2 P5 instances",
+        "[exa] New \u2013 Amazon EC2 P5 Instances Powered by NVIDIA H100 Tensor Core GPUs for Accelerating Generative AI and HPC Applications",
+        "[exa-h] Amazon Elastic Compute Cloud (Amazon EC2) P5 instances, powered by NVIDIA H100 Tensor Core GPUs, and P5e and P5en instan"
+      ],
+      "latency": 12.394506692886353
+    },
+    {
+      "topic": "Google TPU pods: cloud TPUs",
+      "area": "cloud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] TPU v4 &nbsp;|&nbsp; Google Cloud Documentation",
+        "[exa] TPU v4 &nbsp;|&nbsp; Google Cloud Documentation",
+        "[exa-h] * [Guides] \nSend feedbackStay organized with collectionsSave and categorize content based on your preferences.\n# TPU v4\n"
+      ],
+      "latency": 10.81755805015564
+    },
+    {
+      "topic": "Azure NC series: GPU VMs",
+      "area": "cloud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 'NC' sub-family GPU accelerated VM size series",
+        "[exa] NCv3 sizes series",
+        "[exa-h] The 'NC' sub-family of VM size series are one of Azure's GPU-optimized VM instances. They're designed for compute-intens"
+      ],
+      "latency": 8.242137670516968
+    },
+    {
+      "topic": "Lambda Labs: GPU cloud provider",
+      "area": "cloud",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] The   S u u perintellig e e nce Cl o o ud",
+        "[exa] Introduction #",
+        "[exa-h] {\"page\\_type\":\"webpage\",\"intent\":\"conversion\",\"description\":\"Accelerate your AI development with Lambda, The Superintell"
+      ],
+      "latency": 7.955517292022705
+    }
+  ]
+}

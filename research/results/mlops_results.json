@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:51:25.608794",
+  "stats": {
+    "sources": 199,
+    "vectors": 179,
+    "findings": 90
+  },
+  "results": [
+    {
+      "topic": "Model serving architectures: online, batch, streaming",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Serving Models",
+        "[exa] Architecture \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] TensorFlow Serving is a flexible, high-performance serving system for machine\nlearning models, designed for production e"
+      ],
+      "latency": 7.384858131408691
+    },
+    {
+      "topic": "Containerized ML: Docker, Kubernetes for models",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MLflow Serving",
+        "[exa] Develop ML model with MLflow and deploy to Kubernetes",
+        "[exa-h] Alternatively, models can be registered and retrieved via the[MLflow Model Registry].\nTo use MLflow deployment, you must"
+      ],
+      "latency": 6.94081449508667
+    },
+    {
+      "topic": "Serverless ML: Lambda, Cloud Functions for inference",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deploy models with Amazon SageMaker Serverless Inference",
+        "[exa] Deploying machine learning models as serverless APIs",
+        "[exa-h] Amazon SageMaker Serverless Inference is a purpose-built inference option that enables you to deploy and scale ML models"
+      ],
+      "latency": 6.008978843688965
+    },
+    {
+      "topic": "A/B testing ML models: canary, shadow deployments",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Machine Learning Lens - AWS Well-Architected\n      Framework",
+        "[exa] Deployment guardrails for updating models in production",
+        "[exa-h] traditional supervised and unsupervised learning, predictive analytics, classification,\nregression, and clustering tasks"
+      ],
+      "latency": 7.443277597427368
+    },
+    {
+      "topic": "ML pipeline orchestration: Kubeflow, MLflow Pipelines",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Pipeline | Kubeflow",
+        "[exa] Overview | Kubeflow",
+        "[exa-h] Kubeflow Pipelines enable AI/ML engineers to define the structure of their workflows using Python, for[pipelines] that a"
+      ],
+      "latency": 9.293651103973389
+    },
+    {
+      "topic": "Feature stores: Feast, Tecton, feature engineering",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Introduction",
+        "[exa] Introduction",
+        "[exa-h] Feast (**Fea**ture**St**ore) is an[open-sourcearrow-up-right] feature store that helps teams operate production ML syste"
+      ],
+      "latency": 9.216299295425415
+    },
+    {
+      "topic": "Data versioning: DVC, LakeFS, reproducibility",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Get Started with DVC",
+        "[exa] Data Version Control",
+        "[exa-h] Let's commit it (no need to do[`dvc push`] this time since this original version\nof the dataset was already saved):\n```\n"
+      ],
+      "latency": 3.808490753173828
+    },
+    {
+      "topic": "Continuous training: automated retraining pipelines",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Machine Learning Lens - AWS Well-Architected\n      Framework",
+        "[exa] 8. Continuous training",
+        "[exa-h] evolves over time, continuous monitoring is essential to detect, correct, and mitigate\naccuracy and performance issues, "
+      ],
+      "latency": 3.1429104804992676
+    },
+    {
+      "topic": "Model monitoring: drift detection, performance tracking",
+      "area": "monitoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data and model quality monitoring with Amazon SageMaker Model Monitor",
+        "[exa] Model monitoring overview",
+        "[exa-h] quality.\n* [Model quality] - Monitor drift in model quality\nmetrics, such as accuracy.\n* [Bias drift for models in\nprodu"
+      ],
+      "latency": 5.952647686004639
+    },
+    {
+      "topic": "Data quality monitoring: schema, distribution checks",
+      "area": "monitoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scan for data quality issues",
+        "[exa] Data Quality \u00b6",
+        "[exa-h] expectations. Dataplex Universal Catalog automatic data quality lets you define and\nmeasure the quality of the data in y"
+      ],
+      "latency": 6.05639386177063
+    },
+    {
+      "topic": "Explainability in production: SHAP, LIME at scale",
+      "area": "monitoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Explainability in Production AI Systems",
+        "[exa] Welcome to the SHAP documentation \uf0c1",
+        "[exa-h] * **Glass-box models**: GAMs and EBMs provide inherent interpretability without sacrificing much accuracy\n* **Post-hoc m"
+      ],
+      "latency": 3.6131784915924072
+    },
+    {
+      "topic": "Alerting for ML: anomaly detection in metrics",
+      "area": "monitoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Using CloudWatch outlier detection",
+        "[exa] Anomaly detection",
+        "[exa-h] statistical and machine learning algorithms. These algorithms continuously analyze metrics of\nsystems and applications, "
+      ],
+      "latency": 4.751105070114136
+    },
+    {
+      "topic": "LLMOps practices: prompt versioning, evaluation",
+      "area": "llmops",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] same tasks in different ways, leading to claims about which models perform best not being reproducible. We propose OLMES"
+      ],
+      "latency": 10.65395188331604
+    },
+    {
+      "topic": "LLM monitoring: hallucination detection, quality tracking",
+      "area": "llmops",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Detecting hallucinations in large language models using semantic entropy",
+        "[exa] HALT: Hallucination Assessment via Latent Testing",
+        "[exa-h] Large language model (LLM) systems, such as ChatGPT[1] or Gemini[2], can show impressive reasoning and question-answerin"
+      ],
+      "latency": 4.607184171676636
+    },
+    {
+      "topic": "Prompt management: version control, A/B testing",
+      "area": "llmops",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prompt versioning: Managing iteration history",
+        "[exa] Prompt versioning & management guide for building AI features",
+        "[exa-h] Run**A/B tests**before broad exposure and measure both quality and regressions. Teams managing large prompt sets keep ca"
+      ],
+      "latency": 5.684990644454956
+    },
+    {
+      "topic": "LLM cost optimization: usage tracking, caching",
+      "area": "llmops",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa] Context caching",
+        "[exa-h] > As Large Language Models (LLMs) broaden their capabilities to manage thousands of API calls, they are confronted with "
+      ],
+      "latency": 3.9939470291137695
+    },
+    {
+      "topic": "MLflow: experiment tracking, model registry",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MLflow Model Registry",
+        "[exa] MLflow: A Tool for Managing the Machine Learning Lifecycle",
+        "[exa-h] levels of integration, governance, and collaboration features.\n### Model Registry in OSS MLflow[\u200b] \nIn the open-source v"
+      ],
+      "latency": 6.6910858154296875
+    },
+    {
+      "topic": "Weights & Biases: experiment management at scale",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Experiments overview",
+        "[exa] AI is\n         \n             \n                easy\n                 \n                     \n                         \n                     \n                 \n                 \n                     \n                         \n                     \n                     \n                         \n                     \n                     \n                         \n                     \n                        \n                     \n                         \n                     \n                 \n             \n         \n        to  \n            productionize",
+        "[exa-h] Track machine learning experiments with a few lines of code. You can then review the results in an[interactive dashboard"
+      ],
+      "latency": 5.300252437591553
+    },
+    {
+      "topic": "BentoML: model serving and deployment",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] BentoML Documentation \u00b6",
+        "[exa] BentoML Documentation \u00b6",
+        "[exa-h] BentoML is a**Unified Inference Platform**for deploying and scaling AI models with production-grade reliability, all wit"
+      ],
+      "latency": 8.298641920089722
+    },
+    {
+      "topic": "Seldon Core: Kubernetes-native ML deployment",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Production-ready ML Serving Framework",
+        "[exa] Quick Start Guide",
+        "[exa-h] Seldon Core 2 is a Kubernetes-native framework for deploying and managing machine learning (ML) and Large Language Model"
+      ],
+      "latency": 7.497615575790405
+    }
+  ]
+}

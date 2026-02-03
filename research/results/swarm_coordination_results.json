@@ -1,0 +1,412 @@
+{
+  "timestamp": "2026-02-03T00:56:45.316375",
+  "stats": {
+    "swarms_executed": 20,
+    "agents_spawned": 74,
+    "total_sources": 276,
+    "total_findings": 135,
+    "consensus_reached": 8
+  },
+  "results": [
+    {
+      "topic": "Multi-agent orchestration: hierarchical vs flat vs mesh topologies",
+      "agents_spawned": 3,
+      "total_sources": 11,
+      "total_findings": 5,
+      "synthesis": {
+        "unique_findings": 5,
+        "total_findings": 5,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] A Taxonomy of Hierarchical Multi-Agent Systems: Design Patterns ...",
+          "[agent_0:exa] Choosing the Right Multi-Agent Architecture - LangChain Blog",
+          "[agent_0:highlight] agents (or agent teams) typically oversee or coordinate lower\u2013level agents, creating a chain of comm",
+          "[agent_1:tavily] Hierarchical multi-agent orchestration uses a structured approach with clear roles, while flat and mesh topologies lack such defined hierarchies, ofte",
+          "[agent_2:perplexity] **Multi-agent orchestration topologies\u2014hierarchical, flat, and mesh\u2014differ in coordination structure, scalability, and adaptability, with hierarchical topologies excelling in compl"
+        ],
+        "agents_contributed": 3
+      },
+      "latency": 12.64535403251648
+    },
+    {
+      "topic": "Agent communication: message passing vs shared state vs blackboard",
+      "agents_spawned": 3,
+      "total_sources": 11,
+      "total_findings": 5,
+      "synthesis": {
+        "unique_findings": 5,
+        "total_findings": 5,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] A temporal blackboard for a multi-agent environment",
+          "[agent_0:exa] Blackboard system",
+          "[agent_0:highlight] the other hand time plays a crucial role in a wide range of KBS applications. Temporal reasoning and",
+          "[agent_1:tavily] Agent communication can use message passing, shared state (blackboard), or direct peer-to-peer methods. Shared state allows indirect communication thr",
+          "[agent_2:perplexity] **In multi-agent systems, message passing enables direct, targeted information exchange between agents; shared state allows synchronized access to common data; and blackboard suppo"
+        ],
+        "agents_contributed": 3
+      },
+      "latency": 12.060384511947632
+    },
+    {
+      "topic": "Consensus mechanisms: voting, leader election, Byzantine fault tolerance",
+      "agents_spawned": 4,
+      "total_sources": 15,
+      "total_findings": 8,
+      "synthesis": {
+        "unique_findings": 8,
+        "total_findings": 8,
+        "consensus_items": 1,
+        "top_findings": [
+          "[agent_0:exa] Byzantine Fault-Tolerant Consensus Algorithms: A Survey - MDPI",
+          "[agent_0:exa] practical Byzantine Fault Tolerance(pBFT) - GeeksforGeeks",
+          "[agent_0:highlight] **:**",
+          "[agent_1:tavily] Consensus mechanisms include voting, leader election, and Byzantine fault tolerance, with BFT ensuring agreement even if some nodes fail or act malici",
+          "[agent_2:perplexity] **Consensus mechanisms in distributed systems rely on **voting**, **leader election**, and **Byzantine fault tolerance (BFT)** to enable nodes to agree on a single value or decisio"
+        ],
+        "agents_contributed": 4
+      },
+      "latency": 14.549513816833496
+    },
+    {
+      "topic": "Load balancing: round-robin vs least-connections vs adaptive routing",
+      "agents_spawned": 3,
+      "total_sources": 11,
+      "total_findings": 5,
+      "synthesis": {
+        "unique_findings": 5,
+        "total_findings": 5,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] Comparing Load Balancing Algorithms | JSCAPE",
+          "[agent_0:exa] Load Balancing Algorithms and Techniques - Kemp Technologies",
+          "[agent_0:highlight] So your load balancer supports multiple load balancing algorithms, but you don\u2019t know which one to p",
+          "[agent_1:tavily] Round Robin distributes requests sequentially, while Least Connections routes to the server with the fewest active connections, making it more efficie",
+          "[agent_2:perplexity] **Round-robin load balancing distributes requests cyclically across servers in a fixed order, making it simple but inefficient for heterogeneous environments; least-connections dir"
+        ],
+        "agents_contributed": 3
+      },
+      "latency": 9.477321863174438
+    },
+    {
+      "topic": "MapReduce for LLM: parallel processing with aggregation",
+      "agents_spawned": 4,
+      "total_sources": 15,
+      "total_findings": 8,
+      "synthesis": {
+        "unique_findings": 8,
+        "total_findings": 8,
+        "consensus_items": 2,
+        "top_findings": [
+          "[agent_0:exa] LLM\u00d7MapReduce: Simplified Long-Sequence Processing ... - arXiv",
+          "[agent_0:exa] Search code, repositories, users, issues, pull requests...",
+          "[agent_0:highlight] ] > )\ninitially introduces the MapReduce method, where text segments are processed in parallel durin",
+          "[agent_1:tavily] MapReduce simplifies long-sequence processing by parallelizing chunk processing and aggregating results. Apache Spark enhances this with distributed d",
+          "[agent_2:perplexity] **MapReduce adapts its classic map-shuffle-reduce paradigm to LLMs by distributing parallel processing of model operations (e.g., token generation or inference) across nodes, follo"
+        ],
+        "agents_contributed": 4
+      },
+      "latency": 13.242599248886108
+    },
+    {
+      "topic": "Pipeline parallelism: stage-based concurrent processing",
+      "agents_spawned": 3,
+      "total_sources": 11,
+      "total_findings": 5,
+      "synthesis": {
+        "unique_findings": 5,
+        "total_findings": 5,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] Pipeline Parallelism \u2014 PyTorch 2.10 documentation",
+          "[agent_0:exa] Pipeline Parallelism - DeepSpeed",
+          "[agent_0:highlight] development. API changes may be possible. It was migrated from the[PiPPy] project.\n## Why Pipeline P",
+          "[agent_1:tavily] Pipeline parallelism divides tasks into stages, allowing concurrent execution on different processors, enhancing efficiency and throughput. It's used ",
+          "[agent_2:perplexity] **Pipeline parallelism** is a distributed training technique that splits large models into sequential stages executed on different devices, enabling concurrent processing of multip"
+        ],
+        "agents_contributed": 3
+      },
+      "latency": 13.02872610092163
+    },
+    {
+      "topic": "Fork-join patterns: parallel subtasks with synchronization",
+      "agents_spawned": 4,
+      "total_sources": 15,
+      "total_findings": 8,
+      "synthesis": {
+        "unique_findings": 8,
+        "total_findings": 8,
+        "consensus_items": 3,
+        "top_findings": [
+          "[agent_0:exa] Fork/Join (The Java\u2122 Tutorials > Essential Java Classes",
+          "[agent_0:exa] ForkJoinTask (Java SE 24 & JDK 24)",
+          "[agent_0:highlight] The fork/join framework is an implementation of the`ExecutorService`interface that helps you take ad",
+          "[agent_1:tavily] Fork-join is a parallel execution model where tasks split into subtasks and execute in parallel until they join. It reduces overhead by executing one ",
+          "[agent_2:perplexity] **The fork-join model is a parallel programming pattern that divides a problem into subtasks executed concurrently (fork), then synchronizes to combine results (join), ideal for di"
+        ],
+        "agents_contributed": 4
+      },
+      "latency": 16.49116826057434
+    },
+    {
+      "topic": "Actor model: message-driven concurrent agents",
+      "agents_spawned": 3,
+      "total_sources": 11,
+      "total_findings": 5,
+      "synthesis": {
+        "unique_findings": 5,
+        "total_findings": 5,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] Actor model - Wikipedia",
+          "[agent_0:exa] Understanding the Actor Model: A Simple Guide to Concurrency",
+          "[agent_0:highlight] ## Fundamental concepts\n\nThe actor model adopts the philosophy that everything is an actor. This is ",
+          "[agent_1:tavily] The actor model is a concurrent computation model where actors are message-driven agents that communicate via asynchronous messages. It promotes concu",
+          "[agent_2:perplexity] The **actor model** is a mathematical framework for concurrent computation where **actors**\u2014autonomous, message-driven agents\u2014serve as the fundamental units, enabling scalable, fau"
+        ],
+        "agents_contributed": 3
+      },
+      "latency": 10.378161430358887
+    },
+    {
+      "topic": "Ant colony optimization: pheromone-based path finding",
+      "agents_spawned": 5,
+      "total_sources": 19,
+      "total_findings": 9,
+      "synthesis": {
+        "unique_findings": 9,
+        "total_findings": 9,
+        "consensus_items": 1,
+        "top_findings": [
+          "[agent_0:exa] Ant colony optimization algorithm and its application",
+          "[agent_0:exa] Ant System: Optimization by a Colony of Cooperating Agents - Systems, Man and Cybernetics, Part B, IEEE Transactions on",
+          "[agent_0:highlight] Ant Colony Optimization (ACO) algorithm is a bionic algorithm simulating ant colony behavior. Ant co",
+          "[agent_1:tavily] Ant colony optimization uses pheromone trails to find optimal paths, mimicking ants' natural behavior. It balances exploration and exploitation to sol",
+          "[agent_2:perplexity] **Ant Colony Optimization (ACO) is a swarm intelligence algorithm inspired by ants' pheromone trails for finding optimal paths in graphs, such as shortest paths or traveling salesm"
+        ],
+        "agents_contributed": 5
+      },
+      "latency": 13.111434698104858
+    },
+    {
+      "topic": "Particle swarm optimization: collective search strategies",
+      "agents_spawned": 5,
+      "total_sources": 19,
+      "total_findings": 8,
+      "synthesis": {
+        "unique_findings": 8,
+        "total_findings": 8,
+        "consensus_items": 2,
+        "top_findings": [
+          "[agent_0:exa] The Particle Swarm\u2014Explosion, Stability, and Convergence in a Multidimensional Complex Space - ADS",
+          "[agent_0:exa] Major Advances in Particle Swarm Optimization: Theory, Analysis, and Application",
+          "[agent_0:highlight] The particle swarm is an algorithm for finding optimal regions of complex search spaces through the ",
+          "[agent_1:tavily] Particle swarm optimization mimics social behavior to find optimal solutions; it uses collective search strategies and adjusts particle velocities bas",
+          "[agent_2:perplexity] **Particle Swarm Optimization (PSO) is a population-based stochastic metaheuristic that harnesses **collective search strategies** inspired by bird flocking or fish schooling, wher"
+        ],
+        "agents_contributed": 5
+      },
+      "latency": 14.878852844238281
+    },
+    {
+      "topic": "Genetic algorithms: evolutionary agent populations",
+      "agents_spawned": 4,
+      "total_sources": 15,
+      "total_findings": 8,
+      "synthesis": {
+        "unique_findings": 8,
+        "total_findings": 8,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] Evolutionary algorithm",
+          "[agent_0:exa] How the Genetic Algorithm Works",
+          "[agent_0:highlight] **Evolutionary algorithms**(**EA**) reproduce essential elements of biological[evolution] in a[compu",
+          "[agent_1:tavily] Genetic algorithms use evolution-inspired techniques like selection, crossover, and mutation to optimize solutions. They are effective for complex pro",
+          "[agent_2:perplexity] **Genetic algorithms (GAs) are population-based evolutionary algorithms that evolve agent-like populations of candidate solutions through selection, crossover, and mutation, mimick"
+        ],
+        "agents_contributed": 4
+      },
+      "latency": 10.709665536880493
+    },
+    {
+      "topic": "Stigmergy: indirect coordination through environment",
+      "agents_spawned": 3,
+      "total_sources": 11,
+      "total_findings": 5,
+      "synthesis": {
+        "unique_findings": 5,
+        "total_findings": 5,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] [PDF] Multiple Sensor Platform Coordination Using Stigmergy - DTIC",
+          "[agent_0:exa] Stigmergy in Antetic AI: Building Intelligence from Indirect ...",
+          "[agent_0:highlight] biologist P.P. Grass`e in 1959 while studying nest building of termites. He observed that indirect c",
+          "[agent_1:tavily] Stigmergy is a method of indirect coordination through environmental cues, where actions leave traces that influence future actions by others. It was ",
+          "[agent_2:perplexity] **Stigmergy** is a mechanism of indirect coordination between agents or actions through traces left in the environment, enabling complex behaviors to emerge without direct communic"
+        ],
+        "agents_contributed": 3
+      },
+      "latency": 10.742960691452026
+    },
+    {
+      "topic": "Kubernetes operators for agent orchestration",
+      "agents_spawned": 3,
+      "total_sources": 11,
+      "total_findings": 5,
+      "synthesis": {
+        "unique_findings": 5,
+        "total_findings": 5,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] GitHub - Azure-Samples/agentic-aiops-semantic-kernel: This project implements an agentic app using Magentic Orchestration from Semantic Kernel deployed on Azure Kubernetes Service. The system receive alerts from Azure Monitor to automatically diagnose and resolve AKS cluster issues, demonstrating how AI agents enhance Kubernetes operations.",
+          "[agent_0:exa] GitHub - Contrast-Security-OSS/agent-operator: A K8s operator to inject agents into existing K8s workloads.",
+          "[agent_0:highlight] This project implements an agentic app using Magentic Orchestration from Semantic Kernel deployed on",
+          "[agent_1:tavily] Kubernetes operators automate and manage complex applications, extending Kubernetes with custom resources and controllers for specific tasks. Popular ",
+          "[agent_2:perplexity] Kubernetes operators provide a pattern for extending Kubernetes to manage **stateful, complex applications** like AI agents through custom resources and controllers, though they we"
+        ],
+        "agents_contributed": 3
+      },
+      "latency": 12.183884382247925
+    },
+    {
+      "topic": "Celery distributed task queues for LLM workloads",
+      "agents_spawned": 3,
+      "total_sources": 11,
+      "total_findings": 5,
+      "synthesis": {
+        "unique_findings": 5,
+        "total_findings": 5,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] How I Built a Distributed Task Queue System Using Celery and Redis",
+          "[agent_0:exa] Deferring long-running tasks to a distributed work queue",
+          "[agent_0:highlight] Python\u2019s synchronous nature is a bottleneck when you start dealing with external systems. Suppose yo",
+          "[agent_1:tavily] Celery is used for distributed task queues in Python, enabling asynchronous processing and scheduling of large language model workloads. It uses messa",
+          "[agent_2:perplexity] **Celery is a Python-based distributed task queue system well-suited for LLM workloads due to its support for asynchronous, scalable execution of compute-intensive tasks like model"
+        ],
+        "agents_contributed": 3
+      },
+      "latency": 11.909080982208252
+    },
+    {
+      "topic": "Ray distributed computing for parallel inference",
+      "agents_spawned": 4,
+      "total_sources": 15,
+      "total_findings": 8,
+      "synthesis": {
+        "unique_findings": 8,
+        "total_findings": 8,
+        "consensus_items": 2,
+        "top_findings": [
+          "[agent_0:exa] Unlocking the Power of Distributed Inference with Ray",
+          "[agent_0:exa] ray-project/ray: Ray is an AI compute engine. Ray consists of a core ...",
+          "[agent_0:highlight] 1. **Scalability and Fault Tolerance:**Ray scales seamlessly from a single machine to thousands of n",
+          "[agent_1:tavily] Ray enables parallel inference across multiple nodes for scalable machine learning workloads, utilizing task parallelism and dynamic resource allocati",
+          "[agent_2:perplexity] Ray enables **parallel inference** through its distributed execution framework, leveraging remote tasks, actors, and libraries like Ray Serve and Ray Train for scalable, fault-tole"
+        ],
+        "agents_contributed": 4
+      },
+      "latency": 11.73216700553894
+    },
+    {
+      "topic": "Apache Kafka for agent event streaming",
+      "agents_spawned": 3,
+      "total_sources": 11,
+      "total_findings": 5,
+      "synthesis": {
+        "unique_findings": 5,
+        "total_findings": 5,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] How Kafka improves agentic AI",
+          "[agent_0:exa] Event-Driven AI: Building a Research Assistant with Kafka ...",
+          "[agent_0:highlight] Figure 1: In an event-driven architecture, components respond to triggers, often asynchronously and ",
+          "[agent_1:tavily] Apache Kafka is a distributed event streaming platform for real-time data processing, supporting high throughput and scalability for agent event strea",
+          "[agent_2:perplexity] **Apache Kafka serves as a foundational infrastructure for agent event streaming by providing real-time, scalable, and fault-tolerant messaging that enables AI agents to receive an"
+        ],
+        "agents_contributed": 3
+      },
+      "latency": 12.033857822418213
+    },
+    {
+      "topic": "Self-organizing swarms: emergent behavior from simple rules",
+      "agents_spawned": 5,
+      "total_sources": 19,
+      "total_findings": 9,
+      "synthesis": {
+        "unique_findings": 9,
+        "total_findings": 9,
+        "consensus_items": 2,
+        "top_findings": [
+          "[agent_0:exa] [PDF] EMERGENT PATTERNS IN SWARM ROBOTICS SELF ... - iarjset",
+          "[agent_0:exa] Emergence of Swarming Behavior: Foraging Agents Evolve Collective Motion Based on Signaling",
+          "[agent_0:highlight] The effectiveness of swarm robotics depends on the efficiency of communication and decision-making s",
+          "[agent_1:tavily] Self-organizing swarms emerge from simple rules without central control, leading to complex behaviors like flocking. Swarm intelligence mimics natural",
+          "[agent_2:perplexity] **Self-organizing swarms generate complex, adaptive behaviors through simple local rules followed by individual agents, leading to emergent global patterns without centralized cont"
+        ],
+        "agents_contributed": 5
+      },
+      "latency": 12.732847929000854
+    },
+    {
+      "topic": "Adaptive swarms: dynamic reconfiguration based on load",
+      "agents_spawned": 4,
+      "total_sources": 15,
+      "total_findings": 8,
+      "synthesis": {
+        "unique_findings": 8,
+        "total_findings": 8,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] Dynamic reconfiguration of multiobjective distribution networks ...",
+          "[agent_0:exa] Development of Adaptive Drone Swarm Networks",
+          "[agent_0:highlight] This encompasses dynamic adjustments to load, power sources, and network topology to meet the real-t",
+          "[agent_1:tavily] Adaptive swarms dynamically reconfigure based on load using algorithms like swarm intelligence and reinforcement learning to optimize resource allocat",
+          "[agent_2:perplexity] **Adaptive swarms refer to self-organizing systems, often inspired by biological swarms, that dynamically reconfigure their structure or workload distribution in response to varyin"
+        ],
+        "agents_contributed": 4
+      },
+      "latency": 13.334819793701172
+    },
+    {
+      "topic": "Resilient swarms: fault tolerance and self-healing",
+      "agents_spawned": 4,
+      "total_sources": 15,
+      "total_findings": 8,
+      "synthesis": {
+        "unique_findings": 8,
+        "total_findings": 8,
+        "consensus_items": 0,
+        "top_findings": [
+          "[agent_0:exa] Fault-Tolerant Swarms",
+          "[agent_0:exa] SIDR: A Swarm Intelligence-Based Damage-Resilient Mechanism for UAV Swarm Networks",
+          "[agent_0:highlight] A not-for-profit organization, IEEE is the world's largest technical professional organization dedic",
+          "[agent_1:tavily] Swarms exhibit fault tolerance through redundancy and self-healing mechanisms, adapting dynamically to failures. Proactive strategies anticipate fault",
+          "[agent_2:perplexity] **Resilient swarms achieve fault tolerance and self-healing through active, distributed mechanisms that detect, diagnose, and mitigate faults in individual robots, preserving overa"
+        ],
+        "agents_contributed": 4
+      },
+      "latency": 10.546493291854858
+    },
+    {
+      "topic": "Heterogeneous swarms: specialized agents with different capabilities",
+      "agents_spawned": 4,
+      "total_sources": 15,
+      "total_findings": 8,
+      "synthesis": {
+        "unique_findings": 8,
+        "total_findings": 8,
+        "consensus_items": 3,
+        "top_findings": [
+          "[agent_0:exa] Coordinating Heterogeneous Swarms through Minimal Communication among Homogeneous Sub-swarms",
+          "[agent_0:exa] Leveraging Emergent Specialization in a Heterogeneous Multi-Role Swarm Control Architecture for Positional-based UAS Missions",
+          "[agent_0:highlight] In swarm robotics, the agents are often assumed to be identical. In this abstract, we argue that the",
+          "[agent_1:tavily] Heterogeneous swarms consist of specialized agents with different capabilities working together. They exhibit complex behaviors through local interact",
+          "[agent_2:perplexity] **Heterogeneous swarms** are collections of agents with distinct capabilities, dynamics, and sensor properties that interact locally to produce emergent collective behaviors superi"
+        ],
+        "agents_contributed": 4
+      },
+      "latency": 14.276141166687012
+    }
+  ]
+}

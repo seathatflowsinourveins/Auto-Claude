@@ -1,0 +1,430 @@
+{
+  "timestamp": "2026-02-03T01:02:18.274095",
+  "stats": {
+    "sources": 454,
+    "vectors": 349,
+    "findings": 173
+  },
+  "results": [
+    {
+      "topic": "GraphRAG: knowledge graph enhanced retrieval augmented generation",
+      "area": "rag",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] > Retrieval-augmented generation (RAG) is a powerful technique that enhances downstream task execution by retrieving add"
+      ],
+      "latency": 13.767716407775879
+    },
+    {
+      "topic": "RAPTOR: recursive abstractive processing for tree-organized retrieval",
+      "area": "rag",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Deep Learning Monitor",
+        "[exa-h] # Title:RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval\nAuthors:[Parth Sarthi],[Salman Abdullah],["
+      ],
+      "latency": 13.495437860488892
+    },
+    {
+      "topic": "HyDE: hypothetical document embeddings for zero-shot retrieval",
+      "area": "rag",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Embeddings (HyDE). Given a query, HyDE first\nzero-shot instructs an instruction-following lan\u0002guage model (e.g. Instruct"
+      ],
+      "latency": 13.119227886199951
+    },
+    {
+      "topic": "ColBERT: late interaction for efficient retrieval",
+      "area": "rag",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] has been shown to make late interaction more\neffective, but it inflates the space footprint of\nthese models by an order "
+      ],
+      "latency": 18.154096364974976
+    },
+    {
+      "topic": "Multi-vector retrieval: dense, sparse, and late interaction fusion",
+      "area": "rag",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] > This paper introduces Sparsified Late Interaction for Multi-vector (SLIM) retrieval with inverted indexes. Multi-vecto"
+      ],
+      "latency": 14.97916841506958
+    },
+    {
+      "topic": "LangGraph 0.3: command interface, interrupt patterns, human-in-loop",
+      "area": "agents",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Page not found",
+        "[exa-h] Resetting focus\nYou signed in with another tab or window.[Reload] to refresh your session.You signed out in another tab "
+      ],
+      "latency": 14.549316883087158
+    },
+    {
+      "topic": "CrewAI flows: sequential, hierarchical, and consensus processes",
+      "area": "agents",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Hierarchical Process",
+        "[exa] Hierarchical Process",
+        "[exa-h] The hierarchical process is designed to leverage advanced models like GPT-4, optimizing token usage while handling compl"
+      ],
+      "latency": 12.426657676696777
+    },
+    {
+      "topic": "AutoGen 0.4: AssistantAgent, UserProxyAgent, GroupChat patterns",
+      "area": "agents",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Group Chat #",
+        "[exa] Group Chat #",
+        "[exa-h] ```\n## Creating the Group Chat[#] \nTo set up the group chat, we create an[`SingleThreadedAgentRuntime`] and register the"
+      ],
+      "latency": 14.407543897628784
+    },
+    {
+      "topic": "DSPy 2.6: optimizers, teleprompters, and signature constraints",
+      "area": "agents",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] DSPy Optimizers (formerly Teleprompters) \u00b6",
+        "[exa] Optimizers (formerly Teleprompters) | DSPy",
+        "[exa-h] ## What DSPy Optimizers are currently available?[\u00b6] \nOptimizers can be accessed via`from dspy.teleprompt import \\*`.\n###"
+      ],
+      "latency": 13.05473256111145
+    },
+    {
+      "topic": "Semantic Kernel: planners, plugins, and memory connectors",
+      "area": "agents",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is a Plugin?",
+        "[exa] Semantic Kernel Components",
+        "[exa-h] Plugins are a key component of Semantic Kernel. If you have already used plugins from ChatGPT or Copilot extensions in M"
+      ],
+      "latency": 15.896134614944458
+    },
+    {
+      "topic": "Speculative decoding: draft models for faster inference",
+      "area": "optimization",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Inference from large autoregressive models like Transformers is slow - decoding K tokens takes K serial runs of the mo"
+      ],
+      "latency": 15.748847484588623
+    },
+    {
+      "topic": "KV cache optimization: paged attention, prefix caching",
+      "area": "optimization",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Generating long sequences of tokens given a long-context input is a very compute-intensive inference scenario for larg"
+      ],
+      "latency": 21.098663330078125
+    },
+    {
+      "topic": "Quantization: GPTQ, AWQ, GGUF formats comparison",
+      "area": "optimization",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Which Quantization Method Is Best for You?: GGUF, GPTQ, or AWQ...",
+        "[exa] What is GGUF? Complete Guide to GGUF Format",
+        "[exa-h] With the commencement of Large Language Models (LLMs), the quest for optimizing performance with minimized computational"
+      ],
+      "latency": 13.368229150772095
+    },
+    {
+      "topic": "Flash Attention 2: memory-efficient attention computation",
+      "area": "optimization",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > The computational and memory demands of vanilla attention scale quadratically with the sequence length $N$, posing sig"
+      ],
+      "latency": 19.620073795318604
+    },
+    {
+      "topic": "Continuous batching: vLLM, TGI batching strategies",
+      "area": "optimization",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Continuous Batching",
+        "[exa] BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching",
+        "[exa-h] ### Key Implementations (October 2025)\n* vLLM: PagedAttention + continuous batching, 24x throughput vs naive serving\n* T"
+      ],
+      "latency": 13.724815845489502
+    },
+    {
+      "topic": "Matryoshka embeddings: variable dimension representations",
+      "area": "embeddings",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Matryoshka Representation Learning",
+        "[exa] ",
+        "[exa-h] ML systems: large-scale classification and retrieval. For classification, we use adaptive cascades with the variable-siz"
+      ],
+      "latency": 12.940336227416992
+    },
+    {
+      "topic": "Late interaction models: ColBERT, PLAID, ColBERTv2",
+      "area": "embeddings",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Pre-trained language models are increasingly important compo\u0002nents across multiple information retrieval (IR) paradigms."
+      ],
+      "latency": 18.32486319541931
+    },
+    {
+      "topic": "Binary embeddings: 32x compression with minimal quality loss",
+      "area": "embeddings",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Binary Embeddings",
+        "[exa] 64 bytes per embedding, yee-haw \ud83e\udd20",
+        "[exa-h] Binary embeddings offer an extreme but practical trade-off between memory efficiency and retrieval quality. The 32\u00d7 comp"
+      ],
+      "latency": 10.669360160827637
+    },
+    {
+      "topic": "Multi-modal embeddings: CLIP, ImageBind, unified representations",
+      "area": "embeddings",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We present ImageBind, an approach to learn a joint embedding across six different modalities - images, text, audio, de"
+      ],
+      "latency": 18.52856969833374
+    },
+    {
+      "topic": "Embedding fine-tuning: contrastive learning, hard negatives",
+      "area": "embeddings",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] NV-Retriever: Improving text embedding models with effective hard-negative mining",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] models are typically Transformer models that are fine-tuned with\ncontrastive learning objectives. One of the challenging"
+      ],
+      "latency": 14.009007453918457
+    },
+    {
+      "topic": "System prompts: persona, constraints, output formatting",
+      "area": "prompts",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Safety system messages",
+        "[exa] System Prompting: Techniques + Templates",
+        "[exa-h] A system message is a set of high-priority instructions and context that you send to a chat model to steer how it respon"
+      ],
+      "latency": 14.173969507217407
+    },
+    {
+      "topic": "Few-shot prompting: example selection, ordering, formatting",
+      "area": "prompts",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > When primed with only a handful of training samples, very large, pretrained language models such as GPT-3 have shown c"
+      ],
+      "latency": 10.19507622718811
+    },
+    {
+      "topic": "Chain-of-thought: step-by-step reasoning elicitation",
+      "area": "prompts",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Automatic Chain of Thought Prompting in Large Language Models - ADS",
+        "[exa-h] 2021). In this paper, we combine the strengths of these two ideas in a way that avoids their limitations.\nSpecifically, "
+      ],
+      "latency": 15.42940902709961
+    },
+    {
+      "topic": "ReAct: reasoning and acting interleaved prompting",
+      "area": "prompts",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: "
+      ],
+      "latency": 14.2792649269104
+    },
+    {
+      "topic": "Constitutional AI: self-critique and revision prompts",
+      "area": "prompts",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] C3AI: Crafting and Evaluating Constitutions for Constitutional AI - ADS",
+        "[exa] Public Constitutional AI - ADS",
+        "[exa-h] Constitutional AI (CAI) guides LLM behavior using constitutions, but identifying which principles are most effective for"
+      ],
+      "latency": 11.232537031173706
+    },
+    {
+      "topic": "LLM-as-judge: using models to evaluate model outputs",
+      "area": "eval",
+      "sources": 12,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > Accurate and consistent evaluation is crucial for decision-making across numerous fields, yet it remains a challenging"
+      ],
+      "latency": 11.156389713287354
+    },
+    {
+      "topic": "Semantic similarity metrics: BERTScore, BLEURT, MAUVE",
+      "area": "eval",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] BLEURT: Learning Robust Metrics for Text Generation - ACL Anthology",
+        "[exa-h] \u03c4BLEU, \u03c4ROUGE, and \u03c4BERTscore with sentence\nBLEU (Papineni et al., 2002), ROUGE (Lin,\n2004), and BERTscore (Zhang et al."
+      ],
+      "latency": 12.904087543487549
+    },
+    {
+      "topic": "Factuality evaluation: claim verification, attribution",
+      "area": "eval",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] FAKTA: An Automatic End-to-End Fact Checking System - ADS",
+        "[exa] The Principles of the Truth-O-Meter: PolitiFact\u2019s methodology for independent fact-checking",
+        "[exa-h] We present FAKTA which is a unified framework that integrates various components of a fact checking process: document re"
+      ],
+      "latency": 14.41168999671936
+    },
+    {
+      "topic": "Red teaming: adversarial testing for safety",
+      "area": "eval",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 2.1 Purpose of Red Teaming\nIn the development and operation of AI systems, it is important to take measures \nto mitigate"
+      ],
+      "latency": 10.713228225708008
+    },
+    {
+      "topic": "A/B testing LLMs: statistical significance, guardrails",
+      "area": "eval",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] A/B testing Llama in production",
+        "[exa] ",
+        "[exa-h] **Significance (alpha)**|5% (0.05)|**Risk of a false positive**: The probability of concluding a variant is better when "
+      ],
+      "latency": 11.884531736373901
+    },
+    {
+      "topic": "MCP (Model Context Protocol): tool integration standard",
+      "area": "emerging",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Specification",
+        "[exa] Specification",
+        "[exa-h] tools. Whether you\u2019re building an AI-powered IDE, enhancing a chat interface, or creating\ncustom AI workflows, MCP provi"
+      ],
+      "latency": 13.907621383666992
+    },
+    {
+      "topic": "Function calling: structured outputs, tool use patterns",
+      "area": "emerging",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling",
+        "[exa] Function Calling & Tool Use",
+        "[exa-h] **Function calling**(also known as**tool calling**) provides a powerful and flexible way for OpenAI models to interface "
+      ],
+      "latency": 12.452577829360962
+    },
+    {
+      "topic": "Streaming: SSE, WebSocket, chunked transfer for LLMs",
+      "area": "emerging",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Best Choices for Streaming Responses in LLM Applications: A Front-End Perspective",
+        "[exa] How LLMs stream responses \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] **TL;DR:**For most LLM apps,**SSE**is the simplest and most reliable way to stream tokens from your server to the browse"
+      ],
+      "latency": 23.22770929336548
+    },
+    {
+      "topic": "Structured generation: JSON mode, grammar constraints",
+      "area": "emerging",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Structured model outputs",
+        "[exa-h] > Reliably generating structured outputs has become a critical capability for modern language model (LM) applications. C"
+      ],
+      "latency": 15.49089789390564
+    },
+    {
+      "topic": "Multi-modal agents: vision, audio, code execution",
+      "area": "emerging",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > We present Magma, a foundation model that serves multimodal AI agentic tasks in both the digital and physical worlds. "
+      ],
+      "latency": 14.374252319335938
+    }
+  ]
+}

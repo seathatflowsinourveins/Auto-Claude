@@ -15,9 +15,12 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Any, Dict, List, Optional
 
-import structlog
-
-logger = structlog.get_logger(__name__)
+try:
+    import structlog
+    logger = structlog.get_logger(__name__)
+except ImportError:
+    import logging
+    logger = logging.getLogger(__name__)
 
 # Voyage AI SDK availability
 VOYAGEAI_AVAILABLE = False

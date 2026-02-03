@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:08:12.612166",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 92
+  },
+  "results": [
+    {
+      "topic": "Dialog state tracking: conversation context management",
+      "area": "dialog",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] \u201cDo you follow me?\u201d: A Survey of Recent Approaches in Dialogue State Tracking - ACL Anthology",
+        "[exa] Neural Belief Tracker: Data-Driven Dialogue State Tracking - ACL Anthology",
+        "[exa-h] While communicating with a user, a task-oriented dialogue system has to track the user\u2019s needs at each turn according to"
+      ],
+      "latency": 7.366979598999023
+    },
+    {
+      "topic": "Multi-turn conversation: context window, memory",
+      "area": "dialog",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Recent advancements in large language models (LLMs) have revolutionized their ability to handle single-turn tasks, yet"
+      ],
+      "latency": 7.864001989364624
+    },
+    {
+      "topic": "Dialog flow design: conversation architecture",
+      "area": "dialog",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] General agent design best practices \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Google \n     \n   Assistant",
+        "[exa-h] You should also see the[voice agent design] guide specifically for designing voice agents,\nand the[best practices] guide"
+      ],
+      "latency": 9.078252077102661
+    },
+    {
+      "topic": "Conversation repair: handling misunderstandings",
+      "area": "dialog",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Repair: The Interface Between Interaction and Cognition",
+        "[exa] Repair After Next Turn: The Last Structurally Provided Defense of Intersubjectivity in Conversation",
+        "[exa-h] Conversational repair is the process people use to detect and resolve problems of speaking, hearing, and understanding. "
+      ],
+      "latency": 9.73868179321289
+    },
+    {
+      "topic": "Intent classification: user goal detection",
+      "area": "intent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Trending Papers",
+        "[exa] Trending Papers",
+        "[exa-h] Agentic coding tools receive goals written in natural language as input, break them down into specific tasks, and write "
+      ],
+      "latency": 7.846817493438721
+    },
+    {
+      "topic": "Named entity recognition: slot filling, extraction",
+      "area": "intent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Named Entity Recognition",
+        "[exa-h] retrieves related documents, identifies candidate\nfillers (including entities, time, values, and titles),\nextracts the r"
+      ],
+      "latency": 9.125767230987549
+    },
+    {
+      "topic": "Multi-intent detection: complex user queries",
+      "area": "intent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > In task-oriented dialogue systems, intent detection is crucial for interpreting user queries and providing appropriate"
+      ],
+      "latency": 7.3202619552612305
+    },
+    {
+      "topic": "Zero-shot intent: handling unseen intents",
+      "area": "intent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Zero-Shot-BERT-Adapters: a Zero-Shot Pipeline for Unknown Intent Detection",
+        "[exa-h] > Intent discovery is a crucial task in natural language processing, and it is increasingly relevant for various of indu"
+      ],
+      "latency": 9.330440521240234
+    },
+    {
+      "topic": "Sentiment analysis: customer feedback, reviews",
+      "area": "sentiment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Review Article Sentiment analysis methods, applications, and challenges: A systematic literature review",
+        "[exa] A Comprehensive Review on Sentiment Analysis: Tasks, Approaches and Applications - ADS",
+        "[exa-h] With the expansion of Internet-based applications, the number of comments shows explosive growth. Analyzing the attitude"
+      ],
+      "latency": 8.017507314682007
+    },
+    {
+      "topic": "Emotion detection: affective computing in chat",
+      "area": "sentiment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Emotions in the Loop: A Survey of Affective Computing for Emotional Support",
+        "[exa-h] > Affective Computing (AC) integrates computer science, psychology, and cognitive science to enable machines to recogniz"
+      ],
+      "latency": 9.217627763748169
+    },
+    {
+      "topic": "Toxicity detection: content moderation, safety",
+      "area": "sentiment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] mitigate the impact of sensitive use cases or to reduce brand\nrisk. We believe that a strong undesired content classifer"
+      ],
+      "latency": 8.910875797271729
+    },
+    {
+      "topic": "Empathetic responses: emotional intelligence in AI",
+      "area": "sentiment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What Is Required for Empathic AI? It Depends, and Why That Matters for AI Developers and Users",
+        "[exa] Empathy by Design: Reframing the Empathy Gap Between AI and Humans in Mental Health Chatbots",
+        "[exa-h] Interest is growing in artificial empathy, but so is confusion about what artificial empathy is or needs to be. This con"
+      ],
+      "latency": 10.526526689529419
+    },
+    {
+      "topic": "Voice assistants: Alexa, Google, Siri capabilities",
+      "area": "voice",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Features for the original Alexa",
+        "[exa] AI-native SDKs for Alexa+",
+        "[exa-h] **A.**Alexa is Amazon\u2019s voice AI. Alexa lives in the cloud and is happy to help anywhere there's internet access and a d"
+      ],
+      "latency": 8.75062084197998
+    },
+    {
+      "topic": "Speech-to-text: real-time transcription, Whisper",
+      "area": "voice",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Realtime transcription",
+        "[exa] Introducing Whisper",
+        "[exa-h] * `model`: One of`whisper-1`,`gpt-4o-transcribe-latest`,`gpt-4o-mini-transcribe`, or`gpt-4o-transcribe`.\n* `language`: I"
+      ],
+      "latency": 5.393700838088989
+    },
+    {
+      "topic": "Text-to-speech: voice synthesis, emotion",
+      "area": "voice",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Text-to-Speech AI",
+        "[exa] Electrical Engineering and Systems Science > Audio and Speech Processing",
+        "[exa-h] Synthesize single or multispeaker speech from short snippets to full-length narratives, maintaining contextuality. Preci"
+      ],
+      "latency": 6.110891819000244
+    },
+    {
+      "topic": "Voice cloning: personalized speech synthesis",
+      "area": "voice",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Sound",
+        "[exa] VoiceMe: Personalized voice generation in TTS - ADS",
+        "[exa-h] > We introduce OpenVoice, a versatile voice cloning approach that requires only a short audio clip from the reference sp"
+      ],
+      "latency": 4.133125305175781
+    },
+    {
+      "topic": "Rasa: open-source conversational AI platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build AI agents you can trust to handle real world complexity",
+        "[exa] Welcome to the Rasa Docs",
+        "[exa-h] ### Conversational AI Platform Buyer's Guide\nNavigate the world of generative conversational AI solutions and make the r"
+      ],
+      "latency": 3.826512575149536
+    },
+    {
+      "topic": "Dialogflow: Google conversational AI",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Customer Experience Agent Studio",
+        "[exa] Dialogflow CX \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Customer Experience Agent Studio (CX Agent Studio) provides a next-generation platform powered by Gemini to rapidly buil"
+      ],
+      "latency": 6.089847803115845
+    },
+    {
+      "topic": "Amazon Lex: AWS chatbot building",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Lex - AI Chat Builder",
+        "[exa] Artificial Intelligence (AI) Service - Amazon Lex",
+        "[exa-h] Powered by the same technology as Alexa, Amazon Lex is an AI chat builder that allows users to interact with any applica"
+      ],
+      "latency": 5.376408815383911
+    },
+    {
+      "topic": "Voiceflow: voice app development platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The platform for customer service AI agents",
+        "[exa] Voiceflow is where teams build AI Agents",
+        "[exa-h] Trusted by4k+ customersbuilding AI agents\n![G2 logo] \n4.8/5 rating\n![] \n200k+ users\n![] \n![] \n![] \n![] \n![] \n![] \n![] \n!"
+      ],
+      "latency": 4.033835172653198
+    }
+  ]
+}

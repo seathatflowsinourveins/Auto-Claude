@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:41:57.157709",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 91
+  },
+  "results": [
+    {
+      "topic": "Flow matching: continuous normalizing flows",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Normalizing Flows (CNFs), allowing us to train CNFs at unprecedented scale.\nSpecifically, we present the notion of Flow "
+      ],
+      "latency": 10.531566143035889
+    },
+    {
+      "topic": "Rectified flow: straight paths",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Rectified Flow",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] to finding a transport map between two empirically observed distributions by learning an ordinary differential equation "
+      ],
+      "latency": 6.369364261627197
+    },
+    {
+      "topic": "Optimal transport: Wasserstein distance",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction to Optimal Transport Theory - ADS",
+        "[exa] A user's guide to optimal transport  - Archive ouverte HAL",
+        "[exa-h] These notes constitute a sort of Crash Course in Optimal Transport Theory. The different features of the problem of Mong"
+      ],
+      "latency": 5.62125563621521
+    },
+    {
+      "topic": "Probability flow ODE: score-based",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Score-Based Generative Modeling through Stochastic Differential Equations - ADS",
+        "[exa-h] (Section 3.2). We can also reverse the associated probability flow ODE (Section 4.3), which yields a\ndeterministic proce"
+      ],
+      "latency": 5.746054649353027
+    },
+    {
+      "topic": "Stable Diffusion 3: flow matching",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stable Diffusion 3: Research Paper",
+        "[exa] ",
+        "[exa-h] Stable Diffusion 3 employs a Rectified Flow (RF) formulation ([Liu et al., 2022];[Albergo & Vanden-Eijnden,2022];[Lipman"
+      ],
+      "latency": 6.1027891635894775
+    },
+    {
+      "topic": "FLUX: Black Forest Labs model",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing   FLUX.2",
+        "[exa] Introducing   FLUX.2",
+        "[exa-h] [Compare FLUX.2 Models] [Explore All Models] \n01.FLUX.2[klein]\n02.FLUX.2[max]\n03.FLUX.2\n01.FLUX.2[klein]\n02.FLUX.2[max]\n"
+      ],
+      "latency": 4.367725610733032
+    },
+    {
+      "topic": "SD3 architecture: MMDiT blocks",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stable Diffusion 3 & FLUX: Complete Guide to MMDiT Architecture",
+        "[exa] SD3 Transformer Model",
+        "[exa-h] \\- T5-XXL (Google)\n\n1. Combine pooled + sequence embeddings\n2. Transform to `(N_txt, D)` shape\n\n### Joint Attention Bloc"
+      ],
+      "latency": 4.0506813526153564
+    },
+    {
+      "topic": "Video flow matching: temporal generation",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Abstract:Generating long, high-quality videos remains a challenge due to the complex interplay of spatial and temporal"
+      ],
+      "latency": 3.902493715286255
+    },
+    {
+      "topic": "Conditional flow matching: CFM",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Conditional Flow Matching Framework",
+        "[exa] Latent Conditional Flow Matching (CFM)",
+        "[exa-h] * Conditional Flow Matching (CFM) is a unified framework for training continuous normalizing flows by regressing on trac"
+      ],
+      "latency": 4.768118858337402
+    },
+    {
+      "topic": "Optimal transport paths: OT-CFM",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Optimal-Transport Conditional Flow Matching",
+        "[exa] ",
+        "[exa-h] By design, OT-CFM optimizes straightest transport paths, which minimizes the expected squared velocity (kinetic action),"
+      ],
+      "latency": 3.9355051517486572
+    },
+    {
+      "topic": "Variance preserving: VP flow",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] 3. Normalizing Flows\nBy examining the bound (3), we can see that the optimal\nvariational distribution that allows IDKL[q"
+      ],
+      "latency": 5.972472667694092
+    },
+    {
+      "topic": "Mini-batch OT: scalable training",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] > Abstract:Mini-batch optimal transport (m-OT) has been widely used recently to deal with the memory issue of OT in larg"
+      ],
+      "latency": 4.487467527389526
+    },
+    {
+      "topic": "Flow vs diffusion: comparison",
+      "area": "advantages",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Difference Between Bulk Flow and Diffusion | Compare the Difference Between Similar Terms",
+        "[exa] Fick's laws of diffusion",
+        "[exa-h] Bulk flow is the movement of substances in bulk or in masses down a pressure gradient. On the other hand, diffusion is t"
+      ],
+      "latency": 9.000988245010376
+    },
+    {
+      "topic": "Simulation-free training: efficiency",
+      "area": "advantages",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Comparing the effectiveness of a hybrid simulation/lecture session versus simulation alone in teaching crew resource management (CRM) skills: a randomised controlled trial",
+        "[exa] Prior text-based learning enhances the benefits of simulation-based learning on confidence and long-term recall",
+        "[exa-h] ### Conclusions\n\nAdding a didactic lecture to a simulation-based curriculum geared at teaching CRM skills to interdiscip"
+      ],
+      "latency": 6.631289958953857
+    },
+    {
+      "topic": "Straighter paths: fewer steps",
+      "area": "advantages",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A unified energy-optimality criterion predicts human navigation paths and speeds",
+        "[exa] Generalizing Stepping Concepts To Non-Straight Walking",
+        "[exa-h] ### Corollary: A Straight-Line Path Is Optimal If There Are No Other Constraints or Obstacles."
+      ],
+      "latency": 7.817882299423218
+    },
+    {
+      "topic": "Better interpolation: smoother generation",
+      "area": "advantages",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] High-Resolution Frame Interpolation with Patch-based Cascaded Diffusion",
+        "[exa-h] > Recently, diffusion models have made remarkable progress in text-to-image (T2I) generation, synthesizing images with h"
+      ],
+      "latency": 5.561773061752319
+    },
+    {
+      "topic": "Image generation flow: high quality",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Figure 1. High-resolution samples from our 8B rectified flow model, showcasing its capabilities in typography, precise p"
+      ],
+      "latency": 6.644158124923706
+    },
+    {
+      "topic": "Audio flow: music, speech",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Electrical Engineering and Systems Science > Audio and Speech Processing",
+        "[exa] Computer Science > Sound",
+        "[exa-h] > General audio source separation is a key capability for multimodal AI systems that can perceive and reason about sound"
+      ],
+      "latency": 9.600711107254028
+    },
+    {
+      "topic": "Molecule generation: drug discovery",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reinvent 4: Modern AI\u2013driven generative molecule design",
+        "[exa] Machine learning-aided generative molecular design",
+        "[exa-h] REINVENT 4 is a modern open-source generative AI framework for the design of small molecules. The software utilizes recu"
+      ],
+      "latency": 8.737268209457397
+    },
+    {
+      "topic": "3D flow: shape generation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ShapeFlow: Learnable Deformations Among 3D Shapes",
+        "[exa-h] > Recent advancements in diffusion techniques have propelled image and video generation to unprecedented levels of quali"
+      ],
+      "latency": 6.9897847175598145
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "timestamp": "2026-02-03T00:53:12.648221",
+  "summary": {
+    "passed": 23,
+    "failed": 1,
+    "skipped": 0
+  },
+  "pass_rate": 95.83333333333334,
+  "results": [
+    {
+      "name": "exa_neural_search",
+      "type": "sdk",
+      "status": "passed",
+      "latency": 1.136645793914795,
+      "details": {
+        "sdk": "exa",
+        "operations": [
+          {
+            "op": "search",
+            "results": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "exa_keyword_search",
+      "type": "sdk",
+      "status": "failed",
+      "latency": 0.6269917488098145,
+      "details": {
+        "error": "Invalid value for option 'type': keyword. Expected one of [typing.Literal['auto', 'fast', 'deep', 'n"
+      }
+    },
+    {
+      "name": "tavily_basic_search",
+      "type": "sdk",
+      "status": "passed",
+      "latency": 1.3201103210449219,
+      "details": {
+        "sdk": "tavily",
+        "operations": [
+          {
+            "op": "search",
+            "results": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "tavily_advanced_search",
+      "type": "sdk",
+      "status": "passed",
+      "latency": 2.5136282444000244,
+      "details": {
+        "sdk": "tavily",
+        "operations": [
+          {
+            "op": "search",
+            "results": 3
+          }
+        ]
+      }
+    },
+    {
+      "name": "jina_embeddings",
+      "type": "sdk",
+      "status": "passed",
+      "latency": 0.9667849540710449,
+      "details": {
+        "sdk": "jina",
+        "operations": [
+          {
+            "op": "embed",
+            "dimension": 1024
+          }
+        ]
+      }
+    },
+    {
+      "name": "jina_rerank",
+      "type": "sdk",
+      "status": "passed",
+      "latency": 0.8173341751098633,
+      "details": {
+        "sdk": "jina",
+        "operations": [
+          {
+            "op": "rerank",
+            "status": "success"
+          }
+        ]
+      }
+    },
+    {
+      "name": "perplexity_sonar",
+      "type": "sdk",
+      "status": "passed",
+      "latency": 5.90659761428833,
+      "details": {
+        "sdk": "perplexity",
+        "operations": [
+          {
+            "op": "completion",
+            "status": "success"
+          }
+        ]
+      }
+    },
+    {
+      "name": "qdrant_upsert_query",
+      "type": "sdk",
+      "status": "passed",
+      "latency": 0.6073553562164307,
+      "details": {
+        "sdk": "qdrant",
+        "operations": [
+          {
+            "op": "upsert_query",
+            "stored": 3,
+            "retrieved": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "research_pipeline",
+      "type": "pipeline",
+      "status": "passed",
+      "latency": 2.4424972534179688,
+      "details": {
+        "stages": [
+          {
+            "name": "search",
+            "status": "success",
+            "items": 3,
+            "latency": 1.5508809089660645
+          },
+          {
+            "name": "embed",
+            "status": "success",
+            "vectors": 2,
+            "latency": 0.3469231128692627
+          },
+          {
+            "name": "store",
+            "status": "success",
+            "stored": 2,
+            "latency": 0.0017962455749511719
+          }
+        ],
+        "total_latency": 1.8996002674102783
+      }
+    },
+    {
+      "name": "rag_pipeline",
+      "type": "pipeline",
+      "status": "passed",
+      "latency": 0.5205626487731934,
+      "details": {
+        "stages": [
+          {
+            "name": "retrieve",
+            "status": "success",
+            "retrieved": 3,
+            "latency": 0.001615285873413086
+          },
+          {
+            "name": "rerank",
+            "status": "success",
+            "reranked": 3,
+            "latency": 9.5367431640625e-07
+          },
+          {
+            "name": "generate",
+            "status": "success",
+            "generated": true,
+            "latency": 1.1920928955078125e-06
+          }
+        ],
+        "total_latency": 0.001617431640625
+      }
+    },
+    {
+      "name": "memory_pipeline",
+      "type": "pipeline",
+      "status": "passed",
+      "latency": 0.5061192512512207,
+      "details": {
+        "stages": [
+          {
+            "name": "store",
+            "status": "success",
+            "stored": 2,
+            "latency": 0.0014865398406982422
+          },
+          {
+            "name": "consolidate",
+            "status": "success",
+            "consolidated": true,
+            "latency": 1.1920928955078125e-06
+          },
+          {
+            "name": "recall",
+            "status": "success",
+            "recalled": 5,
+            "latency": 0.0010433197021484375
+          }
+        ],
+        "total_latency": 0.0025310516357421875
+      }
+    },
+    {
+      "name": "routing_pipeline",
+      "type": "pipeline",
+      "status": "passed",
+      "latency": 0.5146195888519287,
+      "details": {
+        "stages": [
+          {
+            "name": "classify",
+            "status": "success",
+            "classified": "research",
+            "latency": 9.5367431640625e-06
+          },
+          {
+            "name": "route",
+            "status": "success",
+            "routed_to": "exa",
+            "latency": 1.9073486328125e-06
+          },
+          {
+            "name": "execute",
+            "status": "success",
+            "executed": true,
+            "latency": 1.430511474609375e-06
+          }
+        ],
+        "total_latency": 1.2874603271484375e-05
+      }
+    },
+    {
+      "name": "full_research_flow",
+      "type": "e2e",
+      "status": "passed",
+      "latency": 3.6123099327087402,
+      "details": {
+        "query": "LangGraph state management patterns",
+        "sources": 5,
+        "vectors": 5,
+        "findings": [
+          "LangGraph uses state management to maintain consistent, auditable, and resumable multi-agent workflo"
+        ]
+      }
+    },
+    {
+      "name": "comparison_flow",
+      "type": "e2e",
+      "status": "passed",
+      "latency": 4.904887914657593,
+      "details": {
+        "query": "Compare Qdrant vs Pinecone for production",
+        "sources": 5,
+        "vectors": 5,
+        "findings": [
+          "Pinecone offers managed scalability and ease of use for production, while Qdrant provides raw perfor"
+        ]
+      }
+    },
+    {
+      "name": "implementation_flow",
+      "type": "e2e",
+      "status": "passed",
+      "latency": 4.700453519821167,
+      "details": {
+        "query": "Implement semantic cache with Redis",
+        "sources": 5,
+        "vectors": 5,
+        "findings": [
+          "To implement semantic caching with Redis, connect to Redis, compute embeddings for queries, and stor"
+        ]
+      }
+    },
+    {
+      "name": "troubleshooting_flow",
+      "type": "e2e",
+      "status": "passed",
+      "latency": 7.638887166976929,
+      "details": {
+        "query": "Fix embedding dimension mismatch error",
+        "sources": 5,
+        "vectors": 5,
+        "findings": [
+          "To fix embedding dimension mismatch, ensure embedding model and storage dimensions match. Use same m"
+        ]
+      }
+    },
+    {
+      "name": "retry_on_failure",
+      "type": "resilience",
+      "status": "passed",
+      "latency": 1.5010216236114502,
+      "details": {
+        "pattern": "retry",
+        "status": "implemented",
+        "attempts": 1,
+        "success": true
+      }
+    },
+    {
+      "name": "circuit_breaker",
+      "type": "resilience",
+      "status": "passed",
+      "latency": 1.621246337890625e-05,
+      "details": {
+        "pattern": "circuit_breaker",
+        "status": "implemented",
+        "state": "closed",
+        "failures": 0,
+        "threshold": 5
+      }
+    },
+    {
+      "name": "fallback_chain",
+      "type": "resilience",
+      "status": "passed",
+      "latency": 8.821487426757812e-06,
+      "details": {
+        "pattern": "fallback",
+        "status": "implemented",
+        "primary": "exa",
+        "fallback": "tavily",
+        "used": "primary"
+      }
+    },
+    {
+      "name": "timeout_handling",
+      "type": "resilience",
+      "status": "passed",
+      "latency": 1.7642974853515625e-05,
+      "details": {
+        "pattern": "timeout",
+        "status": "implemented",
+        "timeout_ms": 30000,
+        "respected": true
+      }
+    },
+    {
+      "name": "working_memory_ops",
+      "type": "memory",
+      "status": "passed",
+      "latency": 0.002406597137451172,
+      "details": {
+        "layer": "working",
+        "operations": [
+          {
+            "store": 1,
+            "retrieve": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "episodic_memory_ops",
+      "type": "memory",
+      "status": "passed",
+      "latency": 0.0009853839874267578,
+      "details": {
+        "layer": "episodic",
+        "operations": [
+          {
+            "store": 1,
+            "temporal_index": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "semantic_memory_ops",
+      "type": "memory",
+      "status": "passed",
+      "latency": 0.00113677978515625,
+      "details": {
+        "layer": "semantic",
+        "operations": [
+          {
+            "store": 1,
+            "concept_indexed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "memory_consolidation",
+      "type": "memory",
+      "status": "passed",
+      "latency": 2.0742416381835938e-05,
+      "details": {
+        "layer": "consolidation",
+        "operations": [
+          {
+            "summarized": 5,
+            "compressed": true,
+            "stored": 1
+          }
+        ]
+      }
+    }
+  ]
+}

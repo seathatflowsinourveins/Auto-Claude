@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:20:51.795420",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 95
+  },
+  "results": [
+    {
+      "topic": "Physics-informed neural networks: PINNs",
+      "area": "physics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations - ADS",
+        "[exa] ",
+        "[exa-h] We introduce physics-informed neural networks - neural networks that are trained to solve supervised learning tasks whil"
+      ],
+      "latency": 10.699077844619751
+    },
+    {
+      "topic": "Neural operators: Fourier neural operator",
+      "area": "physics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Fourier Neural Operator for Parametric Partial Differential Equations - ADS",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] The classical development of neural networks has primarily focused on learning mappings between finite-dimensional Eucli"
+      ],
+      "latency": 8.671540260314941
+    },
+    {
+      "topic": "Differentiable simulation: end-to-end learning",
+      "area": "physics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] End-to-End Differentiable Physics for Learning and Control",
+        "[exa] DSpace@MIT",
+        "[exa-h] We present a differentiable physics engine that can be integrated as a module in deep neural networks for end-to-end lea"
+      ],
+      "latency": 8.271932125091553
+    },
+    {
+      "topic": "Symmetry in ML: equivariant neural networks",
+      "area": "physics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Abstract:We introduce Group equivariant Convolutional Neural Networks (G-CNNs), a natural generalization of convolutio"
+      ],
+      "latency": 7.712871074676514
+    },
+    {
+      "topic": "AI for scientific discovery: hypothesis generation",
+      "area": "discovery",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > Large Language Models (LLMs) are transforming scientific hypothesis generation and validation by enabling information "
+      ],
+      "latency": 7.224811553955078
+    },
+    {
+      "topic": "Automated experimentation: self-driving labs",
+      "area": "discovery",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Self-Driving Labs",
+        "[exa] Science acceleration and accessibility with self-driving labs",
+        "[exa-h] We can share your product or service with 250K+ researchers, engineers, and scientists everymonth.\n[Sponsorship Info] \n#"
+      ],
+      "latency": 8.706093788146973
+    },
+    {
+      "topic": "Literature mining: scientific paper analysis",
+      "area": "discovery",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Literature mining articles from across Nature Portfolio",
+        "[exa] Mining the neuroimaging literature",
+        "[exa-h] Literature mining is a specialised data mining method that is used to extract information (facts or data) from text, suc"
+      ],
+      "latency": 4.252134799957275
+    },
+    {
+      "topic": "Knowledge extraction: scientific graphs",
+      "area": "discovery",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Question-Answer Extraction from Scientific Articles Using Knowledge Graphs and Large Language Models",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] our second approach leverages a Knowledge Graph (KG) for QA gen\u0002eration.We construct a KG by fine-tuning an Entity Relat"
+      ],
+      "latency": 4.596664905548096
+    },
+    {
+      "topic": "ML surrogates: fast simulation approximation",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Surrogate model",
+        "[exa-h] often need to be run many times to accurately estimate quan\u0002tities of interest. A natural solution to this problem, know"
+      ],
+      "latency": 6.329541206359863
+    },
+    {
+      "topic": "Molecular dynamics ML: force field learning",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Physics > Chemical Physics",
+        "[exa] Physics > Chemical Physics",
+        "[exa-h] > The development of reliable and extensible molecular mechanics (MM) force fields -- fast, empirical models characteriz"
+      ],
+      "latency": 7.600991487503052
+    },
+    {
+      "topic": "Weather simulation: ML weather models",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] WeatherNext models \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Probabilistic weather forecasting with machine learning",
+        "[exa-h] # WeatherNext modelsStay organized with collectionsSave and categorize content based on your preferences.\nWeatherNext is"
+      ],
+      "latency": 7.64214301109314
+    },
+    {
+      "topic": "Fluid dynamics ML: CFD acceleration",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Machine learning\u2013accelerated computational fluid dynamics",
+        "[exa] Machine learning accelerated computational fluid dynamics",
+        "[exa-h] Accurate simulation of fluids is important for many science and engineering problems but is very computationally demandi"
+      ],
+      "latency": 6.428125858306885
+    },
+    {
+      "topic": "Materials discovery: property prediction",
+      "area": "materials",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Materials Project",
+        "[exa] NIST-JARVIS",
+        "[exa-h] Computational materials science is now powerful enough that it can predict many properties of materials before those mat"
+      ],
+      "latency": 8.44650912284851
+    },
+    {
+      "topic": "Crystal structure prediction: generative models",
+      "area": "materials",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Generative AI for crystal structures: a review",
+        "[exa-h] > Accurately predicting experimentally-realizable 3D molecular crystal structures from their 2D chemical graphs is a lon"
+      ],
+      "latency": 9.795296430587769
+    },
+    {
+      "topic": "Reaction prediction: retrosynthesis AI",
+      "area": "materials",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Quantitative Biology > Quantitative Methods",
+        "[exa] ",
+        "[exa-h] > The synthesis of complex natural products remains one of the grand challenges of organic chemistry. We present DeepRet"
+      ],
+      "latency": 8.98648190498352
+    },
+    {
+      "topic": "Catalyst design: ML for chemistry",
+      "area": "materials",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reaction-conditioned generative model for catalyst design and optimization with CatDRX",
+        "[exa] Inverse design of catalytic active sites via interpretable topology-based deep generative models",
+        "[exa-h] Designing effective catalysts is a key process for optimizing catalytic reactions to reduce time and waste during scale-"
+      ],
+      "latency": 6.419421195983887
+    },
+    {
+      "topic": "DeepMind scientific AI: AlphaFold, GNoME",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AlphaFold \u2014 Google DeepMind",
+        "[exa] AlphaFold \u2014 Google DeepMind",
+        "[exa-h] Google DeepMind and Isomorphic Labs introduce[AlphaFold 3], which predicts the structure and interactions of all of life"
+      ],
+      "latency": 4.173153400421143
+    },
+    {
+      "topic": "NVIDIA Modulus: physics ML framework",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA PhysicsNeMo",
+        "[exa] NVIDIA PhysicsNeMo",
+        "[exa-h] NVIDIA PhysicsNeMo provides utilities to build Physics AI solutions combining physics with data at enterprise scale.\n* ["
+      ],
+      "latency": 6.19324803352356
+    },
+    {
+      "topic": "JAX for science: differentiable computing",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quickstart: How to think in JAX",
+        "[exa] JAX: High performance array computing",
+        "[exa-h] **JAX is a library for array-oriented numerical computation (*\u00e0 la*[NumPy]), with automatic differentiation and JIT comp"
+      ],
+      "latency": 5.280829906463623
+    },
+    {
+      "topic": "PyTorch Geometric: graph neural networks",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PyG Documentation \uf0c1",
+        "[exa] PyG Documentation \uf0c1",
+        "[exa-h] It consists of various methods for deep learning on graphs and other irregular structures, also known as[geometric deep "
+      ],
+      "latency": 4.24885368347168
+    }
+  ]
+}

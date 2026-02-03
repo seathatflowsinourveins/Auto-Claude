@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:31:38.192205",
+  "stats": {
+    "sources": 200,
+    "vectors": 190,
+    "findings": 84
+  },
+  "results": [
+    {
+      "topic": "SimCLR: simple contrastive learning",
+      "area": "contrastive",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 2.1. The Contrastive Learning Framework\nInspired by recent contrastive learning algorithms (see Sec\u0002tion 7 for an overvi"
+      ],
+      "latency": 3.9996097087860107
+    },
+    {
+      "topic": "MoCo: momentum contrast, memory bank",
+      "area": "contrastive",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Another mechanism is the memory bank approach pro\u0002posed by [61] (Figure 2b). A memory bank consists of the\nrepresentatio"
+      ],
+      "latency": 4.8471057415008545
+    },
+    {
+      "topic": "BYOL: bootstrap your own latent",
+      "area": "contrastive",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] What is BYOL? | Activeloop Glossary",
+        "[exa-h] [jbgrill,fstrub,altche,corentint,richemond]@google.com\nAbstract\nWe introduce Bootstrap Your Own Latent (BYOL), a new app"
+      ],
+      "latency": 6.050139427185059
+    },
+    {
+      "topic": "SwAV: swapping assignments, clustering",
+      "area": "contrastive",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Swapping Assignments between Views",
+        "[exa] Trending Papers",
+        "[exa-h] ### Swapped Assignment Mechanism"
+      ],
+      "latency": 5.5561559200286865
+    },
+    {
+      "topic": "BERT: masked language modeling",
+      "area": "masked",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "[exa-h] BERT alleviates the previously mentioned unidi\u0002rectionality constraint by using a \u201cmasked lan\u0002guage model\u201d (MLM) pre-tra"
+      ],
+      "latency": 4.601642608642578
+    },
+    {
+      "topic": "MAE: masked autoencoders vision",
+      "area": "masked",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > This paper shows that masked autoencoders (MAE) are scalable self-supervised learners for computer vision. Our MAE app"
+      ],
+      "latency": 4.068542718887329
+    },
+    {
+      "topic": "BEiT: BERT pre-training images",
+      "area": "masked",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] BEiT: BERT Pre-Training of Image Transformers",
+        "[exa-h] > We introduce a self-supervised vision representation model BEiT, which stands for Bidirectional Encoder representation"
+      ],
+      "latency": 5.538135290145874
+    },
+    {
+      "topic": "data2vec: self-supervised multimodal",
+      "area": "masked",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Abstract:While the general idea of self-supervised learning is identical across modalities, the actual algorithms and "
+      ],
+      "latency": 8.261152744293213
+    },
+    {
+      "topic": "DINO: self-distillation vision transformers",
+      "area": "vision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Emerging Properties in Self-Supervised  Vision Transformers (DINO\ud83d\udc32) - HackMD",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] We implement our findings into a simple self-supervised method, called \\*\\*DINO\\*\\*, which we interpret as a form of \\*\\"
+      ],
+      "latency": 5.222248315811157
+    },
+    {
+      "topic": "DINOv2: self-supervised features",
+      "area": "vision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] DINOv2: A Self-supervised Vision Transformer Model",
+        "[exa-h] finetuning. This work shows that existing pretraining methods, especially self-supervised methods, can produce such feat"
+      ],
+      "latency": 4.214994192123413
+    },
+    {
+      "topic": "SimSiam: siamese representation",
+      "area": "vision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Figure 1. SimSiam architecture. Two augmented views of one\nimage are processed by the same encoder network f (a backbone"
+      ],
+      "latency": 5.0184485912323
+    },
+    {
+      "topic": "Barlow Twins: redundancy reduction",
+      "area": "vision",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] More information about ORKG",
+        "[exa] Barlow Twins",
+        "[exa-h] Open Research Knowledge Graph\nLoading...\nBarlow Twins: Self-Supervised Learning via Redundancy Reduction - ORKG"
+      ],
+      "latency": 6.403324127197266
+    },
+    {
+      "topic": "GPT pretraining: causal language modeling",
+      "area": "language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transformers",
+        "[exa] Transformers",
+        "[exa-h] # [] Causal language modeling\n![Open In Colab] \n![Open In Studio Lab] \nThere are two types of language modeling, causal "
+      ],
+      "latency": 5.571986198425293
+    },
+    {
+      "topic": "T5 pretraining: span corruption",
+      "area": "language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] T5 Pre-training: Span Corruption & Denoising Objectives",
+        "[exa-h] > Pre-training large language models is known to be extremely resource intensive and often times inefficient, under-util"
+      ],
+      "latency": 5.5653204917907715
+    },
+    {
+      "topic": "ELECTRA: replaced token detection",
+      "area": "language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] to distinguish real input tokens from plausible but synthetically generated replacements. Instead of\nmasking, our method"
+      ],
+      "latency": 5.370682239532471
+    },
+    {
+      "topic": "RoBERTa: robust BERT optimization",
+      "area": "language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] RoBERTa: A Robustly Optimized BERT Pretraining Approach",
+        "[exa-h] We present a replication study of BERT pre\u0002training (Devlin et al., 2019), which includes a\ncareful evaluation of the ef"
+      ],
+      "latency": 3.277529716491699
+    },
+    {
+      "topic": "SSL transfer learning: downstream tasks",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How does SSL relate to transfer learning?",
+        "[exa] How does SSL improve downstream task performance compared to traditional methods?",
+        "[exa-h] SSL provides a way to pre-train models without relying on labeled datasets, making it a cost-effective foundation for tr"
+      ],
+      "latency": 7.956252098083496
+    },
+    {
+      "topic": "SSL few-shot: limited labels",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Abstract:Semi-supervised learning (SSL) has achieved significant progress by leveraging both labeled data and unlabele"
+      ],
+      "latency": 8.292024612426758
+    },
+    {
+      "topic": "SSL medical imaging: unlabeled data",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Systematic comparison of semi-supervised and self-supervised learning \n for medical image classification",
+        "[exa-h] > Building accurate and robust artificial intelligence systems for medical image assessment requires not only the resear"
+      ],
+      "latency": 3.6758100986480713
+    },
+    {
+      "topic": "SSL speech: wav2vec, HuBERT",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Hubert \u2014 transformers 4.7.0 documentation",
+        "[exa-h] HuBERT model either matches or improves upon the state-of\u0002the-art wav2vec 2.0 performance on the Librispeech (960h) and\n"
+      ],
+      "latency": 4.629960060119629
+    }
+  ]
+}

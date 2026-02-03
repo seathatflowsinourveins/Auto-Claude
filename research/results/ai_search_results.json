@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:56:53.577806",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Perplexity AI: answer engine",
+      "area": "platforms",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Perplexity",
+        "[exa] About Perplexity",
+        "[exa-h] Perplexity\n[\n] \n[\nHistory\n] \nMore\nAsk anything. Type @ for sources and / for shortcuts.\nTravel\nTroubleshoot\nLearn\nShoppi"
+      ],
+      "latency": 12.164008140563965
+    },
+    {
+      "topic": "You.com: AI search engine",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build the foundational AI layer for your enterprise.",
+        "[exa] Build the foundational AI layer for your enterprise.",
+        "[exa-h] # Build the foundational AI layer for your enterprise.\nDeliver immediate value with the leading AI search infrastructure"
+      ],
+      "latency": 7.64488673210144
+    },
+    {
+      "topic": "Exa: neural search API",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search - Exa",
+        "[exa] Home - Exa",
+        "[exa-h] ```\nEndpoints\n# Search\nCopy page\nThe search endpoint lets you search the web and extract contents from the results.\nCopy"
+      ],
+      "latency": 7.125223159790039
+    },
+    {
+      "topic": "Tavily: AI research assistant",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Connect your AI agents  to the web",
+        "[exa] Build with  Tavily",
+        "[exa-h] Retrieve live web data, extract relevant content, and return it structured and chunked for models, so agents reason over"
+      ],
+      "latency": 7.834297180175781
+    },
+    {
+      "topic": "Semantic search: meaning-based",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is semantic search?",
+        "[exa] Semantic search",
+        "[exa-h] Semantic search is a data searching technique that focuses on understanding the contextual meaning and intent behind a u"
+      ],
+      "latency": 6.7956438064575195
+    },
+    {
+      "topic": "Hybrid search: keyword + semantic",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is hybrid search?",
+        "[exa] Hybrid search",
+        "[exa-h] [Hybrid search] is an information retrieval technique that blends two or more search methods (e.g., lexical search and s"
+      ],
+      "latency": 7.111880540847778
+    },
+    {
+      "topic": "Dense retrieval: neural embeddings",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Open-domain question answering relies on ef\u0002ficient passage retrieval to select candidate\ncontexts, where traditional sp"
+      ],
+      "latency": 8.542664289474487
+    },
+    {
+      "topic": "Sparse retrieval: BM25 SPLADE",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learned sparse retrieval",
+        "[exa] Towards Effective and Efficient Sparse Neural Information Retrieval",
+        "[exa-h] Some implementations of SPLADE have similar latency to [Okapi BM25] lexical search while giving as good results as state"
+      ],
+      "latency": 7.38005256652832
+    },
+    {
+      "topic": "Neural information retrieval: deep learning",
+      "area": "neural_ir",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] > Neural ranking models for information retrieval (IR) use shallow or deep neural networks to rank search results in res"
+      ],
+      "latency": 8.568252801895142
+    },
+    {
+      "topic": "ColBERT: contextualized embeddings",
+      "area": "neural_ir",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] ColBERT, a ranking model based on contextualized late interac\u0002tion over BERT. As the name suggests, ColBERT proposes a n"
+      ],
+      "latency": 9.189281940460205
+    },
+    {
+      "topic": "SPLADE: sparse lexical matching",
+      "area": "neural_ir",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Exploring the Representation Power of SPLADE Models",
+        "[exa] Learned sparse retrieval",
+        "[exa-h] During training, SPLADE applies regularization to ensure postings lists are kept sparse \u2014with the aim of mimicking the p"
+      ],
+      "latency": 9.910852193832397
+    },
+    {
+      "topic": "DPR: dense passage retrieval",
+      "area": "neural_ir",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] We focus our research in this work on improv\u0002ing the retrieval component in open-domain QA.\nGiven a collection of M text"
+      ],
+      "latency": 6.812521696090698
+    },
+    {
+      "topic": "RAG search: retrieval generation",
+      "area": "rag_search",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Retrieval-augmented generation",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] **Retrieval-augmented generation**(**RAG**) is a technique that enables[large language models] (LLMs) to retrieve and in"
+      ],
+      "latency": 7.536678314208984
+    },
+    {
+      "topic": "Query understanding: intent parsing",
+      "area": "rag_search",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic parsing",
+        "[exa] Syntactic Parsing of Web Queries with Question Intent - ACL Anthology",
+        "[exa-h] widely used in[virtual assistants] in conjunction with intent classifiers, which can be seen as mechanisms for identifyi"
+      ],
+      "latency": 7.303984642028809
+    },
+    {
+      "topic": "Multi-hop search: complex queries",
+      "area": "rag_search",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Decomposition-based multi-hop retrieval methods rely on many autoregressive steps to break down complex queries, which"
+      ],
+      "latency": 9.73493480682373
+    },
+    {
+      "topic": "Conversational search: dialogue",
+      "area": "rag_search",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] A Theoretical Framework for Conversational Search",
+        "[exa-h] Conversational search, an emerging paradigm for next-generation search engines, leverages natural language dialogue to f"
+      ],
+      "latency": 8.425133466720581
+    },
+    {
+      "topic": "Enterprise search: workplace AI",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search everything. Find anything.",
+        "[exa] Enterprise Search: How to Find Anything at Work with One Query",
+        "[exa-h] Retrieval-augmented generation (RAG) trains based on your company\u2019s own data, providing highly relevant and personalised"
+      ],
+      "latency": 12.140061140060425
+    },
+    {
+      "topic": "Elasticsearch AI: vector search",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build AI search into your applications",
+        "[exa] Vector search powers the next generation of search experiences",
+        "[exa-h] ## Start building vector search\nUse a single API to import an embedding model, generate embeddings, and write search que"
+      ],
+      "latency": 8.959810256958008
+    },
+    {
+      "topic": "Azure AI Search: cognitive",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI enrichment in Azure AI Search",
+        "[exa] Features of Azure AI Search",
+        "[exa-h] Summarize this article for me\nIn Azure AI Search,*AI enrichment*refers to integration with[Foundry Tools] to process con"
+      ],
+      "latency": 7.70360803604126
+    },
+    {
+      "topic": "Google Vertex Search: enterprise",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search from Vertex AI | Google quality search/RAG for enterprise",
+        "[exa] Vertex AI Search &nbsp;|&nbsp; Google Cloud Documentation",
+        "[exa-h] Unlock Google-quality search for your enterprise apps and experiences. Built on Google\u2019s deep expertise and decades of e"
+      ],
+      "latency": 6.29889988899231
+    }
+  ]
+}

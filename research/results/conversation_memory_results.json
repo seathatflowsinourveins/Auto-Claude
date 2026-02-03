@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:43:28.929226",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 97
+  },
+  "results": [
+    {
+      "topic": "Working memory for LLMs: short-term context window management",
+      "area": "types",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] ",
+        "[exa-h] > Large language models (LLMs) have revolutionized AI, but are constrained by limited context windows, hindering their u"
+      ],
+      "latency": 8.349555969238281
+    },
+    {
+      "topic": "Episodic memory: conversation history, event storage",
+      "area": "types",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > LLM-based conversational agents still struggle to maintain coherent, personalized interaction over many sessions: fixe"
+      ],
+      "latency": 7.585749864578247
+    },
+    {
+      "topic": "Semantic memory: facts, knowledge, learned concepts",
+      "area": "types",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Neurobiology of Semantic Memory",
+        "[exa] Semantic memory: A review of methods, models, and current challenges",
+        "[exa-h] Semantic memory includes all acquired knowledge about the world and is the basis for nearly all human activity, yet its "
+      ],
+      "latency": 6.112807750701904
+    },
+    {
+      "topic": "Procedural memory: learned behaviors, task patterns",
+      "area": "types",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Procedural Learning: Humans",
+        "[exa] Procedural memory",
+        "[exa-h] One well-studied component of nondeclarative memory is procedural memory. The difference between declarative memory and "
+      ],
+      "latency": 6.883057594299316
+    },
+    {
+      "topic": "Session state management: conversation context persistence",
+      "area": "session",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Session and state management in ASP.NET Core",
+        "[exa] Session and state management in ASP.NET Core",
+        "[exa-h] Feedback\nSummarize this article for me\nBy[Rick Anderson],[Kirk Larkin], and[Diana LaRose] \nHTTP is a stateless protocol."
+      ],
+      "latency": 7.529760360717773
+    },
+    {
+      "topic": "Multi-turn tracking: slot filling, dialogue state",
+      "area": "session",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Dialog State Tracking: A Neural Reading Comprehension Approach - ACL Anthology",
+        "[exa-h] Overview In our full model set up, three dif\u0002ferent model components are used to make a se\u0002quence of predictions: first,"
+      ],
+      "latency": 9.323694229125977
+    },
+    {
+      "topic": "Context summarization: compressing long conversations",
+      "area": "session",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Compressing lengthy context is a critical but technically challenging problem. In this paper, we propose a new method "
+      ],
+      "latency": 8.96352767944336
+    },
+    {
+      "topic": "Session resumption: picking up interrupted conversations",
+      "area": "session",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] RFC 5077: Transport Layer Security (TLS) Session Resumption without Server-Side State",
+        "[exa] rfc5077.txt",
+        "[exa-h] ```\n```\n[RFC 5077] Stateless TLS Session Resumption January 2008[1]. IntroductionThis document defines a way to resume a"
+      ],
+      "latency": 6.862490177154541
+    },
+    {
+      "topic": "MemGPT architecture: hierarchical memory for infinite context",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] ",
+        "[exa-h] > Large language models (LLMs) have revolutionized AI, but are constrained by limited context windows, hindering their u"
+      ],
+      "latency": 6.523096561431885
+    },
+    {
+      "topic": "Letta memory system: core memory, archival, recall",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding memory management",
+        "[exa] Memory overview",
+        "[exa-h] To allow additional memory in external storage, MemGPT by default stores two external tables: archival memory (for long "
+      ],
+      "latency": 7.106643438339233
+    },
+    {
+      "topic": "Mem0 patterns: universal memory layer for AI",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] [Mem0] (\"mem-zero\") enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interac"
+      ],
+      "latency": 8.280452251434326
+    },
+    {
+      "topic": "LangGraph checkpointing: stateful conversation graphs",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Memory - Docs by LangChain",
+        "[exa-h] Resetting focus\nYou signed in with another tab or window.[Reload] to refresh your session.You signed out in another tab "
+      ],
+      "latency": 7.676090240478516
+    },
+    {
+      "topic": "Redis for conversation state: fast session storage",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLM Session Memory",
+        "[exa] Session management that keeps up",
+        "[exa-h] The solution to this problem is to append the previous conversation history to each subsequent call to the LLM.\nThis not"
+      ],
+      "latency": 7.772655725479126
+    },
+    {
+      "topic": "Vector memory: embedding-based conversation recall",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Multiagent Systems",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] schedulers, which introduce engineering complexity and reproducibility challenges. We present ENGRAM, a lightweight memo"
+      ],
+      "latency": 8.581756353378296
+    },
+    {
+      "topic": "Memory consolidation: moving short to long-term",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Memory Consolidation",
+        "[exa] Memory consolidation",
+        "[exa-h] Conscious memory for a new experience is initially dependent on information stored in both the hippocampus and neocortex"
+      ],
+      "latency": 7.105775833129883
+    },
+    {
+      "topic": "Cross-session memory: user preferences, learned context",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Context Engineering - Sessions & Memory",
+        "[exa-h] modules that maintain continuity over time. These modules provide\nthe foundation for storing, organizing, and retrieving"
+      ],
+      "latency": 6.730384588241577
+    },
+    {
+      "topic": "Memory-augmented generation: retrieval-enhanced responses",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > With direct access to human-written reference as memory, retrieval-augmented generation has achieved much progress in "
+      ],
+      "latency": 8.832992315292358
+    },
+    {
+      "topic": "Reflection and self-improvement: learning from conversations",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Get to know yourself through the act of self-reflection",
+        "[exa] Leveraging Self-Reflection to Improve your Teaching",
+        "[exa-h] time."
+      ],
+      "latency": 5.145179510116577
+    },
+    {
+      "topic": "Multi-agent shared memory: collaborative context",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Collaborative Memory: Multi-User Memory Sharing in LLM Agents with Dynamic Access Control",
+        "[exa] SAMEP: A Secure Agent Memory Exchange Protocol for Persistent Context Sharing in Multi-Agent AI Systems",
+        "[exa-h] We introduceCollaborative Memory, a framework for multi-user, multi-agent environments with asymmetric, time-evolving ac"
+      ],
+      "latency": 3.8234121799468994
+    },
+    {
+      "topic": "Memory forgetting: privacy-aware memory expiration",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Forgetful but Faithful: \n A Cognitive Memory Architecture and Benchmark for Privacy\u2011Aware Generative Agents",
+        "[exa] ",
+        "[exa-h] six forgetting policies\u2014FIFO, LRU, Priority Decay, Reflection\u2011Summary, Random\u2011Drop, and a Hybrid variant\u2014providing compl"
+      ],
+      "latency": 5.601594686508179
+    }
+  ]
+}

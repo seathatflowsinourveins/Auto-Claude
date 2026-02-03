@@ -22,17 +22,20 @@ from datetime import datetime
 from pathlib import Path
 from typing import Iterator
 
-import structlog
-
-# Configure structured logging
-structlog.configure(
-    processors=[
-        structlog.stdlib.add_log_level,
-        structlog.processors.TimeStamper(fmt="iso"),
-        structlog.dev.ConsoleRenderer(colors=True),
-    ]
-)
-log = structlog.get_logger()
+try:
+    import structlog
+    structlog.configure(
+        processors=[
+            structlog.stdlib.add_log_level,
+            structlog.processors.TimeStamper(fmt="iso"),
+            structlog.dev.ConsoleRenderer(colors=True),
+        ]
+    )
+    log = structlog.get_logger()
+except ImportError:
+    import logging
+    logging.basicConfig(level=logging.INFO)
+    log = logging.getLogger(__name__)
 
 # Constants
 import os as _embedding_os
@@ -58,6 +61,14 @@ SUPPORTED_EXTENSIONS = {
     ".yml": "yaml",
     ".md": "markdown",
     ".toml": "toml",
+}
+
+# Document extensions for non-code ingestion
+DOCUMENT_EXTENSIONS = {
+    ".md": "markdown",
+    ".txt": "text",
+    ".rst": "restructuredtext",
+    ".jsonl": "jsonl",
 }
 
 EXCLUDE_PATTERNS = [
@@ -346,6 +357,77 @@ class EmbeddingPipeline:
             self.stats.files_failed += 1
             return 0
 
+    def ingest_documents(self, paths: list[str], collection: str = "unleash_docs") -> PipelineStats:
+        """Ingest non-code documents (markdown, text, JSONL) into Qdrant.
+
+        Args:
+            paths: List of file/directory paths to ingest
+            collection: Qdrant collection name for documents
+        """
+        log.info("document_ingestion_starting", paths=paths, dry_run=self.dry_run, collection=collection)
+
+        files = list(iter_document_files(paths))
+        log.info("document_files_found", count=len(files))
+
+        for i, file_path in enumerate(files):
+            try:
+                content = file_path.read_text(encoding="utf-8", errors="ignore")
+                if not content.strip():
+                    self.stats.files_skipped += 1
+                    continue
+
+                chunks = chunk_document(content, file_path)
+                if not chunks:
+                    self.stats.files_skipped += 1
+                    continue
+
+                # Process in batches
+                for j in range(0, len(chunks), self.batch_size):
+                    batch = chunks[j:j + self.batch_size]
+                    texts = [c.content for c in batch]
+                    embeddings = self.embed_batch(texts)
+
+                    if not self.dry_run:
+                        from qdrant_client.models import PointStruct
+
+                        points = []
+                        for chunk, embedding in zip(batch, embeddings):
+                            points.append(PointStruct(
+                                id=chunk.id,
+                                vector=embedding,
+                                payload={
+                                    "file_path": str(chunk.file_path),
+                                    "language": chunk.language,
+                                    "chunk_index": chunk.chunk_index,
+                                    "start_line": chunk.start_line,
+                                    "end_line": chunk.end_line,
+                                    "content": chunk.content[:2000],
+                                    "indexed_at": datetime.now().isoformat(),
+                                    "type": "document",
+                                },
+                            ))
+                        self.qdrant.upsert(collection_name=collection, points=points)
+
+                    self.stats.chunks_embedded += len(batch)
+                    self.stats.total_tokens += sum(len(t.split()) for t in texts)
+
+                self.stats.files_processed += 1
+
+            except Exception as e:
+                log.error("document_failed", file=str(file_path), error=str(e))
+                self.stats.files_failed += 1
+
+            if (i + 1) % 10 == 0:
+                log.info("doc_progress", files=f"{i+1}/{len(files)}", chunks=self.stats.chunks_embedded)
+
+        log.info(
+            "document_ingestion_complete",
+            files_processed=self.stats.files_processed,
+            chunks_embedded=self.stats.chunks_embedded,
+            elapsed=f"{self.stats.elapsed_seconds:.1f}s",
+        )
+        return self.stats
+
     def run(self, full: bool = False, core_only: bool = False) -> PipelineStats:
         """Run the full embedding pipeline.
 
@@ -397,6 +479,98 @@ class EmbeddingPipeline:
         return self.stats
 
 
+def iter_document_files(paths: list[str]) -> Iterator[Path]:
+    """Iterate over document files in given paths for non-code ingestion.
+
+    Supports: .md, .txt, .rst, .jsonl from references/, learnings/, etc.
+    """
+    for path_str in paths:
+        doc_path = Path(path_str).expanduser().resolve()
+        if not doc_path.exists():
+            log.warning("path_not_found", path=str(doc_path))
+            continue
+
+        if doc_path.is_file():
+            if doc_path.suffix in DOCUMENT_EXTENSIONS:
+                yield doc_path
+        else:
+            for ext in DOCUMENT_EXTENSIONS:
+                for file_path in doc_path.rglob(f"*{ext}"):
+                    if not should_exclude(file_path):
+                        yield file_path
+
+
+def chunk_document(content: str, file_path: Path, max_tokens: int = MAX_TOKENS_PER_CHUNK) -> list[CodeChunk]:
+    """Chunk documents by paragraphs/sections, preserving semantic boundaries.
+
+    For .jsonl files: each line is a separate chunk.
+    For .md/.txt: split on double newlines (paragraphs).
+    """
+    language = DOCUMENT_EXTENSIONS.get(file_path.suffix, "text")
+    chunks: list[CodeChunk] = []
+
+    if file_path.suffix == ".jsonl":
+        # Each JSONL line is a separate chunk
+        for i, line in enumerate(content.split("\n")):
+            line = line.strip()
+            if not line:
+                continue
+            # Rough token estimate
+            if len(line.split()) <= max_tokens:
+                chunks.append(CodeChunk(
+                    file_path=file_path,
+                    chunk_index=len(chunks),
+                    content=line,
+                    language=language,
+                    start_line=i + 1,
+                    end_line=i + 1,
+                ))
+    else:
+        # Split on double newlines (paragraph boundaries)
+        paragraphs = content.split("\n\n")
+        current_parts: list[str] = []
+        current_tokens = 0
+        start_line = 1
+        line_count = 0
+
+        for para in paragraphs:
+            para_tokens = len(para.split())
+            if current_tokens + para_tokens > max_tokens and current_parts:
+                chunk_content = "\n\n".join(current_parts)
+                if chunk_content.strip():
+                    chunks.append(CodeChunk(
+                        file_path=file_path,
+                        chunk_index=len(chunks),
+                        content=chunk_content,
+                        language=language,
+                        start_line=start_line,
+                        end_line=start_line + line_count,
+                    ))
+                current_parts = []
+                current_tokens = 0
+                start_line = start_line + line_count + 1
+                line_count = 0
+
+            current_parts.append(para)
+            current_tokens += para_tokens
+            line_count += para.count("\n") + 2  # +2 for the double newline separator
+
+        # Last chunk
+        if current_parts:
+            chunk_content = "\n\n".join(current_parts)
+            if chunk_content.strip():
+                chunks.append(CodeChunk(
+                    file_path=file_path,
+                    chunk_index=len(chunks),
+                    content=chunk_content,
+                    language=language,
+                    start_line=start_line,
+                    end_line=start_line + line_count,
+                ))
+
+    return chunks
+
+
 def search_code(query: str, limit: int = 5) -> list[dict]:
     """
     Search for code using semantic similarity.
@@ -446,8 +620,17 @@ def main():
     parser.add_argument("--batch-size", type=int, default=BATCH_SIZE, help="Batch size for embedding")
     parser.add_argument("--core-only", action="store_true", help="Only index core platform directories (faster)")
     parser.add_argument("--search", type=str, help="Search query (test mode)")
+    parser.add_argument("--ingest", nargs="+", help="Document paths to ingest (files or directories)")
+    parser.add_argument("--ingest-collection", type=str, default="unleash_docs", help="Qdrant collection for documents")
 
     args = parser.parse_args()
+
+    if args.ingest:
+        # Document ingestion mode
+        pipeline = EmbeddingPipeline(dry_run=args.dry_run, batch_size=args.batch_size)
+        stats = pipeline.ingest_documents(args.ingest, collection=args.ingest_collection)
+        print(f"\nDocument Ingestion: {stats.files_processed} files, {stats.chunks_embedded} chunks")
+        return
 
     if args.search:
         # Search mode

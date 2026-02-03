@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:13:07.018672",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 92
+  },
+  "results": [
+    {
+      "topic": "Collaborative filtering: user-item matrix factorization",
+      "area": "recommendations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Matrix factorization \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Matrix factorization (recommender systems)",
+        "[exa-h] * Matrix factorization models user-item interactions by learning user and item embeddings, representing them in a lower-"
+      ],
+      "latency": 8.627294301986694
+    },
+    {
+      "topic": "Content-based recommendations: product similarity",
+      "area": "recommendations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Building a 'Similar Products' Recommender - A Content-Based Approach",
+        "[exa] Content-based filtering \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Building a \u2018Similar Products\u2019 recommender with a content-based approach provides a strong baseline for product recommend"
+      ],
+      "latency": 10.459643125534058
+    },
+    {
+      "topic": "Session-based recommendations: real-time shopping",
+      "area": "recommendations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] GRAINRec: Graph and Attention Integrated Approach for Real-Time Session-Based Item Recommendations",
+        "[exa] Real-time customer behavior recommendations via session-based approach",
+        "[exa-h] While they can enhance model sophistication and improve the relevance of recommendations, they also make it challenging "
+      ],
+      "latency": 8.848410844802856
+    },
+    {
+      "topic": "Cross-sell and upsell: bundle recommendations",
+      "area": "recommendations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What are upselling and cross-selling strategies that help boost revenue?",
+        "[exa] Upselling and cross-selling: a beginner\u2019s guide to sales-boosting tactics",
+        "[exa-h] Bundling products or services provides a unique opportunity to offer more value while encouraging larger purchases. By c"
+      ],
+      "latency": 6.783412933349609
+    },
+    {
+      "topic": "Dynamic pricing: demand-based price optimization",
+      "area": "pricing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] A Step-by-Step Guide to Real-Time Pricing",
+        "[exa-h] provides an introduction to this increasingly important subfield of OR. It is based on\nexcerpts from our book The Theory"
+      ],
+      "latency": 8.81100869178772
+    },
+    {
+      "topic": "Promotional optimization: discount effectiveness",
+      "area": "pricing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How Retailers Can Improve Promotion Effectiveness",
+        "[exa] Pricing and promotions: The analytics opportunity",
+        "[exa-h] To build on this knowledge, retailers need a simple tool that can convert such analyses into specific, concrete actions "
+      ],
+      "latency": 7.9686362743377686
+    },
+    {
+      "topic": "Competitor price monitoring: market intelligence",
+      "area": "pricing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The AI System for Company Strategy",
+        "[exa] Price Tracking",
+        "[exa-h] Track competitor prices, promotions, and product launches in real-time. Operand monitors the market 24/7 and alerts you "
+      ],
+      "latency": 10.238421201705933
+    },
+    {
+      "topic": "Price elasticity modeling: demand sensitivity",
+      "area": "pricing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Foundations of demand estimation",
+        "[exa-h] demand. In the modern Industrial Organization (\u201cIO\u201d) literature, for example, estima\u0002tion of demand elasticities is esse"
+      ],
+      "latency": 8.938162088394165
+    },
+    {
+      "topic": "Demand forecasting retail: seasonal, trends",
+      "area": "inventory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Forecasting Methods in AIF",
+        "[exa] Introduction: Demand Forecasting",
+        "[exa-h] The AIF Forecasting Engine utilizes several concepts when forecasting\nfor planning solutions. These concepts are integra"
+      ],
+      "latency": 5.663378477096558
+    },
+    {
+      "topic": "Assortment optimization: product selection AI",
+      "area": "inventory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Assortment Planning",
+        "[exa] Assortment optimization: a systematic literature review",
+        "[exa-h] - Run the Recommend Assortment Planning action to receive science-backed\nrecommendations on the correct Assortments to s"
+      ],
+      "latency": 10.867514371871948
+    },
+    {
+      "topic": "Store layout optimization: planogram AI",
+      "area": "inventory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Daisy Intelligence | AI-Powered Space Planning for Retail",
+        "[exa] Exceed shoppers\u2019 expectations",
+        "[exa-h] Daisy\u2019s AI-powered Space Planning solution uses our advanced algorithms to recommend optimal store promotional, feature,"
+      ],
+      "latency": 4.683330059051514
+    },
+    {
+      "topic": "Shrinkage prevention: loss detection AI",
+      "area": "inventory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Retail Loss Prevention",
+        "[exa] Shrink Visibility",
+        "[exa-h] **Solutions: AI Workflows**\n# Retail Loss Prevention\nBuild scalable solutions for product detection and recognition to p"
+      ],
+      "latency": 5.1701109409332275
+    },
+    {
+      "topic": "Visual search retail: image-based product search",
+      "area": "experience",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Shop the Look: A visual search system for fashion and home",
+        "[exa] 3 ways visual search helps you shop",
+        "[exa-h] In this paper, we introduce Shop the Look, a web-scale fashion and home product visual search system deployed at Amazon."
+      ],
+      "latency": 5.117115020751953
+    },
+    {
+      "topic": "Virtual try-on: AR/AI fitting rooms",
+      "area": "experience",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How AI makes virtual try-on more realistic",
+        "[exa] Shop with AI Mode, use AI to buy and try clothes on yourself virtually",
+        "[exa-h] Today we announced[virtual try-on for apparel], a new feature that shows you what clothes look like on real models with "
+      ],
+      "latency": 7.658693790435791
+    },
+    {
+      "topic": "Conversational commerce: shopping chatbots",
+      "area": "experience",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] What is Conversational Commerce?",
+        "[exa] What is Conversational Commerce?",
+        "[exa-h] ![] \n] \n* [\n![] \n] \n* [\n![] \n] \n* ![] \n# What is Conversational Commerce?\nConversational commerce is the use of messagin"
+      ],
+      "latency": 5.67507529258728
+    },
+    {
+      "topic": "Customer segmentation: behavioral clustering",
+      "area": "experience",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] K-Means Clustering Approach for Intelligent Customer Segmentation Using Customer Purchase Behavior Data",
+        "[exa] A dynamic customer segmentation approach by combining LRFMS and multivariate time series clustering",
+        "[exa-h] geographic. In this study , customer behavioral factor has been focused. Therefore users will be\nanalyzed using clusteri"
+      ],
+      "latency": 4.071916103363037
+    },
+    {
+      "topic": "Amazon Personalize: recommendation service",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Personalize",
+        "[exa] What is Amazon Personalize?",
+        "[exa-h] Amazon Personalize helps you elevate the customer experience with AI-powered personalization. With the Amazon Personaliz"
+      ],
+      "latency": 4.270073652267456
+    },
+    {
+      "topic": "Shopify AI: commerce automation tools",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Shopify Magic and Sidekick: AI for Commerce - Shopify",
+        "[exa] Starting a business? You\u2019ve got backup.",
+        "[exa-h] Your 24/7 Shopify expert that combines commerce knowledge with advanced reasoning and creative problem solving. Sidekick"
+      ],
+      "latency": 9.010307312011719
+    },
+    {
+      "topic": "Salesforce Commerce Cloud: retail AI features",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Ecommerce AI",
+        "[exa] Ecommerce AI",
+        "[exa-h] Grow efficiently with Agentforce and AI commerce tools connected to your business, boosting conversion rates and reachin"
+      ],
+      "latency": 5.536565065383911
+    },
+    {
+      "topic": "Dynamic Yield: personalization platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Create experiences as unique as your customers",
+        "[exa] Create experiences as unique as your customers",
+        "[exa-h] With Dynamic Yield\u2019s[Experience OS], you can algorithmically match content, products, and offers to each customer's pref"
+      ],
+      "latency": 9.208524465560913
+    }
+  ]
+}

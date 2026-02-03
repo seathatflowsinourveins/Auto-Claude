@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:15:38.329428",
+  "stats": {
+    "sources": 196,
+    "vectors": 196,
+    "findings": 90
+  },
+  "results": [
+    {
+      "topic": "AI drug discovery: molecule generation, virtual screening",
+      "area": "drug",
+      "sources": 8,
+      "vectors": 8,
+      "findings": [
+        "[exa] Generative artificial intelligence in drug discovery: basic framework, recent advances, challenges, and opportunities",
+        "[exa] Target-specific de novo design of drug candidate molecules with graph-transformer-based generative adversarial networks",
+        "[exa-h] There are two main ways to discover or design small drug molecules. The first involves fine-tuning existing molecules or"
+      ],
+      "latency": 10.443323612213135
+    },
+    {
+      "topic": "Target identification: disease pathway analysis",
+      "area": "drug",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Home - Open Targets",
+        "[exa] Open Targets Platform",
+        "[exa-h] identify and prioritise potential therapeutic drug targets for\nfurther investigation.\n[Visit the Open Targets Platform] "
+      ],
+      "latency": 7.750902414321899
+    },
+    {
+      "topic": "ADMET prediction: drug properties, toxicity",
+      "area": "drug",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ADMETlab 2.0",
+        "[exa] Home-ADMElab: ADMET Prediction|ADMET Predictor|QSAR|ADMET Database",
+        "[exa-h] ADMET Evaluation function module is composed of a series of high-quality prediction models\ntrained by multi-task graph a"
+      ],
+      "latency": 8.121740818023682
+    },
+    {
+      "topic": "Clinical trial optimization: patient selection, endpoints",
+      "area": "drug",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Review article Choosing primary endpoints for clinical trials of health care interventions",
+        "[exa-h] TABLE OF CONTENTS\nMULTIPLE ENDPOINTS IN CLINICAL TRIALS ................................................................"
+      ],
+      "latency": 11.645017623901367
+    },
+    {
+      "topic": "Genomic analysis: variant calling, annotation",
+      "area": "genomics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Variant calling",
+        "[exa] Variant calling in human whole genome/exome sequencing data",
+        "[exa-h] The annotations produced by variant callers provide only indirect hints about\nwhich is which and an approach which worke"
+      ],
+      "latency": 8.676818370819092
+    },
+    {
+      "topic": "Single-cell sequencing: cell type classification",
+      "area": "genomics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automatic cell type identification methods for single-cell RNA sequencing",
+        "[exa] scPred: accurate supervised method for cell-type classification from single-cell RNA-seq data",
+        "[exa-h] Single-cell RNA sequencing (scRNA-seq) has become a powerful tool for scientists of many research disciplines due to its"
+      ],
+      "latency": 4.8721230030059814
+    },
+    {
+      "topic": "Gene expression analysis: RNA-seq, differential expression",
+      "area": "genomics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Analyzing RNA-seq data with DESeq2",
+        "[exa] RNA-Seq workflow: gene-level exploratory analysis and differential expression",
+        "[exa-h] A basic task in the analysis of count data from RNA-seq is the detection of differentially expressed genes. The count da"
+      ],
+      "latency": 4.725768804550171
+    },
+    {
+      "topic": "CRISPR design: guide RNA optimization",
+      "area": "genomics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How To Design Guide RNA for CRISPR",
+        "[exa] CRISPRscan: designing highly efficient sgRNAs for CRISPR-Cas9 targeting  in vivo",
+        "[exa-h] How To Design Guide RNA for CRISPR\n] [\nChapter 02\nHow to Design CRISPR Guide RNAs with the Synthego Design Tool\n] [\nChap"
+      ],
+      "latency": 13.511610984802246
+    },
+    {
+      "topic": "Protein structure prediction: AlphaFold, ESMFold",
+      "area": "protein",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AlphaFold  Protein Structure Database",
+        "[exa] AlphaFold  Protein Structure Database",
+        "[exa-h] AlphaFold, the state-of-the-art AI system developed by Google DeepMind, is able to computationally predict protein struc"
+      ],
+      "latency": 12.963922500610352
+    },
+    {
+      "topic": "Protein design: de novo, therapeutic antibodies",
+      "area": "protein",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Atomically accurate de novo design of antibodies with RFdiffusion",
+        "[exa] ",
+        "[exa-h] Despite the central role of antibodies in modern medicine, no method currently exists to design novel, epitope-specific "
+      ],
+      "latency": 5.538873910903931
+    },
+    {
+      "topic": "Protein-protein interaction: binding prediction",
+      "area": "protein",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Evaluating protein binding interfaces with transformer networks",
+        "[exa-h] key for deciphering their roles in health and disease, and for therapeutic interventions. However, identifying\nprotein i"
+      ],
+      "latency": 4.422473669052124
+    },
+    {
+      "topic": "Enzyme engineering: activity, stability optimization",
+      "area": "protein",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Enhancing stability of enzymes for industrial applications: molecular insights and emerging approaches",
+        "[exa] Rational engineering of enzyme stability",
+        "[exa-h] The growing demand for robust biocatalysts in industrial bioprocesses has intensified the pursuit of enzymes capable of "
+      ],
+      "latency": 11.759343385696411
+    },
+    {
+      "topic": "Clinical NLP: medical record analysis, extraction",
+      "area": "clinical",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Natural language processing systems for capturing and standardizing unstructured clinical information: A systematic review",
+        "[exa] Clinical information extraction applications: A literature review",
+        "[exa-h] We followed a systematic approach based on the Preferred Reporting Items for Systematic Reviews and Meta-Analyses to ide"
+      ],
+      "latency": 8.418778896331787
+    },
+    {
+      "topic": "Diagnosis prediction: disease risk, progression",
+      "area": "clinical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Development and external validation of prediction algorithms to improve early diagnosis of cancer",
+        "[exa] A deep learning algorithm to predict risk of pancreatic cancer from disease trajectories",
+        "[exa-h] ## Discussion"
+      ],
+      "latency": 5.4153077602386475
+    },
+    {
+      "topic": "Treatment recommendation: precision medicine",
+      "area": "clinical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Precision Medicine",
+        "[exa] Precision Health: Treat and Manage Disease",
+        "[exa-h] environments, and lifestyles. The goal of precision medicine is to target the right treatments to the right patients at "
+      ],
+      "latency": 4.36745285987854
+    },
+    {
+      "topic": "Adverse event detection: pharmacovigilance AI",
+      "area": "clinical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Artificial Intelligence: Applications in Pharmacovigilance Signal Management",
+        "[exa-h] accessibility .........................................................................................................1"
+      ],
+      "latency": 4.625667572021484
+    },
+    {
+      "topic": "DeepMind AlphaFold: protein structure database",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AlphaFold  Protein Structure Database",
+        "[exa] AlphaFold  Protein Structure Database",
+        "[exa-h] [AlphaFold] is an AI system developed by[Google DeepMind] that predicts a protein\u2019s 3D structure from its amino acid seq"
+      ],
+      "latency": 6.288963079452515
+    },
+    {
+      "topic": "Recursion Pharmaceuticals: drug discovery AI",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pioneering TechBio solutions in drug discovery",
+        "[exa] Pioneering TechBio solutions in drug discovery",
+        "[exa-h] Recursion was founded more than a decade ago on the idea that we could take images of cells and use these images to trai"
+      ],
+      "latency": 3.941768169403076
+    },
+    {
+      "topic": "Insilico Medicine: AI drug development",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Main | Insilico Medicine",
+        "[exa] Mission | Insilico Medicine",
+        "[exa-h] Now, says Dr. Levitt, Insilico Medicine is using AI to create an entirely new AI-driven drug discovery pipeline from A t"
+      ],
+      "latency": 7.464604139328003
+    },
+    {
+      "topic": "BenevolentAI: knowledge graph drug discovery",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Life science intelligence",
+        "[exa] Life science intelligence",
+        "[exa-h] BenevolentAI brings together a unique cross-section of science and technology teams who push AI and machine learning to "
+      ],
+      "latency": 5.49490213394165
+    }
+  ]
+}

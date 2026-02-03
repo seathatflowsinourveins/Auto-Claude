@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:10:04.079384",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "LoRA fine-tuning: rank selection, target modules, merging",
+      "area": "peft",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] LoRA Hyperparameters: Rank, Alpha & Target Module Selection",
+        "[exa-h] > Abstract:Low-Rank Adaptation (LoRA) has emerged as a popular technique for fine-tuning large language models (LLMs) to"
+      ],
+      "latency": 9.716540336608887
+    },
+    {
+      "topic": "QLoRA: 4-bit quantization with LoRA for memory efficiency",
+      "area": "peft",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] QLoRA: 4-Bit Quantization for Memory-Efficient LLM Fine-Tuning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] **[QLoRA] (Quantized LoRA)**solves this problem by storing the frozenbase modelin 4-bitprecisionwhile training[LoRA adap"
+      ],
+      "latency": 14.974491834640503
+    },
+    {
+      "topic": "DoRA: weight-decomposed low-rank adaptation",
+      "area": "peft",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] DoRA: Weight-Decomposed Low-Rank Adaptation",
+        "[exa-h] findings, we propose Weight-Decomposed Low\u0002Rank Adaptation (DoRA). DoRA decomposes\nthe pre-trained weight into two compo"
+      ],
+      "latency": 14.26500654220581
+    },
+    {
+      "topic": "Adapters: bottleneck adapters, parallel adapters, AdapterFusion",
+      "area": "peft",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Adapter Methods \uf0c1",
+        "[exa-h] > We introduce Adapters, an open-source library that unifies parameter-efficient and modular transfer learning in large "
+      ],
+      "latency": 8.7783784866333
+    },
+    {
+      "topic": "RLHF: reward modeling, PPO training, KL divergence",
+      "area": "alignment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] KL-Regularised Q-Learning: A Token-level Action-Value perspective on Online RLHF",
+        "[exa] ",
+        "[exa-h] Proximal Policy Optimisation (PPO) is an established and effective policy gradient algorithm used for Language Model Rei"
+      ],
+      "latency": 9.751801252365112
+    },
+    {
+      "topic": "DPO: direct preference optimization without reward model",
+      "area": "alignment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+        "[exa-h] > With the rapid advancement of large language models (LLMs), aligning policy models with human preferences has become i"
+      ],
+      "latency": 10.98313283920288
+    },
+    {
+      "topic": "ORPO: odds ratio preference optimization",
+      "area": "alignment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Odds-Ratio Preference Optimization (ORPO)",
+        "[exa] Odds-Ratio Preference Optimization",
+        "[exa-h] Odds-Ratio Preference Optimization (ORPO) is a unified preference-based learning paradigm for fine-tuning LLMs, sequence"
+      ],
+      "latency": 9.5359365940094
+    },
+    {
+      "topic": "Constitutional AI training: self-critique, revision",
+      "area": "alignment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] C3AI: Crafting and Evaluating Constitutions for Constitutional AI - ADS",
+        "[exa] Constitutional AI: Principles & Methodology",
+        "[exa-h] Constitutional AI (CAI) guides LLM behavior using constitutions, but identifying which principles are most effective for"
+      ],
+      "latency": 9.247057676315308
+    },
+    {
+      "topic": "Instruction tuning datasets: Alpaca, Dolly, OpenAssistant formats",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data Format and Structure",
+        "[exa] Welcome to Open Instruct",
+        "[exa-h] This document describes the format and structure of the instruction-following dataset used for fine-tuning the Stanford "
+      ],
+      "latency": 10.102615356445312
+    },
+    {
+      "topic": "Data quality filtering: perplexity, diversity, deduplication",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Quality filtering. Retaining educational, human-written text is a key objective in many pipelines.\nClassifier-based appr"
+      ],
+      "latency": 9.119961023330688
+    },
+    {
+      "topic": "Synthetic data generation: self-instruct, evol-instruct",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Large Language Models (LLMs) require high quality instruction data for effective alignment, particularly in code gener"
+      ],
+      "latency": 13.49581265449524
+    },
+    {
+      "topic": "Data augmentation for LLMs: paraphrasing, back-translation",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Backtranslation and paraphrasing in the LLM era? Comparing data augmentation methods for emotion classification",
+        "[exa-h] > Data augmentation is a critical technique in deep learning. Traditional methods like Back-translation typically focus "
+      ],
+      "latency": 8.671319484710693
+    },
+    {
+      "topic": "DeepSpeed ZeRO: stage 1, 2, 3 for distributed training",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ZeRO \u2014 DeepSpeed 0.17.6 documentation",
+        "[exa] ZeRO \u2014 DeepSpeed 0.18.5 documentation",
+        "[exa-h] is explicitly positional-only to allow> self\nas a field name.\n**stage*:ZeroStageEnum**=0*[\uf0c1] \nChooses different stages o"
+      ],
+      "latency": 9.768809080123901
+    },
+    {
+      "topic": "FSDP: fully sharded data parallel training",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa] Advanced Model Training with Fully Sharded Data Parallel (FSDP) #",
+        "[exa-h] industry leaders, resulting in an implicit technical barrier for the wider community to access and leverage these techno"
+      ],
+      "latency": 11.549716472625732
+    },
+    {
+      "topic": "Mixed precision training: fp16, bf16, fp8 strategies",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Train With Mixed Precision",
+        "[exa-h] 2.3.\u00a0 Considering When Training With\nMixed Precision\nAssuming the framework supports Tensor Core math, simply enabling t"
+      ],
+      "latency": 10.317389011383057
+    },
+    {
+      "topic": "Gradient checkpointing: memory-compute tradeoff",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gradient checkpointing with jax.checkpoint (jax.remat)",
+        "[exa] ",
+        "[exa-h] **TL;DR**Use the[`jax.checkpoint()`] decorator (aliased as`jax.remat()`) with[`jax.grad()`] to control which intermediat"
+      ],
+      "latency": 6.879051685333252
+    },
+    {
+      "topic": "Knowledge distillation: teacher-student, self-distillation",
+      "area": "compression",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] [Submitted on 9 Jun 2021 ([v1]), last revised 21 Jun 2022 (this version, v2)]\n# Title:Knowledge distillation: A good tea"
+      ],
+      "latency": 10.612838745117188
+    },
+    {
+      "topic": "Pruning: unstructured, structured, magnitude-based",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Pruning Tutorial #",
+        "[exa-h] > As their size increases, Large Languages Models (LLMs) are natural candidates for network pruning methods: approaches "
+      ],
+      "latency": 10.138917446136475
+    },
+    {
+      "topic": "Quantization-aware training: QAT for accuracy preservation",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantization #",
+        "[exa] Quantization Accuracy Debugging",
+        "[exa-h] We are cetralizing all quantization related development to[torchao], please checkout our new doc page:[https://docs.pyto"
+      ],
+      "latency": 9.776433229446411
+    },
+    {
+      "topic": "Model merging: SLERP, TIES, DARE for combining models",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] TIES-Merging: Resolving Interference When Merging Models",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] This paper proposes a method, TRIM, ELECT SIGN&MERGE (TIES-Merging), which introduces three novel steps when merging mod"
+      ],
+      "latency": 10.20341682434082
+    }
+  ]
+}

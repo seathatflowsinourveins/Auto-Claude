@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:34:33.965548",
+  "stats": {
+    "sources": 199,
+    "vectors": 189,
+    "findings": 91
+  },
+  "results": [
+    {
+      "topic": "vLLM: PagedAttention, fast serving",
+      "area": "engines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention",
+        "[exa-h] duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspire"
+      ],
+      "latency": 8.11439323425293
+    },
+    {
+      "topic": "TGI: Text Generation Inference, HuggingFace",
+      "area": "engines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] text-generation-inference",
+        "[exa] text-generation-inference",
+        "[exa-h] The easiest way of getting started is using the official Docker container. Install Docker following[their installation i"
+      ],
+      "latency": 7.962306499481201
+    },
+    {
+      "topic": "TensorRT-LLM: NVIDIA inference",
+      "area": "engines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview \u2014 TensorRT LLM",
+        "[exa] Welcome to TensorRT LLM\u2019s Documentation! #",
+        "[exa-h] [TensorRT LLM] is NVIDIA\u2019s comprehensive open-source library for accelerating and optimizing inference performance of th"
+      ],
+      "latency": 8.112483263015747
+    },
+    {
+      "topic": "llama.cpp: CPU inference, GGUF",
+      "area": "engines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Inference Endpoints (dedicated)",
+        "[exa] Inference Endpoints (dedicated)",
+        "[exa-h] llama.cpp is a high-performance inference engine written in C/C++, tailored for running Llama and compatible models in t"
+      ],
+      "latency": 8.199908018112183
+    },
+    {
+      "topic": "KV cache: memory optimization",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Key-value (KV) caching has emerged as a crucial optimization technique for accelerating inference in large language mo"
+      ],
+      "latency": 8.849248886108398
+    },
+    {
+      "topic": "Continuous batching: dynamic batching",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transformers",
+        "[exa] Static, dynamic and continuous batching",
+        "[exa-h] Continuous batching maximizes GPU utilization. It increases throughput and reduces latency by using dynamic scheduling t"
+      ],
+      "latency": 4.667770147323608
+    },
+    {
+      "topic": "Speculative decoding: draft models",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Speculative decoding (Leviathan et al., 2023; Chen et al., 2023) (SD) is a technique introduced to\nalleviate this proble"
+      ],
+      "latency": 7.2867045402526855
+    },
+    {
+      "topic": "Prefix caching: prompt reuse",
+      "area": "optimization",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Prefix caching",
+        "[exa] Prompt Caching Explained",
+        "[exa-h] The idea is simple: By caching the KV cache of an existing query, a new query that shares the same prefix can skip recom"
+      ],
+      "latency": 9.13472294807434
+    },
+    {
+      "topic": "Load balancing: request distribution",
+      "area": "scaling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Load Balancing in the Datacenter",
+        "[exa] Load Balancing at the Frontend",
+        "[exa-h] This chapter focuses on load balancing within the datacenter. Specifically, it discusses algorithms for distributing wor"
+      ],
+      "latency": 9.026086568832397
+    },
+    {
+      "topic": "Auto-scaling: demand-based scaling",
+      "area": "scaling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dynamic scaling for Amazon EC2 Auto Scaling",
+        "[exa] Choose your scaling method",
+        "[exa-h] Dynamic scaling scales the capacity of your Auto Scaling group as traffic changes\noccur.\nAmazon EC2 Auto Scaling support"
+      ],
+      "latency": 5.165707588195801
+    },
+    {
+      "topic": "Multi-GPU serving: tensor parallel",
+      "area": "scaling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Large Scale Transformer model training with Tensor Parallel (TP) #",
+        "[exa] Large Scale Transformer model training with Tensor Parallel (TP) #",
+        "[exa-h] This tutorial demonstrates how to train a large Transformer-like model across hundreds to thousands of GPUs using Tensor"
+      ],
+      "latency": 7.633662223815918
+    },
+    {
+      "topic": "Serverless LLM: on-demand inference",
+      "area": "scaling",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Serverless LLM | ServerlessLLM",
+        "[exa] ServerlessLLM: Low-Latency Serverless Inference for Large Language Models - ADS",
+        "[exa-h] ServerlessLLM is a **fast** and **easy-to-use** serving system designed for **affordable** multi-LLM serving, also known"
+      ],
+      "latency": 4.088794708251953
+    },
+    {
+      "topic": "Replicate: model hosting platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Run and fine-tune models. Deploy custom models. All with one line of code.",
+        "[exa] Run and fine-tune models. Deploy custom models. All with one line of code.",
+        "[exa-h] ### Deploy custom models\nYou aren\u2019t limited to the models on Replicate: you can deploy your own custom models using[Cog]"
+      ],
+      "latency": 3.479218006134033
+    },
+    {
+      "topic": "Together AI: inference platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Build on the  AI Native Cloud",
+        "[exa] \u201cWe\u2019ve been thoroughly impressed with the Together Enterprise Platform. It has delivered a 2x reduction in latency (time to first token) and cut our costs by approximately a third. These improvements allow us to launch AI-powered features and deliver lightning-fast experiences faster than ever before.\u201d",
+        "[exa-h] Accelerate training, fine-tuning and inference on performance-optimized GPU clusters\n* ### Reliable at production scale\n"
+      ],
+      "latency": 4.004858732223511
+    },
+    {
+      "topic": "Groq: LPU inference hardware",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing the LPU",
+        "[exa] What is a Language Processing Unit?",
+        "[exa-h] Established in 2016 for inference, Groq is literally built different. It\u2019s the only custom-built inference chip that fue"
+      ],
+      "latency": 9.729531288146973
+    },
+    {
+      "topic": "Modal: serverless GPU compute",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Modal: High-performance AI infrastructure",
+        "[exa] Modal Documentation",
+        "[exa-h] Bring your own image or build one in Python, scale resources as needed, and leverage state-of-the-art GPUs like H100s & "
+      ],
+      "latency": 3.3355531692504883
+    },
+    {
+      "topic": "Latency optimization: time-to-first-token",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The LLM Latency Guidebook: Optimizing Response Times for GenAI Applications",
+        "[exa] ",
+        "[exa-h] ## **Understanding the drivers of long response times**\nThe response time of an LLM can vary based on four primary facto"
+      ],
+      "latency": 5.1714372634887695
+    },
+    {
+      "topic": "Throughput: tokens per second",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deploy legacy provisioned throughput models",
+        "[exa] Deploy legacy provisioned throughput models",
+        "[exa-h] [] ## Tokens per second ranges in provisioned throughput\nWarning\nThe topics described in this section apply to provision"
+      ],
+      "latency": 7.953174352645874
+    },
+    {
+      "topic": "Cost efficiency: price per token",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Token Tracker\n                     (ERC-20)",
+        "[exa] Top 100 Crypto Tokens by Market Capitalization",
+        "[exa-h] **This page tracks key metrics of[ERC-20] tokens on Ethereum. Kindly take note that only tokens with a Blue Checkmark ar"
+      ],
+      "latency": 4.407292366027832
+    },
+    {
+      "topic": "Quality vs speed: tradeoffs",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Speed vs. quality in software testing: Can you have both?",
+        "[exa] Speed vs. Quality in Software Testing",
+        "[exa-h] utopian dream."
+      ],
+      "latency": 4.63727331161499
+    }
+  ]
+}

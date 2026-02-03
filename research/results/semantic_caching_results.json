@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:43:38.346296",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 98
+  },
+  "results": [
+    {
+      "topic": "Semantic caching: embedding similarity for LLM response reuse",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Semantic caches return cached responses for semantically similar prompts to\nreduce LLM inference latency and cost. They "
+      ],
+      "latency": 8.117894649505615
+    },
+    {
+      "topic": "Cache key generation: query normalization, intent extraction",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cache Keys #",
+        "[exa] Cache Keys \u00b6",
+        "[exa-h] [`create\\_key`] \n|\nCreate a normalized cache key based on a request object\n|\n[`normalize\\_body`] \n|\nNormalize and filter"
+      ],
+      "latency": 8.075172185897827
+    },
+    {
+      "topic": "Similarity thresholds: precision vs recall trade-offs",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automatic threshold estimation for data matching applications",
+        "[exa] ",
+        "[exa-h] The experiments presented in this paper show that the values for precision and recall estimated by the proposed procedur"
+      ],
+      "latency": 7.771882057189941
+    },
+    {
+      "topic": "GPTCache architecture: modular caching for LLM applications",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa] LLM-dCache: Improving Tool-Augmented LLMs with GPT-Driven Localized Data Caching - ADS",
+        "[exa-h] > As Large Language Models (LLMs) broaden their capabilities to manage thousands of API calls, they are confronted with "
+      ],
+      "latency": 8.440500736236572
+    },
+    {
+      "topic": "LRU vs semantic eviction: traditional vs embedding-aware",
+      "area": "strategies",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] 10 techniques to optimize your semantic cache",
+        "[exa-h] et al. [2023]. Unlike traditional key-value caches, a semantic cache does not rely on exact key\nmatching. Instead, it de"
+      ],
+      "latency": 8.04099178314209
+    },
+    {
+      "topic": "TTL strategies for LLM caches: freshness vs cost savings",
+      "area": "strategies",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic Caching for Low-Cost LLM Serving: \n From Offline Learning to Online Adaptation",
+        "[exa] A Generative Caching System for Large Language Models",
+        "[exa-h] (1) Semantic Caching Model:We introduce a novel semantic caching framework that generalizes traditional exact-match cach"
+      ],
+      "latency": 9.23103141784668
+    },
+    {
+      "topic": "Hierarchical caching: local, distributed, and edge layers",
+      "area": "strategies",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] The Ultimate Guide to Caching Architecture for Production Systems",
+        "[exa-h] Multi-tiered caching systems are designed to provide fast and scalable data retrieval by layering caches at \ndifferent l"
+      ],
+      "latency": 8.964901447296143
+    },
+    {
+      "topic": "Write-through vs write-back: consistency in semantic caches",
+      "area": "strategies",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Cache Write Policies",
+        "[exa-h] tween write-through and write-back caching when writes hit in a cache are con\nsidered. A mixture of these two alternativ"
+      ],
+      "latency": 6.192931175231934
+    },
+    {
+      "topic": "Redis as semantic cache: vector extensions, lua scripts",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic Caching for LLMs",
+        "[exa] Building a Context-Enabled Semantic Cache with Redis",
+        "[exa-h] RedisVL provides a`SemanticCache`interface to utilize Redis' built-in caching capabilities AND vector search in order to"
+      ],
+      "latency": 8.285616874694824
+    },
+    {
+      "topic": "Qdrant for semantic caching: fast similarity lookups",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic Cache: Accelerating AI with Lightning-Fast Data Retrieval",
+        "[exa] A Guide to Using Semantic Cache to Speed Up LLM Queries with Qdrant and Groq.",
+        "[exa-h] When a user poses a question, a semantic search by Qdrant is conducted across all cached questions to identify the most "
+      ],
+      "latency": 10.024736166000366
+    },
+    {
+      "topic": "Embedding cache: storing and retrieving query embeddings",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool \u2014so you"
+      ],
+      "latency": 9.1699538230896
+    },
+    {
+      "topic": "Cache warming: precomputing responses for common queries",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cache warming: What it solves, what it breaks, and what to do instead",
+        "[exa] Cache Warming",
+        "[exa-h] Typically, cache warming means loading your caching layer with critical or frequently accessed data. This might involve "
+      ],
+      "latency": 6.524338722229004
+    },
+    {
+      "topic": "Cache hit rate optimization: query clustering, canonicalization",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Cache-aware load balancing of data center applications",
+        "[exa-h] stream sent to a cache, the lower its miss rate tends to be.\nIf our load balancer can cluster the incoming query stream\n"
+      ],
+      "latency": 8.67929482460022
+    },
+    {
+      "topic": "Partial cache hits: combining cached fragments with fresh data",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Smarter Caching in Next.js: Partial Rendering and Reusable Components",
+        "[exa] Hypertext Transfer Protocol (HTTP/1.1): Caching",
+        "[exa-h] ## Next.js Partial Prerendering: The Experimental Direction\nNext.js Partial Prerendering represents a significant shift."
+      ],
+      "latency": 7.846234321594238
+    },
+    {
+      "topic": "Cost-aware caching: prioritizing expensive model responses",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Routing incoming queries to the most cost-effective LLM while maintaining response quality poses a fundamental challen"
+      ],
+      "latency": 9.552935600280762
+    },
+    {
+      "topic": "Adaptive thresholds: learning optimal similarity cutoffs",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automatic threshold estimation for data matching applications",
+        "[exa] ",
+        "[exa-h] We propose a method for eliminating human intervention in the process of recall/precision estimation. As the experiments"
+      ],
+      "latency": 7.005865573883057
+    },
+    {
+      "topic": "Cache invalidation: handling knowledge updates, model changes",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cache invalidation",
+        "[exa] Caching and Revalidating",
+        "[exa-h] It can be done explicitly, as part of a[cache coherence] protocol. In such a case, a processor changes a memory location"
+      ],
+      "latency": 3.808330774307251
+    },
+    {
+      "topic": "Multi-tenant caching: isolation and shared cache strategies",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multitenancy and Azure Cache for Redis",
+        "[exa] ",
+        "[exa-h] [] ## Isolation models\nWhen you work with a multitenant system that uses Azure Cache for Redis, you need to determine th"
+      ],
+      "latency": 10.48828935623169
+    },
+    {
+      "topic": "Cache analytics: monitoring hit rates, latency savings",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Redis Software Observability Playbook",
+        "[exa] Micrometer Cache Instrumentations",
+        "[exa-h] **Cache hit ratio**is the percentage of read requests that Redis serves successfully.**Eviction rate**is the rate at whi"
+      ],
+      "latency": 3.3803772926330566
+    },
+    {
+      "topic": "Hybrid caching: exact match + semantic similarity together",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] et al. [2023]. Unlike traditional key-value caches, a semantic cache does not rely on exact key\nmatching. Instead, it de"
+      ],
+      "latency": 6.7778449058532715
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:25:36.072500",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Decentralized AI: distributed ML, federated networks",
+      "area": "decentralized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Federated learning",
+        "[exa] ",
+        "[exa-h] In the decentralized federated learning setting, the nodes are able to coordinate themselves to obtain the global model."
+      ],
+      "latency": 9.509804010391235
+    },
+    {
+      "topic": "AI DAOs: decentralized autonomous organizations",
+      "area": "decentralized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] What is a DAO?",
+        "[exa-h] [Submitted on 24 Oct 2025 ([v1]), last revised 27 Oct 2025 (this version, v2)]\n# Title:DAO-AI: Evaluating Collective Dec"
+      ],
+      "latency": 7.866014719009399
+    },
+    {
+      "topic": "Blockchain ML: verifiable computation",
+      "area": "decentralized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Verde: Verification via Refereed Delegation for Machine Learning Programs",
+        "[exa] Verifiable computing",
+        "[exa-h] Machine learning programs, such as those performing inference, fine-tuning, and training\nof LLMs, are commonly delegated"
+      ],
+      "latency": 8.461751222610474
+    },
+    {
+      "topic": "Token incentives: AI network economics",
+      "area": "decentralized",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The web3 Playbook: Using token incentives to bootstrap new networks",
+        "[exa] Page 3: Incentive Structure and Tokenomics",
+        "[exa-h] introduces a powerful new tool for bootstrapping networks: token incentives.The basic idea is: Early on during the boots"
+      ],
+      "latency": 8.578748941421509
+    },
+    {
+      "topic": "Decentralized GPU: Akash, Render, compute markets",
+      "area": "compute",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Decentralized  Cloud   Built for   AI's Next Frontier",
+        "[exa] Provider Overview | Akash Network - Your Guide to Decentralized Cloud",
+        "[exa-h] ## GPU's at Costs That Scale\n### Gpu TypeGpu Type\n#### H200\n### Akash NetworkAkash\n#### $1.40/hr\n### AWSAWS\n#### $4.33/h"
+      ],
+      "latency": 10.606292247772217
+    },
+    {
+      "topic": "AI compute tokens: Bittensor, Ocean Protocol",
+      "area": "compute",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Meet Ocean: Tokenized AI & Data",
+        "[exa] Bittensor: Decentralized Intelligence at Scale",
+        "[exa-h] The tool to enhance your AI capabilities and make the most of your computational resources. Develop, train, and monetize"
+      ],
+      "latency": 7.294389247894287
+    },
+    {
+      "topic": "Proof of useful work: AI training as mining",
+      "area": "compute",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PoGO: A Scalable Proof of Useful Work via Quantized Gradient Descent and Merkle Proofs",
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa-h] training."
+      ],
+      "latency": 7.720112562179565
+    },
+    {
+      "topic": "Federated compute: privacy-preserving networks",
+      "area": "compute",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Confidential Federated Computations",
+        "[exa] Federated learning",
+        "[exa-h] Federated Learning and Analytics (FLA) have seen widespread adoption by technology platforms for processing sensitive on"
+      ],
+      "latency": 9.926791906356812
+    },
+    {
+      "topic": "Autonomous agents: on-chain AI agents",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Autonomys Agents (Auto Agents)",
+        "[exa-h] into a programmable substrate for value transfer, access control, and verifiable state transitions.\nTheir convergence in"
+      ],
+      "latency": 9.685360431671143
+    },
+    {
+      "topic": "AI wallets: automated crypto management",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Talisman Litepaper",
+        "[exa-h] Armor's Multi-Agent System (AMAS)\u00a0is designed for users and developers to create a new generation of AI\u00a0crypto agents wi"
+      ],
+      "latency": 8.229738712310791
+    },
+    {
+      "topic": "Smart contract AI: intelligent contracts",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction to Intelligent Contracts",
+        "[exa] Smart Contract Overview",
+        "[exa-h] Intelligent Contracts are an advanced evolution of smart contracts that combine traditional blockchain capabilities with"
+      ],
+      "latency": 8.204080820083618
+    },
+    {
+      "topic": "DeFi AI: automated trading, yield strategies",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction",
+        "[exa] Unleash the power of   automated crypto trading",
+        "[exa-h] **Providing liquidity in DeFi, particularly to correlated trading pairs such as ETH LSTs/LRTs and stablecoins on decentr"
+      ],
+      "latency": 8.238879442214966
+    },
+    {
+      "topic": "Data marketplaces: Ocean Protocol, Streamr",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Ocean Protocol - Unlocking Data for AI Revolution",
+        "[exa] \ud83c\udf0a Discover Ocean",
+        "[exa-h] Ocean Marketplace is the world's first decentralized data\nexchange where data providers can securely monetize their\ndata"
+      ],
+      "latency": 8.236666202545166
+    },
+    {
+      "topic": "AI data tokens: monetizing datasets",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Economics of AI Training Data: A Research Agenda",
+        "[exa] Computer Science > Computer Science and Game Theory",
+        "[exa-h] Token|Smallest processable data fragment (e.g., tokenized text or scalar input)|Divisible and composable333Token-level p"
+      ],
+      "latency": 7.373588562011719
+    },
+    {
+      "topic": "Decentralized oracles: AI-powered data feeds",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Chainlink Data Streams",
+        "[exa] market & data feeds",
+        "[exa-h] Chainlink Data Streams delivers low-latency market data offchain, which you can verify onchain. This approach provides d"
+      ],
+      "latency": 7.838352203369141
+    },
+    {
+      "topic": "Privacy tech: ZK proofs, confidential AI",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What are zero-knowledge proofs?",
+        "[exa] Introduction",
+        "[exa-h] license."
+      ],
+      "latency": 8.529053688049316
+    },
+    {
+      "topic": "Bittensor: decentralized AI network",
+      "area": "projects",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Bittensor: Decentralized Intelligence at Scale",
+        "[exa] Bittensor",
+        "[exa-h] **Bittensor**is an open-source protocol that incentivizes the development and sharing of machine learning models through"
+      ],
+      "latency": 6.5742597579956055
+    },
+    {
+      "topic": "Fetch.ai: autonomous economic agents",
+      "area": "projects",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Fetch.ai Documentation",
+        "[exa] Your personal AI",
+        "[exa-h] **Fetch.ai** is developing a platform to enable the development of an AI empowered decentralized digital economy. _Agent"
+      ],
+      "latency": 6.655005216598511
+    },
+    {
+      "topic": "SingularityNET: AI marketplace",
+      "area": "projects",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Products |",
+        "[exa] Founding Member of the Artificial Superintelligence Alliance",
+        "[exa-h] ![technology-img] \nAI service providers publish and monetize your AI services onto our open decentralized AI marketplace"
+      ],
+      "latency": 5.9114696979522705
+    },
+    {
+      "topic": "Ritual: AI infrastructure for web3",
+      "area": "projects",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is Ritual?",
+        "[exa] What is Ritual?",
+        "[exa-h] Where everyone else is not going\n] \n##### Reference\n* [\nFAQ\n] \n* [\nGlossary\n] \nOverview\n# What is Ritual?\nRitual is the*"
+      ],
+      "latency": 7.747885227203369
+    }
+  ]
+}

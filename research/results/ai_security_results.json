@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T03:00:59.105261",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 98
+  },
+  "results": [
+    {
+      "topic": "Prompt injection: LLM attacks",
+      "area": "attacks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prompt injection",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] **Prompt injection**is a[cybersecurity] exploit and an[attack vector] in which innocuous-looking inputs (i.e.[prompts]) "
+      ],
+      "latency": 7.738686800003052
+    },
+    {
+      "topic": "Adversarial examples: input attacks",
+      "area": "attacks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Several machine learning models, including neural networks, consistently misclassify adversarial examples---inputs for"
+      ],
+      "latency": 7.654250383377075
+    },
+    {
+      "topic": "Model extraction: stealing models",
+      "area": "attacks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] In a model extraction attack, an adversary steals a copy of\na remotely deployed machine learning model, given oracle\npre"
+      ],
+      "latency": 7.754973649978638
+    },
+    {
+      "topic": "Data poisoning: training attacks",
+      "area": "attacks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks - ADS",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Data poisoning is an attack on machine learning models wherein the attacker adds examples to the training set to manipul"
+      ],
+      "latency": 6.776647329330444
+    },
+    {
+      "topic": "Input sanitization: prompt filtering",
+      "area": "defense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Input Validation Cheat Sheet \u00b6",
+        "[exa] LLM Prompt Injection Prevention Cheat Sheet \u00b6",
+        "[exa-h] ## Validating Rich User Content[\u00b6] \nIt is very difficult to validate rich content submitted by a user. For more informat"
+      ],
+      "latency": 7.2178497314453125
+    },
+    {
+      "topic": "Adversarial training: robust models",
+      "area": "defense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Chapter 4 - Adversarial training, solving the outer minimization",
+        "[exa-h] problem, we study the adversarial robustness of neural networks through the lens of robust optimization. This approach p"
+      ],
+      "latency": 7.62200927734375
+    },
+    {
+      "topic": "Differential privacy: training privacy",
+      "area": "defense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] In this section we introduce common differential privacy definitions, outline DP properties\nand popular mechanisms which"
+      ],
+      "latency": 8.98226523399353
+    },
+    {
+      "topic": "Model watermarking: ownership",
+      "area": "defense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] watermarking often focus on model watermarking for ownership protection (e.g., [36, 37]), which has different\ngoals and "
+      ],
+      "latency": 8.718682289123535
+    },
+    {
+      "topic": "Federated learning: privacy ML",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Federated learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Federated learning is generally concerned with and motivated by issues such as[data privacy],[data minimization], and da"
+      ],
+      "latency": 7.3597025871276855
+    },
+    {
+      "topic": "Secure aggregation: encrypted training",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Practical Secure Aggregation  for Privacy-Preserving Machine Learning",
+        "[exa-h] The problem of computing a multiparty sum where no party\nreveals its update in the clear\u2014even to the aggregator\u2014is\nrefer"
+      ],
+      "latency": 5.912858724594116
+    },
+    {
+      "topic": "PII detection: sensitive data",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Detect and process sensitive data",
+        "[exa] InfoTypes and infoType detectors \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] # Detect and process sensitive data\nThe Detect PII transform identifies Personal Identifiable Information (PII) in your "
+      ],
+      "latency": 9.406131267547607
+    },
+    {
+      "topic": "Privacy-preserving inference: secure",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MUSE: Secure Inference Resilient to Malicious Clients",
+        "[exa] ",
+        "[exa-h] The increasing adoption of machine learning inference in applications has led to a corresponding increase in concerns su"
+      ],
+      "latency": 7.991633892059326
+    },
+    {
+      "topic": "Jailbreak attacks: bypass safety",
+      "area": "llm_security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] > Large Language Models (LLMs) can be used to red team other models (e.g. jailbreaking) to elicit harmful contents. Whil"
+      ],
+      "latency": 9.43691086769104
+    },
+    {
+      "topic": "Prompt leaking: system prompt",
+      "area": "llm_security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] System prompt leakage in LLMs",
+        "[exa] lucasmrdt / LEAK_EVERY_LLM_SYSTEM_PROMPT.md",
+        "[exa-h] LLMs operate based on a combination of user input and hidden system prompts\u2014the instructions that guide the model\u2019s beha"
+      ],
+      "latency": 7.693042516708374
+    },
+    {
+      "topic": "Output filtering: content safety",
+      "area": "llm_security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is Azure AI Content Safety?",
+        "[exa] Output filtering: Content moderation strategies",
+        "[exa-h] Azure AI Content Safety is an AI service that detects harmful user-generated and AI-generated content in applications an"
+      ],
+      "latency": 7.114870309829712
+    },
+    {
+      "topic": "Rate limiting: abuse prevention",
+      "area": "llm_security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Rate Limiting for Server Security",
+        "[exa] Rate limiting best practices",
+        "[exa-h] Rate limiting is a foundational control for protecting servers and applications against abuse,**DDoS attacks**, and reso"
+      ],
+      "latency": 8.536351680755615
+    },
+    {
+      "topic": "AI auditing: security review",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Further reading........................................................................................................."
+      ],
+      "latency": 7.225933074951172
+    },
+    {
+      "topic": "GDPR AI: data protection",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About this guidance",
+        "[exa] ",
+        "[exa-h] This guidance covers what we think is best practice for data protection-compliant AI, as well as how we interpret data p"
+      ],
+      "latency": 7.9567766189575195
+    },
+    {
+      "topic": "Model governance: security policy",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Governance and control",
+        "[exa] AI and ML perspective: Security \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] This whitepaper is for historical reference only. Some content might be outdated and some links might not be available.\n"
+      ],
+      "latency": 7.556418180465698
+    },
+    {
+      "topic": "Threat modeling: AI risks",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] A Framework for Evaluating Emerging Cyberattack Capabilities of AI",
+        "[exa-h] In each area, we develop and maintain a threat model that identifies the risks of severe harm and sets\nthresholds we can"
+      ],
+      "latency": 9.157694578170776
+    }
+  ]
+}

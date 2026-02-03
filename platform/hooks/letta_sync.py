@@ -26,7 +26,7 @@ Usage:
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Optional
 
@@ -137,7 +137,7 @@ class LettaSync:
             lines = [
                 "# Letta Memory (Auto-generated)",
                 f"<!-- Agent ID: {agent_id} -->",
-                f"<!-- Updated: {datetime.utcnow().isoformat()} -->",
+                f"<!-- Updated: {datetime.now(timezone.utc).isoformat()} -->",
                 ""
             ]
             

@@ -1,0 +1,1980 @@
+{
+  "timestamp": "2026-02-03T00:58:02.623379",
+  "stats": {
+    "sources": 192,
+    "findings": 96,
+    "configs": 24
+  },
+  "configs": [
+    {
+      "dockerfile": {
+        "base_image": "python:3.11-slim",
+        "multi_stage": true,
+        "gpu_support": "nvidia/cuda:12.1-runtime",
+        "optimizations": [
+          "--no-cache-dir",
+          "multi-stage build",
+          "non-root user"
+        ]
+      },
+      "docker_compose": {
+        "version": "3.8",
+        "services": [
+          "agent",
+          "redis",
+          "qdrant"
+        ],
+        "networks": [
+          "agent-network"
+        ],
+        "volumes": [
+          "agent-data"
+        ]
+      },
+      "kubernetes": {
+        "deployment": {
+          "replicas": 3,
+          "strategy": "RollingUpdate"
+        },
+        "service": {
+          "type": "ClusterIP",
+          "port": 8000
+        },
+        "ingress": {
+          "class": "nginx",
+          "tls": true
+        }
+      },
+      "category": "container",
+      "status": "generated"
+    },
+    {
+      "dockerfile": {
+        "base_image": "python:3.11-slim",
+        "multi_stage": true,
+        "gpu_support": "nvidia/cuda:12.1-runtime",
+        "optimizations": [
+          "--no-cache-dir",
+          "multi-stage build",
+          "non-root user"
+        ]
+      },
+      "docker_compose": {
+        "version": "3.8",
+        "services": [
+          "agent",
+          "redis",
+          "qdrant"
+        ],
+        "networks": [
+          "agent-network"
+        ],
+        "volumes": [
+          "agent-data"
+        ]
+      },
+      "kubernetes": {
+        "deployment": {
+          "replicas": 3,
+          "strategy": "RollingUpdate"
+        },
+        "service": {
+          "type": "ClusterIP",
+          "port": 8000
+        },
+        "ingress": {
+          "class": "nginx",
+          "tls": true
+        }
+      },
+      "category": "container",
+      "status": "generated"
+    },
+    {
+      "dockerfile": {
+        "base_image": "python:3.11-slim",
+        "multi_stage": true,
+        "gpu_support": "nvidia/cuda:12.1-runtime",
+        "optimizations": [
+          "--no-cache-dir",
+          "multi-stage build",
+          "non-root user"
+        ]
+      },
+      "docker_compose": {
+        "version": "3.8",
+        "services": [
+          "agent",
+          "redis",
+          "qdrant"
+        ],
+        "networks": [
+          "agent-network"
+        ],
+        "volumes": [
+          "agent-data"
+        ]
+      },
+      "kubernetes": {
+        "deployment": {
+          "replicas": 3,
+          "strategy": "RollingUpdate"
+        },
+        "service": {
+          "type": "ClusterIP",
+          "port": 8000
+        },
+        "ingress": {
+          "class": "nginx",
+          "tls": true
+        }
+      },
+      "category": "container",
+      "status": "generated"
+    },
+    {
+      "dockerfile": {
+        "base_image": "python:3.11-slim",
+        "multi_stage": true,
+        "gpu_support": "nvidia/cuda:12.1-runtime",
+        "optimizations": [
+          "--no-cache-dir",
+          "multi-stage build",
+          "non-root user"
+        ]
+      },
+      "docker_compose": {
+        "version": "3.8",
+        "services": [
+          "agent",
+          "redis",
+          "qdrant"
+        ],
+        "networks": [
+          "agent-network"
+        ],
+        "volumes": [
+          "agent-data"
+        ]
+      },
+      "kubernetes": {
+        "deployment": {
+          "replicas": 3,
+          "strategy": "RollingUpdate"
+        },
+        "service": {
+          "type": "ClusterIP",
+          "port": 8000
+        },
+        "ingress": {
+          "class": "nginx",
+          "tls": true
+        }
+      },
+      "category": "container",
+      "status": "generated"
+    },
+    {
+      "github_actions": {
+        "triggers": [
+          "push",
+          "pull_request"
+        ],
+        "jobs": [
+          "test",
+          "build",
+          "deploy"
+        ],
+        "environments": [
+          "staging",
+          "production"
+        ],
+        "secrets": [
+          "API_KEYS",
+          "DOCKER_CREDENTIALS"
+        ]
+      },
+      "stages": [
+        "lint",
+        "test",
+        "build",
+        "push",
+        "deploy"
+      ],
+      "artifacts": [
+        "docker-image",
+        "test-reports",
+        "coverage"
+      ],
+      "category": "cicd",
+      "status": "generated"
+    },
+    {
+      "github_actions": {
+        "triggers": [
+          "push",
+          "pull_request"
+        ],
+        "jobs": [
+          "test",
+          "build",
+          "deploy"
+        ],
+        "environments": [
+          "staging",
+          "production"
+        ],
+        "secrets": [
+          "API_KEYS",
+          "DOCKER_CREDENTIALS"
+        ]
+      },
+      "stages": [
+        "lint",
+        "test",
+        "build",
+        "push",
+        "deploy"
+      ],
+      "artifacts": [
+        "docker-image",
+        "test-reports",
+        "coverage"
+      ],
+      "category": "cicd",
+      "status": "generated"
+    },
+    {
+      "github_actions": {
+        "triggers": [
+          "push",
+          "pull_request"
+        ],
+        "jobs": [
+          "test",
+          "build",
+          "deploy"
+        ],
+        "environments": [
+          "staging",
+          "production"
+        ],
+        "secrets": [
+          "API_KEYS",
+          "DOCKER_CREDENTIALS"
+        ]
+      },
+      "stages": [
+        "lint",
+        "test",
+        "build",
+        "push",
+        "deploy"
+      ],
+      "artifacts": [
+        "docker-image",
+        "test-reports",
+        "coverage"
+      ],
+      "category": "cicd",
+      "status": "generated"
+    },
+    {
+      "github_actions": {
+        "triggers": [
+          "push",
+          "pull_request"
+        ],
+        "jobs": [
+          "test",
+          "build",
+          "deploy"
+        ],
+        "environments": [
+          "staging",
+          "production"
+        ],
+        "secrets": [
+          "API_KEYS",
+          "DOCKER_CREDENTIALS"
+        ]
+      },
+      "stages": [
+        "lint",
+        "test",
+        "build",
+        "push",
+        "deploy"
+      ],
+      "artifacts": [
+        "docker-image",
+        "test-reports",
+        "coverage"
+      ],
+      "category": "cicd",
+      "status": "generated"
+    },
+    {
+      "terraform": {
+        "providers": [
+          "aws",
+          "kubernetes"
+        ],
+        "modules": [
+          "vpc",
+          "eks",
+          "rds",
+          "elasticache"
+        ],
+        "backends": [
+          "s3",
+          "dynamodb-lock"
+        ]
+      },
+      "resources": {
+        "compute": "EKS/GKE/AKS",
+        "database": "RDS/CloudSQL",
+        "cache": "ElastiCache/Memorystore",
+        "storage": "S3/GCS"
+      },
+      "category": "infra",
+      "status": "generated"
+    },
+    {
+      "terraform": {
+        "providers": [
+          "aws",
+          "kubernetes"
+        ],
+        "modules": [
+          "vpc",
+          "eks",
+          "rds",
+          "elasticache"
+        ],
+        "backends": [
+          "s3",
+          "dynamodb-lock"
+        ]
+      },
+      "resources": {
+        "compute": "EKS/GKE/AKS",
+        "database": "RDS/CloudSQL",
+        "cache": "ElastiCache/Memorystore",
+        "storage": "S3/GCS"
+      },
+      "category": "infra",
+      "status": "generated"
+    },
+    {
+      "terraform": {
+        "providers": [
+          "aws",
+          "kubernetes"
+        ],
+        "modules": [
+          "vpc",
+          "eks",
+          "rds",
+          "elasticache"
+        ],
+        "backends": [
+          "s3",
+          "dynamodb-lock"
+        ]
+      },
+      "resources": {
+        "compute": "EKS/GKE/AKS",
+        "database": "RDS/CloudSQL",
+        "cache": "ElastiCache/Memorystore",
+        "storage": "S3/GCS"
+      },
+      "category": "infra",
+      "status": "generated"
+    },
+    {
+      "terraform": {
+        "providers": [
+          "aws",
+          "kubernetes"
+        ],
+        "modules": [
+          "vpc",
+          "eks",
+          "rds",
+          "elasticache"
+        ],
+        "backends": [
+          "s3",
+          "dynamodb-lock"
+        ]
+      },
+      "resources": {
+        "compute": "EKS/GKE/AKS",
+        "database": "RDS/CloudSQL",
+        "cache": "ElastiCache/Memorystore",
+        "storage": "S3/GCS"
+      },
+      "category": "infra",
+      "status": "generated"
+    },
+    {
+      "prometheus": {
+        "metrics": [
+          "llm_request_duration",
+          "llm_tokens_total",
+          "llm_errors_total"
+        ],
+        "alerts": [
+          "HighLatency",
+          "ErrorRate",
+          "TokenBudget"
+        ]
+      },
+      "grafana": {
+        "dashboards": [
+          "agent-overview",
+          "cost-tracking",
+          "latency-analysis"
+        ],
+        "datasources": [
+          "prometheus",
+          "loki",
+          "elasticsearch"
+        ]
+      },
+      "logging": {
+        "format": "json",
+        "fields": [
+          "timestamp",
+          "level",
+          "trace_id",
+          "span_id",
+          "message"
+        ],
+        "retention": "30d"
+      },
+      "category": "ops",
+      "status": "generated"
+    },
+    {
+      "prometheus": {
+        "metrics": [
+          "llm_request_duration",
+          "llm_tokens_total",
+          "llm_errors_total"
+        ],
+        "alerts": [
+          "HighLatency",
+          "ErrorRate",
+          "TokenBudget"
+        ]
+      },
+      "grafana": {
+        "dashboards": [
+          "agent-overview",
+          "cost-tracking",
+          "latency-analysis"
+        ],
+        "datasources": [
+          "prometheus",
+          "loki",
+          "elasticsearch"
+        ]
+      },
+      "logging": {
+        "format": "json",
+        "fields": [
+          "timestamp",
+          "level",
+          "trace_id",
+          "span_id",
+          "message"
+        ],
+        "retention": "30d"
+      },
+      "category": "ops",
+      "status": "generated"
+    },
+    {
+      "prometheus": {
+        "metrics": [
+          "llm_request_duration",
+          "llm_tokens_total",
+          "llm_errors_total"
+        ],
+        "alerts": [
+          "HighLatency",
+          "ErrorRate",
+          "TokenBudget"
+        ]
+      },
+      "grafana": {
+        "dashboards": [
+          "agent-overview",
+          "cost-tracking",
+          "latency-analysis"
+        ],
+        "datasources": [
+          "prometheus",
+          "loki",
+          "elasticsearch"
+        ]
+      },
+      "logging": {
+        "format": "json",
+        "fields": [
+          "timestamp",
+          "level",
+          "trace_id",
+          "span_id",
+          "message"
+        ],
+        "retention": "30d"
+      },
+      "category": "ops",
+      "status": "generated"
+    },
+    {
+      "prometheus": {
+        "metrics": [
+          "llm_request_duration",
+          "llm_tokens_total",
+          "llm_errors_total"
+        ],
+        "alerts": [
+          "HighLatency",
+          "ErrorRate",
+          "TokenBudget"
+        ]
+      },
+      "grafana": {
+        "dashboards": [
+          "agent-overview",
+          "cost-tracking",
+          "latency-analysis"
+        ],
+        "datasources": [
+          "prometheus",
+          "loki",
+          "elasticsearch"
+        ]
+      },
+      "logging": {
+        "format": "json",
+        "fields": [
+          "timestamp",
+          "level",
+          "trace_id",
+          "span_id",
+          "message"
+        ],
+        "retention": "30d"
+      },
+      "category": "ops",
+      "status": "generated"
+    },
+    {
+      "vault": {
+        "secrets_engines": [
+          "kv-v2",
+          "transit"
+        ],
+        "auth_methods": [
+          "kubernetes",
+          "approle"
+        ],
+        "policies": [
+          "agent-read",
+          "admin-full"
+        ]
+      },
+      "rbac": {
+        "roles": [
+          "admin",
+          "operator",
+          "viewer"
+        ],
+        "permissions": [
+          "read",
+          "write",
+          "execute",
+          "admin"
+        ]
+      },
+      "compliance": {
+        "soc2": [
+          "audit-logs",
+          "encryption",
+          "access-control"
+        ],
+        "gdpr": [
+          "data-retention",
+          "consent",
+          "deletion"
+        ]
+      },
+      "category": "security",
+      "status": "generated"
+    },
+    {
+      "vault": {
+        "secrets_engines": [
+          "kv-v2",
+          "transit"
+        ],
+        "auth_methods": [
+          "kubernetes",
+          "approle"
+        ],
+        "policies": [
+          "agent-read",
+          "admin-full"
+        ]
+      },
+      "rbac": {
+        "roles": [
+          "admin",
+          "operator",
+          "viewer"
+        ],
+        "permissions": [
+          "read",
+          "write",
+          "execute",
+          "admin"
+        ]
+      },
+      "compliance": {
+        "soc2": [
+          "audit-logs",
+          "encryption",
+          "access-control"
+        ],
+        "gdpr": [
+          "data-retention",
+          "consent",
+          "deletion"
+        ]
+      },
+      "category": "security",
+      "status": "generated"
+    },
+    {
+      "vault": {
+        "secrets_engines": [
+          "kv-v2",
+          "transit"
+        ],
+        "auth_methods": [
+          "kubernetes",
+          "approle"
+        ],
+        "policies": [
+          "agent-read",
+          "admin-full"
+        ]
+      },
+      "rbac": {
+        "roles": [
+          "admin",
+          "operator",
+          "viewer"
+        ],
+        "permissions": [
+          "read",
+          "write",
+          "execute",
+          "admin"
+        ]
+      },
+      "compliance": {
+        "soc2": [
+          "audit-logs",
+          "encryption",
+          "access-control"
+        ],
+        "gdpr": [
+          "data-retention",
+          "consent",
+          "deletion"
+        ]
+      },
+      "category": "security",
+      "status": "generated"
+    },
+    {
+      "vault": {
+        "secrets_engines": [
+          "kv-v2",
+          "transit"
+        ],
+        "auth_methods": [
+          "kubernetes",
+          "approle"
+        ],
+        "policies": [
+          "agent-read",
+          "admin-full"
+        ]
+      },
+      "rbac": {
+        "roles": [
+          "admin",
+          "operator",
+          "viewer"
+        ],
+        "permissions": [
+          "read",
+          "write",
+          "execute",
+          "admin"
+        ]
+      },
+      "compliance": {
+        "soc2": [
+          "audit-logs",
+          "encryption",
+          "access-control"
+        ],
+        "gdpr": [
+          "data-retention",
+          "consent",
+          "deletion"
+        ]
+      },
+      "category": "security",
+      "status": "generated"
+    },
+    {
+      "hpa": {
+        "metrics": [
+          "cpu",
+          "memory",
+          "custom/llm_queue_depth"
+        ],
+        "min_replicas": 2,
+        "max_replicas": 20,
+        "target_utilization": 70
+      },
+      "keda": {
+        "triggers": [
+          "prometheus",
+          "rabbitmq",
+          "redis"
+        ],
+        "cooldown": 300,
+        "polling_interval": 30
+      },
+      "service_mesh": {
+        "platform": "istio",
+        "features": [
+          "traffic-splitting",
+          "circuit-breaker",
+          "retry"
+        ]
+      },
+      "category": "scaling",
+      "status": "generated"
+    },
+    {
+      "hpa": {
+        "metrics": [
+          "cpu",
+          "memory",
+          "custom/llm_queue_depth"
+        ],
+        "min_replicas": 2,
+        "max_replicas": 20,
+        "target_utilization": 70
+      },
+      "keda": {
+        "triggers": [
+          "prometheus",
+          "rabbitmq",
+          "redis"
+        ],
+        "cooldown": 300,
+        "polling_interval": 30
+      },
+      "service_mesh": {
+        "platform": "istio",
+        "features": [
+          "traffic-splitting",
+          "circuit-breaker",
+          "retry"
+        ]
+      },
+      "category": "scaling",
+      "status": "generated"
+    },
+    {
+      "hpa": {
+        "metrics": [
+          "cpu",
+          "memory",
+          "custom/llm_queue_depth"
+        ],
+        "min_replicas": 2,
+        "max_replicas": 20,
+        "target_utilization": 70
+      },
+      "keda": {
+        "triggers": [
+          "prometheus",
+          "rabbitmq",
+          "redis"
+        ],
+        "cooldown": 300,
+        "polling_interval": 30
+      },
+      "service_mesh": {
+        "platform": "istio",
+        "features": [
+          "traffic-splitting",
+          "circuit-breaker",
+          "retry"
+        ]
+      },
+      "category": "scaling",
+      "status": "generated"
+    },
+    {
+      "hpa": {
+        "metrics": [
+          "cpu",
+          "memory",
+          "custom/llm_queue_depth"
+        ],
+        "min_replicas": 2,
+        "max_replicas": 20,
+        "target_utilization": 70
+      },
+      "keda": {
+        "triggers": [
+          "prometheus",
+          "rabbitmq",
+          "redis"
+        ],
+        "cooldown": 300,
+        "polling_interval": 30
+      },
+      "service_mesh": {
+        "platform": "istio",
+        "features": [
+          "traffic-splitting",
+          "circuit-breaker",
+          "retry"
+        ]
+      },
+      "category": "scaling",
+      "status": "generated"
+    }
+  ],
+  "results": [
+    {
+      "topic": "Docker for LLM applications: multi-stage builds, GPU support, optimization",
+      "category": "container",
+      "sources": 8,
+      "findings": [
+        "[exa] Deploying LLM APIs on GPU Server with Docker - ServerMania",
+        "[exa] Reduce Docker Size for AI-LLM Applications? (from 7GB to 2GB)"
+      ],
+      "config": {
+        "dockerfile": {
+          "base_image": "python:3.11-slim",
+          "multi_stage": true,
+          "gpu_support": "nvidia/cuda:12.1-runtime",
+          "optimizations": [
+            "--no-cache-dir",
+            "multi-stage build",
+            "non-root user"
+          ]
+        },
+        "docker_compose": {
+          "version": "3.8",
+          "services": [
+            "agent",
+            "redis",
+            "qdrant"
+          ],
+          "networks": [
+            "agent-network"
+          ],
+          "volumes": [
+            "agent-data"
+          ]
+        },
+        "kubernetes": {
+          "deployment": {
+            "replicas": 3,
+            "strategy": "RollingUpdate"
+          },
+          "service": {
+            "type": "ClusterIP",
+            "port": 8000
+          },
+          "ingress": {
+            "class": "nginx",
+            "tls": true
+          }
+        },
+        "category": "container",
+        "status": "generated"
+      },
+      "latency": 15.881025075912476
+    },
+    {
+      "topic": "Docker Compose for agent orchestration: services, networks, volumes",
+      "category": "container",
+      "sources": 8,
+      "findings": [
+        "[exa] Docker brings agent orchestration into your microservices workflow",
+        "[exa] Docker Brings Compose to the AI Agent Era"
+      ],
+      "config": {
+        "dockerfile": {
+          "base_image": "python:3.11-slim",
+          "multi_stage": true,
+          "gpu_support": "nvidia/cuda:12.1-runtime",
+          "optimizations": [
+            "--no-cache-dir",
+            "multi-stage build",
+            "non-root user"
+          ]
+        },
+        "docker_compose": {
+          "version": "3.8",
+          "services": [
+            "agent",
+            "redis",
+            "qdrant"
+          ],
+          "networks": [
+            "agent-network"
+          ],
+          "volumes": [
+            "agent-data"
+          ]
+        },
+        "kubernetes": {
+          "deployment": {
+            "replicas": 3,
+            "strategy": "RollingUpdate"
+          },
+          "service": {
+            "type": "ClusterIP",
+            "port": 8000
+          },
+          "ingress": {
+            "class": "nginx",
+            "tls": true
+          }
+        },
+        "category": "container",
+        "status": "generated"
+      },
+      "latency": 10.815584182739258
+    },
+    {
+      "topic": "Kubernetes deployment: pods, services, ingress for LLM apps",
+      "category": "container",
+      "sources": 8,
+      "findings": [
+        "[exa] Running Self-Hosted LLMs on Kubernetes: A Complete Guide",
+        "[exa] Llama LLM Kubernetes Deployment with NGINX Ingress"
+      ],
+      "config": {
+        "dockerfile": {
+          "base_image": "python:3.11-slim",
+          "multi_stage": true,
+          "gpu_support": "nvidia/cuda:12.1-runtime",
+          "optimizations": [
+            "--no-cache-dir",
+            "multi-stage build",
+            "non-root user"
+          ]
+        },
+        "docker_compose": {
+          "version": "3.8",
+          "services": [
+            "agent",
+            "redis",
+            "qdrant"
+          ],
+          "networks": [
+            "agent-network"
+          ],
+          "volumes": [
+            "agent-data"
+          ]
+        },
+        "kubernetes": {
+          "deployment": {
+            "replicas": 3,
+            "strategy": "RollingUpdate"
+          },
+          "service": {
+            "type": "ClusterIP",
+            "port": 8000
+          },
+          "ingress": {
+            "class": "nginx",
+            "tls": true
+          }
+        },
+        "category": "container",
+        "status": "generated"
+      },
+      "latency": 12.424814462661743
+    },
+    {
+      "topic": "Helm charts for LLM: templating, values, dependencies",
+      "category": "container",
+      "sources": 8,
+      "findings": [
+        "[exa] Helm Charts 101: Templating Your AI Infrastructure Like a ...",
+        "[exa] Charts"
+      ],
+      "config": {
+        "dockerfile": {
+          "base_image": "python:3.11-slim",
+          "multi_stage": true,
+          "gpu_support": "nvidia/cuda:12.1-runtime",
+          "optimizations": [
+            "--no-cache-dir",
+            "multi-stage build",
+            "non-root user"
+          ]
+        },
+        "docker_compose": {
+          "version": "3.8",
+          "services": [
+            "agent",
+            "redis",
+            "qdrant"
+          ],
+          "networks": [
+            "agent-network"
+          ],
+          "volumes": [
+            "agent-data"
+          ]
+        },
+        "kubernetes": {
+          "deployment": {
+            "replicas": 3,
+            "strategy": "RollingUpdate"
+          },
+          "service": {
+            "type": "ClusterIP",
+            "port": 8000
+          },
+          "ingress": {
+            "class": "nginx",
+            "tls": true
+          }
+        },
+        "category": "container",
+        "status": "generated"
+      },
+      "latency": 10.754967212677002
+    },
+    {
+      "topic": "GitHub Actions for LLM: testing, building, deploying agents",
+      "category": "cicd",
+      "sources": 8,
+      "findings": [
+        "[exa] An awesome list of Continuous AI Actions and Frameworks",
+        "[exa] sola-st/ExecutionAgent: LLM agent to automatically set up ..."
+      ],
+      "config": {
+        "github_actions": {
+          "triggers": [
+            "push",
+            "pull_request"
+          ],
+          "jobs": [
+            "test",
+            "build",
+            "deploy"
+          ],
+          "environments": [
+            "staging",
+            "production"
+          ],
+          "secrets": [
+            "API_KEYS",
+            "DOCKER_CREDENTIALS"
+          ]
+        },
+        "stages": [
+          "lint",
+          "test",
+          "build",
+          "push",
+          "deploy"
+        ],
+        "artifacts": [
+          "docker-image",
+          "test-reports",
+          "coverage"
+        ],
+        "category": "cicd",
+        "status": "generated"
+      },
+      "latency": 14.679203748703003
+    },
+    {
+      "topic": "GitLab CI for ML: pipeline stages, artifacts, environments",
+      "category": "cicd",
+      "sources": 8,
+      "findings": [
+        "[exa] Getting Started With CI/CD for Machine Learning Pipelines",
+        "[exa] How To Pass GitLab Artifacts to Another Stage? - GeeksforGeeks"
+      ],
+      "config": {
+        "github_actions": {
+          "triggers": [
+            "push",
+            "pull_request"
+          ],
+          "jobs": [
+            "test",
+            "build",
+            "deploy"
+          ],
+          "environments": [
+            "staging",
+            "production"
+          ],
+          "secrets": [
+            "API_KEYS",
+            "DOCKER_CREDENTIALS"
+          ]
+        },
+        "stages": [
+          "lint",
+          "test",
+          "build",
+          "push",
+          "deploy"
+        ],
+        "artifacts": [
+          "docker-image",
+          "test-reports",
+          "coverage"
+        ],
+        "category": "cicd",
+        "status": "generated"
+      },
+      "latency": 13.926737308502197
+    },
+    {
+      "topic": "ArgoCD for GitOps: declarative agent deployments",
+      "category": "cicd",
+      "sources": 8,
+      "findings": [
+        "[exa] Declarative Setup - Argo CD - Declarative GitOps CD for Kubernetes",
+        "[exa] argoproj/argo-cd: Declarative Continuous Deployment for Kubernetes"
+      ],
+      "config": {
+        "github_actions": {
+          "triggers": [
+            "push",
+            "pull_request"
+          ],
+          "jobs": [
+            "test",
+            "build",
+            "deploy"
+          ],
+          "environments": [
+            "staging",
+            "production"
+          ],
+          "secrets": [
+            "API_KEYS",
+            "DOCKER_CREDENTIALS"
+          ]
+        },
+        "stages": [
+          "lint",
+          "test",
+          "build",
+          "push",
+          "deploy"
+        ],
+        "artifacts": [
+          "docker-image",
+          "test-reports",
+          "coverage"
+        ],
+        "category": "cicd",
+        "status": "generated"
+      },
+      "latency": 13.032209873199463
+    },
+    {
+      "topic": "Tekton pipelines for ML: cloud-native CI/CD",
+      "category": "cicd",
+      "sources": 8,
+      "findings": [
+        "[exa] Automate Models Training: An MLOps Pipeline with Tekton and ...",
+        "[exa] Tekton Orchestrator | ZenML - Bridging the gap between ML & Ops"
+      ],
+      "config": {
+        "github_actions": {
+          "triggers": [
+            "push",
+            "pull_request"
+          ],
+          "jobs": [
+            "test",
+            "build",
+            "deploy"
+          ],
+          "environments": [
+            "staging",
+            "production"
+          ],
+          "secrets": [
+            "API_KEYS",
+            "DOCKER_CREDENTIALS"
+          ]
+        },
+        "stages": [
+          "lint",
+          "test",
+          "build",
+          "push",
+          "deploy"
+        ],
+        "artifacts": [
+          "docker-image",
+          "test-reports",
+          "coverage"
+        ],
+        "category": "cicd",
+        "status": "generated"
+      },
+      "latency": 13.94702672958374
+    },
+    {
+      "topic": "Terraform for LLM infrastructure: AWS, GCP, Azure resources",
+      "category": "infra",
+      "sources": 8,
+      "findings": [
+        "[exa] Automating Multi-Cloud Infrastructure with Terraform - DEV Community",
+        "[exa] Building ML Infrastructure with Terraform | by Alex Gidiotis - Medium"
+      ],
+      "config": {
+        "terraform": {
+          "providers": [
+            "aws",
+            "kubernetes"
+          ],
+          "modules": [
+            "vpc",
+            "eks",
+            "rds",
+            "elasticache"
+          ],
+          "backends": [
+            "s3",
+            "dynamodb-lock"
+          ]
+        },
+        "resources": {
+          "compute": "EKS/GKE/AKS",
+          "database": "RDS/CloudSQL",
+          "cache": "ElastiCache/Memorystore",
+          "storage": "S3/GCS"
+        },
+        "category": "infra",
+        "status": "generated"
+      },
+      "latency": 15.012719631195068
+    },
+    {
+      "topic": "Pulumi for agent infrastructure: TypeScript IaC",
+      "category": "infra",
+      "sources": 8,
+      "findings": [
+        "[exa] Pulumi Agent Skills: Best practices and more for AI coding assistants",
+        "[exa] Intro to Infrastructure as Code with TypeScript - Pulumi"
+      ],
+      "config": {
+        "terraform": {
+          "providers": [
+            "aws",
+            "kubernetes"
+          ],
+          "modules": [
+            "vpc",
+            "eks",
+            "rds",
+            "elasticache"
+          ],
+          "backends": [
+            "s3",
+            "dynamodb-lock"
+          ]
+        },
+        "resources": {
+          "compute": "EKS/GKE/AKS",
+          "database": "RDS/CloudSQL",
+          "cache": "ElastiCache/Memorystore",
+          "storage": "S3/GCS"
+        },
+        "category": "infra",
+        "status": "generated"
+      },
+      "latency": 10.495423078536987
+    },
+    {
+      "topic": "AWS CDK for LLM: Lambda, ECS, SageMaker patterns",
+      "category": "infra",
+      "sources": 8,
+      "findings": [
+        "[exa] GitHub - aws-samples/sample-serverless-llm-on-aws: Three serverless architectures for implementing real-time streaming from Large Language Models (LLMs) on AWS.",
+        "[exa] Deploy generative AI models from Amazon SageMaker JumpStart ..."
+      ],
+      "config": {
+        "terraform": {
+          "providers": [
+            "aws",
+            "kubernetes"
+          ],
+          "modules": [
+            "vpc",
+            "eks",
+            "rds",
+            "elasticache"
+          ],
+          "backends": [
+            "s3",
+            "dynamodb-lock"
+          ]
+        },
+        "resources": {
+          "compute": "EKS/GKE/AKS",
+          "database": "RDS/CloudSQL",
+          "cache": "ElastiCache/Memorystore",
+          "storage": "S3/GCS"
+        },
+        "category": "infra",
+        "status": "generated"
+      },
+      "latency": 12.398423194885254
+    },
+    {
+      "topic": "Serverless Framework for agents: functions, events, resources",
+      "category": "infra",
+      "sources": 8,
+      "findings": [
+        "[exa] Self-Hosting AI Agents on AWS with Serverless Container ...",
+        "[exa] Effectively building AI agents on AWS Serverless | AWS Compute Blog"
+      ],
+      "config": {
+        "terraform": {
+          "providers": [
+            "aws",
+            "kubernetes"
+          ],
+          "modules": [
+            "vpc",
+            "eks",
+            "rds",
+            "elasticache"
+          ],
+          "backends": [
+            "s3",
+            "dynamodb-lock"
+          ]
+        },
+        "resources": {
+          "compute": "EKS/GKE/AKS",
+          "database": "RDS/CloudSQL",
+          "cache": "ElastiCache/Memorystore",
+          "storage": "S3/GCS"
+        },
+        "category": "infra",
+        "status": "generated"
+      },
+      "latency": 10.357681512832642
+    },
+    {
+      "topic": "Prometheus for LLM metrics: custom metrics, alerting rules",
+      "category": "ops",
+      "sources": 8,
+      "findings": [
+        "[exa] Using Metrics-Based Custom Thresholds in Prometheus Alerting ...",
+        "[exa] Prometheus metrics | liteLLM"
+      ],
+      "config": {
+        "prometheus": {
+          "metrics": [
+            "llm_request_duration",
+            "llm_tokens_total",
+            "llm_errors_total"
+          ],
+          "alerts": [
+            "HighLatency",
+            "ErrorRate",
+            "TokenBudget"
+          ]
+        },
+        "grafana": {
+          "dashboards": [
+            "agent-overview",
+            "cost-tracking",
+            "latency-analysis"
+          ],
+          "datasources": [
+            "prometheus",
+            "loki",
+            "elasticsearch"
+          ]
+        },
+        "logging": {
+          "format": "json",
+          "fields": [
+            "timestamp",
+            "level",
+            "trace_id",
+            "span_id",
+            "message"
+          ],
+          "retention": "30d"
+        },
+        "category": "ops",
+        "status": "generated"
+      },
+      "latency": 15.861797332763672
+    },
+    {
+      "topic": "Grafana dashboards for agents: latency, tokens, costs",
+      "category": "ops",
+      "sources": 8,
+      "findings": [
+        "[exa] Agent Framework | Grafana Labs",
+        "[exa] FinOps For Agentic: How To Capture Token Usage Cost Across LLMs"
+      ],
+      "config": {
+        "prometheus": {
+          "metrics": [
+            "llm_request_duration",
+            "llm_tokens_total",
+            "llm_errors_total"
+          ],
+          "alerts": [
+            "HighLatency",
+            "ErrorRate",
+            "TokenBudget"
+          ]
+        },
+        "grafana": {
+          "dashboards": [
+            "agent-overview",
+            "cost-tracking",
+            "latency-analysis"
+          ],
+          "datasources": [
+            "prometheus",
+            "loki",
+            "elasticsearch"
+          ]
+        },
+        "logging": {
+          "format": "json",
+          "fields": [
+            "timestamp",
+            "level",
+            "trace_id",
+            "span_id",
+            "message"
+          ],
+          "retention": "30d"
+        },
+        "category": "ops",
+        "status": "generated"
+      },
+      "latency": 16.16960906982422
+    },
+    {
+      "topic": "ELK stack for LLM logs: Elasticsearch, Logstash, Kibana",
+      "category": "ops",
+      "sources": 8,
+      "findings": [
+        "[exa] LLM Observability | Elastic Docs",
+        "[exa] Elastic Managed LLM | Kibana Guide [8.19]"
+      ],
+      "config": {
+        "prometheus": {
+          "metrics": [
+            "llm_request_duration",
+            "llm_tokens_total",
+            "llm_errors_total"
+          ],
+          "alerts": [
+            "HighLatency",
+            "ErrorRate",
+            "TokenBudget"
+          ]
+        },
+        "grafana": {
+          "dashboards": [
+            "agent-overview",
+            "cost-tracking",
+            "latency-analysis"
+          ],
+          "datasources": [
+            "prometheus",
+            "loki",
+            "elasticsearch"
+          ]
+        },
+        "logging": {
+          "format": "json",
+          "fields": [
+            "timestamp",
+            "level",
+            "trace_id",
+            "span_id",
+            "message"
+          ],
+          "retention": "30d"
+        },
+        "category": "ops",
+        "status": "generated"
+      },
+      "latency": 13.866777896881104
+    },
+    {
+      "topic": "Datadog for LLM observability: APM, logs, metrics integration",
+      "category": "ops",
+      "sources": 8,
+      "findings": [
+        "[exa] LLM Observability - Datadog",
+        "[exa] Datadog LLM Observability Released - APMdigest"
+      ],
+      "config": {
+        "prometheus": {
+          "metrics": [
+            "llm_request_duration",
+            "llm_tokens_total",
+            "llm_errors_total"
+          ],
+          "alerts": [
+            "HighLatency",
+            "ErrorRate",
+            "TokenBudget"
+          ]
+        },
+        "grafana": {
+          "dashboards": [
+            "agent-overview",
+            "cost-tracking",
+            "latency-analysis"
+          ],
+          "datasources": [
+            "prometheus",
+            "loki",
+            "elasticsearch"
+          ]
+        },
+        "logging": {
+          "format": "json",
+          "fields": [
+            "timestamp",
+            "level",
+            "trace_id",
+            "span_id",
+            "message"
+          ],
+          "retention": "30d"
+        },
+        "category": "ops",
+        "status": "generated"
+      },
+      "latency": 13.621826887130737
+    },
+    {
+      "topic": "Vault for LLM secrets: API keys, credentials, rotation",
+      "category": "security",
+      "sources": 8,
+      "findings": [
+        "[exa] Overview | Javelin Documentation",
+        "[exa] Crate  llm_ orchestrator_ secrets \u00a0 Copy item path"
+      ],
+      "config": {
+        "vault": {
+          "secrets_engines": [
+            "kv-v2",
+            "transit"
+          ],
+          "auth_methods": [
+            "kubernetes",
+            "approle"
+          ],
+          "policies": [
+            "agent-read",
+            "admin-full"
+          ]
+        },
+        "rbac": {
+          "roles": [
+            "admin",
+            "operator",
+            "viewer"
+          ],
+          "permissions": [
+            "read",
+            "write",
+            "execute",
+            "admin"
+          ]
+        },
+        "compliance": {
+          "soc2": [
+            "audit-logs",
+            "encryption",
+            "access-control"
+          ],
+          "gdpr": [
+            "data-retention",
+            "consent",
+            "deletion"
+          ]
+        },
+        "category": "security",
+        "status": "generated"
+      },
+      "latency": 17.00274658203125
+    },
+    {
+      "topic": "RBAC for agent APIs: authentication, authorization, policies",
+      "category": "security",
+      "sources": 8,
+      "findings": [
+        "[exa] RBAC for AI Agents - Tony Kipkemboi",
+        "[exa] AI agent auth: use cases and identity needs"
+      ],
+      "config": {
+        "vault": {
+          "secrets_engines": [
+            "kv-v2",
+            "transit"
+          ],
+          "auth_methods": [
+            "kubernetes",
+            "approle"
+          ],
+          "policies": [
+            "agent-read",
+            "admin-full"
+          ]
+        },
+        "rbac": {
+          "roles": [
+            "admin",
+            "operator",
+            "viewer"
+          ],
+          "permissions": [
+            "read",
+            "write",
+            "execute",
+            "admin"
+          ]
+        },
+        "compliance": {
+          "soc2": [
+            "audit-logs",
+            "encryption",
+            "access-control"
+          ],
+          "gdpr": [
+            "data-retention",
+            "consent",
+            "deletion"
+          ]
+        },
+        "category": "security",
+        "status": "generated"
+      },
+      "latency": 12.087230443954468
+    },
+    {
+      "topic": "SOC2 compliance for LLM: audit logs, data handling, encryption",
+      "category": "security",
+      "sources": 8,
+      "findings": [
+        "[exa] SOC 2 LLM Security Guide | LaikaTest",
+        "[exa] Security & Compliance | HIPAA, SOC 2, AI & LLM Security - Sapt"
+      ],
+      "config": {
+        "vault": {
+          "secrets_engines": [
+            "kv-v2",
+            "transit"
+          ],
+          "auth_methods": [
+            "kubernetes",
+            "approle"
+          ],
+          "policies": [
+            "agent-read",
+            "admin-full"
+          ]
+        },
+        "rbac": {
+          "roles": [
+            "admin",
+            "operator",
+            "viewer"
+          ],
+          "permissions": [
+            "read",
+            "write",
+            "execute",
+            "admin"
+          ]
+        },
+        "compliance": {
+          "soc2": [
+            "audit-logs",
+            "encryption",
+            "access-control"
+          ],
+          "gdpr": [
+            "data-retention",
+            "consent",
+            "deletion"
+          ]
+        },
+        "category": "security",
+        "status": "generated"
+      },
+      "latency": 10.295474290847778
+    },
+    {
+      "topic": "GDPR for AI: data retention, right to deletion, consent",
+      "category": "security",
+      "sources": 8,
+      "findings": [
+        "[exa] How do we ensure individual rights in our AI systems?",
+        "[exa] Legal framework"
+      ],
+      "config": {
+        "vault": {
+          "secrets_engines": [
+            "kv-v2",
+            "transit"
+          ],
+          "auth_methods": [
+            "kubernetes",
+            "approle"
+          ],
+          "policies": [
+            "agent-read",
+            "admin-full"
+          ]
+        },
+        "rbac": {
+          "roles": [
+            "admin",
+            "operator",
+            "viewer"
+          ],
+          "permissions": [
+            "read",
+            "write",
+            "execute",
+            "admin"
+          ]
+        },
+        "compliance": {
+          "soc2": [
+            "audit-logs",
+            "encryption",
+            "access-control"
+          ],
+          "gdpr": [
+            "data-retention",
+            "consent",
+            "deletion"
+          ]
+        },
+        "category": "security",
+        "status": "generated"
+      },
+      "latency": 12.73536992073059
+    },
+    {
+      "topic": "Horizontal pod autoscaler for LLM: CPU, memory, custom metrics",
+      "category": "scaling",
+      "sources": 8,
+      "findings": [
+        "[exa] Our private LLM is running slowly when prompting. We have ...",
+        "[exa] Configure autoscaling for LLM workloads on GPUs with Google Kubernetes Engine (GKE)"
+      ],
+      "config": {
+        "hpa": {
+          "metrics": [
+            "cpu",
+            "memory",
+            "custom/llm_queue_depth"
+          ],
+          "min_replicas": 2,
+          "max_replicas": 20,
+          "target_utilization": 70
+        },
+        "keda": {
+          "triggers": [
+            "prometheus",
+            "rabbitmq",
+            "redis"
+          ],
+          "cooldown": 300,
+          "polling_interval": 30
+        },
+        "service_mesh": {
+          "platform": "istio",
+          "features": [
+            "traffic-splitting",
+            "circuit-breaker",
+            "retry"
+          ]
+        },
+        "category": "scaling",
+        "status": "generated"
+      },
+      "latency": 11.717222213745117
+    },
+    {
+      "topic": "KEDA for event-driven scaling: queue depth, HTTP requests",
+      "category": "scaling",
+      "sources": 8,
+      "findings": [
+        "[exa] Scale Kubernetes workloads with KEDA's event-driven automation",
+        "[exa] Event-Driven Autoscaling with KEDA and RabbitMQ: A Practical Guide"
+      ],
+      "config": {
+        "hpa": {
+          "metrics": [
+            "cpu",
+            "memory",
+            "custom/llm_queue_depth"
+          ],
+          "min_replicas": 2,
+          "max_replicas": 20,
+          "target_utilization": 70
+        },
+        "keda": {
+          "triggers": [
+            "prometheus",
+            "rabbitmq",
+            "redis"
+          ],
+          "cooldown": 300,
+          "polling_interval": 30
+        },
+        "service_mesh": {
+          "platform": "istio",
+          "features": [
+            "traffic-splitting",
+            "circuit-breaker",
+            "retry"
+          ]
+        },
+        "category": "scaling",
+        "status": "generated"
+      },
+      "latency": 17.173134326934814
+    },
+    {
+      "topic": "Istio service mesh for agents: traffic management, observability",
+      "category": "scaling",
+      "sources": 8,
+      "findings": [
+        "[exa] Traffic Management",
+        "[exa] Observability"
+      ],
+      "config": {
+        "hpa": {
+          "metrics": [
+            "cpu",
+            "memory",
+            "custom/llm_queue_depth"
+          ],
+          "min_replicas": 2,
+          "max_replicas": 20,
+          "target_utilization": 70
+        },
+        "keda": {
+          "triggers": [
+            "prometheus",
+            "rabbitmq",
+            "redis"
+          ],
+          "cooldown": 300,
+          "polling_interval": 30
+        },
+        "service_mesh": {
+          "platform": "istio",
+          "features": [
+            "traffic-splitting",
+            "circuit-breaker",
+            "retry"
+          ]
+        },
+        "category": "scaling",
+        "status": "generated"
+      },
+      "latency": 14.099194288253784
+    },
+    {
+      "topic": "Ray Serve for model serving: batching, autoscaling, multi-model",
+      "category": "scaling",
+      "sources": 8,
+      "findings": [
+        "[exa] Getting Started with Ray Serve for High\u2011Performance Model Serving",
+        "[exa] Ray Serve: Advancing Flexibility with Async Inference, Custom ..."
+      ],
+      "config": {
+        "hpa": {
+          "metrics": [
+            "cpu",
+            "memory",
+            "custom/llm_queue_depth"
+          ],
+          "min_replicas": 2,
+          "max_replicas": 20,
+          "target_utilization": 70
+        },
+        "keda": {
+          "triggers": [
+            "prometheus",
+            "rabbitmq",
+            "redis"
+          ],
+          "cooldown": 300,
+          "polling_interval": 30
+        },
+        "service_mesh": {
+          "platform": "istio",
+          "features": [
+            "traffic-splitting",
+            "circuit-breaker",
+            "retry"
+          ]
+        },
+        "category": "scaling",
+        "status": "generated"
+      },
+      "latency": 12.845216989517212
+    }
+  ]
+}

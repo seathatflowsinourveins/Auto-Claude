@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:27:43.651712",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 98
+  },
+  "results": [
+    {
+      "topic": "PDF parsing: PyMuPDF, pdfplumber, layout preservation",
+      "area": "documents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PyMuPDF Layout #",
+        "[exa] PyMuPDF Layout",
+        "[exa-h] is a lightweight layout analysis extension for> PyMuPDF\nthat turns PDFs into clean, structured data with minimal setup. "
+      ],
+      "latency": 8.140994548797607
+    },
+    {
+      "topic": "Document layout analysis: Unstructured, DocTR, table extraction",
+      "area": "documents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > This technical report introduces Docling, an easy to use, self-contained, MIT-licensed open-source package for PDF doc"
+      ],
+      "latency": 12.899083852767944
+    },
+    {
+      "topic": "OCR pipelines: Tesseract, PaddleOCR, cloud OCR APIs",
+      "area": "documents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Home - PaddleOCR Documentation",
+        "[exa] General OCR Pipeline Usage Tutorial \u00b6",
+        "[exa-h] Since its initial release, PaddleOCR has gained widespread acclaim across academia, industry, and research communities, "
+      ],
+      "latency": 11.478880643844604
+    },
+    {
+      "topic": "Multi-format ingestion: DOCX, PPTX, HTML, markdown",
+      "area": "documents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pandoc - index",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] (\u2190 = conversion from; \u2192= conversion to; \u2194\ufe0e= conversion from\nand to)\nLightweight markup formats\n\u2194\ufe0e[Markdown] (including[C"
+      ],
+      "latency": 12.281625509262085
+    },
+    {
+      "topic": "Semantic chunking: sentence boundaries, topic segmentation",
+      "area": "chunking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Text tiling: A quantitative approach to discourse segmentation",
+        "[exa-h] TextTiling makes use of patterns of lexical co-occurrence and distribution. The \nalgorithm has three parts: tokenization"
+      ],
+      "latency": 8.531359434127808
+    },
+    {
+      "topic": "Recursive character splitting: overlap, separators",
+      "area": "chunking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] LangChain overview",
+        "[exa-h] LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool \u2014so you"
+      ],
+      "latency": 7.654814004898071
+    },
+    {
+      "topic": "Code-aware chunking: AST-based, function boundaries",
+      "area": "chunking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Code Chunker",
+        "[exa-h] [] \nAST-aware code chunking for semantic search and RAG pipelines.\nUses tree-sitter to split source code at semantic bou"
+      ],
+      "latency": 10.194711923599243
+    },
+    {
+      "topic": "Agentic chunking: LLM-guided document segmentation",
+      "area": "chunking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is agentic chunking?",
+        "[exa] Page Not Found",
+        "[exa-h] Agentic chunking is the use of[artificial intelligence] (AI) to segment lengthy text inputs into smaller, semantically c"
+      ],
+      "latency": 8.114238977432251
+    },
+    {
+      "topic": "Text cleaning: normalization, deduplication, noise removal",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Text and Data Mining Guide: Module 2: Data Preparation & Cleaning",
+        "[exa-h] Techniques such as text normalization, tokenization, stemming, lemmatization, stopword removal, spell checking, regular "
+      ],
+      "latency": 11.889137268066406
+    },
+    {
+      "topic": "Data validation: schema enforcement, type checking",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build more. Break less. Empower others.",
+        "[exa] Welcome",
+        "[exa-h] Simplify your validation logic to reduce your code\u2019s complexity and save time on development. Define constraints for you"
+      ],
+      "latency": 7.879265785217285
+    },
+    {
+      "topic": "Quality metrics: completeness, consistency, accuracy",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What are data quality dimensions?",
+        "[exa] ",
+        "[exa-h] Data quality is often evaluated using quantitative measures that indicate how well data meets defined standards. Common "
+      ],
+      "latency": 8.59244418144226
+    },
+    {
+      "topic": "PII detection and redaction: spaCy, Presidio, regex patterns",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Customizing the PII analysis process in Microsoft Presidio \u00b6",
+        "[exa] Presidio : Data Protection and De-identification SDK",
+        "[exa-h] As its internal NLP engine, Presidio supports both spaCy and Stanza. Make sure you download the required models from spa"
+      ],
+      "latency": 15.94096827507019
+    },
+    {
+      "topic": "Batch ingestion: parallel processing, progress tracking",
+      "area": "ingestion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Performing object operations in bulk with Batch Operations",
+        "[exa] Storage batch operations \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] # Performing object operations in bulk with Batch Operations\nYou can use S3 Batch Operations to perform large-scale batc"
+      ],
+      "latency": 7.4935243129730225
+    },
+    {
+      "topic": "Incremental updates: change detection, delta processing",
+      "area": "ingestion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Change data feed",
+        "[exa] Document Updates",
+        "[exa-h] Change Data Feed (CDF) feature allows Delta tables to track row-level changes between versions of a Delta table. When en"
+      ],
+      "latency": 9.060645818710327
+    },
+    {
+      "topic": "Real-time ingestion: streaming, webhooks, file watchers",
+      "area": "ingestion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Snowpipe Streaming \u00b6",
+        "[exa] Snowpipe Streaming \u00b6",
+        "[exa-h] ## Value of Snowpipe Streaming[\u00b6] \n* Real-time data availability: Ingests data as it arrives, unlike traditional batch l"
+      ],
+      "latency": 11.127902746200562
+    },
+    {
+      "topic": "Multi-source sync: S3, GCS, databases, APIs",
+      "area": "ingestion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Integrations",
+        "[exa] Data Sources",
+        "[exa-h] CloudQuery\u2019s modular architecture allows you to connect hundreds of data sources to any destination of your choice. This"
+      ],
+      "latency": 12.156771183013916
+    },
+    {
+      "topic": "Metadata extraction: dates, authors, entities, keywords",
+      "area": "metadata",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Analyzing Entities \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] * If you find any other issues while building, please email the[dev@tika.apache.org] list.\n## About\nThe Apache Tika tool"
+      ],
+      "latency": 10.750682353973389
+    },
+    {
+      "topic": "Auto-tagging: topic classification, sentiment analysis",
+      "area": "metadata",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Features and capabilities of AutoML Natural Language",
+        "[exa] Text Classification",
+        "[exa-h] AutoML Natural Language uses machine learning to analyze the structure and meaning of\ndocuments. You train a custom mach"
+      ],
+      "latency": 12.24840784072876
+    },
+    {
+      "topic": "Link extraction: citations, references, cross-document",
+      "area": "metadata",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] of referential links between citing and cited pa\u0002pers. On a test set of English-language scien\u0002tific documents, we show "
+      ],
+      "latency": 10.795380115509033
+    },
+    {
+      "topic": "Embedding enrichment: multi-vector, late chunking",
+      "area": "metadata",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Late Chunking on long documents",
+        "[exa-h] created in this way can lose contextual information from surrounding chunks, resulting in sub-optimal representations. I"
+      ],
+      "latency": 9.375227212905884
+    }
+  ]
+}

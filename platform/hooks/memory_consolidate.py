@@ -13,7 +13,7 @@ Tracks conversation turns and triggers consolidation at appropriate intervals.
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import httpx
@@ -123,7 +123,7 @@ def main():
                 log_file = Path.home() / ".claude" / "v10" / "logs" / "consolidation.log"
                 log_file.parent.mkdir(parents=True, exist_ok=True)
                 with log_file.open("a") as f:
-                    f.write(f"{datetime.utcnow().isoformat()} - Turn {turn_count} - Agent {agent_id}\n")
+                    f.write(f"{datetime.now(timezone.utc).isoformat()} - Turn {turn_count} - Agent {agent_id}\n")
     
     print(json.dumps(result))
 

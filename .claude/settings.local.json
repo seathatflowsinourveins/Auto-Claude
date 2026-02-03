@@ -5,7 +5,11 @@
     "github",
     "filesystem",
     "memory",
-    "sequential-thinking"
+    "sequential-thinking",
+    "context7",
+    "fetch",
+    "exa",
+    "firecrawl"
   ],
   "permissions": {
     "allow": [

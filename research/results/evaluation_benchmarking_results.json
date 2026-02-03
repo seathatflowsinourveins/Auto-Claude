@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:55:00.308442",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 82
+  },
+  "results": [
+    {
+      "topic": "RAGAS: RAG evaluation metrics, faithfulness, relevancy, context recall",
+      "area": "rag_eval",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > We introduce Ragas (Retrieval Augmented Generation Assessment), a framework for reference-free evaluation of Retrieval"
+      ],
+      "latency": 9.717636346817017
+    },
+    {
+      "topic": "DeepEval: LLM evaluation framework, metrics, test cases",
+      "area": "rag_eval",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] The LLM Evaluation Framework",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] [\nUnit-Testing for LLMs![] \nNative integration with Pytest, that fits right in your CI workflow.\n] [\nLLM-as-a-Judge Metr"
+      ],
+      "latency": 7.6833696365356445
+    },
+    {
+      "topic": "TruLens: feedback functions, groundedness, answer relevance",
+      "area": "rag_eval",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] \u2614 Feedback Functions \u00b6",
+        "[exa] Evaluation using Feedback Functions \u00b6",
+        "[exa-h] style of model such as groundedness NLI, sentiment, language match, moderation\nand more.\n## Large Language Model Evaluat"
+      ],
+      "latency": 4.38558554649353
+    },
+    {
+      "topic": "LangSmith evaluation: datasets, evaluators, experiments",
+      "area": "rag_eval",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Evaluation concepts",
+        "[exa] LangSmith Evaluation",
+        "[exa-h] Evaluation approaches\n] \n##### Datasets\n* Create a dataset\n* [\nManage datasets\n] \n* [\nCustom output rendering\n] \n##### S"
+      ],
+      "latency": 3.7103402614593506
+    },
+    {
+      "topic": "MMLU benchmark: multitask language understanding evaluation",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] > In the age of large-scale language models, benchmarks like the Massive Multitask Language Understanding (MMLU) have be"
+      ],
+      "latency": 3.438929319381714
+    },
+    {
+      "topic": "HumanEval: code generation evaluation, pass@k metrics",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] {'pass@1': 0.4999999999999999}`\n```\nBecause there is no unbiased way of estimating pass@k when there are fewer\nsamples t"
+      ],
+      "latency": 4.62634801864624
+    },
+    {
+      "topic": "MT-Bench: multi-turn conversation evaluation, GPT-4 judge",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] MT-Eval: A Multi-Turn Capabilities Evaluation Benchmark for Large\n  Language Models",
+        "[exa-h] designed to evaluate multi-turn conversational abilities. By analyzing human-LLM conversations, we categorize interactio"
+      ],
+      "latency": 3.29421329498291
+    },
+    {
+      "topic": "HELM benchmark: holistic evaluation of language models",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A reproducible and transparent framework for evaluating foundation models.",
+        "[exa] Holistic Evaluation of Language Models",
+        "[exa-h] Capabilities \u2192A new leaderboard for evaluating general capabilities of language models\n] \n[\nAudio \u2192Holistic Evaluation o"
+      ],
+      "latency": 6.821930170059204
+    },
+    {
+      "topic": "Semantic similarity metrics: BERT score, embedding cosine",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] BERTScore : Evaluating Text Generation with BERT",
+        "[exa] BERTScore: Evaluating Text Generation with BERT - ADS",
+        "[exa-h] In this paper, we introduceBERTScore, a language generation evaluation metric based on pre-trainedBERTcontextual embeddi"
+      ],
+      "latency": 3.5332682132720947
+    },
+    {
+      "topic": "Factual consistency: NLI-based verification, claim extraction",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > A common strategy for fact-checking long-form content generated by Large Language Models (LLMs) is extracting simple c"
+      ],
+      "latency": 5.666170835494995
+    },
+    {
+      "topic": "Hallucination detection: cross-reference validation, citation checking",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] HaluCheck: Explainable and verifiable automation for detecting hallucinations in LLM responses",
+        "[exa] Knowledge-Centric Hallucination Detection - ACL Anthology",
+        "[exa-h] * T.Gao*et al.*### Enabling large language models to generate text with citations\n(2023)\n* R.H\u00e4rle*et al.*### SCAR: Spar"
+      ],
+      "latency": 3.4580702781677246
+    },
+    {
+      "topic": "Response quality: coherence, fluency, helpfulness scoring",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] U1: I like animals, especially dogs. How about you?\nU2: Haha, I like cats more.\nI like cats more too and I work in a pet"
+      ],
+      "latency": 4.142442464828491
+    },
+    {
+      "topic": "LLM unit testing: deterministic tests, snapshot testing",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unit testing",
+        "[exa] Test - Docs by LangChain",
+        "[exa-h] Because for the most part they're nothing new, we have pretty well established tools and patterns for writing and runnin"
+      ],
+      "latency": 4.707411289215088
+    },
+    {
+      "topic": "Regression testing for LLMs: golden datasets, drift detection",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Watch the language: A tutorial on regression testing for LLMs",
+        "[exa] LLM regression testing workflow step by step: code tutorial",
+        "[exa-h] ![Golden dataset] \nThis set of reference inputs-outputs is sometimes called the \u201c**golden dataset**.\u201d It\u2019s truly worth i"
+      ],
+      "latency": 7.037680625915527
+    },
+    {
+      "topic": "A/B testing for prompts: statistical significance, effect size",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] size calculationmethods for correlated data, as well as absolute vs. rel\u0002ative treatment effects, both ubiquitous in onl"
+      ],
+      "latency": 4.288163423538208
+    },
+    {
+      "topic": "Continuous evaluation: CI/CD integration, automated scoring",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CI/CD  Integration \u00b6",
+        "[exa] CI/CD pipelines with Score",
+        "[exa-h] RunningScorecardonce tells you where you are. Running it continuously tells you when you slip. This guide covers automat"
+      ],
+      "latency": 5.923739433288574
+    },
+    {
+      "topic": "Human preference collection: Likert scales, pairwise comparison",
+      "area": "human",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pairwise comparison (psychology)",
+        "[exa] A practical guide and software for analysing pairwise comparison experiments - ADS",
+        "[exa-h] If an individual or organization expresses a preference between two mutually distinct alternatives, this preference can "
+      ],
+      "latency": 4.754183530807495
+    },
+    {
+      "topic": "Inter-annotator agreement: Cohen's kappa, Fleiss' kappa",
+      "area": "human",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Interrater reliability: the kappa statistic",
+        "[exa] Cohen's kappa",
+        "[exa-h] There are a number of statistics that have been used to measure interrater and intrarater reliability. A partial list in"
+      ],
+      "latency": 3.5811569690704346
+    },
+    {
+      "topic": "Crowdsourcing evaluation: quality control, spam detection",
+      "area": "human",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] raykar12a.dvi",
+        "[exa-h] derives a quality model for crowdsourcing tasks, identifies the methods and techniques that can be used to\nassess the at"
+      ],
+      "latency": 7.93235445022583
+    },
+    {
+      "topic": "Expert evaluation protocols: rubrics, calibration sessions",
+      "area": "human",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Adapted from the Writing Calibration Protocol \u2013 Rhode Island Department of Education\nP a g e | 5\nCalibration Protocol2 \n"
+      ],
+      "latency": 9.273961067199707
+    }
+  ]
+}

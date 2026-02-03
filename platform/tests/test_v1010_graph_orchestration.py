@@ -783,10 +783,13 @@ class TestStatefulSession:
 
     def test_is_stale(self):
         """Test stale session detection."""
+        from datetime import timedelta
         session = StatefulSession(
             session_id="sess_1",
             server_name="server1"
         )
+        # Set last_activity to the past to guarantee staleness
+        session.last_activity = datetime.now(timezone.utc) - timedelta(seconds=5)
         assert session.is_stale(max_idle_seconds=0.0) is True
         assert session.is_stale(max_idle_seconds=1000.0) is False
 

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:34:28.814946",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 92
+  },
+  "results": [
+    {
+      "topic": "MMLU: massive multitask language understanding",
+      "area": "language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Holistic Evaluation of Language Models (HELM)",
+        "[exa] MMLU - Wikipedia",
+        "[exa-h] \\[ [MMLU (Massive Multitask Language Understanding)] \\| [subject: abstract\\_algebra] \\| [subject: college\\_chemistry] \\|"
+      ],
+      "latency": 8.680389404296875
+    },
+    {
+      "topic": "HumanEval: code generation benchmark",
+      "area": "language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Datasets: \n\t\t\t\t \n\t\t\t \n\n\t\t\t\n\n \n\t \n\t \n\t\t\n\n openai \n\t \n\t\t / \n\n openai_humaneval \n\t \n\t\t \n\t\t\t \n\n\t\t\n\t\t like \n\t 364 \n\n \n\t \n\t\t\t Follow \n\t\t \n\t\t OpenAI \n\t 30.8k",
+        "[exa-h] [setup.py] \n|\n[setup.py] \n|\n|\n|\nView all files\n|\n## Repository files navigation\n# HumanEval: Hand-Written Evaluation Set"
+      ],
+      "latency": 5.661412954330444
+    },
+    {
+      "topic": "GPQA: graduate-level science",
+      "area": "language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] GPQA: A Graduate-Level Google-Proof Q&amp;A Benchmark : Faculty Digital Archive : NYU Libraries",
+        "[exa-h] > We present GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in biology, physics,"
+      ],
+      "latency": 6.454340696334839
+    },
+    {
+      "topic": "ARC-AGI: abstraction reasoning",
+      "area": "language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] System\u00a02 Reasoning for Human-AI Alignment: \n Generality and Adaptivity via ARC-AGI",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] In contrast, System\u00a02 reasoning is slow, deliberate, and analytical.\nIt is activated when humans face unfamiliar challen"
+      ],
+      "latency": 9.090284585952759
+    },
+    {
+      "topic": "GSM8K: grade school math",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 8th Grade Math Resources | Education.com",
+        "[exa] Preschool - 8th Grade Math Educational Resources",
+        "[exa-h] Strengthen essential math skills with Education.com\u2019s eighth grade resources, featuring over 250 printable worksheets, g"
+      ],
+      "latency": 8.557774782180786
+    },
+    {
+      "topic": "MATH: competition mathematics",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Papers & Solutions",
+        "[exa] Contests",
+        "[exa-h] Select...Andrew Jobbings Senior KangarooBritish Mathematical Olympiad Round 1British Mathematical Olympiad Round 2Bundle"
+      ],
+      "latency": 5.772401571273804
+    },
+    {
+      "topic": "BBH: Big-Bench Hard",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] BIG-Bench Extra Hard - ACL Anthology",
+        "[exa-h] [Submitted on 26 Feb 2025 ([v1]), last revised 6 May 2025 (this version, v2)]\n# Title:BIG-Bench Extra Hard"
+      ],
+      "latency": 4.295735597610474
+    },
+    {
+      "topic": "HellaSwag: commonsense reasoning",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] HellaSwag: Can a Machine Really Finish Your Sentence? - ACL Anthology",
+        "[exa] ",
+        "[exa-h] <<abstract>>Recent work by Zellers et al. (2018) introduced a new task of commonsense natural language inference: given "
+      ],
+      "latency": 3.261151075363159
+    },
+    {
+      "topic": "TruthfulQA: truthfulness evaluation",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > We propose a benchmark to measure whether a language model is truthful in generating answers to questions. The benchma"
+      ],
+      "latency": 3.761948585510254
+    },
+    {
+      "topic": "MACHIAVELLI: safety scenarios",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] FOURTH BOOK",
+        "[exa] ",
+        "[exa-h] I do not believe it is out of order to add to this discussion those things\nthat happen after a battle, especially as the"
+      ],
+      "latency": 6.019013404846191
+    },
+    {
+      "topic": "HarmBench: harmful behavior",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] HarmBench: Standard for LLM Safety Auditing",
+        "[exa] HarmBench: A Standardized Evaluation Framework for\n Automated Red Teaming and Robust Refusal",
+        "[exa-h] We can share your product or service with 250K+ researchers, engineers, and scientists everymonth.\n[Sponsorship Info] \n#"
+      ],
+      "latency": 5.819814443588257
+    },
+    {
+      "topic": "Anthropic evals: safety evaluations",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] This system card provides a detailed assessment of the model\u2019s capabilities. It then\ndescribes a wide range of safety ev"
+      ],
+      "latency": 3.9274892807006836
+    },
+    {
+      "topic": "LMSYS Chatbot Arena: human preference",
+      "area": "leaderboards",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] LMSYS - Chatbot Arena Human Preference Predictions | Kaggle",
+        "[exa] Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference",
+        "[exa-h] LMSYS - Chatbot Arena Human Preference Predictions | Kaggle\nKaggle uses cookies from Google to deliver and enhance the q"
+      ],
+      "latency": 8.015625715255737
+    },
+    {
+      "topic": "Open LLM Leaderboard: HuggingFace",
+      "area": "leaderboards",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Open LLM Leaderboard",
+        "[exa] Leaderboards",
+        "[exa-h] In this space you will find the dataset with detailed results and queries for the models on the leaderboard.\nScore resul"
+      ],
+      "latency": 8.043896198272705
+    },
+    {
+      "topic": "AlpacaEval: instruction following",
+      "area": "leaderboards",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] AlpacaEval\n             \n                 \n            Leaderboard",
+        "[exa-h] ## Repository files navigation\n\n# [AlpacaEval] : An Automatic Evaluator for Instruction-following Language Models"
+      ],
+      "latency": 6.274709224700928
+    },
+    {
+      "topic": "MT-Bench: multi-turn conversation",
+      "area": "leaderboards",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] MT-Bench-101: A Fine-Grained Benchmark for Evaluating Large Language Models in Multi-Turn Dialogues - ADS",
+        "[exa-h] [Submitted on 22 Feb 2024 ([v1]), last revised 5 Nov 2024 (this version, v3)]\n# Title:MT-Bench-101: A Fine-Grained Bench"
+      ],
+      "latency": 4.100594997406006
+    },
+    {
+      "topic": "Benchmark contamination: data leakage",
+      "area": "methodology",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Abstract:Dataset contamination, where evaluation datasets overlap with pre-training corpora, inflates performance metr"
+      ],
+      "latency": 9.634615421295166
+    },
+    {
+      "topic": "Evaluation protocols: standardization",
+      "area": "methodology",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Example Protocol",
+        "[exa-h] same tasks in different ways, leading to claims about which models perform best not being reproducible. We propose OLMES"
+      ],
+      "latency": 5.769320487976074
+    },
+    {
+      "topic": "Human evaluation: preference data",
+      "area": "methodology",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Evaluating Human Pairwise Preference Judgments\n\n Open Access",
+        "[exa] ",
+        "[exa-h] Human evaluation plays an important role in NLP, often in the form of preference judgments. Although there has been some"
+      ],
+      "latency": 3.9277312755584717
+    },
+    {
+      "topic": "Automated evaluation: LLM-as-judge",
+      "area": "methodology",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > LLM-based judges have emerged as a scalable alternative to human evaluation and are increasingly used to assess, compa"
+      ],
+      "latency": 6.844797372817993
+    }
+  ]
+}

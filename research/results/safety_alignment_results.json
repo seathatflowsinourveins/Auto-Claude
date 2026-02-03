@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:54:37.511176",
+  "stats": {
+    "sources": 200,
+    "vectors": 170,
+    "findings": 84
+  },
+  "results": [
+    {
+      "topic": "NeMo Guardrails: programmable safety rails for LLMs",
+      "area": "guardrails",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA NeMo Guardrails Library Developer Guide #",
+        "[exa] Overview of NVIDIA NeMo Guardrails Library #",
+        "[exa-h] The NeMo Guardrails library is an open-source Python package for adding programmable guardrails to LLM-based application"
+      ],
+      "latency": 9.026246070861816
+    },
+    {
+      "topic": "Guardrails AI: input/output validation, structured outputs",
+      "area": "guardrails",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Generate Structured Data",
+        "[exa] Introduction",
+        "[exa-h] ## Prerequisites[\u200b] \nFirst, create a Pydantic model and guard for the structured data. The model should describe the dat"
+      ],
+      "latency": 8.296238899230957
+    },
+    {
+      "topic": "LLM Guard: prompt injection detection, jailbreak prevention",
+      "area": "guardrails",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] LLM Guard - The Security Toolkit for LLM Interactions",
+        "[exa-h] [![Join Our Slack Community]] \n## What is LLM Guard?\n[] \n[![LLM-Guard]] \nBy offering sanitization, detection of harmful "
+      ],
+      "latency": 8.755460977554321
+    },
+    {
+      "topic": "Rebuff: multi-layer prompt injection defense",
+      "area": "guardrails",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Rebuff: Detecting Prompt Injection Attacks",
+        "[exa-h] ### **Self-hardening prompt injection detector**\n[] \nRebuff is designed to protect AI applications from prompt injection"
+      ],
+      "latency": 6.739812135696411
+    },
+    {
+      "topic": "OpenAI moderation API: content classification, categories",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Moderations | OpenAI API Reference",
+        "[exa] Moderation | OpenAI API",
+        "[exa-h] [Usage] \n[Certificates] \nLegacy\n[Completions] \n[Realtime Beta] \n[Realtime Beta session tokens] \n[Realtime Beta client ev"
+      ],
+      "latency": 7.5518670082092285
+    },
+    {
+      "topic": "Perspective API: toxicity detection, attribute scoring",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Perspective API",
+        "[exa] Perspective | Developers",
+        "[exa-h] Unfortunately, no. The API will no longer be in service after 2026.\nWhat is the reason for the sunsetting?\nAI capabiliti"
+      ],
+      "latency": 6.166920185089111
+    },
+    {
+      "topic": "Azure Content Safety: text, image moderation APIs",
+      "area": "content",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Azure AI Content Safety documentation",
+        "[exa] What is Azure AI Content Safety?",
+        "[exa-h] Table of contents[Read in English] [Edit] \n#### Share via\n[Facebook] [x.com] [LinkedIn] [Email] \n# Azure AI Content Safe"
+      ],
+      "latency": 3.581843852996826
+    },
+    {
+      "topic": "Detoxify: transformer-based toxicity classification",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] BERT-Based Toxicity Classifiers",
+        "[exa-h] ## Description\n[] \nTrained models && code to predict toxic comments on 3 Jigsaw challenges: Toxic comment classification"
+      ],
+      "latency": 4.536372423171997
+    },
+    {
+      "topic": "Bias detection in LLM outputs: demographic parity, equalized odds",
+      "area": "bias",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Bias and Fairness in Large Language Models: A Survey",
+        "[exa-h] social groups G, group fairness requires (approximate) parity across all groups G \u2208 G, up to \u03f5, of a statistical\noutcome"
+      ],
+      "latency": 4.13109564781189
+    },
+    {
+      "topic": "Fairness metrics for generative AI: representation, stereotyping",
+      "area": "bias",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] A Comprehensive Framework to Operationalize Social Stereotypes \n for Responsible AI Evaluations",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Our framework identifies key components of stereotypes that are crucial in AI evaluation, including the target group, as"
+      ],
+      "latency": 4.945528030395508
+    },
+    {
+      "topic": "Debiasing techniques: counterfactual augmentation, prompt tuning",
+      "area": "bias",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] An Empirical Analysis of Parameter-Efficient Methods for Debiasing Pre-Trained Language Models - ACL Anthology",
+        "[exa-h] tunable parameters are \u03c6 = {W\n(i)\ndown, W(i)\nup | i =\n1, 2, . . . , Nlayer}.\n2\n3 Parameter-Efficient Debiasing through\nC"
+      ],
+      "latency": 4.553401470184326
+    },
+    {
+      "topic": "Red teaming for bias: adversarial testing, edge cases",
+      "area": "bias",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Adversarial Testing for Generative AI \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] ",
+        "[exa-h] ## Additional Resources\n[Google's AI Red Team: the ethical hackers making AI safer] \n[Red Teaming Language Models with L"
+      ],
+      "latency": 4.5607664585113525
+    },
+    {
+      "topic": "Constitutional AI: self-critique, harmlessness training",
+      "area": "alignment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] other AIs. We experiment with methods for training a harmless AI assistant through self\u0002improvement, without any human l"
+      ],
+      "latency": 4.31445574760437
+    },
+    {
+      "topic": "RLHF implementation: reward modeling, PPO fine-tuning",
+      "area": "alignment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] PPO Trainer",
+        "[exa-h] unsupervised LM to align with these preferences, often with reinforcement learning from human feedback (RLHF). However, "
+      ],
+      "latency": 3.799130439758301
+    },
+    {
+      "topic": "Direct Preference Optimization (DPO): simplified alignment",
+      "area": "alignment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Direct preference optimization:  your language model is secretly a reward model",
+        "[exa-h] > With the rapid advancement of large language models (LLMs), aligning policy models with human preferences has become i"
+      ],
+      "latency": 3.91172456741333
+    },
+    {
+      "topic": "Debate as alignment: multi-agent verification",
+      "area": "alignment",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] brittle policies vulnerable to covert collusion and long-term drift.\nIdea. We treat oversight as a delegated, multi-agen"
+      ],
+      "latency": 4.32606315612793
+    },
+    {
+      "topic": "Prompt injection attacks: direct, indirect, jailbreaks",
+      "area": "security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prompt injection",
+        "[exa] Prompt Injection: A Comprehensive Guide",
+        "[exa-h] ## Prompt injection and jailbreak incidents\n[[edit]]"
+      ],
+      "latency": 4.475570201873779
+    },
+    {
+      "topic": "Data extraction attacks: training data leakage, PII exposure",
+      "area": "security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Extracting Training Data from Large Language Models - ADS",
+        "[exa-h] Training data extraction attacks, like model inversion at\u0002tacks, reconstruct training datapoints. However, training data"
+      ],
+      "latency": 3.8534960746765137
+    },
+    {
+      "topic": "Adversarial robustness: perturbation attacks, defense strategies",
+      "area": "security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Recent work has demonstrated that deep neural networks are vulnerable to adversarial examples---inputs that are almost"
+      ],
+      "latency": 3.1839523315429688
+    },
+    {
+      "topic": "Secure deployment: sandboxing, rate limiting, audit logging",
+      "area": "security",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Application Security Checklist",
+        "[exa] 1 - Cloud Native Security and Kubernetes",
+        "[exa-h] Baseline guidelines around ensuring application security on Kubernetes, aimed at application developers\nThis checklist a"
+      ],
+      "latency": 3.7239174842834473
+    }
+  ]
+}

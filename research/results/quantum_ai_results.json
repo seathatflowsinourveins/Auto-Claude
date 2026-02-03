@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:15:11.012624",
+  "stats": {
+    "sources": 200,
+    "vectors": 190,
+    "findings": 86
+  },
+  "results": [
+    {
+      "topic": "Quantum machine learning: QML algorithms, circuits",
+      "area": "qml",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Quantum Physics",
+        "[exa-h] Quantum machine learning (QML) is a computational paradigm that seeks to apply quantum-mechanical\nresources to solve lea"
+      ],
+      "latency": 5.8862152099609375
+    },
+    {
+      "topic": "Variational quantum eigensolver: chemistry applications",
+      "area": "qml",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantum Physics",
+        "[exa] The Variational Quantum Eigensolver: A review of methods and best practices - ADS",
+        "[exa-h] > The variational quantum eigensolver (or VQE) uses the variational principle to compute the ground state energy of a Ha"
+      ],
+      "latency": 4.0575034618377686
+    },
+    {
+      "topic": "Quantum neural networks: parameterized circuits",
+      "area": "qml",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantum Physics",
+        "[exa] Radware Bot Manager Captcha",
+        "[exa-h] > Hybrid quantum-classical systems make it possible to utilize existing quantum computers to their fullest extent. Withi"
+      ],
+      "latency": 5.698099136352539
+    },
+    {
+      "topic": "Quantum feature maps: kernel methods, embedding",
+      "area": "qml",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] On the expressivity of embedding quantum kernels",
+        "[exa] ",
+        "[exa-h] (April 9, 2024)\n###### Abstract\nOne of the most natural connections between quantum and classical machine learning has b"
+      ],
+      "latency": 5.033647775650024
+    },
+    {
+      "topic": "QAOA: quantum approximate optimization",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantum Physics",
+        "[exa] A Quantum Approximate Optimization Algorithm - ADS",
+        "[exa-h] > We introduce a quantum algorithm that produces approximate solutions for combinatorial optimization problems. The algo"
+      ],
+      "latency": 3.7769672870635986
+    },
+    {
+      "topic": "Quantum annealing: D-Wave, combinatorial problems",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 3.4 Variable types\nOptimization and combinatorial problems with discrete and binary variables are hard to\nsolve. These p"
+      ],
+      "latency": 9.65963077545166
+    },
+    {
+      "topic": "Portfolio optimization: quantum finance applications",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] We present a quantum algorithm for portfolio optimization. We discuss the market data input of\nasset prices, the process"
+      ],
+      "latency": 10.477159976959229
+    },
+    {
+      "topic": "Quantum sampling: Monte Carlo, Boltzmann machines",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantum-enhanced Markov chain Monte Carlo",
+        "[exa] Quantum-enhanced Markov chain Monte Carlo",
+        "[exa-h] Carlo (MCMC), a prominent iterative technique[4], to sample from the Boltzmann distribution of classical Ising models. U"
+      ],
+      "latency": 7.088258981704712
+    },
+    {
+      "topic": "Quantum simulation: molecular dynamics, materials",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Programmable simulations of molecules and materials with reconfigurable quantum processors - ADS",
+        "[exa] Programmable simulations of molecules and materials with reconfigurable quantum processors",
+        "[exa-h] Simulations of quantum chemistry and quantum materials are believed to be among the most important applications of quant"
+      ],
+      "latency": 8.915932893753052
+    },
+    {
+      "topic": "Drug discovery quantum: molecular docking, folding",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Perspective Computer-aided drug discovery: From traditional simulation methods to language models and quantum computing",
+        "[exa] Quantum Physics",
+        "[exa-h] identifying promising drug candidates.[12] Recently,[deep learning] approaches for protein structure prediction, such as"
+      ],
+      "latency": 5.936020135879517
+    },
+    {
+      "topic": "Quantum chemistry: electronic structure calculations",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] P SI 4 : Open-Source Quantum Chemistry \u00b6",
+        "[exa] P SI 4 : Open-Source Quantum Chemistry \u00b6",
+        "[exa-h] * [Loops] \n* [Tables of Results] \n* [Python Wrappers] \n* [Theoretical Methods: SCF to FCI] \n* [Capabilities and Alternat"
+      ],
+      "latency": 5.444414138793945
+    },
+    {
+      "topic": "Quantum error correction: fault-tolerant computing",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantum Physics",
+        "[exa] Quantum Physics",
+        "[exa-h] computer which behaves correctly in the presence of errors, we also need a theory of fault-tolerant quantum computation,"
+      ],
+      "latency": 3.985452890396118
+    },
+    {
+      "topic": "Hybrid quantum-classical: variational algorithms",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantum Physics",
+        "[exa] Quantum Physics",
+        "[exa-h] serious constraints, including limited numbers of qubits and noise processes that limit circuit depth. Variational Quant"
+      ],
+      "latency": 3.7072577476501465
+    },
+    {
+      "topic": "Quantum-inspired algorithms: tensor networks",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tensor Networks in a Nutshell - ADS",
+        "[exa] Quantum Physics",
+        "[exa-h] Tensor network methods are taking a central role in modern quantum physics and beyond. They can provide an efficient app"
+      ],
+      "latency": 3.7943029403686523
+    },
+    {
+      "topic": "Quantum advantage: demonstrating speedup",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantum Physics",
+        "[exa] Quantum Physics",
+        "[exa-h] > A longstanding goal in quantum information science is to demonstrate quantum computations that cannot be feasibly repr"
+      ],
+      "latency": 9.526540756225586
+    },
+    {
+      "topic": "Noise-aware quantum computing: NISQ era",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Quantum Physics",
+        "[exa] Quantum Physics",
+        "[exa-h] > For quantum computers to successfully solve real-world problems, it is necessary to tackle the challenge of noise: the"
+      ],
+      "latency": 7.417046785354614
+    },
+    {
+      "topic": "IBM Qiskit: quantum programming framework",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] IBM Quantum Computing | Qiskit",
+        "[exa] Introduction",
+        "[exa-h] Qiskit is the**world\u2019s most popular and performant**software stack for quantum computing and algorithms research. Build,"
+      ],
+      "latency": 6.216385364532471
+    },
+    {
+      "topic": "Google Cirq: quantum computing library",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] End-2-end experiments",
+        "[exa] Introduction to Cirq",
+        "[exa-h] Cirq is a Python software library for writing, manipulating, and optimizing quantum circuits, and then running them on q"
+      ],
+      "latency": 5.239684343338013
+    },
+    {
+      "topic": "Amazon Braket: quantum computing service",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Braket",
+        "[exa] What is Amazon Braket?",
+        "[exa-h] ## Benefits of Braket\n### Accelerate scientific discovery\nEasily work with different types of quantum computers and circ"
+      ],
+      "latency": 9.175098419189453
+    },
+    {
+      "topic": "PennyLane: differentiable quantum computing",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantum Differentiable Programming \u2014 PennyLane",
+        "[exa] Gradients and training \u00b6",
+        "[exa-h] The ability to compute [quantum gradients] \nmeans that quantum computations can become part of automatically differentia"
+      ],
+      "latency": 4.873210906982422
+    }
+  ]
+}

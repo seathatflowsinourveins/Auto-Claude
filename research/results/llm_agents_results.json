@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:54:46.334316",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "LangChain agents: tool-using LLMs",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] Agent Toolkits",
+        "[exa-h] LangChain is the easiest way to start building agents and applications powered by LLMs. With under 10 lines of code, you"
+      ],
+      "latency": 9.039252281188965
+    },
+    {
+      "topic": "AutoGPT: autonomous agents",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AutoGPT - Wikipedia",
+        "[exa] AutoGPT - Wikipedia",
+        "[exa-h] **AutoGPT**is an open-source[autonomous] [software agent] that uses[OpenAI] 's[large language models], such as[GPT-4], t"
+      ],
+      "latency": 9.248084306716919
+    },
+    {
+      "topic": "CrewAI: multi-agent collaboration",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Collaboration",
+        "[exa] Collaboration",
+        "[exa-h] Collaboration in CrewAI enables agents to work together as a team by delegating tasks and asking questions to leverage e"
+      ],
+      "latency": 8.460081338882446
+    },
+    {
+      "topic": "OpenAI Assistants: API agents",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Assistants | OpenAI API Reference",
+        "[exa] Assistants migration guide",
+        "[exa-h] The Assistants API is deprecated and will be removed in August 2026. The recommended replacement is the Responses API.[L"
+      ],
+      "latency": 7.400198221206665
+    },
+    {
+      "topic": "ReAct: reasoning acting loop",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] exceptions, while actions allow it to interface with and gather additional information\nfrom external sources such as kno"
+      ],
+      "latency": 8.215200185775757
+    },
+    {
+      "topic": "Plan-and-execute: hierarchical",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Hierarchical task network",
+        "[exa-h] AI Planning is concerned with generating a course of action\nthat achieves the goals of an agent. In its most basic form "
+      ],
+      "latency": 8.51001501083374
+    },
+    {
+      "topic": "Tree of Thoughts: branching search",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tree of Thoughts Framework",
+        "[exa] Tree of Thoughts: A New Way to Unlock Problem-Solving in Large Language Models",
+        "[exa-h] * It employs explicit multi-branch exploration, evaluation, and backtracking to improve performance in puzzles, creative"
+      ],
+      "latency": 9.81284761428833
+    },
+    {
+      "topic": "Reflexion: self-reflection",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reflecting for self-awareness",
+        "[exa] The Open University",
+        "[exa-h] The purpose of reflection is to improve practice, inform decisions and become more able and effective in what you are do"
+      ],
+      "latency": 8.248037576675415
+    },
+    {
+      "topic": "Function calling: tool use",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling",
+        "[exa] Function Calling & Tool Use",
+        "[exa-h] **Function calling**(also known as**tool calling**) provides a powerful and flexible way for OpenAI models to interface "
+      ],
+      "latency": 8.210225343704224
+    },
+    {
+      "topic": "MCP: model context protocol",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Specification",
+        "[exa] Specification",
+        "[exa-h] tools. Whether you\u2019re building an AI-powered IDE, enhancing a chat interface, or creating\ncustom AI workflows, MCP provi"
+      ],
+      "latency": 7.141407012939453
+    },
+    {
+      "topic": "Code execution: sandbox",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Sandbox SDK (Beta)",
+        "[exa] Run arbitrary code in a sandboxed environment",
+        "[exa-h] The Sandbox SDK enables you to run untrusted code securely in isolated environments. Built on[Containers], Sandbox SDK p"
+      ],
+      "latency": 8.387887477874756
+    },
+    {
+      "topic": "Browser automation: web agents",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Puppeteer &nbsp;|&nbsp; Chrome for Developers",
+        "[exa] The Selenium Browser Automation Project",
+        "[exa-h] * [Puppeteer] \nStay organized with collectionsSave and categorize content based on your preferences.\n![] \n### Puppeteer\n"
+      ],
+      "latency": 9.12123990058899
+    },
+    {
+      "topic": "Agent memory: long-term context",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Large language model (LLM) agents face fundamental limitations in long-horizon reasoning due to finite context windows"
+      ],
+      "latency": 9.009795904159546
+    },
+    {
+      "topic": "Working memory: scratch pad",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Perspective Neurocognitive Architecture of Working Memory",
+        "[exa] From cognitive to neural models of working memory",
+        "[exa-h] Working memory maintains information in an easily accessible state over brief periods of time (several seconds to minute"
+      ],
+      "latency": 7.87321925163269
+    },
+    {
+      "topic": "Episodic memory: experience",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Episodic Memory System: Neurocircuitry and Disorders",
+        "[exa] Theories of episodic memory.",
+        "[exa-h] The ability to encode and retrieve our daily personal experiences, called episodic memory, is supported by the circuitry"
+      ],
+      "latency": 8.199975490570068
+    },
+    {
+      "topic": "Retrieval memory: RAG agents",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] RAG: Section Overview  \u200b",
+        "[exa-h] increased memorization of the training data.\nWe endeavor to decouple these improvements, by efficiently\naugmenting langu"
+      ],
+      "latency": 9.170284032821655
+    },
+    {
+      "topic": "Coding agents: software development",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Agents",
+        "[exa] AI coding agents: what they are, how they work, and how to build one",
+        "[exa-h] #### Codex Prompting Guide\nCodex models advance the frontier of intelligence and efficiency and our recommended agentic "
+      ],
+      "latency": 9.002775430679321
+    },
+    {
+      "topic": "Research agents: information gathering",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] aggregate, and analyse external information, culminating in comprehensive outputs for accomplishing\nopen-ended informati"
+      ],
+      "latency": 8.60568380355835
+    },
+    {
+      "topic": "Customer service: support agents",
+      "area": "applications",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] What is a Customer Support Agent?",
+        "[exa] Customer Service Representatives",
+        "[exa-h] Customer Support Agents, also known as Customer Service Representatives, play a pivotal role in ensuring customer satisf"
+      ],
+      "latency": 7.420528411865234
+    },
+    {
+      "topic": "Data analysis: analytics agents",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data Analyst Agent",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] The**Data Analyst Agent**, also known as**DANA**(Data ANAlyst), is a specialized version of Devin optimized for querying"
+      ],
+      "latency": 8.615143537521362
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:15:36.252037",
+  "stats": {
+    "sources": 194,
+    "vectors": 194,
+    "findings": 81
+  },
+  "results": [
+    {
+      "topic": "Edge AI deployment: on-device inference, optimization",
+      "area": "edge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Model optimization",
+        "[exa] On-Device Training with ONNX Runtime",
+        "[exa-h] [**Introducing Google AI Edge Portal**]: Benchmark Edge AI at scale.[Sign-up] to request access during private preview.\n"
+      ],
+      "latency": 6.444031238555908
+    },
+    {
+      "topic": "TinyML: machine learning on microcontrollers",
+      "area": "edge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Tiny Machine Learning (TinyML) is a new frontier of machine learning. By squeezing deep learning models into billions "
+      ],
+      "latency": 6.433048248291016
+    },
+    {
+      "topic": "Model compression: quantization, pruning for edge",
+      "area": "edge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Neural networks are both computationally intensive and memory intensive, making them difficult to deploy on embedded s"
+      ],
+      "latency": 5.778604030609131
+    },
+    {
+      "topic": "Federated learning: distributed training across devices",
+      "area": "edge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Federated learning",
+        "[exa-h] both, which may preclude logging to the data center and training there using conventional approaches. We advocate an alt"
+      ],
+      "latency": 5.692327976226807
+    },
+    {
+      "topic": "Sensor fusion: multi-sensor data integration",
+      "area": "sensors",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Multisensor Data Fusion",
+        "[exa-h] interest. Data fusion finds wide application\nin many areas of robotics such as object\nrecognition, environment mapping, "
+      ],
+      "latency": 4.177823543548584
+    },
+    {
+      "topic": "Anomaly detection IoT: predictive maintenance",
+      "area": "sensors",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Employ anomaly detection for managing assets and predictive maintenance",
+        "[exa-h] unplanned downtime and decreasing planned downtime. Anomaly detection lies at the core of PdM \nwith the primary focus on"
+      ],
+      "latency": 22.141170024871826
+    },
+    {
+      "topic": "Time series forecasting: IoT data patterns",
+      "area": "sensors",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Time series forecasting: 2025 complete guide",
+        "[exa] Cisco Time Series Model Technical Report",
+        "[exa-h] Time series forecasting is one of the most applied data science techniques in business, finance, supply chain management"
+      ],
+      "latency": 9.73964548110962
+    },
+    {
+      "topic": "Streaming analytics: real-time IoT processing",
+      "area": "sensors",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Real-time analytics: A complete guide",
+        "[exa] Azure Stream Analytics",
+        "[exa-h] Edge inference filters video or sensor data locally and emits events to central streams. On the platform side, continuou"
+      ],
+      "latency": 8.574548482894897
+    },
+    {
+      "topic": "5G and AI: low-latency edge computing",
+      "area": "connectivity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Enabling Ultra-Low Latency AI Applications with 5G and Edge Computing Integration | IEEE Conference Publication | IEEE Xplore",
+        "[exa] Integrated Sensing and Edge AI: Realizing Intelligent Perception in 6G - ADS",
+        "[exa-h] A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing te"
+      ],
+      "latency": 5.157083034515381
+    },
+    {
+      "topic": "LoRaWAN IoT: long-range, low-power networks",
+      "area": "connectivity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is LoRaWAN\u00ae",
+        "[exa] Latest LoRaWAN\u00ae Specification  Documents",
+        "[exa-h] The purpose of this document is to give an introductory technical overview to LoRa\u00ae and LoRaWAN\u00ae. Low\u2013Power, Wide-Area N"
+      ],
+      "latency": 5.821310520172119
+    },
+    {
+      "topic": "Industrial IoT: factory automation, OT/IT",
+      "area": "connectivity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A manufacturer\u2019s guide to scaling Industrial IoT",
+        "[exa] IT/OT Convergence in Critical Infrastructure and Industrials White Paper",
+        "[exa-h] With myriad digital technologies offering the potential to boost operational performance at incumbent companies in every"
+      ],
+      "latency": 8.057829856872559
+    },
+    {
+      "topic": "Vehicle IoT: connected car, telematics",
+      "area": "connectivity",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automotive connected fleets",
+        "[exa] Intelligent data collection with AWS IoT FleetWise",
+        "[exa-h] This article describes the automotive connected fleets reference architecture, which enables customers and partners to b"
+      ],
+      "latency": 5.767199993133545
+    },
+    {
+      "topic": "Smart home AI: voice assistants, automation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A smarter home starts with Google Home",
+        "[exa] What is a smart home, and do you need one?",
+        "[exa-h] - Use your voice across your compatible smart speakers, displays, Google TV Streamer4, and more.\n- Enjoy hands-free cont"
+      ],
+      "latency": 7.2508604526519775
+    },
+    {
+      "topic": "Wearables AI: health monitoring, fitness",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Wearable sensors enable personalized predictions of clinical laboratory measurements",
+        "[exa] SensorLM: Learning the language of wearable sensors",
+        "[exa-h] Vital signs, including heart rate and body temperature, are useful in detecting or monitoring medical conditions, but ar"
+      ],
+      "latency": 5.6862077713012695
+    },
+    {
+      "topic": "Asset tracking: GPS, RFID, location analytics",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Maximize usage. Minimize downtime.",
+        "[exa] Guidance for Tracking Assets & Locating Devices Using AWS IoT",
+        "[exa-h] Geofencing is a location-based service where software or apps use GPS, RFID tags (radio-frequency identification), Wi-Fi"
+      ],
+      "latency": 6.104517698287964
+    },
+    {
+      "topic": "Environmental monitoring: IoT sensors, AI analysis",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Artificial intelligence and IoT driven technologies for environmental pollution monitoring and management",
+        "[exa] Advances in Smart Environment Monitoring Systems Using IoT and Sensors",
+        "[exa-h] a growing interest in utilizing this technology for environmental pollution detection. AI-driven sensor systems, AI and "
+      ],
+      "latency": 5.8099894523620605
+    },
+    {
+      "topic": "AWS IoT Greengrass: edge computing platform",
+      "area": "platforms",
+      "sources": 5,
+      "vectors": 5,
+      "findings": [
+        "[exa] AWS IoT Greengrass",
+        "[exa] AWS IoT Greengrass Documentation",
+        "[exa-h] ## Why AWS IoT Greengrass?\n\nAWS IoT Greengrass is an open-source edge runtime and cloud service for building, deploying,"
+      ],
+      "latency": 10.785333633422852
+    },
+    {
+      "topic": "Azure IoT Edge: cloud intelligence at edge",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Azure IoT Edge",
+        "[exa] Azure IoT Edge",
+        "[exa-h] Deploy Azure IoT Edge on premises to break up data silos and consolidate operational data at scale in the Azure Cloud. R"
+      ],
+      "latency": 5.733568429946899
+    },
+    {
+      "topic": "Google Edge TPU: AI accelerator for IoT",
+      "area": "platforms",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Edge TPU Devices",
+        "[exa] Coral &nbsp;|&nbsp; Google for Developers",
+        "[exa-h] Coral devices harness the power of Google's Edge TPU machine-learning coprocessor. This is a\nsmall ASIC built by Google "
+      ],
+      "latency": 3.482106924057007
+    },
+    {
+      "topic": "NVIDIA Jetson: edge AI computing platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Jetson - Embedded AI Computing Platform | NVIDIA Developer",
+        "[exa] The Ultimate Platform for Physical AI and Robotics",
+        "[exa-h] NVIDIA Jetson\u2122 is a powerful platform for developing innovative edge AI and robotics solutions across industries. It del"
+      ],
+      "latency": 5.546379089355469
+    }
+  ]
+}

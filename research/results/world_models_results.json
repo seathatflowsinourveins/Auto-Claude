@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:34:33.289581",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 89
+  },
+  "results": [
+    {
+      "topic": "World models: internal simulation, prediction",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PAN: A World Model for General, Interactable, and Long-Horizon World Simulation",
+        "[exa] ",
+        "[exa-h] An intelligent agent must be able to imagine how the world might unfold, reason about the consequences of its actions, a"
+      ],
+      "latency": 10.667557954788208
+    },
+    {
+      "topic": "Model-based RL: learning environment dynamics",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] When to Trust Your Model: Model-Based Policy Optimization - ADS",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Designing effective model-based reinforcement learning algorithms is difficult because the ease of data generation must "
+      ],
+      "latency": 9.061195850372314
+    },
+    {
+      "topic": "Predictive coding: brain-inspired models",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] ",
+        "[exa-h] > Predictive coding offers a potentially unifying account of cortical function -- postulating that the core function of "
+      ],
+      "latency": 9.725781917572021
+    },
+    {
+      "topic": "Latent dynamics: compressed world states",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Next-Latent Prediction Transformers Learn Compact\n World Models",
+        "[exa-h] > Goal-conditioned planning benefits from learned low-dimensional representations of rich observations. While compact la"
+      ],
+      "latency": 7.358974933624268
+    },
+    {
+      "topic": "Dreamer: visual model-based RL",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dream to Control: Learning Behaviors by Latent Imagination",
+        "[exa] ",
+        "[exa-h] * The paper introduces Dreamer, a model-based RL agent that learns complex behaviors through latent imagination from hig"
+      ],
+      "latency": 8.813796520233154
+    },
+    {
+      "topic": "JEPA: joint embedding predictive",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] [Submitted on 11 Sep 2025 ([v1]), last revised 7 Oct 2025 (this version, v2)]\n# Title:LLM-JEPA: Large Language Models Me"
+      ],
+      "latency": 8.747613191604614
+    },
+    {
+      "topic": "Genie: generative interactive environments",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Genie: Generative Interactive Environments - ADS",
+        "[exa] ",
+        "[exa-h] We introduce Genie, the first generative interactive environment trained in an unsupervised manner from unlabelled Inter"
+      ],
+      "latency": 5.515613794326782
+    },
+    {
+      "topic": "Video prediction: future frame synthesis",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Future Frame Synthesis (FFS), the task of generating subsequent video frames from context, represents a core challenge"
+      ],
+      "latency": 6.3927061557769775
+    },
+    {
+      "topic": "Neural physics: learning physical dynamics",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > Abstract:Machine learning frameworks for physical problems must capture and enforce physical constraints that preserve"
+      ],
+      "latency": 5.025226831436157
+    },
+    {
+      "topic": "Differentiable simulation: gradient through physics",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Differentiable simulators continue to push the state of the art across a range of domains including computational phys"
+      ],
+      "latency": 5.710268259048462
+    },
+    {
+      "topic": "Digital twins: AI-powered simulation",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Enhancing Digital Twins with Advances in Simulation and Artificial Intelligence: Opportunities and Challenges",
+        "[exa] What Is a Digital Twin?",
+        "[exa-h] Simulations are used to investigate physical systems. A digital twin goes beyond this by connecting a simulation with th"
+      ],
+      "latency": 9.099482297897339
+    },
+    {
+      "topic": "Synthetic environments: procedural generation",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Procedural generation",
+        "[exa] Procedural Content Generation in Games",
+        "[exa-h] In[computing],**procedural generation**is a method of creating data[algorithmically] as opposed to manually, typically t"
+      ],
+      "latency": 5.325122833251953
+    },
+    {
+      "topic": "Planning with world models: imagined rollouts",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > Generative world models (WMs) can now simulate worlds with striking visual realism, which naturally raises the questio"
+      ],
+      "latency": 3.997204303741455
+    },
+    {
+      "topic": "Robotics world models: manipulation prediction",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Robotics",
+        "[exa] A Step Toward World Models: A Survey on Robotic Manipulation",
+        "[exa-h] > Humans anticipate, from a glance and a contemplated action of their bodies, how the 3D world will respond, a capabilit"
+      ],
+      "latency": 3.8447673320770264
+    },
+    {
+      "topic": "Autonomous driving: scene prediction",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Abstract:Predicting the motion of multiple agents is necessary for planning in dynamic environments. This task is chal"
+      ],
+      "latency": 5.6831889152526855
+    },
+    {
+      "topic": "Game AI: learned game dynamics",
+      "area": "applications",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > We present GameNGen, the first game engine powered entirely by a neural model that also enables real-time interaction "
+      ],
+      "latency": 6.123903036117554
+    },
+    {
+      "topic": "Sora world model: video generation",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Video generation models as world simulators",
+        "[exa] Sora: Creating video from text",
+        "[exa-h] We explore large-scale training of generative models on video data. Specifically, we train text-conditional diffusion mo"
+      ],
+      "latency": 3.6226580142974854
+    },
+    {
+      "topic": "LeCun JEPA: self-supervised world models",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] [Submitted on 1 Mar 2024]\n# Title:Learning and Leveraging World Models in Visual Representation Learning\nAuthors:[Quenti"
+      ],
+      "latency": 10.506537437438965
+    },
+    {
+      "topic": "Foundation world models: general simulators",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > A world model enables an intelligent agent to imagine, predict, and reason about how the world evolves in response to "
+      ],
+      "latency": 7.264748573303223
+    },
+    {
+      "topic": "Imagination: mental simulation AI",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] This review comes from a themed issue on Artificial intelligence\nEdited by Matt Botvinick and Sam Gershman\nhttps://doi.o"
+      ],
+      "latency": 5.05639910697937
+    }
+  ]
+}

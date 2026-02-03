@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:42:18.735982",
+  "stats": {
+    "sources": 196,
+    "vectors": 196,
+    "findings": 94
+  },
+  "results": [
+    {
+      "topic": "Mixture of experts: sparse gating",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Our approach to conditional computation is to introduce a new type of general purpose neural net\u0002work component: a Spars"
+      ],
+      "latency": 8.433473587036133
+    },
+    {
+      "topic": "Expert routing: top-k selection",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Information systems of different types use various techniques to rank query answers. In\nmany application domains, end-us"
+      ],
+      "latency": 4.27802300453186
+    },
+    {
+      "topic": "Load balancing: auxiliary losses",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Auxiliary Loss Functions for Load Balancing",
+        "[exa] Auxiliary-Loss-Free Load Balancing Strategy for Mixture-of-Experts",
+        "[exa-h] severely impair the model's ability to learn effectively. Auxiliary loss functions provide a direct mechanism to counter"
+      ],
+      "latency": 7.895697593688965
+    },
+    {
+      "topic": "Capacity factor: expert utilization",
+      "area": "fundamentals",
+      "sources": 8,
+      "vectors": 8,
+      "findings": [
+        "[exa] U.S. Energy Information Administration - EIA - Independent Statistics and Analysis",
+        "[exa] U.S. Energy Information Administration - EIA - Independent Statistics and Analysis",
+        "[exa-h] Capacity factors describe how intensively a fleet of generators is run. A capacity factor near 100% means a fleet is ope"
+      ],
+      "latency": 3.311678171157837
+    },
+    {
+      "topic": "Switch Transformer: simplified MoE",
+      "area": "architectures",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Despite many recent works on Mixture of Experts (MoEs) for resource-efficient Transformer language models, existing me"
+      ],
+      "latency": 9.316399574279785
+    },
+    {
+      "topic": "GShard: giant sparse models",
+      "area": "architectures",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] GShard: Scaling Giant Models With Conditional Computation and Automatic Sharding",
+        "[exa] ",
+        "[exa-h] efficient implementation on parallel devices. GShard is a module composed of a set of lightweight annotation APIs and an"
+      ],
+      "latency": 4.905643463134766
+    },
+    {
+      "topic": "Mixtral: Mistral MoE model",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Mistral Docs",
+        "[exa] Mistral Docs",
+        "[exa-h] [Codestral Mamba 7B\u2197] |`0.1`|open-codestral-mamba|\nJune 6, 2025June 6, 2025\n|Codestral|\n[Mathstral 7B\u2197] |`0.1`||\n|Magist"
+      ],
+      "latency": 7.895099401473999
+    },
+    {
+      "topic": "DeepSeek MoE: efficient routing",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Sparse Mixture-of-Experts (MoE) has become a key architecture for scaling large language models (LLMs) efficiently. Re"
+      ],
+      "latency": 3.5060689449310303
+    },
+    {
+      "topic": "Token routing: per-token experts",
+      "area": "routing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Token-to-Expert Routing",
+        "[exa] An Expert is Worth One Token: Synergizing Multiple Expert LLMs as Generalist via Expert Token Routing",
+        "[exa-h] top\u2011kkkexperts per token, enforcing"
+      ],
+      "latency": 3.6493632793426514
+    },
+    {
+      "topic": "Expert choice routing: balanced load",
+      "area": "routing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Load Balancing in the Datacenter",
+        "[exa] ",
+        "[exa-h] This chapter focuses on load balancing within the datacenter. Specifically, it discusses algorithms for distributing wor"
+      ],
+      "latency": 5.578525543212891
+    },
+    {
+      "topic": "Learned routing: adaptive selection",
+      "area": "routing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Adaptive Router Mechanism Overview",
+        "[exa] Electrical Engineering and Systems Science > Systems and Control",
+        "[exa-h] - Policy mechanisms: adaptive selection rules based on state variables; e.g., [Gumbel-Softmax] routing in [token routing"
+      ],
+      "latency": 8.497676610946655
+    },
+    {
+      "topic": "Soft routing: continuous mixing",
+      "area": "routing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A review on the continuous blending of powders",
+        "[exa] Continuous and Inside Mixing of Liquids and Bulk Solids",
+        "[exa-h] This review traces the underlying theory and practice of continuous[powder blending] to provide a foundation for its dev"
+      ],
+      "latency": 8.494275093078613
+    },
+    {
+      "topic": "Sparse activation: compute efficiency",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Activation sparsity can enable practical inference speedups in large language models (LLMs) by reducing the compute an"
+      ],
+      "latency": 9.153357028961182
+    },
+    {
+      "topic": "Expert parallelism: distributed MoE",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > Mixture of Experts (MoE) models enhance neural network scalability by dynamically selecting relevant experts per input"
+      ],
+      "latency": 8.856228351593018
+    },
+    {
+      "topic": "Communication: all-to-all",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] All-to-all (parallel pattern)",
+        "[exa] All-to-All",
+        "[exa-h] In[parallel computing],**all-to-all**(also known as*index operation*or*total exchange*) is a[collective operation], wher"
+      ],
+      "latency": 8.174140214920044
+    },
+    {
+      "topic": "Inference MoE: serving optimization",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa-h] > Mixture-of-Experts (MoE) showcases tremendous potential to scale large language models (LLMs) with enhanced performanc"
+      ],
+      "latency": 8.45094084739685
+    },
+    {
+      "topic": "GPT-4 MoE: rumored architecture",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Peering Inside GPT-4: Understanding Its Mixture of Experts (MoE) Architecture",
+        "[exa-h] Search\n[![arXiv logo]] \n[![Cornell University Logo]] \nopen search\nGO\nopen navigation menu\n# Computer Science \\> Computat"
+      ],
+      "latency": 7.159675359725952
+    },
+    {
+      "topic": "Gemini MoE: Google multimodal",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] use cases. We discuss our approach toward post-training and deploying Gemini models responsibly to\nusers through service"
+      ],
+      "latency": 6.784673452377319
+    },
+    {
+      "topic": "Open MoE models: Mixtral, DBRX",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transformers",
+        "[exa] Transformers",
+        "[exa-h] It was pre-trained on 12T tokens of text and code data.\nCompared to other open MoE models like Mixtral-8x7B and Grok-1, "
+      ],
+      "latency": 10.51633095741272
+    },
+    {
+      "topic": "Vision MoE: image understanding",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] MoE (V-MoE), a sparse variant of the recent Vision Transformer (ViT) architecture [20] for image\nclassification. The V-M"
+      ],
+      "latency": 11.059354543685913
+    }
+  ]
+}

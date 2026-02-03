@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:06:00.373152",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "AI demand forecasting: ML models for sales prediction",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to Abacus AI\nDocumentation",
+        "[exa] How AI is redefining sales forecasting",
+        "[exa-h] The Abacus.AI Developer Platform integrates seamlessly with ChatLLM Teams & Super Assistant, allowing any custom chatbot"
+      ],
+      "latency": 8.599344730377197
+    },
+    {
+      "topic": "Seasonal demand patterns: time series analysis",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Seasonality: economic data and model estimation",
+        "[exa] 6.4.4.3. Seasonality",
+        "[exa-h] The consensus among economists is that three\nbasic exogenous factors give rise to seasonality\nin economic data.' The fir"
+      ],
+      "latency": 9.866523742675781
+    },
+    {
+      "topic": "New product forecasting: cold-start prediction",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Generate cold start forecasts for products with no historical data using Amazon Forecast, now up to 45% more accurate",
+        "[exa] Cold start demand forecasting \u00b6",
+        "[exa-h] management and it enables businesses to be better prepared to serve their customers.*Cold start forecasting*is a common "
+      ],
+      "latency": 11.094049215316772
+    },
+    {
+      "topic": "Multi-channel demand sensing: omnichannel analytics",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Demand Sensing: Omnichannel, Real-Time, and Granular",
+        "[exa] Demand Forecasting for Omnichannel Inventory Management for INFORMS 2020",
+        "[exa-h] ![] \n### Computational Strength\nMultivariate analysis becomes omnivariate modeling with the power of AI.\n* Accurate stor"
+      ],
+      "latency": 9.148066520690918
+    },
+    {
+      "topic": "Inventory optimization with AI: stock level management",
+      "area": "inventory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is AI inventory management?",
+        "[exa] ",
+        "[exa-h] AI helps companies respond dynamically to market fluctuations. By employing[machine learning algorithms], businesses can"
+      ],
+      "latency": 8.896346807479858
+    },
+    {
+      "topic": "Safety stock calculation: probabilistic models",
+      "area": "inventory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] data are available. The safety stock needed to \ngive a certain level of protection simply is the \nstandard deviation of "
+      ],
+      "latency": 9.883756637573242
+    },
+    {
+      "topic": "ABC-XYZ analysis: inventory classification AI",
+      "area": "inventory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Implementation of abc xyz analysis on business inventory management using machine learning model technology| International Journal of Innovative Science and Research Technology",
+        "[exa] Leveraging ABC-XYZ Classification",
+        "[exa-h] **Abstract :** This paper presents a novel approach to\noptimize business inventory management through the\nintegration of"
+      ],
+      "latency": 9.091283559799194
+    },
+    {
+      "topic": "Warehouse automation: picking, packing optimization",
+      "area": "inventory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Getting warehouse automation right",
+        "[exa] Invited Review Design and control of warehouse order picking: A literature review",
+        "[exa-h] their technologies to meet different demand scenarios. In the material-movement category, for example, autonomous mobile"
+      ],
+      "latency": 10.31260347366333
+    },
+    {
+      "topic": "Route optimization: vehicle routing problem, TSP",
+      "area": "logistics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Vehicle Routing \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Vehicle Routing Problem \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] * Vehicle routing focuses on finding optimal routes for vehicles to visit locations, minimizing distance or cost, with a"
+      ],
+      "latency": 7.3639538288116455
+    },
+    {
+      "topic": "Last-mile delivery: AI-powered logistics optimization",
+      "area": "logistics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] International Journal For Multidisciplinary Research",
+        "[exa] Enhancing Last-Mile Logistics: AI-Driven Fleet Optimization, Mixed Reality, and Large Language Model Assistants for Warehouse Operations",
+        "[exa-h] Abstract|The optimization of last-mile delivery represents a critical challenge in modern e-commerce logistics,\nconsumin"
+      ],
+      "latency": 8.870790243148804
+    },
+    {
+      "topic": "Fleet management: predictive maintenance, scheduling",
+      "area": "logistics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dynamic fleet management: Integrating predictive and preventive maintenance with operation workload balance to minimise cost",
+        "[exa] 2017-01-0237: Planning Flexible Maintenance for Heavy Trucks using Machine Learning Models, Constraint Programming, and Route Optimization - Journal Article",
+        "[exa-h] The optimization of fleet maintenance management is of utmost importance to ensure the efficient and reliable operation "
+      ],
+      "latency": 7.802706718444824
+    },
+    {
+      "topic": "Supply chain visibility: real-time tracking, IoT",
+      "area": "logistics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] SCREL02-BP01 Integrate shipment tracking solutions, providing real-time visibility through IoT devices and logistics APIs",
+        "[exa] ",
+        "[exa-h] operations. Deploy IoT devices such as GPS trackers, temperature\nsensors, and shock monitors to capture real-time condit"
+      ],
+      "latency": 6.8171162605285645
+    },
+    {
+      "topic": "Supply chain risk AI: disruption prediction, mitigation",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI-Driven Early Warning Systems for Supply Chain Risk Detection: A Machine Learning Approach | Francis Academic Press",
+        "[exa] ",
+        "[exa-h] Supply chain disruptions pose escalating threats to global business operations, necessitating advanced predictive capabi"
+      ],
+      "latency": 8.409795999526978
+    },
+    {
+      "topic": "Supplier risk scoring: financial, geopolitical factors",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Supplier risk management",
+        "[exa] ",
+        "[exa-h] Moody\u2019s offers scorecards on suppliers that include Operational, Financial, Compliance, Cyber, Sustainability, Geopoliti"
+      ],
+      "latency": 8.306353569030762
+    },
+    {
+      "topic": "Resilient supply chains: multi-source strategies",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Designing Resilience into Global Supply Chains",
+        "[exa] Considering region risks and mitigation strategies in the supplier selection process for improving supply chain resilience",
+        "[exa-h] There are many ways companies can improve resilience in each dimension of the value chain. In terms of sourcing, for exa"
+      ],
+      "latency": 8.40449047088623
+    },
+    {
+      "topic": "Climate impact on supply chains: weather prediction",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Fifth National Climate Assessment, Focus on Risks to Supply Chains",
+        "[exa] ",
+        "[exa-h] URL\n\nAlternative text\n\n[![Climate Change and Food Supply]] \n\nClimate change poses challenges to the animal food products"
+      ],
+      "latency": 9.9330894947052
+    },
+    {
+      "topic": "SAP Integrated Business Planning: AI capabilities",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] SAP Integrated Business Planning",
+        "[exa] SAP Integrated Business Planning",
+        "[exa-h] Powered by SAP HANA, this cloud-based solution combines sales and operations planning (S&OP), forecasting and demand, re"
+      ],
+      "latency": 6.32016134262085
+    },
+    {
+      "topic": "Blue Yonder: AI-driven supply chain planning",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI-powered end-to-end supply chain orchestration platform",
+        "[exa] Blue Yonder",
+        "[exa-h] Tackle all of your supply chain challenges with the only scalable, end-to-end platform that leverages a common data clou"
+      ],
+      "latency": 6.133590221405029
+    },
+    {
+      "topic": "Project44: supply chain visibility platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Movement. The Decision Intelligence Platform for the modern supply chain.",
+        "[exa] Keep an eye on every SKU in motion",
+        "[exa-h] The Decision Intelligence Platform for the modern supply chain.\n**Don\u2019t react to your supply chain. Control it.**\nWith r"
+      ],
+      "latency": 8.13897705078125
+    },
+    {
+      "topic": "Llamasoft: supply chain design and analytics",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Supply Chain Guru: Software for Supply Chain Design and Analysis",
+        "[exa] Designing Transportation Networks",
+        "[exa-h] Ever ask yourself, \u2018what if?\u2019 Supply Chain Guru enables you to understand the answers through modeling, simulating and a"
+      ],
+      "latency": 5.657969951629639
+    }
+  ]
+}

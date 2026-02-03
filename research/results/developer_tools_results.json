@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:17:30.009073",
+  "stats": {
+    "sources": 197,
+    "vectors": 197,
+    "findings": 93
+  },
+  "results": [
+    {
+      "topic": "AI code completion: GitHub Copilot, Cursor, Codeium",
+      "area": "completion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] * To generate a code suggestion, the GitHub Copilot extension begins by examining the code in your editor\u2014focusing on th"
+      ],
+      "latency": 4.276775360107422
+    },
+    {
+      "topic": "Inline code suggestions: context-aware completion",
+      "area": "completion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Inline suggestions from GitHub Copilot in VS Code",
+        "[exa] Inline Code Suggestions",
+        "[exa-h] GitHub Copilot acts as an AI-powered pair programmer, automatically offering inline suggestions to complete your code, c"
+      ],
+      "latency": 3.9973082542419434
+    },
+    {
+      "topic": "Multi-file context: cross-file code understanding",
+      "area": "completion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] How GitHub Copilot Handles Multi-File Context Internally \u2014 A Deep Dive for Developers, Researchers, and Tech Leaders",
+        "[exa-h] > While pre-trained language models (LM) for code have achieved great success in code completion, they generate code con"
+      ],
+      "latency": 3.758755683898926
+    },
+    {
+      "topic": "Fill-in-the-middle: code infilling techniques",
+      "area": "completion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Our goal in this work is to address this limitation by adding fill-in-the-middle (FIM) capability to\ncausal decoder-base"
+      ],
+      "latency": 4.272328853607178
+    },
+    {
+      "topic": "AI debugging: automated bug detection, fixes",
+      "area": "debugging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Software Engineering",
+        "[exa] Fix application errors in real-time",
+        "[exa-h] real-world codebases, a single LLM agent is trained via reinforcement learning in a self-play setting to iteratively inj"
+      ],
+      "latency": 4.098714351654053
+    },
+    {
+      "topic": "Error explanation: stack trace analysis",
+      "area": "debugging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding the Python Traceback",
+        "[exa] How Do You Read a Python Traceback?",
+        "[exa-h] A traceback is a report containing the function calls made in your code at a specific point. Tracebacks are known by man"
+      ],
+      "latency": 9.602014064788818
+    },
+    {
+      "topic": "Root cause analysis: automated debugging workflows",
+      "area": "debugging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Root cause analysis",
+        "[exa] ",
+        "[exa-h] Dynatrace Intelligence causal AI root cause analysis automatically evaluates all captured and ingested information and h"
+      ],
+      "latency": 9.632028579711914
+    },
+    {
+      "topic": "Log analysis: anomaly detection in logs",
+      "area": "debugging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Log anomaly detection",
+        "[exa] Inspect log anomalies",
+        "[exa-h] You can detect anomalies in your log data in two ways: by creating a*log anomaly\ndetector*for continuous monitoring, or "
+      ],
+      "latency": 8.183036088943481
+    },
+    {
+      "topic": "Code documentation: automated docstring generation",
+      "area": "documentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automatic documentation generation from code \u00b6",
+        "[exa] Sphinx AutoAPI \u00b6",
+        "[exa-h] * [Glossary] \n* [Changelog] \n* [Projects using Sphinx] \n# Automatic documentation generation from code[\u00b6] \nIn the[previo"
+      ],
+      "latency": 8.68880558013916
+    },
+    {
+      "topic": "API documentation: OpenAPI spec generation",
+      "area": "documentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OpenAPI Specification v3.2.0",
+        "[exa] Generate OpenAPI documents",
+        "[exa-h] An[OpenAPI Description] (OAD) can then be used by documentation generation tools to display the API, code generation too"
+      ],
+      "latency": 8.640044212341309
+    },
+    {
+      "topic": "README generation: project documentation AI",
+      "area": "documentation",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Index - ReadmeAI",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] 1. In the terminal, install the**readmeai**package:\n```\n`pip install readmeai`\n```\n2. Once installed, try it out:\n```\n`r"
+      ],
+      "latency": 9.464614152908325
+    },
+    {
+      "topic": "Code explanation: natural language summaries",
+      "area": "documentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Natural Language Outlines for Code:\n Literate Programming in the LLM Era",
+        "[exa] Large Language Models for Code Summarization",
+        "[exa-h] Using these themes of outlining, summarization, and literate programming, we propose using LLMs to generate a new form o"
+      ],
+      "latency": 7.454932928085327
+    },
+    {
+      "topic": "Test generation: unit test creation from code",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Test generator",
+        "[exa] Generating tests",
+        "[exa-h] ## Generate tests in VS Code[\u200b] \nInstall the VS Code extension and generate tests directly from VS Code. The extension i"
+      ],
+      "latency": 8.238209962844849
+    },
+    {
+      "topic": "Test coverage: AI-driven coverage improvement",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Software Engineering",
+        "[exa] Discover Diffblue Cover",
+        "[exa-h] > Testing is an essential part of software development. Test generation tools attempt to automate the otherwise labor-in"
+      ],
+      "latency": 8.526302099227905
+    },
+    {
+      "topic": "Fuzzing with AI: intelligent input generation",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa] ",
+        "[exa-h] > Generation-based fuzzing produces appropriate test cases according to specifications of input grammars and semantic co"
+      ],
+      "latency": 8.551831483840942
+    },
+    {
+      "topic": "Mutation testing: test quality assessment",
+      "area": "testing",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Software Engineering",
+        "[exa] Practical Mutation Testing at Scale: A view from Google",
+        "[exa-h] > Mutation analysis assesses a test suite's adequacy by measuring its ability to detect small artificial faults, systema"
+      ],
+      "latency": 10.008702993392944
+    },
+    {
+      "topic": "GitHub Copilot: AI pair programmer",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] What is GitHub Copilot?",
+        "[exa-h] GitHub Copilot transforms the developer experience. Backed by the leaders in AI, GitHub Copilot provides contextualized "
+      ],
+      "latency": 7.542101144790649
+    },
+    {
+      "topic": "Cursor IDE: AI-first code editor",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Built to make you extraordinarily productive, Cursor is the best way to code with AI.",
+        "[exa] Built to make you extraordinarily productive, Cursor is the best way to code with AI.",
+        "[exa-h] A new interface and our first coding model, both purpose-built for working with agents.\nProduct\u00b7Oct 29, 2025\n] [\nImprovi"
+      ],
+      "latency": 6.473297834396362
+    },
+    {
+      "topic": "Tabnine: AI code completion engine",
+      "area": "platforms",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] An AI Coding Platform for Enterprises  That Can't Afford Mistakes.",
+        "[exa] Overview | Tabnine Docs",
+        "[exa-h] Tabnine is an AI coding platform that works in developers\u2019 IDEs of choice, supports the models they prefer, and can be d"
+      ],
+      "latency": 7.698422193527222
+    },
+    {
+      "topic": "Sourcegraph Cody: AI coding assistant",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cody - Sourcegraph docs",
+        "[exa] The enterprise AI code assistant",
+        "[exa-h] Cody is an AI coding assistant that uses all the latest LLMs and your development context to help you understand, write,"
+      ],
+      "latency": 7.439768314361572
+    }
+  ]
+}

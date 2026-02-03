@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:53:02.742996",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 98
+  },
+  "results": [
+    {
+      "topic": "Agentic RAG: agent-driven retrieval",
+      "area": "patterns",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] Agentic search has recently emerged as a pow\u0002erful paradigm, where an agent interleaves\nmulti-step reasoning with on-dem"
+      ],
+      "latency": 6.54499363899231
+    },
+    {
+      "topic": "Self-RAG: self-reflective retrieval",
+      "area": "patterns",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+        "[exa-h] indiscriminately retrieving and incorporating a fixed number of retrieved passages, regardless of whether retrieval is n"
+      ],
+      "latency": 10.57401728630066
+    },
+    {
+      "topic": "Corrective RAG: iterative refinement",
+      "area": "patterns",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] [Submitted on 30 Mar 2023 ([v1]), last revised 25 May 2023 (this version, v2)]\n# Title:Self-Refine: Iterative Refinement"
+      ],
+      "latency": 9.369343280792236
+    },
+    {
+      "topic": "Adaptive RAG: dynamic strategy",
+      "area": "patterns",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] calls, tools, sampling parameters, and control logic -- dynamically at inference time based on accumulated experience. W"
+      ],
+      "latency": 7.574954032897949
+    },
+    {
+      "topic": "Multi-hop reasoning: chain retrieval",
+      "area": "multi_step",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Multi-hop reasoning (i.e., reasoning across two or more documents) is a key ingredient for NLP models that leverage la"
+      ],
+      "latency": 8.045408248901367
+    },
+    {
+      "topic": "Query decomposition: sub-questions",
+      "area": "multi_step",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] 3University College London, 4CIFAR Azrieli Global Scholar\nperez@nyu.edu\nAbstract\nWe aim to improve question answering (Q"
+      ],
+      "latency": 7.04653787612915
+    },
+    {
+      "topic": "Iterative retrieval: progressive",
+      "area": "multi_step",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] retrieval and generation in an iterative manner. A model output shows what might be needed to finish a task, and thus pr"
+      ],
+      "latency": 7.99249792098999
+    },
+    {
+      "topic": "HyDE: hypothetical documents",
+      "area": "multi_step",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] HyDE: Hypothetical Document Embeddings",
+        "[exa] Daily Papers",
+        "[exa-h] Sponsor This Site\nWe can share your product or service with 250K+ researchers, engineers, and scientists everymonth.\n[Sp"
+      ],
+      "latency": 8.05590033531189
+    },
+    {
+      "topic": "RAG agents: LangChain agents",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Documentation",
+        "[exa] LangChain overview",
+        "[exa-h] * Python\n* TypeScript\n[\n## LangChain (Python)\nQuickly get started building agents, with any model provider of your choic"
+      ],
+      "latency": 10.07945203781128
+    },
+    {
+      "topic": "Tool-augmented retrieval: functions",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] paradigm shift that integrates tool knowledge directly into the LLM's parameters by representing each tool as a unique t"
+      ],
+      "latency": 8.402038812637329
+    },
+    {
+      "topic": "Routing agents: query routing",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Router - Docs by LangChain",
+        "[exa] ",
+        "[exa-h] In the**router**architecture, a routing step classifies input and directs it to specialized[agents]. This is useful when"
+      ],
+      "latency": 10.538222074508667
+    },
+    {
+      "topic": "Research agents: deep search",
+      "area": "agents",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] ",
+        "[exa-h] environments (RAG-based) that fail to capture the complexities of real-world interaction. In this paper, we introduce De"
+      ],
+      "latency": 7.795417785644531
+    },
+    {
+      "topic": "RAG evaluation: RAGAS metrics",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > We introduce Ragas (Retrieval Augmented Generation Assessment), a framework for reference-free evaluation of Retrieval"
+      ],
+      "latency": 7.627739191055298
+    },
+    {
+      "topic": "Faithfulness: grounding check",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Love Quiz: Do You Trust Your Partner?",
+        "[exa] How can we know if our faith is real?",
+        "[exa-h] At the foundation of trust lies faithfulness\u2014not just physical fidelity, but emotional commitment. This manifests in con"
+      ],
+      "latency": 6.958539009094238
+    },
+    {
+      "topic": "Answer relevancy: quality metrics",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Answer Relevance Score (ARS): Novel Evaluation Metric for Question Answering System",
+        "[exa] ",
+        "[exa-h] A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing te"
+      ],
+      "latency": 8.740044116973877
+    },
+    {
+      "topic": "Context precision: retrieval quality",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Context Precision & Recall",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] **Context Recall: measures completeness**\u2014 what proportion of all relevant contexts are retrieved?\n**F1:**harmonic mean "
+      ],
+      "latency": 6.641243934631348
+    },
+    {
+      "topic": "RAG pipelines: production patterns",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Building Production RAG Pipelines: Architecture Best Practices",
+        "[exa] Distributed RAG pipeline #",
+        "[exa-h] Key considerations include handling large document volumes, maintaining system reliability, ensuring data freshness, and"
+      ],
+      "latency": 9.550989389419556
+    },
+    {
+      "topic": "Caching: retrieval optimization",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching",
+        "[exa] HTTP Caching",
+        "[exa-h] ```\n```\n[RFC 7234] HTTP/1.1 Caching June 2014[1]. IntroductionHTTP is typically used for distributed information systems"
+      ],
+      "latency": 10.162980079650879
+    },
+    {
+      "topic": "Streaming RAG: real-time",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Streaming Retrieval API | The most advanced AI retrieval system.  Agentic Retrieval-Augmented Generation (RAG) with a RESTful API.",
+        "[exa] StreamingRAG: Real-time Contextual Retrieval and Generation Framework",
+        "[exa-h] When using streaming in R2R, various event types are emitted during the retrieval and generation process:"
+      ],
+      "latency": 7.5085859298706055
+    },
+    {
+      "topic": "RAG monitoring: observability",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Observability for AIAgents: Why Monitoring Matters in RAG and Agentic Systems",
+        "[exa] The Ultimate Prompt Monitoring Pipeline",
+        "[exa-h] This blog explores why observability is essential for AI agents\u2014especially those using Retrieval-Augmented Generation (R"
+      ],
+      "latency": 9.810397863388062
+    }
+  ]
+}

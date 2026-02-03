@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:22:06.031871",
+  "stats": {
+    "sources": 196,
+    "vectors": 196,
+    "findings": 91
+  },
+  "results": [
+    {
+      "topic": "Anthropic: Claude AI, constitutional AI",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Claude\u2019s Constitution",
+        "[exa] Claude's new constitution",
+        "[exa-h] *The preface and the acknowledgements are not part of the official constitution.*\n## Overview\n### Claude and the mission"
+      ],
+      "latency": 7.188595294952393
+    },
+    {
+      "topic": "Mistral AI: European LLM company, open weights",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing   Mistral 3",
+        "[exa] Model weights | Mistral AI",
+        "[exa-h] in a variety of compressed formats empowers the developer community and puts AI in people\u2019s hands through distributed in"
+      ],
+      "latency": 7.2967517375946045
+    },
+    {
+      "topic": "Cohere: enterprise LLM, embeddings",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Activate your enterprise data with secure AI retrieval",
+        "[exa] Introduction to Embeddings at Cohere",
+        "[exa-h] Embed turns text and images into embeddings to enable semantic retrieval in search systems, RAG architectures, and agent"
+      ],
+      "latency": 4.451780080795288
+    },
+    {
+      "topic": "AI21 Labs: Jurassic models, Wordtune",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Announcing Jurassic-2 and Task-Specific APIs",
+        "[exa] Building the Future of  Enterprise AI",
+        "[exa-h] Today, AI21 Labs is also proud to announce our new line of**Task-Specific APIs**, with the launch of the**Wordtune API s"
+      ],
+      "latency": 7.550805330276489
+    },
+    {
+      "topic": "Anyscale: Ray, distributed computing startup",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Best Place to Build and Run AI with Ray",
+        "[exa] The Best Place to Build and Run AI with Ray",
+        "[exa-h] Ray is an open-source framework that helps developers scale data processing, training, and inference workloads from lapt"
+      ],
+      "latency": 4.48338508605957
+    },
+    {
+      "topic": "Modal: serverless GPU compute platform",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Modal: High-performance AI infrastructure",
+        "[exa] AI infrastructure  that  developers love",
+        "[exa-h] Bring your own image or build one in Python, scale resources as needed, and leverage state-of-the-art GPUs like H100s & "
+      ],
+      "latency": 3.7276856899261475
+    },
+    {
+      "topic": "Weights & Biases: ML experiment tracking",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI is\n         \n             \n                easy\n                 \n                     \n                         \n                     \n                 \n                 \n                     \n                         \n                     \n                     \n                         \n                     \n                     \n                         \n                     \n                        \n                     \n                         \n                     \n                 \n             \n         \n        to  \n            productionize",
+        "[exa] AI is\n         \n             \n                easy\n                 \n                     \n                         \n                     \n                 \n                 \n                     \n                         \n                     \n                     \n                         \n                     \n                     \n                         \n                     \n                        \n                     \n                         \n                     \n                 \n             \n         \n        to  \n            productionize",
+        "[exa-h] Access and explore hosted AI models\n[] \nWeave\nIterate, evaluate and monitor agents\n[] \nRegistry\nDatasets | Models | Prom"
+      ],
+      "latency": 3.8006889820098877
+    },
+    {
+      "topic": "Scale AI: data labeling, annotation",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data Engine",
+        "[exa] Data Engine",
+        "[exa-h] Data engine is the process of improving machine learning models with high quality, diverse and large datasets powered by"
+      ],
+      "latency": 3.5709550380706787
+    },
+    {
+      "topic": "Jasper AI: marketing content generation",
+      "area": "applications",
+      "sources": 8,
+      "vectors": 8,
+      "findings": [
+        "[exa] Put AI agents to work for marketing",
+        "[exa] An AI chat assistant built & trained for marketers",
+        "[exa-h] Jasper is the agent workspace built for modern marketing teams. With 100+ specialized AI agents and connected content pi"
+      ],
+      "latency": 3.9589107036590576
+    },
+    {
+      "topic": "Copy.ai: AI copywriting platform",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI\u00a0Writing Assistant:  Go-to-Market made easy.",
+        "[exa] GTM\u00a0 Platform",
+        "[exa-h] Copy.ai's AI Chat helps you get more work done, faster. Put your GTM\u00a0motions in place faster, and make your competition "
+      ],
+      "latency": 4.385191917419434
+    },
+    {
+      "topic": "Harvey: AI for legal professionals",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Practice Made Perfect",
+        "[exa] ",
+        "[exa-h] ### **Harvey is AI designed for legal and professional services.**Advance your expertise on a secure platform that lets "
+      ],
+      "latency": 6.625481605529785
+    },
+    {
+      "topic": "Glean: enterprise AI search",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Expand human potential to do extraordinary work.",
+        "[exa] The open, horizontal platform for enterprise superintelligence",
+        "[exa-h] Glean was founded by a seasoned team of former Google search engineers and industry veterans who wondered why we don\u2019t h"
+      ],
+      "latency": 4.4046289920806885
+    },
+    {
+      "topic": "Replit: AI-powered IDE, Ghostwriter",
+      "area": "coding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Ghostwriter AI & Complete Code Beta",
+        "[exa] Meet Replit Ghostwriter, your partner in code",
+        "[exa-h] Today, we're announcing Ghostwriter, which infuses state-of-the-art intelligence into nearly all IDE features.**Ghostwri"
+      ],
+      "latency": 8.567307233810425
+    },
+    {
+      "topic": "Codeium: free AI code completion",
+      "area": "coding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] This page does not exist",
+        "[exa] This page does not exist",
+        "[exa-h] Check out our pricing. Individuals are free!\n### [Blog] \nCheck out our blog for the latest product updates, competitive "
+      ],
+      "latency": 5.978543043136597
+    },
+    {
+      "topic": "Poolside AI: code generation startup",
+      "area": "coding",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] We build the models. You build the future.",
+        "[exa] Poolside's journey to AGI",
+        "[exa-h] We are a frontier lab focused on building the most capable Foundation Models, agents and\nenterprise systems to deploy th"
+      ],
+      "latency": 7.3032262325286865
+    },
+    {
+      "topic": "Magic AI: long-context code models",
+      "area": "coding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] 100M Token Context Windows",
+        "[exa-h] > This paper introduces long-context Granite code models that support effective context windows of up to 128K tokens. Ou"
+      ],
+      "latency": 6.405467987060547
+    },
+    {
+      "topic": "xAI: Elon Musk AI company, Grok",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Something went wrong",
+        "[exa] Welcome | xAI",
+        "[exa-h] Company | xAI\nError\n# Something went wrong\n[Back to home]"
+      ],
+      "latency": 8.302263498306274
+    },
+    {
+      "topic": "Inflection AI: Pi personal AI",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing Pi, Your Personal AI",
+        "[exa] Emotionally  Intelligent",
+        "[exa-h] Inflection AI today announced the first release of its Personal AI, Pi ([heypi.com]). A new class of AI, Pi is designed "
+      ],
+      "latency": 7.009647846221924
+    },
+    {
+      "topic": "Adept AI: action models, ACT-1",
+      "area": "research",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ACT-1: Transformer for Actions",
+        "[exa] Adept AI's ACT-1: Revolutionizing Human-Computer Interactions",
+        "[exa-h] At Adept, we are building the next frontier of models that can take actions in the digital world\u2014that\u2019s why we\u2019re excite"
+      ],
+      "latency": 7.879067659378052
+    },
+    {
+      "topic": "Character AI: conversational AI characters",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Conversational  AI Characters",
+        "[exa] Log in\n - Read the Docs Business",
+        "[exa-h] Convai powers XR worlds with conversational AI through both virtual humans and disembodied AI characters, enabling deepl"
+      ],
+      "latency": 6.962765693664551
+    }
+  ]
+}

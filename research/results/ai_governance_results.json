@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:45:32.976711",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 81
+  },
+  "results": [
+    {
+      "topic": "Model versioning: tracking LLM versions in production",
+      "area": "model",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Track versions of Git-based applications with MLflow",
+        "[exa] Version Tracking for GenAI Applications",
+        "[exa-h] This guide demonstrates how to track versions of your GenAI application when your app's code resides in Git or a similar"
+      ],
+      "latency": 4.131913900375366
+    },
+    {
+      "topic": "Model registry: cataloging and managing AI models",
+      "area": "model",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MLflow Model Registry",
+        "[exa] Enhance AI governance with W&amp;B Registry",
+        "[exa-h] The MLflow Model Registry addresses this challenge by providing a centralized, structured system for organizing and gove"
+      ],
+      "latency": 3.9024534225463867
+    },
+    {
+      "topic": "Model lineage: tracking training data and fine-tuning",
+      "area": "model",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data and artifacts lineage\n        tracking",
+        "[exa] Amazon SageMaker ML Lineage Tracking",
+        "[exa-h] The following diagram shows the various artifacts that need to be tracked and versioned to\nrecreate the data processing,"
+      ],
+      "latency": 3.8685333728790283
+    },
+    {
+      "topic": "Model deprecation: sunset planning for LLM versions",
+      "area": "model",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deprecations",
+        "[exa] Azure OpenAI in Microsoft Foundry model deprecations and retirements",
+        "[exa-h] We use the term \"deprecation\" to refer to the process of retiring a model or endpoint. When we announce that a model or "
+      ],
+      "latency": 3.903897523880005
+    },
+    {
+      "topic": "LLM audit trails: logging inputs, outputs, decisions",
+      "area": "audit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Page not found | OpenAI API",
+        "[exa-h] propose LLM audit trails as a sociotechnical mechanism for continuous accountability. An audit trail is a chronological,"
+      ],
+      "latency": 3.4646573066711426
+    },
+    {
+      "topic": "GDPR compliance for AI: data rights, consent management",
+      "area": "audit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How do we ensure individual rights in our AI systems?",
+        "[exa] Guidance on AI and data protection",
+        "[exa-h] This section explains the challenges to ensure individual rights in AI systems, including rights relating to solely auto"
+      ],
+      "latency": 4.269877672195435
+    },
+    {
+      "topic": "SOC 2 for AI systems: security and availability controls",
+      "area": "audit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 2017 Trust Services Criteria (With Revised Points of Focus \u2013 2022)",
+        "[exa] SOC 2\u00ae - SOC for Service Organizations: Trust Services Criteria",
+        "[exa-h] To gain access to exclusive content, your first step is to join the[AICPA & CIMA.] \n## Mentioned in this article\n### Top"
+      ],
+      "latency": 5.204743146896362
+    },
+    {
+      "topic": "AI incident reporting: documenting failures and fixes",
+      "area": "audit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Center for Security and Emerging Technology",
+        "[exa-h] In this publication, we define a set of standardized key components of AI incidents that \ncan be used as a reporting tem"
+      ],
+      "latency": 9.947624444961548
+    },
+    {
+      "topic": "AI risk assessment: identifying and mitigating risks",
+      "area": "risk",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 1. Introduction ........................................................................................................"
+      ],
+      "latency": 4.483041763305664
+    },
+    {
+      "topic": "Model risk management: financial services requirements",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] The purpose of this document is to provide comprehensive guidance for banks on \neffective model risk management. Rigorou"
+      ],
+      "latency": 3.582148313522339
+    },
+    {
+      "topic": "Bias auditing: detecting and measuring model bias",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Bias and Fairness Audit Toolkit for Machine Learning \u00b6",
+        "[exa] Aequitas: A Bias and Fairness Audit Toolkit - ADS",
+        "[exa-h] Aequitas is an open-source bias audit toolkit for machine learning developers, analysts, and policymakers to audit machi"
+      ],
+      "latency": 4.782439947128296
+    },
+    {
+      "topic": "Explainability requirements: making AI decisions transparent",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What goes into an explanation?",
+        "[exa] ",
+        "[exa-h] You should also take into account the transparency requirements of the GDPR, which (at least in cases of solely automate"
+      ],
+      "latency": 12.3928861618042
+    },
+    {
+      "topic": "AI acceptable use policies: defining boundaries",
+      "area": "policy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Acceptable Use of Generative AI Tools",
+        "[exa] ",
+        "[exa-h] * **Authorized AI Tools:**The[Local and Cloud Services Decision Matrix] provides information on AI tools and the types o"
+      ],
+      "latency": 3.462242364883423
+    },
+    {
+      "topic": "Data governance for AI: training data management",
+      "area": "policy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Our Approach to Protecting AI Training Data",
+        "[exa] ",
+        "[exa-h] Protecting data requires both technical controls to enable safe data use at scale, and governance processes to ensure th"
+      ],
+      "latency": 4.026500463485718
+    },
+    {
+      "topic": "AI ethics frameworks: responsible AI principles",
+      "area": "policy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI principles",
+        "[exa] OECD AI Principles overview",
+        "[exa-h] ## Values-based principles\nThe OECD AI Principles promote use of AI that is innovative and trustworthy and that respects"
+      ],
+      "latency": 5.315930604934692
+    },
+    {
+      "topic": "Third-party AI policies: vendor assessment criteria",
+      "area": "policy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Work | The Data &amp; Trusted AI Alliance",
+        "[exa] ",
+        "[exa-h] 1. **Privacy & Data Protection**\u2013 How the vendor manages personal data and safeguards user privacy.\n2. **Model Developme"
+      ],
+      "latency": 5.829143762588501
+    },
+    {
+      "topic": "MLflow for governance: experiment and model tracking",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MLflow Tracking",
+        "[exa] MLflow Tracking",
+        "[exa-h] * [Tracking Models] \n* [Logging Model Checkpoints] \n* [Linking Metrics to Models and Datasets] \n* [Searching and Ranking"
+      ],
+      "latency": 3.6564910411834717
+    },
+    {
+      "topic": "Weights & Biases: experiment governance and reproducibility",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reproduce experiments",
+        "[exa] Experiments overview",
+        "[exa-h] * Python\n* Command Line Interface (CLI)\n* Query Expression Language\n* Reports and Workspaces API\n* [\nSupport\n] \n![US] \nE"
+      ],
+      "latency": 5.72591757774353
+    },
+    {
+      "topic": "AI governance platforms: AWS, Azure, GCP solutions",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ML Governance with Amazon SageMaker",
+        "[exa] ML Governance with Amazon SageMaker",
+        "[exa-h] You can further inspect individual models and analyze factors impacting model performance over time. Then you can follow"
+      ],
+      "latency": 4.343297481536865
+    },
+    {
+      "topic": "Custom governance dashboards: building internal tools",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data Governance Dashboard",
+        "[exa] Executive Management Dashboard",
+        "[exa-h] Retool is a development platform that allows developers to quickly build custom internal tools and dashboards for their "
+      ],
+      "latency": 9.255651235580444
+    }
+  ]
+}

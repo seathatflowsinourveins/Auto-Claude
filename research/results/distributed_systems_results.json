@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:19:24.511747",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Distributed consensus: Raft, Paxos algorithms",
+      "area": "consensus",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] to simplify the Raft leader election algorithm.\n5 The Raft consensus algorithm\nRaft is an algorithm for managing a repli"
+      ],
+      "latency": 10.308223485946655
+    },
+    {
+      "topic": "Byzantine fault tolerance: BFT protocols",
+      "area": "consensus",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] malicious attacks are a major cause of service interruptions and they can cause arbitrary behav\u0002ior, that is, Byzantine "
+      ],
+      "latency": 8.594662427902222
+    },
+    {
+      "topic": "Distributed transactions: 2PC, Saga patterns",
+      "area": "consensus",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Two-phase commit protocol",
+        "[exa] Saga distributed transactions pattern",
+        "[exa-h] In[transaction processing],[databases], and[computer networking], the**two-phase commit protocol**(**2PC**,*tupac*) is a"
+      ],
+      "latency": 8.04812502861023
+    },
+    {
+      "topic": "Leader election: distributed coordination",
+      "area": "consensus",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Leader election",
+        "[exa] Leader Election in Distributed Systems",
+        "[exa-h] In[distributed computing],**leader election**is the process of designating a single[process] as the organizer of some ta"
+      ],
+      "latency": 6.854400873184204
+    },
+    {
+      "topic": "Sharding strategies: horizontal partitioning",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Design a data partitioning strategy",
+        "[exa] Sharded Database Schema Design Considerations",
+        "[exa-h] [] ### Select the right partitioning strategy\nThere are three typical strategies for partitioning data:\n* **Horizontal p"
+      ],
+      "latency": 7.6961705684661865
+    },
+    {
+      "topic": "Replication patterns: sync, async, quorum",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Replica Set Data Synchronization .leafygreen-ui-11mfcte{position:absolute;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;padding:0 10px;visibility:hidden;} .leafygreen-ui-a30zj9{color:#889397;vertical-align:middle;margin-top:-2px;} .css-zena35{display:inline;left:0;top:0;margin-top:-85px;position:absolute;padding-bottom:2px;}@media only screen and (max-width: 767px){.css-zena35{margin-top:-85px;}}",
+        "[exa] Reading and writing documents",
+        "[exa-h] Destination members replicate data continuously after the initial sync.\nDestination members copy the [oplog] from\nthe so"
+      ],
+      "latency": 7.808702707290649
+    },
+    {
+      "topic": "Consistent hashing: load distribution",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] that we call consistent hashing. Roughly speaking, a consistent\nhash function is one which changes nr.inimaflyas the ran"
+      ],
+      "latency": 7.962642431259155
+    },
+    {
+      "topic": "Distributed caching: Redis cluster, Memcached",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 4.0 Clustering In Redis | Redis",
+        "[exa] Redis Scalability Guide - Clustering, Sharding &amp; Hash Slots Explained",
+        "[exa-h] Now that we know what sharding is and how it works in Redis, we can finally introduce\u00a0Redis Cluster. Redis Cluster provi"
+      ],
+      "latency": 9.711236476898193
+    },
+    {
+      "topic": "Distributed ML training: data/model parallelism",
+      "area": "ml",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Strategies for distributed training",
+        "[exa] Distributed Training \u00b6",
+        "[exa-h] Distributed training is usually split by two approaches: data parallel and model parallel.*Data parallel*is the most com"
+      ],
+      "latency": 6.963650465011597
+    },
+    {
+      "topic": "Parameter server: distributed gradient updates",
+      "area": "ml",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Abstract\nWe propose a parameter server framework for distributed\nmachine learning problems. Both data and workloads\nare "
+      ],
+      "latency": 8.058064222335815
+    },
+    {
+      "topic": "Ray distributed: ML workload scheduling",
+      "area": "ml",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scheduling #",
+        "[exa] Resources #",
+        "[exa-h] ```\n## More about Ray Scheduling[#] \n* [Use labels to control scheduling] \n* [Resources] \n* [Accelerator Support] \n* [Pl"
+      ],
+      "latency": 9.195702314376831
+    },
+    {
+      "topic": "Horovod: distributed deep learning",
+      "area": "ml",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Horovod documentation \u00b6",
+        "[exa] Horovod documentation \u00b6",
+        "[exa-h] * [Search Page] \n[![Logo]] \nDistributed training framework for TensorFlow, Keras, PyTorch, and Apache MXNet.\n### Navigat"
+      ],
+      "latency": 9.605034112930298
+    },
+    {
+      "topic": "Circuit breaker pattern: failure isolation",
+      "area": "fault",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Circuit Breaker pattern",
+        "[exa] Circuit breaker design pattern",
+        "[exa-h] * You have a message-driven or event-driven architecture, because they often route failed messages to a dead letter queu"
+      ],
+      "latency": 7.783173322677612
+    },
+    {
+      "topic": "Bulkhead pattern: resource isolation",
+      "area": "fault",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Bulkhead pattern",
+        "[exa] Bulkhead Pattern",
+        "[exa-h] The Bulkhead pattern is a type of application design that is tolerant of failure. In a bulkhead architecture, also known"
+      ],
+      "latency": 7.218778848648071
+    },
+    {
+      "topic": "Chaos engineering: failure injection testing",
+      "area": "fault",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Fault Injection",
+        "[exa] Azure Chaos Studio documentation",
+        "[exa-h] Welcome to Gremlin Fault Injection (FI)! Gremlin FI lets you use Gremlin\u2019s comprehensive fault injection library to inje"
+      ],
+      "latency": 8.904617309570312
+    },
+    {
+      "topic": "Self-healing systems: automated recovery",
+      "area": "fault",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A survey on self-healing systems: approaches and systems",
+        "[exa] St Andrews Research Repository",
+        "[exa-h] ### [A distributed formal-based model for self-healing behaviors in autonomous systems: from failure detection to self-r"
+      ],
+      "latency": 10.134169578552246
+    },
+    {
+      "topic": "Apache Kafka: distributed streaming",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction",
+        "[exa] Apache Kafka",
+        "[exa-h] ## How does Kafka work in a nutshell?[] \nKafka is a distributed system consisting of**servers**and**clients**that commun"
+      ],
+      "latency": 11.174616813659668
+    },
+    {
+      "topic": "Apache Spark: distributed computing",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unified engine for large-scale data analytics",
+        "[exa] Unified engine for large-scale data analytics",
+        "[exa-h] ![] \n![] \n![] \n![] \n![] \n![] \nStorage and Infrastructure\n![] \n![] \n![] \n![] \n![] \n![] \n![] \n![] \n![] \n![] \nSpark SQL eng"
+      ],
+      "latency": 6.509753465652466
+    },
+    {
+      "topic": "Kubernetes: container orchestration",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Production-Grade Container Orchestration",
+        "[exa] Overview | Kubernetes",
+        "[exa-h] [Kubernetes], also known as K8s, is an open source system for automating deployment, scaling, and management of containe"
+      ],
+      "latency": 6.118826389312744
+    },
+    {
+      "topic": "etcd: distributed key-value store",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is etcd?",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Properly distributed via Raft protocol\n# Used by\n[![Kubernetes logo]] \n[![Rook logo]] \n[![CoreDNS logo]] \n[![M3 logo]] \n"
+      ],
+      "latency": 8.486643314361572
+    }
+  ]
+}

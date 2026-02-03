@@ -24,7 +24,7 @@ from typing import Any, Dict, List, Optional, Union
 from dataclasses import dataclass, field
 from enum import Enum
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -60,7 +60,7 @@ class ScrapeResult:
     links: List[str] = field(default_factory=list)
     extracted_data: Optional[Dict[str, Any]] = None
     error: Optional[str] = None
-    timestamp: str = field(default_factory=lambda: datetime.utcnow().isoformat())
+    timestamp: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 
 @dataclass
@@ -74,7 +74,7 @@ class CrawlResult:
     job_id: Optional[str] = None
     status: str = "unknown"
     error: Optional[str] = None
-    timestamp: str = field(default_factory=lambda: datetime.utcnow().isoformat())
+    timestamp: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 
 @dataclass
@@ -701,7 +701,7 @@ class FirecrawlResearch:
             "topic": topic,
             "sources": [],
             "total_pages": 0,
-            "timestamp": datetime.utcnow().isoformat()
+            "timestamp": datetime.now(timezone.utc).isoformat()
         }
 
         summary_schema = {

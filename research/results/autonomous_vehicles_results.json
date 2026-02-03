@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:03:50.155814",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "LiDAR point cloud processing: 3D object detection",
+      "area": "perception",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] VoxelNet but the 3D convolutions remain a bottleneck.\nIn this work we propose PointPillars: a method for ob\u0002ject detecti"
+      ],
+      "latency": 10.486159801483154
+    },
+    {
+      "topic": "Camera-based perception: lane detection, traffic signs",
+      "area": "perception",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LaneNet: Real-Time Lane Detection Networks for Autonomous Driving",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] > Abstract:Lane detection is to detect lanes on the road and provide the accurate location and shape of each lane. It se"
+      ],
+      "latency": 7.380166292190552
+    },
+    {
+      "topic": "Sensor fusion: combining LiDAR, camera, radar",
+      "area": "perception",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] A Review of Multi-Sensor Fusion in Autonomous Driving",
+        "[exa-h] Keywords: autonomous vehicles; self-driving cars; perception; camera; lidar; radar; sensor fusion;\ncalibration; obstacle"
+      ],
+      "latency": 9.953570365905762
+    },
+    {
+      "topic": "Occupancy networks: 3D scene understanding",
+      "area": "perception",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Occupancy Networks: Learning 3D Reconstruction in Function Space",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] learning-based 3D reconstruction approaches can hence only represent very coarse 3D geometry or are limited to a restric"
+      ],
+      "latency": 8.678474426269531
+    },
+    {
+      "topic": "Path planning for AVs: A*, RRT, lattice planners",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] The first phase of our approach uses a variant of the well\u0002known A* algorithm applied to the 3D kinematic state space\nof"
+      ],
+      "latency": 8.456089496612549
+    },
+    {
+      "topic": "Behavior prediction: pedestrian, vehicle trajectory",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] fundamental problem in robotics. For example, in the setting of autonomous driving on public roads,\nit is essential to h"
+      ],
+      "latency": 6.914551734924316
+    },
+    {
+      "topic": "Decision making: rule-based vs learned approaches",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Creating Simple Rules for Complex Decisions",
+        "[exa] Rule-based machine learning",
+        "[exa-h] Machines can now beat humans at complex tasks that seem tailored to the strengths of the human mind, including poker, th"
+      ],
+      "latency": 11.309399127960205
+    },
+    {
+      "topic": "End-to-end driving: neural network control",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > We trained a convolutional neural network (CNN) to map raw pixels from a single front-facing camera directly to steeri"
+      ],
+      "latency": 6.490282297134399
+    },
+    {
+      "topic": "Waymo Open Dataset: AV perception benchmarks",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Perception \u2013 Waymo Open Dataset",
+        "[exa] About \u2013 Waymo Open Dataset",
+        "[exa-h] Modeling the 3D world from sensor data for simulation is a scalable way of developing testing and validation environment"
+      ],
+      "latency": 6.411562919616699
+    },
+    {
+      "topic": "Tesla FSD: vision-only autonomous driving",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tesla Skip to main content",
+        "[exa] ",
+        "[exa-h] Tesla uses billions of miles of anonymous real-world driving data to train Full Self-Driving (Supervised) to take care o"
+      ],
+      "latency": 7.58633828163147
+    },
+    {
+      "topic": "nuScenes: multimodal AV dataset and challenges",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] nuScenes: A Multimodal Dataset for Autonomous Driving | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] all vision and range sensors collected from diverse situa\u0002tions alongside map information would boost AV scene\u0002understan"
+      ],
+      "latency": 6.872483491897583
+    },
+    {
+      "topic": "KITTI benchmark: stereo, flow, scene understanding",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The KITTI Vision Benchmark Suite",
+        "[exa] ",
+        "[exa-h] ![] We take advantage of our[autonomous driving platform Annieway] to develop novel challenging real-world computer visi"
+      ],
+      "latency": 9.322271585464478
+    },
+    {
+      "topic": "CARLA simulator: open-source AV simulation",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CARLA Simulator",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] CARLA has been developed from the ground up to support development, training, and validation of autonomous driving syste"
+      ],
+      "latency": 9.838497877120972
+    },
+    {
+      "topic": "Synthetic data for AVs: domain randomization",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] domain randomization [32] is a recently proposed inexpen\u0002sive approach that intentionally abandons photorealism by\nrando"
+      ],
+      "latency": 6.697828531265259
+    },
+    {
+      "topic": "Scenario generation: testing edge cases",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 1 Scenario Generation: New scenarios or sub\u0002sequences of existing scenarios are (automatically)\ngenerated for fulfilling"
+      ],
+      "latency": 10.840725660324097
+    },
+    {
+      "topic": "Digital twins for vehicles: virtual testing",
+      "area": "simulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Digital twins: the ultimate virtual proving ground",
+        "[exa] The Vehicle Testing Based on Digital Twins Theory for Autonomous Vehicles",
+        "[exa-h] # Digital twins: the ultimate virtual proving ground\nYufei Zhang\n2025-06-11\nBlogAutonomous Next\n#### Author\n#### Author\n"
+      ],
+      "latency": 7.173128366470337
+    },
+    {
+      "topic": "Safety validation: miles vs scenarios approach",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] on-road miles will validate HAV system safety, especially in \nthe context of attempting to characterize progress of \ndev"
+      ],
+      "latency": 10.568174362182617
+    },
+    {
+      "topic": "Adversarial attacks on AV perception: robustness",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Attacking Vision-based Perception in End-to-End Autonomous Driving Models - ADS",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] Recent advances in machine learning, especially techniques such as deep neural networks, are enabling a range of emergin"
+      ],
+      "latency": 8.50442886352539
+    },
+    {
+      "topic": "Uncertainty estimation: knowing what you don't know",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Simple Guide for Evaluating and Expressing the Uncertainty of NIST Measurement Results",
+        "[exa-h] Uncertainty quantification (UQ) estimates the confidence of DNN predictions in addition to their accuracy. In recent yea"
+      ],
+      "latency": 10.1020188331604
+    },
+    {
+      "topic": "V2X communication: vehicle-to-everything safety",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Vehicle-to-Everything (V2X) Technology",
+        "[exa] ",
+        "[exa-h] **Vehicle-to-everything (V2X) technologies**are critical in meeting the ambitious goal of reducing the traffic fatalitie"
+      ],
+      "latency": 7.619557857513428
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:58:43.556483",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 98
+  },
+  "results": [
+    {
+      "topic": "DALL-E 3: OpenAI image generation",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] DALL\u00b7E 3 | OpenAI",
+        "[exa] DALL\u00b7E 3 | OpenAI",
+        "[exa-h] Modern text-to-image systems have a tendency to ignore words or descriptions, forcing users to learn prompt engineering."
+      ],
+      "latency": 9.284173250198364
+    },
+    {
+      "topic": "Midjourney v6: artistic generation",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Midjourney Community",
+        "[exa] ",
+        "[exa-h] It was created in 2021 and gained popularity in 2022 as an easy way for anyone to generate AI art. Millions of people no"
+      ],
+      "latency": 6.9372289180755615
+    },
+    {
+      "topic": "Stable Diffusion XL: open source",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stable Diffusion XL",
+        "[exa] Stable diffusion XL",
+        "[exa-h] You are viewingmainversion, which requires[installation from source]. If you'd like\nregular pip install, checkout the la"
+      ],
+      "latency": 7.950638294219971
+    },
+    {
+      "topic": "Imagen 3: Google image AI",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Imagen \u2014 Google DeepMind",
+        "[exa] Imagen is an AI system that creates photorealistic images from input text",
+        "[exa-h] Photorealistic images, sharper clarity, improved spelling and typography. Bring your imagination to life faster than eve"
+      ],
+      "latency": 6.283040523529053
+    },
+    {
+      "topic": "Latent diffusion: compressed generation",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] hindered by the high dimensionality of token-level representations. We introduce Cosmos, a novel approach to text genera"
+      ],
+      "latency": 7.856644153594971
+    },
+    {
+      "topic": "DiT: diffusion transformer",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scalable Diffusion Models with Transformers (DiT)",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] [Scalable Diffusion Models with Transformers] (DiT) by William Peebles and Saining Xie.\nThe abstract of the paper is the"
+      ],
+      "latency": 9.911354064941406
+    },
+    {
+      "topic": "Autoencoder: VAE image",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Variational autoencoders provide a principled framework for learning deep latent-variable models and corresponding inf"
+      ],
+      "latency": 6.713408946990967
+    },
+    {
+      "topic": "GAN: generative adversarial",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Generative adversarial network - Wikipedia",
+        "[exa-h] Search\n[![arXiv logo]] \n[![Cornell University Logo]] \nopen search\nGO\nopen navigation menu\n# Statistics \\> Machine Learni"
+      ],
+      "latency": 7.18647575378418
+    },
+    {
+      "topic": "ControlNet: spatial conditioning",
+      "area": "control",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > We present ControlNet, a neural network architecture to add spatial conditioning controls to large, pretrained text-to"
+      ],
+      "latency": 7.385262489318848
+    },
+    {
+      "topic": "IP-Adapter: image prompting",
+      "area": "control",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models",
+        "[exa] IP-Adapter",
+        "[exa-h] The image prompt adapter is designed to enable a pretrained text-to-image diffusion model to generate images with image "
+      ],
+      "latency": 6.38008189201355
+    },
+    {
+      "topic": "Inpainting: region editing",
+      "area": "control",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Inpainting",
+        "[exa-h] The goal of inpainting is to estimate the color components \nof the pixels px located at each position x in the unknown \n"
+      ],
+      "latency": 9.268757104873657
+    },
+    {
+      "topic": "Outpainting: image extension",
+      "area": "control",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Expand Your Images with AI: Seamless Outpainting in Scenario",
+        "[exa] DALL\u00b7E: Introducing outpainting",
+        "[exa-h] Expand is Scenario\u2019s dedicated outpainting tool, designed to break the boundaries of your original canvas. It allows you"
+      ],
+      "latency": 6.810503721237183
+    },
+    {
+      "topic": "LCM: latent consistency",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Latent Consistency Models (LCM)",
+        "[exa] Latent Consistency Matching Loss",
+        "[exa-h] Latent[Consistency Models] (LCM) are a class of generative models designed to achieve high-fidelity synthesis in a drast"
+      ],
+      "latency": 7.889364242553711
+    },
+    {
+      "topic": "SDXL Turbo: fast generation",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing SDXL Turbo: A Real-Time Text-to-Image Generation Model",
+        "[exa] Discover the Power of SDXL Turbo: A New Era in Image Generation",
+        "[exa-h] ![] \nAdditionally, SDXL Turbo provides major improvements to inference speed. On an A100, SDXL Turbo generates a 512x512"
+      ],
+      "latency": 7.688628435134888
+    },
+    {
+      "topic": "Flash diffusion: accelerated",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Flash Diffusion: Accelerating Image Generation with Diffusion Models",
+        "[exa-h] [Submitted on 4 Jun 2024 ([v1]), last revised 18 Dec 2024 (this version, v3)]\n# Title:Flash Diffusion: Accelerating Any "
+      ],
+      "latency": 6.178545236587524
+    },
+    {
+      "topic": "Quantized diffusion: efficient",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Q-Diffusion: Quantizing Diffusion Models | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] simulation of time-inhomogeneous reverse denoising processes. To address these challenges, we propose Quantized Transiti"
+      ],
+      "latency": 9.538299560546875
+    },
+    {
+      "topic": "AI art: creative generation",
+      "area": "applications",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Generative artificial intelligence",
+        "[exa-h] > A new class of tools, colloquially called generative AI, can produce high-quality artistic media for visual arts, conc"
+      ],
+      "latency": 10.05538034439087
+    },
+    {
+      "topic": "Product photography: e-commerce",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is product photography and how do you do it?",
+        "[exa] Your Etsy Privacy Settings",
+        "[exa-h] With the rise in online shopping, there\u2019s never been a better time to be a professional product photographer. Ecommerce "
+      ],
+      "latency": 7.457538604736328
+    },
+    {
+      "topic": "Design AI: graphic design",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Visualize your design ideas with Magic Design\u2122",
+        "[exa] Your AI design tool, now in Figma Make",
+        "[exa-h] Magic Design is an AI design generator powered by leading generative AI technology. Use it to create custom, on-brand, a"
+      ],
+      "latency": 7.330421209335327
+    },
+    {
+      "topic": "Avatar generation: profile images",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Avatar Generator",
+        "[exa] Avataaars Generator - A free online avatar generator for anyone to make their beautiful personal avatar easily!",
+        "[exa-h] AccessoriesBlankKurtPrescription 01Prescription 02RoundSunglassesWayfarers\nHair ColorAuburnBlackBlondeBlonde GoldenBrown"
+      ],
+      "latency": 8.113856792449951
+    }
+  ]
+}

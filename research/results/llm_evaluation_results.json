@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:54:39.583675",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "MMLU: massive multitask benchmark",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] [Submitted on 3 Jun 2024 ([v1]), last revised 6 Nov 2024 (this version, v6)]\n# Title:MMLU-Pro: A More Robust and Challen"
+      ],
+      "latency": 7.725361347198486
+    },
+    {
+      "topic": "HellaSwag: commonsense reasoning",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] HellaSwag: Can a Machine Really Finish Your Sentence? - ACL Anthology",
+        "[exa] ",
+        "[exa-h] <<abstract>>Recent work by Zellers et al. (2018) introduced a new task of commonsense natural language inference: given "
+      ],
+      "latency": 9.567607641220093
+    },
+    {
+      "topic": "GSM8K: grade school math",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 8th Grade Math Resources | Education.com",
+        "[exa] Preschool - 8th Grade Math Educational Resources",
+        "[exa-h] Strengthen essential math skills with Education.com\u2019s eighth grade resources, featuring over 250 printable worksheets, g"
+      ],
+      "latency": 6.608633518218994
+    },
+    {
+      "topic": "BigBench: beyond imitation",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Catalogo dei prodotti della ricerca",
+        "[exa-h] The Beyond the Imitation Game Benchmark (BIG-bench) is a*collaborative*benchmark intended to probe large language models"
+      ],
+      "latency": 9.615669250488281
+    },
+    {
+      "topic": "LM Evaluation Harness: EleutherAI",
+      "area": "frameworks",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Evaluating LLMs",
+        "[exa-h] This project provides a unified framework to test generative language models on a large number of different evaluation t"
+      ],
+      "latency": 7.332160472869873
+    },
+    {
+      "topic": "OpenAI Evals: evaluation framework",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How evals drive the next chapter in AI for businesses",
+        "[exa] Evaluation best practices",
+        "[exa-h] # How evals drive the next chapter in AI for businesses\nThis primer teaches business leaders how evaluation frameworks ("
+      ],
+      "latency": 6.828752040863037
+    },
+    {
+      "topic": "LangSmith: LLM tracing evaluation",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangSmith Observability",
+        "[exa] ADaSci - Global Professional Body of AI Professionals",
+        "[exa-h] Follow a step-by-step tutorial to trace a Retrieval-Augmented Generation application from start to finish.\n] \nFor termin"
+      ],
+      "latency": 9.351965427398682
+    },
+    {
+      "topic": "PromptFoo: prompt testing",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] [![npm]] [![GitHub Workflow Status]] [![MIT license]] [![Discord]] \n`promptfoo`is a tool for testing and evaluating LLM "
+      ],
+      "latency": 8.104665756225586
+    },
+    {
+      "topic": "Perplexity: language modeling",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] API Platform",
+        "[exa] API Platform",
+        "[exa-h] Quickstart GuideGetting started is simple and fast\u2014make your first API call within minutes.\n[Get Started] \n### Search\nGe"
+      ],
+      "latency": 8.83847975730896
+    },
+    {
+      "topic": "BLEU ROUGE: text generation",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ROUGE and BLEU scores for NLP model evaluation",
+        "[exa] LLM Evaluation: BLEU - ROUGE",
+        "[exa-h] **BLUE**score was first created to automatically evaluate machine translation, while**ROUGE**was created a little later "
+      ],
+      "latency": 8.058423519134521
+    },
+    {
+      "topic": "Factuality: hallucination detection",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Simple Factuality Probes Detect Hallucinations in Long-Form Natural Language Generation - ACL Anthology",
+        "[exa-h] > Large Language Models (LLMs) frequently exhibit hallucinations, generating content that appears fluent and coherent bu"
+      ],
+      "latency": 8.915493965148926
+    },
+    {
+      "topic": "Toxicity: safety metrics",
+      "area": "metrics",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 4 Assessment of Toxicity",
+        "[exa] Toxicity levels of chemicals",
+        "[exa-h] This chapter discusses the methods used to evaluate the toxicity of a substance for the purpose of health risk assessmen"
+      ],
+      "latency": 7.7158918380737305
+    },
+    {
+      "topic": "Human evaluation: annotation",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] GENIE: Toward Reproducible and Standardized Human Evaluation for Text Generation - ACL Anthology",
+        "[exa-h] > While often assumed a gold standard, effective human evaluation of text generation remains an important, open area for"
+      ],
+      "latency": 7.3331520557403564
+    },
+    {
+      "topic": "LLM-as-judge: model evaluation",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > LLM-based judges have emerged as a scalable alternative to human evaluation and are increasingly used to assess, compa"
+      ],
+      "latency": 8.146764516830444
+    },
+    {
+      "topic": "A/B testing: production eval",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About Firebase A/B tests \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Testing models with production variants",
+        "[exa-h] page provides detailed information about howFirebase A/B Testingworks.\n## Sample size\nFirebase A/B Testinginference does"
+      ],
+      "latency": 9.612992525100708
+    },
+    {
+      "topic": "Contamination: data leakage",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is data leakage in machine learning?",
+        "[exa] Guiding questions to avoid data leakage in biological machine learning applications",
+        "[exa-h] Data leakage in[machine learning] occurs when a model uses information during training that wouldn't be available at the"
+      ],
+      "latency": 6.97830057144165
+    },
+    {
+      "topic": "Chatbot Arena: ELO rankings",
+      "area": "leaderboards",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Chatbot Arena and the Elo rating system - Part 1",
+        "[exa] Arena Elo Rating System",
+        "[exa-h] [Chatbot Arena], developed by members from LMSYS and UC Berkeley SkyLab, is a benchmark platform designed to evaluate la"
+      ],
+      "latency": 7.755368232727051
+    },
+    {
+      "topic": "Open LLM Leaderboard: HuggingFace",
+      "area": "leaderboards",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Open LLM Leaderboard",
+        "[exa] Leaderboards",
+        "[exa-h] In this space you will find the dataset with detailed results and queries for the models on the leaderboard.\nScore resul"
+      ],
+      "latency": 8.266763687133789
+    },
+    {
+      "topic": "AlpacaEval: instruction following",
+      "area": "leaderboards",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] AlpacaEval\n             \n                 \n            Leaderboard",
+        "[exa-h] ## Repository files navigation\n\n# [AlpacaEval] : An Automatic Evaluator for Instruction-following Language Models"
+      ],
+      "latency": 7.781557083129883
+    },
+    {
+      "topic": "MT-Bench: multi-turn chat",
+      "area": "leaderboards",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] MT-Bench-101: A Fine-Grained Benchmark for Evaluating Large Language Models in Multi-Turn Dialogues - ADS",
+        "[exa-h] [Submitted on 22 Feb 2024 ([v1]), last revised 5 Nov 2024 (this version, v3)]\n# Title:MT-Bench-101: A Fine-Grained Bench"
+      ],
+      "latency": 6.126499176025391
+    }
+  ]
+}

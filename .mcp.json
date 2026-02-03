@@ -1,9 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/mcp-config.json",
-  "_notice": "V36 Architecture: Primary MCP config is in platform/.mcp.json",
-  "_canonical": "platform/.mcp.json",
-  "_optimized": "2026-02-03 - Windows best practices, timeouts, production env",
+  "_notice": "V36 Architecture - Extended MCP config with tiered servers",
+  "_optimized": "2026-02-03 - All tiers activated, Windows best practices",
+  "_reference": ".mcp.unleashed.json for optional servers (search, DB, integrations)",
   "mcpServers": {
+
+    "__tier1": "=== TIER 1: ALWAYS-ON (Core orchestration) ===",
+
     "claude-flow": {
       "command": "npx.cmd",
       "args": ["-y", "@claude-flow/cli@latest", "mcp", "start", "-t", "stdio", "--quiet"],
@@ -29,14 +32,14 @@
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
       },
       "timeout": 15000,
-      "description": "GitHub API operations"
+      "description": "GitHub API operations (repos, PRs, issues, actions)"
     },
 
     "filesystem": {
       "command": "npx.cmd",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "Z:/insider/AUTO CLAUDE/unleash"],
       "timeout": 10000,
-      "description": "File operations"
+      "description": "File operations within project scope"
     },
 
     "memory": {
@@ -51,6 +54,44 @@
       "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
       "timeout": 15000,
       "description": "Extended multi-step reasoning chains"
+    },
+
+    "__tier2": "=== TIER 2: KNOWLEDGE & DOCS (No API keys needed) ===",
+
+    "context7": {
+      "command": "npx.cmd",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "timeout": 15000,
+      "description": "Real-time library documentation lookup (battle-tested)"
+    },
+
+    "fetch": {
+      "command": "npx.cmd",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "timeout": 30000,
+      "description": "HTTP fetch for web content retrieval"
+    },
+
+    "__tier3": "=== TIER 3: RESEARCH (Requires API keys) ===",
+
+    "exa": {
+      "command": "npx.cmd",
+      "args": ["-y", "exa-mcp-server"],
+      "env": {
+        "EXA_API_KEY": "${EXA_API_KEY}"
+      },
+      "timeout": 30000,
+      "description": "AI-powered web search with deep research mode"
+    },
+
+    "firecrawl": {
+      "command": "npx.cmd",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
+      },
+      "timeout": 30000,
+      "description": "AI web scraping: crawl, scrape, extract, map sites"
     }
   }
 }

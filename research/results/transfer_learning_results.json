@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:10:20.641685",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 90
+  },
+  "results": [
+    {
+      "topic": "Self-supervised pre-training: masked LM, contrastive",
+      "area": "pretraining",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > While supervised learning has enabled great progress in many applications, unsupervised learning has not seen such wid"
+      ],
+      "latency": 4.079180955886841
+    },
+    {
+      "topic": "Foundation models: large-scale pre-training",
+      "area": "pretraining",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Pretrained Foundation Models (PFMs) are regarded as the foundation for various downstream tasks with different data mo"
+      ],
+      "latency": 8.672534465789795
+    },
+    {
+      "topic": "Multimodal pre-training: CLIP, ALIGN, vision-language",
+      "area": "pretraining",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Vision-Language Pre-training (VLP) has advanced the performance for many vision-language tasks. However, most existing"
+      ],
+      "latency": 4.001073360443115
+    },
+    {
+      "topic": "Pre-training data: curation, quality, scale",
+      "area": "pretraining",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] first systematic study across the entire pipeline of pretraining set construction. First, we run ablations on existing t"
+      ],
+      "latency": 8.580276012420654
+    },
+    {
+      "topic": "Full fine-tuning: adapting pre-trained models",
+      "area": "finetuning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transformers",
+        "[exa] Transformers",
+        "[exa-h] Fine-tuning adapts a pretrained model to a specific task with a smaller specialized dataset. This approach requires far "
+      ],
+      "latency": 3.6460213661193848
+    },
+    {
+      "topic": "LoRA: low-rank adaptation, parameter-efficient",
+      "area": "finetuning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Low-Rank Adaptation (LoRA), a parameter-efficient fine-tuning method that leverages low-rank adaptation of weight matr"
+      ],
+      "latency": 3.5216023921966553
+    },
+    {
+      "topic": "Prefix tuning: soft prompts, continuous prompts",
+      "area": "finetuning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prefix-Tuning: Optimizing Continuous Prompts for Generation - ACL Anthology",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] language model parameters frozen and instead optimizes a sequence of continuous task-specific vectors, which we call the"
+      ],
+      "latency": 4.028155565261841
+    },
+    {
+      "topic": "Instruction tuning: task generalization",
+      "area": "finetuning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Instruction Matters: A Simple yet Effective Task Selection for\nOptimized Instruction Tuning of Specific Tasks",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Instruction tuning has been proven effective in enhancing zero-shot generalization across various tasks and in improving"
+      ],
+      "latency": 4.345491409301758
+    },
+    {
+      "topic": "Domain adaptation: distribution shift handling",
+      "area": "adaptation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] ",
+        "[exa-h] > We introduce a new representation learning approach for domain adaptation, in which data at training and test time com"
+      ],
+      "latency": 4.585252046585083
+    },
+    {
+      "topic": "Zero-shot transfer: cross-domain generalization",
+      "area": "adaptation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > A modern paradigm for generalization in machine learning and AI consists of pre-training a task-agnostic foundation mo"
+      ],
+      "latency": 5.8589441776275635
+    },
+    {
+      "topic": "Continual learning: avoiding catastrophic forgetting",
+      "area": "adaptation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > To cope with real-world dynamics, an intelligent system needs to incrementally acquire, update, accumulate, and exploi"
+      ],
+      "latency": 3.790656328201294
+    },
+    {
+      "topic": "Multi-task learning: shared representations",
+      "area": "adaptation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] We discuss a general method to learn data representations from multiple tasks. We provide\na justification for this metho"
+      ],
+      "latency": 7.126233100891113
+    },
+    {
+      "topic": "Few-shot learning: learning from limited data",
+      "area": "fewshot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learning from Few Examples: A Summary of Approaches to Few-Shot Learning - ADS",
+        "[exa] Few-Shot Learning",
+        "[exa-h] Few-Shot Learning refers to the problem of learning the underlying pattern in the data just from a few training samples."
+      ],
+      "latency": 7.443803071975708
+    },
+    {
+      "topic": "Meta-learning: learning to learn, MAML",
+      "area": "fewshot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+        "[exa-h] > We propose an algorithm for meta-learning that is model-agnostic, in the sense that it is compatible with any model tr"
+      ],
+      "latency": 8.124670267105103
+    },
+    {
+      "topic": "In-context learning: prompting for adaptation",
+      "area": "fewshot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] A Survey on In-context Learning - ACL Anthology",
+        "[exa-h] > With the increasing capabilities of large language models (LLMs), in-context learning (ICL) has emerged as a new parad"
+      ],
+      "latency": 9.060729026794434
+    },
+    {
+      "topic": "Prototypical networks: metric-based few-shot",
+      "area": "fewshot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > We propose prototypical networks for the problem of few-shot classification, where a classifier must generalize to new"
+      ],
+      "latency": 5.850163459777832
+    },
+    {
+      "topic": "Medical imaging transfer: radiology, pathology",
+      "area": "applications",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Log in | SitecoreAI",
+        "[exa] ",
+        "[exa-h] Log in | SitecoreAI\n![one-sc-production] # Welcome\nTo access SitecoreAI, you must log in.\nEmail address\\*\nPlease enter a"
+      ],
+      "latency": 9.840583562850952
+    },
+    {
+      "topic": "Scientific ML transfer: physics, biology, chemistry",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] behavior of these models as (i) the pre-trained model size is scaled, (ii) the downstream training dataset size is scale"
+      ],
+      "latency": 10.040651082992554
+    },
+    {
+      "topic": "Low-resource NLP: multilingual, endangered languages",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] XTREME-UP: A User-Centric Scarce-Data Benchmark for Under-Represented Languages",
+        "[exa-h] > High-resource language models often fall short in the African context, where there is a critical need for models that "
+      ],
+      "latency": 7.231647729873657
+    },
+    {
+      "topic": "Industrial transfer: manufacturing, quality control",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] untitled",
+        "[exa] How To Plan for Transferring Production To a New Factory: 45 Point Checklist - QualityInspection.org",
+        "[exa-h] 2.4 The guidelines address the following areas at the SU and the RU:\n\u2014 transfer of development and production (processin"
+      ],
+      "latency": 7.796979188919067
+    }
+  ]
+}

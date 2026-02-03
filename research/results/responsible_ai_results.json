@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:51:01.917061",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Responsible AI principles: fairness",
+      "area": "principles",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Our AI Principles",
+        "[exa] How do we ensure fairness in AI?",
+        "[exa-h] 2. Investing in industry-leading approaches to advance safety and security research and benchmarks, pioneering technical"
+      ],
+      "latency": 6.7480480670928955
+    },
+    {
+      "topic": "AI transparency: explainability",
+      "area": "principles",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] interpretability, among other AI system characteristics proposed to support system trust\u0002worthiness are accuracy, privac"
+      ],
+      "latency": 7.87475323677063
+    },
+    {
+      "topic": "Accountability: AI decisions",
+      "area": "principles",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Ethics, Transparency and Accountability Framework for Automated Decision-Making",
+        "[exa-h] congressional addressee\nArtificial Intelligence (AI) Accountability Framework\nTo help managers ensure \naccountability an"
+      ],
+      "latency": 7.061020851135254
+    },
+    {
+      "topic": "Privacy: data protection AI",
+      "area": "principles",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About this guidance",
+        "[exa] How should we assess security and data minimisation in AI?",
+        "[exa-h] This guidance covers what we think is best practice for data protection-compliant AI, as well as how we interpret data p"
+      ],
+      "latency": 6.667725086212158
+    },
+    {
+      "topic": "AI governance frameworks: enterprise",
+      "area": "governance",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] AI Governance Playbook \u2014 Council on AI Governance",
+        "[exa-h] Additional resources related to the Framework are included in the AI RMF Playbook,\nwhich is available via the NIST AI RM"
+      ],
+      "latency": 10.21434760093689
+    },
+    {
+      "topic": "Model risk management: MRM",
+      "area": "governance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] The purpose of this document is to provide comprehensive guidance for banks on \neffective model risk management. Rigorou"
+      ],
+      "latency": 8.850754737854004
+    },
+    {
+      "topic": "AI audit: third-party review",
+      "area": "governance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Frontier AI Auditing: Toward Rigorous Third-Party Assessment of Safety and Security Practices at Leading AI Companies",
+        "[exa-h] Executive Summary\nFrontier AI is becoming critical societal infrastructure, but outsiders lack reliable ways to judge wh"
+      ],
+      "latency": 7.9394426345825195
+    },
+    {
+      "topic": "AI documentation: model cards",
+      "area": "governance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Model Cards Explained",
+        "[exa] ",
+        "[exa-h] Model cards are simple, structured overviews of how an advanced AI model was designed and evaluated, and serve as key ar"
+      ],
+      "latency": 7.607499361038208
+    },
+    {
+      "topic": "EU AI Act: compliance requirements",
+      "area": "regulation",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] L_202401689EN.000101.fmx.xml",
+        "[exa] ",
+        "[exa-h] The purpose of this Regulation is to improve the functioning of the internal market by laying down auniform legal framew"
+      ],
+      "latency": 12.551429510116577
+    },
+    {
+      "topic": "NIST AI RMF: risk framework",
+      "area": "regulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] AI Risk Management Framework",
+        "[exa-h] 1.1 Understanding and Addressing Risks, Impacts, and Harms 4\n1.2 Challenges for AI Risk Management 5\n1.2.1 Risk Measurem"
+      ],
+      "latency": 7.714666843414307
+    },
+    {
+      "topic": "FDA AI/ML: medical devices",
+      "area": "regulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Artificial Intelligence in Software as a Medical Device",
+        "[exa] Artificial Intelligence in Software as a Medical Device",
+        "[exa-h] ## On this page:\n* [What Is Artificial Intelligence and Machine Learning?] \n* [How Are Artificial Intelligence and Machi"
+      ],
+      "latency": 9.9830322265625
+    },
+    {
+      "topic": "Financial AI: regulatory compliance",
+      "area": "regulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Regulating AI in the financial sector: recent developments and main challenges",
+        "[exa] Regulatory approaches to Artificial Intelligence in finance",
+        "[exa-h] implications. While AI exacerbates existing risks such as model risk and data privacy, it does not introduce fundamental"
+      ],
+      "latency": 7.507702112197876
+    },
+    {
+      "topic": "AI red teaming: adversarial testing",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Adversarial Testing for Generative AI \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] ",
+        "[exa-h] ## Additional Resources\n[Google's AI Red Team: the ethical hackers making AI safer] \n[Red Teaming Language Models with L"
+      ],
+      "latency": 8.112566232681274
+    },
+    {
+      "topic": "Bias testing: fairness evaluation",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] AI Fairness 360: An extensible toolkit for detecting and mitigating algorithmic bias",
+        "[exa-h] Differences in algorithmic performance across groups are commonly referred to as algorithmic bias\n(the converse of algor"
+      ],
+      "latency": 8.389239072799683
+    },
+    {
+      "topic": "Robustness testing: edge cases",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What Is an Edge Case?",
+        "[exa] Edge Case Testing: A Comprehensive Guide",
+        "[exa-h] These cases play a critical role in[software testing], which is a process where you check if a software system behaves a"
+      ],
+      "latency": 7.021310329437256
+    },
+    {
+      "topic": "Safety testing: harm prevention",
+      "area": "testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Testing & Certification",
+        "[exa] Testing & Certification",
+        "[exa-h] Federal law requires manufacturers and importers to test many consumer products for compliance with consumer product saf"
+      ],
+      "latency": 7.85219669342041
+    },
+    {
+      "topic": "AI Fairness 360: IBM toolkit",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Fairness 360",
+        "[exa] AI Fairness 360: An extensible toolkit for detecting and mitigating algorithmic bias",
+        "[exa-h] ## There are more than 70 metrics in the GitHub repository already. Add new metrics to the repository and use the Slack "
+      ],
+      "latency": 8.676179885864258
+    },
+    {
+      "topic": "What-If Tool: Google fairness",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What-If Tool",
+        "[exa] What-If Tool",
+        "[exa-h] The What-If Tool lets you try on five different types of fairness. What do they mean?\n[Read the article] arrow\\_right\\_a"
+      ],
+      "latency": 7.008580684661865
+    },
+    {
+      "topic": "Aequitas: bias audit",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Bias and Fairness Audit Toolkit for Machine Learning \u00b6",
+        "[exa] Welcome to Aequitas \u00b6",
+        "[exa-h] Aequitas is an open-source bias audit toolkit for machine learning developers, analysts, and policymakers to audit machi"
+      ],
+      "latency": 6.648027181625366
+    },
+    {
+      "topic": "Responsible AI toolkits: MLOps",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Responsible Generative AI Toolkit",
+        "[exa] RAI Toolkit",
+        "[exa-h] * [Responsible Generative AI Toolkit] \nSend feedback\n# Responsible Generative AI Toolkit\nTools and guidance to design, b"
+      ],
+      "latency": 8.4717435836792
+    }
+  ]
+}

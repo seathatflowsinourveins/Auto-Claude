@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:26:42.675333",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "MCP protocol: JSON-RPC, capabilities, initialization",
+      "area": "protocol",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Base Protocol",
+        "[exa] Base Protocol",
+        "[exa-h] The Model Context Protocol consists of several key components that work together:\n* **Base Protocol**: Core JSON-RPC mes"
+      ],
+      "latency": 5.999862909317017
+    },
+    {
+      "topic": "MCP transport: stdio, SSE, HTTP, WebSocket",
+      "area": "protocol",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transport Options",
+        "[exa] Transports - Stainless MCP Portal",
+        "[exa-h] Transport layers handle the communication between MCP clients and servers. Each transport has different characteristics "
+      ],
+      "latency": 5.090994119644165
+    },
+    {
+      "topic": "MCP message types: request, response, notification",
+      "area": "protocol",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Messages \u2013 Model Context Protocol \uff08MCP\uff09",
+        "[exa] Message Types Reference \u00b6",
+        "[exa-h] [Base Protocol] \nMessages\n# Messages\n**Protocol Revision**: draft\nAll messages in MCP**MUST**follow the[JSON-RPC 2.0] sp"
+      ],
+      "latency": 4.9954893589019775
+    },
+    {
+      "topic": "MCP lifecycle: connect, initialize, list, execute",
+      "area": "protocol",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Connectors and MCP servers Beta",
+        "[exa] MCP developer guide",
+        "[exa-h] Below, we'll step through the process the API takes when calling an MCP tool.\n### Step 1: Listing available tools"
+      ],
+      "latency": 7.315177917480469
+    },
+    {
+      "topic": "MCP tool definition: name, description, input schema",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tools - Model Context Protocol",
+        "[exa] Tools \u2013 MCP \u4e2d\u6587\u7ad9\uff08Model Context Protocol \u4e2d\u6587\uff09",
+        "[exa-h] * `name`: Unique identifier for the tool\n* `title`: Optional human-readable name of the tool for display purposes.\n* `de"
+      ],
+      "latency": 4.963962554931641
+    },
+    {
+      "topic": "MCP tool execution: call, result, error handling",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Guide to Using the Responses API's MCP Tool",
+        "[exa] Tools \u2013 MCP \u4e2d\u6587\u7ad9\uff08Model Context Protocol \u4e2d\u6587\uff09",
+        "[exa-h] 3. Call and approve tools: Once the model knows the available actions, it can invoke one. Each invocation produces an`mc"
+      ],
+      "latency": 7.303751230239868
+    },
+    {
+      "topic": "Dynamic tool registration: runtime tool addition",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tool Registration",
+        "[exa] Adding Tools to ToolUniverse - Complete Tutorial \u00b6",
+        "[exa-h] How to register, manage, and lifecycle tools using navigator.modelContext with registerTool() and provideContext() metho"
+      ],
+      "latency": 6.630849838256836
+    },
+    {
+      "topic": "Tool composition: chaining, parallel execution",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] Snakefiles and Rules #",
+        "[exa-h] LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool \u2014so you"
+      ],
+      "latency": 7.005316495895386
+    },
+    {
+      "topic": "MCP resources: URI schemes, MIME types, content",
+      "area": "resources",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Media Types",
+        "[exa] Media Types",
+        "[exa-h] - [application] \n- [audio] \n- [example] \n- [font] \n- [haptics] \n- [image] \n- [message] \n- [model] \n- [multipart] \n- [tex"
+      ],
+      "latency": 8.767836809158325
+    },
+    {
+      "topic": "Resource templates: dynamic URIs, parameters",
+      "area": "resources",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Parameters in ARM templates",
+        "[exa] Parameters in ARM templates",
+        "[exa-h] Summarize this article for me\nThis article describes how to define and use parameters in your Azure Resource Manager tem"
+      ],
+      "latency": 7.36524510383606
+    },
+    {
+      "topic": "Resource subscriptions: change notifications",
+      "area": "resources",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Set up notifications for changes in resource data",
+        "[exa] Set up Microsoft Graph change notifications with resource data",
+        "[exa-h] Change notifications enable applications to receive alerts when a Microsoft Graph resource they're interested in changes"
+      ],
+      "latency": 5.726706027984619
+    },
+    {
+      "topic": "Binary resources: images, files, streaming",
+      "area": "resources",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 2.35    Resource Binary - Content",
+        "[exa] Using readable streams",
+        "[exa-h] Typically, Binary resources are used for handling content such as:"
+      ],
+      "latency": 6.471982479095459
+    },
+    {
+      "topic": "Building MCP servers: TypeScript SDK, Python SDK",
+      "area": "servers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Custom MCP Server Development: Implementation Guide",
+        "[exa] Build your MCP server",
+        "[exa-h] * Basic knowledge of JSON-RPC protocol concepts### Environment Setup\n**TypeScript/Node.js Setup:**\n```\n`# Create new pro"
+      ],
+      "latency": 9.066424131393433
+    },
+    {
+      "topic": "MCP server patterns: filesystem, database, API wrapper",
+      "area": "servers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding MCP servers",
+        "[exa] Building MCP servers for ChatGPT and API integrations",
+        "[exa-h] MCP servers are programs that expose specific capabilities to AI applications through standardized protocol interfaces.C"
+      ],
+      "latency": 7.767120599746704
+    },
+    {
+      "topic": "MCP server discovery: registry, local config",
+      "area": "servers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MCP Registry",
+        "[exa] MCP Registry",
+        "[exa-h] The MCP registry provides MCP clients with a list of MCP servers, like an app store for MCP servers. It serves as the**a"
+      ],
+      "latency": 6.445563793182373
+    },
+    {
+      "topic": "MCP server security: authentication, authorization",
+      "area": "servers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding Authorization in MCP",
+        "[exa] MCP Server Authentication Overview",
+        "[exa-h] Authorization in the Model Context Protocol (MCP) secures access to sensitive resources and operations exposed by MCP se"
+      ],
+      "latency": 7.897623777389526
+    },
+    {
+      "topic": "Claude Desktop MCP: configuration, debugging",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Debugging - Claude Code Usage Documentation Guide | claudecode.app",
+        "[exa] Debugging & Troubleshooting",
+        "[exa-h] Effective debugging is essential when developing MCP servers or integrating them with applications. This guide covers th"
+      ],
+      "latency": 8.97328519821167
+    },
+    {
+      "topic": "MCP with LangChain: tool integration, agents",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Model Context Protocol (MCP)",
+        "[exa] Using Tools in LangChain Agents",
+        "[exa-h] [Model Context Protocol (MCP)] is an open protocol that standardizes how applications provide tools and context to LLMs."
+      ],
+      "latency": 6.305838584899902
+    },
+    {
+      "topic": "MCP marketplace: community servers, distribution",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Find Awesome  MCP  Servers and Clients",
+        "[exa] Discover Model Context Protocol Servers",
+        "[exa-h] mcp.so is a community-driven platform that collects and organizes third-party MCP Servers. It serves as a central direct"
+      ],
+      "latency": 5.111737489700317
+    },
+    {
+      "topic": "Custom MCP clients: building host applications",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Building MCP Clients",
+        "[exa] Build an MCP Client (Core)",
+        "[exa-h] ## Overview[\n] \nMCP clients connect to servers to access tools, resources, and prompts. MCP-Go provides client implement"
+      ],
+      "latency": 10.39385986328125
+    }
+  ]
+}

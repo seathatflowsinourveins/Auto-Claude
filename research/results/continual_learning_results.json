@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:29:43.606544",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 91
+  },
+  "results": [
+    {
+      "topic": "Catastrophic forgetting: neural network stability",
+      "area": "forgetting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overcoming catastrophic forgetting in neural networks - ADS",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Deep neural networks are currently the most successful machine-learning technique for solving a variety of tasks, includ"
+      ],
+      "latency": 9.529415845870972
+    },
+    {
+      "topic": "Elastic weight consolidation: EWC method",
+      "area": "forgetting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Elastic Weight Consolidation (EWC): Nuts and Bolts - ADS",
+        "[exa-h] > In this report, we present a theoretical support of the continual learning method \\textbf{Elastic Weight Consolidation"
+      ],
+      "latency": 8.345824241638184
+    },
+    {
+      "topic": "Synaptic intelligence: importance-based",
+      "area": "forgetting",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Cognition all the way down 2.0: neuroscience beyond neurons in the diverse intelligence era",
+        "[exa] Introducing principles of synaptic integration in the optimization of deep neural networks",
+        "[exa-h] But*what is*cognition under this view? According to a \u201cphyletically neutral\u201d operational definition (Lyon,[2020], p. 416"
+      ],
+      "latency": 5.472642421722412
+    },
+    {
+      "topic": "Memory aware synapses: online learning",
+      "area": "forgetting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Continual Learning Through Synaptic Intelligence",
+        "[exa-h] (MAS). It computes the importance of the parameters of a neural network in an\nunsupervised and online manner. Given a ne"
+      ],
+      "latency": 6.552508115768433
+    },
+    {
+      "topic": "Replay methods: experience replay, generative",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Sample-efficient online reinforcement learning often uses replay buffers to store experience for reuse when updating t"
+      ],
+      "latency": 8.181041955947876
+    },
+    {
+      "topic": "Regularization methods: parameter protection",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Regularization (mathematics)",
+        "[exa] Overfitting: L2 regularization \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] within the data rather than memorizing it. Techniques like[early stopping], L1 and[L2 regularization], and[dropout] are "
+      ],
+      "latency": 9.712032794952393
+    },
+    {
+      "topic": "Architecture methods: dynamic networks",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] (PDF) Dynamic Neural Networks: A Survey",
+        "[exa-h] > Dynamic neural network is an emerging research topic in deep learning. Compared to static models which have fixed comp"
+      ],
+      "latency": 8.271042346954346
+    },
+    {
+      "topic": "Progressive neural networks: lateral connections",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Abstract:Learning to solve complex sequences of tasks--while both leveraging transfer and avoiding catastrophic forget"
+      ],
+      "latency": 7.144770860671997
+    },
+    {
+      "topic": "Task-incremental learning: task boundaries",
+      "area": "scenarios",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Three types of incremental learning",
+        "[exa-h] learning. Informally, (a) in task-incremental learning, an algorithm \nmust incrementally learn a set of clearly distingu"
+      ],
+      "latency": 6.748764753341675
+    },
+    {
+      "topic": "Class-incremental learning: new classes",
+      "area": "scenarios",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Class-incremental learning: survey and performance evaluation on image classification - ADS",
+        "[exa-h] > Deep models, e.g., CNNs and Vision Transformers, have achieved impressive achievements in many vision tasks in the clo"
+      ],
+      "latency": 9.123504161834717
+    },
+    {
+      "topic": "Domain-incremental learning: distribution shift",
+      "area": "scenarios",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] of domain generalization, where the training data are structured into domains and\nthere may be multiple test time shifts"
+      ],
+      "latency": 5.770595073699951
+    },
+    {
+      "topic": "Online continual learning: streaming data",
+      "area": "scenarios",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > One of the most well-established applications of machine learning is in deciding what content to show website visitors"
+      ],
+      "latency": 7.365150690078735
+    },
+    {
+      "topic": "Continual learning robotics: skill acquisition",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] Distributed under a Creative Commons Attribution - NonCommercial 4.0 International License\nContinual Learning for Roboti"
+      ],
+      "latency": 5.816959857940674
+    },
+    {
+      "topic": "Continual learning NLP: language evolution",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Lifelong Pretraining: Continually Adapting Language Models to Emerging Corpora - ACL Anthology",
+        "[exa-h] evolving content, from base models pre-trained with a particular\nyear\u2019s data.\n3 DYNAMIC LANGUAGE MODELING\nOur language i"
+      ],
+      "latency": 4.0450966358184814
+    },
+    {
+      "topic": "Continual learning vision: visual adaptation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Beyond image classification, some works have fo\u0002cused on other computer vision problems, such as do\u0002main adaptation [48]"
+      ],
+      "latency": 4.565555095672607
+    },
+    {
+      "topic": "Production ML: model updating",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deployment guardrails for updating models in production",
+        "[exa] Production ML systems: Static versus dynamic training \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Deployment guardrails are a set of model deployment options in Amazon SageMaker AI Inference to update\nyour machine lear"
+      ],
+      "latency": 4.004453182220459
+    },
+    {
+      "topic": "Avalanche: continual learning library",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Avalanche: an End-to-End Library for Continual Learning",
+        "[exa] Avalanche: an End-to-End Library for Continual Learning",
+        "[exa-h] **Avalanche**is an*End-to-End Continual Learning Library*based on[**PyTorch**arrow-up-right], born within[**ContinualAI*"
+      ],
+      "latency": 4.517347097396851
+    },
+    {
+      "topic": "Continual learning benchmarks: Split-CIFAR",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Daily Papers",
+        "[exa] ",
+        "[exa-h] technique can maintaining robustness by collaborating with a class of defense\nalgorithms through sample gradient smoothi"
+      ],
+      "latency": 4.349236726760864
+    },
+    {
+      "topic": "Meta-continual learning: learning to learn",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > General-purpose learning systems should improve themselves in open-ended fashion in ever-changing environments. Conven"
+      ],
+      "latency": 4.891914129257202
+    },
+    {
+      "topic": "Neuroscience inspired: brain-like learning",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Neural and Evolutionary Computing",
+        "[exa] Quantitative Biology > Neurons and Cognition",
+        "[exa-h] learning processes. This paper presents a comprehensive review of current brain-inspired learning representations in art"
+      ],
+      "latency": 8.526687383651733
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:34:56.556514",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 93
+  },
+  "results": [
+    {
+      "topic": "Neuro-symbolic AI: combining neural, symbolic",
+      "area": "foundations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Reasoning in Deep Learning Era: From Symbolic AI to Neural\u2013Symbolic AI | MDPI",
+        "[exa] From statistical relational to neurosymbolic artificial intelligence: A survey",
+        "[exa-h] In response, the emerging paradigm of Neural\u2013Symbolic AI has gained significant traction. This paradigm aims to unify sy"
+      ],
+      "latency": 8.844823360443115
+    },
+    {
+      "topic": "Neural logic: differentiable reasoning",
+      "area": "foundations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > Abstract:We study the problem of learning probabilistic first-order logical rules for knowledge base reasoning. This l"
+      ],
+      "latency": 5.93131160736084
+    },
+    {
+      "topic": "Symbolic AI: logic programming, expert systems",
+      "area": "foundations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Logic-Based Artificial Intelligence",
+        "[exa] Symbolic artificial intelligence",
+        "[exa-h] about knowledge and belief\n7. Spatial reasoning\n8. Reasoning about vagueness\n9. Argumentation and argumentation theory\n1"
+      ],
+      "latency": 9.710693836212158
+    },
+    {
+      "topic": "Hybrid architectures: best of both worlds",
+      "area": "foundations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Browse Azure Architectures",
+        "[exa] ",
+        "[exa-h] * Virtual Desktop Infrastructure\n* Web\nSearch\nSearch filters\nClear all\nHybrid + multicloud\n## 48 results\n* Architecture\n"
+      ],
+      "latency": 10.898393630981445
+    },
+    {
+      "topic": "Neural theorem proving: automated deduction",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Abstract:We propose an online training procedure for a transformer-based automated theorem prover. Our approach levera"
+      ],
+      "latency": 8.413185358047485
+    },
+    {
+      "topic": "Program synthesis: neural program generation",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Software Engineering",
+        "[exa] Computer Science > Programming Languages",
+        "[exa-h] > Abstract:Program synthesis aims to automatically construct human-readable programs that satisfy given task specificati"
+      ],
+      "latency": 10.098781824111938
+    },
+    {
+      "topic": "Differentiable programming: gradient through code",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Automatic differentiation package - torch.autograd #",
+        "[exa-h] > Deep learning has seen tremendous success over the past decade in computer vision, machine translation, and gameplay. "
+      ],
+      "latency": 8.484066247940063
+    },
+    {
+      "topic": "Neural symbolic integration: seamless fusion",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Neural-Symbolic Integration: A Compositional Perspective",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] Despite significant progress in the development of neural-symbolic frameworks, the question of how to integrate a neural"
+      ],
+      "latency": 10.104512929916382
+    },
+    {
+      "topic": "Knowledge graphs: structured knowledge",
+      "area": "knowledge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Knowledge graph",
+        "[exa] Knowledge Graphs",
+        "[exa-h] In[knowledge representation and reasoning], a**knowledge graph**is a[knowledge base] that uses a[graph] -structured[data"
+      ],
+      "latency": 10.466244459152222
+    },
+    {
+      "topic": "Ontologies: semantic representation",
+      "area": "knowledge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Web Ontology Language (OWL)",
+        "[exa] OWL 2 Web Ontology Language  Primer (Second Edition)",
+        "[exa-h] The W3C Web Ontology Language (OWL) is a Semantic Web language designed to represent rich and complex knowledge about th"
+      ],
+      "latency": 3.8047947883605957
+    },
+    {
+      "topic": "Concept learning: symbolic abstraction",
+      "area": "knowledge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] From Continuous Observations to Symbolic Concepts: A Discrimination-Based Strategy for Grounded Concept Learning",
+        "[exa] Human-level concept learning through probabilistic program induction - ADS",
+        "[exa-h] The main contribution of this paper is a novel method to represent and learn symbolic concepts that provide an abstracti"
+      ],
+      "latency": 4.354109525680542
+    },
+    {
+      "topic": "Commonsense reasoning: world knowledge",
+      "area": "knowledge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Commonsense Reasoning and Commonsense Knowledge in Artificial Intelligence",
+        "[exa] Commonsense knowledge (artificial intelligence)",
+        "[exa-h] [Back to Top] \n### Key Insights\n* To achieve human-level performance in domains such as natural language processing, vis"
+      ],
+      "latency": 9.687955141067505
+    },
+    {
+      "topic": "Explainable AI: interpretable decisions",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Artificial intelligence models encounter significant challenges due to their black-box nature, particularly in safety-"
+      ],
+      "latency": 5.921920537948608
+    },
+    {
+      "topic": "Scientific discovery: hypothesis generation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Scientific Hypothesis Generation and Validation: Methods, Datasets, and Future Directions",
+        "[exa-h] > Hypothesis generation is a fundamental step in scientific discovery, yet it is increasingly challenged by information "
+      ],
+      "latency": 9.352032661437988
+    },
+    {
+      "topic": "Mathematical reasoning: proof assistants",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tutorial: Theorem Proving in Lean",
+        "[exa] Theorem Proving in Lean 4",
+        "[exa-h] This book is designed to teach you to develop and verify proofs in\nLean. Much of the background information you will nee"
+      ],
+      "latency": 9.991689443588257
+    },
+    {
+      "topic": "Question answering: structured reasoning",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Semantic Parsing and Reasoning-Based Approach to Knowledge Base Question Answering",
+        "[exa] The Stanford AI Lab Blog",
+        "[exa-h] Knowledge Base Question Answering (KBQA) is a task where existing techniques have faced significant challenges, such as "
+      ],
+      "latency": 4.209899425506592
+    },
+    {
+      "topic": "AlphaProof: mathematical reasoning",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AlphaProof: AI for Formal Mathematics",
+        "[exa] Olympiad-Level Formal Mathematical Reasoning with Reinforcement Learning",
+        "[exa-h] We can share your product or service with 250K+ researchers, engineers, and scientists everymonth.\n[Sponsorship Info] \n#"
+      ],
+      "latency": 10.945978164672852
+    },
+    {
+      "topic": "LLM + symbolic: augmented reasoning",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Neural-Symbolic Reasoning: Towards the Integration of Logical Reasoning with Large Language Models",
+        "[exa-h] still appear unsatisfactory, often failing in subtle and unpredictable ways. In this work, we investigate the validity o"
+      ],
+      "latency": 4.1418750286102295
+    },
+    {
+      "topic": "Neural-guided search: symbolic solving",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] arXiv reCAPTCHA\n[![Cornell University]] \n[We gratefully acknowledge support from\nthe Simons Foundation and member instit"
+      ],
+      "latency": 5.507167100906372
+    },
+    {
+      "topic": "Cognitive architectures: unified systems",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Sigma Cognitive Architecture and System: Towards Functionally Elegant Grand Unification - ADS",
+        "[exa] (PDF) The Sigma Cognitive Architecture and System: Towards Functionally Elegant Grand Unification",
+        "[exa-h] Sigma (\u03a3) is a cognitive architecture and system whose development is driven by a combination of four desiderata: grand "
+      ],
+      "latency": 6.981182813644409
+    }
+  ]
+}

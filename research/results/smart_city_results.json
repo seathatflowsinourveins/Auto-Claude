@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:15:10.178332",
+  "stats": {
+    "sources": 200,
+    "vectors": 190,
+    "findings": 85
+  },
+  "results": [
+    {
+      "topic": "Intelligent traffic management: signal optimization",
+      "area": "traffic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Intelligent traffic light management using predictive and dynamic traffic flow analysis",
+        "[exa] ",
+        "[exa-h] contrast, adaptive signal control technology dynamically adjusts the timing of red, yellow, and green lights to adapt to"
+      ],
+      "latency": 5.86318039894104
+    },
+    {
+      "topic": "Traffic flow prediction: congestion forecasting",
+      "area": "traffic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Advances in Traffic Congestion Prediction: An Overview of Emerging Techniques and Methods",
+        "[exa] A Systematic Literature Review of Traffic Congestion Forecasting: From Machine Learning Techniques to Large Language Models",
+        "[exa-h] [VersionsNotes] \n## Abstract\n## Highlights\n**What are the main findings?**\n* Traffic prediction involves multiple steps,"
+      ],
+      "latency": 6.1468188762664795
+    },
+    {
+      "topic": "Parking management: smart parking, availability",
+      "area": "traffic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Contemporary Approaches to Parking Pricing: A Primer",
+        "[exa] SMART PARKING IN FAST-GROWING CITIES",
+        "[exa-h] The tools to manage parking inventory and facilities are advancing rapidly, helping to support and make possible some of"
+      ],
+      "latency": 5.220635175704956
+    },
+    {
+      "topic": "Public transit optimization: route, schedule AI",
+      "area": "traffic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Optibus  AI",
+        "[exa] ",
+        "[exa-h] ###### AI has always powered the Optibus platform. Now, Optibus AI takes it further with a suite of Generative AI tools "
+      ],
+      "latency": 4.701297044754028
+    },
+    {
+      "topic": "Smart grid management: energy distribution AI",
+      "area": "utilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A deep learning and IoT-driven framework for real-time adaptive resource allocation and grid optimization in smart energy systems",
+        "[exa] A comprehensive review of artificial intelligence approaches for smart grid integration and optimization \u2606",
+        "[exa-h] The rapid evolution of smart grids, driven by rising global energy demand and renewable energy integration, calls for in"
+      ],
+      "latency": 3.766108512878418
+    },
+    {
+      "topic": "Water management: leak detection, quality monitoring",
+      "area": "utilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Online Water Quality Monitoring Primer",
+        "[exa-h] water to service connections throughout a service area. Online Water Quality Monitoring in Distribution \nSystems (OWQM-D"
+      ],
+      "latency": 5.476925611495972
+    },
+    {
+      "topic": "Waste management: smart bins, route optimization",
+      "area": "utilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Review The smart waste collection routing problem: Alternative operational management approaches",
+        "[exa] ",
+        "[exa-h] This work introduces the Smart Waste Collection Routing Problem, where it is assumed that uncertainty regarding the amou"
+      ],
+      "latency": 3.5245790481567383
+    },
+    {
+      "topic": "Air quality monitoring: pollution prediction",
+      "area": "utilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NOAA NWS OSTI Air Quality",
+        "[exa] CALIOPE Air Quality Forecast",
+        "[exa-h] NAQFC develops and implements operational air quality forecast guidance for the United States. Current operational predi"
+      ],
+      "latency": 7.528149127960205
+    },
+    {
+      "topic": "Predictive policing: crime pattern analysis",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] with the goal of reducing crime risk or solving past crimes.\n\u2022 Predictive policing techniques can be used to identify \np"
+      ],
+      "latency": 7.2276997566223145
+    },
+    {
+      "topic": "Emergency response: incident detection, dispatch",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] detecting and reporting incidents, monitoring and controlling\na fleet of response vehicles, and finally dispatching resp"
+      ],
+      "latency": 5.811789035797119
+    },
+    {
+      "topic": "Video surveillance: crowd monitoring, anomaly detection",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Robust crowd anomaly detection via hybrid ensemble learning for real-world surveillance",
+        "[exa] Deep crowd anomaly detection: state-of-the-art, challenges, and future research directions",
+        "[exa-h] Crowd Anomaly Detection (CAD) is a crucial task in intelligent surveillance systems, designed to enhance public safety i"
+      ],
+      "latency": 5.774142265319824
+    },
+    {
+      "topic": "Disaster management: prediction, response coordination",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] The NRF is a guide to how the Nation responds to all types of disasters and emergencies. The NRF is \nbuilt on scalable, "
+      ],
+      "latency": 5.869078874588013
+    },
+    {
+      "topic": "Urban simulation: city modeling, scenario planning",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] UrbanSim \u00b6",
+        "[exa] Urban Data Science Toolkit",
+        "[exa-h] This`urbansim`Python library is a core component. It contains tools for statistical estimation and simulation; domain-sp"
+      ],
+      "latency": 6.6865925788879395
+    },
+    {
+      "topic": "Land use prediction: development pattern analysis",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Modeling non-stationary urban growth: The SPRAWL model and the ecological impacts of development",
+        "[exa] Remote sensing as the foundation for high-resolution United States landscape projections \u2013 The Land Change Monitoring, assessment, and projection (LCMAP) initiative",
+        "[exa-h] Urban development is a principal driver of landscape change affecting the integrity of ecological systems and the capaci"
+      ],
+      "latency": 9.543206214904785
+    },
+    {
+      "topic": "Population dynamics: mobility, demographic modeling",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A multidimensional global migration model for use in cohort-component population projections",
+        "[exa] A multidimensional global migration model for use in cohort-component population projections",
+        "[exa-h] Background: International migration is influenced by economic and social factors that change over time. However, given t"
+      ],
+      "latency": 5.804266929626465
+    },
+    {
+      "topic": "Infrastructure planning: AI-driven investment",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Digital twins: Boosting ROI of government infrastructure investments",
+        "[exa] Best-in-class infrastructure planning: What it takes to excel",
+        "[exa-h] Given the scale and potential of government infrastructure projects\u2014as well as the challenges involved in getting them r"
+      ],
+      "latency": 6.893080949783325
+    },
+    {
+      "topic": "Sidewalk Labs: urban innovation technology",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stay informed \u2013 Google Earth",
+        "[exa] Products by Sidewalk Labs | Technology for Sustainable and Affordable Cities",
+        "[exa-h] * What types of Google Earth features are you interested in receiving updates about?\n* Collaboration & map making tools\n"
+      ],
+      "latency": 7.441957473754883
+    },
+    {
+      "topic": "Cisco Kinetic: smart city IoT platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Cisco Kinetic-Smart+Connected Digital Platform | Intelligent Cities Challenge",
+        "[exa-h] and job opportunities. The platform aggregates and organizes data from city infrastructure sensors and other data source"
+      ],
+      "latency": 4.226279258728027
+    },
+    {
+      "topic": "IBM Intelligent Operations: city management",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] IBM Intelligent Operations Center for Smarter Cities",
+        "[exa] IBM Smarter Cities - Future cities solutions",
+        "[exa-h] **Business value**\nIBM Intelligent Operations Center provides the following benefits:\n* Helps city officials to better m"
+      ],
+      "latency": 7.330271482467651
+    },
+    {
+      "topic": "Microsoft CityNext: urban cloud solutions",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Microsoft for government transportation and urban infrastructure",
+        "[exa] What are smart cities?",
+        "[exa-h] Build, manage, and deploy applications remotely to solve government IT infrastructure challenges of any size.\n\n[Learn mo"
+      ],
+      "latency": 5.554374933242798
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:47:38.305587",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "GPT-4V: OpenAI vision model",
+      "area": "models",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] GPT-4V(ision) system card",
+        "[exa] ",
+        "[exa-h] GPT\u20114 with vision (GPT\u20114V) enables users to instruct GPT\u20114 to analyze image inputs provided by the user, and is the late"
+      ],
+      "latency": 6.546930551528931
+    },
+    {
+      "topic": "Claude Vision: Anthropic multimodal",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Vision - Claude API Docs",
+        "[exa] Vision - Claude API Docs",
+        "[exa-h] Claude's vision capabilities allow it to understand and analyze images, opening up exciting possibilities for multimodal"
+      ],
+      "latency": 7.472889423370361
+    },
+    {
+      "topic": "Gemini Pro Vision: Google VLM",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gemini 3 Pro: the frontier of vision AI",
+        "[exa] Gemini 2.5 Pro \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Gemini 3 Pro delivers state-of-the-art performance across document, spatial, screen and video understanding.\nRohan Doshi"
+      ],
+      "latency": 7.267207622528076
+    },
+    {
+      "topic": "LLaVA: open vision-language",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] LLaVA: Large Language and Vision Assistant - Microsoft Research",
+        "[exa-h] To overcome the aforementioned limitations, we introduce LLaVA-OneVision-1.5, a fully open\u0002source family of LMMs, extend"
+      ],
+      "latency": 7.03058934211731
+    },
+    {
+      "topic": "CLIP: contrastive learning",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Contrastive Language-Image Pre-training",
+        "[exa] ",
+        "[exa-h] **Contrastive Language-Image Pre-training**(**CLIP**) is a technique for training a pair of[neural network] models, one "
+      ],
+      "latency": 7.701940536499023
+    },
+    {
+      "topic": "BLIP-2: bootstrapped VLM",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] BLIP-2: Bootstrapping Language-Image Pre-training \n with Frozen Image Encoders and Large Language Models",
+        "[exa-h] become increasingly prohibitive due to end-to\u0002end training of large-scale models. This paper\nproposes BLIP-2, a generic "
+      ],
+      "latency": 7.195020914077759
+    },
+    {
+      "topic": "Flamingo: visual language model",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Building models that can be rapidly adapted to novel tasks using only a handful of\nannotated examples is an open challen"
+      ],
+      "latency": 7.470044136047363
+    },
+    {
+      "topic": "CogVLM: cognitive VLM",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] CogVLM: Visual Expert for Pretrained Language Models - ADS",
+        "[exa-h] visual language foundation model. Different\nfrom the popular shallow alignment method\nwhich maps image features into the"
+      ],
+      "latency": 6.499008417129517
+    },
+    {
+      "topic": "Vision encoder: image features",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Transformers",
+        "[exa-h] > We introduce Perception Encoder (PE), a state-of-the-art vision encoder for image and video understanding trained via "
+      ],
+      "latency": 5.942181587219238
+    },
+    {
+      "topic": "Projection layer: modality bridge",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multimodal Projection Module",
+        "[exa] ",
+        "[exa-h] A multimodal projection module is a fundamental architectural element that aligns heterogeneous modality-specific repres"
+      ],
+      "latency": 7.269871234893799
+    },
+    {
+      "topic": "Visual instruction tuning: VIT",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Learning to Instruct for Visual Instruction Tuning - ADS",
+        "[exa-h] > Abstract:We propose L2T, an advancement of visual instruction tuning (VIT). While VIT equips Multimodal LLMs (MLLMs) w"
+      ],
+      "latency": 6.231413841247559
+    },
+    {
+      "topic": "Image-text pairs: pretraining data",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] **Wikipedia-based Image Text (WIT) Dataset**is a large**multimodal\nmultilingual**dataset. WIT is composed of a curated s"
+      ],
+      "latency": 5.839953899383545
+    },
+    {
+      "topic": "Image understanding: visual QA",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is VQA?",
+        "[exa] ",
+        "[exa-h] VQA is a new dataset containing open-ended questions about images. These questions require an understanding of vision, l"
+      ],
+      "latency": 5.976505517959595
+    },
+    {
+      "topic": "OCR: document reading",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Document AI documentation",
+        "[exa] OCR (Optical Character Recognition)",
+        "[exa-h] Training\nTraining and tutorials\n### [Optical Character Recognition (OCR) with Document AI (Python)] \nThis codelab will t"
+      ],
+      "latency": 10.02647876739502
+    },
+    {
+      "topic": "Chart understanding: data viz",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Client Challenge",
+        "[exa] ",
+        "[exa-h] Client Challenge\nA required part of this site couldn\u2019t load. This may be due to a browser\nextension, network issues, or "
+      ],
+      "latency": 7.583594083786011
+    },
+    {
+      "topic": "Spatial reasoning: object relations",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Young Children\u2019s Representations of Spatial and Functional Relations Between Objects",
+        "[exa] APA PsycNET",
+        "[exa-h] During the second and third years of life, children begin to attempt to pile blocks on top of one another, put lids on p"
+      ],
+      "latency": 8.45108938217163
+    },
+    {
+      "topic": "Document AI: invoice processing",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Document AI for procurement",
+        "[exa] Invoice processing prebuilt AI model",
+        "[exa-h] Document AI, powered by Google Cloud\u2019s industry-leading OCR and natural language process, reads and understands document"
+      ],
+      "latency": 8.137863874435425
+    },
+    {
+      "topic": "Visual agents: GUI automation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Human-Computer Interaction",
+        "[exa-h] > Automating GUI tasks remains challenging due to reliance on textual representations, platform-specific action spaces, "
+      ],
+      "latency": 7.604435920715332
+    },
+    {
+      "topic": "Medical imaging: radiology AI",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Developing, Purchasing, Implementing and Monitoring AI Tools in Radiology: Practical Considerations. A Multi-Society Statement from the ACR, CAR, ESR, RANZCR and RSNA",
+        "[exa] Artificial intelligence in radiology: a narrative review of current methods, clinical impact, and future directions",
+        "[exa-h] Artificial Intelligence (AI) carries the potential for unprecedented disruption in radiology, with possible positive and"
+      ],
+      "latency": 8.28784441947937
+    },
+    {
+      "topic": "Accessibility: image descriptions",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Images Tutorial",
+        "[exa] Images \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Images must have text alternatives that describe the information or function represented by them. This ensures that imag"
+      ],
+      "latency": 5.606771945953369
+    }
+  ]
+}

@@ -23,7 +23,7 @@ import argparse
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 from dataclasses import dataclass, field, asdict
 import logging
@@ -57,7 +57,7 @@ class ResearchSource:
     key_points: List[str] = field(default_factory=list)
     relevance: float = 0.0
     source_type: str = "web"  # web, pdf, doc
-    scraped_at: str = field(default_factory=lambda: datetime.utcnow().isoformat())
+    scraped_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 
 @dataclass
@@ -70,7 +70,7 @@ class ResearchReport:
     key_findings: List[str] = field(default_factory=list)
     recommendations: List[str] = field(default_factory=list)
     total_sources: int = 0
-    created_at: str = field(default_factory=lambda: datetime.utcnow().isoformat())
+    created_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     status: str = "pending"
 
 

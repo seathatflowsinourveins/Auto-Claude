@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:45:21.704033",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 82
+  },
+  "results": [
+    {
+      "topic": "LLMLingua: prompt compression without quality loss",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLMLingua: Compressing Prompts for Accelerated Inference \n of Large Language Models",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] To accelerate model inference and reduce cost,\nthis paper presentsLLMLingua,"
+      ],
+      "latency": 3.8375983238220215
+    },
+    {
+      "topic": "Selective context: keeping only relevant information",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unlocking Context Constraints of LLMs: Enhancing Context Efficiency of LLMs with Self-Information-Based Content Filtering",
+        "[exa] Context Compression & Selective Expansion",
+        "[exa-h] long documents or maintaining extended conver\u0002sations. This paper proposes a method called\nSelective Context that employ"
+      ],
+      "latency": 4.447545528411865
+    },
+    {
+      "topic": "Summarization for context: condensing long documents",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Abstractive Text Summarization: State of the Art, Challenges, and Improvements - ADS",
+        "[exa] Current Approaches in Abstractive Text Summarization: A Comprehensive Survey and Analysis | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] Specifically focusing on the landscape of abstractive text summarization, as opposed to extractive techniques, this surv"
+      ],
+      "latency": 3.8244800567626953
+    },
+    {
+      "topic": "Recursive summarization: hierarchical context reduction",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Context-Aware Hierarchical Merging for Long Document Summarization - ACL Anthology",
+        "[exa-h] > Hierarchical Merging is a technique commonly used to summarize very long texts ($>$100K tokens) by breaking down the i"
+      ],
+      "latency": 3.608473062515259
+    },
+    {
+      "topic": "Tiktoken: accurate token counting for OpenAI models",
+      "area": "counting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to count tokens with Tiktoken",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Copy PageMore page actions\nDec 16, 2022\n# How to count tokens with Tiktoken\nThis recipe is archived and may reference ou"
+      ],
+      "latency": 4.572435617446899
+    },
+    {
+      "topic": "Tokenizer differences: GPT vs Claude vs Gemini",
+      "area": "counting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ChatGPT vs. Claude vs. Google Gemini: Full Report and Comparison of models, capabilities, plans, and integrations (Mid\u20112025 overview)",
+        "[exa] Claude AI vs Google Gemini",
+        "[exa-h] further improved. Claude 4 retains Anthropic\u2019s signature*100k+ token context window*(expanded to**200,000 tokens**in Cla"
+      ],
+      "latency": 3.668256998062134
+    },
+    {
+      "topic": "Token budget management: staying within limits",
+      "area": "counting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Setting up budgets to control spending on metered products",
+        "[exa] Best practices for AWS Budgets",
+        "[exa-h] You can set budgets and receive alerts when your usage of a product or license type reaches 75%, 90%, or 100% of a defin"
+      ],
+      "latency": 3.674081563949585
+    },
+    {
+      "topic": "Pre-flight token estimation: avoiding truncation",
+      "area": "counting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] JSON Web Token Best Current Practices",
+        "[exa-h] 3.6. Avoid Compression of Encryption Inputs \nCompression of data be done before encryption, because such compressed data"
+      ],
+      "latency": 7.788665294647217
+    },
+    {
+      "topic": "Prompt caching: OpenAI and Anthropic cached prompts",
+      "area": "cost",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Prompt Caching in the API",
+        "[exa] Prompt Caching 101",
+        "[exa-h] Many developers use the same context repeatedly across multiple API calls when building AI applications, like when makin"
+      ],
+      "latency": 3.3718087673187256
+    },
+    {
+      "topic": "Batch API: reduced costs for async processing",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Batch API | OpenAI API",
+        "[exa] Batch: Simplicity for Batch Computing | Google Cloud",
+        "[exa-h] Learn how to use OpenAI's Batch API to send asynchronous groups of requests with 50% lower costs, a separate pool of sig"
+      ],
+      "latency": 6.074841499328613
+    },
+    {
+      "topic": "Token-efficient prompting: minimizing input tokens",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] efficiency--balancing performance and token usage--can be a more practical metric for real-world utility. To enable this"
+      ],
+      "latency": 5.529731512069702
+    },
+    {
+      "topic": "Response length control: limiting output tokens",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Controlling the length of OpenAI model responses",
+        "[exa-h] > Large Language Models (LLMs) are increasingly used in production systems, powering applications such as chatbots, summ"
+      ],
+      "latency": 4.306348085403442
+    },
+    {
+      "topic": "Sliding window context: managing conversation history",
+      "area": "management",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Manage application history \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Context Management \u00b6",
+        "[exa-h] a strategy to select the most relevant parts of the history to include in the\nprompt for the next API call:\n* Sliding wi"
+      ],
+      "latency": 5.050583839416504
+    },
+    {
+      "topic": "Context prioritization: important vs optional content",
+      "area": "management",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prioritize: Good Content Bubbles to the Top",
+        "[exa] Content Priority Guide",
+        "[exa-h] 1. In**lists of items**, make sure the ones the user is most likely to want come out on top or are made to stand out.\n2."
+      ],
+      "latency": 5.2387473583221436
+    },
+    {
+      "topic": "Dynamic context: adding/removing based on relevance",
+      "area": "management",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Memory - Docs by LangChain",
+        "[exa] Context overview",
+        "[exa-h] * [Add short-term memory] as a part of your agent\u2019s[state] to enable multi-turn conversations.\n* [Add long-term memory] "
+      ],
+      "latency": 4.39250373840332
+    },
+    {
+      "topic": "Context chunking: splitting large documents",
+      "area": "management",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLM based context splitter for large documents",
+        "[exa] Effective Chunking Strategies for RAG",
+        "[exa-h] When dealing with large text that doesn\u2019t fit the context window of the LLM, it\u2019s necessary to split the text into small"
+      ],
+      "latency": 4.394211769104004
+    },
+    {
+      "topic": "Attention-aware compression: preserving key information",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] compression process. Our preliminary study supports this hypothesis, emphasizing the significance of retaining key infor"
+      ],
+      "latency": 5.2075817584991455
+    },
+    {
+      "topic": "Token efficiency metrics: measuring cost per task",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] OckBench",
+        "[exa-h] > Large language models such as GPT-4, Claude 3, and the Gemini series have improved automated reasoning and code genera"
+      ],
+      "latency": 4.324357032775879
+    },
+    {
+      "topic": "Multi-turn optimization: efficient conversation design",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Regressing the Relative Future: \n Efficient Policy Optimization for Multi-turn RLHF",
+        "[exa-h] > Recent advancements in large language models (LLMs) have revolutionized their ability to handle single-turn tasks, yet"
+      ],
+      "latency": 8.560720682144165
+    },
+    {
+      "topic": "Embedding-based selection: semantic context filtering",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Learning to Filter Context for Retrieval-Augmented Generation",
+        "[exa-h] > In embedding-based retrieval, Approximate Nearest Neighbor (ANN) search enables efficient retrieval of similar items f"
+      ],
+      "latency": 4.568974256515503
+    }
+  ]
+}

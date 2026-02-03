@@ -1,0 +1,53 @@
+{
+  "timestamp": "2026-02-02 20:57:48",
+  "exa_features": 8,
+  "docs_fetched": 6,
+  "perplexity_topics": [
+    {
+      "model": "sonar",
+      "topic": "LangChain vs LangGraph",
+      "chars": 2185,
+      "citations": 7
+    },
+    {
+      "model": "sonar-pro",
+      "topic": "Consensus Algorithms",
+      "chars": 3308,
+      "citations": 5
+    }
+  ],
+  "swarm_results": [
+    {
+      "name": "Quick",
+      "query": "React hooks best practices useState useEffect",
+      "tools": [
+        "tavily"
+      ],
+      "sources": 6,
+      "confidence": 0.8939292883333333,
+      "latency": 1.3695201873779297
+    },
+    {
+      "name": "Standard",
+      "query": "Python async await patterns for high-performance APIs",
+      "tools": [
+        "tavily"
+      ],
+      "sources": 10,
+      "confidence": 0.95,
+      "latency": 1.5457024574279785
+    },
+    {
+      "name": "Comprehensive",
+      "query": "Multi-agent AI systems architecture patterns and frameworks",
+      "tools": [
+        "jina",
+        "tavily"
+      ],
+      "sources": 12,
+      "confidence": 0.95,
+      "latency": 15.445018768310547
+    }
+  ],
+  "total_time_seconds": 88.52703428268433
+}

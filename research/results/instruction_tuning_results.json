@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:44:14.323855",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Instruction tuning: task-specific training",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Instruction Matters: A Simple yet Effective Task Selection for\nOptimized Instruction Tuning of Specific Tasks",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Instruction tuning has been proven effective in enhancing zero-shot generalization across various tasks and in improving"
+      ],
+      "latency": 6.305628299713135
+    },
+    {
+      "topic": "Supervised fine-tuning: SFT datasets",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Massive Supervised Fine-tuning Experiments Reveal How Data, Layer, and Training Factors Shape LLM Alignment Quality",
+        "[exa] Supervised fine-tuning",
+        "[exa-h] Supervised fine-tuning (SFT) is a critical step in aligning large language models (LLMs) with human instructions and val"
+      ],
+      "latency": 10.94001817703247
+    },
+    {
+      "topic": "Chat fine-tuning: conversation format",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Fine-tuning | OpenAI API Reference",
+        "[exa] How to fine-tune chat models",
+        "[exa-h] [Training format for chat models using the supervised method] \n[Training format for chat models using the preference met"
+      ],
+      "latency": 8.535329341888428
+    },
+    {
+      "topic": "FLAN: instruction-tuned models",
+      "area": "methods",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Introducing FLAN: More generalizable Language Models with Instruction Fine-Tuning",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] In \u201c[Fine-tuned Language Models Are Zero-Shot Learners] \u201d, we explore a simple technique called**instruction fine-tuning"
+      ],
+      "latency": 7.604255437850952
+    },
+    {
+      "topic": "ShareGPT: conversation datasets",
+      "area": "datasets",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] [We gratefully acknowledge support from\\\nthe Simons Foundation and member institutions.]"
+      ],
+      "latency": 10.442239046096802
+    },
+    {
+      "topic": "Alpaca: instruction dataset",
+      "area": "datasets",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Data Format and Structure",
+        "[exa-h] Resetting focus\nYou signed in with another tab or window.[Reload] to refresh your session.You signed out in another tab "
+      ],
+      "latency": 7.200924396514893
+    },
+    {
+      "topic": "OpenAssistant: human feedback data",
+      "area": "datasets",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] human-generated, human-annotated assistant-style conversation corpus consisting of 161,443 messages in 35 different lang"
+      ],
+      "latency": 7.672374248504639
+    },
+    {
+      "topic": "Dolly: instruction-following data",
+      "area": "datasets",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Instruction-following is particularly crucial for large language models (LLMs) to support diverse user requests. While"
+      ],
+      "latency": 5.950102090835571
+    },
+    {
+      "topic": "LoRA: low-rank adaptation",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Low-Rank Adaptation (LoRA), a parameter-efficient fine-tuning method that leverages low-rank adaptation of weight matr"
+      ],
+      "latency": 10.249527215957642
+    },
+    {
+      "topic": "QLoRA: quantized LoRA",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] [Submitted on 20 Nov 2023 ([v1]), last revised 27 Aug 2024 (this version, v4)]\n# Title:LQ-LoRA: Low-rank Plus Quantized "
+      ],
+      "latency": 7.839802026748657
+    },
+    {
+      "topic": "Full fine-tuning: all parameters",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Fine-tuning | OpenAI API Reference",
+        "[exa] Fine-tuning",
+        "[exa-h] [Training format for chat models using the supervised method] \n[Training format for chat models using the preference met"
+      ],
+      "latency": 7.3964502811431885
+    },
+    {
+      "topic": "Adapter tuning: lightweight modules",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Latest Posts \ud83d\uddde",
+        "[exa-h] 2Language Technology Lab, University of Cambridge\n3Google DeepMind 4Cohere\nAbstract\nWe introduce Adapters, an open-sourc"
+      ],
+      "latency": 7.860898971557617
+    },
+    {
+      "topic": "Axolotl: fine-tuning framework",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] We make fine-tuning",
+        "[exa] Axolotl",
+        "[exa-h] @developers\n/enablers\nAxolotl is an Open Source tool making fine-tuning AI models faster without sacrificing functionali"
+      ],
+      "latency": 8.231390476226807
+    },
+    {
+      "topic": "Unsloth: fast fine-tuning",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] \ud83e\uddec Fine-tuning LLMs Guide",
+        "[exa] Easily  fine-tune & train LLMs . Get  faster  with unsloth .",
+        "[exa-h] With[Unslotharrow-up-right], you can fine-tune or do RL for free on Colab, Kaggle, or locally with just 3GB VRAM by usin"
+      ],
+      "latency": 7.861357688903809
+    },
+    {
+      "topic": "LLaMA-Factory: efficient training",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Welcome to LLaMA Factory! \u00b6",
+        "[exa-h] > Efficient fine-tuning is vital for adapting large language models (LLMs) to downstream tasks. However, it requires non"
+      ],
+      "latency": 8.90037727355957
+    },
+    {
+      "topic": "DeepSpeed: distributed fine-tuning",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] BingBertSQuAD Fine-tuning",
+        "[exa] Training Overview and Features",
+        "[exa-h] TensorFlow|[Bert-large-uncased-L-24\\_H-1024\\_A-16] |FP16|84.13|91.03|\nHuggingFace|[Bert-large-uncased-whole-word-masking"
+      ],
+      "latency": 7.495973348617554
+    },
+    {
+      "topic": "Instruction following: quality metrics",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 1. Introduction",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Below are bar charts showing the multidimensional performance of different models. Each bar chart shows the evaluation r"
+      ],
+      "latency": 7.469043254852295
+    },
+    {
+      "topic": "Chatbot evaluation: conversation quality",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] {joao,daphnei,kiruba,jthirani,ungar,ccb}@seas.upenn.edu\nAbstract\nOpen-domain dialog systems (i.e., chatbots)\nare difficu"
+      ],
+      "latency": 8.2789146900177
+    },
+    {
+      "topic": "Task performance: downstream tasks",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Chain-of-thought (CoT) prompting has become a widely used strategy for improving large language and multimodal model p"
+      ],
+      "latency": 6.81120491027832
+    },
+    {
+      "topic": "Safety evaluation: alignment checks",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] This report describes research to assess the functional safety of a generic automated lane centering (ALC) system and th"
+      ],
+      "latency": 8.598283767700195
+    }
+  ]
+}

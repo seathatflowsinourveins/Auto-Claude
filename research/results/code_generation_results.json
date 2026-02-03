@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:40:26.315519",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Code completion: context-aware suggestions, fill-in-middle",
+      "area": "completion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Software Engineering",
+        "[exa] IntelliCode Completions",
+        "[exa-h] > Code Completion is one of the most used Integrated Development Environment (IDE) features, which affects the everyday "
+      ],
+      "latency": 8.856797695159912
+    },
+    {
+      "topic": "Multi-file context: cross-file references, project understanding",
+      "area": "completion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Mastering Context: Codebase Indexing and @-References",
+        "[exa] Project References",
+        "[exa-h] The result is a comprehensive \u201cmap\u201d of our codebase that the AI can consult. When we ask a question or give a command, t"
+      ],
+      "latency": 11.211564302444458
+    },
+    {
+      "topic": "Language-specific completion: syntax awareness, idioms",
+      "area": "completion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] YouCompleteMe",
+        "[exa] Completions for GitHub Copilot",
+        "[exa-h] * [JavaScript and TypeScript Semantic Completion] \n* [Semantic Completion for Other Languages] \n* [LSP Configuration] \n*"
+      ],
+      "latency": 7.618345499038696
+    },
+    {
+      "topic": "Copilot alternatives: Codeium, Cursor, Continue, TabNine",
+      "area": "completion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] // Tabnine  vs.  Codeium //",
+        "[exa] // Tabnine  vs.  Cursor //",
+        "[exa-h] Unlike Codeium, Tabnine gives you full control over our AI code assistant by letting you choose what data it uses to add"
+      ],
+      "latency": 6.83091926574707
+    },
+    {
+      "topic": "Natural language to code: specification parsing, implementation",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] existing application programs. Our mechanism, in\ncontrast, automatically generates parser programs\nfrom natural language"
+      ],
+      "latency": 7.692284107208252
+    },
+    {
+      "topic": "Test generation: unit tests, edge cases, mocking",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to Hypothesis! \u00b6",
+        "[exa] Welcome to Hypothesis! \u00b6",
+        "[exa-h] Hypothesis is the property-based testing library for Python. With Hypothesis, you write tests which should pass for all "
+      ],
+      "latency": 13.244596481323242
+    },
+    {
+      "topic": "Documentation generation: docstrings, README, API docs",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Sphinx \u2014 Sphinx documentation",
+        "[exa] Welcome to ReadMe",
+        "[exa-h] Generate API documentation for\nPython, C++ and other[software domains],\nmanually or[automatically from docstrings],\nensu"
+      ],
+      "latency": 7.374816656112671
+    },
+    {
+      "topic": "SQL generation: natural language to SQL, schema awareness",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] MySQL :: MySQL AI 9.5 :: 5.10 Generating SQL Queries From Natural-Language Statements",
+        "[exa-h] \u2022 We present Sqlizer, an end-to-end system for synthesizing SQL queries from natural language.\nSqlizer is fully automate"
+      ],
+      "latency": 8.214630842208862
+    },
+    {
+      "topic": "Code review automation: style, bugs, security issues",
+      "area": "analysis",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About GitHub Code Quality",
+        "[exa] About GitHub Code Quality",
+        "[exa-h] Use GitHub Code Quality to flag code quality issues in pull requests and repository scans, apply Copilot-powered autofix"
+      ],
+      "latency": 30.357656478881836
+    },
+    {
+      "topic": "Bug detection: pattern matching, static analysis with LLM",
+      "area": "analysis",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How Semgrep works",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] ![A summary of differences between grep, linters, and Semgrep.] ***Figure**. A summary of differences between grep, lint"
+      ],
+      "latency": 6.590731143951416
+    },
+    {
+      "topic": "Code explanation: function summaries, complexity analysis",
+      "area": "analysis",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Big O Complexity Analysis Edit Page Page History",
+        "[exa] 3.3.  Big-O Notation \u00b6",
+        "[exa-h] Big O notation is used to describe the complexity of an algorithm when measuring its*efficiency*, which in this case mea"
+      ],
+      "latency": 7.867659091949463
+    },
+    {
+      "topic": "Dependency analysis: import graphs, vulnerability detection",
+      "area": "analysis",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview | Semgrep",
+        "[exa] Less effort, more insight: Introducing Dependency Graph for Supply Chain",
+        "[exa-h] Semgrep Supply Chain's[dependency search] feature allows you to query for dependencies in your codebase; it can detect d"
+      ],
+      "latency": 10.734523296356201
+    },
+    {
+      "topic": "AI-assisted refactoring: rename, extract, inline",
+      "area": "refactoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Code Refactoring: Tools, Tactics & Best Practices",
+        "[exa] Refactoring code with GitHub Copilot",
+        "[exa-h] Modern AI-powered tools can handle variable renaming across call sites, function extraction with proper parameter thread"
+      ],
+      "latency": 6.9562084674835205
+    },
+    {
+      "topic": "Code modernization: legacy code updates, pattern migration",
+      "area": "refactoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction to OpenRewrite by Moderne",
+        "[exa] Strangler Fig",
+        "[exa-h] OpenRewrite is an open-source automated refactoring ecosystem for source code, enabling developers to effectively elimin"
+      ],
+      "latency": 6.582127809524536
+    },
+    {
+      "topic": "Performance optimization suggestions: bottleneck identification",
+      "area": "refactoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Analyze runtime performance \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Analyze runtime performance",
+        "[exa-h] Now that you've measured and verified that the animation is not performing well, the next question\nto answer is: why?\n1."
+      ],
+      "latency": 6.940925121307373
+    },
+    {
+      "topic": "Type inference and annotation: dynamic to static typing",
+      "area": "refactoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Type inference and type annotations \u00b6",
+        "[exa] Type inference and type annotations \u00b6",
+        "[exa-h] Type system reference\n* [Built-in types] \n* [Type inference and type annotations] \n* [Kinds of types] \n* [Class basics] "
+      ],
+      "latency": 8.166280269622803
+    },
+    {
+      "topic": "Commit message generation: conventional commits, context-aware",
+      "area": "workflow",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] commitlint Lint commit messages",
+        "[exa-h] `cmt`is a command-line tool that generates meaningful git commit messages using AI models. It analyzes your staged chang"
+      ],
+      "latency": 7.024115085601807
+    },
+    {
+      "topic": "PR description generation: summary, changes, impact",
+      "area": "workflow",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Responsible use of GitHub Copilot pull request summaries",
+        "[exa] Responsible use of GitHub Copilot pull request summaries",
+        "[exa-h] Copilot pull request summaries is an AI-powered feature that allows you to create a summary of the changes that were mad"
+      ],
+      "latency": 10.417101860046387
+    },
+    {
+      "topic": "Issue triage: labeling, assignment, priority estimation",
+      "area": "workflow",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Issue Triage",
+        "[exa] Tutorial: Set up a project for issue triage",
+        "[exa-h] GitLab believes in[Open Development], and we encourage the community to file issues and open merge requests for our proj"
+      ],
+      "latency": 11.951679706573486
+    },
+    {
+      "topic": "Code search: semantic search across repositories",
+      "area": "workflow",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search +\u00a0find code at massive scale",
+        "[exa] ",
+        "[exa-h] Commit + Diff Search.Track code changes and filter by author, date, or branch to find when and why they happened.\nSymbol"
+      ],
+      "latency": 9.928480386734009
+    }
+  ]
+}

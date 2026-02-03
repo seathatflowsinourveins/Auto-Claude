@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:47:45.835009",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Codex: OpenAI code model",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Codex",
+        "[exa] Codex | AI Coding Partner from OpenAI | OpenAI",
+        "[exa-h] Codex is OpenAI\u2019s coding agent for software development. ChatGPT Plus, Pro, Business, Edu, and Enterprise plans include "
+      ],
+      "latency": 9.130072116851807
+    },
+    {
+      "topic": "CodeLlama: Meta code LLM",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Code Llama, a state-of-the-art large language model for coding",
+        "[exa] Code Llama: Open Foundation Models for Code",
+        "[exa-h] Programmers are already using LLMs to assist in a variety of tasks, ranging from writing new software to debugging exist"
+      ],
+      "latency": 6.432349681854248
+    },
+    {
+      "topic": "StarCoder: BigCode open model",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Models - BigCode",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] * [StarCoder Editor]: Edit with StarCoder!### StarCoder Data & Governance[#] \n* [Governance Card]: A card outlining the "
+      ],
+      "latency": 7.569277048110962
+    },
+    {
+      "topic": "DeepSeek Coder: code generation",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] DeepSeek Coder: Let the Code Write Itself",
+        "[exa] DeepSeek Coder \u00bb Deepseek",
+        "[exa-h] DeepSeek Coder comprises a series of code language models trained from scratch on both 87% code and 13% natural language"
+      ],
+      "latency": 7.16685152053833
+    },
+    {
+      "topic": "Code pretraining: GitHub data",
+      "area": "training",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Introducing the CodeSearchNet challenge",
+        "[exa-h] [CodeSearchNet] is a collection of datasets and benchmarks that explore the problem of code retrieval using natural lang"
+      ],
+      "latency": 5.551141977310181
+    },
+    {
+      "topic": "Fill-in-middle: FIM training",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Our goal in this work is to address this limitation by adding fill-in-the-middle (FIM) capability to\ncausal decoder-base"
+      ],
+      "latency": 9.481643438339233
+    },
+    {
+      "topic": "Instruction tuning: code tasks",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] adapt LLMs for solving optimization problems\nin a code-to-code manner. Specifically, we es\u0002tablish a comprehensive instr"
+      ],
+      "latency": 8.222413063049316
+    },
+    {
+      "topic": "RLHF code: human feedback",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] RLHF Workflow: From Reward Modeling to Online RLHF - ADS",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] We present the workflow of Online Iterative Reinforcement Learning from Human Feedback (RLHF) in this technical report, "
+      ],
+      "latency": 8.252678871154785
+    },
+    {
+      "topic": "Code completion: autocomplete",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] IntelliSense",
+        "[exa] IntelliSense",
+        "[exa-h] VS Code IntelliSense features are powered by a language service. A language service provides intelligent code completion"
+      ],
+      "latency": 6.164339065551758
+    },
+    {
+      "topic": "Code generation: natural language",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Code generation",
+        "[exa] GitHub Copilot documentation",
+        "[exa-h] Learn how to use OpenAI Codex models to generate code.\nCopy page\nWriting, reviewing, editing, and answering questions ab"
+      ],
+      "latency": 7.243020534515381
+    },
+    {
+      "topic": "Code explanation: documentation",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Python Language Reference \u00b6",
+        "[exa] 5.  Data Structures \u00b6",
+        "[exa-h] This reference manual describes the syntax and \u201ccore semantics\u201d of the\nlanguage. It is terse, but attempts to be exact a"
+      ],
+      "latency": 10.822290658950806
+    },
+    {
+      "topic": "Bug fixing: automated repair",
+      "area": "capabilities",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] the burden of manually fixing the ever increasing number of pro\u0002gramming mistakes. At the same time, achieving such a go"
+      ],
+      "latency": 10.841252088546753
+    },
+    {
+      "topic": "GitHub Copilot: AI pair programming",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] What is GitHub Copilot?",
+        "[exa-h] GitHub Copilot transforms the developer experience. Backed by the leaders in AI, GitHub Copilot provides contextualized "
+      ],
+      "latency": 7.45322847366333
+    },
+    {
+      "topic": "Cursor: AI-first IDE",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Built to make you extraordinarily productive, Cursor is the best way to code with AI.",
+        "[exa] Built to make you extraordinarily productive, Cursor is the best way to code with AI.",
+        "[exa-h] > The most useful AI tool that I currently pay for, hands down, is Cursor. It's fast, autocompletes when and where you n"
+      ],
+      "latency": 7.427735328674316
+    },
+    {
+      "topic": "Codeium: free code assistant",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] This page does not exist",
+        "[exa] This page does not exist",
+        "[exa-h] Check out our pricing. Individuals are free!\n### [Blog] \nCheck out our blog for the latest product updates, competitive "
+      ],
+      "latency": 5.8134074211120605
+    },
+    {
+      "topic": "Replit AI: cloud coding",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Replit Docs",
+        "[exa] Vibe coding 101: from idea to published app",
+        "[exa-h] Replit AI transforms how you build software with Agent, our AI-powered development assistant. Agent allows you to build "
+      ],
+      "latency": 6.953590154647827
+    },
+    {
+      "topic": "HumanEval: code benchmark",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Datasets: \n\t\t\t\t \n\t\t\t \n\n\t\t\t\n\n \n\t \n\t \n\t\t\n\n openai \n\t \n\t\t / \n\n openai_humaneval \n\t \n\t\t \n\t\t\t \n\n\t\t\n\t\t like \n\t 364 \n\n \n\t \n\t\t\t Follow \n\t\t \n\t\t OpenAI \n\t 30.8k",
+        "[exa-h] [setup.py] \n|\n[setup.py] \n|\n|\n|\nView all files\n|\n## Repository files navigation\n# HumanEval: Hand-Written Evaluation Set"
+      ],
+      "latency": 7.283533573150635
+    },
+    {
+      "topic": "MBPP: programming problems",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Problems - LeetCode",
+        "[exa] Mostly Basic Programming Problems (MBPP): Definition, Impact, and Latest Developments in Code Generation",
+        "[exa-h] [Eulerian Circuit3] \n[Radix Sort3] \n[Rejection Sampling2] \n[Biconnected Component1] \nExpand\n[\nAll Topics\n] [\nAlgorithms\n"
+      ],
+      "latency": 6.527900457382202
+    },
+    {
+      "topic": "CodeContests: competitive programming",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Codeforces",
+        "[exa] AtCoder",
+        "[exa-h] Constructor Open Cup is an online contest organized by**Constructor University**and**JetBrains Foundation**to promote in"
+      ],
+      "latency": 7.6433327198028564
+    },
+    {
+      "topic": "SWE-bench: real-world issues",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview - SWE-bench",
+        "[exa] Untitled Document",
+        "[exa-h] Check out the other projects that are part of the SWE-bench ecosystem!\n[![SWE-agent]] [![SWE-smith]] [![SWE-rex]] [![Cod"
+      ],
+      "latency": 8.819849014282227
+    }
+  ]
+}

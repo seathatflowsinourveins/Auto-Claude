@@ -17,7 +17,7 @@ from typing import (
 from dataclasses import dataclass, field
 from enum import Enum
 from abc import ABC, abstractmethod
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from contextlib import contextmanager, asynccontextmanager
 from collections import defaultdict
 import statistics
@@ -449,7 +449,7 @@ class MetricRegistry:
             "gauges": {},
             "histograms": {},
             "summaries": {},
-            "timestamp": datetime.utcnow().isoformat()
+            "timestamp": datetime.now(timezone.utc).isoformat()
         }
 
         with self._registry_lock:
@@ -532,7 +532,7 @@ class Tracer:
             parent_span_id=parent_span_id,
             operation_name=operation_name,
             service_name=self.service_name,
-            start_time=datetime.utcnow(),
+            start_time=datetime.now(timezone.utc),
             attributes=attributes or {}
         )
 
@@ -549,7 +549,7 @@ class Tracer:
         error: Optional[Exception] = None
     ) -> None:
         """End a trace span."""
-        span.end_time = datetime.utcnow()
+        span.end_time = datetime.now(timezone.utc)
         span.status = status
 
         if error:
@@ -581,7 +581,7 @@ class Tracer:
         """Add an event to a span."""
         span.events.append({
             "name": name,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "attributes": attributes or {}
         })
 
@@ -836,7 +836,7 @@ class AlertManager:
 
             # Check cooldown
             if rule.last_triggered:
-                if datetime.utcnow() - rule.last_triggered < rule.cooldown:
+                if datetime.now(timezone.utc) - rule.last_triggered < rule.cooldown:
                     continue
 
             # Evaluate condition
@@ -855,7 +855,7 @@ class AlertManager:
                     labels=labels
                 )
 
-                rule.last_triggered = datetime.utcnow()
+                rule.last_triggered = datetime.now(timezone.utc)
                 triggered_alerts.append(alert)
 
                 async with self._lock:
@@ -877,7 +877,7 @@ class AlertManager:
             if alert_id in self._active_alerts:
                 alert = self._active_alerts.pop(alert_id)
                 alert.resolved = True
-                alert.resolved_at = datetime.utcnow()
+                alert.resolved_at = datetime.now(timezone.utc)
                 return True
         return False
 
@@ -1151,7 +1151,7 @@ class MonitoringDashboard:
         overall_health = await self.health_checker.get_overall_status()
 
         return {
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "health": {
                 "overall": overall_health.value,
                 "checks": {

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:27:05.737370",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 97
+  },
+  "results": [
+    {
+      "topic": "LLM API design: chat completions, embeddings, batch endpoints",
+      "area": "patterns",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Specification",
+        "[exa] Chat Completions | OpenAI API Reference",
+        "[exa-h] **Open Responses**is an open-source specification and ecosystem for building**multi-provider, interoperable LLM interfac"
+      ],
+      "latency": 7.423535108566284
+    },
+    {
+      "topic": "Streaming API: SSE implementation, chunk handling, backpressure",
+      "area": "patterns",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] HTML Standard",
+        "[exa] HTML: The Living Standard",
+        "[exa-h] #7363] to define the value space better. It is essentially any UTF-8 encoded string, that does\nnot contain U+0000 NULL, "
+      ],
+      "latency": 8.661585092544556
+    },
+    {
+      "topic": "Async API: webhooks, polling, long-running operations",
+      "area": "patterns",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Azure Long-Running Operations",
+        "[exa] Long-running operations",
+        "[exa-h] This document explains the Azure REST API pattern for implementing long-running operations (LROs). LROs are used when an"
+      ],
+      "latency": 8.126976728439331
+    },
+    {
+      "topic": "GraphQL for AI: schema design, subscriptions, mutations",
+      "area": "patterns",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Design your Production Schema",
+        "[exa] Designing Response Types",
+        "[exa-h] Determine howentitiesrelate to one another (for example, a`User`can have many`Orders`).\nIdentify which queries ormutatio"
+      ],
+      "latency": 13.040962934494019
+    },
+    {
+      "topic": "Token bucket rate limiting: burst handling, fair queuing",
+      "area": "ratelimit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Token bucket",
+        "[exa] 24\u00a0\u00a0\u00a0Token Bucket Rate Limiting \u00b6",
+        "[exa-h] When choosing the bandwidth for a top-level class, traffic shaping only helps at the bottleneck between the LAN and the "
+      ],
+      "latency": 11.28174638748169
+    },
+    {
+      "topic": "Sliding window rate limiting: per-user, per-API-key quotas",
+      "area": "ratelimit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Rate Limiting",
+        "[exa] Rate Limiting Library",
+        "[exa-h] [![] #### Rate limiting in Kong Gateway\nKong Gateway can be configured to apply rate limiting rules on API traffic enter"
+      ],
+      "latency": 7.480426073074341
+    },
+    {
+      "topic": "Adaptive rate limiting: load-based throttling, circuit breakers",
+      "area": "ratelimit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Circuit Breakers",
+        "[exa] Circuit Breaking",
+        "[exa-h] Envoy Gateway supports the following circuit breaker thresholds:\n* **Concurrent Connections**: limit the connections tha"
+      ],
+      "latency": 8.628292798995972
+    },
+    {
+      "topic": "Rate limit headers: X-RateLimit-*, retry-after, backoff",
+      "area": "ratelimit",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] RateLimit Header Fields for HTTP",
+        "[exa] RateLimit header fields for HTTP",
+        "[exa-h] * `RateLimit-Limit`: containing the requests quota in the time window;[\u00b6] \n* `RateLimit-Remaining`: containing the remai"
+      ],
+      "latency": 6.292503118515015
+    },
+    {
+      "topic": "Python SDK patterns: async/sync clients, type hints, retries",
+      "area": "sdk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Azure SDK Language Design Guidelines for Python",
+        "[exa] Python Guidelines: Implementation",
+        "[exa-h] [] ## Common SDK patterns\n[] ### Service client hierarchy\nAzure SDKs typically follow a three-level hierarchy:\n* **Servi"
+      ],
+      "latency": 8.04812502861023
+    },
+    {
+      "topic": "TypeScript SDK: streaming types, error handling, middleware",
+      "area": "sdk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data Streams SDK (TypeScript)",
+        "[exa] Streaming | OpenRouter SDK | OpenRouter | Documentation",
+        "[exa-h] ![] TypeScript SDK\n[![] Go SDK] [![] Rust SDK] [![] TypeScript SDK] \nThe Data Streams SDK for accessing Chainlink Data S"
+      ],
+      "latency": 10.151419401168823
+    },
+    {
+      "topic": "SDK authentication: API keys, OAuth, token refresh",
+      "area": "sdk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Best Practices \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Using OAuth 2.0 to Access Google APIs \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] * Client credentials should be stored securely, like in a secret manager, and never hardcoded or committed to code repos"
+      ],
+      "latency": 9.671753644943237
+    },
+    {
+      "topic": "SDK testing: mocking, fixtures, integration tests",
+      "area": "sdk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unit Testing with the AWS SDK for Go v2",
+        "[exa] ",
+        "[exa-h] SDK for your application's unit test. Mocking out the SDK allows\nyour test to be focused on what you want to test, not t"
+      ],
+      "latency": 7.012792587280273
+    },
+    {
+      "topic": "LLM error taxonomy: rate limits, context length, content policy",
+      "area": "errors",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] LLM Failure Modes",
+        "[exa-h] Figure 2: Taxonomy of hallucination sources in LLMs. (Fundamental limits.) Diagonalization (no\nenumerable model set answ"
+      ],
+      "latency": 8.31722116470337
+    },
+    {
+      "topic": "Retry strategies: exponential backoff, jitter, idempotency",
+      "area": "errors",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Timeouts, retries, and backoff with jitter",
+        "[exa-h] to coordinate between all of the clients to achieve the right number of retries.\nThe preferred solution that we use in A"
+      ],
+      "latency": 9.536006212234497
+    },
+    {
+      "topic": "Error responses: structured errors, error codes, troubleshooting",
+      "area": "errors",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Problem Details for HTTP APIs",
+        "[exa-h] Problem details can be used with any HTTP status code, but they most naturally ft the semantics\nof 4xx and 5xx responses"
+      ],
+      "latency": 8.673522710800171
+    },
+    {
+      "topic": "Fallback patterns: model fallback, provider failover",
+      "area": "errors",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Provider Fallback",
+        "[exa] Provider Fallback",
+        "[exa-h] ## When to Use Fallback[\u200b] \n* To ensure uninterrupted service when a primary AI/LLM provider is unavailable.\n* To provid"
+      ],
+      "latency": 8.782897472381592
+    },
+    {
+      "topic": "API versioning: URL path, headers, deprecation policies",
+      "area": "versioning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] We\u2019re getting things ready",
+        "[exa] We\u2019re getting things ready",
+        "[exa-h] apibestpractices.info\n[Buy this domain.] \n# We\u2019re getting things ready\nLoading your experience\u2026 This won\u2019t take long."
+      ],
+      "latency": 3.2896595001220703
+    },
+    {
+      "topic": "OpenAPI for LLM APIs: schema definitions, examples",
+      "area": "versioning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Specification",
+        "[exa] Open Responses",
+        "[exa-h] **Open Responses**is an open-source specification and ecosystem for building**multi-provider, interoperable LLM interfac"
+      ],
+      "latency": 9.905732870101929
+    },
+    {
+      "topic": "API documentation: interactive docs, code samples, SDKs",
+      "area": "versioning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stripe's   APIs",
+        "[exa] API Reference",
+        "[exa-h] Stripe provides a unified set of[REST APIs], comprised of[two namespaces], for accepting payments, managing billing and "
+      ],
+      "latency": 6.258575916290283
+    },
+    {
+      "topic": "Breaking changes: migration guides, sunset notices",
+      "area": "versioning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Elasticsearch breaking changes",
+        "[exa] Migrations \u2022 Overview \u2022 Angular",
+        "[exa-h] ## [9.1.0] \nDiscovery-Plugins:\nMigrates `discovery-ec2` plugin to AWS SDK v2\nThe`discovery-ec2`plugin now uses AWS SDK v"
+      ],
+      "latency": 6.574188709259033
+    }
+  ]
+}

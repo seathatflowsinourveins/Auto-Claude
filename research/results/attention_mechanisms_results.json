@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:36:49.303710",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 89
+  },
+  "results": [
+    {
+      "topic": "Self-attention: query key value mechanism",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Attention Is All You Need",
+        "[exa-h] where the query, keys, values, and output are all vectors. The output is computed as a weighted sum\nof the values, where"
+      ],
+      "latency": 5.555477142333984
+    },
+    {
+      "topic": "Multi-head attention: parallel attention",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Neural and Evolutionary Computing",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Multi-head attention layers, as used in the Transformer neural sequence model, are a powerful alternative to RNNs for "
+      ],
+      "latency": 5.722490072250366
+    },
+    {
+      "topic": "Cross-attention: encoder-decoder attention",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Attention Is All You Need",
+        "[exa] ",
+        "[exa-h] > The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encode"
+      ],
+      "latency": 4.60707950592041
+    },
+    {
+      "topic": "Causal attention: autoregressive masking",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Causal self-attention provides positional information to Transformer decoders. Prior work has shown that stacks of cau"
+      ],
+      "latency": 3.46640682220459
+    },
+    {
+      "topic": "Flash Attention: IO-aware algorithm",
+      "area": "efficient",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] principle is making attention algorithms IO-aware -- accounting for reads and writes between levels of GPU memory. We pr"
+      ],
+      "latency": 3.4892802238464355
+    },
+    {
+      "topic": "Linear attention: O(n) complexity",
+      "area": "efficient",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] A Cheap Linear Attention Mechanism with Fast Lookups and Fixed-Size Representations - ADS",
+        "[exa-h] > The softmax content-based attention mechanism has proven to be very beneficial in many applications of recurrent neura"
+      ],
+      "latency": 7.499317169189453
+    },
+    {
+      "topic": "Sparse attention: BigBird, Longformer",
+      "area": "efficient",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Transformer-based models are unable to process long sequences due to their self-attention operation, which scales quad"
+      ],
+      "latency": 3.274301767349243
+    },
+    {
+      "topic": "Sliding window attention: local context",
+      "area": "efficient",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Local-global attention models have recently emerged as compelling alternatives to standard Transformers, promising imp"
+      ],
+      "latency": 5.355275869369507
+    },
+    {
+      "topic": "Sinusoidal positional encoding: original",
+      "area": "position",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Abstract:Attentional mechanisms are order-invariant. Positional encoding is a crucial component to allow attention-bas"
+      ],
+      "latency": 8.623800039291382
+    },
+    {
+      "topic": "RoPE: rotary position embedding",
+      "area": "position",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Rotary Positional Embeddings (RoPE)",
+        "[exa-h] > Position information is essential for language modeling. In softmax transformers, Rotary Position Embeddings (\\textit{"
+      ],
+      "latency": 5.089650630950928
+    },
+    {
+      "topic": "ALiBi: attention linear bias",
+      "area": "position",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation\n     \n      (2108.12409v2)",
+        "[exa-h] show that extrapolation can be enabled by simply changing the position represen\u0002tation method, though we find that curre"
+      ],
+      "latency": 8.294403791427612
+    },
+    {
+      "topic": "Learned positional embeddings: trainable",
+      "area": "position",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Large Language Model Playbook",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] In contrast to fixed positional embeddings like[sinusoidal encoding], another popular approach is learned positional emb"
+      ],
+      "latency": 6.917433261871338
+    },
+    {
+      "topic": "Grouped query attention: GQA",
+      "area": "variants",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is grouped query attention (GQA)?",
+        "[exa] Grouped-Query Attention Overview",
+        "[exa-h] Grouped query attention (GQA) is a method to increase the efficiency of the[attention mechanism] in transformer models, "
+      ],
+      "latency": 4.04972767829895
+    },
+    {
+      "topic": "Multi-query attention: MQA",
+      "area": "variants",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Multi-Query Attention Explained",
+        "[exa-h] > Multi-query attention (MQA), which only uses a single key-value head, drastically speeds up decoder inference. However"
+      ],
+      "latency": 9.1815345287323
+    },
+    {
+      "topic": "Differential attention: Microsoft",
+      "area": "variants",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Published as a conference paper at ICLR 2025\nDIFFERENTIAL TRANSFORMER\nTianzhu Ye\u2217 \u2020\u2021 Li Dong\u2217 \u2020 Yuqing Xia\u2217 \u2020 Yutao Sun\u2217"
+      ],
+      "latency": 7.880901098251343
+    },
+    {
+      "topic": "Ring attention: distributed context",
+      "area": "variants",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] modalities in complex environments. We present a novel approach, Ring Attention with Blockwise Transformers (Ring Attent"
+      ],
+      "latency": 9.109894514083862
+    },
+    {
+      "topic": "Context extension: extending transformers",
+      "area": "long-context",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Context Extension \u00b6",
+        "[exa-h] > The advent of Large Language Models (LLMs) represents a notable breakthrough in Natural Language Processing (NLP), con"
+      ],
+      "latency": 9.095858573913574
+    },
+    {
+      "topic": "YaRN: yet another RoPE extension",
+      "area": "long-context",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Hands-On Transformer Deep Dive: Part 4\u2014 YaRN (Yet another RoPE extensioN)",
+        "[exa-h] > Rotary Position Embeddings (RoPE) have been shown to effectively encode positional information in transformer-based la"
+      ],
+      "latency": 8.96689224243164
+    },
+    {
+      "topic": "Landmark attention: selective memory",
+      "area": "long-context",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] [Submitted on 25 May 2023 ([v1]), last revised 20 Nov 2023 (this version, v2)]\n# Title:Landmark Attention: Random-Access"
+      ],
+      "latency": 5.883663892745972
+    },
+    {
+      "topic": "Infinite context: streaming attention",
+      "area": "long-context",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Leave No Context Behind: Efficient Infinite Context Transformers with\n  Infini-attention",
+        "[exa-h] > This work introduces an efficient method to scale Transformer-based Large Language Models (LLMs) to infinitely long in"
+      ],
+      "latency": 10.970141649246216
+    }
+  ]
+}

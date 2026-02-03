@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:43:55.285079",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 97
+  },
+  "results": [
+    {
+      "topic": "LLM for synthetic data: generating training examples",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] impractical, leaving researchers with only macro-level data. LLMSynthor addresses this by turning a pretrained LLM into "
+      ],
+      "latency": 7.927156209945679
+    },
+    {
+      "topic": "Instruction following data: creating diverse prompts",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] > Recent works have shown that by curating high quality and diverse instruction tuning datasets, we can significantly im"
+      ],
+      "latency": 7.497899055480957
+    },
+    {
+      "topic": "Conversation synthesis: multi-turn dialogue generation",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] and intuitive option for generating open-domain multi-party\nsynthetic conversational data.\nC. Approach\nWe develop ConvoG"
+      ],
+      "latency": 7.301477909088135
+    },
+    {
+      "topic": "Code generation datasets: programming examples at scale",
+      "area": "generation",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] KodCode: A Diverse, Challenging, and Verifiable Synthetic Dataset for Coding",
+        "[exa-h] The goal of Project CodeNet is to provide the*AI-for-Code*research community with a large scale, diverse, and high quali"
+      ],
+      "latency": 10.719444751739502
+    },
+    {
+      "topic": "Data augmentation for NLP: paraphrasing, back-translation",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] et al., 2018a,b). Besides monolingual data, var\u0002ious approaches have been introduced to benefit\nfrom parallel data in ot"
+      ],
+      "latency": 7.808194875717163
+    },
+    {
+      "topic": "Few-shot augmentation: expanding limited labeled data",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > In many applications of machine learning, certain categories of examples may be underrepresented in the training data,"
+      ],
+      "latency": 8.995882272720337
+    },
+    {
+      "topic": "Adversarial examples: generating edge cases for robustness",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Adversarial Testing for Generative AI \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Adversarial Example Generation #",
+        "[exa-h] * **Use cases and edge cases**"
+      ],
+      "latency": 10.323607921600342
+    },
+    {
+      "topic": "Domain adaptation: synthetic data for new domains",
+      "area": "augmentation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] MRI dataset. Our theory extends to the important scenario of domain adaptation,\nshowing that carefully blending syntheti"
+      ],
+      "latency": 7.168888568878174
+    },
+    {
+      "topic": "Synthetic data validation: ensuring quality and diversity",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Auditing and Generating Synthetic Data\n with Controllable Trust Trade-offs",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] challenge. We introduce a holistic auditing framework that comprehensively evaluates synthetic datasets and AI models. I"
+      ],
+      "latency": 10.115902185440063
+    },
+    {
+      "topic": "Deduplication: removing similar generated examples",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] would be to perform exact string matching between\nall example pairs, but as we will show, this is insuf\u0002ficient. We intr"
+      ],
+      "latency": 6.8139708042144775
+    },
+    {
+      "topic": "Label verification: checking synthetic data accuracy",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Model auditing as a novel use case. The sample-level na\u0002ture of our metrics inspires the new use case of model audit\u0002ing"
+      ],
+      "latency": 10.766329526901245
+    },
+    {
+      "topic": "Bias detection in synthetic data: avoiding amplification",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Auditing and Generating Synthetic Data with Controllable Trust Trade-offs",
+        "[exa-h] > Recursive prompting with large language models enables scalable synthetic dataset generation but introduces the risk o"
+      ],
+      "latency": 9.843433856964111
+    },
+    {
+      "topic": "Benchmark creation: synthetic evaluation datasets",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] YourBench : Easy Custom Evaluation Sets for Everyone",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] We introduceYourBench, a novel, open-source framework that addresses these limitations by enabling dynamic, automated ge"
+      ],
+      "latency": 9.187480211257935
+    },
+    {
+      "topic": "Red teaming datasets: adversarial test generation",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AdvGLUE Benchmark",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Adversarial GLUE Benchmark (AdvGLUE)is a comprehensive robustness evaluation benchmark that focuses on the adversarial r"
+      ],
+      "latency": 9.236013174057007
+    },
+    {
+      "topic": "Task-specific evaluation: domain benchmarks",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] WildBench: Benchmarking LLMs with Challenging Tasks from Real Users in the Wild - ADS",
+        "[exa-h] > Many benchmarks exist for evaluating long-context language models (LCLMs), yet developers often rely on synthetic task"
+      ],
+      "latency": 10.755216836929321
+    },
+    {
+      "topic": "Human-AI comparison: synthetic vs real data quality",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Synthetic data generation with Large Language Models is a promising paradigm for augmenting natural data over a nearly"
+      ],
+      "latency": 9.37825345993042
+    },
+    {
+      "topic": "Evol-Instruct: iterative instruction evolution",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automatic Instruction Evolving for Large Language Models - ADS",
+        "[exa] ",
+        "[exa-h] models without any human effort. The framework automatically analyzes and summarizes suitable evolutionary strategies fo"
+      ],
+      "latency": 8.524738550186157
+    },
+    {
+      "topic": "Self-Instruct: bootstrap data from seed examples",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Self-Instruct Style Data Generation: The Secret Behind Stanford Alpaca",
+        "[exa-h] The Self-Instruct process is an iterative bootstrapping algorithm that starts with a seed set of manually-written instru"
+      ],
+      "latency": 5.376937627792358
+    },
+    {
+      "topic": "Alpaca-style generation: instruction-input-output format",
+      "area": "implementation",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Data Format and Structure",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] This document describes the format and structure of the instruction-following dataset used for fine-tuning the Stanford "
+      ],
+      "latency": 5.189616441726685
+    },
+    {
+      "topic": "RLHF data collection: preference pairs generation",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] ",
+        "[exa-h] the first time, we propose a comprehensive framework for preference data collection, decomposing the process into four i"
+      ],
+      "latency": 3.5186758041381836
+    }
+  ]
+}

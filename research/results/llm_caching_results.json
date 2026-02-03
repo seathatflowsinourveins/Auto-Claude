@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:56:42.659826",
+  "stats": {
+    "sources": 196,
+    "vectors": 186,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "KV cache: attention caching",
+      "area": "kv_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] lengths. KV cache compression has emerged as an effective approach to greatly\nenhance the efficiency of reasoning. Howev"
+      ],
+      "latency": 7.305992841720581
+    },
+    {
+      "topic": "Prefix caching: shared prompts",
+      "area": "kv_cache",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Prefix caching",
+        "[exa] Prompt Trees: Training-time Prefix Caching",
+        "[exa-h] The idea is simple: By caching the KV cache of an existing query, a new query that shares the same prefix can skip recom"
+      ],
+      "latency": 7.173386812210083
+    },
+    {
+      "topic": "PagedAttention: memory efficient",
+      "area": "kv_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Paged Attention Meets FlexAttention: Unlocking Long-Context Efficiency in Deployed Inference",
+        "[exa] vAttention: Dynamic Memory Management for Serving LLMs without\n  PagedAttention",
+        "[exa-h] Large Language Models (LLMs) encounter severe memory inefficiencies during long-context inference due to conventional ha"
+      ],
+      "latency": 9.378824710845947
+    },
+    {
+      "topic": "Radix attention: trie-based cache",
+      "area": "kv_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] current systems face the unfortunate trade-off between fast\nhash tables that only allow point queries and fully-featured"
+      ],
+      "latency": 5.899390459060669
+    },
+    {
+      "topic": "Semantic caching: similar queries",
+      "area": "semantic_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation",
+        "[exa] ",
+        "[exa-h] are built on exact string or token matching [2], [3], which are\nill-suited to LLM workloads. Semantically equivalent que"
+      ],
+      "latency": 6.155949831008911
+    },
+    {
+      "topic": "GPTCache: LLM response cache",
+      "area": "semantic_cache",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] GPTCache : A Library for Creating Semantic Cache for LLM Queries",
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa-h] To tackle this challenge, we have created GPTCache, a project dedicated to building a semantic cache for storing LLM res"
+      ],
+      "latency": 6.768207311630249
+    },
+    {
+      "topic": "Embedding similarity: cache lookup",
+      "area": "semantic_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Advancing Semantic Caching for LLMs with Domain-Specific Embeddings and Synthetic Data",
+        "[exa] What\u2019s the best embedding model for semantic caching?",
+        "[exa-h] inputs surpass a predefined cosine similarity threshold \u00a0Bang ( [2023]); Gill et\u00a0al. ( [2025])."
+      ],
+      "latency": 9.563135862350464
+    },
+    {
+      "topic": "Cache invalidation: freshness",
+      "area": "semantic_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] RFC 7234: Hypertext Transfer Protocol (HTTP/1.1): Caching",
+        "[exa] RFC 7234 - Hypertext Transfer Protocol (HTTP/1.1): Caching",
+        "[exa-h] performance by reusing a prior response message to satisfy a current\nrequest. A stored response is considered \"fresh\", a"
+      ],
+      "latency": 8.82616662979126
+    },
+    {
+      "topic": "Prompt caching: Anthropic API",
+      "area": "prompt_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prompt caching",
+        "[exa] Prompt caching",
+        "[exa-h] Copy page\nPrompt caching is a powerful feature that optimizes your API usage by allowing resuming from specific prefixes"
+      ],
+      "latency": 7.869101047515869
+    },
+    {
+      "topic": "System prompt cache: repeated context",
+      "area": "prompt_cache",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Prompt Cache: Modular Attention Reuse for Low Latency Inference",
+        "[exa] Core System Prompt",
+        "[exa-h] We present Prompt Cache, an approach for accelerating inference for large language models (LLM) by reusing\nattention sta"
+      ],
+      "latency": 8.011005163192749
+    },
+    {
+      "topic": "Template caching: shared prompts",
+      "area": "prompt_cache",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Prompt Caching 101",
+        "[exa-h] > Large Language Models (LLMs) are increasingly being used to plan, reason, and execute tasks across diverse scenarios. "
+      ],
+      "latency": 7.25100040435791
+    },
+    {
+      "topic": "Context compression: efficient cache",
+      "area": "prompt_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Networking and Internet Architecture",
+        "[exa] ",
+        "[exa-h] > CacheGen is a fast context-loading module for LLM systems. First, CacheGen uses a custom tensor encoder, leveraging KV"
+      ],
+      "latency": 9.91044545173645
+    },
+    {
+      "topic": "Redis LLM cache: distributed",
+      "area": "distributed",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLM Caching",
+        "[exa] Semantic Caching for LLMs",
+        "[exa-h] This notebook demonstrates how to use RedisVL's`SemanticCache`to cache LLM responses based on semantic similarity. Seman"
+      ],
+      "latency": 11.150126695632935
+    },
+    {
+      "topic": "Multi-tenant caching: isolation",
+      "area": "distributed",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multitenancy and Azure Cache for Redis",
+        "[exa] How Stack Overflow Caches Apps for a Multi-Tenant Architecture",
+        "[exa-h] [] ## Isolation models\nWhen you work with a multitenant system that uses Azure Cache for Redis, you need to determine th"
+      ],
+      "latency": 8.97119688987732
+    },
+    {
+      "topic": "Cache sharding: scalability",
+      "area": "distributed",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Performance at Scale with Amazon ElastiCache",
+        "[exa-h] Sharding1is a widely used technique to horizontally scale\nstorage and caching systems and to address both processing\nand"
+      ],
+      "latency": 8.19585657119751
+    },
+    {
+      "topic": "CDN for LLM: edge caching",
+      "area": "distributed",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] efficient LLM serving with low cost and fast response. To realize these benefits, we envision a Knowledge Delivery Netwo"
+      ],
+      "latency": 9.486963272094727
+    },
+    {
+      "topic": "Cache hit rate: optimization",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Why your cache hit ratio strategy needs an update",
+        "[exa] PERF03-BP05 Implement data access patterns that utilize\n  caching",
+        "[exa-h] ## Optimize your cache hit ratio with Redis\nCache hit ratio is an important metric, but it\u2019s still just a signal. Your h"
+      ],
+      "latency": 9.43825912475586
+    },
+    {
+      "topic": "TTL strategies: expiration",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Using time to live (TTL) in DynamoDB",
+        "[exa] TTL",
+        "[exa-h] longer relevant. TTL allows you to define a per-item expiration timestamp that indicates\nwhen an item is no longer neede"
+      ],
+      "latency": 7.8036558628082275
+    },
+    {
+      "topic": "Cost reduction: caching ROI",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PERF03-BP05 Implement data access patterns that utilize\n  caching",
+        "[exa] PERF03-BP05 Implement data access patterns that utilize\n  caching",
+        "[exa-h] * You don't consider the consistency of your cached data.\n* You don't monitor the efficiency of your caching implementat"
+      ],
+      "latency": 8.654786825180054
+    },
+    {
+      "topic": "Latency reduction: cache benefits",
+      "area": "optimization",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] PERF03-BP05 Implement data access patterns that utilize\n  caching",
+        "[exa] PERF03-BP05 Implement data access patterns that utilize\n  caching",
+        "[exa-h] * You don't monitor the efficiency of your caching implementation.\n**Benefits of establishing this best\npractice:**Stori"
+      ],
+      "latency": 7.108229160308838
+    }
+  ]
+}

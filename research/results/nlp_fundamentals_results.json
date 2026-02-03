@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:51:25.332119",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 90
+  },
+  "results": [
+    {
+      "topic": "Text classification with LLMs: zero-shot, few-shot",
+      "area": "classification",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Recent foundational language models have shown state-of-the-art performance in many NLP tasks in zero- and few-shot se"
+      ],
+      "latency": 7.940070152282715
+    },
+    {
+      "topic": "Sentiment analysis: fine-grained, aspect-based",
+      "area": "classification",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > As an important fine-grained sentiment analysis problem, aspect-based sentiment analysis (ABSA), aiming to analyze and"
+      ],
+      "latency": 9.298060178756714
+    },
+    {
+      "topic": "Intent classification: chatbot, voice assistant",
+      "area": "classification",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Trending Papers",
+        "[exa] ",
+        "[exa-h] Audio Language Models (ALM) have emerged as the dominant paradigm for speech\nand music generation by representing audio "
+      ],
+      "latency": 6.949963569641113
+    },
+    {
+      "topic": "Topic modeling: LDA, neural topic models, BERTopic",
+      "area": "classification",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Topic models can be useful tools to discover latent topics in collections of documents. Recent studies have shown the "
+      ],
+      "latency": 8.949366331100464
+    },
+    {
+      "topic": "NER with transformers: BERT, RoBERTa approaches",
+      "area": "ner",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Named Entity Recognition Specifics",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] LayoutLM|layoutlm|\nLayoutLMv2|layoutlmv2|\nLongformer|longformer|\nMobileBERT|mobilebert|\nMPNet|mpnet|\nRemBERT|rembert|\nRo"
+      ],
+      "latency": 4.496466636657715
+    },
+    {
+      "topic": "Zero-shot NER: recognizing new entity types",
+      "area": "ner",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Zero-Shot Open Entity Typing as Type-Compatible Grounding - ACL Anthology",
+        "[exa] ZeroNER: Fueling Zero-Shot Named Entity Recognition via Entity Type Descriptions",
+        "[exa-h] type taxonomies. In this work we propose a zero-shot entity typing approach that requires no annotated data and can flex"
+      ],
+      "latency": 7.866803407669067
+    },
+    {
+      "topic": "Nested NER: overlapping entity spans",
+      "area": "ner",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] task of detecting the span and the semantic cate\u0002gory of entities from a chunk of text. The task can\nbe further divided "
+      ],
+      "latency": 5.966070890426636
+    },
+    {
+      "topic": "Domain-specific NER: medical, legal, financial",
+      "area": "ner",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] components to an advanced, named entity analysis tool for biomedicine: (a) a new, Named Entity Recognition Ontology (NER"
+      ],
+      "latency": 4.606782913208008
+    },
+    {
+      "topic": "Summarization: extractive vs abstractive approaches",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Abstractive vs. Extractive Summarization: An Experimental Review",
+        "[exa] ",
+        "[exa-h] Text summarization is a subtask of natural language processing referring to the automatic creation of a concise and flue"
+      ],
+      "latency": 5.141768455505371
+    },
+    {
+      "topic": "Question generation: creating questions from text",
+      "area": "generation",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] Learning to Ask: Neural Question Generation for Reading Comprehension - ACL Anthology",
+        "[exa-h] generating questions for the purpose of\nreading comprehension assessment and\npractice. Our framework for question gen\u0002er"
+      ],
+      "latency": 4.405178785324097
+    },
+    {
+      "topic": "Paraphrasing: rewriting with semantic preservation",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Paraphrasing (computational linguistics)",
+        "[exa-h] Thompson and Post, 2020a), and semantic pars\u0002ing (Berant and Liang, 2014; Cao et al., 2020).\nAnd it is also a good way f"
+      ],
+      "latency": 6.963869333267212
+    },
+    {
+      "topic": "Data-to-text: generating text from structured data",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Neural Methods for Data-to-text Generation",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] The neural boom that has sparked natural language processing (NLP) research throughout the last decade has similarly led"
+      ],
+      "latency": 8.611595630645752
+    },
+    {
+      "topic": "Semantic similarity: sentence embeddings, STS tasks",
+      "area": "semantic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] equivalent to each other. The STS task is moti\u0002vated by the observation that accurately modeling\nthe meaning similarity "
+      ],
+      "latency": 3.7940573692321777
+    },
+    {
+      "topic": "Natural language inference: entailment, contradiction",
+      "area": "semantic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] The semantic concepts of entailment and contra\u0002diction are central to all aspects of natural lan\u0002guage meaning (Katz, 19"
+      ],
+      "latency": 3.6026158332824707
+    },
+    {
+      "topic": "Coreference resolution: tracking mentions across text",
+      "area": "semantic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] resolution is the task of determining whether two mentions corefer, by which we\nmean they refer to the same entity in th"
+      ],
+      "latency": 10.251852989196777
+    },
+    {
+      "topic": "Word sense disambiguation: context-aware meaning",
+      "area": "semantic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Improved Word Sense Disambiguation Using Pre-Trained Contextualized Word Representations - ACL Anthology",
+        "[exa-h] The sound of a bell being struck.\nWord-level \nContext\nSense-level \nContext\nScores\nPredicted sense from the last epoch\n52"
+      ],
+      "latency": 4.612293720245361
+    },
+    {
+      "topic": "Multilingual NLP: cross-lingual models, translation",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unsupervised Cross-lingual Representation Learning at Scale - ACL Anthology",
+        "[exa] mT5: A Massively Multilingual Pre-trained Text-to-Text Transformer",
+        "[exa-h] <abstract>This paper shows that pretraining multilingual language models at scale leads to significant performance gains"
+      ],
+      "latency": 9.165444135665894
+    },
+    {
+      "topic": "Low-resource NLP: few-shot and zero-shot learning",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Zero- and Few-Shot NLP with Pretrained Language Models - ACL Anthology",
+        "[exa] A review on NLP zero-shot and few-shot learning: methods and applications",
+        "[exa-h] The ability to efficiently learn from little-to-no data is critical to applying NLP to tasks where data collection is co"
+      ],
+      "latency": 9.19610047340393
+    },
+    {
+      "topic": "Long document processing: chunking, hierarchical",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Document Chunking",
+        "[exa] ",
+        "[exa-h] This page describes Docling's document chunking system, which splits`DoclingDocument`objects into smaller, semantically "
+      ],
+      "latency": 4.807878255844116
+    },
+    {
+      "topic": "Linguistic probing: understanding what models learn",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Structural Probe for Finding Syntax in Word Representations",
+        "[exa] Designing and Interpreting Probes with Control Tasks",
+        "[exa-h] evidence that entire syntax trees are embedded\nimplicitly in deep models\u2019 vector geometry.\n1 Introduction\nAs pretrained "
+      ],
+      "latency": 4.1787073612213135
+    }
+  ]
+}

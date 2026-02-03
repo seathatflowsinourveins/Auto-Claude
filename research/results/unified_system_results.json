@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-02-03T00:17:36.307778",
+  "summary": {
+    "queries": 8,
+    "sources": 105,
+    "vectors": 75,
+    "confidence": 0.99,
+    "latency": 9.097021865844727
+  },
+  "agent_insights": [
+    "Most common pattern: factual_standard (1 queries)",
+    "Most used SDK: tavily (5 calls)",
+    "Facts learned: 10"
+  ],
+  "swarm_synthesis": {
+    "total_queries": 3,
+    "total_sources": 45,
+    "unique_findings": 15,
+    "total_vectors": 30,
+    "top_findings": [
+      "[tavily] Nomic Embed Text V2 and BGE-M3 are leading embedding models for RAG in 2026, offering high-quality, multilingual embeddings and superior contextual understanding. They are optimized for seman",
+      "[perplexity] **Mistral Embed stands out as the top-performing embedding model for RAG systems in 2026 benchmarks, outperforming others in retrieval accuracy, while OpenAI's text-embedding-3-large, tex",
+      "[exa] 10 Best Embedding Models Powering AI Systems in 2026 - Openxcell",
+      "[exa] 5 Best Embedding Models for RAG: How to Choose the Right One",
+      "[exa] Best Open-Source Embedding Models Benchmarked and Ranked",
+      "[perplexity] **Production vector database deployment patterns focus on scalability, indexing efficiency, consistency models, and deployment models like managed services, self-hosted, or hybrid setups ",
+      "[tavily] Managed vector databases paired with ML inference often provide the best balance for production deployments. Kubernetes is preferred for control and optimization. Transition to production-gra",
+      "[exa] Vector Databases in ML Deployments: Choosing the Right Approach",
+      "[exa] Vector Databases for RAG: Complete Applications Guide",
+      "[exa] Best Vector Databases in 2025: A Complete Comparison Guide"
+    ]
+  }
+}

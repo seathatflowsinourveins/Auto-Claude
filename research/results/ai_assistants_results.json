@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T03:02:24.482929",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "OpenAI Assistants: API assistants",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Assistants | OpenAI API Reference",
+        "[exa] Assistants migration guide",
+        "[exa-h] The Assistants API is deprecated and will be removed in August 2026. The recommended replacement is the Responses API.[L"
+      ],
+      "latency": 5.79787540435791
+    },
+    {
+      "topic": "Claude: Anthropic assistant",
+      "area": "platforms",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Meet Claude",
+        "[exa] Meet your thinking partner",
+        "[exa-h] ## Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you "
+      ],
+      "latency": 8.135547161102295
+    },
+    {
+      "topic": "Google Gemini: assistant AI",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gemini - meet the everyday AI assistant from Google",
+        "[exa] A   new   level   of   intelligence",
+        "[exa-h] With a long context window of 1M tokens, Gemini Advanced can understand and analyze whole books, lengthy reports, and mo"
+      ],
+      "latency": 9.222678661346436
+    },
+    {
+      "topic": "Microsoft Copilot: AI assistant",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Microsoft AI: Copilot",
+        "[exa] What is Copilot, and how can you use it?",
+        "[exa-h] [Skip to main content] \n\n[Skip to main content] \n\n# Copilot\n\nAn AI companion for everyone\n\nCopilot is your AI companion."
+      ],
+      "latency": 6.373428106307983
+    },
+    {
+      "topic": "Memory: conversation context",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Multiagent Systems",
+        "[exa-h] > LLM-based conversational agents still struggle to maintain coherent, personalized interaction over many sessions: fixe"
+      ],
+      "latency": 7.539048433303833
+    },
+    {
+      "topic": "Function calling: tool use",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling",
+        "[exa] Function Calling & Tool Use",
+        "[exa-h] **Function calling**(also known as**tool calling**) provides a powerful and flexible way for OpenAI models to interface "
+      ],
+      "latency": 9.210946321487427
+    },
+    {
+      "topic": "Code interpreter: execution",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] JavaScript execution model",
+        "[exa] Interpreter (computing)",
+        "[exa-h] In the JavaScript specification, each autonomous executor of JavaScript is called an**agent**, which maintains its facil"
+      ],
+      "latency": 6.399905681610107
+    },
+    {
+      "topic": "File handling: document processing",
+      "area": "features",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to PyPDF2 \uf0c1",
+        "[exa] 7.  Input and Output \u00b6",
+        "[exa-h] * [Encryption and Decryption of PDFs] \n* [Merging PDF files] \n* [Cropping and Transforming PDFs] \n* [Adding a Stamp/Wate"
+      ],
+      "latency": 10.4930739402771
+    },
+    {
+      "topic": "Multi-turn: conversation management",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Conversation state",
+        "[exa-h] > Recent advancements in large language models (LLMs) have revolutionized their ability to handle single-turn tasks, yet"
+      ],
+      "latency": 10.910069942474365
+    },
+    {
+      "topic": "Thread management: session state",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Session and state management in ASP.NET Core",
+        "[exa] threading  \u2014 Thread-based parallelism \u00b6",
+        "[exa-h] Session state is an ASP.NET Core scenario for storage of user data while the user browses a web app. Session state uses "
+      ],
+      "latency": 9.075642585754395
+    },
+    {
+      "topic": "Tool orchestration: agent routing",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Workflow orchestration agents",
+        "[exa] Microsoft Agent Framework Workflows Orchestrations - Handoff",
+        "[exa-h] * Multistep automation (for example, data ingestion and reporting)\n* Customer service routing and escalation (for exampl"
+      ],
+      "latency": 8.358519554138184
+    },
+    {
+      "topic": "Context window: message history",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Context windows",
+        "[exa] What is a Context Window? Complete Context Window Explained Guide",
+        "[exa-h] The \"context window\" refers to the entirety of the amount of text a language model can look back on and reference when g"
+      ],
+      "latency": 8.036334991455078
+    },
+    {
+      "topic": "Enterprise assistants: business AI",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Q Business features",
+        "[exa] Meet the all-new Slackbot, intelligently redesigned.",
+        "[exa-h] Introducing Amazon Quick Suite, a new agentic teammate that quickly answers questions at work and turn those answers int"
+      ],
+      "latency": 7.243131399154663
+    },
+    {
+      "topic": "Custom assistants: domain-specific",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Extend Microsoft 365 Copilot with agents",
+        "[exa] AI Assistant",
+        "[exa-h] assistant is useful is when you need support for a specific subject area with specialized vocabulary, grounded on a subj"
+      ],
+      "latency": 6.892601728439331
+    },
+    {
+      "topic": "Assistant deployment: production",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deploying a Rasa Assistant",
+        "[exa] Deploying Your Rasa Assistant",
+        "[exa-h] Version: Main/Unreleased\n# Deploying a Rasa Assistant\nThis section explains when and how to deploy an assistant built wi"
+      ],
+      "latency": 7.5379438400268555
+    },
+    {
+      "topic": "Security: enterprise compliance",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Security and Privacy Controls for Information Systems and Organizations",
+        "[exa-h] efforts in information systems security and privacy and its collaborative activities with industry, \ngovernment, and aca"
+      ],
+      "latency": 7.370563268661499
+    },
+    {
+      "topic": "Customer service: support bots",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A guide to AI customer service chatbots",
+        "[exa] Chatbots for customer experience",
+        "[exa-h] ## Customer service chatbots, defined\nA customer service[chatbot] refers to an automated software application that uses["
+      ],
+      "latency": 7.919949054718018
+    },
+    {
+      "topic": "Coding assistants: dev tools",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] GitHub Copilot transforms the developer experience. Backed by the leaders in AI, GitHub Copilot provides contextualized "
+      ],
+      "latency": 6.992593288421631
+    },
+    {
+      "topic": "Writing assistants: content AI",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Writing Assistant",
+        "[exa] You think big. We\u2019ll take care of the details.",
+        "[exa-h] AI writing assistants are tools that use artificial intelligence to help with various writing tasks. Grammarly is the le"
+      ],
+      "latency": 5.962462663650513
+    },
+    {
+      "topic": "Research assistants: knowledge work",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Roles and Responsibilities of Research Assistants",
+        "[exa] Knowledge Worker Roles and Actions - Results of Two Empirical Studies",
+        "[exa-h] Responsibilities of the graduate Research Assistants must involve active research of some form, regardless of whether th"
+      ],
+      "latency": 8.421802520751953
+    }
+  ]
+}

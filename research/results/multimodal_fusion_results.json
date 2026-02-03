@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:31:45.646261",
+  "stats": {
+    "sources": 199,
+    "vectors": 190,
+    "findings": 86
+  },
+  "results": [
+    {
+      "topic": "CLIP: contrastive language-image pretraining",
+      "area": "vision-language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CLIP: Connecting text and images",
+        "[exa] ",
+        "[exa-h] Illustration:Justin Jay Wang\nLoading\u2026\nShare\nWe\u2019re introducing a neural network called CLIP which efficiently learns visu"
+      ],
+      "latency": 7.973126173019409
+    },
+    {
+      "topic": "GPT-4V: vision understanding",
+      "area": "vision-language",
+      "sources": 9,
+      "vectors": 0,
+      "findings": [
+        "[exa] GPT-4V(ision) system card",
+        "[exa] ",
+        "[exa-h] GPT\u20114 with vision (GPT\u20114V) enables users to instruct GPT\u20114 to analyze image inputs provided by the user, and is the late"
+      ],
+      "latency": 3.966238021850586
+    },
+    {
+      "topic": "LLaVA: large language and vision assistant",
+      "area": "vision-language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLaVA: Large Language and Vision Assistant - Microsoft Research",
+        "[exa] ",
+        "[exa-h] LLaVA is an open-source project, collaborating with research community to advance the state-of-the-art in AI. LLaVA repr"
+      ],
+      "latency": 4.252545595169067
+    },
+    {
+      "topic": "BLIP-2: bootstrapping language-image",
+      "area": "vision-language",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] [Submitted on 30 Jan 2023 ([v1]), last revised 15 Jun 2023 (this version, v3)]\n# Title:BLIP-2: Bootstrapping Language-Im"
+      ],
+      "latency": 6.618918180465698
+    },
+    {
+      "topic": "Early fusion: input concatenation",
+      "area": "fusion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Early Fusion Methods in Multimodal Integration",
+        "[exa] Early vs Late Fusion in Multimodal Convolutional Neural Networks | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] ## 1. Foundations and Taxonomy of Early Fusion\nIn early fusion, modalities are merged prior to any substantial modality-"
+      ],
+      "latency": 5.5914411544799805
+    },
+    {
+      "topic": "Late fusion: decision combination",
+      "area": "fusion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Estimation and decision fusion: A survey",
+        "[exa] Decision templates for multiple classifier fusion: an experimental comparison",
+        "[exa-h] Data fusion has been applied to a large number of fields and the corresponding applications utilize numerous mathematica"
+      ],
+      "latency": 4.548221826553345
+    },
+    {
+      "topic": "Cross-attention fusion: modality interaction",
+      "area": "fusion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We introduce FUSION, a family of multimodal large language models (MLLMs) with a fully vision-language alignment and i"
+      ],
+      "latency": 5.463595151901245
+    },
+    {
+      "topic": "Multimodal transformers: unified architecture",
+      "area": "fusion",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] scheme called 4M. It consists of training a single unified Transformer encoder-decoder using a masked modeling objective"
+      ],
+      "latency": 4.847015619277954
+    },
+    {
+      "topic": "Audio-visual speech: lip reading",
+      "area": "audio-visual",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Lipreading and audio-visual speech perception",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] This paper reviews progress in understanding the psychology of lipreading and audio-visual speech perception. It conside"
+      ],
+      "latency": 5.363022089004517
+    },
+    {
+      "topic": "Video captioning: temporal multimodal",
+      "area": "audio-visual",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > We present CAT-V (Caption AnyThing in Video), a training-free framework for fine-grained object-centric video captioni"
+      ],
+      "latency": 3.7081716060638428
+    },
+    {
+      "topic": "Sound localization: audio-visual correspondence",
+      "area": "audio-visual",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Auditory localization: a comprehensive practical review",
+        "[exa] Visual influences on auditory spatial learning",
+        "[exa-h] Auditory localization is a fundamental ability that allows to perceive the spatial location of a sound source in the env"
+      ],
+      "latency": 8.61841368675232
+    },
+    {
+      "topic": "Multimodal emotion: facial, voice, text",
+      "area": "audio-visual",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] M3ER: Multiplicative Multimodal Emotion Recognition using Facial, Textual, and Speech Cues",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] We present M3ER, a learning-based method for emotion recognition from multiple input modalities. Our approach combines c"
+      ],
+      "latency": 6.98784327507019
+    },
+    {
+      "topic": "Visual question answering: VQA",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] VQA: Visual Question Answering - ADS",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] We propose the task of free-form and open-ended Visual Question Answering (VQA). Given an image and a natural language q"
+      ],
+      "latency": 3.7235169410705566
+    },
+    {
+      "topic": "Image captioning: visual description",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Automatically describing the content of an image is a fundamental problem in artificial intelligence that connects com"
+      ],
+      "latency": 5.563765287399292
+    },
+    {
+      "topic": "Multimodal RAG: document + image retrieval",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] multi-modal RAG framework that flexibly accommodates various document contexts (closed-domain and open-domain), question"
+      ],
+      "latency": 8.817307949066162
+    },
+    {
+      "topic": "Multimodal search: cross-modal retrieval",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] ",
+        "[exa-h] > Abstract:With the exponential surge in diverse multi-modal data, traditional uni-modal retrieval methods struggle to m"
+      ],
+      "latency": 4.6136064529418945
+    },
+    {
+      "topic": "Flamingo: visual language models",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Building models that can be rapidly adapted to novel tasks using only a handful of\nannotated examples is an open challen"
+      ],
+      "latency": 7.7850775718688965
+    },
+    {
+      "topic": "PaLI: pathways language image",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PaLI",
+        "[exa] ",
+        "[exa-h] We introduce the Pathways Language and Image (PaLI) model, a scalable approach to joint modeling of language and images "
+      ],
+      "latency": 4.1946494579315186
+    },
+    {
+      "topic": "Gemini multimodal: unified model",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Gemini models jointly across image, audio, video, and text data for the purpose of building a model\nwith both strong gen"
+      ],
+      "latency": 4.060465097427368
+    },
+    {
+      "topic": "ImageBind: binding modalities",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ImageBind: One Embedding Space To Bind Them All - ADS",
+        "[exa] ImageBind: One Embedding Space To Bind Them All",
+        "[exa-h] We present ImageBind, an approach to learn a joint embedding across six different modalities - images, text, audio, dept"
+      ],
+      "latency": 6.490498781204224
+    }
+  ]
+}

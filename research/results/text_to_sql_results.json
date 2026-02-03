@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:56:40.261342",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 98
+  },
+  "results": [
+    {
+      "topic": "Text-to-SQL: natural language queries",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > A significant amount of the world's knowledge is stored in relational databases. However, the ability for users to ret"
+      ],
+      "latency": 7.754778861999512
+    },
+    {
+      "topic": "DIN-SQL: decomposed SQL generation",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] DFIN-SQL: Integrating Focused Schema with DIN-SQL for Superior Accuracy in Large-Scale Databases - ADS",
+        "[exa] DIN-SQL: Decomposed In-Context Learning of Text-to-SQL with Self-Correction\n     \n      (2304.11015v3)",
+        "[exa-h] The task of converting natural language queries into SQL queries is intricate, necessitating a blend of precise techniqu"
+      ],
+      "latency": 6.888001918792725
+    },
+    {
+      "topic": "DAIL-SQL: demonstration enhanced",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] SQL Dialog Skills",
+        "[exa] Part\u00a0II.\u00a0The SQL Language",
+        "[exa-h] * display the name of the departments with the 3 highest employee counts|\n### Tutorial: Getting Started with SQL Dialogs"
+      ],
+      "latency": 6.606972932815552
+    },
+    {
+      "topic": "Vanna AI: text-to-SQL platform",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The  SQL Agent",
+        "[exa] What is Vanna 2.0?",
+        "[exa-h] > Why use AI to chat with your database in the first place? To start, it allows you to spend less time writing SQL and m"
+      ],
+      "latency": 6.686614274978638
+    },
+    {
+      "topic": "Schema linking: table column matching",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Databases",
+        "[exa] ",
+        "[exa-h] > Schema matching is a foundational task in enterprise data integration, aiming to align disparate data sources. While t"
+      ],
+      "latency": 8.268916845321655
+    },
+    {
+      "topic": "SQL chain-of-thought: step reasoning",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Exploring Chain of Thought Style Prompting for Text-to-SQL - ACL Anthology",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] In-context learning with large language models (LLMs) has recently caught increasing attention due to its superior few-s"
+      ],
+      "latency": 7.2454047203063965
+    },
+    {
+      "topic": "Self-correction: SQL validation",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A better SQL validator and comparison with existing SQL validators",
+        "[exa] \ud83d\udcdc The SQL Linter for humans",
+        "[exa-h] Those pain points sketch a straightforward blueprint for a better validator: one that keeps going after the first failur"
+      ],
+      "latency": 7.822007894515991
+    },
+    {
+      "topic": "Few-shot SQL: example-based",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] SQLPrompt: Improved In-context Learning for Few-shot Text-to-SQL",
+        "[exa-h] 068 examples to annotate for domain adaptation in text\u0002069 to-SQL. In addition to clustering approaches that\n070 have pr"
+      ],
+      "latency": 7.685617923736572
+    },
+    {
+      "topic": "Spider: text-to-SQL benchmark",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Spider 2.0",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Spider 2.0 is an evaluation framework comprising 632 real-world text-to-SQL workflow problems derived from enterprise-le"
+      ],
+      "latency": 10.350159883499146
+    },
+    {
+      "topic": "WikiSQL: simple queries",
+      "area": "benchmarks",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] ",
+        "[exa-h] A large crowd-sourced dataset for developing natural language interfaces for relational databases. WikiSQL is the datase"
+      ],
+      "latency": 7.4009315967559814
+    },
+    {
+      "topic": "BIRD: real-world SQL",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] BIRD-bench",
+        "[exa] BIRD-INTERACT",
+        "[exa-h] database contents on text-to-SQL parsing.BIRD contains over**12,751**unique question-SQL pairs,**95**big databases with "
+      ],
+      "latency": 7.455165386199951
+    },
+    {
+      "topic": "SParC: context-dependent",
+      "area": "benchmarks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] This requires a practical text-to-SQL system to ef\u0002fectively process context information to synthesize\nthe correct SQL l"
+      ],
+      "latency": 6.121363162994385
+    },
+    {
+      "topic": "LangChain SQL: database agents",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] Build a SQL agent",
+        "[exa-h] LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool \u2014so you"
+      ],
+      "latency": 9.560189247131348
+    },
+    {
+      "topic": "SQLCoder: code-focused model",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] sqlcoder",
+        "[exa-h] [Interactive Demo] |[\ud83e\udd17 HF Repo] |[\u267e\ufe0f Colab] |[\ud83d\udc26 Twitter] \n## TL;DR\n[] \nSQLCoder is a 15B parameter model that outperform"
+      ],
+      "latency": 8.324451208114624
+    },
+    {
+      "topic": "DuckDB AI: analytical SQL",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI That Quacks: Introducing DuckDB-NSQL, a LLM for DuckDB SQL",
+        "[exa] Just Enough SQL to be Dangerous with AI",
+        "[exa-h] for text-to-SQL, we came to the realization that existing models and benchmarks primarily focus on analytical queries / "
+      ],
+      "latency": 8.51633596420288
+    },
+    {
+      "topic": "Defog: enterprise text-to-SQL",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Defog.ai: Fine-tuned LLM for Enterprise Data Analysis",
+        "[exa] A Practical Guide to Implementing Text-to-SQL LLMs in Enterprises",
+        "[exa-h] Integrate data across all your favorite tools and platforms.\n![Icon] \nDatabases\nQuery any structured database from Postg"
+      ],
+      "latency": 7.231764554977417
+    },
+    {
+      "topic": "SQL injection: security concerns",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] SQL Injection",
+        "[exa] SQL injection",
+        "[exa-h] or \u201cinjection\u201d of a SQL query via the input data from the client to the\napplication. A successful SQL injection exploit "
+      ],
+      "latency": 8.332427740097046
+    },
+    {
+      "topic": "Query optimization: performance",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MySQL :: MySQL 8.4 Reference Manual :: 10.2 Optimizing SQL Statements",
+        "[exa] MySQL :: MySQL 8.4 Reference Manual :: 10.2.1 Optimizing SELECT Statements",
+        "[exa-h] The core logic of a database application is performed through SQL\nstatements, whether issued directly through an interpr"
+      ],
+      "latency": 6.982975721359253
+    },
+    {
+      "topic": "Semantic layer: business logic",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About a Semantic Model's Architecture",
+        "[exa] Semantic Layer: What it is and when to adopt it",
+        "[exa-h] The logical layer can contain: business models, business entities, levels, measures, filters, aggregates, table sources,"
+      ],
+      "latency": 9.364719867706299
+    },
+    {
+      "topic": "SQL caching: repeated queries",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MySQL :: MySQL 5.7 Reference Manual :: 8.10.3 The MySQL Query Cache",
+        "[exa] Tuning the Result Cache",
+        "[exa-h] The query cache is deprecated as of MySQL 5.7.20, and is\nremoved in MySQL 8.0.\nThe query cache stores the text of a[`SEL"
+      ],
+      "latency": 7.3918304443359375
+    }
+  ]
+}

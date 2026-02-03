@@ -53,7 +53,11 @@ from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, TypeVar
 
 import httpx
-import structlog
+try:
+    import structlog
+    _STRUCTLOG = True
+except ImportError:
+    _STRUCTLOG = False
 from pydantic import BaseModel, Field
 
 # =============================================================================
@@ -78,20 +82,24 @@ if sys.platform == "win32":
 # Structured Logging Configuration
 # =============================================================================
 
-structlog.configure(
-    processors=[
-        structlog.stdlib.filter_by_level,
-        structlog.processors.TimeStamper(fmt="iso"),
-        structlog.processors.add_log_level,
-        structlog.processors.JSONRenderer()
-    ],
-    wrapper_class=structlog.stdlib.BoundLogger,
-    context_class=dict,
-    logger_factory=structlog.stdlib.LoggerFactory(),
-    cache_logger_on_first_use=True,
-)
-
-logger = structlog.get_logger(__name__)
+if _STRUCTLOG:
+    structlog.configure(
+        processors=[
+            structlog.stdlib.filter_by_level,
+            structlog.processors.TimeStamper(fmt="iso"),
+            structlog.processors.add_log_level,
+            structlog.processors.JSONRenderer()
+        ],
+        wrapper_class=structlog.stdlib.BoundLogger,
+        context_class=dict,
+        logger_factory=structlog.stdlib.LoggerFactory(),
+        cache_logger_on_first_use=True,
+    )
+    logger = structlog.get_logger(__name__)
+else:
+    import logging
+    logging.basicConfig(level=logging.INFO)
+    logger = logging.getLogger(__name__)
 
 
 # =============================================================================

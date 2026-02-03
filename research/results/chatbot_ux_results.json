@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:39:46.914867",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Conversational flow design: intents, entities, dialog trees",
+      "area": "conversation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] General agent design best practices \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Flow-based agent basics \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Welcome intents should let users know about the agent's capabilities with branding in mind.|Your agent's welcome intent "
+      ],
+      "latency": 6.8513100147247314
+    },
+    {
+      "topic": "Multi-turn conversation: context tracking, slot filling",
+      "area": "conversation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] task of the model is (1) to determine for every\nturn whether any of the N domain-slot pairs in\nS = {S1, . . . , SN } is "
+      ],
+      "latency": 6.7252421379089355
+    },
+    {
+      "topic": "Conversation repair: clarification, disambiguation, fallback",
+      "area": "conversation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Misunderstanding and the negotiation of meaning using abduction",
+        "[exa] Repair After Next Turn: The Last Structurally Provided Defense of Intersubjectivity in Conversation",
+        "[exa-h] The approach described in the paper treats misunderstanding and repair as intrinsic to conversants' core language abilit"
+      ],
+      "latency": 9.354833841323853
+    },
+    {
+      "topic": "Proactive suggestions: anticipating user needs, recommendations",
+      "area": "conversation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Proactive Recommendation Delivery | Proceedings of the 10th ACM Conference on Recommender Systems",
+        "[exa] Prompt Suggestions",
+        "[exa-h] and attention. Or, on other side of spectrum, there are RS that handle recommendation delivery without any consideration"
+      ],
+      "latency": 7.280541181564331
+    },
+    {
+      "topic": "Chat UI components: message bubbles, typing indicators, avatars",
+      "area": "ui",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] React AI Message",
+        "[exa] Chat bubble",
+        "[exa-h] This is the big one\u2014the message component that handles everything in a chat UI. User messages, assistant messages, file "
+      ],
+      "latency": 7.952777147293091
+    },
+    {
+      "topic": "Streaming text display: typewriter effect, markdown rendering",
+      "area": "ui",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] typewritten-text Demo",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Run\n```\n`This works with**<<typewritten-text paused\\>**<<strong\\>other<</strong\\> <<em\\>markdown<</em\\> <<span class=\"sp"
+      ],
+      "latency": 8.245301008224487
+    },
+    {
+      "topic": "Rich responses: cards, carousels, quick replies, buttons",
+      "area": "ui",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Rich responses \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Rich response messages \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] # Rich responsesStay organized with collectionsSave and categorize content based on your preferences.\n![Spark icon] \n## "
+      ],
+      "latency": 7.656348943710327
+    },
+    {
+      "topic": "Mobile chat UI: responsive design, touch interactions",
+      "area": "ui",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Get from brainstorm to breakthrough with Miro",
+        "[exa] User interface patterns \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Accelerate your team with collaborative AI workflows\n[\nLearn more\n] \n![] \n### Intelligent Canvas\nEmpower teamwork on one"
+      ],
+      "latency": 7.4628071784973145
+    },
+    {
+      "topic": "Onboarding flows: tutorials, sample prompts, capabilities",
+      "area": "ux",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] User onboarding strategies",
+        "[exa] Onboarding users to your app",
+        "[exa-h] ## Core Onboarding Strategies\n### Start simple, build up"
+      ],
+      "latency": 7.489888429641724
+    },
+    {
+      "topic": "Error handling UX: graceful failures, retry options",
+      "area": "ux",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Implement error handling when using the Fetch API \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Request latency and error handling best practices \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] ## Conclusion\nOne important aspect of handling errors is to define the various parts that can go wrong. For each scenari"
+      ],
+      "latency": 8.169938325881958
+    },
+    {
+      "topic": "Loading states: skeleton screens, progress indicators",
+      "area": "ux",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Loading | Primer",
+        "[exa-h] the Nielsen Norman Group, skeleton states and other loading indicators improve\nuser satisfaction.\nIn this pattern, we wi"
+      ],
+      "latency": 7.713033676147461
+    },
+    {
+      "topic": "Accessibility in chat: screen readers, keyboard navigation",
+      "area": "ux",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Accessibility in Google Chat",
+        "[exa] Use Google Chat with a screen reader",
+        "[exa-h] [Google Accessibility] \n# Accessibility in Google Chat\n## Overview\nYou can use Google Chat with platform accessibility f"
+      ],
+      "latency": 6.202478408813477
+    },
+    {
+      "topic": "User feedback collection: thumbs up/down, ratings, comments",
+      "area": "feedback",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build a Survey",
+        "[exa] Collect Smarter Customer Feedback with Typeform",
+        "[exa-h] The survey build experience contains many of the same features at the guide builder, and uses a subset of the available["
+      ],
+      "latency": 9.30605673789978
+    },
+    {
+      "topic": "Conversation analytics: engagement metrics, drop-off analysis",
+      "area": "feedback",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] In-Depth Guide: Measuring Customer Engagement with Conversation Analytics",
+        "[exa] Conversational analytics metrics in\n                    Amazon Connect",
+        "[exa-h] Conversation Analytics involves the detailed analysis of customer conversations across various communication channels, i"
+      ],
+      "latency": 8.155442953109741
+    },
+    {
+      "topic": "A/B testing for chatbots: prompt variations, UI experiments",
+      "area": "feedback",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to A/B Test Prompts the Right Way",
+        "[exa] A/B testing Llama in production",
+        "[exa-h] A good A/B test for prompts does not start with tooling. It starts with a crisp question, a fair comparison, and a plan "
+      ],
+      "latency": 7.013277769088745
+    },
+    {
+      "topic": "Continuous improvement: feedback loops, retraining cycles",
+      "area": "feedback",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Continuous improvement process: A 6 steps guide to implementing PDCA",
+        "[exa] PDCA - Wikipedia",
+        "[exa-h] But remember that solutions are never final with the continuous improvement model. Establish feedback loops that let you"
+      ],
+      "latency": 6.563553810119629
+    },
+    {
+      "topic": "Voice integration: speech-to-text, text-to-speech in chat",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Voice agents",
+        "[exa] Voice agents",
+        "[exa-h] Learn how to build voice agents that can understand audio and respond back in natural language.\nCopy page\nUse the OpenAI"
+      ],
+      "latency": 9.165846109390259
+    },
+    {
+      "topic": "Multi-modal chat: image upload, file sharing, screen capture",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multi-modal (image inputs)",
+        "[exa] Image Upload",
+        "[exa-h] # Multi-modal (image inputs)\nBuild multimodal agents that process images, audio, and other non-text inputs.\nMulti-modal "
+      ],
+      "latency": 8.20183777809143
+    },
+    {
+      "topic": "Collaborative chat: shared conversations, team workspaces",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Keep everyone on the same page with a canvas.",
+        "[exa] Simple chat for serious work",
+        "[exa-h] Canvases are new surfaces for teams to create, organise and share information \u2013all inside Slack. Canvases can contain a "
+      ],
+      "latency": 10.54991865158081
+    },
+    {
+      "topic": "Chat history: search, export, conversation management",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Vault Chat search and export scope",
+        "[exa] History & Search",
+        "[exa-h] # Vault Chat search and export scope\n## Search results\nWhen you search for Chat messages, Vault returnsthe messages that"
+      ],
+      "latency": 7.749398708343506
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:54:29.265174",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 88
+  },
+  "results": [
+    {
+      "topic": "Contract review automation: clause extraction, risk flagging",
+      "area": "contracts",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Powered Clause Extraction and Risk Analysis for Contract Management",
+        "[exa] Contract Analysis",
+        "[exa-h] This guide walks you through the end\u2011to\u2011end process of building an AI\u2011driven clause extraction and risk analysis engine "
+      ],
+      "latency": 7.455686092376709
+    },
+    {
+      "topic": "Contract comparison: version diff, term analysis",
+      "area": "contracts",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CompareX Features for AI Contract Analysis and Comparison",
+        "[exa] Contract comparison tool",
+        "[exa-h] ## Contract Comparison\nCompare contract versions, highlight edits, and spot compliance issues in seconds.\nView details]"
+      ],
+      "latency": 7.695184946060181
+    },
+    {
+      "topic": "Contract generation: templates, customization with AI",
+      "area": "contracts",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Create contracts instantly with AI",
+        "[exa] Create contracts instantly with AI",
+        "[exa-h] Create from Template\nPrebuilt or approved templates with smart fields for faster, safer drafting.\nDraft from Scratch\nTyp"
+      ],
+      "latency": 8.240782022476196
+    },
+    {
+      "topic": "Due diligence automation: M&A document review",
+      "area": "contracts",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] M&A due diligence",
+        "[exa] Due diligence in M&A streamlined with Document Intelligence",
+        "[exa-h] Law firms can more adeptly handle the ever-growing volume and complexity of M&A documents by supplementing attorneys\u2019 sk"
+      ],
+      "latency": 7.745294094085693
+    },
+    {
+      "topic": "Legal research with AI: case law search, citation analysis",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI legal research tool",
+        "[exa] AI legal research tool",
+        "[exa-h] Yes. Litigation Document Analyzer goes beyond citation checks to identify mischaracterizations of the law, analyze argum"
+      ],
+      "latency": 6.932866334915161
+    },
+    {
+      "topic": "Legal question answering: statute interpretation",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statutory Interpretation",
+        "[exa] statutory interpretation",
+        "[exa-h] [Return to top]"
+      ],
+      "latency": 8.338511943817139
+    },
+    {
+      "topic": "Precedent analysis: similar case identification",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Sign in - Google Accounts",
+        "[exa-h] (d) To determine whether Google\u2019s limited copying of the API here\nconstitutes fair use, the Court examines the four guid"
+      ],
+      "latency": 9.719423770904541
+    },
+    {
+      "topic": "Legal document summarization: briefs, opinions",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] In this paper, we tackled the extractive summariza\u0002tion of U.S. Supreme Court opinions. The main\nchallenge is that such "
+      ],
+      "latency": 8.801941394805908
+    },
+    {
+      "topic": "Legal NER: parties, dates, obligations, definitions",
+      "area": "nlp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 28 USC PART VI, CHAPTER 176, SUBCHAPTER A: DEFINITIONS AND GENERAL PROVISIONS",
+        "[exa] ",
+        "[exa-h] From Title 28\u2014JUDICIARY AND JUDICIAL PROCEDUREPART VI\u2014PARTICULAR PROCEEDINGSCHAPTER 176\u2014FEDERAL DEBT COLLECTION PROCEDUR"
+      ],
+      "latency": 9.624564409255981
+    },
+    {
+      "topic": "Legal text classification: document type, jurisdiction",
+      "area": "nlp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] which is the case with our US Appellate Briefs dataset.\n4 EVALUATION\n4.1 Datasets\nUS Appellate Briefs is our proprietary"
+      ],
+      "latency": 3.604118824005127
+    },
+    {
+      "topic": "Legal language models: LegalBERT, specialized training",
+      "area": "nlp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LEGAL-BERT: The Muppets straight out of Law School",
+        "[exa] LEGAL-BERT: The Muppets straight out of Law School - ACL Anthology",
+        "[exa-h] We showed that the best strategy to port BERT to a\nnew domain may vary, and one may consider either\nfurther pre-training"
+      ],
+      "latency": 4.683752775192261
+    },
+    {
+      "topic": "Multi-jurisdictional analysis: cross-border legal AI",
+      "area": "nlp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cross-jurisdictional data protection, cybersecurity and AI overview - fourth edition",
+        "[exa] Cross-jurisdictional data protection, cybersecurity and AI overview \u2013 third edition",
+        "[exa-h] ### Cross-jurisdictional overview on the national implementation of the Digital Services Act"
+      ],
+      "latency": 3.792970657348633
+    },
+    {
+      "topic": "Regulatory compliance: monitoring, change management",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Regulatory change management: A step-by-step guide to compliance success",
+        "[exa] ",
+        "[exa-h] ## What is regulatory change management?\n\nRegulatory change management is the ongoing process of monitoring regulatory d"
+      ],
+      "latency": 5.5389320850372314
+    },
+    {
+      "topic": "Privacy compliance: GDPR, CCPA automation",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scale privacy operations with AI",
+        "[exa] Scale privacy operations with AI",
+        "[exa-h] Our software supports your data privacy compliance with key privacy regulations like[GDPR],[CCPA], and countless others "
+      ],
+      "latency": 4.603828430175781
+    },
+    {
+      "topic": "E-discovery: document review, relevance classification",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Technology-Assisted Review for Discovery Requests: A Pocket Guide for Judges",
+        "[exa-h] in which humans work with software (\u201ccomputer\u201d) to train it to identify relevant \ndocuments.2 The process consists of se"
+      ],
+      "latency": 5.409329175949097
+    },
+    {
+      "topic": "Audit trail generation: documentation automation",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] \u2013 AU-12 AUDIT RECORD GENERATION | NIST SP 800-53",
+        "[exa] Introduction to Auditing",
+        "[exa-h] **Compile audit records from [*Assignment: organization-defined system components*] into a system-wide (logical or physi"
+      ],
+      "latency": 4.541020154953003
+    },
+    {
+      "topic": "Legal chatbots: self-help, intake automation",
+      "area": "access",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automated legal intake: How to use AI to enhance the process",
+        "[exa] Get from first pass to final faster.  AI\u00a0contract review and document automation.",
+        "[exa-h] AI legal intake chatbots and virtual receptionists operate 24/7, acting as the first point of contact for prospective cl"
+      ],
+      "latency": 3.966299533843994
+    },
+    {
+      "topic": "Plain language: legal document simplification",
+      "area": "access",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Plain Language Guide Series",
+        "[exa] Plain Language Guide Series",
+        "[exa-h] the law."
+      ],
+      "latency": 6.120469093322754
+    },
+    {
+      "topic": "Pro bono matching: AI for legal aid organizations",
+      "area": "access",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI for Justice for Non-Profit Legal  Service Organizations",
+        "[exa] Products | Legal Support at Scale",
+        "[exa-h] Our AI for Justice Legal Aid program offers both a Legal Innovators Incubator, where we partner with select organization"
+      ],
+      "latency": 5.952404737472534
+    },
+    {
+      "topic": "Court filing assistance: form completion, validation",
+      "area": "access",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Law Help Interactive",
+        "[exa] Self Helper",
+        "[exa-h] Save your answers so you can come back and finish them later.\n![sharewithadvocate] \nIf you are an advocate or staff for "
+      ],
+      "latency": 5.948721647262573
+    }
+  ]
+}

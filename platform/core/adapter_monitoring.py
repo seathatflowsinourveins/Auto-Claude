@@ -7,7 +7,7 @@ Pre-configured monitoring, health checks, and metrics for SDK adapters.
 import asyncio
 from typing import Dict, Any, Optional, List, Callable, Awaitable
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from enum import Enum
 import logging
 
@@ -92,7 +92,7 @@ class AdapterHealthChecker:
             state=AdapterState.UNKNOWN,
             available=False,
             initialized=False,
-            last_check=datetime.utcnow()
+            last_check=datetime.now(timezone.utc)
         )
 
         # Register health check with main checker
@@ -115,7 +115,7 @@ class AdapterHealthChecker:
         health_check_fn = adapter_info["health_check_fn"]
         timeout = adapter_info["timeout"]
 
-        start_time = datetime.utcnow()
+        start_time = datetime.now(timezone.utc)
         health_data = self._health_data[name]
 
         try:
@@ -139,12 +139,12 @@ class AdapterHealthChecker:
                 # Assume healthy if no check available
                 is_healthy = True
 
-            duration = (datetime.utcnow() - start_time).total_seconds() * 1000
+            duration = (datetime.now(timezone.utc) - start_time).total_seconds() * 1000
 
             if is_healthy:
                 health_data.state = AdapterState.READY
                 health_data.available = True
-                health_data.last_success = datetime.utcnow()
+                health_data.last_success = datetime.now(timezone.utc)
                 health_data.success_count += 1
                 health_data.avg_latency_ms = (
                     (health_data.avg_latency_ms * (health_data.success_count - 1) + duration)
@@ -210,11 +210,11 @@ class AdapterHealthChecker:
                 name=f"adapter:{name}",
                 status=HealthStatus.UNHEALTHY,
                 message=str(e),
-                duration_ms=(datetime.utcnow() - start_time).total_seconds() * 1000
+                duration_ms=(datetime.now(timezone.utc) - start_time).total_seconds() * 1000
             )
 
         finally:
-            health_data.last_check = datetime.utcnow()
+            health_data.last_check = datetime.now(timezone.utc)
 
     async def check_all(self) -> Dict[str, AdapterHealth]:
         """Check health of all registered adapters."""
@@ -424,11 +424,11 @@ class AdapterMonitor:
             f"{adapter}.{method}",
             attributes={"adapter": adapter, "method": method}
         ) as span:
-            start_time = datetime.utcnow()
+            start_time = datetime.now(timezone.utc)
             try:
                 result = await func(*args, **kwargs)
 
-                duration = (datetime.utcnow() - start_time).total_seconds()
+                duration = (datetime.now(timezone.utc) - start_time).total_seconds()
                 self._metrics_collector.record_call_end(
                     adapter, method, duration, success=True
                 )
@@ -443,7 +443,7 @@ class AdapterMonitor:
                 return result
 
             except Exception as e:
-                duration = (datetime.utcnow() - start_time).total_seconds()
+                duration = (datetime.now(timezone.utc) - start_time).total_seconds()
                 self._metrics_collector.record_call_end(
                     adapter, method, duration,
                     success=False,
@@ -477,7 +477,7 @@ class AdapterMonitor:
         health = await self._health_checker.check_all()
 
         return {
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "adapters": {
                 name: {
                     "state": h.state.value,

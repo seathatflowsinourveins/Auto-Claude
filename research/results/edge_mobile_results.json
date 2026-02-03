@@ -1,0 +1,248 @@
+{
+  "timestamp": "2026-02-03T01:55:33.557281",
+  "stats": {
+    "sources": 195,
+    "vectors": 180,
+    "findings": 76
+  },
+  "results": [
+    {
+      "topic": "ONNX Runtime for mobile: iOS, Android model deployment",
+      "area": "mobile",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to develop a mobile application with ONNX Runtime",
+        "[exa] Get started with ONNX Runtime Mobile",
+        "[exa-h] Which language bindings and runtime package you use depends on your chosen development environment and the target(s) you"
+      ],
+      "latency": 3.567882776260376
+    },
+    {
+      "topic": "TensorFlow Lite: model conversion, delegates, GPU acceleration",
+      "area": "mobile",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LiteRT converter for TensorFlow models \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Implementing a Custom Delegate",
+        "[exa-h] LiteRT supports a variety of hardware accelerators, for example Coral NPU, for\nmodel inferencing through its Delegate AP"
+      ],
+      "latency": 4.880547523498535
+    },
+    {
+      "topic": "Core ML: Apple Neural Engine, model optimization",
+      "area": "mobile",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview \u2014 Guide to Core ML Tools",
+        "[exa] Optimization Workflow",
+        "[exa-h] choose the right approach to trade off accuracy and the time/data needed to optimize, based on your model.\nYou will lear"
+      ],
+      "latency": 5.4697935581207275
+    },
+    {
+      "topic": "PyTorch Mobile: Lite Interpreter, model optimization",
+      "area": "mobile",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] (beta) Efficient mobile interpreter in Android and iOS #",
+        "[exa] Script and Optimize for Mobile Recipe #",
+        "[exa-h] Run in Google Colab\nColab\n![] \nDownload Notebook\nNotebook\n![] \nView on GitHub\nGitHub\n# (beta) Efficient mobile interpret"
+      ],
+      "latency": 4.968924045562744
+    },
+    {
+      "topic": "Quantization for edge: INT8, INT4, dynamic quantization",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Working with Quantized Types #",
+        "[exa] Working with Quantized Types #",
+        "[exa-h] * \\\\(\\\\text{castToFp4}\\\\)rounds to the nearest value representable in FP4E2M1, ties are rounded to an even number, as de"
+      ],
+      "latency": 3.7272584438323975
+    },
+    {
+      "topic": "Pruning for mobile: structured, unstructured, magnitude-based",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] pruned and all other weights in the network are updated using the second-order information.\nMore recently, magnitude-bas"
+      ],
+      "latency": 5.456501245498657
+    },
+    {
+      "topic": "Knowledge distillation for small models: teacher-student, self-distillation",
+      "area": "compression",
+      "sources": 5,
+      "vectors": 0,
+      "findings": [
+        "[tavily] Knowledge distillation transfers knowledge from a large model to a smaller one. Self-distillation involves a model teaching itself. Teacher-student distillation uses a large model to train a smaller o"
+      ],
+      "latency": 5.801290988922119
+    },
+    {
+      "topic": "Neural architecture search for edge: MobileNet, EfficientNet",
+      "area": "compression",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks - ADS",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] propose a new scaling method that uniformly scales all dimensions of depth/width/resolution using a simple yet highly ef"
+      ],
+      "latency": 5.213711977005005
+    },
+    {
+      "topic": "Phi-3 family: phi-3-mini, phi-3-small for edge deployment",
+      "area": "slm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Phi open model family",
+        "[exa] ",
+        "[exa-h] Phi-4-mini and Phi-4-multimodal are the newest models in the Phi open model family. These two models join Phi-4 as the n"
+      ],
+      "latency": 7.225539922714233
+    },
+    {
+      "topic": "Gemma 2B: mobile-optimized language model",
+      "area": "slm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Gemma 2: Improving Open Language Models at a Practical Size",
+        "[exa-h] several known technical modifications to the Transformer architecture, such as interleaving local-global\nattentions (Bel"
+      ],
+      "latency": 5.710853099822998
+    },
+    {
+      "topic": "TinyLlama: 1.1B parameter model for edge inference",
+      "area": "slm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] tinyllama:1.1b",
+        "[exa] TinyLlama \u2013 1.1B Parameters",
+        "[exa-h] TinyLlama is a compact model with only 1.1B parameters. This compactness allows it to cater to a multitude of applicatio"
+      ],
+      "latency": 5.963645696640015
+    },
+    {
+      "topic": "Llama 3.2: 1B and 3B models for on-device AI",
+      "area": "slm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Llama 3",
+        "[exa] Llama 3.2 Quantized Models (1B/3B)",
+        "[exa-h] \u20228B: Light-weight, ultra-fast model you can run anywhere.\n\u2022405B: Flagship foundation model driving widest variety of use"
+      ],
+      "latency": 4.75247859954834
+    },
+    {
+      "topic": "Ollama for local inference: model management, API compatibility",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ollama/ollama | DeepWiki",
+        "[exa] API Reference - Ollama English Documentation",
+        "[exa-h] Ollama is a local runtime system for running large language models (LLMs) on consumer hardware. It provides:\n* **Model M"
+      ],
+      "latency": 3.848099708557129
+    },
+    {
+      "topic": "llama.cpp: CPU inference, quantization support, GGUF format",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Inference Endpoints (dedicated)",
+        "[exa] Inference Endpoints (dedicated)",
+        "[exa-h] llama.cpp is a high-performance inference engine written in C/C++, tailored for running Llama and compatible models in t"
+      ],
+      "latency": 3.641360282897949
+    },
+    {
+      "topic": "MLC LLM: universal deployment, WebGPU, iOS, Android",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] WebLLM: A High-Performance In-Browser LLM Inference Engine",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] within web browsers. WebLLM provides an OpenAI-style API for seamless integration into web applications, and leverages W"
+      ],
+      "latency": 4.058562278747559
+    },
+    {
+      "topic": "ExecuTorch: PyTorch edge deployment, custom ops",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] ExecuTorch",
+        "[exa] Welcome to the ExecuTorch Documentation #",
+        "[exa-h] ExecuTorch is an end-to-end solution for enabling on-device inference capabilities across mobile and edge devices includ"
+      ],
+      "latency": 4.555272817611694
+    },
+    {
+      "topic": "Raspberry Pi LLM deployment: memory constraints, optimization",
+      "area": "iot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLMPi: Optimizing LLMs for High-Throughput on Raspberry Pi",
+        "[exa] Local LLM Optimization with llama.cpp - On-Device AI \u00b6",
+        "[exa-h] Deploying Large Language Models (LLMs) on resource-constrained edge devices like the Raspberry Pi presents challenges in"
+      ],
+      "latency": 5.262563943862915
+    },
+    {
+      "topic": "NVIDIA Jetson: edge AI, TensorRT optimization",
+      "area": "iot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA TensorRT",
+        "[exa] NVIDIA TensorRT Documentation #",
+        "[exa-h] [NVIDIA\u00ae TensorRT\u2122] is a high-performance deep learning inference SDK that helps you deploy AI models on NVIDIA GPUs. It"
+      ],
+      "latency": 4.416796684265137
+    },
+    {
+      "topic": "Edge TPU: Coral devices, model compilation",
+      "area": "iot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Edge TPU Compiler",
+        "[exa] TensorFlow models on the Edge TPU",
+        "[exa-h] plus any options. If you pass multiple models (each separated with a space), they are co-compiled\nsuch that they can sha"
+      ],
+      "latency": 3.6672592163085938
+    },
+    {
+      "topic": "WebAssembly for AI: browser-based inference, wasm-bindgen",
+      "area": "iot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Facilitating high-level interactions between Wasm modules and JavaScript\n[wasm-bindgen.github.io/wasm-bindgen/] \n### Top"
+      ],
+      "latency": 3.821100950241089
+    }
+  ]
+}

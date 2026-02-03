@@ -1,0 +1,248 @@
+{
+  "timestamp": "2026-02-03T01:54:26.064882",
+  "stats": {
+    "sources": 194,
+    "vectors": 184,
+    "findings": 84
+  },
+  "results": [
+    {
+      "topic": "AI tutoring systems: adaptive learning, personalization",
+      "area": "tutoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Artificial intelligence in adaptive education: a systematic review of techniques for personalized learning",
+        "[exa] ",
+        "[exa-h] A prominent example of this transformation is the evolution of Intelligent Tutoring Systems (ITS), which use AI to track"
+      ],
+      "latency": 9.026257753372192
+    },
+    {
+      "topic": "Socratic tutoring: question-based learning with LLMs",
+      "area": "tutoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Socratic Students: Teaching Language Models to Learn by Asking Questions",
+        "[exa-h] Nonetheless, current LLM-based application in personalized teaching predomi\u0002nantly follows a \u201cQuestion-Answering\u201d paradi"
+      ],
+      "latency": 7.424083232879639
+    },
+    {
+      "topic": "Math tutoring AI: step-by-step problem solving",
+      "area": "tutoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Math Solver for Step-by-Step Solutions",
+        "[exa] Snap homework. Get verified answers.",
+        "[exa-h] A comprehensive AI math solver that integrates with your learning workflow\n**\n### Step-by-Step Solutions\nBreaks down com"
+      ],
+      "latency": 5.978301525115967
+    },
+    {
+      "topic": "Language learning AI: conversation practice, correction",
+      "area": "tutoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The stress-free way to  start speaking a new language",
+        "[exa] Become fluent faster with the world's most advanced AI for language learning",
+        "[exa-h] Babbel Speak is a language speaking practice app built into the Babbel app. It guides you through real-life conversation"
+      ],
+      "latency": 9.387523651123047
+    },
+    {
+      "topic": "Automated essay scoring: rubric-based evaluation",
+      "area": "assessment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automated essay scoring: Psychometric guidelines and practices",
+        "[exa] ",
+        "[exa-h] In this paper, we provide an overview of psychometric procedures and guidelines Educational Testing Service (ETS) uses t"
+      ],
+      "latency": 8.264025449752808
+    },
+    {
+      "topic": "Question generation: creating assessments from content",
+      "area": "assessment",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Automatic question generation and answer assessment: a survey",
+        "[exa] ",
+        "[exa-h] automatic question generation from learning resources is the primary task of an automated assessment system. This paper "
+      ],
+      "latency": 7.773218631744385
+    },
+    {
+      "topic": "Plagiarism detection: AI-generated content identification",
+      "area": "assessment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI checker provides insight into writing as the learning process evolves",
+        "[exa] AI checker provides insight into writing as the learning process evolves",
+        "[exa-h] Our AI checker provides valuable insights on how much of a student\u2019s submission is authentic, human-written content vers"
+      ],
+      "latency": 8.879552364349365
+    },
+    {
+      "topic": "Formative assessment: real-time learning feedback",
+      "area": "assessment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The only AI-first platform for instruction, assessment, and real-time insights",
+        "[exa] ",
+        "[exa-h] Formative is an AI-powered instructional and assessment platform. It lets educators create interactive lessons, assign r"
+      ],
+      "latency": 7.181682348251343
+    },
+    {
+      "topic": "Educational content generation: lessons, exercises",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Free Worksheet Generator for Teachers",
+        "[exa] Understand   anything   with   NotebookLM",
+        "[exa-h] Generate exportable slides based on any topic, PDF, or website\n] \n[\n![AI Question Generator] \n## AI Question Generator\nP"
+      ],
+      "latency": 5.303935289382935
+    },
+    {
+      "topic": "Curriculum design with AI: learning path optimization",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Personalized Learning Paths for Student Progression: An Artificial Intelligence-Driven Skill Roadmap With Retrieval-Augmented Generation and Large Language Models",
+        "[exa] Customized Learning Paths",
+        "[exa-h] Please chooseAdvanced EngineeringAgricultural BiotechnologyAgroforestryAlgorithms and Data StructureAnimal & Dairy Scien"
+      ],
+      "latency": 4.6899940967559814
+    },
+    {
+      "topic": "Video lecture summarization: key point extraction",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Automated Summarization of Lecture Videos",
+        "[exa-h] > The rapid expansion of video content across a variety of industries, including social media, education, entertainment,"
+      ],
+      "latency": 5.937498569488525
+    },
+    {
+      "topic": "Accessibility in education: content adaptation, translation",
+      "area": "content",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The UDL Guidelines",
+        "[exa] ",
+        "[exa-h] **The CAST UDL Guidelines\u2122 are a tool that can be applied in any discipline or domain to ensure that all learners are ab"
+      ],
+      "latency": 5.174266576766968
+    },
+    {
+      "topic": "Learning analytics: tracking progress, predicting outcomes",
+      "area": "personalization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Utilising learning analytics to support study success in higher education: a systematic review",
+        "[exa] Predicting student outcomes using digital logs of learning behaviors: Review, current standards, and suggestions for future work",
+        "[exa-h] learning analytics in higher education and its link to study success, learning analytics are defined as \u201cthe use, assess"
+      ],
+      "latency": 4.78204083442688
+    },
+    {
+      "topic": "Adaptive learning paths: skill-based progression",
+      "area": "personalization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What Is Adaptive Learning?",
+        "[exa] Adaptive Learning Platforms: How AI Powers Personalized Education",
+        "[exa-h] Another way to adapt your learning is through an adaptive sequence. With adaptive sequence technology, not only is your "
+      ],
+      "latency": 3.8372809886932373
+    },
+    {
+      "topic": "Student modeling: understanding learner knowledge state",
+      "area": "personalization",
+      "sources": 5,
+      "vectors": 5,
+      "findings": [
+        "[tavily] Student modeling involves tracking learners' knowledge states through adaptive systems, using techniques like neural networks and deep learning to predict performance and tailor educational experience"
+      ],
+      "latency": 3.905322790145874
+    },
+    {
+      "topic": "Recommendation systems for education: content matching",
+      "area": "personalization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] In this paper, we explore the task of recommending suit\u0002able content for a student to study, given their prior inter\u0002est"
+      ],
+      "latency": 5.305921792984009
+    },
+    {
+      "topic": "Khan Academy AI: Khanmigo, tutoring at scale",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Khanmigo is your always-available",
+        "[exa] Khanmigo is your always-available",
+        "[exa-h] Khanmigo is an AI-powered personal tutor and teaching assistant from trusted education nonprofit Khan Academy."
+      ],
+      "latency": 4.574832201004028
+    },
+    {
+      "topic": "Duolingo AI: language learning optimization",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How Duolingo\u2019s AI Learns What You Need to Learn",
+        "[exa] How Duolingo uses AI to create lessons faster",
+        "[exa-h] ## What\u2019s next for Duolingo\u2019s AI\nMuch of what we\u2019re doing with Birdbrain and related technologies applies outside of lan"
+      ],
+      "latency": 5.107137441635132
+    },
+    {
+      "topic": "Coursera AI: course recommendations, feedback",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Generative AI for Everyone",
+        "[exa] Introduction to Artificial Intelligence (AI)",
+        "[exa-h] Instructor ratings\n## Instructor ratings\nWe asked all learners to give feedback on our instructors based on the quality "
+      ],
+      "latency": 4.9944007396698
+    },
+    {
+      "topic": "AI teaching assistants: grading, Q&A automation",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Graders | OpenAI API",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Learn about graders used for evals and fine-tuning.\nCopy page\nGraders are a way to evaluate your model's performance aga"
+      ],
+      "latency": 5.929107189178467
+    }
+  ]
+}

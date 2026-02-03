@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:17:27.142872",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 93
+  },
+  "results": [
+    {
+      "topic": "AWS SageMaker: ML platform, training, deployment",
+      "area": "aws",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon SageMaker Documentation",
+        "[exa] Amazon SageMaker AI",
+        "[exa-h] [Preferences] \n\n# Amazon SageMaker Documentation\n\nAmazon SageMaker is a fully managed machine learning service. With Ama"
+      ],
+      "latency": 5.977905750274658
+    },
+    {
+      "topic": "AWS Bedrock: foundation models as a service",
+      "area": "aws",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Bedrock",
+        "[exa] What is Amazon Bedrock?",
+        "[exa-h] * Model choice\n* Agent development\n* Customization\n* Safety and guardrails\n* Cost optimization\n### Choose the best model"
+      ],
+      "latency": 4.3264689445495605
+    },
+    {
+      "topic": "AWS Comprehend: NLP, text analysis service",
+      "area": "aws",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Comprehend Documentation",
+        "[exa] What is Amazon Comprehend?",
+        "[exa-h] Amazon Comprehend uses natural language processing (NLP) to extract insights about the content of documents without the "
+      ],
+      "latency": 4.4001686573028564
+    },
+    {
+      "topic": "AWS Rekognition: computer vision, image analysis",
+      "area": "aws",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Rekognition Documentation",
+        "[exa] What is Amazon Rekognition?",
+        "[exa-h] Amazon Rekognition makes it easy to add image and video analysis to your applications.\nYou just provide an image or vide"
+      ],
+      "latency": 4.013617277145386
+    },
+    {
+      "topic": "Azure ML: end-to-end ML platform",
+      "area": "azure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Azure Machine Learning",
+        "[exa] Azure Machine Learning documentation",
+        "[exa-h] # Azure Machine Learning\nUse an enterprise-grade AI service for the end-to-end machine learning (ML) lifecycle.\n[Get sta"
+      ],
+      "latency": 5.435602188110352
+    },
+    {
+      "topic": "Azure OpenAI Service: GPT, DALL-E deployment",
+      "area": "azure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI: Create an Azure OpenAI Resource and Deploy a Model",
+        "[exa] Create and deploy an Azure OpenAI in Microsoft Foundry Models resource",
+        "[exa-h] 4. Azure OpenAI models are available in specific regions. Visit the[Azure OpenAI model availability] document to learn w"
+      ],
+      "latency": 3.973390817642212
+    },
+    {
+      "topic": "Azure Cognitive Services: AI APIs, vision, speech",
+      "area": "azure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Microsoft Cognitive Services",
+        "[exa] Foundry Tools",
+        "[exa-h] 09. ### [Computer Vision API (2022-10-12-preview)]"
+      ],
+      "latency": 6.006521701812744
+    },
+    {
+      "topic": "Azure AI Search: vector search, semantic ranking",
+      "area": "azure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic ranking in Azure AI Search",
+        "[exa] Vector search in Azure AI Search",
+        "[exa-h] Semantic ranker is a collection of query-side capabilities that improve the quality of an initial[BM25-ranked] or[RRF-ra"
+      ],
+      "latency": 8.179411172866821
+    },
+    {
+      "topic": "Vertex AI: unified ML platform, AutoML",
+      "area": "gcp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview of Vertex AI \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Overview of Vertex AI \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] * [Vertex AI] \nSend feedback# Overview of Vertex AIStay organized with collectionsSave and categorize content based on y"
+      ],
+      "latency": 8.266883611679077
+    },
+    {
+      "topic": "Google AI Platform: training, prediction",
+      "area": "gcp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Vertex AI Platform",
+        "[exa] Vertex AI Platform",
+        "[exa-h] [Vertex AI Training] and[Prediction] help you reduce training time and deploy models to production easily with your choi"
+      ],
+      "latency": 8.487566947937012
+    },
+    {
+      "topic": "Cloud Vision API: image analysis, OCR",
+      "area": "gcp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cloud Vision API documentation",
+        "[exa] Cloud Vision API documentation",
+        "[exa-h] * [AI and ML] \n* [Cloud Vision API] \n# Cloud Vision API documentation\n[Read product documentation] \nCloud Vision API all"
+      ],
+      "latency": 6.495088338851929
+    },
+    {
+      "topic": "Gemini on GCP: multimodal AI deployment",
+      "area": "gcp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gen AI &nbsp;|&nbsp; Generative AI &nbsp;|&nbsp; Google Cloud Documentation",
+        "[exa] Deploy generative AI models \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] ### Model hosting infrastructure\nGoogle Cloud provides multiple ways to host a generative model, from the flagship Verte"
+      ],
+      "latency": 7.157594680786133
+    },
+    {
+      "topic": "Serverless inference: Lambda, Cloud Functions",
+      "area": "serverless",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Functions overview",
+        "[exa] Cloud Run functions documentation",
+        "[exa-h] See the following documentation based on your function version:\n* For Cloud Run functions, see[Cloud Run documentation]."
+      ],
+      "latency": 6.657448053359985
+    },
+    {
+      "topic": "Container-based ML: ECS, Cloud Run",
+      "area": "serverless",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon ECS tutorials",
+        "[exa] Inference - AWS Deep Learning Containers",
+        "[exa-h] Before starting the following tutorials, complete the steps in[Amazon ECS setup].\n###### Contents\n* [Amazon ECS setup] \n"
+      ],
+      "latency": 9.546622514724731
+    },
+    {
+      "topic": "API deployment: FastAPI, serverless endpoints",
+      "area": "serverless",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] FastAPI on Vercel",
+        "[exa] Deployment \u00b6",
+        "[exa-h] FastAPI is a modern, high-performance, web framework for building APIs with Python based on standard Python type hints. "
+      ],
+      "latency": 8.041520595550537
+    },
+    {
+      "topic": "Auto-scaling ML: demand-based scaling",
+      "area": "serverless",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Simplified autoscaling concepts for AI/ML workloads in GKE \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Best practices for autoscaling large language model (LLM) inference workloads with GPUs on Google Kubernetes Engine (GKE) \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] By applying these autoscaling strategies, you can effectively manage fluctuating AI/ML workloads. Just like the Cymbal S"
+      ],
+      "latency": 12.57091474533081
+    },
+    {
+      "topic": "Multi-cloud ML: portable workflows, Kubeflow",
+      "area": "multicloud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Kubeflow",
+        "[exa] Overview | Kubeflow",
+        "[exa-h] [Kubeflow Pipelines] (KFP) is a platform for building then deploying portable and scalable machine learning workflows us"
+      ],
+      "latency": 6.55844259262085
+    },
+    {
+      "topic": "MLflow: ML lifecycle management",
+      "area": "multicloud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Documentation",
+        "[exa] MLflow: A Tool for Managing the Machine Learning Lifecycle",
+        "[exa-h] Access comprehensive guides for experiment tracking, model packaging, registry management, and deployment. Get started w"
+      ],
+      "latency": 7.973658800125122
+    },
+    {
+      "topic": "Cloud cost optimization: ML workload efficiency",
+      "area": "multicloud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI and ML perspective: Cost optimization \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] AI and ML perspective: Cost optimization \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] This document in[Well-Architected Framework: AI and ML perspective] provides an overview of principles and recommendatio"
+      ],
+      "latency": 7.93948221206665
+    },
+    {
+      "topic": "Hybrid cloud AI: on-prem and cloud integration",
+      "area": "multicloud",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unified hybrid and multicloud operations",
+        "[exa] Browse Azure Architectures",
+        "[exa-h] Hybrid cloud refers to a mix of on-premises/private infrastructure and public cloud services working together, while mul"
+      ],
+      "latency": 9.392696857452393
+    }
+  ]
+}

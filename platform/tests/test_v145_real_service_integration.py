@@ -125,6 +125,10 @@ class TestRealLettaCloud:
         assert results is not None
 
 
+@pytest.mark.skipif(
+    not bool(__import__("importlib").util.find_spec("dspy")),
+    reason="dspy not installed in this environment"
+)
 class TestRealDSPy:
     """Test actual DSPy functionality (not mocked)."""
 
@@ -306,6 +310,10 @@ class TestRealMemoryMetrics:
 class TestRealAdapterAvailability:
     """Verify adapter availability flags match actual imports."""
 
+    @pytest.mark.skipif(
+        not bool(__import__("importlib").util.find_spec("dspy")),
+        reason="dspy not installed"
+    )
     def test_dspy_available_matches_import(self):
         """DSPy adapter says available AND dspy actually imports."""
         from adapters.dspy_adapter import DSPY_AVAILABLE
@@ -319,6 +327,10 @@ class TestRealAdapterAvailability:
         assert LANGGRAPH_AVAILABLE is True
         import langgraph  # Actually importable
 
+    @pytest.mark.skipif(
+        not bool(__import__("importlib").util.find_spec("mem0ai")),
+        reason="mem0ai not installed"
+    )
     def test_mem0_available_matches_import(self):
         """Mem0 adapter says available AND mem0 actually imports."""
         from adapters.mem0_adapter import MEM0_AVAILABLE
@@ -455,6 +467,10 @@ class TestRealVoyageEmbedderAdapter:
         assert len(result) == 3
 
 
+@pytest.mark.skipif(
+    not all(bool(__import__("importlib").util.find_spec(p)) for p in ["dspy", "mem0ai"]),
+    reason="dspy and/or mem0ai not installed"
+)
 class TestRealOrchestratorIntegration:
     """Test that the orchestrator actually integrates components."""
 
@@ -675,6 +691,10 @@ class TestAdapterLevelE2E:
         assert dspy_embedder is not None
 
 
+@pytest.mark.skipif(
+    not bool(__import__("importlib").util.find_spec("mem0ai")),
+    reason="mem0ai not installed"
+)
 class TestMem0AdapterReal:
     """V14 Iter 58: Test Mem0 adapter with real initialization."""
 
@@ -794,6 +814,10 @@ class TestMem0AdapterReal:
             pass
 
 
+@pytest.mark.skipif(
+    not all(bool(__import__("importlib").util.find_spec(p)) for p in ["dspy", "mem0ai"]),
+    reason="dspy and/or mem0ai not installed"
+)
 class TestOrchestratorChainReal:
     """V14 Iter 58: Test full orchestrator initialization chain."""
 

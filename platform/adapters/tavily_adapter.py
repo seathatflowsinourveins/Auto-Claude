@@ -58,6 +58,7 @@ except ImportError:
             UNINITIALIZED = "uninitialized"
             READY = "ready"
             FAILED = "failed"
+            ERROR = "error"
 
         @dataclass
         class AdapterResult:

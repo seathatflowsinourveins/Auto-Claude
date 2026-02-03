@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:54:48.399077",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "NeMo Guardrails: NVIDIA safety",
+      "area": "frameworks",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Overview of NVIDIA NeMo Guardrails Library #",
+        "[exa] Introduction \u2014 NVIDIA NeMo Guardrails latest documentation",
+        "[exa-h] The NVIDIA NeMo Guardrails library ([PyPI] |[GitHub]) is an open-source Python package for adding programmable guardrail"
+      ],
+      "latency": 9.515210151672363
+    },
+    {
+      "topic": "Guardrails AI: validation framework",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Validators | Your Enterprise AI needs Guardrails",
+        "[exa] Introduction",
+        "[exa-h] Each validator is a method that encodes some criteria, and checks if a given value meets that criteria.\n* If the value p"
+      ],
+      "latency": 8.597698450088501
+    },
+    {
+      "topic": "LLM Guard: content safety",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Index - LLM Guard",
+        "[exa-h] > We introduce Llama Guard, an LLM-based input-output safeguard model geared towards Human-AI conversation use cases. Ou"
+      ],
+      "latency": 6.862792730331421
+    },
+    {
+      "topic": "Rebuff: prompt injection defense",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Rebuff: Detecting Prompt Injection Attacks",
+        "[exa-h] ### **Self-hardening prompt injection detector**\n[] \nRebuff is designed to protect AI applications from prompt injection"
+      ],
+      "latency": 6.298780679702759
+    },
+    {
+      "topic": "Prompt injection: attack prevention",
+      "area": "input_safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLM Prompt Injection Prevention Cheat Sheet \u00b6",
+        "[exa] Prompt engineering best practices to avoid prompt injection\n            attacks on modern LLMs",
+        "[exa-h] Prompt injection is a vulnerability in Large Language Model (LLM) applications that allows attackers to manipulate the m"
+      ],
+      "latency": 8.117301940917969
+    },
+    {
+      "topic": "Jailbreak detection: boundary testing",
+      "area": "input_safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] MASTG-TEST-0241: Runtime Use of Jailbreak Detection Techniques",
+        "[exa-h] `JailbreakDetector`isn't designed to prevent apps from running on jailbroken devices, or even detect jailbreaks with 100"
+      ],
+      "latency": 7.089823961257935
+    },
+    {
+      "topic": "Input validation: sanitization",
+      "area": "input_safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Input Validation Cheat Sheet \u00b6",
+        "[exa] Input Validation",
+        "[exa-h] ## Validating Rich User Content[\u00b6] \nIt is very difficult to validate rich content submitted by a user. For more informat"
+      ],
+      "latency": 9.214151620864868
+    },
+    {
+      "topic": "PII detection: privacy protection",
+      "area": "input_safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Detect and redact Personally Identifying Information in text",
+        "[exa-h] 5.1 Preparation........................................................................................................."
+      ],
+      "latency": 7.930124759674072
+    },
+    {
+      "topic": "Content moderation: harmful output",
+      "area": "output_safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] and a variety of methods to make the model robust and to\navoid overftting. Our moderation system is trained to detect\na "
+      ],
+      "latency": 10.208794593811035
+    },
+    {
+      "topic": "Hallucination detection: factuality",
+      "area": "output_safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Real-Time Detection of Hallucinated Entities in Long-Form Generation",
+        "[exa-h] > Large Language Models (LLMs) frequently exhibit hallucinations, generating content that appears fluent and coherent bu"
+      ],
+      "latency": 9.113974809646606
+    },
+    {
+      "topic": "Toxicity filtering: safe responses",
+      "area": "output_safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Toxicity Detection for Free",
+        "[exa] Detoxifying Online Discourse: A Guided Response Generation Approach for Reducing Toxicity in User-Generated Text - ACL Anthology",
+        "[exa-h] to supplement alignment tuning with a toxicity detector [12, 2, 1, 3], a classifier that is designed\nto detect toxic, ha"
+      ],
+      "latency": 7.598534107208252
+    },
+    {
+      "topic": "Bias mitigation: fair output",
+      "area": "output_safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] bias evaluation and mitigation techniques for LLMs. We first consolidate, formalize, and expand notions of social bias a"
+      ],
+      "latency": 10.156925439834595
+    },
+    {
+      "topic": "Output validation: schema check",
+      "area": "control",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Schema Validation \u00b6",
+        "[exa] Schema Validation \u00b6",
+        "[exa-h] *classmethod*check\\_schema(*schema:Mapping|[bool] *)\u2192[None] [[source]] \nValidate the given schema against the validator\u2019"
+      ],
+      "latency": 9.615791320800781
+    },
+    {
+      "topic": "Rate limiting: abuse prevention",
+      "area": "control",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Rate Limiting for Server Security",
+        "[exa] Rate limiting best practices",
+        "[exa-h] Rate limiting is a foundational control for protecting servers and applications against abuse,**DDoS attacks**, and reso"
+      ],
+      "latency": 8.761467933654785
+    },
+    {
+      "topic": "Topic guardrails: conversation bounds",
+      "area": "control",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NeMo Guardrails: A Toolkit for Controllable and Safe LLM Applications with Programmable Rails - ADS",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] NeMo Guardrails is an open-source toolkit for easily adding programmable guardrails to LLM-based conversational systems."
+      ],
+      "latency": 8.132236242294312
+    },
+    {
+      "topic": "Action guardrails: tool safety",
+      "area": "control",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Guardrails - OpenAI Agents SDK",
+        "[exa] Introduction",
+        "[exa-h] Output guardrails always run after the agent completes, so they don't support the`run\\_in\\_parallel`parameter.\n## Tool g"
+      ],
+      "latency": 8.051586627960205
+    },
+    {
+      "topic": "Guardrails monitoring: observability",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Telemetry | Your Enterprise AI needs Guardrails",
+        "[exa] Grafana | Your Enterprise AI needs Guardrails",
+        "[exa-h] This package is instrumented using the OpenTelemetry Python SDK. By viewing the captured traces and derived metrics, we'"
+      ],
+      "latency": 7.7406086921691895
+    },
+    {
+      "topic": "Guardrails testing: red teaming",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Planning red teaming for large language models (LLMs) and their applications",
+        "[exa] Architecture strategies for security testing",
+        "[exa-h] This guide offers some potential strategies for planning how to set up and manage red teaming for responsible AI (RAI) r"
+      ],
+      "latency": 9.275415897369385
+    },
+    {
+      "topic": "Guardrails MLOps: deployment",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deployment guardrails for updating models in production",
+        "[exa] Deploying Guardrails",
+        "[exa-h] Deployment guardrails are a set of model deployment options in Amazon SageMaker AI Inference to update\nyour machine lear"
+      ],
+      "latency": 8.39287781715393
+    },
+    {
+      "topic": "Enterprise guardrails: compliance",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Controls - Management and Governance Cloud Environment Guide",
+        "[exa] Using controls to govern resources and monitor compliance",
+        "[exa-h] configuration compliance for any IT service is typically required to\nensure security (confidentiality, integrity, and av"
+      ],
+      "latency": 6.8260416984558105
+    }
+  ]
+}

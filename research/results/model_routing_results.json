@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:43:30.570286",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 95
+  },
+  "results": [
+    {
+      "topic": "LLM router architecture: query classification, model selection",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] TensorOpera Router: A Multi-Model Router for Efficient LLM Inference - ADS",
+        "[exa-h] > The proliferation of Large Language Models (LLMs) with varying capabilities and costs has created a need for efficient"
+      ],
+      "latency": 7.750563144683838
+    },
+    {
+      "topic": "Intent-based routing: matching queries to specialized models",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Intelligent inference request routing for large language models",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] The Semantic Router for LLM is an extensible solution for routing requests to the correct model. Through BERT embedding\u2019"
+      ],
+      "latency": 8.785603046417236
+    },
+    {
+      "topic": "Complexity estimation: predicting task difficulty for routing",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Measuring instance difficulty for combinatorial optimization problems",
+        "[exa-h] problem difficulty and guide model selection. We train lightweight classifiers to predict either the\ndifficulty of a pro"
+      ],
+      "latency": 7.814209222793579
+    },
+    {
+      "topic": "Semantic router: embedding-based query classification",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic Router documentation #",
+        "[exa] Introduction",
+        "[exa-h] Semantic Router is a superfast decision-making layer for your LLMs and agents. Rather than waiting for slow LLM generati"
+      ],
+      "latency": 7.019648790359497
+    },
+    {
+      "topic": "Cost-aware routing: balancing quality vs API costs",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Provider Routing",
+        "[exa-h] > Routing incoming queries to the most cost-effective LLM while maintaining response quality poses a fundamental challen"
+      ],
+      "latency": 8.27799654006958
+    },
+    {
+      "topic": "Tiered model strategy: cheap fast models vs expensive capable",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLM System Design and Model Selection",
+        "[exa] A Tiered Approach to AI: The New Playbook for Agents and Workflows",
+        "[exa-h] After working out if a model meets your minimum capability, the next decision is often on optimizing trade-offs among co"
+      ],
+      "latency": 9.44105339050293
+    },
+    {
+      "topic": "Token budget management: staying within cost limits",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to Budget for AI Agents: Practical Steps to Manage Operational Costs & Token Consumption",
+        "[exa] Managing your costs with AWS Budgets",
+        "[exa-h] Budgeting for AI agents involves considering \"Build\" (setup, integration), \"Run\" (operational costs like tokens and API "
+      ],
+      "latency": 7.630831956863403
+    },
+    {
+      "topic": "Batch optimization: grouping requests for efficiency",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Batching requests \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Request Batch",
+        "[exa-h] * [Documentation] \n* [Compute] \n* [Compute Engine] \n* [APIs & Reference] \nSend feedback# Batching requestsStay organized"
+      ],
+      "latency": 8.904054641723633
+    },
+    {
+      "topic": "Latency-based routing: choosing fastest model per task",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Minimize real-time inference latency by using Amazon SageMaker routing strategies",
+        "[exa] Model router for Microsoft Foundry",
+        "[exa-h] In this post, we discuss the SageMaker least outstanding requests (LOR) routing strategy and how it can minimize latency"
+      ],
+      "latency": 9.244358539581299
+    },
+    {
+      "topic": "Load balancing across providers: OpenAI, Anthropic, Google",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Provider Routing",
+        "[exa] Provider Routing",
+        "[exa-h] For each model in your request, OpenRouter\u2019s default behavior is to load balance requests across providers, prioritizing"
+      ],
+      "latency": 7.858598709106445
+    },
+    {
+      "topic": "Fallback chains: handling rate limits and failures",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] LangChain overview",
+        "[exa-h] LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool \u2014so you"
+      ],
+      "latency": 7.456937313079834
+    },
+    {
+      "topic": "Speculative execution: parallel model calls with early termination",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Early exiting has recently emerged as a promising technique for accelerating large language models (LLMs) by effective"
+      ],
+      "latency": 7.270151376724243
+    },
+    {
+      "topic": "Mixture of experts routing: specialized model ensemble",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Mixture-of-Experts with Expert Choice Routing",
+        "[exa-h] > Sparsely-activated Mixture-of-experts (MoE) models allow the number of parameters to greatly increase while keeping th"
+      ],
+      "latency": 10.47355580329895
+    },
+    {
+      "topic": "Cascading models: try cheap first, escalate on failure",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Model Cascade Framework",
+        "[exa] Model Cascading: Towards Jointly Improving Efficiency and Accuracy of NLP Systems - ADS",
+        "[exa-h] * Model cascade frameworks are structured approaches that apply a sequence of models, escalating complexity only when si"
+      ],
+      "latency": 7.425109148025513
+    },
+    {
+      "topic": "Quality-aware routing: matching task to model capability",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Large language models (LLMs) exhibit impressive capabilities across a wide range of tasks, yet the choice of which mod"
+      ],
+      "latency": 5.400560617446899
+    },
+    {
+      "topic": "Dynamic routing: learning optimal paths from feedback",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Electrical Engineering and Systems Science > Systems and Control",
+        "[exa] Reinforcement Learning for Dynamic Traffic Routing and Optimization | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] > We consider learning-based adaptive dynamic routing for a single-origin-single-destination queuing network with stabil"
+      ],
+      "latency": 5.339355945587158
+    },
+    {
+      "topic": "LiteLLM for model routing: unified API across providers",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LiteLLM - Getting Started",
+        "[exa] LiteLLM - Getting Started",
+        "[exa-h] You can use LiteLLM through either the Proxy Server or Python SDK. Both gives you a unified interface to access multiple"
+      ],
+      "latency": 3.5356130599975586
+    },
+    {
+      "topic": "OpenRouter integration: single API for 100+ models",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OpenRouter Models | Access 400+ AI Models Through One API | OpenRouter | Documentation",
+        "[exa] OpenRouter Models | Access 400+ AI Models Through One API | OpenRouter | Documentation",
+        "[exa-h] Explore and browse 400+ models and providers[on our website], or[with our API]. You can also subscribe to our[RSS feed] "
+      ],
+      "latency": 3.669973850250244
+    },
+    {
+      "topic": "Custom router implementation: building routing logic",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build Your Own Router",
+        "[exa] joshwcomeau / simple-router.js \n               \n                Secret",
+        "[exa-h] Yet another surprise! You may expect that you can accept more after`/cat/`. To do that, include a wildcard asterisk:\n## "
+      ],
+      "latency": 4.877729177474976
+    },
+    {
+      "topic": "Router evaluation: measuring routing decision quality",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Advanced Unidirectional Route Assessment (AURA)",
+        "[exa-h] The purpose of this memo is to add new Route metrics and methods of measurement to the\nexisting set of IPPM metrics.\nThe"
+      ],
+      "latency": 5.902459621429443
+    }
+  ]
+}

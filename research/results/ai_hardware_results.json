@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:20:54.726069",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 90
+  },
+  "results": [
+    {
+      "topic": "NVIDIA GPUs for AI: H100, A100, architecture",
+      "area": "gpu",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA H100 GPU",
+        "[exa] h100.md",
+        "[exa-h] The NVIDIA H100 GPU delivers exceptional performance, scalability, and security for every workload. H100 uses breakthrou"
+      ],
+      "latency": 8.635966300964355
+    },
+    {
+      "topic": "AMD GPUs for ML: MI300, ROCm ecosystem",
+      "area": "gpu",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AMD Instinct MI300X workload optimization",
+        "[exa] AMD Instinct\u2122 MI300 Series microarchitecture",
+        "[exa-h] # AMD Instinct MI300X workload optimization[#] \n2025-09-11\n58 min read time\nApplies to Linux\nThis document provides guid"
+      ],
+      "latency": 10.452181816101074
+    },
+    {
+      "topic": "GPU memory optimization: vRAM efficiency",
+      "area": "gpu",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Advanced API Performance: Memory and Resources",
+        "[exa] A Deeper Look At VRAM On GeForce RTX 40 Series Graphics Cards",
+        "[exa-h] Optimal memory management in DirectX 12 is critical to a performant application. The following advice should be followed"
+      ],
+      "latency": 10.766192197799683
+    },
+    {
+      "topic": "Multi-GPU training: NVLink, scaling",
+      "area": "gpu",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] NVIDIA NVLink and NVLink Switch",
+        "[exa] Compute Workflows #",
+        "[exa-h] NVLink is a 3.6 TB/s bidirectional, direct GPU-to-GPU interconnect that scales multi-GPU input and output (IO) within a "
+      ],
+      "latency": 6.654370069503784
+    },
+    {
+      "topic": "Google TPUs: tensor processing units",
+      "area": "tpu",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Cloud Tensor Processing Units (TPUs)",
+        "[exa] TPU architecture",
+        "[exa-h] Google Cloud TPUs are custom-designed AI accelerators, which are optimized for training and inference of AI models. They"
+      ],
+      "latency": 12.730163812637329
+    },
+    {
+      "topic": "AWS Trainium: custom ML training chip",
+      "area": "tpu",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AWS Trainium",
+        "[exa] AWS Trainium",
+        "[exa-h] AWS Trainium is a family of purpose-built AI accelerators \u2014**Trainium1, Trainium2, and Trainium3**\u2014 designed to deliver "
+      ],
+      "latency": 5.859442710876465
+    },
+    {
+      "topic": "Groq LPU: inference processing unit",
+      "area": "tpu",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is a Language Processing Unit?",
+        "[exa] Introducing the LPU",
+        "[exa-h] # What is a Language Processing Unit?\n## Share this article\n[LinkedIn] [Twitter] \n## Overview\n*Groq LPU\u2122 AI Inference Te"
+      ],
+      "latency": 7.323373317718506
+    },
+    {
+      "topic": "Cerebras: wafer-scale AI computing",
+      "area": "tpu",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The  Fastest AI Infrastructure",
+        "[exa] The  Fastest AI Infrastructure",
+        "[exa-h] The Cerebras Wafer-Scale Engine is purpose-built for ultra-fast AI. No number of GPUs can match our speed. Designed for "
+      ],
+      "latency": 5.911350965499878
+    },
+    {
+      "topic": "NVIDIA Jetson: edge AI computing",
+      "area": "edge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Jetson - Embedded AI Computing Platform | NVIDIA Developer",
+        "[exa] The Ultimate Platform for Physical AI and Robotics",
+        "[exa-h] NVIDIA Jetson\u2122 is a powerful platform for developing innovative edge AI and robotics solutions across industries. It del"
+      ],
+      "latency": 4.14618444442749
+    },
+    {
+      "topic": "Apple Neural Engine: mobile AI chip",
+      "area": "edge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Neural Engine",
+        "[exa] Machine Learning & AI",
+        "[exa-h] **Neural Engine**is a series of[AI accelerators] designed for machine learning by[Apple]. Neural Engine was first introd"
+      ],
+      "latency": 7.477289438247681
+    },
+    {
+      "topic": "Qualcomm AI: mobile NPU, Snapdragon",
+      "area": "edge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Mobile AI Solutions | On-Device AI Benefits | Qualcomm",
+        "[exa] ",
+        "[exa-h] Mobile AI Solutions | On-Device AI Benefits | Qualcomm"
+      ],
+      "latency": 6.661581039428711
+    },
+    {
+      "topic": "Intel Movidius: vision processing unit",
+      "area": "edge",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Intel\u00ae Core\u2122 Ultra Series 3 Processors",
+        "[exa] Intel\u00ae Core\u2122 Ultra Series 3 Processors",
+        "[exa-h] Intel Core Ultra processors for edge are suited for a wide variety of innovative AI use cases, including generative AI ("
+      ],
+      "latency": 8.897354364395142
+    },
+    {
+      "topic": "Mixed precision training: FP16, BF16, INT8",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Train With Mixed Precision",
+        "[exa] ",
+        "[exa-h] Mixed precisionis the combined use of different numerical precisions in a computational method.\nHalf precision(also know"
+      ],
+      "latency": 9.543468236923218
+    },
+    {
+      "topic": "Memory bandwidth optimization: AI training",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Decoding high-bandwidth memory: A practical guide to GPU memory for fine-tuning AI models",
+        "[exa] ",
+        "[exa-h] ## Key strategies to reduce HBM consumption\nThe HBM requirement for a full fine-tune can seem impossibly high. But sever"
+      ],
+      "latency": 4.964366436004639
+    },
+    {
+      "topic": "Sparsity acceleration: sparse tensor cores",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Accelerating Sparse Deep Neural Networks - ADS",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] exploit a 2:4 (50%) sparsity pattern that leads to twice the math throughput of dense matrix units. We also describe a s"
+      ],
+      "latency": 5.358616352081299
+    },
+    {
+      "topic": "Compiler optimization: XLA, TensorRT",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] XLA: Optimizing Compiler for Machine Learning \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] XLA \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] * [XLA] \nSend feedback# XLA: Optimizing Compiler for Machine LearningStay organized with collectionsSave and categorize "
+      ],
+      "latency": 10.22287106513977
+    },
+    {
+      "topic": "AI clusters: HPC for training",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Hypercomputer overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Overview \u2014 NVIDIA AI Enterprise: Sizing Guide",
+        "[exa-h] **Example workloads**|\n## Large-scale AI and ML workloads\n|\n* Generative AI distributed training\n* Generative AI inferen"
+      ],
+      "latency": 6.124090909957886
+    },
+    {
+      "topic": "Interconnects: InfiniBand, NVLink, NVSwitch",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] InfiniBand\u2122 Architecture Specification",
+        "[exa] ",
+        "[exa-h] The InfiniBand architecture is complementary to Fibre Channel and Ethernet but offers higher performance and better I/O "
+      ],
+      "latency": 3.6026792526245117
+    },
+    {
+      "topic": "Power efficiency: sustainable AI compute",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Hardware Architecture",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Rapid adoption of machine learning (ML) technologies has led to a surge in power consumption across diverse systems, f"
+      ],
+      "latency": 3.546119451522827
+    },
+    {
+      "topic": "Cloud GPU instances: A100, H100 pricing",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] GPU pricing | Google Cloud",
+        "[exa] Compute Pricing",
+        "[exa-h] * [For A3 accelerator-optimized machine types], NVIDIA H100 80GB GPUs are attached. These are available in the following"
+      ],
+      "latency": 3.7791314125061035
+    }
+  ]
+}

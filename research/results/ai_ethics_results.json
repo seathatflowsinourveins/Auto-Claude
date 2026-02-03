@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:19:44.498819",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "AI bias detection: identifying model biases",
+      "area": "bias",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Fairness 360: An extensible toolkit for detecting and mitigating algorithmic bias",
+        "[exa] AI Fairness 360",
+        "[exa-h] Fairness is an increasingly important concern as machine learning models are used to support decision making in high-sta"
+      ],
+      "latency": 11.36738109588623
+    },
+    {
+      "topic": "Fairness constraints: training with fairness",
+      "area": "bias",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] ",
+        "[exa-h] > We consider the task of training machine learning models with data-dependent constraints. Such constraints often arise"
+      ],
+      "latency": 9.003499507904053
+    },
+    {
+      "topic": "Debiasing techniques: mitigation strategies",
+      "area": "bias",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A User's Guide to Debiasing",
+        "[exa] Debiasing - Wikipedia",
+        "[exa-h] Decades of research have yielded an array of debiasing strategies that can improve judgments and decisions across a wide"
+      ],
+      "latency": 9.558703422546387
+    },
+    {
+      "topic": "Representation bias: dataset diversity",
+      "area": "bias",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Representation Bias in Data: A Survey on Identification and Resolution Techniques | NSF Public Access Repository",
+        "[exa] Representation Bias in Data: A Survey on Identification and Resolution Techniques - ADS",
+        "[exa-h] Data-driven algorithms are only as good as the data they work with, while datasets, especially social data, often fail t"
+      ],
+      "latency": 11.550883293151855
+    },
+    {
+      "topic": "Differential privacy: privacy-preserving ML",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] becomes increasingly detailed, and as technology enables ever more\npowerful collection and curation of these data, the n"
+      ],
+      "latency": 9.777007818222046
+    },
+    {
+      "topic": "Federated learning privacy: decentralized training",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Communication-Efficient Learning of Deep Networks from Decentralized Data",
+        "[exa] ",
+        "[exa-h] both, which may preclude logging to the data center and training there using conventional approaches. We advocate an alt"
+      ],
+      "latency": 10.664403200149536
+    },
+    {
+      "topic": "Synthetic data: privacy-safe data generation",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] (DP) is a well established framework for reasoning about and limiting information leakage, and is a gold standard for pr"
+      ],
+      "latency": 8.07960295677185
+    },
+    {
+      "topic": "Model privacy: preventing memorization",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] The Secret Sharer: Evaluating and Testing Unintended Memorization in Neural Networks",
+        "[exa-h] > Abstract:This paper describes a testing methodology for quantitatively assessing the risk that rare or unique training"
+      ],
+      "latency": 8.642405986785889
+    },
+    {
+      "topic": "AI impact assessment: societal consequences",
+      "area": "responsible",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] International\n\n           \n            AI Safety Report",
+        "[exa-h] to remain aware of uncertainties, actively seek diverse perspectives and vigilantly monitor the societal \nimplications o"
+      ],
+      "latency": 7.563696622848511
+    },
+    {
+      "topic": "Human-in-the-loop: oversight, intervention",
+      "area": "responsible",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Human review",
+        "[exa] What is human-in-the-loop?",
+        "[exa-h] This section is aimed at helping technical specialists and those in compliance-focused roles to understand how human rev"
+      ],
+      "latency": 7.227826356887817
+    },
+    {
+      "topic": "AI accountability: responsibility frameworks",
+      "area": "responsible",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 1 pursuant to President Biden\u2019s Executive Order (EO) 14110 on \nSafe, Secure, and Trustworthy Artificial Intelligence.2 T"
+      ],
+      "latency": 7.707431316375732
+    },
+    {
+      "topic": "Sustainable AI: environmental impact, efficiency",
+      "area": "responsible",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > The transformative power of AI is undeniable - but as user adoption accelerates, so does the need to understand and mi"
+      ],
+      "latency": 13.24336051940918
+    },
+    {
+      "topic": "EU AI Act: European AI regulation",
+      "area": "regulation",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] AI Act | Shaping Europe\u2019s digital future",
+        "[exa] ",
+        "[exa-h] The[AI Act] (Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence) is the first-ever compre"
+      ],
+      "latency": 10.284276485443115
+    },
+    {
+      "topic": "AI risk classification: high-risk systems",
+      "area": "regulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Where we determine that a capability presents a real risk of severe harm, we may decide to monitor it as\na Tracked Categ"
+      ],
+      "latency": 8.199350833892822
+    },
+    {
+      "topic": "AI auditing: compliance, certification",
+      "area": "regulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Intelligence.3 The third chapter of those Guidelines contained an Assessment List to help \nassess whether the AI system "
+      ],
+      "latency": 12.718255281448364
+    },
+    {
+      "topic": "Algorithmic transparency: disclosure requirements",
+      "area": "regulation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Algorithmic Transparency Recording Standard Hub",
+        "[exa] Algorithmic Transparency Recording Standard - guidance for public sector bodies",
+        "[exa-h] The Algorithmic Transparency Recording Standard (ATRS) establishes a standardised way for public sector organisations to"
+      ],
+      "latency": 8.782902002334595
+    },
+    {
+      "topic": "AI Fairness 360: IBM fairness toolkit",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Fairness 360",
+        "[exa] AI Fairness 360: An extensible toolkit for detecting and mitigating algorithmic bias",
+        "[exa-h] ## There are more than 70 metrics in the GitHub repository already. Add new metrics to the repository and use the Slack "
+      ],
+      "latency": 5.333502769470215
+    },
+    {
+      "topic": "Responsible AI tooling: Microsoft, Google",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Responsible Generative AI Toolkit",
+        "[exa] Tools and practices",
+        "[exa-h] * [Responsible Generative AI Toolkit] \nSend feedback\n# Responsible Generative AI Toolkit\nTools and guidance to design, b"
+      ],
+      "latency": 6.776530981063843
+    },
+    {
+      "topic": "Model cards: documentation standards",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Model Cards Explained",
+        "[exa-h] datasheets, model cards, documentation, disaggregated evaluation,\nfairness evaluation, ML model evaluation, ethical cons"
+      ],
+      "latency": 7.486613512039185
+    },
+    {
+      "topic": "AI ethics frameworks: organizational guidelines",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Data and AI Ethics Framework",
+        "[exa] ",
+        "[exa-h] This framework provides a set of principles and activities to guide the responsible development, procurement and use of "
+      ],
+      "latency": 8.416845083236694
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:38:53.660607",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 93
+  },
+  "results": [
+    {
+      "topic": "XLA: accelerated linear algebra",
+      "area": "compilers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] XLA \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] OpenXLA Project",
+        "[exa-h] Send feedback# XLAStay organized with collectionsSave and categorize content based on your preferences.\nXLA (Accelerated"
+      ],
+      "latency": 4.48068642616272
+    },
+    {
+      "topic": "Triton: GPU compiler for neural networks",
+      "area": "compilers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing Triton: Open-source GPU programming for neural networks",
+        "[exa] Welcome to Triton\u2019s documentation! \u00b6",
+        "[exa-h] We\u2019re releasing Triton 1.0, an open-source Python-like programming language which enables researchers with no CUDA exper"
+      ],
+      "latency": 3.998720645904541
+    },
+    {
+      "topic": "TVM: tensor virtual machine",
+      "area": "compilers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Apache TVM Documentation \uf0c1",
+        "[exa] Apache TVM",
+        "[exa-h] * Apache TVM Documentation\n* [Edit on GitHub] \n# Apache TVM Documentation[\uf0c1] \nWelcome to the documentation for Apache TV"
+      ],
+      "latency": 4.143915891647339
+    },
+    {
+      "topic": "MLIR: multi-level IR",
+      "area": "compilers",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multi-Level Intermediate Representation Overview",
+        "[exa] MLIR Language Reference",
+        "[exa-h] * Previous[talks].## What is MLIR for?\nMLIR is intended to be a hybrid IR which can support multiple different\nrequireme"
+      ],
+      "latency": 4.217749357223511
+    },
+    {
+      "topic": "Graph optimization: fusion, constant folding",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Graph Optimizations in ONNX Runtime",
+        "[exa] ",
+        "[exa-h] * Constant Folding: Statically computes parts of the graph that rely only on constant initializers. This eliminates the "
+      ],
+      "latency": 5.549855947494507
+    },
+    {
+      "topic": "Operator fusion: reducing memory bandwidth",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators",
+        "[exa] Neptune: Advanced ML Operator Fusion \n for Locality and Parallelism on GPUs",
+        "[exa-h] Operator fusion, a key technique to improve data locality and alleviate GPU memory bandwidth pressure, often fails to ex"
+      ],
+      "latency": 4.755584001541138
+    },
+    {
+      "topic": "Auto-tuning: kernel optimization",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Operating Systems",
+        "[exa] Ubuntu Manpage:\n\n       BPFTUNE - tool for auto-tuning of Linux kernel parameters via BPF",
+        "[exa-h] > This paper advocates principled OS performance tunability. We present KernelX, a system that provides a safe, efficien"
+      ],
+      "latency": 8.885446071624756
+    },
+    {
+      "topic": "Quantization passes: precision reduction",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantization #",
+        "[exa] Transformers",
+        "[exa-h] The[Quantization API Reference] contains documentation\nof quantization APIs, such as quantization passes, quantized tens"
+      ],
+      "latency": 8.485463857650757
+    },
+    {
+      "topic": "GPU compilation: CUDA, HIP targets",
+      "area": "hardware",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 2.5.  NVCC: The NVIDIA CUDA Compiler #",
+        "[exa] 1.  Introduction \uf0c1",
+        "[exa-h] [The NVIDIA CUDA Compiler] `nvcc`is a toolchain from NVIDIA for compiling CUDA C/C++ as well as[PTX] code. The toolchain"
+      ],
+      "latency": 8.764279127120972
+    },
+    {
+      "topic": "TPU compilation: XLA for tensor cores",
+      "area": "hardware",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] XLA: Optimizing Compiler for Machine Learning \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Pytorch/XLA Overview \u00b6",
+        "[exa-h] * [XLA] \nSend feedback# XLA: Optimizing Compiler for Machine LearningStay organized with collectionsSave and categorize "
+      ],
+      "latency": 10.296092510223389
+    },
+    {
+      "topic": "CPU optimization: vectorization, SIMD",
+      "area": "hardware",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Improve Performance with Vectorization",
+        "[exa] Vectorization: A Key Tool To Improve Performance On Modern CPUs",
+        "[exa-h] This article focuses on the steps to improve software performance with vectorization. Included are examples of full appl"
+      ],
+      "latency": 9.049344778060913
+    },
+    {
+      "topic": "NPU targets: edge AI accelerators",
+      "area": "hardware",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Ara-1: Discrete NPU for Optimized Edge-AI",
+        "[exa-h] Machine Learning acceleration for AI-integrated cameras, edge computer appliances\nand embedded systems that demand low l"
+      ],
+      "latency": 8.391111612319946
+    },
+    {
+      "topic": "JAX compilation: jit, vmap, pmap",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] jax.pmap \u2014 JAX  documentation",
+        "[exa] jax.vmap \u2014 JAX  documentation",
+        "[exa-h] [`pmap()`] is now implemented in terms of[`jit()`] and[`shard\\_map()`]. Please see the[migration\nguide] for\nmore informa"
+      ],
+      "latency": 7.156657457351685
+    },
+    {
+      "topic": "PyTorch 2.0: torch.compile, dynamo",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] TorchDynamo Overview \u00b6",
+        "[exa-h] This page has moved to[../user\\_guide/torch\\_compiler/compile/programming\\_model.html]"
+      ],
+      "latency": 10.13663101196289
+    },
+    {
+      "topic": "TensorFlow XLA: graph compilation",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] XLA: Optimizing Compiler for Machine Learning \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] W3cubDocs",
+        "[exa-h] When a TensorFlow program is run, all of the operations are executed\nindividually by the TensorFlow executor. Each Tenso"
+      ],
+      "latency": 5.81666374206543
+    },
+    {
+      "topic": "ONNX runtime: cross-platform inference",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to ONNX Runtime",
+        "[exa] Accelerated\n\t\t\t\t\t Edge   \n\t\t\t\t\tMachine Learning",
+        "[exa-h] ONNX Runtime is a cross-platform machine-learning model accelerator, with a flexible interface to integrate hardware-spe"
+      ],
+      "latency": 7.094274997711182
+    },
+    {
+      "topic": "Automatic differentiation: AD compilation",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automatic Differentiation",
+        "[exa] Automatic differentiation in ML: Where we are and where we should be going",
+        "[exa-h] Automated Differentiation implementations are based on [two major techniques]:\nOperator Overloading and Source Code Tran"
+      ],
+      "latency": 9.405447006225586
+    },
+    {
+      "topic": "Polyhedral optimization: loop transformations",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Polytope model",
+        "[exa] About Polly",
+        "[exa-h] in [program optimization]. The polyhedral method treats each loop iteration within nested loops as [lattice points] insi"
+      ],
+      "latency": 9.753397703170776
+    },
+    {
+      "topic": "Domain-specific languages: DSLs for ML",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Domain-Specific Languages Guide",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] DSLs can be implemented either by interpretation or code\ngeneration. Interpretation (reading in the DSL script and execu"
+      ],
+      "latency": 9.081075429916382
+    },
+    {
+      "topic": "Compiler IR: intermediate representations",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLVM Language Reference Manual \u00b6",
+        "[exa] LLVM Language Reference Manual \u00b6",
+        "[exa-h] strategy.\n## [Introduction] [\u00b6] \nThe LLVM code representation is designed to be used in three different\nforms: as an in-"
+      ],
+      "latency": 4.573575496673584
+    }
+  ]
+}

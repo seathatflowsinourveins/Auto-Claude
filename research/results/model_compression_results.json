@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:32:04.288891",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 86
+  },
+  "results": [
+    {
+      "topic": "Quantization: INT8, INT4, binary neural networks",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Input Data type Accumulation Data type Math Throughput Bandwidth Reduction\nFP32 FP32 1x 1x\nFP16 FP16 8x 2x\nINT8 INT32 16"
+      ],
+      "latency": 4.025668144226074
+    },
+    {
+      "topic": "Post-training quantization: PTQ methods",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Post Training Quantization (PTQ) \u00b6",
+        "[exa] Quantization #",
+        "[exa-h] while still preserving the accuracy of your model by mapping the traditional FP32 activation space to a reduced\nINT8 spa"
+      ],
+      "latency": 5.732509613037109
+    },
+    {
+      "topic": "Quantization-aware training: QAT",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantization #",
+        "[exa] Quantization #",
+        "[exa-h] The[Quantization API Reference] contains documentation\nof quantization APIs, such as quantization passes, quantized tens"
+      ],
+      "latency": 3.958773374557495
+    },
+    {
+      "topic": "Mixed precision: FP16, BF16 training",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Train With Mixed Precision",
+        "[exa] ",
+        "[exa-h] Mixed precisionis the combined use of different numerical precisions in a computational method.\nHalf precision(also know"
+      ],
+      "latency": 4.807469606399536
+    },
+    {
+      "topic": "Weight pruning: structured, unstructured",
+      "area": "pruning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Neural networks are both computationally intensive and memory intensive, making them difficult to deploy on embedded s"
+      ],
+      "latency": 9.452588558197021
+    },
+    {
+      "topic": "Neural network sparsity: sparse training",
+      "area": "pruning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > The growing energy and performance costs of deep learning have driven the community to reduce the size of neural netwo"
+      ],
+      "latency": 7.373191595077515
+    },
+    {
+      "topic": "Lottery ticket hypothesis: winning tickets",
+      "area": "pruning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Lottery ticket hypothesis",
+        "[exa] Boltzmann brain",
+        "[exa-h] The term derived from considering the probability of a tunable subnetwork as the equivalent to a winning [lottery ticket"
+      ],
+      "latency": 3.618588924407959
+    },
+    {
+      "topic": "Channel pruning: filter importance",
+      "area": "pruning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Provable Filter Pruning for Efficient Neural Networks - ADS",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] We present a provable, sampling-based approach for generating compact Convolutional Neural Networks (CNNs) by identifyin"
+      ],
+      "latency": 6.421723127365112
+    },
+    {
+      "topic": "Knowledge distillation: teacher-student",
+      "area": "distillation",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Knowledge distillation",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] The idea of using the output of one neural network to train another neural network was also studied as the teacher-stude"
+      ],
+      "latency": 11.22852087020874
+    },
+    {
+      "topic": "Self-distillation: same architecture",
+      "area": "distillation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Be Your Own Teacher: Improve the Performance of Convolutional Neural Networks via Self Distillation",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] A general training framework named self distillation, which notably enhances the performance of convolutional neural net"
+      ],
+      "latency": 8.50871729850769
+    },
+    {
+      "topic": "Task-specific distillation: downstream",
+      "area": "distillation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes - ADS",
+        "[exa-h] > Abstract:Layer-wise distillation is a powerful tool to compress large models (i.e. teacher models) into small ones (i."
+      ],
+      "latency": 3.9632277488708496
+    },
+    {
+      "topic": "LLM distillation: smaller language models",
+      "area": "distillation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] models is still under-explored, which becomes more important with the prosperity of open-source LLMs. In this work, we p"
+      ],
+      "latency": 8.99999713897705
+    },
+    {
+      "topic": "MobileNet: efficient convolutions",
+      "area": "architectures",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] (PDF) MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications",
+        "[exa-h] for mobile and embedded vision applications. MobileNets\nare based on a streamlined architecture that uses depth\u0002wise sep"
+      ],
+      "latency": 14.036974430084229
+    },
+    {
+      "topic": "EfficientNet: compound scaling",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] which use a compound coefficient \u03c6 to uniformly scales\nnetwork width, depth, and resolution in a principled way:\ndepth: "
+      ],
+      "latency": 5.336467266082764
+    },
+    {
+      "topic": "TinyBERT: compact transformers",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Transformer-based models. By leveraging this\nnew KD method, the plenty of knowledge en\u0002coded in a large \u201cteacher\u201d BERT c"
+      ],
+      "latency": 4.215760707855225
+    },
+    {
+      "topic": "DistilBERT: distilled BERT",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter\n     \n      (1910.01108v4)",
+        "[exa-h] 3 DistilBERT: a distilled version of BERT\nStudent architecture In the present work, the student - DistilBERT - has the s"
+      ],
+      "latency": 6.7277302742004395
+    },
+    {
+      "topic": "ONNX: model interoperability",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Open Neural Network Exchange",
+        "[exa] Open Neural Network Exchange",
+        "[exa-h] models.ONNX defines a common set of operators - the building blocks of machine learning and deep learning models - and a"
+      ],
+      "latency": 3.7467801570892334
+    },
+    {
+      "topic": "TensorRT: NVIDIA optimization",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA TensorRT",
+        "[exa] NVIDIA TensorRT Documentation #",
+        "[exa-h] NVIDIA\u00ae TensorRT\u2122 is an ecosystem of tools for developers to achieve high-performance deep learning inference. TensorRT "
+      ],
+      "latency": 3.016051769256592
+    },
+    {
+      "topic": "OpenVINO: Intel inference",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OpenVINO 2025.4 #",
+        "[exa] ",
+        "[exa-h] AI models, coming from the most popular model frameworks.\nConvert, optimize, and run inference utilizing the full potent"
+      ],
+      "latency": 7.291834831237793
+    },
+    {
+      "topic": "TFLite: mobile deployment",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Get started with TensorFlow Lite",
+        "[exa] Google AI Edge &nbsp;|&nbsp; Google AI for Developers",
+        "[exa-h] The TensorFlow Lite interpreter is easy to use from both major mobile platforms. To get started, explore the[Android qui"
+      ],
+      "latency": 7.06883430480957
+    }
+  ]
+}

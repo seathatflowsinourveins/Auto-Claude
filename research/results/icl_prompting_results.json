@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:47:56.383881",
+  "stats": {
+    "sources": 200,
+    "vectors": 190,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "In-context learning: few-shot prompting",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > With the increasing capabilities of large language models (LLMs), in-context learning (ICL) has emerged as a new parad"
+      ],
+      "latency": 7.6032092571258545
+    },
+    {
+      "topic": "Zero-shot prompting: no examples",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is zero-shot prompting?",
+        "[exa] What is Zero-Shot Prompting?",
+        "[exa-h] Zero-shot prompting is a[prompt engineering] method that relies on the pretraining of a[large language model (LLM)] to i"
+      ],
+      "latency": 6.27150821685791
+    },
+    {
+      "topic": "Chain-of-thought: step reasoning",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] tasks, given a prompt that consists of triples: hinput, chain of thought, outputi. A chain of thought is\na series of int"
+      ],
+      "latency": 7.667314291000366
+    },
+    {
+      "topic": "System prompts: persona and context",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Core System Prompt",
+        "[exa] Prompting and Carrying Context with a Persona",
+        "[exa-h] The`system\\_prompt`setting defined how the agent interprets queries and generates responses. You can provide instruction"
+      ],
+      "latency": 9.131880760192871
+    },
+    {
+      "topic": "Tree of thoughts: branching reasoning",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is tree of thoughts prompting?",
+        "[exa] Tree of Thoughts Framework",
+        "[exa-h] Tree of thoughts (ToT) is a ground-breaking framework designed to enhance the reasoning capabilities of[large language m"
+      ],
+      "latency": 7.315840721130371
+    },
+    {
+      "topic": "Self-consistency: multiple paths",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Self-Consistency Improves Chain of Thought Reasoning in Language Models - ADS",
+        "[exa-h] 2 SELF-CONSISTENCY OVER DIVERSE REASONING PATHS\nA salient aspect of humanity is that people think differently. It is nat"
+      ],
+      "latency": 8.618099451065063
+    },
+    {
+      "topic": "ReAct: reasoning and acting",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ReAct: Synergizing Reasoning and Acting in Language Models",
+        "[exa] ",
+        "[exa-h] Language models are getting better at reasoning (e.g. chain-of-thought prompting) and acting (e.g. WebGPT, SayCan, ACT-1"
+      ],
+      "latency": 8.374589920043945
+    },
+    {
+      "topic": "Least-to-most: decomposition",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Decomposition in Computational Thinking: Solving Problems More Effectively",
+        "[exa-h] What is the definition of decomposition\nDecomposition is a general problem solving tactic in which a problem\nis broken d"
+      ],
+      "latency": 9.913936138153076
+    },
+    {
+      "topic": "Meta-prompting: prompt optimization",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Highly effective, task-specific prompts are often heavily engineered by experts to integrate detailed instructions and"
+      ],
+      "latency": 9.178826093673706
+    },
+    {
+      "topic": "Automatic prompt engineering: APE",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] human approach to prompt engineering, we propose Automatic Prompt Engineer (APE) for automatic instruction generation an"
+      ],
+      "latency": 7.632983684539795
+    },
+    {
+      "topic": "DSPy: programmatic prompts",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Programming \u2014not prompting\u2014 LMs \u00b6",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] DSPy is a declarative framework for building modular AI software. It allows you to**iterate fast on structured code**, r"
+      ],
+      "latency": 8.459815263748169
+    },
+    {
+      "topic": "Prompt injection: security risks",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding prompt injections: a frontier security challenge",
+        "[exa] Prompt injection",
+        "[exa-h] These are just a few examples of \u201cprompt injection\u201d attacks\u2014harmful instructions designed to trick an AI into doing some"
+      ],
+      "latency": 8.263901710510254
+    },
+    {
+      "topic": "JSON mode: structured output",
+      "area": "structured",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Structured model outputs",
+        "[exa] Structured Outputs",
+        "[exa-h] guide.\n### Structured Outputs vs JSON mode\nStructured Outputs is the evolution of[JSON mode]. While both ensure valid JS"
+      ],
+      "latency": 8.397987127304077
+    },
+    {
+      "topic": "Function calling: tool use prompts",
+      "area": "structured",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling",
+        "[exa] Function Calling in AI Agents",
+        "[exa-h] # Function calling\nGive models access to new functionality and data they can use to follow instructions and respond to p"
+      ],
+      "latency": 10.314720153808594
+    },
+    {
+      "topic": "Schema enforcement: type safety",
+      "area": "structured",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Schema Validation .leafygreen-ui-11mfcte{position:absolute;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;padding:0 10px;visibility:hidden;} .leafygreen-ui-s0ybz1{color:#889397;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;vertical-align:middle;margin-top:-2px;} .css-zena35{display:inline;left:0;top:0;margin-top:-85px;position:absolute;padding-bottom:2px;}@media only screen and (max-width: 767px){.css-zena35{margin-top:-85px;}}",
+        "[exa] JSON Schema",
+        "[exa-h] as allowed data types and value ranges.\nMongoDB uses a flexible schema model, which means that documents in a\ncollection"
+      ],
+      "latency": 8.810124158859253
+    },
+    {
+      "topic": "Constrained generation: grammar",
+      "area": "structured",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Programming Languages",
+        "[exa-h] Conditional text generation often requires lex\u0002ical constraints, i.e., which words should or\nshouldn\u2019t be included in th"
+      ],
+      "latency": 8.768947839736938
+    },
+    {
+      "topic": "RAG prompting: retrieval context",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Extending the context window of large language models (LLMs) is getting popular recently, while the solution of augmen"
+      ],
+      "latency": 6.394819259643555
+    },
+    {
+      "topic": "Agent prompting: tool orchestration",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Orchestration Framework Overview",
+        "[exa] Agents - OpenAI Agents SDK",
+        "[exa-h] Orchestration in AgentDock provides a structured way to control agent behavior, manage tool availability across differen"
+      ],
+      "latency": 9.345232486724854
+    },
+    {
+      "topic": "Code generation prompts: programming",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Code generation",
+        "[exa] Codex Prompting Guide",
+        "[exa-h] Deploy in your product\nOptimize\n[Voice agents] \nTools\n[Using tools] \n[Connectors and MCP] \n[Web search] \n[Code interpret"
+      ],
+      "latency": 8.887777090072632
+    },
+    {
+      "topic": "Multimodal prompts: vision-language",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Today\u2019s most advanced vision-language models (VLMs) re\u0002main proprietary. The strongest open-weight models rely\nheavily o"
+      ],
+      "latency": 7.867414474487305
+    }
+  ]
+}

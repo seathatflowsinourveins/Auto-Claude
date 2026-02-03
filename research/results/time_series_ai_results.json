@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:29:52.424421",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 93
+  },
+  "results": [
+    {
+      "topic": "Time series forecasting: ARIMA, Prophet, neural",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Time series forecasting is a critical task that provides key information for decision-making. After traditional statis"
+      ],
+      "latency": 8.74874234199524
+    },
+    {
+      "topic": "Deep learning forecasting: LSTM, Transformer",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > We present Timer-XL, a causal Transformer for unified time series forecasting. To uniformly predict multidimensional t"
+      ],
+      "latency": 9.109565496444702
+    },
+    {
+      "topic": "Probabilistic forecasting: uncertainty quantification",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Probabilistic Forecasting",
+        "[exa] ",
+        "[exa-h] A probabilistic forecast takes the form of a predictive probability distribution over future quantities or events of int"
+      ],
+      "latency": 7.370810270309448
+    },
+    {
+      "topic": "Multi-step forecasting: long-horizon prediction",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > A key aspect of temporal domains is the ability to make predictions multiple time steps into the future, a process kno"
+      ],
+      "latency": 11.798143148422241
+    },
+    {
+      "topic": "Temporal Fusion Transformer: interpretable forecasting",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting - ADS",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] prediction, they typically comprise black-box models which do not account for the full range of inputs present in common"
+      ],
+      "latency": 8.848419666290283
+    },
+    {
+      "topic": "N-BEATS: neural basis expansion",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] N-BEATS: Neural basis expansion analysis for interpretable time series\n  forecasting",
+        "[exa-h] [Submitted on 24 May 2019 ([v1]), last revised 20 Feb 2020 (this version, v4)]\n# Title:N-BEATS: Neural basis expansion a"
+      ],
+      "latency": 8.937699556350708
+    },
+    {
+      "topic": "Informer: efficient long sequence",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting",
+        "[exa] ",
+        "[exa-h] limitation of the encoder-decoder architecture. To address these issues, we\ndesign an efficient transformer-based model "
+      ],
+      "latency": 7.505713224411011
+    },
+    {
+      "topic": "TimesNet: temporal 2D variation",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis",
+        "[exa] ",
+        "[exa-h] The paper \"TimesNet: Temporal 2D-Variation Modeling for General Time Series Analysis\" introduces a novel approach to add"
+      ],
+      "latency": 6.783060312271118
+    },
+    {
+      "topic": "Time series anomaly detection: outlier identification",
+      "area": "anomaly",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A review on outlier/anomaly detection in time series data - ADS",
+        "[exa] ",
+        "[exa-h] events of interest. This review aims to provide a structured and comprehensive state-of-the-art on outlier detection tec"
+      ],
+      "latency": 10.8262300491333
+    },
+    {
+      "topic": "Changepoint detection: distribution shifts",
+      "area": "anomaly",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Change-point detection with deep learning: A review",
+        "[exa-h] > Detecting change-points in data is challenging because of the range of possible types of change and types of behaviour"
+      ],
+      "latency": 7.1945106983184814
+    },
+    {
+      "topic": "Unsupervised anomaly: autoencoders, VAE",
+      "area": "anomaly",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Variational Autoencoder based Anomaly Detection using Reconstruction Probability",
+        "[exa] Anomaly Detection with Conditional Variational Autoencoders | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] * Corpus ID: 36663713# Variational Autoencoder based Anomaly Detection using Reconstruction Probability\n```\n@inproceedin"
+      ],
+      "latency": 8.569560289382935
+    },
+    {
+      "topic": "Real-time anomaly: streaming detection",
+      "area": "anomaly",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Anomaly detection in Real-Time Intelligence (Preview)",
+        "[exa-h] arXiv reCAPTCHA\n[![Cornell University]] \n[We gratefully acknowledge support from\nthe Simons Foundation and member instit"
+      ],
+      "latency": 4.124161005020142
+    },
+    {
+      "topic": "Financial forecasting: stock, crypto prediction",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Numerai",
+        "[exa] Global Predictions Forecasting",
+        "[exa-h] Numerai\nWe're sorry but Numerai doesn't work properly without JavaScript enabled. Please enable it to continue."
+      ],
+      "latency": 7.4559807777404785
+    },
+    {
+      "topic": "Demand forecasting: inventory, supply chain",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Demand Forecasting",
+        "[exa-h] Amazon Web Services (AWS) customers look for easier, faster, more accurate, and more cost\u0002effective ways to forecast the"
+      ],
+      "latency": 3.8978757858276367
+    },
+    {
+      "topic": "Energy forecasting: load, renewable prediction",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] State of the Art for Solar and Wind Energy-Forecasting Methods for Sustainable Grid Integration",
+        "[exa-h] outlook into the future of energy forecasting.\nINDEX TERMS Energy forecasting, load forecasting, electricity price forec"
+      ],
+      "latency": 5.931328535079956
+    },
+    {
+      "topic": "Healthcare time series: patient monitoring",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MIMIC-III Waveform Database",
+        "[exa] MIMIC-IV Waveform Database",
+        "[exa-h] The MIMIC-III Waveform Database contains 67,830 record sets for approximately 30,000ICUpatients. Almost all record sets "
+      ],
+      "latency": 9.132088899612427
+    },
+    {
+      "topic": "Feature engineering: time series features",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Feature Engineering for Time Series Problems #",
+        "[exa] Feature Engineering for Time Series Problems #",
+        "[exa-h] Time series forecasting consists of predicting future values of a target using earlier observations. In datasets that ar"
+      ],
+      "latency": 8.753978967666626
+    },
+    {
+      "topic": "Transfer learning: pre-trained time series",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Although we have witnessed great success of pre-trained models in natural language processing (NLP) and computer visio"
+      ],
+      "latency": 4.905666351318359
+    },
+    {
+      "topic": "Foundation models: TimeGPT, Chronos",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Chronos: Learning the language of time series",
+        "[exa-h] > We introduce Chronos, a simple yet effective framework for pretrained probabilistic time series models. Chronos tokeni"
+      ],
+      "latency": 4.232612371444702
+    },
+    {
+      "topic": "Multivariate time series: multi-channel analysis",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Are We Overlooking the Dimensions?\n Learning Latent Hierarchical Channel Structure for \n High-Dimensional Time Series Forecasting",
+        "[exa-h] > Multivariate Time Series Forecasting (MTSF) plays a crucial role across diverse fields, ranging from economic, energy,"
+      ],
+      "latency": 5.4775285720825195
+    }
+  ]
+}

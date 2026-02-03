@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:39:09.097837",
+  "stats": {
+    "sources": 200,
+    "vectors": 190,
+    "findings": 96
+  },
+  "results": [
+    {
+      "topic": "Pretraining data: web crawls, Common Crawl",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Common Crawl maintains a  free,   open repository  of web crawl data that can be used by anyone.",
+        "[exa] The corpus contains raw web page data, metadata extracts, and text extracts. Common Crawl data is stored on Amazon Web Services\u2019 Public Data Sets and on multiple academic cloud platforms across the world. Learn how to  Get Started .",
+        "[exa-h] ] [## Host- and Domain-Level Web Graphs November/December 2025 and January 2026\n] \nThe latest Web Graphs from the Novemb"
+      ],
+      "latency": 4.899959325790405
+    },
+    {
+      "topic": "Data filtering: quality, deduplication",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] AMP Lab \u2013 UC Berkeley",
+        "[exa-h] ICData deduplicationAutomatic\nHuman involved\nSource\nTarget\nFDs value modification [6] X X X\nHolistic data cleaning [13] "
+      ],
+      "latency": 6.0592052936553955
+    },
+    {
+      "topic": "Data mixing: proportions, curriculum",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Pretraining data of large language models composes multiple domains (e.g., web texts, academic papers, codes), whose m"
+      ],
+      "latency": 5.689835071563721
+    },
+    {
+      "topic": "Synthetic pretraining data: generation",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Synthetic data generation has recently emerged as a promising approach for enhancing the capabilities of large languag"
+      ],
+      "latency": 7.7036449909210205
+    },
+    {
+      "topic": "Training dynamics: loss curves, checkpoints",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding Learning Curves",
+        "[exa] Saving and Loading Checkpoints #",
+        "[exa-h] During the training process (after you\u2019ve hit`trainer.train()`), you can monitor these key indicators:\n1. **Loss converg"
+      ],
+      "latency": 4.640130281448364
+    },
+    {
+      "topic": "Learning rate schedules: warmup, decay",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Learning rate \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] any particular task. These refined schedules exhibit learning rate warm-up and rapid learning rate annealing near the en"
+      ],
+      "latency": 10.110599040985107
+    },
+    {
+      "topic": "Batch size scaling: large batch training",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] 11 scales pretraining up to batches of 32M tokens, using 3.3\u00d7 fewer computes to\n12 achieve the superior later-stage perf"
+      ],
+      "latency": 9.383811950683594
+    },
+    {
+      "topic": "Training instabilities: spike prevention",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Spike No More: Stabilizing the Pre-training of Large Language Models - ADS",
+        "[exa-h] arXiv reCAPTCHA\n[![Cornell University]] \n[We gratefully acknowledge support from\nthe Simons Foundation and member instit"
+      ],
+      "latency": 6.231269359588623
+    },
+    {
+      "topic": "Distributed training: FSDP, DeepSpeed",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] FullyShardedDataParallel #",
+        "[exa] FullyShardedDataParallel #",
+        "[exa-h] [#]"
+      ],
+      "latency": 8.292661428451538
+    },
+    {
+      "topic": "GPU clusters: A100, H100 training",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deploy an A3 Mega Slurm cluster for ML training \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] NVIDIA H100 GPU",
+        "[exa-h] 3. Verify that you have enough GPU quotas. Each`a3-megagpu-8g`machine has\neight H100 80GB GPUs attached, so you'll need "
+      ],
+      "latency": 7.360126495361328
+    },
+    {
+      "topic": "Checkpointing: fault tolerance",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Fault Tolerance via State Snapshots\n   #",
+        "[exa] Checkpointing\n   #",
+        "[exa-h] * [Enabling and Configuring Checkpointing] \n* [Checkpoints] \n* [Savepoints] \n* [Tuning Checkpoints and Large State] \n* ["
+      ],
+      "latency": 5.707853078842163
+    },
+    {
+      "topic": "Training cost: compute economics",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Economics of AI",
+        "[exa-h] model to address this gap, estimating training costs using three approaches that account for hardware,\nenergy, cloud ren"
+      ],
+      "latency": 10.505791187286377
+    },
+    {
+      "topic": "Causal language modeling: next token",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Transformers",
+        "[exa-h] > In this work, we present sequence-driven structural causal models (SD-SCMs), a framework for specifying causal models "
+      ],
+      "latency": 8.422288656234741
+    },
+    {
+      "topic": "Masked language modeling: BERT-style",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Transformers",
+        "[exa-h] model (Devlin et al., 2019). This model is trained via masked language modeling,\nmasked\nlanguage\nmodeling where instead "
+      ],
+      "latency": 5.861965656280518
+    },
+    {
+      "topic": "Contrastive pretraining: CLIP approach",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] CLIP: Connecting text and images",
+        "[exa-h] IN\u00b7TN\nI1\u00b7T3\nFigure 1. Summary of our approach. While standard image models jointly train an image feature extractor and "
+      ],
+      "latency": 9.735908269882202
+    },
+    {
+      "topic": "Multi-task pretraining: T5 approach",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Exploring Transfer Learning with T5: the Text-To-Text Transfer Transformer",
+        "[exa-h] > Despite the recent success of multi-task learning and transfer learning for natural language processing (NLP), few wor"
+      ],
+      "latency": 6.6061930656433105
+    },
+    {
+      "topic": "Mixed precision training: FP16, BF16",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Train With Mixed Precision",
+        "[exa] ",
+        "[exa-h] Mixed precisionis the combined use of different numerical precisions in a computational method.\nHalf precision(also know"
+      ],
+      "latency": 10.079472303390503
+    },
+    {
+      "topic": "Gradient compression: communication",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Abstract:Parallel implementations of stochastic gradient descent (SGD) have received significant research attention, t"
+      ],
+      "latency": 8.43352460861206
+    },
+    {
+      "topic": "Memory optimization: activation checkpointing",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Current and New Activation Checkpointing Techniques in PyTorch",
+        "[exa] torch.utils.checkpoint #",
+        "[exa-h] In summary, activation checkpointing techniques in PyTorch offer a variety of ways to balance memory and compute demands"
+      ],
+      "latency": 9.862688064575195
+    },
+    {
+      "topic": "Data loading: efficient pipelines",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What Is Data Loading: Best Practices, Examples, & Techniques",
+        "[exa] Data Processing Pipelines",
+        "[exa-h] Efficient data loading is essential for transferring data from diverse sources to centralized systems, enabling timely a"
+      ],
+      "latency": 9.371102094650269
+    }
+  ]
+}

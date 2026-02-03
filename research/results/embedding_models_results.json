@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:33:50.019732",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "OpenAI text-embedding-3: small, large, dimensions",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Vector embeddings",
+        "[exa] Page not found | OpenAI API",
+        "[exa-h] By default, the length of the embedding vector is`1536`for`text-embedding-3-small`or`3072`for`text-embedding-3-large`. T"
+      ],
+      "latency": 5.513724088668823
+    },
+    {
+      "topic": "Cohere embed-v3: multilingual, clustering, search tasks",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction to Embeddings at Cohere",
+        "[exa] Introduction to Embeddings at Cohere",
+        "[exa-h] * When using embeddings for semantic search, the text passages that are being searched over should be embedded with`inpu"
+      ],
+      "latency": 8.63200306892395
+    },
+    {
+      "topic": "Jina embeddings v3: task-specific, matryoshka",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] jina-embeddings-v3",
+        "[exa-h] from OpenAI and Cohere on English tasks,\nwhile achieving superior performance com\u0002pared to multilingual-e5-large-instruc"
+      ],
+      "latency": 10.066487073898315
+    },
+    {
+      "topic": "Voyage AI embeddings: code, legal, finance specialized",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Text Embeddings",
+        "[exa] Billing and Budgets",
+        "[exa-h] `voyage-finance-2`|32,000|1024|Optimized for**finance**retrieval and RAG. See[blog post] for details.|\n`voyage-law-2`|16"
+      ],
+      "latency": 8.008982181549072
+    },
+    {
+      "topic": "Sentence transformers: all-MiniLM, all-mpnet, BGE",
+      "area": "opensource",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pretrained Models \uf0c1",
+        "[exa] Pretrained Models \uf0c1",
+        "[exa-h] The**all-**\\* models were trained on all available training data (more than 1 billion training pairs) and are designed a"
+      ],
+      "latency": 8.9072585105896
+    },
+    {
+      "topic": "Nomic embed: open weights, long context",
+      "area": "opensource",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Nomic AI\nReviewed on OpenReview: https: // openreview. net/ forum? id= IPmzyQSiQE\nAbstract\nThis technical report describ"
+      ],
+      "latency": 9.185846090316772
+    },
+    {
+      "topic": "GTE embeddings: General Text Embeddings from Alibaba",
+      "area": "opensource",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] General Text Embeddings (GTE) English (gte_large)",
+        "[exa-h] has generated considerable interest in retrieval\u00021The GTE model is publicly available at https://\nhuggingface.co/thenlpe"
+      ],
+      "latency": 10.323582172393799
+    },
+    {
+      "topic": "E5 embeddings: text embedding from Microsoft",
+      "area": "opensource",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] well to a wide range of tasks. The model is trained in a contrastive manner with\nweak supervision signals from our curat"
+      ],
+      "latency": 7.998270034790039
+    },
+    {
+      "topic": "Embedding fine-tuning: contrastive learning, triplet loss",
+      "area": "finetuning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] in the end-to-end learning of the whole system. To this end\nwe employ the triplet loss that directly reflects what we wa"
+      ],
+      "latency": 8.349889755249023
+    },
+    {
+      "topic": "Domain adaptation: synthetic data, hard negatives",
+      "area": "finetuning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Synthetic training data has gained prominence in numerous learning tasks and scenarios, offering advantages such as da"
+      ],
+      "latency": 9.845524787902832
+    },
+    {
+      "topic": "Matryoshka representation learning: flexible dimensions",
+      "area": "finetuning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] can be either over or under-accommodating to the task at hand. This leads us\nto ask: can we design a flexible representa"
+      ],
+      "latency": 9.76814889907837
+    },
+    {
+      "topic": "Late chunking: context-aware chunk embeddings",
+      "area": "finetuning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding\n  Models",
+        "[exa-h] # Computer Science \\> Computation and Language\n**arXiv:2409.04701**(cs)\n[Submitted on 7 Sep 2024 ([v1]), last revised 7 "
+      ],
+      "latency": 9.90824842453003
+    },
+    {
+      "topic": "MTEB benchmark: massive text embedding benchmark",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] MTEB Documentation \u00b6",
+        "[exa-h] MTEB is a Python framework for evaluating embeddings and retrieval systems for both text and image.\nMTEB covers more tha"
+      ],
+      "latency": 8.664169788360596
+    },
+    {
+      "topic": "Retrieval evaluation: recall@k, MRR, NDCG",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Evaluation in information retrieval",
+        "[exa-h] 8.3 Evaluation of unranked retrieval sets\nGiven these ingredients, how is system effectiveness measured? The two\nmost fr"
+      ],
+      "latency": 10.89967966079712
+    },
+    {
+      "topic": "Clustering evaluation: silhouette score, NMI",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] silhouette_score #",
+        "[exa] Evaluation of clustering",
+        "[exa-h] sklearn.metrics.silhouette\\_score(*X*,*labels*,*\\**,*metric='euclidean'*,*sample\\_size=None*,*random\\_state=None*,*\\*\\*k"
+      ],
+      "latency": 7.024489641189575
+    },
+    {
+      "topic": "Semantic similarity: STS benchmark, correlation",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] the system to human judgments on semantic similarity. The comparison is usually done using\nPearson correlation. In this "
+      ],
+      "latency": 8.706079959869385
+    },
+    {
+      "topic": "Multi-vector embeddings: ColBERT, late interaction",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] both vectors. An alternative is late interaction, in\u0002troduced in ColBERT (Khattab and Zaharia, 2020),\nwhere queries and "
+      ],
+      "latency": 8.282017469406128
+    },
+    {
+      "topic": "Sparse embeddings: SPLADE, learned sparse retrieval",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learned sparse retrieval",
+        "[exa] Towards Effective and Efficient Sparse Neural Information Retrieval",
+        "[exa-h] SPLADE (Sparse Lexical and Expansion Model) is a neural retrieval model that learns sparse vector representations for qu"
+      ],
+      "latency": 10.335794448852539
+    },
+    {
+      "topic": "Cross-encoder reranking: relevance scoring",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] ",
+        "[exa-h] > In this paper we propose a novel approach for combining first-stage lexical retrieval models and Transformer-based re-"
+      ],
+      "latency": 9.019293069839478
+    },
+    {
+      "topic": "Multimodal embeddings: CLIP, ImageBind, unified space",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We present ImageBind, an approach to learn a joint embedding across six different modalities - images, text, audio, de"
+      ],
+      "latency": 11.331323146820068
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:52:55.671420",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "LLM quantization: INT8 INT4",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Large language models have been widely adopted but require significant GPU memory for inference. We develop a procedur"
+      ],
+      "latency": 6.869847774505615
+    },
+    {
+      "topic": "GPTQ: post-training quantization",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] [Submitted on 31 Oct 2022 ([v1]), last revised 22 Mar 2023 (this version, v2)]\n# Title:GPTQ: Accurate Post-Training Quan"
+      ],
+      "latency": 7.056130647659302
+    },
+    {
+      "topic": "AWQ: activation-aware weights",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Activation-aware Weight Quantization (AWQ)",
+        "[exa] AWQ: Activation-aware Weight Quantization for On-Device LLM Compression and Acceleration",
+        "[exa-h] * Activation-aware Weight Quantization (AWQ) is a technique that leverages activation statistics to guide weight quantiz"
+      ],
+      "latency": 10.587411165237427
+    },
+    {
+      "topic": "GGUF: llama.cpp format",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] GGUF File Format",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] This page documents the GGUF (GGML Universal File) format, the binary file format used by llama.cpp to store language mo"
+      ],
+      "latency": 6.842825651168823
+    },
+    {
+      "topic": "Flash Attention: efficient attention",
+      "area": "attention",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > The computational and memory demands of vanilla attention scale quadratically with the sequence length $N$, posing sig"
+      ],
+      "latency": 8.95861291885376
+    },
+    {
+      "topic": "Paged Attention: vLLM optimization",
+      "area": "attention",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Paged Attention \u00b6",
+        "[exa-h] this problem, we propose PagedAttention, an attention al\u0002gorithm inspired by the classical virtual memory and pag\u0002ing te"
+      ],
+      "latency": 8.241885423660278
+    },
+    {
+      "topic": "Multi-Query Attention: MQA",
+      "area": "attention",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Multi-Query Attention Explained",
+        "[exa-h] > Multi-query attention (MQA), which only uses a single key-value head, drastically speeds up decoder inference. However"
+      ],
+      "latency": 7.412851333618164
+    },
+    {
+      "topic": "Grouped Query Attention: GQA",
+      "area": "attention",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is grouped query attention (GQA)?",
+        "[exa] Optimised Grouped-Query Attention Mechanism for Transformers - ADS",
+        "[exa-h] Grouped query attention (GQA) is a method to increase the efficiency of the[attention mechanism] in transformer models, "
+      ],
+      "latency": 10.053903102874756
+    },
+    {
+      "topic": "KV cache optimization: memory",
+      "area": "kv_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] LLM profiling guides KV cache optimization",
+        "[exa-h] > Key-value (KV) caching has emerged as a crucial optimization technique for accelerating inference in large language mo"
+      ],
+      "latency": 6.561954736709595
+    },
+    {
+      "topic": "Continuous batching: throughput",
+      "area": "kv_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Batching Strategies | Double Word AI docs",
+        "[exa-h] The continuous batching process increases the maximum throughput of the server. If you're using Doubleword to process la"
+      ],
+      "latency": 8.379904508590698
+    },
+    {
+      "topic": "Speculative decoding: parallel",
+      "area": "kv_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Inference from large autoregressive models like Transformers is slow - decoding K tokens takes K serial runs of the mo"
+      ],
+      "latency": 10.208452224731445
+    },
+    {
+      "topic": "Token streaming: real-time",
+      "area": "kv_cache",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Real-Time Market Data API",
+        "[exa] Money Streaming",
+        "[exa-h] Chainstream\u2019s Real-Time Market Data API is built for applications that need fast, accurate, and cross-chain market data\u2014"
+      ],
+      "latency": 8.467248678207397
+    },
+    {
+      "topic": "vLLM: fast inference",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to vLLM \u00b6",
+        "[exa] Welcome to vLLM \u00b6",
+        "[exa-h] * Continuous batching of incoming requests\n* Fast model execution with CUDA/HIP graph\n* Quantization:[GPTQ],[AWQ], INT4,"
+      ],
+      "latency": 9.74099850654602
+    },
+    {
+      "topic": "TGI: text generation inference",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] text-generation-inference",
+        "[exa] text-generation-inference",
+        "[exa-h] Text Generation Inference (TGI) is a toolkit for deploying and serving Large Language Models (LLMs). TGI enables high-pe"
+      ],
+      "latency": 9.114660024642944
+    },
+    {
+      "topic": "TensorRT-LLM: NVIDIA optimization",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview \u2014 TensorRT LLM",
+        "[exa] Welcome to TensorRT LLM\u2019s Documentation! #",
+        "[exa-h] [TensorRT LLM] is NVIDIA\u2019s comprehensive open-source library for accelerating and optimizing inference performance of th"
+      ],
+      "latency": 7.774865627288818
+    },
+    {
+      "topic": "llama.cpp: CPU inference",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] llama.cpp - Liquid Docs",
+        "[exa] Llama.cpp \u2013 Run LLM Inference in C/C++",
+        "[exa-h] llama.cpp is a C++ library for efficient LLM inference with minimal dependencies. It\u2019s designed for CPU-first inference "
+      ],
+      "latency": 6.340893268585205
+    },
+    {
+      "topic": "LLM serving: production deployment",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Production pipelines for Llama deployments",
+        "[exa] Step-By-Step LLM Serving Guide for Production AI Systems",
+        "[exa-h] Production Llama deployments require orchestrated pipelines that handle data processing, model training, evaluation, dep"
+      ],
+      "latency": 9.732925415039062
+    },
+    {
+      "topic": "Batching strategies: dynamic batch",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dynamically grouping elements using the  BatchElements -transform",
+        "[exa] Batching Strategies | Double Word AI docs",
+        "[exa-h] for`BatchElements`explains this and the parameters handled here in detail. The most important considerations for most us"
+      ],
+      "latency": 8.737129211425781
+    },
+    {
+      "topic": "Load balancing: multi-GPU",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Compute Workflows #",
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa-h] NVIDIA AI Enterprise: Multi-Node Deep Learning Training with TensorFlow\n] \n* [Documentation Home] \n******\n[Is this page "
+      ],
+      "latency": 8.486165523529053
+    },
+    {
+      "topic": "Auto-scaling: demand-based",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dynamic scaling for Amazon EC2 Auto Scaling",
+        "[exa] Increase or decrease compute capacity of your application with scaling",
+        "[exa-h] Dynamic scaling scales the capacity of your Auto Scaling group as traffic changes\noccur.\nAmazon EC2 Auto Scaling support"
+      ],
+      "latency": 6.539672613143921
+    }
+  ]
+}

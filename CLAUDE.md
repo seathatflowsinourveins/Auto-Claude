@@ -1,382 +1,188 @@
-# UNLEASH - Meta-Platform for Claude Enhancement
+# Claude Code Configuration - Claude Flow V3
 
-> **Purpose**: Enhance Claude's capabilities to build State of Witness and AlphaForge
-> **Status**: Production | **Architecture**: 8-Layer, 28 SDKs
-> **Version**: V35 (Research Architecture v4.1 + Semantic Clustering + Voyage Reranker)
-> **Letta Mode**: Cloud (https://api.letta.com) | SDK: letta-client 1.7.7 (API stable)
-> **Philosophy**: Autonomous First. Compound Learning. Real Testing Always.
-> **Optimized**: 2026-02-01 (V34: Research v4.0, LLM-based HyDE/RAGAS, 41 tests passing)
+## Behavioral Rules (Always Enforced)
 
----
+- Do what has been asked; nothing more, nothing less
+- NEVER create files unless they're absolutely necessary for achieving your goal
+- ALWAYS prefer editing an existing file to creating a new one
+- NEVER proactively create documentation files (*.md) or README files unless explicitly requested
+- NEVER save working files, text/mds, or tests to the root folder
+- Never continuously check status after spawning a swarm — wait for results
+- ALWAYS read a file before editing it
+- NEVER commit secrets, credentials, or .env files
 
-## Project Identity
+## File Organization
 
-This is the **UNLEASH** project - the meta-layer that enhances Claude Code's capabilities.
+- NEVER save to root folder — use the directories below
+- Use `/src` for source code files
+- Use `/tests` for test files
+- Use `/docs` for documentation and markdown files
+- Use `/config` for configuration files
+- Use `/scripts` for utility scripts
+- Use `/examples` for example code
 
-| Project | Location | Letta Cloud Agent |
-|---------|----------|-------------------|
-| **UNLEASH** (this) | `Z:/insider/AUTO CLAUDE/unleash` | Uses ECOSYSTEM agent |
-| **WITNESS** | `Z:/insider/AUTO CLAUDE/Touchdesigner-createANDBE` | `agent-bbcc0a74-5ff8-4ccd-83bc-b7282c952589` |
-| **ALPHAFORGE** | `Z:/insider/AUTO CLAUDE/autonomous AI trading system` | `agent-5676da61-c57c-426e-a0f6-390fd9dfcf94` |
+## Project Architecture
 
-**Letta Cloud Agents** (verified 2026-01-30):
-- WITNESS (state-of-witness-creative-brain): `agent-bbcc0a74-5ff8-4ccd-83bc-b7282c952589`
-- ALPHAFORGE (alphaforge-dev-orchestrator): `agent-5676da61-c57c-426e-a0f6-390fd9dfcf94`
-- ECOSYSTEM (claude-code-ecosystem-test): `agent-daee71d2-193b-485e-bda4-ee44752635fe`
+- Follow Domain-Driven Design with bounded contexts
+- Keep files under 500 lines
+- Use typed interfaces for all public APIs
+- Prefer TDD London School (mock-first) for new code
+- Use event sourcing for state changes
+- Ensure input validation at system boundaries
 
----
+### Project Config
 
-## 8-Layer SDK Architecture (28 Production SDKs)
+- **Topology**: hierarchical-mesh
+- **Max Agents**: 15
+- **Memory**: hybrid
+- **HNSW**: Enabled
+- **Neural**: Enabled
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                    UNLEASH SDK ARCHITECTURE                                  │
-├─────────────────────────────────────────────────────────────────────────────┤
-│  L8: KNOWLEDGE       │ graphrag, pyribs                                     │
-│  L7: PROCESSING      │ ast-grep, crawl4ai                                   │
-│  L6: SAFETY          │ guardrails-ai, llm-guard, nemo-guardrails           │
-│  L5: OBSERVABILITY   │ langfuse, opik, arize-phoenix, deepeval, ragas,     │
-│                      │ promptfoo                                            │
-│  L4: REASONING       │ dspy                                                 │
-│  L3: STRUCTURED OUT  │ instructor, baml, outlines, pydantic-ai             │
-│  L2: MEMORY          │ letta, zep, mem0                                     │
-│  L1: ORCHESTRATION   │ temporal-python, langgraph, claude-flow             │
-│  L0: PROTOCOL        │ mcp-python-sdk, mcp-ecosystem, litellm, anthropic   │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-### SDK Priority
-
-| Priority | Count | SDKs |
-|----------|-------|------|
-| **P0 CRITICAL** | 8 | anthropic, claude-flow, letta, opik, mcp-python-sdk, instructor, litellm, langgraph |
-| **P1 IMPORTANT** | 10 | dspy, pydantic-ai, pyribs, promptfoo, mem0, ragas, deepeval, guardrails-ai, crawl4ai, ast-grep |
-| **P2 SPECIALIZED** | 10 | temporal-python, graphrag, outlines, baml, langfuse, zep, llm-guard, nemo-guardrails, arize-phoenix, mcp-ecosystem |
-
----
-
-## Key Directories
-
-```
-unleash/
-├── .claude/          # Agents (24), Skills (28)
-├── .config/          # API keys, SDK_INDEX
-├── sdks/             # 28 production SDKs
-│   ├── anthropic/    # Claude SDKs, cookbooks
-│   ├── letta/        # Memory server
-│   ├── mcp-python-sdk/
-│   └── claude-flow/  # V3 orchestration
-├── platform/         # Core platform code
-└── apps/             # Applications
-```
-
----
-
-## Key References
-
-| Resource | Location |
-|----------|----------|
-| SDK Index | `.config/SDK_INDEX.md` |
-| Global Rules | `~/.claude/CLAUDE.md` |
-| Verification Protocol | `~/.claude/references/verification.md` |
-| Research Protocol | `~/.claude/references/research-protocol.md` |
-
----
-
-## MCP Servers (9 configured)
-
-| Server | Purpose |
-|--------|---------|
-| claude-flow | V3 orchestration |
-| letta | Agent memory |
-| code-index | Semantic search |
-| firecrawl | Web extraction |
-| memory | Knowledge graphs |
-| filesystem | File operations |
-| sqlite | Database |
-
----
-
-## Quick Commands
+## Build & Test
 
 ```bash
-# === BUILD & INSTALL ===
-pip install -e .                    # Core only (editable mode)
-pip install -e ".[dev]"             # With dev tools (pytest, mypy, ruff)
-pip install -e ".[all]"             # All 28 SDKs
+# Build
+npm run build
 
-# === TESTING ===
-pytest tests/ -v                    # Run all tests
-pytest tests/ --cov=core            # With coverage
-pytest tests/integration/ -m integration  # Integration tests only
-pytest -x --tb=short               # Stop on first failure
+# Test
+npm test
 
-# === LINTING & TYPE CHECKING ===
-ruff check .                        # Python linting
-ruff check --fix .                  # Auto-fix lint issues
-ruff format .                       # Format Python code
-mypy core/ --strict                 # Type checking (strict mode)
-
-# === LETTA CLOUD ===
-# Use verified cloud agents (requires LETTA_API_KEY)
-C:\Users\42\.letta-env\Scripts\python.exe -c "from letta_client import Letta; print(Letta().agents.list())"
-
-# Local Letta server (alternative)
-cd sdks/letta/letta && letta server --port 8283
-
-# === RESEARCH & VALIDATION ===
-python platform/scripts/auto_research.py research "AI agents 2026"
-python platform/scripts/auto_validate.py
+# Lint
+npm run lint
 ```
 
----
+- ALWAYS run tests after making code changes
+- ALWAYS verify build succeeds before committing
 
-## Security Note
+## Security Rules
 
-**LangGraph**: Upgrade to 3.0+ - CVE-2025-64439 (RCE via JsonPlusSerializer)
+- NEVER hardcode API keys, secrets, or credentials in source files
+- NEVER commit .env files or any file containing secrets
+- Always validate user input at system boundaries
+- Always sanitize file paths to prevent directory traversal
+- Run `npx @claude-flow/cli@latest security scan` after security-related changes
 
----
+## Concurrency: 1 MESSAGE = ALL RELATED OPERATIONS
 
-## V35 Research Architecture v4.1 (2026-02-01)
+- All operations MUST be concurrent/parallel in a single message
+- Use Claude Code's Task tool for spawning agents, not just MCP
+- ALWAYS batch ALL todos in ONE TodoWrite call (5-10+ minimum)
+- ALWAYS spawn ALL agents in ONE message with full instructions via Task tool
+- ALWAYS batch ALL file reads/writes/edits in ONE message
+- ALWAYS batch ALL Bash commands in ONE message
 
-### LLM-Enhanced Components (53 tests passing)
+## Swarm Orchestration
 
-| Component | Class | V4.1 Enhancement | Fallback |
-|-----------|-------|------------------|----------|
-| RAGAS Evaluation | `RAGASEvaluator` | **LLM-based scoring via Anthropic** | Heuristic scoring |
-| Chunking | `MCPResponseHandler` | Semantic chunking | Chonkie → sliding window |
-| Reranking | `RerankerLayer` | **Multi-backend + Voyage** | FlashRank → CrossEncoder → Cohere → Voyage → passthrough |
-| CRAG | `DocumentGrader` | **DeBERTa NLI + hybrid scoring** | Keyword-only scoring |
-| HyDE | `HyDEExpander` | **LLM-generated hypothetical docs** | Template expansion |
-| Query Routing | `QueryRouter` | Complexity detection | Heuristic routing |
-| GraphRAG | `GraphRAGProcessor` | **spaCy NER support** | Pattern-based extraction |
-| Speculative RAG | `SpeculativeRAGGenerator` | **LLM drafts + Semantic clustering** | Template concatenation |
+- MUST initialize the swarm using CLI tools when starting complex tasks
+- MUST spawn concurrent agents using Claude Code's Task tool
+- Never use CLI tools alone for execution — Task tool agents do the actual work
+- MUST call CLI tools AND Task tool in ONE message for complex work
 
-**Location**: `~/.claude/integrations/research_orchestrator.py` (~80KB consolidated)
+### 3-Tier Model Routing (ADR-026)
 
-### V4.1 New Features
+| Tier | Handler | Latency | Cost | Use Cases |
+|------|---------|---------|------|-----------|
+| **1** | Agent Booster (WASM) | <1ms | $0 | Simple transforms (var→const, add types) — Skip LLM |
+| **2** | Haiku | ~500ms | $0.0002 | Simple tasks, low complexity (<30%) |
+| **3** | Sonnet/Opus | 2-5s | $0.003-0.015 | Complex reasoning, architecture, security (>30%) |
 
-1. **Speculative RAG (Semantic Clustering + LLM Drafts)**: K-means clustering with LLM synthesis
-   - Groups semantically similar documents before generating drafts
-   - LLM-based draft generation for coherent query-focused answers
-   - 50%+ latency reduction vs sequential processing
-   - Cluster cohesion scoring for confidence weighting
+- Always check for `[AGENT_BOOSTER_AVAILABLE]` or `[TASK_MODEL_RECOMMENDATION]` before spawning agents
+- Use Edit tool directly when `[AGENT_BOOSTER_AVAILABLE]`
 
-2. **Voyage Reranker Support**: Added Voyage AI rerank-2.5 API
-   - SOTA accuracy for retrieval tasks
-   - Auto-selection in reranker priority chain
-   - Requires `VOYAGE_API_KEY` environment variable
+## Swarm Configuration & Anti-Drift
 
-3. **CRAG with DeBERTa NLI**: Natural Language Inference for document grading
-   - Zero-shot classification: relevant/irrelevant/partially relevant
-   - Hybrid scoring: 70% NLI (semantic) + 30% keyword (lexical)
-   - Model: `MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli` (91.2% accuracy)
+- ALWAYS use hierarchical topology for coding swarms
+- Keep maxAgents at 6-8 for tight coordination
+- Use specialized strategy for clear role boundaries
+- Use `raft` consensus for hive-mind (leader maintains authoritative state)
+- Run frequent checkpoints via `post-task` hooks
+- Keep shared memory namespace for all agents
 
-### V4.0 Key Improvements
-
-1. **HyDE (LLM-based)**: True hypothetical document generation via Claude Haiku
-   - Generates document-like answers for semantic search
-   - Falls back to templates when LLM unavailable
-
-2. **RAGAS (LLM-based)**: Anthropic API evaluation when ragas library unavailable
-   - Scores faithfulness, relevancy, precision via LLM
-   - 3-tier fallback: RAGAS lib → LLM → Heuristics
-
-3. **GraphRAG (NER-ready)**: spaCy NER support with pattern-based fallback
-   - Entity types: PERSON, ORGANIZATION, TECHNOLOGY, LOCATION, EVENT
-   - NetworkX Louvain community detection
-
-### Letta SDK v1.7.7 CRITICAL Fixes (Verified with REAL API)
-
-```python
-# CORRECT patterns (V34 verified)
-results = client.agents.passages.search(agent_id, query="...", top_k=10)  # NOT limit=
-for r in results.results:  # NOT .passages
-    content = r.content    # NOT .text (for search results)
-
-client.agents.blocks.attach(block_id, agent_id=agent_id)  # block_id POSITIONAL
+```bash
+npx @claude-flow/cli@latest swarm init --topology hierarchical --max-agents 8 --strategy specialized
 ```
 
-### Files Fixed (V34)
+## Swarm Execution Rules
 
-| File | Line | Fix |
-|------|------|-----|
-| `iterative_retrieval.py` | 186 | `.content` before `.text` fallback |
-| `unified_memory_gateway.py` | 461-465 | `.results` accessor, `.content` |
-| `research_orchestrator.py` | 936-1070 | V4.0 HyDE with LLM generation |
-| `research_orchestrator.py` | 577-780 | V4.0 RAGAS with LLM evaluation |
-| `research_orchestrator.py` | 1112-1270 | V4.0 GraphRAG with NER support |
+- ALWAYS use `run_in_background: true` for all agent Task calls
+- ALWAYS put ALL agent Task calls in ONE message for parallel execution
+- After spawning, STOP — do NOT add more tool calls or check status
+- Never poll TaskOutput or check swarm status — trust agents to return
+- When agent results arrive, review ALL results before proceeding
 
----
+## V3 CLI Commands
 
-## V27.1 Production Stability Update (2026-01-31)
+### Core Commands
 
-### P0 Fixes Applied ✅
+| Command | Subcommands | Description |
+|---------|-------------|-------------|
+| `init` | 4 | Project initialization |
+| `agent` | 8 | Agent lifecycle management |
+| `swarm` | 6 | Multi-agent swarm coordination |
+| `memory` | 11 | AgentDB memory with HNSW search |
+| `task` | 6 | Task creation and lifecycle |
+| `session` | 7 | Session state management |
+| `hooks` | 17 | Self-learning hooks + 12 workers |
+| `hive-mind` | 6 | Byzantine fault-tolerant consensus |
 
-| Fix | Location | Status |
-|-----|----------|--------|
-| **AttributeError Guards** | `platform_orchestrator.py` | ✅ 12 None checks added |
-| **_validate_components()** | `platform_orchestrator.py` | ✅ New startup validation |
-| **_is_component_ready()** | `platform_orchestrator.py` | ✅ Per-component checks |
-| **Circuit Breaker** | `circuit_breaker.py` | ✅ Already production-ready |
+### Quick CLI Examples
 
-### V27.1 Research Synthesis (3 Deep Agents)
-
-| Agent | Focus | Key Production Patterns |
-|-------|-------|------------------------|
-| **Claude Code Optimization** | Configuration, Hooks, Memory | Settings hierarchy, MCP timeouts, anti-corruption hooks |
-| **MCP Stability** | Timeouts, Pooling, Health | 30s init, 60s tools, circuit breakers, watchdog timers |
-| **Autonomous Loops** | Claude-flow V3, Memory | Swarm topologies, Temporal+LangGraph layers, sleep-time |
-
-### Research Agents (V27 Base)
-
-| Agent | Focus | Key Findings |
-|-------|-------|--------------|
-| **Autonomous Loops** | Ralph Wiggum, GOAP, Factory Signals | Dual-gate exits, A* correction, compound learning |
-| **Anthropic SDK** | Latest features 2025-2026 | Extended thinking, 1-hour cache, strict tools |
-| **Opik Observability** | Production tracing | Full trace visibility, cost analytics, dashboards |
-| **Letta Advanced** | Sleep-time, Archives, Learning SDK | Cross-agent memory, background consolidation |
-| **System Analysis** | Gap detection, priorities | P0/P1/P2 ranked improvements |
-
-### V27 Autonomous Loop
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│              AdvancedMonitoringLoopV27                          │
-├─────────────────────────────────────────────────────────────────┤
-│  Ralph Wiggum    │  Direction     │  Chi-Squared   │  GOAP     │
-│  (Dual-Gate)     │  Monitor       │  Drift         │  Planner  │
-├─────────────────────────────────────────────────────────────────┤
-│  Factory Signals (Compound Learning) → Letta Memory (Persistent)│
-└─────────────────────────────────────────────────────────────────┘
+```bash
+npx @claude-flow/cli@latest init --wizard
+npx @claude-flow/cli@latest agent spawn -t coder --name my-coder
+npx @claude-flow/cli@latest swarm init --v3-mode
+npx @claude-flow/cli@latest memory search --query "authentication patterns"
+npx @claude-flow/cli@latest doctor --fix
 ```
 
-**Expected Gains**:
-- 60% reduction in wasted iterations
-- 45% faster task completion
-- 80% recovery rate from failures
-- Cross-session compound learning
+## Available Agents (60+ Types)
 
-### New Capabilities
+### Core Development
+`coder`, `reviewer`, `tester`, `planner`, `researcher`
 
-| Feature | Location | Purpose |
-|---------|----------|---------|
-| **V27 Loop** | `~/.claude/integrations/advanced_monitoring_loop_v27.py` | Full autonomous loop |
-| **Circuit Breaker** | `~/.claude/integrations/circuit_breaker.py` | MCP failure isolation |
-| **Factory Signals** | V27 loop + `~/.claude/learnings/` | Compound learning |
-| **Opik Integration** | Optional via `pip install opik` | Full observability |
-| **Letta Learning SDK** | `pip install agentic-learning` | Drop-in continual learning |
+### Specialized
+`security-architect`, `security-auditor`, `memory-specialist`, `performance-engineer`
 
-### SDK Upgrades (V27)
+### Swarm Coordination
+`hierarchical-coordinator`, `mesh-coordinator`, `adaptive-coordinator`
 
-| SDK | Feature | Usage |
-|-----|---------|-------|
-| **Anthropic** | Extended Thinking | `thinking={"type": "enabled", "budget_tokens": 16000}` |
-| **Anthropic** | 1-Hour Cache | `cache_control={"type": "ephemeral", "ttl": "1h"}` |
-| **Anthropic** | Strict Tools | `strict: True` in tool definitions |
-| **Letta** | Sleep-time Compute | `enable_sleeptime=True` |
-| **Letta** | Archives API | Cross-agent shared memory |
-| **Opik** | Anthropic Tracing | `track_anthropic(client)` |
+### GitHub & Repository
+`pr-manager`, `code-review-swarm`, `issue-tracker`, `release-manager`
 
-### MCP Timeout Configuration
+### SPARC Methodology
+`sparc-coord`, `sparc-coder`, `specification`, `pseudocode`, `architecture`
 
-| Tier | Servers | Timeout |
-|------|---------|---------|
-| Essential | LSP, Context7, Exa, Tavily, Jina, Firecrawl | 60s |
-| Deferred | Memory, SQLite, Filesystem | 60s |
-| Heavy | Letta, Brave | 120s |
-| Lazy | Claude-flow, Qdrant, GraphRAG | On-demand |
+## Memory Commands Reference
 
-### Critical Gaps (Updated V27.1)
+```bash
+# Store (REQUIRED: --key, --value; OPTIONAL: --namespace, --ttl, --tags)
+npx @claude-flow/cli@latest memory store --key "pattern-auth" --value "JWT with refresh" --namespace patterns
 
-| Priority | Gap | Status |
-|----------|-----|--------|
-| **P0** | Platform Orchestrator validation | ✅ FIXED (V27.1) |
-| **P0** | Letta v1.8 migration path | 📋 DOCUMENTED |
-| **P0** | Security audit hook (CVE-2025-64439) | ✅ Referenced in CLAUDE.md |
-| **P1** | Research discrepancy synthesis | TODO |
-| **P1** | Circuit breaker expansion | ✅ DONE |
-| **P1** | Claude-flow V3 patterns | 📋 DOCUMENTED |
-| **P1** | MCP timeout configuration | ✅ CONFIGURED |
+# Search (REQUIRED: --query; OPTIONAL: --namespace, --limit, --threshold)
+npx @claude-flow/cli@latest memory search --query "authentication patterns"
 
-### Quick Start V27 Loop
+# List (OPTIONAL: --namespace, --limit)
+npx @claude-flow/cli@latest memory list --namespace patterns --limit 10
 
-```python
-from advanced_monitoring_loop_v27 import create_autonomous_loop
-
-loop = create_autonomous_loop(
-    task="Implement feature X",
-    max_iterations=50,
-    max_cost=10.0,
-    letta_agent_id="agent-daee71d2-..."  # Optional
-)
-
-result = loop.run(executor_function)
-# Returns: status, exit_reason, iterations, progress, cost, learnings
+# Retrieve (REQUIRED: --key; OPTIONAL: --namespace)
+npx @claude-flow/cli@latest memory retrieve --key "pattern-auth" --namespace patterns
 ```
 
----
+## Quick Setup
 
-## V27.1 Production Patterns (From Research)
-
-### Configuration Best Practices
-
-```json
-// ~/.claude/settings.json - Production recommended
-{
-  "env": {
-    "MCP_TIMEOUT": "30000",
-    "MAX_MCP_OUTPUT_TOKENS": "50000",
-    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "70"
-  },
-  "cleanupPeriodDays": 14
-}
+```bash
+claude mcp add claude-flow -- npx -y @claude-flow/cli@latest
+npx @claude-flow/cli@latest daemon start
+npx @claude-flow/cli@latest doctor --fix
 ```
 
-### MCP Stability Timeouts
+## Claude Code vs CLI Tools
 
-| Operation | Timeout | Rationale |
-|-----------|---------|-----------|
-| `initialize` | 30s | Should be fast |
-| `tools/list` | 30s | Metadata only |
-| `tools/call` (simple) | 60s | Standard ops |
-| `tools/call` (complex) | 120s | DB, API calls |
+- Claude Code's Task tool handles ALL execution: agents, file ops, code generation, git
+- CLI tools handle coordination via Bash: swarm init, memory, hooks, routing
+- NEVER use CLI tools as a substitute for Task tool agents
 
-### Circuit Breaker Pattern
+## Support
 
-```python
-from circuit_breaker import call_with_circuit_breaker, CircuitOpenError
-
-async def safe_mcp_call():
-    try:
-        return await call_with_circuit_breaker(
-            "letta",
-            lambda: client.agents.messages.create(...),
-            fallback=lambda: {"error": "fallback"}
-        )
-    except CircuitOpenError:
-        # Circuit open - use cached/degraded response
-        return cached_response
-```
-
-### Claude-flow V3 Integration
-
-```yaml
-# Swarm Topologies Available:
-# - hierarchical: Queen coordinates workers (default)
-# - mesh: All agents bidirectional
-# - ring: Sequential processing
-# - star: Hub-and-spoke centralized
-```
-
-### Memory-First Research Protocol
-
-1. Check CLAUDE.md "What Claude Gets Wrong"
-2. Query episodic memory for similar tasks
-3. Execute parallel research (ALL tools)
-4. Cross-reference and resolve discrepancies
-5. Store learnings in appropriate tier
-
----
-
-*Last Updated: 2026-02-01 | V35 (Research Architecture v4.1 + Semantic Clustering + Voyage Reranker) | 41 Tests Passing*
+- Documentation: https://github.com/ruvnet/claude-flow
+- Issues: https://github.com/ruvnet/claude-flow/issues

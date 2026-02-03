@@ -1,0 +1,248 @@
+{
+  "timestamp": "2026-02-03T01:55:58.197374",
+  "stats": {
+    "sources": 195,
+    "vectors": 195,
+    "findings": 78
+  },
+  "results": [
+    {
+      "topic": "LangGraph StateGraph: nodes, edges, conditional routing patterns",
+      "area": "langgraph",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Graphs | LangChain Reference",
+        "[exa] Nodes and Edges",
+        "[exa-h] ```\n|METHOD|DESCRIPTION|\n`[add\\_node] `|\nAdd a new node to the`StateGraph`.\n|\n`[add\\_edge] `|\nAdd a directed edge from t"
+      ],
+      "latency": 6.2651519775390625
+    },
+    {
+      "topic": "LangGraph checkpointing: SQLite, PostgreSQL, memory persistence",
+      "area": "langgraph",
+      "sources": 5,
+      "vectors": 5,
+      "findings": [
+        "[tavily] LangGraph supports checkpointing with in-memory, SQLite, and PostgreSQL databases for persistence. PostgreSQL offers advanced durability, while SQLite is suitable for local workflows. Memory persisten"
+      ],
+      "latency": 3.9542853832244873
+    },
+    {
+      "topic": "LangGraph human-in-the-loop: interrupt, approve, reject workflows",
+      "area": "langgraph",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Interrupts - Docs by LangChain",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Approve or reject\nOne of the most common uses of interrupts is to pause before a critical action and ask for approval. F"
+      ],
+      "latency": 3.5766024589538574
+    },
+    {
+      "topic": "LangGraph multi-agent: supervisor, hierarchical, collaborative patterns",
+      "area": "langgraph",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] > A Python library for creating hierarchical multi-agent systems using[LangGraph]. Hierarchical systems are a type of[mu"
+      ],
+      "latency": 3.167834997177124
+    },
+    {
+      "topic": "CrewAI agents: roles, goals, backstory, tool assignment",
+      "area": "crewai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Agents - CrewAI",
+        "[exa] CrewAI Documentation",
+        "[exa-h] Detailed guide on creating and managing agents within the CrewAI framework.\nCopy page\n## [\u200b\n] \nOverview of an Agent\nIn t"
+      ],
+      "latency": 3.655219793319702
+    },
+    {
+      "topic": "CrewAI tasks: dependencies, async execution, callbacks",
+      "area": "crewai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CrewAI Documentation",
+        "[exa] Kickoff Crew Asynchronously",
+        "[exa-h] Define sequential, hierarchical, or hybrid processes with guardrails, callbacks, and human-in-the-loop triggers.\n] \n## ["
+      ],
+      "latency": 4.272383689880371
+    },
+    {
+      "topic": "CrewAI crews: sequential, hierarchical, process orchestration",
+      "area": "crewai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Sequential Processes",
+        "[exa] Hierarchical Process",
+        "[exa-h] A comprehensive guide to utilizing the sequential processes for task execution in CrewAI projects.\nCopy page\n## [\u200b\n] \nIn"
+      ],
+      "latency": 3.1057355403900146
+    },
+    {
+      "topic": "CrewAI memory: short-term, long-term, entity memory",
+      "area": "crewai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Memory - CrewAI",
+        "[exa] Memory Configuration and Storage",
+        "[exa-h] Leveraging memory systems in the CrewAI framework to enhance agent capabilities.\nCopy page\n## [\u200b\n] \nOverview\nThe CrewAI "
+      ],
+      "latency": 4.879259824752808
+    },
+    {
+      "topic": "AutoGen agents: AssistantAgent, UserProxyAgent, GroupChat",
+      "area": "autogen",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] agentchat.user_proxy_agent",
+        "[exa] UserProxyAgent",
+        "[exa-h] * `description`*str*- a short description of the agent. This description is used by other agents\n(e.g. the GroupChatMana"
+      ],
+      "latency": 5.863730430603027
+    },
+    {
+      "topic": "AutoGen code execution: Docker, local, safety controls",
+      "area": "autogen",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Redirecting...",
+        "[exa] Code Executors",
+        "[exa-h] Redirecting...\nIf you are not redirected automatically, follow this[link to example.com]."
+      ],
+      "latency": 4.034387111663818
+    },
+    {
+      "topic": "AutoGen conversation patterns: two-agent, group chat, teachable",
+      "area": "autogen",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Conversation Patterns",
+        "[exa] Orchestration Patterns",
+        "[exa-h] In the previous chapter we used two-agent conversation, which can be\nstarted by the`initiate\\_chat`method. Two-agent cha"
+      ],
+      "latency": 3.7121782302856445
+    },
+    {
+      "topic": "AutoGen 0.4: actor model, async agents, new architecture",
+      "area": "autogen",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AutoGen \u2014 AutoGen",
+        "[exa] Migration Guide for v0.2 to v0.4 #",
+        "[exa-h] ```\n*Start here if you are building conversational agents.[Migrating from AutoGen 0.2?].*\n[Get Started] \nCore[![PyPi aut"
+      ],
+      "latency": 4.145516395568848
+    },
+    {
+      "topic": "Semantic Kernel plugins: native functions, semantic functions",
+      "area": "semantic_kernel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is a Plugin?",
+        "[exa] Add native code as a plugin",
+        "[exa-h] There are three primary ways of importing plugins into Semantic Kernel: using[native code], using an[OpenAPI specificati"
+      ],
+      "latency": 5.879643201828003
+    },
+    {
+      "topic": "Semantic Kernel planners: sequential, stepwise, handlebars",
+      "area": "semantic_kernel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Migrating from the Sequential and Stepwise planners to the new Handlebars and Stepwise planner",
+        "[exa] Semantic Kernel Planners: Sequential Planner",
+        "[exa-h] # Migrating from the Sequential and Stepwise planners to the new Handlebars and Stepwise planner\n![Matthew Bolanos] \n[Ma"
+      ],
+      "latency": 4.147694110870361
+    },
+    {
+      "topic": "Semantic Kernel memory: volatile, semantic memory connectors",
+      "area": "semantic_kernel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Kernel Memory",
+        "[exa] Semantic Kernel Components",
+        "[exa-h] Concurrent write to multiple vector DBs|Yes|-|\nLLMs|[Azure OpenAI],[OpenAI],[Anthropic],[Ollama],[LLamaSharp],[LM Studio"
+      ],
+      "latency": 3.3789494037628174
+    },
+    {
+      "topic": "Semantic Kernel agents: multi-model, Azure AI integration",
+      "area": "semantic_kernel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction to Semantic Kernel",
+        "[exa] Introduction to Semantic Kernel",
+        "[exa-h] Summarize this article for me\nSemantic Kernel is a lightweight, open-source development kit that lets you easily build A"
+      ],
+      "latency": 5.801472187042236
+    },
+    {
+      "topic": "DSPy signatures: InputField, OutputField, typed inference",
+      "area": "dspy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Signatures \u00b6",
+        "[exa] dspy.InputField \u00b6",
+        "[exa-h] ```\n**Possible Output:**\n```\n`[] Prediction([] answer='Labrador Retriever'[])`\n```\n## Type Resolution in Signatures[\u00b6] \n"
+      ],
+      "latency": 5.069569826126099
+    },
+    {
+      "topic": "DSPy modules: ChainOfThought, ReAct, ProgramOfThought",
+      "area": "dspy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] dspy.ChainOfThought \u00b6",
+        "[exa] Modules - DSPy",
+        "[exa-h] [36] [37] \n```\n|\n```\n`defforward(self,\\*\\*kwargs):returnself.predict(\\*\\*kwargs)`\n```\n|\n#### ```get\\_lm()`[\u00b6] \nSource co"
+      ],
+      "latency": 3.933342456817627
+    },
+    {
+      "topic": "DSPy optimizers: BootstrapFewShot, MIPROv2, compilation",
+      "area": "dspy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] dspy.MIPROv2 \u00b6",
+        "[exa] Redirecting...",
+        "[exa-h] These steps are broken down in more detail below:"
+      ],
+      "latency": 3.99827241897583
+    },
+    {
+      "topic": "DSPy assertions: LM assertions, constraints, validation",
+      "area": "dspy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] DSPy Assertions:\n\n Computational Constraints for Self-Refining Language Model Pipelines",
+        "[exa] DSPy Assertions: Computational Constraints for Self-Refining Language\n  Model Pipelines",
+        "[exa-h] Chaining language model (LM) calls as composable modules is fueling a new way of programming, but ensuring LMs adhere to"
+      ],
+      "latency": 8.18803882598877
+    }
+  ]
+}

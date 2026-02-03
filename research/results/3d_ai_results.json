@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:58:51.851736",
+  "stats": {
+    "sources": 197,
+    "vectors": 187,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Point-E: OpenAI 3D generation",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Point-E: A system for generating 3D point clouds from complex prompts",
+        "[exa] Point-E Overview",
+        "[exa-h] While recent work on text-conditional 3D object generation has shown promising results, the state-of-the-art methods typ"
+      ],
+      "latency": 9.787420988082886
+    },
+    {
+      "topic": "Shap-E: shape generation",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] ",
+        "[exa-h] [model-card.md] \n|\n|\n|\n[samples.md] \n|\n[samples.md] \n|\n|\n|\n[setup.py] \n|\n[setup.py] \n|\n|\n|\nView all files\n|\n## Repositor"
+      ],
+      "latency": 5.701701641082764
+    },
+    {
+      "topic": "DreamFusion: text-to-3D",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] DreamFusion : Text-to-3D using 2D Diffusion",
+        "[exa] DreamFusion : Text-to-3D using 2D Diffusion",
+        "[exa-h] Recent breakthroughs in text-to-image synthesis have been driven by diffusion models trained on billions of image-text p"
+      ],
+      "latency": 6.4109296798706055
+    },
+    {
+      "topic": "Magic3D: high-quality 3D",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Free AI 3D Model Generator | Text &amp; Image to 3D | Magic3D",
+        "[exa] Free AI 3D Model Generator | Text &amp; Image to 3D | Magic3D",
+        "[exa-h] Free AI 3D Model Generator | Text & Image to 3D | Magic3D"
+      ],
+      "latency": 7.05739426612854
+    },
+    {
+      "topic": "NeRF: neural radiance fields",
+      "area": "nerf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] # Computer Science \\> Computer Vision and Pattern Recognition\n**arXiv:2003.08934**(cs)\n[Submitted on 19 Mar 2020 ([v1]),"
+      ],
+      "latency": 8.641100645065308
+    },
+    {
+      "topic": "Instant-NGP: fast neural graphics",
+      "area": "nerf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] }\n```\nCopyright \u00a92022, NVIDIA Corporation. All rights reserved.\nThis work is made available under the Nvidia Source Code"
+      ],
+      "latency": 9.359431028366089
+    },
+    {
+      "topic": "3D Gaussian Splatting: rendering",
+      "area": "nerf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] EWA splatting - Visualization and Computer Graphics, IEEE Transactions on",
+        "[exa-h] Volume rendering is an important technique in visualizing ac\u0002quired and simulated datasets in scientific and engineering"
+      ],
+      "latency": 10.057707071304321
+    },
+    {
+      "topic": "Nerfstudio: NeRF framework",
+      "area": "nerf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Neural Radiance Fields (NeRFs) \u2013 Werkst\u00e4tten Design Film Kunst",
+        "[exa] Nerfstudio-Tutorial",
+        "[exa-h] NeRF is the new Kid on the Block und l\u00e4sst sich trotz der Verwandschaften zum 3D Scan nur schlecht direkt damit vergleic"
+      ],
+      "latency": 5.430917739868164
+    },
+    {
+      "topic": "Photogrammetry: image to 3D",
+      "area": "reconstruction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tutorial \uf0c1",
+        "[exa] Tutorial \u00b6",
+        "[exa-h] reconstruction, please also refer to the[CVPR 2017 Tutorial on Large-scale 3D\nModeling from Crowdsourced Data] and[[scho"
+      ],
+      "latency": 7.588499069213867
+    },
+    {
+      "topic": "LiDAR: depth sensing",
+      "area": "reconstruction",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Lidar - Wikipedia",
+        "[exa] What is lidar?",
+        "[exa-h] **Lidar**([/\u02c8la\u026ad\u0251\u02d0r/], an acronym of*light detection and ranging*[[1]] or*laser imaging, detection, and ranging*,[[2]])"
+      ],
+      "latency": 9.227447509765625
+    },
+    {
+      "topic": "Monocular depth: single image",
+      "area": "reconstruction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We present a foundation model for zero-shot metric monocular depth estimation. Our model, Depth Pro, synthesizes high-"
+      ],
+      "latency": 9.87832260131836
+    },
+    {
+      "topic": "Multi-view stereo: MVS",
+      "area": "reconstruction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learning-based Multi-View Stereo: A Survey - ADS",
+        "[exa] DeepMVS: Learning Multi-view Stereopsis | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] 3D reconstruction aims to recover the dense 3D structure of a scene. It plays an essential role in various applications "
+      ],
+      "latency": 9.069234132766724
+    },
+    {
+      "topic": "Point cloud: 3D representation",
+      "area": "models",
+      "sources": 8,
+      "vectors": 8,
+      "findings": [
+        "[exa] Point cloud",
+        "[exa] Point cloud - Wikiwand",
+        "[exa-h] A**point cloud**is a[discrete set] of data[points] in[space]. The points may represent a[3D shape] or object. Each point"
+      ],
+      "latency": 8.804574966430664
+    },
+    {
+      "topic": "Mesh generation: polygon AI",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Graphics",
+        "[exa] Meshtron: High-Fidelity, Artist-Like 3D Mesh Generation at Scale - ADS",
+        "[exa-h] discretization of vertex coordinates. Hence, scaling both the maximum face count and vertex coordinate resolution is cru"
+      ],
+      "latency": 8.252181053161621
+    },
+    {
+      "topic": "Voxel AI: volumetric",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] The underlying magic.",
+        "[exa-h] > We present XCube (abbreviated as $\\mathcal{X}^3$), a novel generative model for high-resolution sparse 3D voxel grids "
+      ],
+      "latency": 6.8966755867004395
+    },
+    {
+      "topic": "Implicit surfaces: SDF",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Signed distance function",
+        "[exa] Inigo Quilez :: computer graphics, maths, shaders, fractals, demoscene",
+        "[exa-h] Retrieved from \"[https://en.wikipedia.org/w/index.php?title=Signed\\_distance\\_function&&oldid=1320840428] \"\n[Categories]"
+      ],
+      "latency": 7.3710362911224365
+    },
+    {
+      "topic": "Virtual try-on: fashion 3D",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Virtually try on clothes with a new AI shopping feature",
+        "[exa] Google virtual try on shopping feature adds new studio-quality images",
+        "[exa-h] See clothes on a wide range of models and use new types of filters to better refine your options.\n![lilian headshot] \nLi"
+      ],
+      "latency": 7.719949007034302
+    },
+    {
+      "topic": "Real estate 3D: property tours",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Digital twins for property marketing",
+        "[exa] 3D Tours Increase Calls by 95%",
+        "[exa-h] Create all-in-one marketing assets from a single Matterport digital twin, from 3D experiences to 2D photography, floor p"
+      ],
+      "latency": 6.9631335735321045
+    },
+    {
+      "topic": "Gaming AI: procedural 3D",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We introduce WorldGen, a system that enables the automatic creation of large-scale, interactive 3D worlds directly fro"
+      ],
+      "latency": 9.464047908782959
+    },
+    {
+      "topic": "Medical 3D: organ reconstruction",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Survey of methods and principles in three-dimensional reconstruction from two-dimensional medical images",
+        "[exa] XCAT-3: A Comprehensive Library of Personalized Digital Twins Derived from CT Scans",
+        "[exa-h] Three-dimensional (3D) reconstruction of human organs has gained attention in recent years due to advances in the Intern"
+      ],
+      "latency": 8.762818813323975
+    }
+  ]
+}

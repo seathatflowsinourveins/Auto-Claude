@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:25:50.818328",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "AI chat interfaces: conversation UX patterns",
+      "area": "interface",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The 6 Types of Conversations with Generative AI",
+        "[exa] Conversational UI",
+        "[exa-h] Summary:When interacting with generative-AI bots, users engage in six types of conversations, depending on their skill l"
+      ],
+      "latency": 8.255072355270386
+    },
+    {
+      "topic": "AI copilot design: assistant integration patterns",
+      "area": "interface",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Choose a design pattern for your agentic AI system \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Choose a design pattern for your agentic AI system \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] This document provides guidance to help you choose a design pattern for your agentic AI system.*Agent design patterns*ar"
+      ],
+      "latency": 9.46074628829956
+    },
+    {
+      "topic": "Multimodal interfaces: voice, vision, text",
+      "area": "interface",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multimodal interaction: A review",
+        "[exa] The Handbook of Multimodal-Multisensor Interfaces: Language Processing, Software, Commercialization, and Emerging Directions | ACM Books | ACM Digital Library",
+        "[exa-h] People naturally interact with the world multimodally, through both parallel and sequential use of multi\u0002ple perceptual "
+      ],
+      "latency": 9.185943603515625
+    },
+    {
+      "topic": "AI transparency: showing AI reasoning, confidence",
+      "area": "interface",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reasoning models",
+        "[exa] Teaching models to express their uncertainty in words",
+        "[exa-h] **Reasoning models**like[GPT-5] are LLMs trained with reinforcement learning to perform reasoning. Reasoning models[thin"
+      ],
+      "latency": 7.508743524551392
+    },
+    {
+      "topic": "Prompt UX: helping users write better prompts",
+      "area": "interaction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prompt engineering",
+        "[exa] What is a prompt and why does it matter?",
+        "[exa-h] ## Prompt engineering\n**Prompt engineering**is the process of writing effective instructions for a model, such that it c"
+      ],
+      "latency": 11.516955137252808
+    },
+    {
+      "topic": "AI feedback loops: iterative refinement",
+      "area": "interaction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Like humans, large language models (LLMs) do not always generate the best output on their first try. Motivated by how "
+      ],
+      "latency": 7.291874647140503
+    },
+    {
+      "topic": "Error handling: graceful AI failure states",
+      "area": "interaction",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Building Reliable AI Agents: Error Handling and Fallback Mechanisms",
+        "[exa] ",
+        "[exa-h] * Implement human escalation paths\n* Test failure scenarios regularly\n* Log comprehensively for debugging\nReliable AI ag"
+      ],
+      "latency": 7.669226884841919
+    },
+    {
+      "topic": "AI suggestions: proactive vs reactive AI",
+      "area": "interaction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Proactive AI: Why Agents Should Initiate, Not Just Respond",
+        "[exa-h] user prompts. However, this prompt dependency \nlimits efficiency and autonomy. Proactive Gen AI \nsystems, enhanced by AI"
+      ],
+      "latency": 8.069409847259521
+    },
+    {
+      "topic": "AI trust: building user confidence",
+      "area": "trust",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Ethics Guidelines for Trustworthy AI",
+        "[exa] Trust in AI: progress, challenges, and future directions",
+        "[exa-h] Based on fundamental rights and ethical principles, the Guidelines listseven key requirementsthat AI systems should meet"
+      ],
+      "latency": 9.219672918319702
+    },
+    {
+      "topic": "User control: AI override, correction mechanisms",
+      "area": "trust",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Definitions",
+        "[exa] Definitions",
+        "[exa-h] ## Instructions and levels of authority"
+      ],
+      "latency": 11.71810007095337
+    },
+    {
+      "topic": "AI explanations: making AI understandable",
+      "area": "trust",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] deliver accompanying evidence or reasons for outcomes and processes; provide explana\u0002tions that are understandable to in"
+      ],
+      "latency": 7.68004035949707
+    },
+    {
+      "topic": "Consent patterns: AI data usage, permissions",
+      "area": "trust",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Towards Automating Data Access Permissions in AI Agents",
+        "[exa] Understanding Privacy Norms Around LLM-Based Chatbots: \n A Contextual Integrity Perspective",
+        "[exa-h] For example, in the context of the flight booking example, users may prefer providing the origin flight city manually, i"
+      ],
+      "latency": 9.6231210231781
+    },
+    {
+      "topic": "AI accessibility: inclusive AI design",
+      "area": "accessibility",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Accessible and Equitable Artificial Intelligence Systems",
+        "[exa-h] AI systems and the processes, resources, services and tools used to plan, \ncreate, implement, maintain and monitor them "
+      ],
+      "latency": 7.611879587173462
+    },
+    {
+      "topic": "Voice AI accessibility: speech interfaces",
+      "area": "accessibility",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Natural Language Interface Accessibility User Requirements",
+        "[exa] Web Speech API",
+        "[exa-h] ]]\n## 2.Voice user interfaces\n[]"
+      ],
+      "latency": 9.158926010131836
+    },
+    {
+      "topic": "AI for disabilities: assistive technology",
+      "area": "accessibility",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] AI technology to support adaptive functioning in neurodevelopmental conditions in everyday environments: a systematic review",
+        "[exa-h] inclusivity and accessibility for disabled individuals by addressing significant challenges \nin mobility, communication,"
+      ],
+      "latency": 8.523849487304688
+    },
+    {
+      "topic": "Multilingual AI: cross-language UX",
+      "area": "accessibility",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Three Directions for the Design of Human-Centered Machine Translation",
+        "[exa-h] > Abstract:Large language models (LLMs) are typically multilingual due to pretraining on diverse multilingual corpora. B"
+      ],
+      "latency": 6.938556432723999
+    },
+    {
+      "topic": "AI user research: studying AI interactions",
+      "area": "research",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Taxonomy of User Needs and Actions",
+        "[exa] ",
+        "[exa-h] The growing ubiquity of conversational AI highlights the need for frameworks that capture not only users\u2019 instrumental g"
+      ],
+      "latency": 8.356212377548218
+    },
+    {
+      "topic": "AI usability testing: evaluating AI products",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Testing AI with Real Design Scenarios: Evaluation Methodology and Prompts",
+        "[exa] How to test AI: A practical guide for evaluating AI user experience and product design",
+        "[exa-h] * [Share on Twitter] \nSummary:This article describes the prompts and methods that we used to evaluate designs produced w"
+      ],
+      "latency": 10.893632173538208
+    },
+    {
+      "topic": "AI metrics: measuring AI UX success",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Toward an evaluation science for generative AI systems",
+        "[exa] ",
+        "[exa-h] lessons: evaluation metrics must be applicable to real-world performance, metrics must be iteratively refined, and evalu"
+      ],
+      "latency": 8.722575426101685
+    },
+    {
+      "topic": "Human-AI collaboration: team dynamics",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Review AI-teaming: Redefining collaboration in the digital era",
+        "[exa] Human-generative AI collaboration enhances task performance but undermines human\u2019s intrinsic motivation",
+        "[exa-h] Integrating artificial intelligence (AI) into human teams, forming human-AI teams (HATs), is a rapidly evolving field. T"
+      ],
+      "latency": 8.75807523727417
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:29:49.360410",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 89
+  },
+  "results": [
+    {
+      "topic": "Uncertainty sampling: least confident, margin",
+      "area": "strategies",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computation and Language",
+        "[exa] A sequential algorithm for training text classifiers",
+        "[exa-h] categorization task. This method, which we call uncertainty sampling, reduced by as much as 500-fold the amount of train"
+      ],
+      "latency": 7.090264797210693
+    },
+    {
+      "topic": "Query by committee: disagreement sampling",
+      "area": "strategies",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Query by committee | Proceedings of the fifth annual workshop on Computational learning theory",
+        "[exa] Query by Committee Made Real",
+        "[exa-h] We propose an algorithm called _query by commitee_, in which a committee of students is trained on the same data set. Th"
+      ],
+      "latency": 11.295223236083984
+    },
+    {
+      "topic": "Expected model change: gradient information",
+      "area": "strategies",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Advanced automatic differentiation \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] > Training data attribution (TDA) is concerned with understanding model behavior in terms of the training data. This pap"
+      ],
+      "latency": 7.547444820404053
+    },
+    {
+      "topic": "Diversity sampling: representative selection",
+      "area": "strategies",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A toolkit for capturing a representative and equitable sample in health research",
+        "[exa] Statistical Quality Standard A3: Developing and Implementing a Sample Design",
+        "[exa-h] REP-EQUITY toolkit describes seven steps for investigators to consider in facilitating representative and equitable samp"
+      ],
+      "latency": 7.4395225048065186
+    },
+    {
+      "topic": "Deep active learning: neural network selection",
+      "area": "deep",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] applications. In this paper, by exploring the connection between the generalization performance and the training dynamic"
+      ],
+      "latency": 7.487618923187256
+    },
+    {
+      "topic": "Bayesian active learning: uncertainty estimation",
+      "area": "deep",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deep Bayesian Active Learning with Image Data",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] paper we combine recent advances in Bayesian\ndeep learning into the active learning framework\nin a practical way. We dev"
+      ],
+      "latency": 10.216342449188232
+    },
+    {
+      "topic": "Core-set selection: geometry-based",
+      "area": "deep",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Abstract:One-shot coreset selection aims to select a representative subset of the training data, given a pruning rate,"
+      ],
+      "latency": 7.365840673446655
+    },
+    {
+      "topic": "Learning loss prediction: meta-learning",
+      "area": "deep",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] in virtual learning environments, which provide abundant information about their behaviour during the course. This work\n"
+      ],
+      "latency": 9.784293174743652
+    },
+    {
+      "topic": "Active learning NLP: text annotation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] natural language processing (NLP). In addi\u0002tion to a fine-grained categorization of query\nstrategies, we also investigat"
+      ],
+      "latency": 7.6157543659210205
+    },
+    {
+      "topic": "Active learning CV: image labeling",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Labeled data are critical to modern machine learning applications, but obtaining labels can be expensive. To mitigate "
+      ],
+      "latency": 8.328124523162842
+    },
+    {
+      "topic": "Medical active learning: expert annotation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Active learning reduces annotation time for clinical concept extraction",
+        "[exa] Survey paper A survey on active learning and human-in-the-loop deep learning for medical image analysis",
+        "[exa-h] ### J. Am. Med. Inform. Assoc.\n(2013)\n* M.Kholghi*et al.*### Active learning: a step towards automating medical concept "
+      ],
+      "latency": 5.2257561683654785
+    },
+    {
+      "topic": "Active learning production: labeling pipelines",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automate data labeling",
+        "[exa] Set up active learning with Label Studio",
+        "[exa-h] with your own model] \n# Automate data labeling\nIf you choose, Amazon SageMaker Ground Truth can use active learning to a"
+      ],
+      "latency": 4.072466850280762
+    },
+    {
+      "topic": "Batch active learning: selecting multiple samples",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Batch Active Learning at Scale",
+        "[exa-h] > Abstract:The ability to train complex and highly effective models often requires an abundance of training data, which "
+      ],
+      "latency": 5.854103088378906
+    },
+    {
+      "topic": "Multi-task active learning: shared selection",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Multitask learning is a powerful framework that enables one to simultaneously learn multiple related tasks by sharing "
+      ],
+      "latency": 9.287222385406494
+    },
+    {
+      "topic": "Active learning stopping: when to stop",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] used for training. This technique is promis\u0002ing, particularly when the cost of data acqui\u0002sition and labeling is high. I"
+      ],
+      "latency": 5.893418550491333
+    },
+    {
+      "topic": "Human-in-the-loop: annotation interfaces",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Fluid Annotation: a human-machine collaboration interface for full image annotation",
+        "[exa] Label Studio \u2014 Data Labeling &amp; Annotation Tool Interactive Demo",
+        "[exa-h] We introduce Fluid Annotation, an intuitive human-machine collaboration interface for annotating the class label and out"
+      ],
+      "latency": 4.124910354614258
+    },
+    {
+      "topic": "Prodigy: annotation tool, active learning",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prodigy \u00b7 Prodigy \u00b7 An annotation tool for AI, Machine Learning &amp; NLP",
+        "[exa] Prodigy \u2013 everything you need to know",
+        "[exa-h] Prodigy brings together state-of-the-art insights from machine learning and user experience. With its continuous active "
+      ],
+      "latency": 4.423684120178223
+    },
+    {
+      "topic": "Label Studio: ML annotation platform",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Open Source Data Labeling  Platform",
+        "[exa] Label Studio overview",
+        "[exa-h] heartexlabs/label-studio:latest````# Now visit http://localhost:8080/`\n```\n# Label every data type.\n* [GenAI] \n* [Images"
+      ],
+      "latency": 5.068548917770386
+    },
+    {
+      "topic": "ModAL: modular active learning Python",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] modAL: A modular active learning framework for Python3 \u00b6",
+        "[exa] modAL: A modular active learning framework for Python3 \u00b6",
+        "[exa-h] modAL is an active learning framework for Python3, designed with*modularity, flexibility*and*extensibility*in mind. Buil"
+      ],
+      "latency": 4.934177398681641
+    },
+    {
+      "topic": "ALiPy: active learning toolbox",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] alipy 1.2.5",
+        "[exa-h] ALiPy provides a module based implementation of active learning framework, which allows users to conveniently evaluate, "
+      ],
+      "latency": 7.52603006362915
+    }
+  ]
+}

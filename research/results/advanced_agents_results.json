@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:09:42.527251",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Hierarchical task planning: goal decomposition, subtask ordering",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Hierarchical task network",
+        "[exa-h] algorithms (Yang 1990; Kambhsmpati et al. 1992).\nFigure 2 presents the essence of these algorithms. As\nshown in this fig"
+      ],
+      "latency": 10.518443584442139
+    },
+    {
+      "topic": "ReWOO: reasoning without observation for efficient planning",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] What is ReWOO?",
+        "[exa-h] > Abstract:Embodied planning requires agents to make coherent multi-step decisions based on dynamic visual observations "
+      ],
+      "latency": 8.077051401138306
+    },
+    {
+      "topic": "Plan-and-solve: explicit planning before execution",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] adaptive selection further boosts performance\non complex planning and reasoning problems.\n1 Introduction\nIn many real-wo"
+      ],
+      "latency": 7.027794122695923
+    },
+    {
+      "topic": "LLM Compiler: parallel function calling with DAG planning",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] An LLM Compiler for Parallel Function Calling - ADS",
+        "[exa-h] classical compilers, LLMCompiler enables parallel function calling with three components: (i) a Function Calling Planner"
+      ],
+      "latency": 9.931294679641724
+    },
+    {
+      "topic": "Chain-of-thought prompting: step-by-step reasoning elicitation",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] 2021). In this paper, we combine the strengths of these two ideas in a way that avoids their limitations.\nSpecifically, "
+      ],
+      "latency": 11.039808511734009
+    },
+    {
+      "topic": "Self-consistency: multiple reasoning paths with majority voting",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+        "[exa-h] she has 9 eggs * $2 = $18.\u201d constitutes ri, while the answer 18 from the last sentence, \u201cThe answer\nis $18\u201d, is parsed a"
+      ],
+      "latency": 9.361248254776001
+    },
+    {
+      "topic": "Tree of thoughts: branching exploration with backtracking",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tree of Thoughts Framework",
+        "[exa] Tree of Thoughts: A New Way to Unlock Problem-Solving in Large Language Models",
+        "[exa-h] * It employs explicit multi-branch exploration, evaluation, and backtracking to improve performance in puzzles, creative"
+      ],
+      "latency": 8.318892002105713
+    },
+    {
+      "topic": "Least-to-most prompting: problem decomposition",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Least-to-Most Prompting Enables Complex Reasoning in Large Language Models - ADS",
+        "[exa] ",
+        "[exa-h] The key idea in this strategy is to break down a complex problem into a series of simpler subproblems and then solve the"
+      ],
+      "latency": 7.719447612762451
+    },
+    {
+      "topic": "OpenAI function calling: schema definition, parallel calls",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling",
+        "[exa] Page not found | OpenAI API",
+        "[exa-h] **Function calling**(also known as**tool calling**) provides a powerful and flexible way for OpenAI models to interface "
+      ],
+      "latency": 8.386629104614258
+    },
+    {
+      "topic": "Anthropic tool use: computer use, file operations",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer use tool",
+        "[exa] Tool use with Claude",
+        "[exa-h] [Features overview] [Using the Messages API] [Context windows] [Prompting best practices] \nCapabilities\n[Prompt caching]"
+      ],
+      "latency": 9.92020583152771
+    },
+    {
+      "topic": "Tool creation: dynamic tool generation, tool learning",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] By fundamentally transforming tool retrieval into a generative process, ToolGen paves the way for more versatile, effici"
+      ],
+      "latency": 7.370298385620117
+    },
+    {
+      "topic": "MCP servers: standardized tool integration protocol",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tools - Model Context Protocol",
+        "[exa] Tools \u2013 MCP \u4e2d\u6587\u7ad9\uff08Model Context Protocol \u4e2d\u6587\uff09",
+        "[exa-h] * [Data Types] \n* [Tool] \n* [Tool Result] \n* [Text Content] \n* [Image Content] \n* [Embedded Resources] \n* [Error Handlin"
+      ],
+      "latency": 8.826865911483765
+    },
+    {
+      "topic": "Conversation summarization: rolling summary, key points extraction",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Abstractive Text Summarization: State of the Art, Challenges, and Improvements - ADS",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] Specifically focusing on the landscape of abstractive text summarization, as opposed to extractive techniques, this surv"
+      ],
+      "latency": 8.841092109680176
+    },
+    {
+      "topic": "Entity memory: tracking entities across conversation",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] In the context tracking task the model processes con\u0002versations incrementally, one turn at a time. The model\nkeeps track"
+      ],
+      "latency": 10.463607549667358
+    },
+    {
+      "topic": "Reflection memory: learning from past interactions",
+      "area": "memory",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > We present a theoretical study of continual and experiential learning in large language model agents that combine epis"
+      ],
+      "latency": 8.853335618972778
+    },
+    {
+      "topic": "Shared memory: multi-agent knowledge sharing",
+      "area": "memory",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Long-term multi-agent systems inevitably generate vast amounts of trajectories and historical interactions, which make"
+      ],
+      "latency": 8.683361053466797
+    },
+    {
+      "topic": "Supervisor patterns: routing to specialized agents",
+      "area": "orchestration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Orchestrator Pattern: Routing Conversations to Specialized AI Agents",
+        "[exa] Agent Routing Pattern",
+        "[exa-h] The solution isn't a smarter single agent\u2014it's specialized agents with intelligent orchestration. Each agent does one th"
+      ],
+      "latency": 8.3159339427948
+    },
+    {
+      "topic": "Multi-agent debate: adversarial collaboration",
+      "area": "orchestration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] present a complementary approach to improve language responses where multiple language model instances propose and debat"
+      ],
+      "latency": 9.023544549942017
+    },
+    {
+      "topic": "Agent handoffs: context transfer, state preservation",
+      "area": "orchestration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Microsoft Agent Framework Workflows Orchestrations - Handoff",
+        "[exa] Handoffs - OpenAI Agents SDK",
+        "[exa-h] Handoff orchestration allows agents to transfer control to one another based on the context or user request. Each agent "
+      ],
+      "latency": 10.811547994613647
+    },
+    {
+      "topic": "Human-in-the-loop: approval workflows, interrupts",
+      "area": "orchestration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Human in the loop",
+        "[exa] Human in the Loop: Pause Zaps for human review and approval",
+        "[exa-h] * If approval / rejection is missing it will trigger a tool approval request.\n* The agent will gather all tool approval "
+      ],
+      "latency": 9.553375959396362
+    }
+  ]
+}

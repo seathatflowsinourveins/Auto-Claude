@@ -114,7 +114,7 @@ from typing import (
     Callable, Iterator, Generator, AsyncIterator
 )
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from enum import Enum
 from contextlib import contextmanager
@@ -177,21 +177,11 @@ def _load_env_file():
 # Load environment immediately
 _load_env_file()
 
-# Add Firecrawl Python SDK to path
-FIRECRAWL_SDK = SDK_ROOT / "firecrawl-sdk" / "apps" / "python-sdk"
-if FIRECRAWL_SDK.exists():
-    sys.path.insert(0, str(FIRECRAWL_SDK))
-
-# Add Exa Python SDK to path
-EXA_SDK = SDK_ROOT / "exa" / "exa-py"
-if EXA_SDK.exists():
-    sys.path.insert(0, str(EXA_SDK))
-
-# Import SDKs
+# Import SDKs (pip-installed, no local path needed)
 try:
     from firecrawl import Firecrawl, AsyncFirecrawl
     FIRECRAWL_AVAILABLE = True
-    logger.info("[OK] Firecrawl SDK loaded from local path")
+    logger.info("[OK] Firecrawl SDK loaded (pip-installed)")
 except ImportError as e:
     FIRECRAWL_AVAILABLE = False
     logger.warning(f"Firecrawl SDK not available: {e}")
@@ -302,7 +292,7 @@ class ResearchResult:
     answer: Optional[str] = None
     summary: Optional[str] = None
     metadata: Dict[str, Any] = field(default_factory=dict)
-    timestamp: str = field(default_factory=lambda: datetime.utcnow().isoformat())
+    timestamp: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
     success: bool = True
     errors: List[str] = field(default_factory=list)
     credits_used: int = 0

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:29:51.208899",
+  "stats": {
+    "sources": 199,
+    "vectors": 189,
+    "findings": 91
+  },
+  "results": [
+    {
+      "topic": "MAML: model-agnostic meta-learning",
+      "area": "algorithms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks",
+        "[exa-h] > We propose an algorithm for meta-learning that is model-agnostic, in the sense that it is compatible with any model tr"
+      ],
+      "latency": 7.816866159439087
+    },
+    {
+      "topic": "Prototypical networks: metric learning",
+      "area": "algorithms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Prototypical Networks for Few-shot Learning",
+        "[exa-h] > We propose prototypical networks for the problem of few-shot classification, where a classifier must generalize to new"
+      ],
+      "latency": 8.005855083465576
+    },
+    {
+      "topic": "Matching networks: few-shot classification",
+      "area": "algorithms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Learning from a few examples remains a key challenge in machine learning.\nDespite recent advances in important domains s"
+      ],
+      "latency": 10.267204523086548
+    },
+    {
+      "topic": "Reptile: simplified meta-learning",
+      "area": "algorithms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Reptile: A scalable meta-learning algorithm",
+        "[exa-h] previously unseen task sampled from this distribution. We present a remarkably simple met\u0002alearning algorithm called Rep"
+      ],
+      "latency": 8.286428213119507
+    },
+    {
+      "topic": "Few-shot classification: N-way K-shot",
+      "area": "few-shot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] Improved Few-Shot Visual Classification | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] > This paper introduces a probabilistic framework for k-shot image classification. The goal is to generalise from an ini"
+      ],
+      "latency": 7.55135178565979
+    },
+    {
+      "topic": "Few-shot object detection: limited examples",
+      "area": "few-shot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Frustratingly Simple Few-Shot Object Detection",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Detecting rare objects from a few examples is an emerging problem. Prior works show meta-learning is a promising approac"
+      ],
+      "latency": 7.900763034820557
+    },
+    {
+      "topic": "Few-shot NLP: text classification, NER",
+      "area": "few-shot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Few-Shot Named Entity Recognition: An Empirical Baseline Study - ACL Anthology",
+        "[exa] ",
+        "[exa-h] <abstract>This paper presents an empirical study to efficiently build named entity recognition (NER) systems when a smal"
+      ],
+      "latency": 7.1470558643341064
+    },
+    {
+      "topic": "Zero-shot learning: no training examples",
+      "area": "few-shot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Zero-shot learning",
+        "[exa] A Survey of Zero-Shot Learning",
+        "[exa-h] Unlike standard[generalization] in machine learning, where classifiers are expected to correctly classify new samples to"
+      ],
+      "latency": 6.475959062576294
+    },
+    {
+      "topic": "Optimization-based meta: learning optimizer",
+      "area": "approaches",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Neural and Evolutionary Computing",
+        "[exa-h] potential solution to this open challenge, by meta-training an L2O optimizer that can perform fast test-time self-adapta"
+      ],
+      "latency": 8.686731576919556
+    },
+    {
+      "topic": "Metric-based meta: embedding comparison",
+      "area": "approaches",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Benchmarking Meta-embeddings: What Works and What Does Not - ACL Anthology",
+        "[exa-h] introduce HUME: Human Evaluation Framework for Text Embeddings. While frameworks like MTEB provide broad model evaluatio"
+      ],
+      "latency": 5.7108166217803955
+    },
+    {
+      "topic": "Memory-based meta: external memory",
+      "area": "approaches",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Memory Layers at Scale",
+        "[exa-h] > Memory Mosaics [Zhang et al., 2025], networks of associative memories, have demonstrated appealing compositional and i"
+      ],
+      "latency": 5.485937595367432
+    },
+    {
+      "topic": "Black-box meta: recurrent adaptation",
+      "area": "approaches",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Neural and Evolutionary Computing",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Abstract:Optimizing functions without access to gradients is the remit of black-box methods such as evolution strategi"
+      ],
+      "latency": 6.520156383514404
+    },
+    {
+      "topic": "Meta-RL: reinforcement learning",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > While deep reinforcement learning (RL) has fueled multiple high-profile successes in machine learning, it is held back"
+      ],
+      "latency": 4.816120386123657
+    },
+    {
+      "topic": "Neural architecture search: AutoML",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Neural Architecture Search with Reinforcement Learning",
+        "[exa-h] > Neural networks are powerful and flexible models that work well for many difficult learning tasks in image, speech and"
+      ],
+      "latency": 4.553272485733032
+    },
+    {
+      "topic": "Hyperparameter optimization: meta-tuning",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] > Abstract:Meta-learning hyperparameter optimization (HPO) algorithms from prior experiments is a promising approach to "
+      ],
+      "latency": 3.610731840133667
+    },
+    {
+      "topic": "Drug discovery: molecular few-shot",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Low Data Drug Discovery with One-Shot Learning",
+        "[exa] Quantitative Biology > Biomolecules",
+        "[exa-h] Recent advances in machine learning\nhave made significant contributions to drug discovery. Deep neural\nnetworks in parti"
+      ],
+      "latency": 8.1488618850708
+    },
+    {
+      "topic": "Learn2Learn: PyTorch meta-learning",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] learn2learn",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] learn2learn provides low-level utilities and unified interface to create new algorithms and domains, together with high-"
+      ],
+      "latency": 5.939620018005371
+    },
+    {
+      "topic": "Meta-Dataset: large-scale benchmark",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Few-shot classification refers to learning a classifier for new classes given\nonly a few examples. While a plethora of m"
+      ],
+      "latency": 5.057248830795288
+    },
+    {
+      "topic": "In-context learning: LLM meta-learning",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Meta-in-context learning in large language models",
+        "[exa-h] > The ability of language models to learn a task from a few examples in context has generated substantial interest. Here"
+      ],
+      "latency": 10.942883014678955
+    },
+    {
+      "topic": "Task-agnostic meta: general adaptation",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transforming task representations to perform novel tasks",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] this, we propose a general computational framework for adapting to novel tasks based on their relationship to prior task"
+      ],
+      "latency": 4.19318151473999
+    }
+  ]
+}

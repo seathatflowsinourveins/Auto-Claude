@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:55:30.737315",
+  "stats": {
+    "sources": 199,
+    "vectors": 169,
+    "findings": 81
+  },
+  "results": [
+    {
+      "topic": "Server-Sent Events (SSE) for LLM streaming: implementation patterns",
+      "area": "protocols",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Best Choices for Streaming Responses in LLM Applications: A Front-End Perspective",
+        "[exa] Powerful Guide to  Streaming LLM responses in Next.js  with Server\u2011Sent Events (No Timeouts)",
+        "[exa-h] **TL;DR:**For most LLM apps,**SSE**is the simplest and most reliable way to stream tokens from your server to the browse"
+      ],
+      "latency": 4.298263072967529
+    },
+    {
+      "topic": "WebSocket for bidirectional LLM communication: connection management",
+      "area": "protocols",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Realtime API with WebSocket",
+        "[exa] Live API - WebSockets API reference",
+        "[exa-h] [WebSockets] are a broadly supported API for realtime data transfer, and a great choice for connecting to the OpenAI Rea"
+      ],
+      "latency": 3.8003175258636475
+    },
+    {
+      "topic": "HTTP/2 streaming for LLM: multiplexing, server push",
+      "area": "protocols",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] RFC 7540: Hypertext Transfer Protocol Version 2 (HTTP/2)",
+        "[exa-h] in support of other HTTP/2 features.\nMultiplexing of requests is achieved by having each HTTP request/response exchange "
+      ],
+      "latency": 4.662904739379883
+    },
+    {
+      "topic": "gRPC streaming for model serving: unary, server, client, bidirectional",
+      "area": "protocols",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Core concepts, architecture and lifecycle",
+        "[exa] gRPC Basics",
+        "[exa-h] A server-streaming RPC is similar to a unary RPC, except that the server returns\na stream of messages in response to a c"
+      ],
+      "latency": 4.515212297439575
+    },
+    {
+      "topic": "Token-by-token streaming: buffer management, backpressure",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Backpressuring in Streams",
+        "[exa] Buffers and working with rate",
+        "[exa-h] There is a general problem that occurs during data handling called[`backpressure`] and describes a buildup of data behin"
+      ],
+      "latency": 4.620807886123657
+    },
+    {
+      "topic": "Streaming with tool calls: interleaved generation and execution",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] An LLM-Tool Compiler for Fused Parallel Function Calling",
+        "[exa-h] paradigm shift that integrates tool knowledge directly into the LLM's parameters by representing each tool as a unique t"
+      ],
+      "latency": 4.590967655181885
+    },
+    {
+      "topic": "Partial JSON streaming: incremental parsing, schema validation",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Using Python how do I validate JSON against a JSON schema in a streaming fashion, e.g., not loading the whole object in memory?",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] You're on the right track using`ijson`for streaming, but the issue is that`pydantic`expects the entire object at once, w"
+      ],
+      "latency": 7.3162055015563965
+    },
+    {
+      "topic": "Multi-model streaming: parallel generation, result merging",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Autoregressive Large Language Models (AR-LLMs) frequently exhibit implicit parallelism in sequential generation. Inspi"
+      ],
+      "latency": 4.079225540161133
+    },
+    {
+      "topic": "Kafka Streams for LLM events: windowing, aggregation",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Windowed Aggregations",
+        "[exa] Core Concepts",
+        "[exa-h] aggregation."
+      ],
+      "latency": 5.4648847579956055
+    },
+    {
+      "topic": "Apache Flink for real-time ML: stateful processing",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stateful Stream Processing\n   #",
+        "[exa] Stateful Stream Processing\n   #",
+        "[exa-h] * When aggregating events per minute/hour/day, the state holds the pending\naggregates.\n* When training a machine learnin"
+      ],
+      "latency": 6.33599591255188
+    },
+    {
+      "topic": "Redis Streams for agent events: consumer groups, acknowledgment",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] XREADGROUP",
+        "[exa] Advanced Streams: Parallel Processing Checkins with Consumer Groups | Redis",
+        "[exa-h] such semantics, consumer groups require explicit acknowledgment of the messages successfully processed by the consumer, "
+      ],
+      "latency": 4.810457706451416
+    },
+    {
+      "topic": "AWS Kinesis for LLM telemetry: sharding, retention",
+      "area": "pipelines",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quotas and limits",
+        "[exa] Create and manage Kinesis data streams",
+        "[exa-h] The following section describes the limits for the KDS data plane APIs. KDS data\nplane APIs enable you to use your data "
+      ],
+      "latency": 4.000394821166992
+    },
+    {
+      "topic": "Real-time chat with LLMs: typing indicators, message queuing",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Typing indicator",
+        "[exa] Typing indicators \uf0c1",
+        "[exa-h] * Active participation - within group chats or collaborative environments, a user can measure others' engagement levels "
+      ],
+      "latency": 11.616299152374268
+    },
+    {
+      "topic": "Live transcription with LLMs: speech-to-text streaming",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Realtime transcription",
+        "[exa] Realtime API",
+        "[exa-h] You can use the Realtime API for transcription-only use cases, either with input from a microphone or from a file. For e"
+      ],
+      "latency": 3.2404398918151855
+    },
+    {
+      "topic": "Real-time code completion: latency optimization, caching",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Software Engineering",
+        "[exa] Github: Building a Low-Latency Global Code Completion Service - ZenML LLMOps Database",
+        "[exa-h] > In recent years, several industrial solutions for the problem of multi-token code completion appeared, each making a g"
+      ],
+      "latency": 4.074121713638306
+    },
+    {
+      "topic": "Live document collaboration with AI: conflict resolution",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cursor Documentation",
+        "[exa] Conflict Resolution in Real-Time Collaborative Editing",
+        "[exa-h] # Cursor Documentation\nCursor is an AI editor and coding agent. Describe what you want to build or change in natural lan"
+      ],
+      "latency": 4.964022397994995
+    },
+    {
+      "topic": "Streaming latency optimization: time-to-first-token (TTFT)",
+      "area": "performance",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] SVTA5021: Best Practices for Reducing Live Streaming Latency",
+        "[exa] SVTA1058: An Exploration into Measuring Streaming Latency",
+        "[exa-h] Over-the-Top (OTT) video streaming is accelerating towards a tipping point where broadcasters are simulcasting their con"
+      ],
+      "latency": 7.225568771362305
+    },
+    {
+      "topic": "Backpressure handling in LLM streams: flow control",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Flow Control",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Explains what flow control is and how you can manually control it.\n### Overview\nFlow control is a mechanism to ensure th"
+      ],
+      "latency": 3.9552786350250244
+    },
+    {
+      "topic": "Connection pooling for streaming: keep-alive, reconnection",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Managing connections",
+        "[exa] Keepalive | gRPC",
+        "[exa-h] #### Setting the maximum lifetime of connections\nUsing[`DB.SetConnMaxLifetime`] sets the maximum length of time a connec"
+      ],
+      "latency": 11.175762176513672
+    },
+    {
+      "topic": "Edge streaming: CDN integration, regional endpoints",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Lightning Fast Content Delivery  Everywhere.",
+        "[exa] Introduction",
+        "[exa-h] #### Get Your Content as Close to Your Customer as Possible\nThe world's only dedicated edge computing network, spanning "
+      ],
+      "latency": 4.87513542175293
+    }
+  ]
+}

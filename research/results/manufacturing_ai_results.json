@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:12:58.960356",
+  "stats": {
+    "sources": 200,
+    "vectors": 190,
+    "findings": 95
+  },
+  "results": [
+    {
+      "topic": "Visual inspection AI: defect detection, classification",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview of Model Garden \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] ",
+        "[exa-h] zero-shot-object-detection\nmask-generation\nsentence embeddings\nfeature extraction\nfill mask"
+      ],
+      "latency": 7.859948635101318
+    },
+    {
+      "topic": "Statistical process control: AI-enhanced SPC",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Review of Artificial Intelligence Impacting Statistical Process Monitoring and Future Directions",
+        "[exa] Prediction Control Charts: A New and Flexible Artificial Intelligence-Based Statistical Process Control Approach",
+        "[exa-h] > Abstract:It has been 100 years since statistical process control (SPC) or statistical process monitoring (SPM) was fir"
+      ],
+      "latency": 7.046657085418701
+    },
+    {
+      "topic": "Quality prediction: preventing defects proactively",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Predictive quality in manufacturing",
+        "[exa] ",
+        "[exa-h] Introduction\nDefects are costly\u2014but they don\u2019t have to be surprises.\u00a0Predictive quality turns the data you already colle"
+      ],
+      "latency": 7.167428731918335
+    },
+    {
+      "topic": "Root cause analysis: AI for quality issues",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Root Cause Analysis in Industrial Manufacturing: A Scoping Review of Current Research, Challenges and the Promises of AI-Driven Approaches",
+        "[exa] ",
+        "[exa-h] Open AccessReview\n# Root Cause Analysis in Industrial Manufacturing: A Scoping Review of Current Research, Challenges an"
+      ],
+      "latency": 7.842377185821533
+    },
+    {
+      "topic": "Predictive maintenance: equipment failure prediction",
+      "area": "maintenance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Predictive maintenance",
+        "[exa] Predictive maintenance: A complete guide for data and analytics teams",
+        "[exa-h] **Predictive maintenance**(**PdM**)[[1]] techniques are designed to help determine the condition of in-service equipment"
+      ],
+      "latency": 7.219259262084961
+    },
+    {
+      "topic": "Vibration analysis: machinery health monitoring",
+      "area": "maintenance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Review article A review of vibration analysis and its applications",
+        "[exa] Vibration Analysis & Condition Monitoring for Rotating Machines: A Review",
+        "[exa-h] practical technique to monitor and diagnose machine's health. It is important to research VA further and apply it more i"
+      ],
+      "latency": 7.320256948471069
+    },
+    {
+      "topic": "Remaining useful life: component lifespan prediction",
+      "area": "maintenance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Remaining useful life estimation \u2013 A review on the statistical data driven approaches",
+        "[exa] ",
+        "[exa-h] Remaining useful life (RUL) is the useful life left on an asset at a particular time of operation. Its estimation is cen"
+      ],
+      "latency": 7.259876251220703
+    },
+    {
+      "topic": "Digital twins: virtual factory simulation",
+      "area": "maintenance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Digital twins: The next frontier of factory optimization",
+        "[exa] Full length article A unified framework for digital twin development in manufacturing",
+        "[exa-h] In fast-paced, continuous operations, factory digital twins\u2014real-time virtual representations of the factory\u2014provide man"
+      ],
+      "latency": 6.6817193031311035
+    },
+    {
+      "topic": "Production scheduling: AI-optimized planning",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] software with an AI-optimized approach, as opposed to heuristic-based and/or manual \napproaches. The application provide"
+      ],
+      "latency": 8.454668521881104
+    },
+    {
+      "topic": "Yield optimization: maximizing output quality",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Ultimate Guide to Crop Yield Index Strategies",
+        "[exa] Machine Learning for Yield Learning and Optimization",
+        "[exa-h] Optimizing the Crop Yield Index is a multifaceted journey\u2014grounded in accurate data collection, informed by advanced ana"
+      ],
+      "latency": 7.807982444763184
+    },
+    {
+      "topic": "Energy optimization: manufacturing efficiency",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Managing Your Energy: An ENERGY STAR Guide for Identifying Energy Savings in Manufacturing Plants",
+        "[exa-h] In the United States, industry spends over $100 billion annually to power its manufacturing \nplants. Companies also spen"
+      ],
+      "latency": 7.706018447875977
+    },
+    {
+      "topic": "Process parameter optimization: AI tuning",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Accelerating process control and optimization via machine learning: a review",
+        "[exa] Optimize Your Optimization",
+        "[exa-h] Process control and optimization have been widely used to solve decision-making problems in chemical engineering applica"
+      ],
+      "latency": 6.76209568977356
+    },
+    {
+      "topic": "Collaborative robots: cobots, human-robot work",
+      "area": "automation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Collaborative Robots - How Robots Work alongside Humans - International Federation of Robotics",
+        "[exa] Collaborative Robots (Cobots)",
+        "[exa-h] Cobots are used in many setups where a direct human-robot interaction is not required. Traditional industrial robots can"
+      ],
+      "latency": 3.5510857105255127
+    },
+    {
+      "topic": "Autonomous mobile robots: warehouse, factory",
+      "area": "automation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build your autonomous workforce",
+        "[exa] Mobile Robots | ABB",
+        "[exa-h] Tech Docs\n] \n* [\nBlog\n] \n* Company\n* [\nAbout Us\n] \n* [\nLeadership\n] \n* [\nCareers\u2014We're Hiring!\n] \n* [\nNewsroom\n] \n* [\nPr"
+      ],
+      "latency": 7.99926495552063
+    },
+    {
+      "topic": "Computer vision manufacturing: pick and place",
+      "area": "automation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Manufacturing-Oriented Intelligent Vision System Based on Deep Neural Network for Object Recognition and 6D Pose Estimation",
+        "[exa] Robotic Pick and Pack Sorting with Computer Vision",
+        "[exa-h] Nowadays, intelligent robots are widely applied in the manufacturing industry, in various\nworking places or assembly lin"
+      ],
+      "latency": 5.835663318634033
+    },
+    {
+      "topic": "Assembly guidance: AI-assisted manufacturing",
+      "area": "automation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Frontline AI",
+        "[exa] ",
+        "[exa-h] * **Dirty, dull, and dangerous work:**Machines are used to perform repetitive, specific manipulation tasks, such as proc"
+      ],
+      "latency": 5.742223024368286
+    },
+    {
+      "topic": "Siemens MindSphere: industrial IoT platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] MindSphere\u00ae",
+        "[exa] Insights Hub",
+        "[exa-h] MindSphere is the leading IoT-as-a-Service solution that uses advanced analytics and AI to implement IoT solutions from "
+      ],
+      "latency": 3.769826889038086
+    },
+    {
+      "topic": "GE Predix: industrial AI analytics",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Predix Platform",
+        "[exa] Predix (software)",
+        "[exa-h] #### **Analytics and machine learning**"
+      ],
+      "latency": 8.045458316802979
+    },
+    {
+      "topic": "AWS IoT SiteWise: manufacturing analytics",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AWS IoT SiteWise",
+        "[exa] AWS IoT SiteWise Documentation",
+        "[exa-h] ## How it works\nAWS IoT SiteWise is a managed service that simplifies collecting, organizing, and analyzing industrial e"
+      ],
+      "latency": 8.290446519851685
+    },
+    {
+      "topic": "Landing AI: visual inspection platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Turn Any Document Into",
+        "[exa] Bringing Computer Vision AI Solutions Across All Industries",
+        "[exa-h] LoginChoose a platform to continue\n \n![arrow icon] \nAgentic Document Extraction\nA new suite of agentic vision APIs \u2014docu"
+      ],
+      "latency": 4.163156032562256
+    }
+  ]
+}

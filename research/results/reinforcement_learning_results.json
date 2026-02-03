@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:10:23.108862",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 89
+  },
+  "results": [
+    {
+      "topic": "Deep Q-learning: DQN, double DQN, dueling networks",
+      "area": "algorithms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Q-learning",
+        "[exa] ",
+        "[exa-h] Comme la valeur estim\u00e9e est \u00e9valu\u00e9e en utilisant une autre politique, le probl\u00e8me de la surestimation est r\u00e9solu. L'appr"
+      ],
+      "latency": 5.012559652328491
+    },
+    {
+      "topic": "Policy gradient methods: REINFORCE, actor-critic",
+      "area": "algorithms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Policy gradient method",
+        "[exa] Chap 5. Policy Gradient - Deep Reinforcement Learning Book",
+        "[exa-h] ## REINFORCE\n[[edit]]\n### Policy gradient\n[[edit]]"
+      ],
+      "latency": 9.375221014022827
+    },
+    {
+      "topic": "Proximal Policy Optimization (PPO): stable training",
+      "area": "algorithms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Proximal Policy Optimization Algorithms - ADS",
+        "[exa-h] > We propose a new family of policy gradient methods for reinforcement learning, which alternate between sampling data t"
+      ],
+      "latency": 5.205838680267334
+    },
+    {
+      "topic": "Soft Actor-Critic (SAC): maximum entropy RL",
+      "area": "algorithms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] limit the applicability of such methods to complex, real-world domains. In this paper, we propose soft actor-critic, an "
+      ],
+      "latency": 5.015523195266724
+    },
+    {
+      "topic": "Model-based RL: world models, planning",
+      "area": "advanced",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Abstract:Sequential decision making, commonly formalized as Markov Decision Process (MDP) optimization, is a important"
+      ],
+      "latency": 5.596943616867065
+    },
+    {
+      "topic": "Offline RL: learning from static datasets",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Recent progress in deep learning has relied on access to large and diverse datasets. Such data-driven progress has bee"
+      ],
+      "latency": 3.6235549449920654
+    },
+    {
+      "topic": "Multi-agent RL: cooperation, competition",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments",
+        "[exa] ",
+        "[exa-h] but to competitive or mixed interaction involving both physical and communicative behavior. The\nability to act in mixed "
+      ],
+      "latency": 8.619734764099121
+    },
+    {
+      "topic": "Hierarchical RL: options, skills, abstractions",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Hierarchical Reinforcement Learning",
+        "[exa-h] > Abstract:Temporal abstraction is key to scaling up learning and planning in reinforcement learning. While planning wit"
+      ],
+      "latency": 9.491109371185303
+    },
+    {
+      "topic": "RLHF: reinforcement learning from human feedback",
+      "area": "llm_rl",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > We apply preference modeling and reinforcement learning from human feedback (RLHF) to finetune language models to act "
+      ],
+      "latency": 10.64130973815918
+    },
+    {
+      "topic": "Constitutional AI: self-improvement via feedback",
+      "area": "llm_rl",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Constitutional AI: Harmlessness from AI Feedback",
+        "[exa-h] other AIs. We experiment with methods for training a harmless AI assistant through self\u0002improvement, without any human l"
+      ],
+      "latency": 11.579310894012451
+    },
+    {
+      "topic": "Direct Preference Optimization (DPO): simpler alignment",
+      "area": "llm_rl",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Direct preference optimization:  your language model is secretly a reward model",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] call _Direct Preference Optimization_ (DPO), is stable, performant, and computationally lightweight, eliminating the nee"
+      ],
+      "latency": 4.07354736328125
+    },
+    {
+      "topic": "ReAct: reasoning and acting in language models",
+      "area": "llm_rl",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > While large language models (LLMs) have demonstrated impressive capabilities across tasks in language understanding an"
+      ],
+      "latency": 3.34452748298645
+    },
+    {
+      "topic": "OpenAI Gym: RL environment interface",
+      "area": "environments",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gym is a standard API for reinforcement learning, and a diverse collection of reference environments \u00b6",
+        "[exa] Gym documentation #",
+        "[exa-h] * [Github] \n* [Contribute to the Docs] \n[Back to top] \nToggle Light / Dark / Auto color theme\nToggle table of contents s"
+      ],
+      "latency": 3.5740973949432373
+    },
+    {
+      "topic": "MuJoCo: physics simulation for robotics RL",
+      "area": "environments",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MuJoCo",
+        "[exa] Overview - MuJoCo Documentation",
+        "[exa-h] MuJoCo makes it possible to scale up computationally-intensive techniques such optimal control, physically-consistent st"
+      ],
+      "latency": 5.293761491775513
+    },
+    {
+      "topic": "Procgen: procedural environment generation",
+      "area": "environments",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Procedural generation",
+        "[exa-h] > Abstract:We introduce Infinigen, a procedural generator of photorealistic 3D scenes of the natural world. Infinigen is"
+      ],
+      "latency": 4.041024923324585
+    },
+    {
+      "topic": "Meta-World: multi-task robotics benchmark",
+      "area": "environments",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Meta-World:  A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning",
+        "[exa] Meta-World: A Benchmark and Evaluation for \n Multi-Task and Meta Reinforcement Learning",
+        "[exa-h] To evaluate state of the art multi-task and meta-learning algorithms, we need a diverse yet structured set of skills to "
+      ],
+      "latency": 8.222702264785767
+    },
+    {
+      "topic": "RL for chip design: placement optimization",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] # Title:Chip Placement with Deep Reinforcement Learning"
+      ],
+      "latency": 8.690450429916382
+    },
+    {
+      "topic": "RL for recommendation: bandits, exploration",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deep Exploration for Recommendation Systems",
+        "[exa] Latent Bandits Revisited",
+        "[exa-h] > Abstract:Modern recommendation systems ought to benefit by probing for and learning from delayed feedback. Research ha"
+      ],
+      "latency": 9.283260822296143
+    },
+    {
+      "topic": "RL for operations research: scheduling, routing",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reinforcement Learning with Combinatorial Actions: An Application to the Capacitated Vehicle Routing Problem",
+        "[exa] ",
+        "[exa-h] which the action selection problem is explicitly formulated as a mixed-integer optimization problem. As a motivating exa"
+      ],
+      "latency": 7.951807737350464
+    },
+    {
+      "topic": "RL for scientific discovery: materials, drugs",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Targeted molecular generation with latent reinforcement learning",
+        "[exa] Materials discovery with extreme properties via reinforcement learning-guided combinatorial chemistry - Chemical Science (RSC Publishing)",
+        "[exa-h] Computational methods for generating molecules with specific physiochemical properties or biological activity can greatl"
+      ],
+      "latency": 7.525770664215088
+    }
+  ]
+}

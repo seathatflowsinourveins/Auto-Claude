@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:43:49.970357",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 93
+  },
+  "results": [
+    {
+      "topic": "INT8 quantization: reducing memory with minimal quality loss",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] 8-bit Integer Quantization in Keras",
+        "[exa-h] Quantization techniques can reduce the size of Deep Neural Networks and improve inference latency\nand throughput by taki"
+      ],
+      "latency": 8.27988886833191
+    },
+    {
+      "topic": "INT4 quantization: GPTQ, AWQ, GGUF formats",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Weight-Only Quantization (Prototype) \uf0c1",
+        "[exa] Transformers",
+        "[exa-h] ## Supported Framework Model Matrix[\uf0c1] \n|Support Device|RTN\\*|AWQ\\*|TEQ\\*|GPTQ\\*|AutoRound\\*|Data type of quantized weig"
+      ],
+      "latency": 11.026559829711914
+    },
+    {
+      "topic": "Mixed precision inference: FP16, BF16, FP8 strategies",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Train With Mixed Precision",
+        "[exa-h] 2.3.\u00a0 Considering When Training With\nMixed Precision\nAssuming the framework supports Tensor Core math, simply enabling t"
+      ],
+      "latency": 11.898509979248047
+    },
+    {
+      "topic": "Quantization-aware training: preparing models for compression",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantization #",
+        "[exa] Quantization #",
+        "[exa-h] The[Quantization API Reference] contains documentation\nof quantization APIs, such as quantization passes, quantized tens"
+      ],
+      "latency": 8.136958360671997
+    },
+    {
+      "topic": "vLLM: PagedAttention for efficient LLM serving",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspire"
+      ],
+      "latency": 7.226247787475586
+    },
+    {
+      "topic": "TGI (Text Generation Inference): production serving",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] text-generation-inference",
+        "[exa] text-generation-inference",
+        "[exa-h] * Simple launcher to serve most popular LLMs\n* Production ready (distributed tracing with Open Telemetry, Prometheus met"
+      ],
+      "latency": 8.976134777069092
+    },
+    {
+      "topic": "Triton Inference Server: enterprise GPU serving",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA Triton Inference Server #",
+        "[exa] NVIDIA Triton Inference Server #",
+        "[exa-h] Triton Inference Server is an open source inference serving software that streamlines\nAI inferencing. Triton Inference S"
+      ],
+      "latency": 8.709649801254272
+    },
+    {
+      "topic": "llama.cpp: CPU and GPU inference optimization",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Optimizing llama.cpp AI Inference with CUDA Graphs",
+        "[exa] llama.cpp - Liquid Docs",
+        "[exa-h] ## Summary[**] \nIn this post, I showed how the introduction of CUDA Graphs to the popular llama.cpp code base has substa"
+      ],
+      "latency": 9.644429445266724
+    },
+    {
+      "topic": "Continuous batching: dynamic request batching for throughput",
+      "area": "batching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How continuous batching enables 23x throughput in LLM inference while reducing p50 latency",
+        "[exa] Batching Strategies | Double Word AI docs",
+        "[exa-h] The industry recognized the inefficiency and came up with a better approach.[*Orca: A Distributed Serving System for Tra"
+      ],
+      "latency": 9.405234813690186
+    },
+    {
+      "topic": "Micro-batching: balancing latency and throughput",
+      "area": "batching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Micro Batching",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Micro batching is a variant of batching which attempts to strike a better compromise between latency and throughput\nthan"
+      ],
+      "latency": 10.054826974868774
+    },
+    {
+      "topic": "Prefill vs decode batching: optimizing different phases",
+      "area": "batching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Optimizing LLM Inference: Prefill vs Decode, Latency vs Throughput",
+        "[exa] Prefill and Decode for Concurrent Requests - Optimizing LLM Performance",
+        "[exa-h] is**compute-bound**while the other is**memory-bound.**We\u2019ll also introduce two key metrics:**Time to First Token (TTFT)*"
+      ],
+      "latency": 9.196135759353638
+    },
+    {
+      "topic": "Request prioritization: QoS in batch scheduling",
+      "area": "batching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AQESF: An adaptive QoS-enhanced scheduling framework for online batch of task scheduling",
+        "[exa] Computer Science > Distributed, Parallel, and Cluster Computing",
+        "[exa-h] For dynamic cloud environments and diverse user requirements, cloud service providers must adopt efficient scheduling me"
+      ],
+      "latency": 9.1504065990448
+    },
+    {
+      "topic": "KV cache optimization: memory-efficient attention",
+      "area": "acceleration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Transformer-based Large Language Models rely critically on the KV cache to efficiently handle extended contexts during"
+      ],
+      "latency": 7.5063464641571045
+    },
+    {
+      "topic": "FlashAttention: I/O-aware exact attention",
+      "area": "acceleration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] principle is making attention algorithms IO-aware -- accounting for reads and writes between levels of GPU memory. We pr"
+      ],
+      "latency": 9.156252384185791
+    },
+    {
+      "topic": "Speculative decoding: draft model acceleration",
+      "area": "acceleration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] this paper, we focus on how to improve the performance of the draft model and\naim to accelerate inference via a high acc"
+      ],
+      "latency": 4.528337240219116
+    },
+    {
+      "topic": "Tensor parallelism: multi-GPU inference scaling",
+      "area": "acceleration",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Large Scale Transformer model training with Tensor Parallel (TP) #",
+        "[exa] Large Scale Transformer model training with Tensor Parallel (TP) #",
+        "[exa-h] This tutorial demonstrates how to train a large Transformer-like model across hundreds to thousands of GPUs using Tensor"
+      ],
+      "latency": 4.308508396148682
+    },
+    {
+      "topic": "Inference cost optimization: tokens per dollar",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cost Per Token Analysis: Optimizing GPU Infrastructure for LLM Inference",
+        "[exa] Beyond Tokens-per-Second: How to Balance Speed, Cost, and Quality in LLM Inference",
+        "[exa-h] ## Quick decision framework\n**Hardware Selection by Use Case:**\n|Model Size|Recommended GPU|Memory Required|Approx. Cost"
+      ],
+      "latency": 8.20122241973877
+    },
+    {
+      "topic": "Autoscaling LLM endpoints: demand-based scaling",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Best practices for autoscaling large language model (LLM) inference workloads with TPUs \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Best practices for autoscaling large language model (LLM) inference workloads with GPUs on Google Kubernetes Engine (GKE) \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] This best practices guide shows you the available metrics and how to select suitable metrics to set up your[Horizontal P"
+      ],
+      "latency": 5.730285882949829
+    },
+    {
+      "topic": "Cold start optimization: model loading strategies",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cold Start Performance",
+        "[exa] Performance optimization",
+        "[exa-h] Scaling & Performance\n# Cold Start Performance\nCopy page\nCopy page\nThis page covers a list of optimizations to make your"
+      ],
+      "latency": 4.59036660194397
+    },
+    {
+      "topic": "Inference observability: latency, throughput, errors",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Metrics - Baseten",
+        "[exa] Alarms and logs for tracking metrics from asynchronous endpoints",
+        "[exa-h] # Metrics\nUnderstand the load and performance of your model\nThe Metrics tab in the model dashboard provides deployment-s"
+      ],
+      "latency": 3.3707122802734375
+    }
+  ]
+}

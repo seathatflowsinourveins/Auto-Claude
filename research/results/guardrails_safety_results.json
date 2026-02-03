@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:45:28.702042",
+  "stats": {
+    "sources": 200,
+    "vectors": 190,
+    "findings": 82
+  },
+  "results": [
+    {
+      "topic": "Prompt injection defense: detecting and blocking attacks",
+      "area": "input",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] > Application designers have moved to integrate large language models (LLMs) into their products. However, many LLM-inte"
+      ],
+      "latency": 11.239128112792969
+    },
+    {
+      "topic": "Input validation: sanitizing user prompts, length limits",
+      "area": "input",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Input Validation Cheat Sheet \u00b6",
+        "[exa] Input Validation",
+        "[exa-h] * Define the allowed set of characters to be accepted.\n* Define a minimum and maximum length for the data (e.g.`{1,25}`)"
+      ],
+      "latency": 4.821094751358032
+    },
+    {
+      "topic": "Jailbreak detection: identifying bypass attempts",
+      "area": "input",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cisco Duo Blog",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Bypassing of traditional MFA using techniques like adversary-in-the-middle are gaining momentum. Protect your logins wit"
+      ],
+      "latency": 4.919609069824219
+    },
+    {
+      "topic": "PII detection in prompts: protecting sensitive data",
+      "area": "input",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Securing Your LLM Applications: Detecting PII in Prompts with LLM-Guard \u2694\ufe0f",
+        "[exa] Privacy by Prompt: How to Strip PII Before the Model Ever Sees It",
+        "[exa-h] In the era of Generative AI, where Large Language Models (LLMs) are increasingly woven into the fabric of modern applica"
+      ],
+      "latency": 5.7480597496032715
+    },
+    {
+      "topic": "Output filtering: blocking harmful content generation",
+      "area": "output",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Content filtering overview",
+        "[exa] Content filtering overview",
+        "[exa-h] Azure OpenAI includes a content filtering system that works alongside core models, including image generation models. Th"
+      ],
+      "latency": 3.7518482208251953
+    },
+    {
+      "topic": "Hallucination detection: fact-checking LLM outputs",
+      "area": "output",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] offers a practical solution for making LLMs more trustworthy\nin applications where getting facts wrong isn\u2019t an option.\n"
+      ],
+      "latency": 3.5440893173217773
+    },
+    {
+      "topic": "Response validation: schema compliance, format checking",
+      "area": "output",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Abstract",
+        "[exa] Request validation for REST APIs in API Gateway",
+        "[exa-h] JSON Schema (application/schema+json) has several purposes, one of which is JSON instance validation. This document spec"
+      ],
+      "latency": 4.320122718811035
+    },
+    {
+      "topic": "Toxicity filtering: detecting offensive content",
+      "area": "output",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] and a variety of methods to make the model robust and to\navoid overftting. Our moderation system is trained to detect\na "
+      ],
+      "latency": 8.670742750167847
+    },
+    {
+      "topic": "NeMo Guardrails: NVIDIA's programmable rails",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction \u2014 NVIDIA NeMo Guardrails latest documentation",
+        "[exa] NVIDIA NeMo Guardrails Library Developer Guide #",
+        "[exa-h] NeMo Guardrails is an open-source toolkit for easily adding _programmable guardrails_ to LLM-based conversational applic"
+      ],
+      "latency": 4.5870444774627686
+    },
+    {
+      "topic": "Guardrails AI: Python framework for LLM validation",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction",
+        "[exa] OpenAI Guardrails Python",
+        "[exa-h] 1. Guardrails runs Input/Output Guards in your application that detect, quantify and mitigate the presence of specific t"
+      ],
+      "latency": 3.4520983695983887
+    },
+    {
+      "topic": "LlamaGuard: Meta's content safety classifier",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Making protection tools accessible to everyone",
+        "[exa] ",
+        "[exa-h] ### Llama Guard 4\nLlama Guard 4 is an 12B-parameter high-performance multimodal input and output moderation model design"
+      ],
+      "latency": 5.0722975730896
+    },
+    {
+      "topic": "Rebuff: self-hardening prompt injection detector",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] A self-hardening prompt injection detector",
+        "[exa-h] ### **Self-hardening prompt injection detector**\n[] \nRebuff is designed to protect AI applications from prompt injection"
+      ],
+      "latency": 3.8681697845458984
+    },
+    {
+      "topic": "Constitutional AI: self-correcting outputs",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Constitutional AI: Principles & Methodology",
+        "[exa-h] > As AI systems become more capable, we would like to enlist their help to supervise other AIs. We experiment with metho"
+      ],
+      "latency": 9.20839238166809
+    },
+    {
+      "topic": "Safety classifiers: multi-label content moderation",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] natural language classification system for real-world content\nmoderation. The success of such a system relies on a chain"
+      ],
+      "latency": 7.265083312988281
+    },
+    {
+      "topic": "Red team testing: adversarial safety evaluation",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Intelligence red teaming is most often performed by dedicated \u2018red teams\u2019 that adopt adversarial\nmethods to identify fla"
+      ],
+      "latency": 5.399733304977417
+    },
+    {
+      "topic": "Responsible AI guidelines: ethical deployment",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Implementation guide for managers of Artificial intelligence systems",
+        "[exa] Data and AI Ethics Framework",
+        "[exa-h] The Code sets out six principles (Safety, Accountability, Transparency, Fairness & Equity, Human Oversight & Monitoring,"
+      ],
+      "latency": 3.8376433849334717
+    },
+    {
+      "topic": "Guardrail latency: balancing safety and speed",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reinventing Guardrails \u2013 Part 1: Why Performance, Latency, and Safety Need a New Equation - BudEcosystem",
+        "[exa] Performance",
+        "[exa-h] As generative AI (GenAI) systems evolve from experimental tools to enterprise-grade applications, the balance between pe"
+      ],
+      "latency": 5.772951602935791
+    },
+    {
+      "topic": "Guardrail monitoring: tracking block rates, false positives",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Monitoring Guardrails Analytics",
+        "[exa] Troubleshooting and monitoring Amazon Bedrock Guardrails usage with Amazon CloudWatch",
+        "[exa-h] The Analytics interface in Guardrail Studio provides critical insights into your guardrails' performance and impact. Thi"
+      ],
+      "latency": 3.4930295944213867
+    },
+    {
+      "topic": "Cascading guardrails: multiple layers of protection",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] SEC03-BP05 Define permission guardrails for\n      your organization",
+        "[exa] SEC03-BP05 Define permission guardrails for\n      your organization",
+        "[exa-h] permissions by reducing the maximum scope of permissions needing\nconsideration.\n**Level of risk exposed if this best pra"
+      ],
+      "latency": 4.857382535934448
+    },
+    {
+      "topic": "Guardrail bypass logging: audit trails for security",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Auditing | Kubernetes",
+        "[exa] Audit Logging Guardrails | Documentation | Guardrails",
+        "[exa-h] the sequence of actions in a cluster. The cluster audits the activities generated by users,\nby applications that use the"
+      ],
+      "latency": 4.828994512557983
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:44:26.332688",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Long context transformers: 1M+ tokens",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] from aligned instruct model, pushing the boundaries of context lengths from 128K to 1M, 2M, and 4M tokens. Our approach "
+      ],
+      "latency": 12.057365655899048
+    },
+    {
+      "topic": "Claude 200K context: extended window",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Context windows",
+        "[exa] How Claude Processes Long Documents (100K+ Tokens)",
+        "[exa-h] * **200K token capacity:**The total available context window (200,000 tokens) represents the maximum capacity for storin"
+      ],
+      "latency": 8.374261379241943
+    },
+    {
+      "topic": "Gemini long context: 2M tokens",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Long context \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Long context \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] [![] Open in Colab] |[![] Open in Colab Enterprise] |[![] Open\nin Vertex AI Workbench] |[![] View on GitHub] \nGemini com"
+      ],
+      "latency": 6.35263991355896
+    },
+    {
+      "topic": "GPT-4 Turbo: 128K context",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Models | OpenAI API",
+        "[exa] GPT-4 Turbo in the OpenAI API | OpenAI Help Center",
+        "[exa-h] GPT-4o mini Realtime\nSmaller realtime model for text and audio inputs and outputs\n] [\nGPT-4o Realtime\nModel capable of r"
+      ],
+      "latency": 4.99748969078064
+    },
+    {
+      "topic": "RoPE scaling: position embedding extension",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] \u2022 Scaling experiments: We will conduct scaling experiments on models with varying pa\u0002rameter sizes to assess the perform"
+      ],
+      "latency": 9.198384523391724
+    },
+    {
+      "topic": "ALiBi: attention with linear biases",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation\n     \n      (2108.12409v2)",
+        "[exa-h] show that extrapolation can be enabled by simply changing the position represen\u0002tation method, though we find that curre"
+      ],
+      "latency": 9.231006860733032
+    },
+    {
+      "topic": "Ring attention: distributed context",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] modalities in complex environments. We present a novel approach, Ring Attention with Blockwise Transformers (Ring Attent"
+      ],
+      "latency": 9.675388097763062
+    },
+    {
+      "topic": "Landmark attention: efficient retrieval",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] Our method uses a landmark token to represent each block of the input and trains the attention to use it for selecting r"
+      ],
+      "latency": 8.056964874267578
+    },
+    {
+      "topic": "Lost in the middle: retrieval degradation",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Remembering can cause forgetting: Retrieval dynamics in long-term memory.",
+        "[exa] Forgetting as a consequence of retrieval: a meta-analytic review of retrieval-induced forgetting",
+        "[exa-h] Three studies with 148 university students show that the retrieval process itself causes long-lasting forgetting. Ss stu"
+      ],
+      "latency": 9.078794956207275
+    },
+    {
+      "topic": "Context utilization: effective usage",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Contextual Vocabulary Learning | Overview, Methods & Examples - Lesson | Study.com",
+        "[exa-h] model uses the correct supporting context. We propose to complement accuracy-based evaluation with measures of context u"
+      ],
+      "latency": 10.366220951080322
+    },
+    {
+      "topic": "Needle in haystack: long retrieval",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] [Submitted on 7 Nov 2024 ([v1]), last revised 23 Apr 2025 (this version, v2)]\n# Title:Needle Threading: Can LLMs Follow "
+      ],
+      "latency": 7.457195281982422
+    },
+    {
+      "topic": "Memory constraints: inference cost",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Estimating LLM Inference Memory Requirements",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Production LLM deployments fail when memory calculations miss critical components beyond model weights. This guide provi"
+      ],
+      "latency": 9.417185306549072
+    },
+    {
+      "topic": "Document QA: long document understanding",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > Understanding documents with rich layouts and multi-modal components is a long-standing and practical task. Recent Lar"
+      ],
+      "latency": 8.558303117752075
+    },
+    {
+      "topic": "Code understanding: repository context",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Codebase and Repository Context",
+        "[exa] How Copilot Chat understands and uses context",
+        "[exa-h] This document covers the @-symbols that provide contextual information from your codebase and repository history to Curs"
+      ],
+      "latency": 11.023765563964844
+    },
+    {
+      "topic": "Book summarization: entire book input",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Summarizing books with human feedback",
+        "[exa] ",
+        "[exa-h] A scalable solution to the alignment problem needs to work on tasks where model outputs are difficult or time-consuming "
+      ],
+      "latency": 8.177552223205566
+    },
+    {
+      "topic": "Multi-document: cross-reference",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Cross-Document Language Modeling",
+        "[exa-h] > The integration of multi-document pre-training objectives into language models has resulted in remarkable improvements"
+      ],
+      "latency": 8.07590126991272
+    },
+    {
+      "topic": "RAG vs long context: tradeoffs",
+      "area": "comparison",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] report key insights on the benefits and limitations of long context in RAG applications. Our findings reveal that while "
+      ],
+      "latency": 8.19726824760437
+    },
+    {
+      "topic": "Hybrid approaches: RAG + long context",
+      "area": "comparison",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > In this work, we introduce ChatQA 2, an Llama 3.0-based model with a 128K context window, designed to bridge the gap b"
+      ],
+      "latency": 8.390985250473022
+    },
+    {
+      "topic": "Cost comparison: tokens vs retrieval",
+      "area": "comparison",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] How Much Do Large Language Models Like GPT Cost? - Merlin Search Technologies",
+        "[exa-h] Pricing is a critical differentiator. All use per-token pricing, but rates vary widely by model. Generally, more\ncapable"
+      ],
+      "latency": 10.231309652328491
+    },
+    {
+      "topic": "Quality comparison: accuracy analysis",
+      "area": "comparison",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] An experimental comparison of performance measures for classification",
+        "[exa] ",
+        "[exa-h] Performance metrics in classification are fundamental in assessing the quality of learning methods and learned models. H"
+      ],
+      "latency": 9.390676975250244
+    }
+  ]
+}

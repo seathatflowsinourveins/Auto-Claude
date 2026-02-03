@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:03:59.663627",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Behavior trees for NPCs: decision making, AI directors",
+      "area": "game_ai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Behavior Tree Overview",
+        "[exa] Behavior tree (artificial intelligence, robotics and control)",
+        "[exa-h] Creating artificial intelligence (AI) in Unreal Engine 4 (UE4) for characters can be done in a number of different ways."
+      ],
+      "latency": 10.065300226211548
+    },
+    {
+      "topic": "Finite state machines: enemy AI, game logic",
+      "area": "game_ai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Finite-state machines",
+        "[exa] Game AI: Finite State Machines",
+        "[exa-h] To implement FSM for enemy AI we should enter to his brain and recognize all actions that enemy can perform. For example"
+      ],
+      "latency": 8.351547241210938
+    },
+    {
+      "topic": "Goal-oriented action planning (GOAP): dynamic AI",
+      "area": "game_ai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Goal Oriented Action Planning for a Smarter AI",
+        "[exa] ",
+        "[exa-h] Goal oriented action planning\u00a0is an artificial intelligence\u00a0system for agents that allows them to plan a sequence of act"
+      ],
+      "latency": 10.85241174697876
+    },
+    {
+      "topic": "Monte Carlo tree search: game playing AI",
+      "area": "game_ai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Monte Carlo tree search",
+        "[exa] A Survey of Monte Carlo Tree Search Methods - ADS",
+        "[exa-h] In[computer science],**Monte Carlo tree search**(**MCTS**) is a[heuristic] [search algorithm] for some kinds of[decision"
+      ],
+      "latency": 8.593868732452393
+    },
+    {
+      "topic": "LLM-powered NPCs: dialogue, personality, memory",
+      "area": "llm_npc",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Human-Computer Interaction",
+        "[exa-h] creating engaging and consistent virtual charac\u0002ters and highlight areas for future research, in\u0002cluding large language "
+      ],
+      "latency": 8.547669410705566
+    },
+    {
+      "topic": "Character AI: creating believable game characters",
+      "area": "llm_npc",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Generative AI Sparks Life into Virtual Characters with NVIDIA ACE for Games",
+        "[exa] Bringing Personality to Pixels, Inworld Levels Up Game Characters Using Generative AI",
+        "[exa-h] [**Discuss (0)] \n* [L] \n* [T] \n* [F] \n* [R] \n* [E] \nAI-Generated Summary\nLike\nDislike\n* NVIDIA ACE for Games is a custom"
+      ],
+      "latency": 11.40542984008789
+    },
+    {
+      "topic": "Dynamic dialogue systems: context-aware conversation",
+      "area": "llm_npc",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] users\u2019 way of speaking, providing contex\u0002tually appropriate responses. The genera\u0002tor is based on recurrent neural netwo"
+      ],
+      "latency": 9.292349576950073
+    },
+    {
+      "topic": "NPC memory systems: remembering player interactions",
+      "area": "llm_npc",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Using a Parameterized Memory Model to Modulate NPC AI",
+        "[exa-h] relationships with players, NPCs should be able to remember \nshared experiences, including conversations, and shape thei"
+      ],
+      "latency": 7.3186891078948975
+    },
+    {
+      "topic": "Procedural content generation: levels, maps, items",
+      "area": "procedural",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Procedural Content Generation in Games",
+        "[exa] Procedural Content Generation in Games",
+        "[exa-h] 3|[Constructive generation methods for dungeons and levels] |Noor Shaker, Antonios Liapis, Julian Togelius, Ricardo Lope"
+      ],
+      "latency": 7.795461416244507
+    },
+    {
+      "topic": "AI dungeon generation: roguelike level design",
+      "area": "procedural",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Hybrid Approach to Procedural Generation of Roguelike Video Game Levels | Proceedings of the 15th International Conference on the Foundations of Digital Games",
+        "[exa] ",
+        "[exa-h] Algorithmic generation of data, known as procedural content generation, is an attractive prospect within the game develo"
+      ],
+      "latency": 8.417025327682495
+    },
+    {
+      "topic": "Narrative generation: AI-created stories, quests",
+      "area": "procedural",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Human-Computer Interaction",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Automated plot generation for games enhances the player's experience by providing rich and immersive narrative experie"
+      ],
+      "latency": 9.377459049224854
+    },
+    {
+      "topic": "Texture and asset generation: AI art for games",
+      "area": "procedural",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Texture2D Generator",
+        "[exa] Generate textures",
+        "[exa-h] Texture2D Generator uses machine learning to create high-quality 2D assets based on text-based prompts and reference ima"
+      ],
+      "latency": 8.740538120269775
+    },
+    {
+      "topic": "Reinforcement learning for games: OpenAI Five, AlphaStar",
+      "area": "playing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AlphaStar: Grandmaster level in StarCraft II using multi-agent reinforcement learning",
+        "[exa] ",
+        "[exa-h] We chose to use general-purpose machine learning techniques \u2013including neural networks, self-play via reinforcement lear"
+      ],
+      "latency": 12.24412226676941
+    },
+    {
+      "topic": "Game testing with AI: QA automation, bug finding",
+      "area": "playing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Make better games with automated testing",
+        "[exa] Improving QA Game Testing with Evolved AI",
+        "[exa-h] Go beyond testing known scenarios - our chaos testing and exploratory tools such as the Monkey Bot can efficiently explo"
+      ],
+      "latency": 8.10916543006897
+    },
+    {
+      "topic": "Speedrun AI: optimal game completion strategies",
+      "area": "playing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] AI in Speedrunning: Optimizing Routes \u2013 5 Ways AI is Transforming Speedruns",
+        "[exa-h] can perform speedrunning tasks such as running games (seen or unseen) and glitch discovery. This\nis distinct from tradit"
+      ],
+      "latency": 7.6018593311309814
+    },
+    {
+      "topic": "Game balance with AI: difficulty tuning, analytics",
+      "area": "playing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI for Dynamic Difficulty Adjustment in Games",
+        "[exa] ",
+        "[exa-h] This paper presents a probabilistic method (drawn predominantly from Inventory Theory) for representing and reasoning ab"
+      ],
+      "latency": 7.001028776168823
+    },
+    {
+      "topic": "Unity ML-Agents: training AI in Unity games",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Training ML-Agents",
+        "[exa] ML-Agents Overview",
+        "[exa-h] Once your learning environment has been created and is ready for training, the next step is to initiate a training run. "
+      ],
+      "latency": 10.992380857467651
+    },
+    {
+      "topic": "Unreal Engine AI: behavior trees, EQS, NavMesh",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Artificial Intelligence",
+        "[exa] Artificial Intelligence",
+        "[exa-h] CreatingArtificial Intelligence (AI) for characters or other entities in your projects in Unreal Engine 4 (UE4) is accom"
+      ],
+      "latency": 7.474520921707153
+    },
+    {
+      "topic": "Inworld AI: character engine for games",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Powering the Next Wave of AI Applications",
+        "[exa] Platform",
+        "[exa-h] Inworld AI is changing the game by using generative AI to drive character behaviors that are dynamic and responsive to u"
+      ],
+      "latency": 5.663733959197998
+    },
+    {
+      "topic": "Convai: conversational AI for virtual worlds",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Conversational  AI Characters",
+        "[exa] ",
+        "[exa-h] Convai powers XR worlds with conversational AI through both virtual humans and disembodied AI characters, enabling deepl"
+      ],
+      "latency": 10.116136312484741
+    }
+  ]
+}

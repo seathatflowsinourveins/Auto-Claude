@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:33:50.219845",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Query understanding: intent classification, entity extraction",
+      "area": "query",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] > Intent classification and slot filling are two critical tasks for natural language understanding. Traditionally the tw"
+      ],
+      "latency": 9.481512069702148
+    },
+    {
+      "topic": "Query expansion: synonyms, related terms, HyDE",
+      "area": "query",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Query expansion",
+        "[exa] Relevance feedback and query expansion",
+        "[exa-h] * Finding[synonyms] of words, and searching for the synonyms as well\n* Finding semantically related words (e.g.[antonyms"
+      ],
+      "latency": 8.402966260910034
+    },
+    {
+      "topic": "Query rewriting: LLM-based reformulation, decomposition",
+      "area": "query",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Databases",
+        "[exa] Query Rewriting via LLMs",
+        "[exa-h] > Query rewriting is an effective technique for refining poorly written queries before they reach the query optimizer. H"
+      ],
+      "latency": 8.374489784240723
+    },
+    {
+      "topic": "Multi-query retrieval: generate multiple search queries",
+      "area": "query",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] LangChain overview",
+        "[exa-h] > Abstract:Query expansion is widely used in Information Retrieval (IR) to improve search outcomes by supplementing init"
+      ],
+      "latency": 8.747063159942627
+    },
+    {
+      "topic": "Bi-encoder retrieval: query and document encoders",
+      "area": "dense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] A promising alternative is to perform first-stage\nretrieval using learned dense low-dimensional en\u0002codings of documents "
+      ],
+      "latency": 9.655503273010254
+    },
+    {
+      "topic": "Approximate nearest neighbor: HNSW, IVF, PQ",
+      "area": "dense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Data Structures and Algorithms",
+        "[exa] Computer Science > Data Structures and Algorithms",
+        "[exa-h] > We present a new approach for the approximate K-nearest neighbor search based on navigable small world graphs with con"
+      ],
+      "latency": 9.211902618408203
+    },
+    {
+      "topic": "Dense retrieval training: contrastive learning, hard negatives",
+      "area": "dense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] has shown many advantages compared to sparse retrieval. Existing\ndense retrievers optimize representations of queries an"
+      ],
+      "latency": 8.959274291992188
+    },
+    {
+      "topic": "Zero-shot dense retrieval: instruction-following embeddings",
+      "area": "dense",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unsupervised Text Representation Learning via Instruction-Tuning for Zero-Shot Dense Retrieval",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] Dense retrieval systems are commonly used for information retrieval (IR). They rely on learning text representations thr"
+      ],
+      "latency": 8.164891242980957
+    },
+    {
+      "topic": "BM25: TF-IDF, document length normalization",
+      "area": "sparse",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Okapi BM25: a non-binary model",
+        "[exa-h] for document retrieval, grounded in work done in the 1970\u20131980s, which\nled to the development of one of the most success"
+      ],
+      "latency": 9.426079511642456
+    },
+    {
+      "topic": "SPLADE: learned sparse representations",
+      "area": "sparse",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learned sparse retrieval",
+        "[exa] Learning Sparse Lexical Representations Over Expanded Vocabularies for Retrieval",
+        "[exa-h] SPLADE (Sparse Lexical and Expansion Model) is a neural retrieval model that learns sparse vector representations for qu"
+      ],
+      "latency": 8.838237524032593
+    },
+    {
+      "topic": "Keyword extraction: RAKE, YAKE, KeyBERT",
+      "area": "sparse",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Yet Another Keyword Extractor (YAKE!)",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] YAKE! is a light-weight unsupervised automatic keyword extraction method which rests on text statistical features extrac"
+      ],
+      "latency": 7.4020984172821045
+    },
+    {
+      "topic": "Inverted index optimization: sharding, caching",
+      "area": "sparse",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Building a Distributed Full-Text Index for the Web",
+        "[exa] ",
+        "[exa-h] **Distributed inverted index organization.**In a distributed environment, there are two basic strategies for distributin"
+      ],
+      "latency": 10.294987678527832
+    },
+    {
+      "topic": "Hybrid search fusion: RRF, weighted combination",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Relevance scoring in hybrid search using Reciprocal Rank Fusion (RRF)",
+        "[exa-h] that the two are complementary in how they model relevance. In particular, we examine fusion by a convex\ncombination (CC"
+      ],
+      "latency": 10.29931640625
+    },
+    {
+      "topic": "Two-stage retrieval: recall then rerank",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] of \ud835\udc41 candidate documents (denoted as \ud835\udc3f\ud835\udc5e,\ud835\udf19 ). At this stage, existing\nsystems mainly focus on optimizing Recall@\ud835\udc41 of the "
+      ],
+      "latency": 7.513327121734619
+    },
+    {
+      "topic": "Multi-index search: separate dense and sparse indexes",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Hybrid search",
+        "[exa-h] The architecture of one typical scenario (one sparse index + one\ndense ind"
+      ],
+      "latency": 9.870508670806885
+    },
+    {
+      "topic": "Adaptive retrieval: dynamic strategy selection",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Adaptive Evidence Retrieval",
+        "[exa-h] search policies. Neither costly LLM controllers nor stronger embeddings resolve the core limitation:\nretrieval models la"
+      ],
+      "latency": 8.096458435058594
+    },
+    {
+      "topic": "Cross-encoder reranking: BERT-based relevance scoring",
+      "area": "reranking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Passage Re-ranking with BERT - ADS",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] Recently, neural models pretrained on a language modeling task, such as ELMo (Peters et al., 2017), OpenAI GPT (Radford "
+      ],
+      "latency": 8.451565504074097
+    },
+    {
+      "topic": "LLM reranking: listwise, pairwise, pointwise",
+      "area": "reranking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] > Large language models (LLMs), with advanced linguistic capabilities, have been employed in reranking tasks through a s"
+      ],
+      "latency": 8.875229597091675
+    },
+    {
+      "topic": "Cohere Rerank: API-based reranking service",
+      "area": "reranking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Rerank API (v2)",
+        "[exa] Rerank API (v2)",
+        "[exa-h] * v1/embed-jobs\n* v1/datasets\n* v1/tokenize\n* v1/detokenize\n* v1/models\n* Deprecated\n* v1/classify\n* v1/connectors\n* v1/"
+      ],
+      "latency": 9.582351446151733
+    },
+    {
+      "topic": "Diversity reranking: MMR, result diversification",
+      "area": "reranking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Supervised approaches for explicit search result diversification",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] Diversification of[web search] results aims to promote documents with diverse content (i.e., covering different*aspects*"
+      ],
+      "latency": 9.005025386810303
+    }
+  ]
+}

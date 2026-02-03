@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:27:01.590008",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "System prompt design: persona, constraints, output format",
+      "area": "system",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Safety system messages",
+        "[exa] Digital Shred",
+        "[exa-h] * **Define the scenario.**Clarify the job the model must do, who the users are, what inputs to expect, and the tone and "
+      ],
+      "latency": 9.025580406188965
+    },
+    {
+      "topic": "Role-playing prompts: expert personas, domain knowledge injection",
+      "area": "system",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] \ud83d\udfe2 Role Prompting",
+        "[exa] Role-Based Prompting: Teaching the AI to \u201cAct Like\u201d a Specific Expert or Persona",
+        "[exa-h] * **Role Prompting**assigns a persona to an[LLM], such as \"teacher\" or \"salesperson,\" to guide the style, tone, and focu"
+      ],
+      "latency": 9.197603940963745
+    },
+    {
+      "topic": "Instruction hierarchy: system vs user prompt precedence",
+      "area": "system",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Control Illusion: The Failure of Instruction Hierarchies \n in Large Language Models",
+        "[exa] The Instruction Hierarchy: \n Training LLMs to Prioritize Privileged Instructions",
+        "[exa-h] This deployment pattern reflects an underlying assumption that different instruction sources should have varying levels "
+      ],
+      "latency": 5.628249168395996
+    },
+    {
+      "topic": "Meta-prompting: prompts that generate prompts",
+      "area": "system",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Prompt generation",
+        "[exa-h] > We introduce Meta Prompting (MP), a framework that elevates the reasoning capabilities of large language models (LLMs)"
+      ],
+      "latency": 9.816553592681885
+    },
+    {
+      "topic": "Few-shot example selection: similarity-based, diverse sampling",
+      "area": "fewshot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automatic Combination of Sample Selection Strategies for Few-Shot Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] recently, selecting samples according to their properties such as similarity, diversity, informativeness or quality\u00a0(Li "
+      ],
+      "latency": 7.708576202392578
+    },
+    {
+      "topic": "Dynamic few-shot: runtime example retrieval from vector DB",
+      "area": "fewshot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dynamic few shot example selection",
+        "[exa] qdrant/examples | DeepWiki",
+        "[exa-h] This feature is in open beta. It is only available to paid team plans. Please reach out to[support@langchain.dev] if you"
+      ],
+      "latency": 8.481616973876953
+    },
+    {
+      "topic": "Example formatting: input-output pairs, chain-of-thought examples",
+      "area": "fewshot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Prompt examples",
+        "[exa-h] Standard prompting. For the baseline, we consider standard few-shot prompting, popularized by\nBrown et al. (2020), in wh"
+      ],
+      "latency": 8.066681861877441
+    },
+    {
+      "topic": "Zero-shot vs few-shot: task complexity thresholds",
+      "area": "fewshot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A review on NLP zero-shot and few-shot learning: methods and applications",
+        "[exa] ",
+        "[exa-h] ## Article Highlights\n* The paper provides how zero-shot and few-shot learning improve NLP by using minimal labelled dat"
+      ],
+      "latency": 9.910681962966919
+    },
+    {
+      "topic": "Chain-of-thought prompting: step-by-step reasoning elicitation",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] 2021). In this paper, we combine the strengths of these two ideas in a way that avoids their limitations.\nSpecifically, "
+      ],
+      "latency": 6.671235799789429
+    },
+    {
+      "topic": "Self-consistency: multiple reasoning paths with voting",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Self-Consistency Improves Chain of Thought Reasoning in Language Models - ADS",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] greedy one, and then selects the most consistent answer by marginalizing out the sampled reasoning paths. Self-consisten"
+      ],
+      "latency": 5.613978862762451
+    },
+    {
+      "topic": "Tree of thoughts: branching exploration, backtracking",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tree of Thoughts Framework",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] * It employs explicit multi-branch exploration, evaluation, and backtracking to improve performance in puzzles, creative"
+      ],
+      "latency": 8.103963375091553
+    },
+    {
+      "topic": "ReAct: reasoning and acting interleaved",
+      "area": "reasoning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] both reasoning traces and task-specific actions in an interleaved manner, allowing for greater synergy between the two: "
+      ],
+      "latency": 7.8089563846588135
+    },
+    {
+      "topic": "JSON mode: schema enforcement, nested structures",
+      "area": "structured",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] JSON Schema",
+        "[exa] MySQL :: MySQL 8.4 Reference Manual :: 14.17.7 JSON Schema Validation Functions",
+        "[exa-h] Most uses of JSON data are schemaless. Applications that use JSON data can\nthen quickly react to changing requirements. "
+      ],
+      "latency": 10.89922046661377
+    },
+    {
+      "topic": "Function calling: tool definitions, parameter extraction",
+      "area": "structured",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] How to do tool/function calling",
+        "[exa-h] `# pip install -qU langchain \"langchain[anthropic]\"fromlangchain.agentsimportcreate\\_agentdefget\\_weather(city:str) ->st"
+      ],
+      "latency": 8.559826135635376
+    },
+    {
+      "topic": "Pydantic output parsing: type validation, error handling",
+      "area": "structured",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Error Handling",
+        "[exa] Error Handling",
+        "[exa-h] ```\n## Error messages[\u00b6] \nPydantic attempts to provide useful default error messages for validation and usage errors, wh"
+      ],
+      "latency": 7.9819440841674805
+    },
+    {
+      "topic": "XML and markdown structured outputs: parsing strategies",
+      "area": "structured",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Structured Markup Processing Tools \u00b6",
+        "[exa] LangChain overview",
+        "[exa-h] Python supports a variety of modules to work with various forms of structured\ndata markup. This includes modules to work"
+      ],
+      "latency": 10.77829909324646
+    },
+    {
+      "topic": "Prompt compression: LLMLingua, context distillation",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression\n     \n      (2403.12968v2)",
+        "[exa-h] > This paper focuses on task-agnostic prompt compression for better generalizability and efficiency. Considering the red"
+      ],
+      "latency": 6.765247106552124
+    },
+    {
+      "topic": "Prompt injection defense: delimiters, input validation",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLM Prompt Injection Prevention Cheat Sheet \u00b6",
+        "[exa] Design Patterns for Securing LLM Agents\n against Prompt Injections",
+        "[exa-h] Validate and sanitize all user inputs before they reach the LLM.\n```"
+      ],
+      "latency": 7.102489948272705
+    },
+    {
+      "topic": "Multi-turn prompt design: context management, summarization",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Characterizing Prompt Compression Methods for Long Context Inference",
+        "[exa-h] > Recent advancements in large language models (LLMs) have revolutionized their ability to handle single-turn tasks, yet"
+      ],
+      "latency": 8.346328020095825
+    },
+    {
+      "topic": "Prompt versioning and testing: A/B testing, regression",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A/B testing Llama in production",
+        "[exa] Prompt regression testing: Preventing quality decay",
+        "[exa-h] *A/B testing*is the process of systematically comparing two or more versions of a solution on live user traffic. For Lla"
+      ],
+      "latency": 10.301258325576782
+    }
+  ]
+}

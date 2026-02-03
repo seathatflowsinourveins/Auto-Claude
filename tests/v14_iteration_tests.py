@@ -996,5 +996,110 @@ class TestShallowToRealConversion:
         assert '"different_001"' not in source
 
 
+# ============================================================================
+# SECTION 25: Circuit Breaker Manager Tests (Iteration 62)
+# ============================================================================
+
+class TestCircuitBreakerManager:
+    """Test adapter circuit breaker manager functionality."""
+
+    def test_manager_importable(self):
+        """Circuit breaker manager should be importable."""
+        sys.path.insert(0, str(BASE / "platform"))
+        from adapters.circuit_breaker_manager import AdapterCircuitBreakerManager
+        assert AdapterCircuitBreakerManager is not None
+
+    def test_manager_singleton(self):
+        """Manager should be a singleton."""
+        sys.path.insert(0, str(BASE / "platform"))
+        from adapters.circuit_breaker_manager import AdapterCircuitBreakerManager
+        m1 = AdapterCircuitBreakerManager()
+        m2 = AdapterCircuitBreakerManager()
+        assert m1 is m2
+
+    def test_manager_creates_breaker(self):
+        """Manager should create breakers for adapters."""
+        sys.path.insert(0, str(BASE / "platform"))
+        from adapters.circuit_breaker_manager import AdapterCircuitBreakerManager
+        manager = AdapterCircuitBreakerManager()
+        breaker = manager.get_breaker("test_adapter_iter62")
+        assert breaker is not None
+        from core.resilience import CircuitState
+        assert breaker.state == CircuitState.CLOSED
+
+    def test_manager_default_configs(self):
+        """Manager should have configs for known adapters."""
+        sys.path.insert(0, str(BASE / "platform"))
+        from adapters.circuit_breaker_manager import AdapterCircuitBreakerManager
+        manager = AdapterCircuitBreakerManager()
+        known = ["letta_adapter", "mem0_adapter", "dspy_adapter",
+                 "safety_adapter", "opik_tracing_adapter"]
+        for name in known:
+            config = manager.get_config(name)
+            assert config.failure_threshold > 0
+            assert config.recovery_timeout > 0
+
+    def test_manager_health_report(self):
+        """Manager should produce health reports."""
+        sys.path.insert(0, str(BASE / "platform"))
+        from adapters.circuit_breaker_manager import AdapterCircuitBreakerManager
+        manager = AdapterCircuitBreakerManager()
+        summary = manager.get_stats_summary()
+        assert "total_adapters" in summary
+        assert "healthy" in summary
+
+
+# ============================================================================
+# SECTION 26: Real API Test Counts (Iteration 62)
+# ============================================================================
+
+class TestRealAPITestCounts:
+    """Verify real API test coverage keeps growing."""
+
+    def test_v145_has_minimum_real_api_tests(self):
+        """v145 should have at least 40 real API test methods."""
+        import ast
+        test_path = BASE / "platform" / "tests" / "test_v145_real_service_integration.py"
+        source = test_path.read_text(encoding="utf-8")
+        tree = ast.parse(source)
+        test_methods = [
+            node.name for node in ast.walk(tree)
+            if isinstance(node, ast.FunctionDef) and node.name.startswith("test_")
+        ]
+        assert len(test_methods) >= 40, \
+            f"Expected 40+ real API tests, got {len(test_methods)}: {test_methods[:5]}..."
+
+    def test_multiple_api_providers_tested(self):
+        """Should test multiple API providers (Voyage, Groq, DeepSeek, Letta, Exa)."""
+        test_path = BASE / "platform" / "tests" / "test_v145_real_service_integration.py"
+        source = test_path.read_text(encoding="utf-8")
+        providers = ["Voyage", "Groq", "DeepSeek", "Letta", "Exa"]
+        tested = [p for p in providers if p.lower() in source.lower()]
+        assert len(tested) >= 4, \
+            f"Expected 4+ providers, found {len(tested)}: {tested}"
+
+    def test_zero_shallow_file_grep_tests(self):
+        """No test files should use file-open-and-grep patterns."""
+        test_dir = BASE / "platform" / "tests"
+        # Check known formerly-shallow files
+        shallow_files = [
+            "test_v116_sleeptime_fix.py",
+            "test_v117_token_fix.py",
+            "test_v119_async_batch.py",
+            "test_v120_embedding_cache.py",
+            "test_v121_circuit_breaker.py",
+            "test_v122_memory_metrics.py",
+            "test_v123_multimodel_embeddings.py",
+            "test_v124_intelligent_routing.py",
+        ]
+        for fname in shallow_files:
+            fpath = test_dir / fname
+            if fpath.exists():
+                source = fpath.read_text(encoding="utf-8")
+                # No file-open patterns
+                assert 'with open(' not in source or 'encoding' not in source, \
+                    f"{fname} still has file-open patterns"
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])

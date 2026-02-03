@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:48:52.942236",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 93
+  },
+  "results": [
+    {
+      "topic": "TimeGPT: foundation models for time series",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > In this paper, we introduce TimeGPT, the first foundation model for time series, capable of generating accurate predic"
+      ],
+      "latency": 7.059196710586548
+    },
+    {
+      "topic": "Chronos: Amazon's pretrained time series model",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Chronos: Learning the language of time series",
+        "[exa-h] University, 6UC Berkeley, 7New York University\nReviewed on OpenReview: https://openreview.net/forum?id=gerNCVqqtR\nCode a"
+      ],
+      "latency": 9.077207088470459
+    },
+    {
+      "topic": "Lag-Llama: LLM-inspired time series forecasting",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Lag-Llama: Towards Foundation Models for Probabilistic Time Series\n  Forecasting",
+        "[exa-h] has lagged behind. We present Lag-Llama, a general-purpose foundation model for univariate probabilistic time series for"
+      ],
+      "latency": 6.9958555698394775
+    },
+    {
+      "topic": "TimesFM: Google's time series foundation model",
+      "area": "foundation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A decoder-only foundation model for time-series forecasting",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] To that end, in \u201c[A decoder-only foundation model for time-series forecasting] \u201d,accepted at[ICML 2024],we introduce Tim"
+      ],
+      "latency": 6.416088104248047
+    },
+    {
+      "topic": "Transformer-based forecasting: attention for sequences",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > We present Timer-XL, a causal Transformer for unified time series forecasting. To uniformly predict multidimensional t"
+      ],
+      "latency": 9.745620489120483
+    },
+    {
+      "topic": "Neural Prophet: hybrid statistical + neural forecasting",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NeuralProphet #",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] NeuralProphet provides many time series modeling and workflow features, in a simple package:\n* Support for global modeli"
+      ],
+      "latency": 10.086424350738525
+    },
+    {
+      "topic": "Temporal Fusion Transformers: interpretable forecasting",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting - ADS",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] prediction, they typically comprise black-box models which do not account for the full range of inputs present in common"
+      ],
+      "latency": 8.831568956375122
+    },
+    {
+      "topic": "Probabilistic forecasting: uncertainty quantification",
+      "area": "forecasting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Probabilistic Forecasting",
+        "[exa] ",
+        "[exa-h] A probabilistic forecast takes the form of a predictive probability distribution over future quantities or events of int"
+      ],
+      "latency": 9.636679649353027
+    },
+    {
+      "topic": "LLM for time series analysis: pattern descriptions",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Augmenting LLMs for General Time Series Understanding and Prediction",
+        "[exa] LLM-PS: Empowering Large Language Models for Time Series Forecasting \n with Temporal Patterns and Semantics",
+        "[exa-h] lack due to their inability to process text. While Large Language Models (LLMs) excel at contextual reasoning and knowle"
+      ],
+      "latency": 7.348012208938599
+    },
+    {
+      "topic": "Natural language forecasting queries: chat with data",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Statistics > Methodology",
+        "[exa-h] > Forecasting future events is important for policy and decision making. In this work, we study whether language models "
+      ],
+      "latency": 7.217304229736328
+    },
+    {
+      "topic": "Time series to text: generating insights from data",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] huseyin.uzunalioglu@nokia-bell-labs.com\nNokia Bell Labs\nWestford, MA, USA\nABSTRACT\nThe automatic generation of represent"
+      ],
+      "latency": 10.955251932144165
+    },
+    {
+      "topic": "Multimodal time series: combining text and numeric",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Multi-modal time series analysis has recently emerged as a promi\u0002nent research area in data mining, driven by the increa"
+      ],
+      "latency": 8.329032897949219
+    },
+    {
+      "topic": "Demand forecasting: retail and supply chain",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Case study: Retail demand forecasting problem for an e-commerce business",
+        "[exa] ",
+        "[exa-h] - **Macro-level planning (strategic**\n**forecasting):** For a business as a whole, what is the\nprojected growth in terms"
+      ],
+      "latency": 4.70250678062439
+    },
+    {
+      "topic": "Financial forecasting: stock, crypto, economics",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] WEO",
+        "[exa] ",
+        "[exa-h] The World Economic Outlook (WEO) database is published twice a year in April and October in conjunction with the biannua"
+      ],
+      "latency": 3.7857325077056885
+    },
+    {
+      "topic": "Energy forecasting: load prediction, renewable energy",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] outlook into the future of energy forecasting.\nINDEX TERMS Energy forecasting, load forecasting, electricity price forec"
+      ],
+      "latency": 5.800663948059082
+    },
+    {
+      "topic": "Capacity planning: resource forecasting for systems",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Architecture strategies for capacity planning",
+        "[exa] 32  Capacity Planning",
+        "[exa-h] This guide describes the recommendations for capacity planning. Capacity planning refers to the process of determining t"
+      ],
+      "latency": 3.4743595123291016
+    },
+    {
+      "topic": "Feature engineering for time series: lags, windows",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Feature Engineering for Time Series Problems #",
+        "[exa] Introduction to feature engineering for time series forecasting",
+        "[exa-h] For this purpose, we can use our`Lag`primitive and create one primitive for each instance in our window.\n```\n[6]:\n```\n``"
+      ],
+      "latency": 5.393163204193115
+    },
+    {
+      "topic": "Handling seasonality: decomposition, Fourier features",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 3 \u00a0  Time series decomposition",
+        "[exa] Demand Forecasting for Executives and Professionals",
+        "[exa-h] In[Section 2.3] we discussed three types of time series patterns: trend, seasonality and cycles. When we decompose a tim"
+      ],
+      "latency": 4.280390501022339
+    },
+    {
+      "topic": "Missing data in time series: imputation strategies",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] [We gratefully acknowledge support from\\\nthe Simons Foundation and member institutions.]"
+      ],
+      "latency": 9.302141666412354
+    },
+    {
+      "topic": "Time series embeddings: representing temporal patterns",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Time series analysis has become crucial in various fields, from engineering and finance to healthcare and social scien"
+      ],
+      "latency": 9.18400239944458
+    }
+  ]
+}

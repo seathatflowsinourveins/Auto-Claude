@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:29:53.916399",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 94
+  },
+  "results": [
+    {
+      "topic": "Federated learning: distributed ML, privacy",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Federated learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Federated learning is generally concerned with and motivated by issues such as[data privacy],[data minimization], and da"
+      ],
+      "latency": 6.985252141952515
+    },
+    {
+      "topic": "FedAvg: federated averaging algorithm",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > We present a practical method for the federated learning of deep networks based on iterative model averaging, and cond"
+      ],
+      "latency": 9.421962976455688
+    },
+    {
+      "topic": "Client selection: participant sampling",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Sampling: how to select participants in my research study?",
+        "[exa] Section 4: Selecting the study participants",
+        "[exa-h] In this paper, the basic elements related to the selection of participants\nfor a health research are discussed. Sample r"
+      ],
+      "latency": 6.993105173110962
+    },
+    {
+      "topic": "Communication efficiency: compression, quantization",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Lossy Compression Basics and Quantization",
+        "[exa-h] coding techniques. Section 5 treats the important subject of quantiza\u0002tion, which can be considered as the basic tool fo"
+      ],
+      "latency": 6.533529996871948
+    },
+    {
+      "topic": "Differential privacy: epsilon-delta",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Differential privacy",
+        "[exa] ",
+        "[exa-h] ## \u03b5-differential privacy"
+      ],
+      "latency": 9.298378467559814
+    },
+    {
+      "topic": "Secure aggregation: cryptographic privacy",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Secure Single-Server Aggregation with (Poly)Logarithmic Overhead",
+        "[exa] ",
+        "[exa-h] Secure aggregation is a cryptographic primitive that enables a server to learn the sum of the vector inputs of many clie"
+      ],
+      "latency": 11.4513418674469
+    },
+    {
+      "topic": "Homomorphic encryption: compute on encrypted",
+      "area": "privacy",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] Fully Homomorphic Encryption",
+        "[exa-h] Fully Homomorphic Encryption (FHE) is a cryptographic scheme that enables computations to be\nperformed directly on encry"
+      ],
+      "latency": 7.995035409927368
+    },
+    {
+      "topic": "Privacy attacks: inference, membership",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] which they were trained. We focus on the basic membership\ninference attack: given a data record and black-box access to\n"
+      ],
+      "latency": 5.967353343963623
+    },
+    {
+      "topic": "Non-IID data: heterogeneous distributions",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] taxonomy for non-IID data, partition protocols, and metrics to quantify data heterogeneity. Additionally, we describe po"
+      ],
+      "latency": 7.914265871047974
+    },
+    {
+      "topic": "Model heterogeneity: different architectures",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Neural network based computer vision systems are typically built on a backbone, a pretrained or randomly initialized f"
+      ],
+      "latency": 8.300435543060303
+    },
+    {
+      "topic": "Stragglers: handling slow clients",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Taking a Timeout from Poor Performance",
+        "[exa-h] a good idea to add jitter where it doesn't impact the customer experience.\nConclusion\nIn distributed systems, transient "
+      ],
+      "latency": 10.367179870605469
+    },
+    {
+      "topic": "Byzantine resilience: malicious clients",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Byzantine Agreement with Optimal Resilience via Statistical Fraud Detection",
+        "[exa-h] indicated by the surprising fact that if the generals can send only oral messages, \nthen no solution will work unless mo"
+      ],
+      "latency": 4.277878761291504
+    },
+    {
+      "topic": "Healthcare federated: medical data privacy",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Interoperability Framework",
+        "[exa] Interoperability",
+        "[exa-h] For clarity, nothing in this document is intended to contravene federal and state healthcare and privacy laws, including"
+      ],
+      "latency": 10.54184865951538
+    },
+    {
+      "topic": "Mobile federated: on-device learning",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Federated Learning: Collaborative Machine Learning without Centralized Training Data",
+        "[exa] Federated Learning: Collaborative Machine Learning without Centralized Training Data",
+        "[exa-h] Federated Learning enables mobile phones to collaboratively learn a shared prediction model while keeping all the traini"
+      ],
+      "latency": 8.179572582244873
+    },
+    {
+      "topic": "Financial federated: cross-institution ML",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computational Engineering, Finance, and Science",
+        "[exa-h] New York, USA\nAbstract-This paper addresses the challenges of data privacy and collaborative modeling in cross-instituti"
+      ],
+      "latency": 4.164979457855225
+    },
+    {
+      "topic": "IoT federated: edge device learning",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Federated Learning for Internet of Things: A Federated Learning Framework for On-device Anomaly Data Detection - ADS",
+        "[exa-h] computing which brings the necessary on-demand computing\npower in the proximity of IoT devices [2]. Therefore, each\nIoT "
+      ],
+      "latency": 5.55862283706665
+    },
+    {
+      "topic": "Flower: federated learning framework",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Industry Standard for Enterprise-Grade Federated AI",
+        "[exa] The Industry Standard for Enterprise-Grade Federated AI",
+        "[exa-h] This series of tutorials introduces the fundamentals of Federated Learning and how to implement it with Flower.\n[\n![Tuto"
+      ],
+      "latency": 5.621336936950684
+    },
+    {
+      "topic": "PySyft: privacy-preserving ML",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Remote data access with privacy at the core",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Syft preserves data privacy by enabling data scientists to study data without ever acquiring a copy. In traditional data"
+      ],
+      "latency": 5.586255788803101
+    },
+    {
+      "topic": "TensorFlow Federated: TFF library",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] TensorFlow Federated",
+        "[exa] Federated Core \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] * TensorFlow Federated (TFF) is an open-source framework for machine learning and other computations on decentralized da"
+      ],
+      "latency": 8.287274360656738
+    },
+    {
+      "topic": "NVIDIA FLARE: enterprise federated",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] NVIDIA FLARE",
+        "[exa] NVIDIA FLARE",
+        "[exa-h] NVIDIA FLARE is an open-source framework available to download through the [NVIDIA NVFlare GitHub Repo] and [PyPi].\nQuic"
+      ],
+      "latency": 4.077290773391724
+    }
+  ]
+}

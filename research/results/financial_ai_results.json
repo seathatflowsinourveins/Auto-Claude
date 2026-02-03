@@ -1,0 +1,248 @@
+{
+  "timestamp": "2026-02-03T01:54:31.674855",
+  "stats": {
+    "sources": 194,
+    "vectors": 169,
+    "findings": 87
+  },
+  "results": [
+    {
+      "topic": "AI trading strategies: algorithmic, quantitative approaches",
+      "area": "trading",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantitative Finance > Computational Finance",
+        "[exa] Artificial Intelligence Asset Pricing Models",
+        "[exa-h] > Quantitative investment (quant) is an emerging, technology-driven approach in asset management, increasingy shaped by "
+      ],
+      "latency": 9.529743909835815
+    },
+    {
+      "topic": "Market sentiment analysis: news, social media signals",
+      "area": "trading",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] More than Words: Twitter Chatter and Financial Market Sentiment",
+        "[exa-h] Does social media activity carry any meaningful signal on credit and financial markets\u2019 senti\u0002ment? We build a new real-"
+      ],
+      "latency": 7.910398721694946
+    },
+    {
+      "topic": "Portfolio optimization with AI: risk-return balancing",
+      "area": "trading",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A machine learning approach to risk based asset allocation in portfolio optimization",
+        "[exa] ",
+        "[exa-h] This paper introduces a novel machine learning framework for dynamic risk-based asset allocation that addresses fundamen"
+      ],
+      "latency": 7.421278238296509
+    },
+    {
+      "topic": "High-frequency trading: latency, execution optimization",
+      "area": "trading",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Quantifying the High-Frequency Trading \"Arms Race\"",
+        "[exa] ",
+        "[exa-h] We use stock exchange message data to quantify the negative aspect of high-frequency trading, known as \u201clatency arbitrag"
+      ],
+      "latency": 9.327257871627808
+    },
+    {
+      "topic": "Credit risk modeling: default prediction, scoring",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] INTRODUCTION",
+        "[exa-h] Scenario where a single error is amplified or leads \nto a chain reaction in downstream processes owing \nto the interconn"
+      ],
+      "latency": 9.361986875534058
+    },
+    {
+      "topic": "Fraud detection: transaction anomaly, account takeover",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stripe logo",
+        "[exa] Stripe logo",
+        "[exa-h] # A primer on machine learning for fraud detection\nThis guide introduces Stripe Radar and how we leverage the Stripe net"
+      ],
+      "latency": 8.650393724441528
+    },
+    {
+      "topic": "Market risk: VaR, stress testing with ML",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Portfolio Stress Testing and Value at Risk (VaR) Incorporating Current Market Conditions",
+        "[exa-h] tree-based machine learning (ML) models significantly outperform traditional time\u0002series approaches in predicting the fu"
+      ],
+      "latency": 7.72249698638916
+    },
+    {
+      "topic": "Operational risk: process mining, failure prediction",
+      "area": "risk",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Business Process Failure Prediction: a case study",
+        "[exa] ",
+        "[exa-h] Business process monitoring aims at maintaining the reliability of process executions. However, the dynamic nature of bu"
+      ],
+      "latency": 9.082902431488037
+    },
+    {
+      "topic": "Financial document analysis: earnings calls, SEC filings",
+      "area": "nlp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to Read a 10-K/10-Q",
+        "[exa] ",
+        "[exa-h] If you want to follow or invest in a U.S. public company, you can find a wealth of information in the company\u2019s annual r"
+      ],
+      "latency": 3.3739333152770996
+    },
+    {
+      "topic": "FinBERT: financial sentiment, named entities",
+      "area": "nlp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] FinBERT: Financial Sentiment Analysis with Pre-trained Language Models - ADS",
+        "[exa] FinBERT: Financial Sentiment Analysis with Pre-trained Language Models",
+        "[exa-h] Financial sentiment analysis is a challenging task due to the specialized language and lack of labeled data in that doma"
+      ],
+      "latency": 9.264349937438965
+    },
+    {
+      "topic": "Contract analysis: clause extraction, comparison",
+      "area": "nlp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Contract Analysis",
+        "[exa] AI contract analysis",
+        "[exa-h] Why This Matters\n* Manual review of contracts is slow and inconsistent\n* Legal teams need to catch clause changes, missi"
+      ],
+      "latency": 4.40081000328064
+    },
+    {
+      "topic": "News impact: event extraction, market correlation",
+      "area": "nlp",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Event-Driven Learning of Systematic Behaviours in Stock Markets - ACL Anthology",
+        "[exa] Which News Moves Stock Prices? A Textual Analysis",
+        "[exa-h] <abstract>It is reported that financial news, especially financial events expressed in news, provide information to inve"
+      ],
+      "latency": 5.789077281951904
+    },
+    {
+      "topic": "Conversational banking: AI chatbots, virtual assistants",
+      "area": "banking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Conversational AI in banking",
+        "[exa] Chatbots in consumer finance",
+        "[exa-h] [Conversational artificial intelligence (AI)] in banking uses AI-powered natural language technology to let customers in"
+      ],
+      "latency": 5.592015027999878
+    },
+    {
+      "topic": "KYC automation: identity verification, document processing",
+      "area": "banking",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] An AI-powered, customizable ID validation platform with built-in orchestration",
+        "[exa] Real-time, friction-free identity verification powered exclusively by AI.",
+        "[exa-h] Account Takeover\n] [\nPromo Abuse\n] [\nBot Detection\n] \n[\nOnboarding\n] [\nCredit Underwriting\n] [\nLocation Spoofing\n] \n[\nMu"
+      ],
+      "latency": 4.170769929885864
+    },
+    {
+      "topic": "Loan underwriting: automated approval decisions",
+      "area": "banking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding Automated Underwriting: Benefits and Applications",
+        "[exa] Designing next-generation credit-decisioning models",
+        "[exa-h] ### Key Takeaways\n* Automated underwriting uses algorithms to make quick, less error-prone loan decisions.\n* This techno"
+      ],
+      "latency": 7.952876091003418
+    },
+    {
+      "topic": "Customer churn prediction: retention strategies",
+      "area": "banking",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stripe logo",
+        "[exa] Stripe logo",
+        "[exa-h] its March 2021 churn rate. Below, we'll look at how businesses can create and manage a churn prediction strategy that wo"
+      ],
+      "latency": 3.875502347946167
+    },
+    {
+      "topic": "RegTech: regulatory compliance automation",
+      "area": "compliance",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Regulatory technology",
+        "[exa] What is RegTech?",
+        "[exa-h] RegTech for financial services spans several domains, including compliance of banks, investment advisers, and broker-dea"
+      ],
+      "latency": 5.032256603240967
+    },
+    {
+      "topic": "Anti-money laundering: transaction monitoring with AI",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AML AI overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] ",
+        "[exa-h] AML AI trains on your core banking data, suspicious activity\ninformation, and other data in your Google Cloud environmen"
+      ],
+      "latency": 4.914972305297852
+    },
+    {
+      "topic": "Model risk management: validation, governance",
+      "area": "compliance",
+      "sources": 5,
+      "vectors": 0,
+      "findings": [
+        "[tavily] Model risk management involves rigorous validation and governance to ensure models are accurate and used correctly, with oversight and policies to mitigate risks. Effective governance includes defined"
+      ],
+      "latency": 4.162870645523071
+    },
+    {
+      "topic": "Explainable AI for finance: regulatory requirements",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] translated provided the source is stated.\nISSN 1020-9999 (online)\nManaging explanations: how regulators can address AI e"
+      ],
+      "latency": 5.6465981006622314
+    }
+  ]
+}

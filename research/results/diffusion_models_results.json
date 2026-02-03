@@ -1,0 +1,248 @@
+{
+  "timestamp": "2026-02-03T02:40:52.736801",
+  "stats": {
+    "sources": 193,
+    "vectors": 193,
+    "findings": 88
+  },
+  "results": [
+    {
+      "topic": "Diffusion models: denoising score matching",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] undergoing a diffusion process. In this work, we derive a corresponding equation called the score FPE that characterizes"
+      ],
+      "latency": 6.833174705505371
+    },
+    {
+      "topic": "DDPM: denoising diffusion probabilistic",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] process. To guide our choices, we establish a new explicit connection between diffusion models\nand denoising score match"
+      ],
+      "latency": 6.460998773574829
+    },
+    {
+      "topic": "Score-based models: Langevin dynamics",
+      "area": "fundamentals",
+      "sources": 5,
+      "vectors": 5,
+      "findings": [
+        "[tavily] Score-based models use Langevin dynamics for sampling by iteratively updating samples based on the score function. This method generates samples that follow the data distribution. Score matching train"
+      ],
+      "latency": 4.543968677520752
+    },
+    {
+      "topic": "Noise schedules: linear, cosine, learned",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Improved Noise Schedule for Diffusion Training",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] of the noise schedule plays a critical role in training diffu\u0002sion models. In DDPM, Ho et al. [21] propose linear sched\u0002"
+      ],
+      "latency": 8.374987840652466
+    },
+    {
+      "topic": "U-Net diffusion: encoder-decoder",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] [Submitted on 12 Mar 2025]\n# Title:Exploring Position Encoding in Diffusion U-Net for Training-free High-resolution Imag"
+      ],
+      "latency": 4.596956491470337
+    },
+    {
+      "topic": "DiT: diffusion transformers",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scalable Diffusion Models with Transformers (DiT)",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] *We explore a new class of diffusion models based on the transformer architecture. We train latent diffusion models of i"
+      ],
+      "latency": 3.7424068450927734
+    },
+    {
+      "topic": "Latent diffusion: compressed space",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Latent Diffusion Models (LDMs) [33, 4] improve both compute efficiency and quality by learning the\ndiffusion process in "
+      ],
+      "latency": 6.939066410064697
+    },
+    {
+      "topic": "Cascaded diffusion: multi-resolution",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > We show that cascaded diffusion models are capable of generating high fidelity images on the class-conditional ImageNe"
+      ],
+      "latency": 6.457698106765747
+    },
+    {
+      "topic": "Text-to-image: CLIP conditioning",
+      "area": "conditioning",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] CLIP: Connecting text and images",
+        "[exa-h] > Contrastive models like CLIP have been shown to learn robust representations of images that capture both semantics and"
+      ],
+      "latency": 7.4162819385528564
+    },
+    {
+      "topic": "Classifier-free guidance: CFG scale",
+      "area": "conditioning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] can be used broadly as an inference-time technique in pure language modeling. We show that\nCFG (1) improves the performa"
+      ],
+      "latency": 9.672994375228882
+    },
+    {
+      "topic": "ControlNet: spatial conditioning",
+      "area": "conditioning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > We present ControlNet, a neural network architecture to add spatial conditioning controls to large, pretrained text-to"
+      ],
+      "latency": 8.86510157585144
+    },
+    {
+      "topic": "IP-Adapter: image prompting",
+      "area": "conditioning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models",
+        "[exa] IP-Adapter",
+        "[exa-h] The image prompt adapter is designed to enable a pretrained text-to-image diffusion model to generate images with image "
+      ],
+      "latency": 8.386080741882324
+    },
+    {
+      "topic": "DDIM: deterministic sampling",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Denoising Diffusion Implicit Models - ADS",
+        "[exa-h] the forward process becomes Markovian, and the generative process becomes a DDPM.\nWe note another special case when \u03c3t ="
+      ],
+      "latency": 4.9710023403167725
+    },
+    {
+      "topic": "Consistency models: one-step generation",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Consistency models",
+        "[exa-h] causes slow generation. To overcome this limita\u0002tion, we propose consistency models, a new fam\u0002ily of models that genera"
+      ],
+      "latency": 7.83807897567749
+    },
+    {
+      "topic": "Distilled diffusion: fewer steps",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > We present a new method for making diffusion models faster to sample. The method distills many-step diffusion models i"
+      ],
+      "latency": 3.3255226612091064
+    },
+    {
+      "topic": "LCM: latent consistency models",
+      "area": "efficiency",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Latent Consistency Models",
+        "[exa] Latent Consistency Model",
+        "[exa-h] Switch between documentation themes\n[Sign Up] \nto get started\nCopy page\n# [] Latent Consistency Models\n![LoRA] \nLatent C"
+      ],
+      "latency": 4.191882133483887
+    },
+    {
+      "topic": "Stable Diffusion: open image generation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stable Diffusion",
+        "[exa] Our most powerful image model yet.",
+        "[exa-h] **Stable Diffusion**is a[deep learning],[text-to-image model] released in 2022 based on[diffusion] techniques. The[gener"
+      ],
+      "latency": 6.116204023361206
+    },
+    {
+      "topic": "DALL-E 3: OpenAI image model",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] DALL\u00b7E 3 Model | OpenAI API",
+        "[exa] DALL\u00b7E 3 | OpenAI",
+        "[exa-h] DALL\u00b7E is an AI system that creates realistic images and art from a natural language description. DALL\u00b7E 3 currently sup"
+      ],
+      "latency": 1.803171157836914
+    },
+    {
+      "topic": "Midjourney: artistic generation",
+      "area": "applications",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Midjourney",
+        "[exa] Midjourney",
+        "[exa-h] We believe that we are all midjourney: that we have a rich past behind us and an unimaginable future ahead \u2014and the ques"
+      ],
+      "latency": 9.128605365753174
+    },
+    {
+      "topic": "Video diffusion: Sora, Runway",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Video generation models as world simulators",
+        "[exa] Runway Gen-3 vs  OpenAI Sora",
+        "[exa-h] We explore large-scale training of generative models on video data. Specifically, we train text-conditional diffusion mo"
+      ],
+      "latency": 11.351489782333374
+    }
+  ]
+}

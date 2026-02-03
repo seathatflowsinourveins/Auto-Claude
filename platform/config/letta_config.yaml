@@ -1,43 +1,69 @@
 # Letta Memory Configuration
-# Part of the V33 Unified Memory Architecture
+# V36 Architecture - Primary Memory Provider
 
-# Letta Cloud Settings
-cloud:
-  enabled: true
-  api_url: "https://api.letta.com/v1"
-  api_key: ${LETTA_API_KEY}  # Set via environment variable
+version: "36.0.0"
+
+# Letta Connection Settings
+connection:
+  # Local Letta Server
+  local:
+    enabled: true
+    api_url: ${LETTA_BASE_URL:-http://localhost:8283}
+    api_key: ${LETTA_API_KEY}
+    timeout_ms: 30000
+
+  # Letta Cloud (fallback)
+  cloud:
+    enabled: false
+    api_url: "https://api.letta.com/v1"
+    api_key: ${LETTA_CLOUD_API_KEY}
 
 # Agent Configuration
 agent:
-  default_name: "unleash-agent"
+  default_name: "unleash-v36-agent"
   system_prompt: |
-    You are the memory agent for the Unleash SDK Platform.
+    You are the memory agent for the Unleash SDK Platform V36.
     You maintain context across sessions and help with:
     - Project decisions and rationale
     - Code patterns and conventions
     - User preferences and workflows
     - Technical learnings and insights
+    - SDK integration patterns
 
-# Memory Block Configuration
+# Memory Block Configuration (Core Memory)
 memory_blocks:
   system_persona:
     max_tokens: 3000
     description: "Agent identity and capabilities"
+    persist: true
+
   user_context:
     max_tokens: 2000
     description: "User preferences and context"
+    persist: true
+
   task_state:
     max_tokens: 2000
     description: "Current task and progress"
+    persist: false
+
   working_memory:
     max_tokens: 5000
     description: "Active session context"
+    persist: false
 
-# Archival Memory Settings
+  sdk_patterns:
+    max_tokens: 3000
+    description: "Learned SDK integration patterns"
+    persist: true
+
+# Archival Memory Settings (Passages API)
 archival:
   enabled: true
   max_passages: 10000
-  embedding_model: "text-embedding-3-small"
+  embedding:
+    model: "voyage-3"
+    fallback: "text-embedding-3-small"
   chunk_size: 512
   overlap: 50
 
@@ -47,15 +73,38 @@ sync:
   sync_interval_seconds: 300
   sync_on_close: true
   conflict_resolution: "latest_wins"
+  batch_size: 50
 
-# Sleep-Time Compute
+# Sleep-Time Compute (Background Consolidation)
 sleep_compute:
   enabled: true
   consolidation_strategy: "hierarchical"
+  triggers:
+    idle_minutes: 5
+    turn_count: 10
+    session_end: true
   summary_interval_hours: 24
   importance_threshold: 0.3
+  max_consolidation_time_ms: 30000
+
+# Integration with V36 Adapters
+adapter_integration:
+  graphiti_sync: true       # Sync entities to Graphiti knowledge graph
+  simplemem_compression: true  # Use SimpleMem for context compression
+  mem0_fallback: true       # Fallback to Mem0 if Letta unavailable
+
+# Resilience
+resilience:
+  retry_attempts: 3
+  retry_delay_ms: 1000
+  circuit_breaker:
+    failure_threshold: 5
+    recovery_timeout_ms: 30000
+  fallback_to_local: true
 
 # Logging
 logging:
   level: "INFO"
   include_api_calls: false
+  include_memory_ops: true
+  metrics_enabled: true

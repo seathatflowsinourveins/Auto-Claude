@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:57:11.923412",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 87
+  },
+  "results": [
+    {
+      "topic": "OpenAI API: chat completions, function calling, JSON mode",
+      "area": "openai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function Calling in the OpenAI API",
+        "[exa] Function calling",
+        "[exa-h] Function calling is supported in both the[Chat Completions API] and the[Assistants API].\n## **How can I use JSON mode?**"
+      ],
+      "latency": 3.7303831577301025
+    },
+    {
+      "topic": "OpenAI Assistants API: threads, runs, file search, code interpreter",
+      "area": "openai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Assistants migration guide",
+        "[exa] Runs | OpenAI API Reference",
+        "[exa-h] Deploy in your product\nOptimize\n[Voice agents] \nTools\n[Using tools] \n[Connectors and MCP] \n[Web search] \n[Code interpret"
+      ],
+      "latency": 5.314140796661377
+    },
+    {
+      "topic": "OpenAI batch API: async processing, cost optimization",
+      "area": "openai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Batch API | OpenAI API",
+        "[exa] Batch | OpenAI API Reference",
+        "[exa-h] Learn how to use OpenAI's Batch API to send asynchronous groups of requests with 50% lower costs, a separate pool of sig"
+      ],
+      "latency": 4.436344146728516
+    },
+    {
+      "topic": "OpenAI structured outputs: JSON schema, strict mode",
+      "area": "openai",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Structured model outputs",
+        "[exa] Introducing Structured Outputs in the API",
+        "[exa-h] # Structured model outputs\nEnsure text responses from the model adhere to a JSON schema you define.\nCopy page\nJSON is on"
+      ],
+      "latency": 4.842713832855225
+    },
+    {
+      "topic": "Anthropic Claude API: messages, tool use, vision",
+      "area": "anthropic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Using the Messages API",
+        "[exa] API Overview",
+        "[exa-h] # Using the Messages API\nCopy page\nPractical patterns and examples for using the Messages API effectively\nCopy page\nThis"
+      ],
+      "latency": 4.224036693572998
+    },
+    {
+      "topic": "Anthropic prompt caching: system prompt caching, cost reduction",
+      "area": "anthropic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prompt caching",
+        "[exa] Prompt caching with Claude",
+        "[exa-h] Copy page\nPrompt caching is a powerful feature that optimizes your API usage by allowing resuming from specific prefixes"
+      ],
+      "latency": 4.730650424957275
+    },
+    {
+      "topic": "Anthropic batches: async processing, large-scale inference",
+      "area": "anthropic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Batch processing",
+        "[exa] Introducing the Message Batches API",
+        "[exa-h] Copy page\nBatch processing is a powerful approach for handling large volumes of requests efficiently. Instead of process"
+      ],
+      "latency": 3.604678153991699
+    },
+    {
+      "topic": "Anthropic computer use: browser automation, screen interaction",
+      "area": "anthropic",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer use tool",
+        "[exa] Computer use tool",
+        "[exa-h] Claude can interact with computer environments through the computer use tool, which provides screenshot capabilities and"
+      ],
+      "latency": 4.1411292552948
+    },
+    {
+      "topic": "Google Gemini API: multimodal, long context, grounding",
+      "area": "google",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Grounding with Google Search",
+        "[exa] Long context",
+        "[exa-h] Grounding with Google Search connects the Gemini model to real-time web content\nand works with all available languages. "
+      ],
+      "latency": 4.217809677124023
+    },
+    {
+      "topic": "Vertex AI: model garden, fine-tuning, deployment",
+      "area": "google",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Use models in Model Garden \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Overview of Model Garden \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] * [Generative AI on Vertex AI] \n[Start free] \n* [Home] \n* [Documentation] \n* [AI and ML] \n* [Vertex AI] \n* [Generative A"
+      ],
+      "latency": 4.3212549686431885
+    },
+    {
+      "topic": "Gemini function calling: parallel, nested, code execution",
+      "area": "google",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling with the Gemini API",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Learn more about limitations and usage of thought signatures, and about thinking\nmodels in general, on the[Thinking] pag"
+      ],
+      "latency": 11.758310317993164
+    },
+    {
+      "topic": "Gemini context caching: long document processing",
+      "area": "google",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Long context \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Long context \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] The primary optimization when working with long context and the Gemini\nmodels is to use[context caching]. Beyond the pre"
+      ],
+      "latency": 8.129834651947021
+    },
+    {
+      "topic": "Cohere Command: RAG, tool use, streaming",
+      "area": "cohere",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cohere's Command R Model",
+        "[exa] Command A | Cohere",
+        "[exa-h] Command R has been trained with conversational tool use capabilities. This functionality takes a conversation as input ("
+      ],
+      "latency": 6.906969308853149
+    },
+    {
+      "topic": "Cohere Embed: multilingual, clustering, semantic search",
+      "area": "cohere",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multilingual Embed Models",
+        "[exa] Semantic Search with Cohere Models",
+        "[exa-h] Our Multilingual Model maps text to a semantic vector space, positioning text with a similar meaning in close proximity."
+      ],
+      "latency": 3.177358865737915
+    },
+    {
+      "topic": "Cohere Rerank: cross-encoder reranking, relevance scoring",
+      "area": "cohere",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] An Overview of Cohere's Rerank Model",
+        "[exa] Cohere\u2019s Rerank Model (Details and Application)",
+        "[exa-h] The[Rerank API endpoint], powered by the[Rerank models], is a simple and very powerful tool for semantic search. Given a"
+      ],
+      "latency": 5.510221719741821
+    },
+    {
+      "topic": "Cohere Compass: enterprise search, connectors",
+      "area": "cohere",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Compass points the way  to useful business insights",
+        "[exa] ",
+        "[exa-h] Minimal configuration required.\n#### Connectors for your data sources\nCompass lets you connect to your data sources or u"
+      ],
+      "latency": 5.5796215534210205
+    },
+    {
+      "topic": "AWS Bedrock: model access, provisioned throughput, guardrails",
+      "area": "bedrock",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prerequisites for Provisioned Throughput",
+        "[exa] Use a Provisioned Throughput with an Amazon Bedrock resource",
+        "[exa-h] (Optional) You can restrict the role's access in the following ways:\n* To restrict the API actions that the role can mak"
+      ],
+      "latency": 9.226569175720215
+    },
+    {
+      "topic": "Bedrock agents: action groups, knowledge bases, orchestration",
+      "area": "bedrock",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How Amazon Bedrock Agents works",
+        "[exa] Automate tasks in your application using AI agents",
+        "[exa-h] * **Knowledge bases**\u2013 Associate knowledge bases with an agent. The agent queries the knowledge base for extra context t"
+      ],
+      "latency": 9.030473232269287
+    },
+    {
+      "topic": "Bedrock flows: visual workflow builder, conditions, loops",
+      "area": "bedrock",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Create a flow with a condition node",
+        "[exa] Node types for your flow",
+        "[exa-h] 1. From the**Flow builder**left pane, select the**Nodes**tab.\n2. Drag a**Condition**node into your flow in the center pa"
+      ],
+      "latency": 5.869940280914307
+    },
+    {
+      "topic": "Bedrock evaluation: model comparison, custom metrics",
+      "area": "bedrock",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Bedrock Evaluations",
+        "[exa] Use metrics to understand model performance",
+        "[exa-h] Amazon Bedrock provides evaluation tools for you to accelerate adoption of generative AI applications. Evaluate, compare"
+      ],
+      "latency": 8.168111324310303
+    }
+  ]
+}

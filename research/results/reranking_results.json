@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:53:04.538048",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Cohere Rerank: reranking API",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Rerank API (v2)",
+        "[exa] Rerank API (v2)",
+        "[exa-h] * v1/embed-jobs\n* v1/datasets\n* v1/tokenize\n* v1/detokenize\n* v1/models\n* Deprecated\n* v1/classify\n* v1/connectors\n* v1/"
+      ],
+      "latency": 10.192096471786499
+    },
+    {
+      "topic": "BGE Reranker: BAAI cross-encoder",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] BGE-Reranker #",
+        "[exa] .css-spn4bz{transition-property:var(--chakra-transition-property-common);transition-duration:var(--chakra-transition-duration-fast);transition-timing-function:var(--chakra-transition-easing-ease-out);cursor:pointer;-webkit-text-decoration:none;text-decoration:none;outline:2px solid transparent;outline-offset:2px;color:inherit;}.css-spn4bz:hover,.css-spn4bz[data-hover]{-webkit-text-decoration:underline;text-decoration:underline;}.css-spn4bz:focus-visible,.css-spn4bz[data-focus-visible]{box-shadow:var(--chakra-shadows-outline);} bge-reranker-large",
+        "[exa-h] Different from embedding model, reranker, or cross-encoder uses question and document as input and directly output simil"
+      ],
+      "latency": 8.040371656417847
+    },
+    {
+      "topic": "Jina Reranker: jina-reranker-v2",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] jina-reranker-v2 #",
+        "[exa] Jina AI - Rerankers Milvus v2.5.x documentation",
+        "[exa-h] * **Abilities:**rerank\n## Specifications[#] \n* **Model ID:**jinaai/jina-reranker-v2-base-multilingual\nExecute the follow"
+      ],
+      "latency": 6.886445999145508
+    },
+    {
+      "topic": "ColBERT: late interaction",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] both vectors. An alternative is late interaction, in\u0002troduced in ColBERT (Khattab and Zaharia, 2020),\nwhere queries and "
+      ],
+      "latency": 6.881481170654297
+    },
+    {
+      "topic": "Cross-encoder: bi-encoder comparison",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] ",
+        "[exa-h] > Bi-encoders and cross-encoders are widely used in many state-of-the-art retrieval pipelines. In this work we study the"
+      ],
+      "latency": 8.650017023086548
+    },
+    {
+      "topic": "Late interaction: efficient reranking",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] LITE outperforms previous late-interaction models such as ColBERT on both in-domain and zero-shot re-ranking tasks. For "
+      ],
+      "latency": 8.745795488357544
+    },
+    {
+      "topic": "Multi-vector retrieval: ColBERT",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] both vectors. An alternative is late interaction, in\u0002troduced in ColBERT (Khattab and Zaharia, 2020),\nwhere queries and "
+      ],
+      "latency": 11.077170372009277
+    },
+    {
+      "topic": "Hybrid retrieval: dense sparse",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dense\u2013Sparse Hybrid Retrieval",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] * It leverages complementary strengths by combining BM25-like sparse matching for precision with transformer-based dense"
+      ],
+      "latency": 10.204726696014404
+    },
+    {
+      "topic": "Reranker training: contrastive",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] The performance of state-of-the-art neural\nrankers can deteriorate substantially when ex\u0002posed to noisy inputs or applie"
+      ],
+      "latency": 6.893239498138428
+    },
+    {
+      "topic": "Distillation: cross-encoder to bi",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Neural retrievers based on pre-trained language models (PLMs), such as dual-encoders, have achieved promising performa"
+      ],
+      "latency": 9.293394327163696
+    },
+    {
+      "topic": "Hard negative mining: reranking",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Hard Negative Mining in Nature Language Processing (How to Select Negative Examples in Classification and Rank Task)",
+        "[exa-h] an extensive corpus. This study focuses on explaining the crucial role of hard negatives in the training process of cros"
+      ],
+      "latency": 7.407655239105225
+    },
+    {
+      "topic": "Multi-task reranking: generalization",
+      "area": "training",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Multi-task learning to rank for web search",
+        "[exa-h] a single BERT model as a way to mitigate this issue. We show that with\na combination of multi-task and distillation tech"
+      ],
+      "latency": 7.187062978744507
+    },
+    {
+      "topic": "RAG reranking: two-stage retrieval",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Shifting from Ranking to Set Selection for Retrieval Augmented Generation",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Retrieval-Augmented Generation (RAG) systems combine retrieval modules with language models to enhance factual accuracy "
+      ],
+      "latency": 9.143864870071411
+    },
+    {
+      "topic": "Reciprocal rank fusion: RRF",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Reciprocal Rank Fusion (RRF), a simple method for com\u0002bining the document rankings from multiple IR systems,\nconsistentl"
+      ],
+      "latency": 7.079352378845215
+    },
+    {
+      "topic": "Score calibration: normalization",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 1.16.  Probability calibration #",
+        "[exa] ",
+        "[exa-h] are predicted separately. As those probabilities do not necessarily sum to\none, a postprocessing is performed to normali"
+      ],
+      "latency": 8.161344528198242
+    },
+    {
+      "topic": "Cascade ranking: efficiency",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Ordinal Pareto efficiency",
+        "[exa] Multi-criteria design of membrane cascades: Selection of configurations and process parameters",
+        "[exa-h] An allocation X = (X1,...,Xn) Pareto-dominates another allocation Y = (Y1,...,Yn), if every agent i weakly prefers the b"
+      ],
+      "latency": 10.045943260192871
+    },
+    {
+      "topic": "Reranking metrics: NDCG MRR",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Ranking is used for a wide array of problems, most notably information retrieval (search). Kendall\u2019s \u03c4 , Average Precisi"
+      ],
+      "latency": 7.290107011795044
+    },
+    {
+      "topic": "Latency tradeoffs: speed quality",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Latency vs quality tradeoffs: Optimization strategies",
+        "[exa] Primer on Latency and Bandwidth",
+        "[exa-h] Fast is valuable. Correct is valuable. The craft is knowing when to choose each, then designing systems that keep both h"
+      ],
+      "latency": 9.440481901168823
+    },
+    {
+      "topic": "A/B testing: reranking impact",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Debiased balanced interleaving at Amazon Search",
+        "[exa-h] A/B test. To address these challenges, we developed interleaving\nand counterfactual evaluation methods to facilitate rap"
+      ],
+      "latency": 13.360424518585205
+    },
+    {
+      "topic": "BEIR benchmark: zero-shot",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Zero-Shot BEIR Tasks",
+        "[exa-h] BEIR aims to provide a one-stop zero-shot evaluation benchmark for all diverse retrieval tasks. To\nconstruct a comprehen"
+      ],
+      "latency": 6.893545389175415
+    }
+  ]
+}

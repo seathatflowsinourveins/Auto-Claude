@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:51:29.462958",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 89
+  },
+  "results": [
+    {
+      "topic": "CLIP: contrastive language-image pretraining",
+      "area": "vlm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CLIP: Connecting text and images",
+        "[exa] ",
+        "[exa-h] Illustration:Justin Jay Wang\nLoading\u2026\nShare\nWe\u2019re introducing a neural network called CLIP which efficiently learns visu"
+      ],
+      "latency": 9.365267992019653
+    },
+    {
+      "topic": "GPT-4V: multimodal understanding with vision",
+      "area": "vlm",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] GPT-4V(ision) system card",
+        "[exa] ",
+        "[exa-h] GPT\u20114 with vision (GPT\u20114V) enables users to instruct GPT\u20114 to analyze image inputs provided by the user, and is the late"
+      ],
+      "latency": 8.7079758644104
+    },
+    {
+      "topic": "LLaVA: large language and vision assistant",
+      "area": "vlm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLaVA: Large Language and Vision Assistant - Microsoft Research",
+        "[exa] ",
+        "[exa-h] LLaVA is an open-source project, collaborating with research community to advance the state-of-the-art in AI. LLaVA repr"
+      ],
+      "latency": 7.561078071594238
+    },
+    {
+      "topic": "Image captioning: describing visual content",
+      "area": "vlm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] > Automatically describing the content of an image is a fundamental problem in artificial intelligence that connects com"
+      ],
+      "latency": 9.226295471191406
+    },
+    {
+      "topic": "YOLO evolution: real-time object detection",
+      "area": "detection",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] You Only Look Once: Unified, Real-Time Object Detection - ADS",
+        "[exa-h] > Over the past years, YOLOs have emerged as the predominant paradigm in the field of real-time object detection owing t"
+      ],
+      "latency": 11.079187631607056
+    },
+    {
+      "topic": "Segment Anything (SAM): universal segmentation",
+      "area": "detection",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Segment Anything",
+        "[exa-h] > We present Segment Anything Model (SAM) 3, a unified model that detects, segments, and tracks objects in images and vi"
+      ],
+      "latency": 5.546600341796875
+    },
+    {
+      "topic": "Grounding DINO: open-set object detection",
+      "area": "detection",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection - ADS",
+        "[exa-h] [Submitted on 16 May 2024 ([v1]), last revised 1 Jun 2024 (this version, v2)]\n# Title:Grounding DINO 1.5: Advance the \"E"
+      ],
+      "latency": 5.430549383163452
+    },
+    {
+      "topic": "Object tracking: multi-object tracking (MOT)",
+      "area": "detection",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] MOTChallenge: A Benchmark for Single-Camera Multiple Target Tracking - ADS",
+        "[exa-h] > Multiple Object Tracking (MOT) has gained increasing attention due to its academic and commercial potential. Although "
+      ],
+      "latency": 4.299960136413574
+    },
+    {
+      "topic": "Image classification: modern architectures, ViT",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] show that this reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches c"
+      ],
+      "latency": 5.025011777877808
+    },
+    {
+      "topic": "Scene understanding: spatial relationships",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scene Graph Generation: A Comprehensive Survey - ADS",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] Deep learning techniques have led to remarkable breakthroughs in the field of generic object detection and have spawned "
+      ],
+      "latency": 4.112649202346802
+    },
+    {
+      "topic": "OCR advances: document, scene text recognition",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] MonkeyOCR v1.5 Technical Report: Unlocking Robust Document Parsing for Complex Patterns - ADS",
+        "[exa-h] OCR systems. We introduce MonkeyOCR v1.5, a unified vision-language framework that enhances both layout understanding an"
+      ],
+      "latency": 10.470003604888916
+    },
+    {
+      "topic": "Visual question answering: VQA systems",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] automatic evaluation is still a difficult and open research\nproblem [43, 10, 18].\nIn this paper, we introduce the task o"
+      ],
+      "latency": 5.552123546600342
+    },
+    {
+      "topic": "Stable Diffusion: text-to-image generation",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stable Diffusion",
+        "[exa] Our most powerful image model yet.",
+        "[exa-h] **Stable Diffusion**is a[deep learning],[text-to-image model] released in 2022 based on[diffusion] techniques. The[gener"
+      ],
+      "latency": 6.75114369392395
+    },
+    {
+      "topic": "DALL-E: OpenAI's image generation",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] DALL\u00b7E: Creating images from text",
+        "[exa] DALL\u00b7E 2",
+        "[exa-h] We\u2019ve trained a neural network called DALL\u00b7E that creates images from text captions for a wide range of concepts express"
+      ],
+      "latency": 3.7691211700439453
+    },
+    {
+      "topic": "Image editing: inpainting, outpainting, manipulation",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Inpainting",
+        "[exa] Inpainting",
+        "[exa-h] Inpainting replaces or edits specific areas of an image. This makes it a useful tool for image restoration like removing"
+      ],
+      "latency": 3.6836414337158203
+    },
+    {
+      "topic": "Video generation: Sora, Runway, Pika",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Video generation with Sora",
+        "[exa] Creating video from text",
+        "[exa-h] Sora is OpenAI\u2019s newest frontier in generative media \u2013a state-of-the-art video model capable of creating richly detailed"
+      ],
+      "latency": 11.042489767074585
+    },
+    {
+      "topic": "Vision model optimization: TensorRT, ONNX",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Best Practices #",
+        "[exa] Best Practices #",
+        "[exa-h] NVIDIA TensorRT for RTX\n] \nChoose version\n* [Documentation Home] \n******\n[Is this page helpful?] \n# Best Practices[#] \n*"
+      ],
+      "latency": 7.2483954429626465
+    },
+    {
+      "topic": "Edge vision: mobile and embedded deployment",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deploying to Embedded Targets - EdgeFirst Studio Documentation",
+        "[exa] What is Azure Internet of Things (IoT)?",
+        "[exa-h] This workflow is currently only supported on NXP i.MX 8M Plus EVK platforms running the [NXP Yocto BSP].\n\nThe EdgeFirst "
+      ],
+      "latency": 4.692460775375366
+    },
+    {
+      "topic": "Vision APIs: cloud services comparison",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Best Vision AI API Tools Compared for 2025",
+        "[exa] Vision AI: Image and visual AI tools | Google Cloud",
+        "[exa-h] After spending three months testing these platforms with real production workloads, the landscape looks dramatically dif"
+      ],
+      "latency": 4.577713251113892
+    },
+    {
+      "topic": "Vision evaluation: metrics, benchmarks, datasets",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Holistic Evaluation of Vision-Language Models",
+        "[exa] ",
+        "[exa-h] perception**,**bias**,**fairness**,**knowledge**,**multilinguality**,**reasoning**,**robustness**,**safety**, and**toxic"
+      ],
+      "latency": 8.949055910110474
+    }
+  ]
+}

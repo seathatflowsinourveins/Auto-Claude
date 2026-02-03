@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:36:43.485070",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 87
+  },
+  "results": [
+    {
+      "topic": "State space models: linear RNN alternative",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] each with unique strengths and tradeoffs in modeling power and computational\nefficiency. We introduce a simple sequence "
+      ],
+      "latency": 8.351992845535278
+    },
+    {
+      "topic": "S4: structured state spaces",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Efficiently Modeling Long Sequences with Structured State Spaces",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] * Publishedin[International Conference on\u2026] 31 October 2021\n* Computer Science\nTLDR\nThe Structured State Space sequence "
+      ],
+      "latency": 10.398696422576904
+    },
+    {
+      "topic": "Mamba: selective state spaces",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Mamba: Linear-Time Sequence Modeling with Selective State Spaces",
+        "[exa] Mamba Selective State Space Model",
+        "[exa-h] # Mamba: Linear-Time Sequence Modeling with Selective State Spaces\nAssistantMy NotesComments2Similar"
+      ],
+      "latency": 4.029452323913574
+    },
+    {
+      "topic": "RWKV: receptance weighted key value",
+      "area": "core",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] RWKV: Reinventing RNNs for the Transformer Era - ACL Anthology",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] limitations in parallelization and scalability. We propose a novel model architecture, Receptance Weighted Key Value (RW"
+      ],
+      "latency": 7.461773157119751
+    },
+    {
+      "topic": "Linear complexity: O(n) sequence modeling",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Linear Complexity and Random Sequences",
+        "[exa] ",
+        "[exa-h] the shortest linear feedback shift register (LFSR) that is able to generate the given sequence. This length is often ref"
+      ],
+      "latency": 9.7110595703125
+    },
+    {
+      "topic": "Selective scan: input-dependent dynamics",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Transitions in dynamical regime and neural mode during perceptual decisions - Nature",
+        "[exa-h] We reframe image scanning as an adaptive sequential decision process, moving beyond fixed,\ncontent-agnostic paths (e.g.,"
+      ],
+      "latency": 5.824821710586548
+    },
+    {
+      "topic": "Hardware efficiency: parallel scan",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] RandMScan: accelerating parallel scan via matrix computation and random-jump strategy",
+        "[exa-h] to the PRAM models that can execute as fast as memory refer\u0002ences in practice, and that can reduce the number of program"
+      ],
+      "latency": 6.114320993423462
+    },
+    {
+      "topic": "Continuous-time models: ODEs for sequences",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] strategy to each input, and can explicitly trade numerical precision for speed. We demonstrate these properties in conti"
+      ],
+      "latency": 8.334440231323242
+    },
+    {
+      "topic": "SSM vs Transformers: tradeoffs",
+      "area": "comparison",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] On the Tradeoffs of SSMs and Transformers",
+        "[exa] Computer Science > Hardware Architecture",
+        "[exa-h] rest of this post, we\u2019re going to try to get a grasp on the higher-level tradeoffs between SSMs and Transformers."
+      ],
+      "latency": 4.4383275508880615
+    },
+    {
+      "topic": "Long-range modeling: sequence length",
+      "area": "comparison",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > We present a series of long-context LLMs that support effective context windows of up to 32,768 tokens. Our model seri"
+      ],
+      "latency": 6.434217214584351
+    },
+    {
+      "topic": "Training efficiency: compute requirements",
+      "area": "comparison",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] training trajectory, without additional training costs, across different scales. Importantly, with these findings we dem"
+      ],
+      "latency": 4.7403340339660645
+    },
+    {
+      "topic": "Inference speed: generation throughput",
+      "area": "comparison",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Performance",
+        "[exa-h] Scaling up model sizes can unlock new capabilities and\napplications but has fundamental tradeoffs in terms of in\u0002ference"
+      ],
+      "latency": 4.004422187805176
+    },
+    {
+      "topic": "Mamba language models: text generation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transformers",
+        "[exa] Transformers",
+        "[exa-h] pipeline = pipeline(\ntask=\"text-generation\",\nmodel=\"mistralai/Mamba-Codestral-7B-v0.1\",\ndtype=torch.bfloat16,\ndevice=0)\n"
+      ],
+      "latency": 4.1614720821380615
+    },
+    {
+      "topic": "SSM for audio: speech, music",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Electrical Engineering and Systems Science > Audio and Speech Processing",
+        "[exa] ",
+        "[exa-h] > General audio source separation is a key capability for multimodal AI systems that can perceive and reason about sound"
+      ],
+      "latency": 4.729385614395142
+    },
+    {
+      "topic": "SSM for genomics: DNA sequences",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Genomics Data Transfer, Analytics, and Machine Learning using AWS Services",
+        "[exa] What is AWS HealthOmics?",
+        "[exa-h] to build a next-generation sequencing (NGS) platform from instrument to interpretation using\nAWS services. We provide re"
+      ],
+      "latency": 6.947387456893921
+    },
+    {
+      "topic": "SSM for video: temporal modeling",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Video Mamba Suite: State Space Model as a Versatile Alternative for Video Understanding",
+        "[exa] ",
+        "[exa-h] understanding videos, as well as investigate diverse tasks where Mamba may exhibit superiority. We categorize Mamba into"
+      ],
+      "latency": 8.534462451934814
+    },
+    {
+      "topic": "Mamba-Transformer: hybrid architectures",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Jamba:\n A Hybrid Transformer-Mamba Language Model",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] We present Jamba, a new base large language model based on a novel hybrid Transformer-Mamba mixture-of-experts (MoE) arc"
+      ],
+      "latency": 7.759686231613159
+    },
+    {
+      "topic": "Jamba: Mamba + attention",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Jamba-1.5:\n Hybrid Transformer-Mamba Models at Scale",
+        "[exa-h] We introduce Jamba, a novel hybrid architecture, which combines Transformer layers (Vaswani\net al., 2017) with Mamba lay"
+      ],
+      "latency": 3.6934220790863037
+    },
+    {
+      "topic": "Zamba: efficient hybrids",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] we propose a practical and scalable alternative: composing efficient hybrid language\nmodels from existing pre-trained mo"
+      ],
+      "latency": 5.006844997406006
+    },
+    {
+      "topic": "Future of SSM: research directions",
+      "area": "hybrid",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] A Survey of LLM-based Deep Search Agents: Paradigm, Optimization, Evaluation, and Challenges",
+        "[exa-h] decoding, LoRA/QLoRA, routing, energy efficiency, edge \ninference\nI. INTRODUCTION \nThe long-held conventional wisdom tha"
+      ],
+      "latency": 4.289487361907959
+    }
+  ]
+}

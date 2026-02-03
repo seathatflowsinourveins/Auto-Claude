@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:45:29.769513",
+  "stats": {
+    "sources": 200,
+    "vectors": 190,
+    "findings": 86
+  },
+  "results": [
+    {
+      "topic": "JSON mode in LLMs: guaranteed valid JSON output",
+      "area": "json",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Enforcing JSON outputs on LLMs",
+        "[exa] Structured model outputs",
+        "[exa-h] [View on GitHub] \nCopy page\n# Enforcing JSON outputs on LLMs\n[Outlines] is a tool that lets you control the generation o"
+      ],
+      "latency": 7.2955920696258545
+    },
+    {
+      "topic": "Schema-constrained generation: Pydantic models for LLMs",
+      "area": "json",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] FastAPI revolutionized web development by offering an innovative and ergonomic design, built on the foundation of[Pydant"
+      ],
+      "latency": 3.716226100921631
+    },
+    {
+      "topic": "Nested JSON structures: complex object generation",
+      "area": "json",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Creating nested objects with multiple properties",
+        "[exa] Creating Complex JSON Structures in C#: An In-Depth Guide",
+        "[exa-h] These nested object structures provide a foundation for generating complex, realistic test data that can be used in vari"
+      ],
+      "latency": 3.3967018127441406
+    },
+    {
+      "topic": "JSON repair: fixing malformed LLM outputs",
+      "area": "json",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] JSON Repair \u2014 fix malformed JSON online",
+        "[exa-h] Some LLMs are a bit iffy when it comes to returning well formed JSON data, sometimes they skip a parentheses and sometim"
+      ],
+      "latency": 3.9828031063079834
+    },
+    {
+      "topic": "Function calling APIs: OpenAI, Anthropic, Gemini formats",
+      "area": "functions",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling with the Gemini API",
+        "[exa] Function calling",
+        "[exa-h] ```\n### REST\n```"
+      ],
+      "latency": 3.823967695236206
+    },
+    {
+      "topic": "Tool use patterns: when to use function calling",
+      "area": "functions",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling",
+        "[exa] LangChain overview",
+        "[exa-h] # Function calling\nGive models access to new functionality and data they can use to follow instructions and respond to p"
+      ],
+      "latency": 3.5998637676239014
+    },
+    {
+      "topic": "Parallel function calls: multiple tools in one response",
+      "area": "functions",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Page not found | OpenAI API",
+        "[exa] Function calling",
+        "[exa-h] Deploy in your product\nOptimize\n[Voice agents] \nTools\n[Using tools] \n[Connectors and MCP] \n[Web search] \n[Code interpret"
+      ],
+      "latency": 5.327782154083252
+    },
+    {
+      "topic": "Function call validation: type checking arguments",
+      "area": "functions",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] More on Functions",
+        "[exa] Callables \u00b6",
+        "[exa-h] // a 'slice' method, but not the returned object!\nconsole.log(arr.slice(0));\n`[Try] \n```\n### [] Specifying Type Argument"
+      ],
+      "latency": 5.5748960971832275
+    },
+    {
+      "topic": "Named entity extraction: people, places, organizations",
+      "area": "extraction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Named Entity Recognition",
+        "[exa] Named Entity Recognizer",
+        "[exa-h] Recognizes named entities (person and company names, etc.) in text. Principally, this annotator uses one or more machine"
+      ],
+      "latency": 5.118450164794922
+    },
+    {
+      "topic": "Relation extraction: identifying connections between entities",
+      "area": "extraction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Comprehensive Survey on Relation Extraction: Recent Advances and New Frontiers",
+        "[exa] ",
+        "[exa-h] Relation extraction (RE) involves identifying the relations between entities from underlying content. RE serves as the f"
+      ],
+      "latency": 3.764561653137207
+    },
+    {
+      "topic": "Form filling: extracting structured data from text",
+      "area": "extraction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Extraction overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] system that uses knowledge of the types of the\ntarget fields to generate extraction candidates,\nand a neural network arc"
+      ],
+      "latency": 7.559879541397095
+    },
+    {
+      "topic": "Table extraction: converting text to tabular data",
+      "area": "extraction",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Recently, significant progress has been made applying machine learning to the problem of table structure inference and"
+      ],
+      "latency": 3.296612501144409
+    },
+    {
+      "topic": "Instructor library: structured outputs with Pydantic",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Structured Outputs by Example",
+        "[exa] Getting Started with Structured Outputs \u00b6",
+        "[exa-h] Requires Python`>=3.9`and latest versions of Instructor and Pydantic.\n### Getting Started\nIntroduction to structured out"
+      ],
+      "latency": 4.056268692016602
+    },
+    {
+      "topic": "Outlines: constrained generation with grammars",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Grammar - Outlines",
+        "[exa] ",
+        "[exa-h] Outlines contains a (small) library of grammars that can be imported and use directly. We can rewrite the previous examp"
+      ],
+      "latency": 5.563308954238892
+    },
+    {
+      "topic": "LMQL: query language for LLM outputs",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Language Reference  \u200b",
+        "[exa] Language Reference  \u200b",
+        "[exa-h] LMQL is a programming language for*LLM programming*. The primary design objective for LMQL is to provide a simple, yet p"
+      ],
+      "latency": 6.434031009674072
+    },
+    {
+      "topic": "Guidance: template-based structured generation",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Page not found | OpenAI API",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] ### Page not found\nWe couldn't find the page you were looking for."
+      ],
+      "latency": 3.6536121368408203
+    },
+    {
+      "topic": "Constrained decoding: token-level schema enforcement",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Automata-based constraints for language model decoding",
+        "[exa-h] > Reliably generating structured outputs has become a critical capability for modern language model (LM) applications. C"
+      ],
+      "latency": 4.62563419342041
+    },
+    {
+      "topic": "Grammar-guided generation: BNF, regex constraints",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] grammars/README.md \u00b7 9c1ba557335c3cab46807e6478eb7d17a63361f1 \u00b7 aigc/llama.cpp",
+        "[exa-h] [Submitted on 23 May 2023 ([v1]), last revised 18 Jan 2024 (this version, v6)]\n# Title:Grammar-Constrained Decoding for "
+      ],
+      "latency": 8.03344988822937
+    },
+    {
+      "topic": "Multi-step structured outputs: chains of schema objects",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] LangChain overview",
+        "[exa-h] * [\nChangelog\n] \n* [\nPhilosophy\n] \n##### Core components\n* [\nAgents\n] \n* [\nModels\n] \n* [\nMessages\n] \n* [\nTools\n] \n* [\nSh"
+      ],
+      "latency": 9.053393125534058
+    },
+    {
+      "topic": "Streaming structured outputs: incremental JSON parsing",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] [tsconfig.json] \n|\n|\n|\nView all files\n|\n## Repository files navigation\n# jsonriver\n[] \nParse JSON incrementally as it st"
+      ],
+      "latency": 8.573904514312744
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:08:17.297979",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 95
+  },
+  "results": [
+    {
+      "topic": "LLM enterprise deployment: on-premise vs cloud strategies",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] The enterprise guide to LLMs: Selection, integration, and architecture",
+        "[exa-h] independence and autonomy - whether to keep their data in-house (on-premises) or share \nit with third parties. This cruc"
+      ],
+      "latency": 10.000550508499146
+    },
+    {
+      "topic": "Private LLM hosting: Azure OpenAI, AWS Bedrock",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OpenAI's open weight models in Amazon Bedrock",
+        "[exa] Amazon Bedrock",
+        "[exa-h] OpenAI's open weight models are available in Amazon Bedrock, expanding your ability to build and scale generative AI app"
+      ],
+      "latency": 8.726882696151733
+    },
+    {
+      "topic": "LLM gateway patterns: routing, caching, load balancing",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Request routing #",
+        "[exa] Envoy AI Gateway Capabilities",
+        "[exa-h] Ray Serve LLM provides customizable request routing to optimize request distribution across replicas for different workl"
+      ],
+      "latency": 10.192375659942627
+    },
+    {
+      "topic": "Model serving at scale: Kubernetes, Ray Serve",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Production Guide #",
+        "[exa] Ray Serve: Scalable and Programmable Serving #",
+        "[exa-h] The RayService custom resource automatically handles important production requirements such as health checking, status r"
+      ],
+      "latency": 8.438671350479126
+    },
+    {
+      "topic": "LLM data privacy: PII detection, data residency",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] This paper proposes an adaptive system designed to dy\u0002namically assess and mitigate risks associated with PII and\nSPI in"
+      ],
+      "latency": 9.606134414672852
+    },
+    {
+      "topic": "AI audit trails: logging, explainability requirements",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Log model activity",
+        "[exa] ",
+        "[exa-h] Maintain logs of AI system processes, actions, and model outputs where permitted to support incident investigation, audi"
+      ],
+      "latency": 9.386735439300537
+    },
+    {
+      "topic": "GDPR and AI: right to explanation, data rights",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Legal framework",
+        "[exa] How do we ensure individual rights in our AI systems?",
+        "[exa-h] The General Data Protection Regulation (GDPR) and the Data Protection Act 2018 (DPA 2018) regulate the collection and us"
+      ],
+      "latency": 7.164236783981323
+    },
+    {
+      "topic": "SOC 2 for AI systems: security controls, compliance",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 2017 Trust Services Criteria (With Revised Points of Focus \u2013 2022)",
+        "[exa] SOC 2\u00ae - SOC for Service Organizations: Trust Services Criteria",
+        "[exa-h] To gain access to exclusive content, your first step is to join the[AICPA & CIMA.] \n## Mentioned in this article\n### Top"
+      ],
+      "latency": 7.792977333068848
+    },
+    {
+      "topic": "LLM enterprise integration: ERP, CRM, legacy systems",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automated Creation and Enrichment Framework for Improved Invocation of Enterprise APIs as Tools",
+        "[exa] Anthropic Adapter Capabilities",
+        "[exa-h] Recent advancements in Large Language Models (LLMs) has lead to the development of agents capable of complex reasoning a"
+      ],
+      "latency": 9.53593111038208
+    },
+    {
+      "topic": "Document processing enterprise: contract analysis, extraction",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Document Intelligence contract model",
+        "[exa] Contract AI  That Scales",
+        "[exa-h] The Document Intelligence contract model uses powerful Optical Character Recognition (OCR) capabilities to analyze and e"
+      ],
+      "latency": 8.985917091369629
+    },
+    {
+      "topic": "Knowledge management: enterprise search, wikis, docs",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is knowledge management?",
+        "[exa] Knowledge management  for all",
+        "[exa-h] ### Knowledge management with Elastic\n[Search] is key to effective knowledge management.[Elasticsearch] is a highly scal"
+      ],
+      "latency": 9.51204776763916
+    },
+    {
+      "topic": "Customer service AI: enterprise chatbots, ticketing",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Zendesk uses OpenAI to build adaptive service agents focused on resolutions",
+        "[exa] Agentic AI Is the New Frontier in Customer Service Transformation",
+        "[exa-h] In early 2023, Zendesk began working closely with OpenAI to explore how AI could reshape service and product development"
+      ],
+      "latency": 8.037438154220581
+    },
+    {
+      "topic": "LLM cost optimization: token efficiency, caching",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Optimizing Large Language Model Infrastructure: A Practitioner\u2019s Guide to Latency, Cost, and Quality Trade-offs",
+        "[exa-h] > Large language models (LLMs) have excelled in various applications, yet serving them at scale is challenging due to th"
+      ],
+      "latency": 7.911378383636475
+    },
+    {
+      "topic": "Enterprise LLM monitoring: cost tracking, usage analytics",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Usage and Cost API",
+        "[exa] Usage | OpenAI API Reference",
+        "[exa-h] The Usage & Cost Admin API provides programmatic and granular access to historical API usage and cost data for your orga"
+      ],
+      "latency": 8.031632423400879
+    },
+    {
+      "topic": "Model selection: cost vs quality trade-offs",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Model Assessment and Selection",
+        "[exa-h] quantify \\parsimony\" of a model relative to the available data. Applying this measure to a number of\ncandidates, we sear"
+      ],
+      "latency": 4.102124929428101
+    },
+    {
+      "topic": "Fine-tuning economics: when to customize vs prompt",
+      "area": "cost",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Generative artificial intelligence (AI) has the potential to revolutionize research. I analyze how large language models"
+      ],
+      "latency": 11.333301305770874
+    },
+    {
+      "topic": "Microsoft Copilot: enterprise AI integration",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Microsoft 365 Copilot hub",
+        "[exa] Empower your organization with Copilot",
+        "[exa-h] Your AI assistant for work and school. Microsoft 365 Copilot is embedded in the apps you already use every day, connecte"
+      ],
+      "latency": 3.3459157943725586
+    },
+    {
+      "topic": "Salesforce Einstein GPT: CRM AI capabilities",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Artificial Intelligence (AI) at Salesforce",
+        "[exa] Salesforce Announces Einstein GPT, the World\u2019s First Generative AI for CRM",
+        "[exa-h] Salesforce Einstein is the #1[Trusted AI] for CRM that delivers AI-powered predictions and generated content. Einstein p"
+      ],
+      "latency": 6.592604160308838
+    },
+    {
+      "topic": "ServiceNow AI: IT service management automation",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ServiceNow - Put AI to Work",
+        "[exa] Now Assist  - ServiceNow",
+        "[exa-h] Automate business processes, streamline app development, and manage digital infrastructure.\n] \n* [### Customer Service M"
+      ],
+      "latency": 5.854855537414551
+    },
+    {
+      "topic": "Workday AI: HR and finance automation",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI that truly understands work.",
+        "[exa] AI Agents from Workday | Workday CA",
+        "[exa-h] Workday AI drives innovation and growth for organizations of any size, in any industry. Built on the largest, cleanest H"
+      ],
+      "latency": 3.2515814304351807
+    }
+  ]
+}

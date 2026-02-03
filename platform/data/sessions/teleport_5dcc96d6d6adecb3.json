@@ -1,6 +1,6 @@
 {
   "session_id": "5dcc96d6d6adecb3",
-  "exported_at": "2026-02-02T14:27:08.556213+00:00",
+  "exported_at": "2026-02-03T16:48:37.418264+00:00",
   "knowledge_base": {
     "01_style.md": "# Coding Style & Conventions\n\n## Language Preferences\n- Primary: Python 3.11+, TypeScript\n- Type hints: Always required\n- Async: Preferred for I/O\n\n## Naming Conventions\n- Functions: snake_case\n- Classes: PascalCase\n- Constants: UPPER_SNAKE_CASE\n- Private: _leading_underscore\n\n## Formatting\n- Line length: 100 characters\n- Indentation: 4 spaces (Python), 2 spaces (TypeScript)\n- Quotes: Double quotes for strings\n\n## Documentation\n- Docstrings: Google style\n- Comments: Only when logic isn't self-evident\n- Type annotations: Inline preferred\n",
     "02_principles.md": "# Development Principles\n\n## V10 Philosophy\n1. **Verified**: Everything tested, nothing assumed\n2. **Minimal**: No unnecessary complexity\n3. **Seamless**: Invisible infrastructure\n\n## Design Principles\n- SOLID principles\n- Composition over inheritance\n- Explicit over implicit\n- Fail fast, fail loud\n\n## Code Quality\n- Tests before features\n- Refactor continuously\n- Document decisions (ADRs)\n- Review before commit\n",

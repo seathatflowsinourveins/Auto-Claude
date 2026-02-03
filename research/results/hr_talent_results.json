@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:13:04.936110",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 90
+  },
+  "results": [
+    {
+      "topic": "Resume screening AI: automated candidate filtering",
+      "area": "recruiting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Role of artificial intelligence in employee recruitment: systematic review and future research directions",
+        "[exa] AI-Driven Decision-Making System for Hiring Process",
+        "[exa-h] ### 3.1AI-powered candidate sourcing and screening"
+      ],
+      "latency": 7.937692642211914
+    },
+    {
+      "topic": "Job matching: skill-based candidate recommendation",
+      "area": "recruiting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How data is powering skills-based hiring on LinkedIn",
+        "[exa] ",
+        "[exa-h] One of the tools we\u2019ve built to connect hirers and job seekers based on skills is[Skills Match], a feature that enables "
+      ],
+      "latency": 9.798426866531372
+    },
+    {
+      "topic": "Interview scheduling: automated coordination",
+      "area": "recruiting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Meeting and scheduling automation for teams and product builders",
+        "[exa] Powerful scheduling software made simple",
+        "[exa-h] ## The infrastructure powering 180,000+ companies\nWith over one billion events handled, Cronofy supports everything from"
+      ],
+      "latency": 9.100190877914429
+    },
+    {
+      "topic": "Video interview analysis: sentiment, body language",
+      "area": "recruiting",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] How to read a poker face: the art of deciphering microexpressions",
+        "[exa-h] Abstract\u2014We present a computational framework for automatically quantifying verbal and nonverbal behaviors in the contex"
+      ],
+      "latency": 6.9782960414886475
+    },
+    {
+      "topic": "Employee sentiment analysis: engagement surveys",
+      "area": "experience",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Q 12\u00ae : The World's Leading Employee Engagement Survey",
+        "[exa] Why Are Employee Surveys Important, and Are They Effective?",
+        "[exa-h] Gallup's Q12survey is the industry standard for measuring employee engagement, backed by decades of research and used by"
+      ],
+      "latency": 8.163161754608154
+    },
+    {
+      "topic": "Chatbots for HR: employee self-service",
+      "area": "experience",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What are chatbots for HR?",
+        "[exa] Transforming HR support with agentic AI",
+        "[exa-h] ### Real-time helpdesk support and employee self-service\nThe most common\u2014and visible\u2014use case is real-time employee supp"
+      ],
+      "latency": 9.267308712005615
+    },
+    {
+      "topic": "Learning recommendations: personalized training",
+      "area": "experience",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Personalized Learning Paths: Navigating the Future of Employee Training",
+        "[exa] Transforming Corporate Training with Personalized Learning",
+        "[exa-h] In addition, consider the following tips to ensure your personalized learning pathways are successful.\n\n### 1\\. Account "
+      ],
+      "latency": 8.043687105178833
+    },
+    {
+      "topic": "Career pathing: internal mobility AI",
+      "area": "experience",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Talent Management",
+        "[exa] Artificial Intelligence for Career Management and Talent Mobility",
+        "[exa-h] Connect employees\u2019 current work and adjacent strengths to new roles and projects companywide. Eightfold AI agents tap in"
+      ],
+      "latency": 7.08642053604126
+    },
+    {
+      "topic": "Workforce analytics: headcount forecasting",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Workforce forecasting",
+        "[exa] Plan and predict workforce demand with workforce planning",
+        "[exa-h] Traditional workforce forecasting methods focus on predicting the number of employees or [independent contractors] \u00a0that"
+      ],
+      "latency": 9.70342469215393
+    },
+    {
+      "topic": "Skills gap analysis: capability assessment",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Competency Gap Analysis",
+        "[exa] Mastering Competency Gap Analysis to Improve Team Performance",
+        "[exa-h] OPM can work with agency subject-matter experts to systematically identify competency (or skill) gaps for workforce plan"
+      ],
+      "latency": 7.591870069503784
+    },
+    {
+      "topic": "Attrition prediction: retention risk modeling",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Employee Attrition Prediction Using Machine Learning",
+        "[exa] A Comparison of Machine Learning Approaches for Predicting Employee Attrition",
+        "[exa-h] In this project-based course, we will build, train and test a machine learning model to predict employee attrition using"
+      ],
+      "latency": 5.2483203411102295
+    },
+    {
+      "topic": "Compensation analysis: pay equity, benchmarking",
+      "area": "planning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Compensation Benchmarking Whitepaper",
+        "[exa] The Salary Benchmarking Process: A Practical Guide for HR and Compensation Teams",
+        "[exa-h] The ID\u00a0is set to default '5900', don't forget to update it if needed.\n## Featured resources\n[\n![] \nResearch Reports\n### "
+      ],
+      "latency": 4.6724793910980225
+    },
+    {
+      "topic": "Performance prediction: high potential identification",
+      "area": "performance",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] How to Spot \u2014 and Develop \u2014 High-Potential Talent in Your Organization",
+        "[exa] What Science Says About Identifying High-Potential Employees",
+        "[exa-h] * [![] Buy Copies] \n* ![] Print\nOrganizations struggle to identify their next-gen leaders, and for good reasons. When yo"
+      ],
+      "latency": 3.8991832733154297
+    },
+    {
+      "topic": "Goal tracking: OKR management with AI",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI-powered OKRs for modern enterprises",
+        "[exa] Turn your mission into action with AI-powered goals",
+        "[exa-h] Better goals with AI coach\nWhether you're new to OKRs or a seasoned pro, Rhythms adapts to your workflow and elevates yo"
+      ],
+      "latency": 8.542505979537964
+    },
+    {
+      "topic": "Feedback analysis: review sentiment, themes",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transforming feedback into insights for decision makers",
+        "[exa] How To: Sentiment Analysis Of Reviews (& What To Use)",
+        "[exa-h] With an expert combination of natural language processing and Gen AI, Thematic automatically turns thousands of comments"
+      ],
+      "latency": 4.782114505767822
+    },
+    {
+      "topic": "Productivity analytics: work pattern insights",
+      "area": "performance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Your Step-by-Step Guide to Productivity Tracking in 2025",
+        "[exa] Introducing Microsoft Viva Insights",
+        "[exa-h] analytics software essential for team leaders, who can use metrics to identify patterns and challenges, make targeted im"
+      ],
+      "latency": 5.282877445220947
+    },
+    {
+      "topic": "LinkedIn Talent Solutions: recruiting AI",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LinkedIn Recruiter + Hiring Assistant",
+        "[exa] Build the workforce of the future with confidence.",
+        "[exa-h] # LinkedIn Recruiter + Hiring Assistant\n## Hire top talent with our recruiting platform and agentic AI \u2014built for scale "
+      ],
+      "latency": 5.7381956577301025
+    },
+    {
+      "topic": "Workday Prism: people analytics",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] WORKFORCE ANALYTICS AND REPORTING",
+        "[exa] Enterprise Data Hub for Finance and HR | Workday",
+        "[exa-h] Bring transactional and high-volume external data into Workday applications for seamless analysis and planning.\n[Data Hu"
+      ],
+      "latency": 4.226220607757568
+    },
+    {
+      "topic": "Eightfold AI: talent intelligence platform",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Talent Intelligence meets agentic AI  \u2014 to give you a lasting workforce advantage",
+        "[exa] Eightfold's blueprint for  Responsible AI.",
+        "[exa-h] ## Eightfold Talent Intelligence\nTurn deep understanding of people and work into real-time talent decisions with a full-"
+      ],
+      "latency": 4.97091269493103
+    },
+    {
+      "topic": "Pymetrics: AI-based assessment tools",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Better Talent Decisions.  Faster.",
+        "[exa] Predictive Assessments\nBacked by Science",
+        "[exa-h] ### \u201cSage\u00a0is excited to implement pymetrics for our Early Careers programs worldwide as part of our strategy to revoluti"
+      ],
+      "latency": 4.9745423793792725
+    }
+  ]
+}

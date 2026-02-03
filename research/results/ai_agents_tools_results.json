@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:34:16.241205",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 86
+  },
+  "results": [
+    {
+      "topic": "LLM tool use: function calling, actions",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling",
+        "[exa] Function Calling",
+        "[exa-h] # Function calling\nGive models access to new functionality and data they can use to follow instructions and respond to p"
+      ],
+      "latency": 9.54007887840271
+    },
+    {
+      "topic": "ReAct pattern: reasoning and acting",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ReAct Agent Pattern \uf0c1",
+        "[exa] ReAct Pattern \u2014 agent-patterns 0.1.1 documentation",
+        "[exa-h] ```\n### Theoretical Foundation[\uf0c1] \nReAct is based on the paper \u201cReAct: Synergizing Reasoning and Acting in Language Mode"
+      ],
+      "latency": 8.44502878189087
+    },
+    {
+      "topic": "Tool selection: choosing right tool",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Choosing the Right Toolkit | Agency for Healthcare Research and Quality",
+        "[exa] Choosing Your Tools",
+        "[exa-h] The Guide is intended to allow nursing homes to pick and choose among toolkits, and even choose among individual tools. "
+      ],
+      "latency": 11.110980987548828
+    },
+    {
+      "topic": "Tool composition: chaining tools",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] LangChain overview",
+        "[exa-h] LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool \u2014so you"
+      ],
+      "latency": 5.736727952957153
+    },
+    {
+      "topic": "LangChain agents: modular agentic AI",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangChain overview",
+        "[exa] Build agents faster, your way",
+        "[exa-h] LangChain is an open source framework with a pre-built agent architecture and integrations for any model or tool \u2014so you"
+      ],
+      "latency": 10.436861276626587
+    },
+    {
+      "topic": "AutoGPT: autonomous task agents",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AutoGPT - Wikipedia",
+        "[exa] AutoGPT - Wikipedia",
+        "[exa-h] **AutoGPT**is an open-source[autonomous] [software agent] that uses[OpenAI] 's[large language models], such as[GPT-4], t"
+      ],
+      "latency": 6.72594952583313
+    },
+    {
+      "topic": "CrewAI: multi-agent collaboration",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Collaboration",
+        "[exa] Collaboration",
+        "[exa-h] Collaboration in CrewAI enables agents to work together as a team by delegating tasks and asking questions to leverage e"
+      ],
+      "latency": 3.6649656295776367
+    },
+    {
+      "topic": "OpenAI Assistants: stateful agents",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A practical guide to building agents",
+        "[exa] Agents | OpenAI API",
+        "[exa-h] This guide is designed for product and engineering teams exploring how to build their first agents, distilling insights "
+      ],
+      "latency": 6.156920909881592
+    },
+    {
+      "topic": "MCP: Model Context Protocol, Anthropic",
+      "area": "protocols",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is the Model Context Protocol (MCP)?",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] MCP (Model Context Protocol) is an open-source standard for connecting AI applications to external systems.Using MCP, AI"
+      ],
+      "latency": 3.560222625732422
+    },
+    {
+      "topic": "OpenAPI: API-based tool definitions",
+      "area": "protocols",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OpenAPI Specification",
+        "[exa] OpenAPI Specification v3.2.0",
+        "[exa-h] The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to HTTP APIs which allows both humans an"
+      ],
+      "latency": 6.695431470870972
+    },
+    {
+      "topic": "Function schemas: JSON schema tools",
+      "area": "protocols",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Defining schemas",
+        "[exa] Build more. Break less. Empower others.",
+        "[exa-h] ] [\nJSON Schema\nNew\n] [\nCodecs\nNew\n] [\nEcosystem\n] [\nFor library authors\n] \nPackages\n[\nZod\n] [\nZod Mini\nNew\n] [\nZod Core"
+      ],
+      "latency": 4.392582654953003
+    },
+    {
+      "topic": "Tool protocols: standardization",
+      "area": "protocols",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI-Tool Interaction Protocol \u00b6",
+        "[exa] Specification",
+        "[exa-h] Just as HTTP standardizes client-server communication across the web, ToolUniverse implements an**AI-Tool Interaction Pr"
+      ],
+      "latency": 5.119897365570068
+    },
+    {
+      "topic": "Code execution: sandboxed environments",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Vercel Sandbox",
+        "[exa] Sandbox SDK (Beta)",
+        "[exa-h] Vercel Sandbox is an ephemeral compute primitive designed to safely run untrusted or user-generated code on Vercel. It s"
+      ],
+      "latency": 3.7835195064544678
+    },
+    {
+      "topic": "Web browsing: agent internet access",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Agent internet access",
+        "[exa] BrowserAgent: Building Web Agents with Human-Inspired Web Browsing Actions",
+        "[exa-h] Copy PageMore page actions\n# Agent internet access\nControl internet access for Codex cloud tasks\nBy default, Codex block"
+      ],
+      "latency": 3.4632296562194824
+    },
+    {
+      "topic": "File operations: document processing",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reading, Writing, and Creating Files",
+        "[exa] File and Directory Access \u00b6",
+        "[exa-h] This page discusses the details of reading, writing, creating, and opening files. There are a wide array of file I/O met"
+      ],
+      "latency": 4.461359262466431
+    },
+    {
+      "topic": "API calling: external service integration",
+      "area": "capabilities",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] External APIs \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Function calling",
+        "[exa-h] Google Apps Script can interact with APIs from all over the web. This guide\nshows how to work with different types of AP"
+      ],
+      "latency": 4.904125928878784
+    },
+    {
+      "topic": "Multi-agent systems: collaboration",
+      "area": "multi-agent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is multi-agent collaboration?",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] ## What is multi-agent collaboration?\nThe coordinated actions of several independent agents in a distributed system, eac"
+      ],
+      "latency": 3.513575553894043
+    },
+    {
+      "topic": "Agent orchestration: coordination",
+      "area": "multi-agent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] The Agentic Systems Series",
+        "[exa] Orchestrating Agents: Routines and Handoffs",
+        "[exa-h] As AI coding assistants tackle increasingly complex tasks, a single agent often isn't enough. Refactoring an entire code"
+      ],
+      "latency": 5.261030435562134
+    },
+    {
+      "topic": "Agent communication: message passing",
+      "area": "multi-agent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Agent Communication Protocols Explained",
+        "[exa] Agent Communication and Message Passing: Streamlining Interaction and Data Exchange in Multi-Agent Systems",
+        "[exa-h] Agent communication in multi-agent systems is the process of exchanging messages between agents in order to collaborate."
+      ],
+      "latency": 4.373418807983398
+    },
+    {
+      "topic": "Swarm intelligence: collective behavior",
+      "area": "multi-agent",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Swarm intelligence",
+        "[exa] Swarm intelligence",
+        "[exa-h] **Swarm intelligence**is the discipline that deals with natural and artificial systems composed of many individuals that"
+      ],
+      "latency": 4.066904067993164
+    }
+  ]
+}

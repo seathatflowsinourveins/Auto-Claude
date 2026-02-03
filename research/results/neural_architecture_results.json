@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:10:04.457232",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 86
+  },
+  "results": [
+    {
+      "topic": "Transformer architecture: attention is all you need",
+      "area": "transformer",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Attention Is All You Need",
+        "[exa] ",
+        "[exa-h] > The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encode"
+      ],
+      "latency": 3.214716911315918
+    },
+    {
+      "topic": "Vision transformers (ViT): image classification",
+      "area": "transformer",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] show that this reliance on CNNs is not necessary and a pure transformer applied directly to sequences of image patches c"
+      ],
+      "latency": 6.003085374832153
+    },
+    {
+      "topic": "BERT, GPT, T5: encoder-decoder architectures",
+      "area": "transformer",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "[exa-h] Model Architecture BERT\u2019s model architec\u0002ture is a multi-layer bidirectional Transformer en\u0002coder based on the original "
+      ],
+      "latency": 5.788395643234253
+    },
+    {
+      "topic": "Mixture of Experts: sparse transformer scaling",
+      "area": "transformer",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Scale has opened new frontiers in natural language processing -- but at a high cost. In response, Mixture-of-Experts ("
+      ],
+      "latency": 3.9496495723724365
+    },
+    {
+      "topic": "Multi-head attention: parallel attention heads",
+      "area": "attention",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Scaling pre-trained language models has resulted in large performance gains in various natural language processing tas"
+      ],
+      "latency": 9.477329969406128
+    },
+    {
+      "topic": "Flash attention: memory-efficient attention",
+      "area": "attention",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] principle is making attention algorithms IO-aware -- accounting for reads and writes between levels of GPU memory. We pr"
+      ],
+      "latency": 10.913215398788452
+    },
+    {
+      "topic": "Linear attention: O(n) complexity alternatives",
+      "area": "attention",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Cheap Linear Attention Mechanism with Fast Lookups and Fixed-Size Representations - ADS",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] show that removing the softmax non-linearity from the traditional attention formulation yields constant-time attention l"
+      ],
+      "latency": 8.47773814201355
+    },
+    {
+      "topic": "Cross-attention: encoder-decoder interaction",
+      "area": "attention",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Attention Is All You Need",
+        "[exa] ",
+        "[exa-h] > The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encode"
+      ],
+      "latency": 6.915820598602295
+    },
+    {
+      "topic": "State space models: Mamba, S4 architectures",
+      "area": "novel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Comprehensive Breakdown of Selective Structured State Space Model \u2014 Mamba (S5).",
+        "[exa-h] > **> Through Structured State Space Duality\n**\n> Tri Dao*, Albert Gu*\n> Paper: [> https://arxiv.org/abs/2405.21060\n] \n>"
+      ],
+      "latency": 3.286525249481201
+    },
+    {
+      "topic": "Graph neural networks: GCN, GAT, message passing",
+      "area": "novel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Graph Attention Networks",
+        "[exa-h] > We present a scalable approach for semi-supervised learning on graph-structured data that is based on an efficient var"
+      ],
+      "latency": 10.571470499038696
+    },
+    {
+      "topic": "Neural ODEs: continuous depth networks",
+      "area": "novel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Neural Ordinary Differential Equations\n     \n      (1806.07366v5)",
+        "[exa-h] > We introduce a new family of deep neural network models. Instead of specifying a discrete sequence of hidden layers, w"
+      ],
+      "latency": 3.8565468788146973
+    },
+    {
+      "topic": "Capsule networks: dynamic routing, equivariance",
+      "area": "novel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] ",
+        "[exa-h] > A capsule is a group of neurons whose activity vector represents the instantiation parameters of a specific type of en"
+      ],
+      "latency": 7.737546443939209
+    },
+    {
+      "topic": "Neural architecture search: AutoML for design",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Neural Architecture Search with Reinforcement Learning",
+        "[exa-h] > Neural networks are powerful and flexible models that work well for many difficult learning tasks in image, speech and"
+      ],
+      "latency": 5.961345672607422
+    },
+    {
+      "topic": "Knowledge distillation: model compression",
+      "area": "optimization",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Knowledge distillation",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] ### Relationship with model compression\n[[edit]]"
+      ],
+      "latency": 4.2354736328125
+    },
+    {
+      "topic": "Pruning and quantization: efficient inference",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Neural networks are both computationally intensive and memory intensive, making them difficult to deploy on embedded s"
+      ],
+      "latency": 3.3668556213378906
+    },
+    {
+      "topic": "Training dynamics: learning rate schedules, warmup",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] efficient ways to set the hyper-parameters that significantly reduce training time and improves performance. Specificall"
+      ],
+      "latency": 3.41873836517334
+    },
+    {
+      "topic": "Scaling laws: compute, data, parameters trade-offs",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] increase parallelism through larger batch sizes, with only a very small increase in serial training time required.\n1.2 S"
+      ],
+      "latency": 3.6730525493621826
+    },
+    {
+      "topic": "Emergent abilities: capabilities at scale",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Emergent Abilities in LLMs",
+        "[exa-h] > Large Language Models (LLMs) are leading a new technological revolution as one of the most promising research streams "
+      ],
+      "latency": 3.79779314994812
+    },
+    {
+      "topic": "Mechanistic interpretability: understanding circuits",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Through considerable effort and intuition, several recent works have reverse-engineered nontrivial behaviors of transf"
+      ],
+      "latency": 3.894493341445923
+    },
+    {
+      "topic": "Grokking: delayed generalization in neural nets",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Abstract:Grokking, or delayed generalization, is a phenomenon where generalization in a deep neural network (DNN) occu"
+      ],
+      "latency": 10.77611231803894
+    }
+  ]
+}

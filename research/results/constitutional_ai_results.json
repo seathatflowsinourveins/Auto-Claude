@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:47:57.338832",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 98
+  },
+  "results": [
+    {
+      "topic": "Constitutional AI: self-critique training",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] other AIs. We experiment with methods for training a harmless AI assistant through self\u0002improvement, without any human l"
+      ],
+      "latency": 8.267726182937622
+    },
+    {
+      "topic": "RLAIF: reinforcement learning AI feedback",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Reinforcement learning from human feedback (RLHF) has proven effective in aligning large language models (LLMs) with h"
+      ],
+      "latency": 8.341082334518433
+    },
+    {
+      "topic": "Harmlessness training: safety criteria",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Education and Training: Train Workers on Hazard Identification and Control",
+        "[exa] Hazard identification and risk control Training program standard",
+        "[exa-h] Training workers in hazard recognition and control is key to reducing the risk of injury and illness. \nYour training nee"
+      ],
+      "latency": 7.2243804931640625
+    },
+    {
+      "topic": "Red teaming: adversarial testing",
+      "area": "fundamentals",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Red Teaming Handbook",
+        "[exa] ",
+        "[exa-h] ## Details\nThe Red Teaming Handbook is designed to be a practical \u2018hands on\u2019 manual for red teaming and is, therefore, n"
+      ],
+      "latency": 9.861639261245728
+    },
+    {
+      "topic": "Self-improvement: recursive refinement",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Recursive   Self-Improvement",
+        "[exa] How to work on self-improvement: 31 activities to try",
+        "[exa-h] Recursion that can rewrite the cognitive level is*worth distinguishing*."
+      ],
+      "latency": 9.52761197090149
+    },
+    {
+      "topic": "Critique-revision: iterative feedback",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Iterative writing process with feedback from teacher and fellow students",
+        "[exa] Using the Iterative Process to Improve Writing",
+        "[exa-h] The main goal of this activity is to provide students with input and comments throughout the process of working on an ac"
+      ],
+      "latency": 8.888206958770752
+    },
+    {
+      "topic": "Principle-based training: explicit rules",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Client Challenge",
+        "[exa] From Healy\u2019s Training Principles to Training Specifications: The Case of the Comprehensive LOFT",
+        "[exa-h] Client Challenge\nA required part of this site couldn\u2019t load. This may be due to a browser\nextension, network issues, or "
+      ],
+      "latency": 7.594383478164673
+    },
+    {
+      "topic": "Debate: adversarial collaboration",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Opinion From rivals to partners: adversarial collaboration in ecology and evolution",
+        "[exa] Make science more collegial: why the time for \u2018adversarial collaboration\u2019 has come",
+        "[exa-h] - Adversarial collaboration proposes that rivals cooperate in a structured manner to tackle their disagreements.\n\n- Adve"
+      ],
+      "latency": 9.245093584060669
+    },
+    {
+      "topic": "Jailbreak prevention: prompt attacks",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] AI and cybersecurity, as they are crafted to by\u0002pass ethical safeguards in large language mod\u0002els, potentially enabling "
+      ],
+      "latency": 7.925502300262451
+    },
+    {
+      "topic": "Harmful content filtering: detection",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] and a variety of methods to make the model robust and to\navoid overftting. Our moderation system is trained to detect\na "
+      ],
+      "latency": 8.317417860031128
+    },
+    {
+      "topic": "Refusal training: appropriate decline",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Handout - Refusal skills",
+        "[exa] What Is a Refusal Skill and How Do You Use One?",
+        "[exa-h] record\nRepeat yourself, remembering\nto speak calmly and with\nconfidence.\n\u201cNo thanks, I really don\u2019t want it, no.\u201d\n\u201cMaybe"
+      ],
+      "latency": 7.244458436965942
+    },
+    {
+      "topic": "Deception detection: honesty training",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Does Training Improve the Detection of Deception? A Meta-Analysis",
+        "[exa] Training Professionals to Detect Deception",
+        "[exa-h] This meta-analysis examined whether training improves detection of deception. Overall, 30 studies (22 published and 8 un"
+      ],
+      "latency": 8.95806622505188
+    },
+    {
+      "topic": "Anthropic CAI: original research",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Claude Opus 4 and Claude Sonnet 4 are two new hybrid reasoning large language models\nfrom Anthropic. They have advanced "
+      ],
+      "latency": 9.553558349609375
+    },
+    {
+      "topic": "Sleeper agents: hidden behaviors",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+        "[exa] ",
+        "[exa-h] Humans are capable of strategically deceptive behavior: behaving helpfully in most situations, but then behaving very di"
+      ],
+      "latency": 6.794133901596069
+    },
+    {
+      "topic": "Scalable oversight: supervision methods",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Measuring Progress on Scalable Oversight for Large Language Models",
+        "[exa] Computer Science > Human-Computer Interaction",
+        "[exa-h] # Measuring Progress on Scalable Oversight for Large Language Models\nAssistantMy NotesCommentsSimilar"
+      ],
+      "latency": 7.2551445960998535
+    },
+    {
+      "topic": "AI alignment: value learning",
+      "area": "research",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Our approach to alignment research",
+        "[exa-h] urgently requires solutions, however, even for AI systems that are considerably less \nintelligent than humans, if such s"
+      ],
+      "latency": 9.717214822769165
+    },
+    {
+      "topic": "Claude safety: Anthropic approach",
+      "area": "applications",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] ",
+        "[exa] Anthropic\u2019s Transparency Hub",
+        "[exa-h] 4 and Claude Sonnet 4. The process was guided by our Responsible Scaling Policy (RSP),\nwhich provides a framework for ev"
+      ],
+      "latency": 8.837156295776367
+    },
+    {
+      "topic": "GPT moderation: OpenAI safety",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Using GPT-4 for content moderation",
+        "[exa] ",
+        "[exa-h] We use GPT\u20114 for content policy development and content moderation decisions, enabling more consistent labeling, a faste"
+      ],
+      "latency": 8.200315952301025
+    },
+    {
+      "topic": "Open model safety: Llama guardrails",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Making protection tools accessible to everyone",
+        "[exa] Computer Science > Cryptography and Security",
+        "[exa-h] ## An open approach to protections in the era of generative AI"
+      ],
+      "latency": 9.015936136245728
+    },
+    {
+      "topic": "Enterprise safety: deployment controls",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Recommendations for safe deployment practices",
+        "[exa] Safeguard deployments \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] This guide describes the recommendations for using safe deployment practices. Safe deployment processes and procedures d"
+      ],
+      "latency": 10.422644853591919
+    }
+  ]
+}

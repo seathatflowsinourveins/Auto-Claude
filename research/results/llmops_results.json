@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T03:00:43.539088",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 97
+  },
+  "results": [
+    {
+      "topic": "LangSmith: LLM observability",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Know what your agents are really doing",
+        "[exa] Know what your agents are really doing",
+        "[exa-h] ![] \n![] \n![] \n![] \n![] \n![] \n![] \n![] \n![] \n![] \n![] \n## Find failures fast with agent tracing\nQuickly debug and unders"
+      ],
+      "latency": 6.191624641418457
+    },
+    {
+      "topic": "Langfuse: LLM analytics",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Open Source LLM Metrics - Langfuse",
+        "[exa] Langfuse Overview",
+        "[exa-h] Metrics can be sliced and diced via the[customizable dashboards] and the[metrics API].\n![LLM Analytics] \n## Features[] \n"
+      ],
+      "latency": 7.8749377727508545
+    },
+    {
+      "topic": "Helicone: LLM monitoring",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Helicone Guides",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Monitor LLM calls in your CI/CD pipelines.\n] [\n## Manual logger streaming\nImplement custom streaming with the logger SDK"
+      ],
+      "latency": 6.416611909866333
+    },
+    {
+      "topic": "Portkey: LLM gateway",
+      "area": "platforms",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Enterprise-grade AI Gateway",
+        "[exa] What is Portkey?",
+        "[exa-h] ### Start building your AI apps with Portkey today\nEverything you need to prototype, test, and scale AI workflows - Fast"
+      ],
+      "latency": 5.205625295639038
+    },
+    {
+      "topic": "LLM deployment: production serving",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Step-By-Step LLM Serving Guide for Production AI Systems",
+        "[exa] Production pipelines for Llama deployments",
+        "[exa-h] production-grade performance. In this guide, we\u2019ll walk through the essential steps for building a production-ready LLM "
+      ],
+      "latency": 5.548915863037109
+    },
+    {
+      "topic": "vLLM deployment: inference",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Distributed Inference and Serving - vLLM",
+        "[exa] Welcome to vLLM \u00b6",
+        "[exa-h] vLLM supports distributed tensor-parallel and pipeline-parallel inference and serving. Currently, we support [Megatron-L"
+      ],
+      "latency": 8.846858501434326
+    },
+    {
+      "topic": "OpenLLM: model serving",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] * [2023/06] We officially released vLLM! FastChat-vLLM integration has powered[LMSYS Vicuna and Chatbot Arena] since mid"
+      ],
+      "latency": 6.529682874679565
+    },
+    {
+      "topic": "LiteLLM: unified API",
+      "area": "deployment",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LiteLLM - Getting Started",
+        "[exa] LiteLLM: A Unified Interface for LLM APIs",
+        "[exa-h] Typically used by Gen AI Enablement / ML PLatform Teams\n* LiteLLM Proxy gives you a unified interface to access multiple"
+      ],
+      "latency": 5.823309421539307
+    },
+    {
+      "topic": "LLM cost optimization: spending",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cost projection",
+        "[exa] Optimizing LLM costs",
+        "[exa-h] This guide provides a comprehensive cost projection methodology for LLMs, including hosted APIs, cloud deployments, and "
+      ],
+      "latency": 9.951332330703735
+    },
+    {
+      "topic": "Token optimization: efficiency",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Smart Contract Optimization for Blockchain Projects",
+        "[exa] Understanding Token Optimization: A Developer's Guide to LLM Cost Reduction",
+        "[exa-h] Smart contracts optimization is needed to cut gas fees. It can happen by making the code more efficient. Every action in"
+      ],
+      "latency": 6.845408201217651
+    },
+    {
+      "topic": "Model routing: cost-based",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] BEST-Route: Adaptive LLM Routing with Test-Time Optimal Compute",
+        "[exa-h] > The proliferation of large language models (LLMs) with varying computational costs and performance profiles presents a"
+      ],
+      "latency": 8.887519359588623
+    },
+    {
+      "topic": "Prompt caching: cost reduction",
+      "area": "cost",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prompt caching",
+        "[exa] Prompt caching",
+        "[exa-h] Model prompts often contain repetitive content, like system prompts and common instructions. OpenAI routes API requests "
+      ],
+      "latency": 8.754983186721802
+    },
+    {
+      "topic": "Prompt testing: evaluation",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > As language models (LMs) are increasingly adopted across domains, high-quality benchmarking frameworks that accurately"
+      ],
+      "latency": 6.098835706710815
+    },
+    {
+      "topic": "Output validation: guardrails",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Guardrails | OpenAI Agents SDK",
+        "[exa] Guardrails - OpenAI Agents SDK",
+        "[exa-h] Guardrails can run alongside your agents or block execution until they complete, allowing you to perform checks and vali"
+      ],
+      "latency": 6.969167232513428
+    },
+    {
+      "topic": "LLM regression: testing",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Regression-aware Inference with LLMs",
+        "[exa] From Words to Numbers: Your Large Language Model Is Secretly A Capable Regressor When Given In-Context Examples - ADS",
+        "[exa-h] ## 2 When (na\u00efve) LLM inference fails on regression tasks"
+      ],
+      "latency": 7.709456205368042
+    },
+    {
+      "topic": "Human feedback: RLHF ops",
+      "area": "quality",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Open Problems and Fundamental Limitations of\n Reinforcement Learning from Human Feedback",
+        "[exa-h] > Reinforcement learning from human feedback (RLHF) has proven effective in aligning large language models (LLMs) with h"
+      ],
+      "latency": 6.4305946826934814
+    },
+    {
+      "topic": "LLM gateway: API management",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLM Gateway",
+        "[exa] Gateway Overview",
+        "[exa-h] Introduction to LLM Gateway, an open-source API gateway for LLMs.\n# [LLM Gateway] \nLLM Gateway is an open-source API gat"
+      ],
+      "latency": 10.32965636253357
+    },
+    {
+      "topic": "Rate limiting: API throttling",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] RateLimit header fields for HTTP",
+        "[exa] Rate limiting",
+        "[exa-h] Rate limiting of HTTP clients has become a widespread practice, especially for HTTP APIs. Typically, servers who do so l"
+      ],
+      "latency": 7.899806022644043
+    },
+    {
+      "topic": "Fallback routing: reliability",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Configuring Fallback Route Groups",
+        "[exa] Avoiding fallback in distributed systems",
+        "[exa-h] First release of this document\n|\n--\n|\n## Overview\nThis feature provides fast convergence for a destination that is reach"
+      ],
+      "latency": 7.053325414657593
+    },
+    {
+      "topic": "Multi-provider: vendor diversity",
+      "area": "infrastructure",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multi-provider strategies: Reducing vendor dependence",
+        "[exa] ",
+        "[exa-h] ## Planning an effective multi-provider approach\nStart by mapping**essential service categories**. Tie each category to "
+      ],
+      "latency": 7.755002021789551
+    }
+  ]
+}

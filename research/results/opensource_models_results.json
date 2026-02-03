@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:55:44.629456",
+  "stats": {
+    "sources": 200,
+    "vectors": 180,
+    "findings": 81
+  },
+  "results": [
+    {
+      "topic": "vLLM: PagedAttention, continuous batching, high throughput",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Paged Attention \u00b6",
+        "[exa-h] memory sharing at the granularity of a block, across the\ndifferent sequences associated with the same request or even\nac"
+      ],
+      "latency": 4.300425291061401
+    },
+    {
+      "topic": "Text Generation Inference (TGI): tensor parallelism, flash attention",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] text-generation-inference",
+        "[exa-h] > We study the problem of efficient generative inference for Transformer models, in one of its most challenging settings"
+      ],
+      "latency": 3.789064407348633
+    },
+    {
+      "topic": "Triton Inference Server: model ensemble, dynamic batching",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dynamic Batching & Concurrent Model Execution #",
+        "[exa] Batchers \u2014 NVIDIA Triton Inference Server",
+        "[exa-h] In this tutorial, we covered the two key concepts,`dynamicbatching`and`concurrentmodelexecution`, which can be used to i"
+      ],
+      "latency": 3.193812847137451
+    },
+    {
+      "topic": "Ray Serve: distributed inference, autoscaling, batch processing",
+      "area": "serving",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Ray Serve: Scalable and Programmable Serving #",
+        "[exa] Ray Serve: Scalable and Programmable Serving #",
+        "[exa-h] rapid development and easy testing. You can then quickly deploy your Ray Serve LLM application to production, and each a"
+      ],
+      "latency": 4.576625823974609
+    },
+    {
+      "topic": "Llama 3.1: 8B, 70B, 405B deployment considerations",
+      "area": "models",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Production pipelines for Llama deployments",
+        "[exa] Production deployment with Llama",
+        "[exa-h] Production Llama deployments require orchestrated pipelines that handle data processing, model training, evaluation, dep"
+      ],
+      "latency": 5.669201850891113
+    },
+    {
+      "topic": "Mistral models: 7B, Mixtral 8x7B MoE architecture",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Mixtral 8x7B",
+        "[exa] Mistral Docs",
+        "[exa-h] Modalities\nContext\n32k\nRetirement date3/30/2025\nReplacement[Mistral Small 3.2] \nWEIGHTS\n### Weights\n|Weights|License|Par"
+      ],
+      "latency": 4.4253318309783936
+    },
+    {
+      "topic": "Qwen 2.5: multilingual, code, math variants",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Qwen2.5-Coder Technical Report",
+        "[exa-h] [Submitted on 18 Sep 2024 ([v1]), last revised 12 Nov 2024 (this version, v3)]\n# Title:Qwen2.5-Coder Technical Report"
+      ],
+      "latency": 3.376699209213257
+    },
+    {
+      "topic": "DeepSeek: coding models, DeepSeek-V2 MoE",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] We present DeepSeek-V2, a strong Mixture-of-Experts\u00a0(MoE) language model characterized by economical training and effici"
+      ],
+      "latency": 3.729090452194214
+    },
+    {
+      "topic": "FlashAttention 2: memory-efficient attention, GPU optimization",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > The computational and memory demands of vanilla attention scale quadratically with the sequence length $N$, posing sig"
+      ],
+      "latency": 4.064288139343262
+    },
+    {
+      "topic": "Speculative decoding: draft models, acceptance sampling",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > Speculative decoding reduces the inference latency of a target large language model via utilizing a smaller and faster"
+      ],
+      "latency": 5.044169187545776
+    },
+    {
+      "topic": "Tensor parallelism vs pipeline parallelism: trade-offs",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] How to Parallelize a Transformer for Training",
+        "[exa-h] Tensor Parallelism. Tensor parallelism [33, 23, 14, 37, 8, 2] partitions tensors across devices to\nreduce per-device mem"
+      ],
+      "latency": 4.651979446411133
+    },
+    {
+      "topic": "KV cache optimization: sliding window, grouped query attention",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] attention score, overlooking the long-term importance of tokens. We propose G-KV, a KV cache eviction method that employ"
+      ],
+      "latency": 3.9450418949127197
+    },
+    {
+      "topic": "AWQ: activation-aware weight quantization for LLMs",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] but the astronomical model size raises the hardware barrier for serving (memory\nsize) and slows down token generation (m"
+      ],
+      "latency": 3.8716306686401367
+    },
+    {
+      "topic": "GPTQ: accurate post-training quantization",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] [Submitted on 31 Oct 2022 ([v1]), last revised 22 Mar 2023 (this version, v2)]\n# Title:GPTQ: Accurate Post-Training Quan"
+      ],
+      "latency": 5.0899388790130615
+    },
+    {
+      "topic": "GGUF format: llama.cpp quantization, Q4_K_M, Q5_K_M",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] llama.cpp.md.txt",
+        "[exa] llama.cpp \u00b6",
+        "[exa-h] Common ones used for 8B models include `Q8_0`, `Q5_K_M`, and `Q4_K_M`. \nThe letter case doesn't matter, so `q8_0` or `q4"
+      ],
+      "latency": 3.8041765689849854
+    },
+    {
+      "topic": "FP8 inference: H100 optimization, mixed precision",
+      "area": "quantization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Using FP8 and FP4 with Transformer Engine \uf0c1",
+        "[exa] Using FP8 with Transformer Engine \u00b6",
+        "[exa-h] H100 GPU introduced support for a new datatype, FP8 (8-bit floating point), enabling higher throughput of matrix multipl"
+      ],
+      "latency": 5.752890586853027
+    },
+    {
+      "topic": "Multi-GPU inference: NVLink, PCIe, sharding strategies",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scaling AI Inference Performance and Flexibility with NVIDIA NVLink and NVLink Fusion",
+        "[exa] 3.4.  Programming Systems with Multiple GPUs #",
+        "[exa-h] NVIDIA first introduced NVLink in 2016 to overcome the limitations of PCIe in high-performance computing and AI workload"
+      ],
+      "latency": 8.835081577301025
+    },
+    {
+      "topic": "Kubernetes for LLM serving: GPU scheduling, node affinity",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Schedule GPUs",
+        "[exa] Assigning Pods to Nodes",
+        "[exa-h] `apiVersion:v1kind:Podmetadata:name:example-vector-addspec:restartPolicy:OnFailure# You can use Kubernetes node affinity"
+      ],
+      "latency": 3.5250391960144043
+    },
+    {
+      "topic": "Model caching: Hugging Face Hub, local mirrors, artifact registries",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Hub Python Library",
+        "[exa] Hub Python Library",
+        "[exa-h] `huggingface\\_hub`utilizes the local disk as two caches, which avoid re-downloading items again. The first cache is a fi"
+      ],
+      "latency": 8.890103340148926
+    },
+    {
+      "topic": "Cost optimization for open models: spot instances, right-sizing",
+      "area": "infra",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon EC2 Spot Instances",
+        "[exa] Amazon EC2 Spot Instances",
+        "[exa-h] [Get started with Amazon EC2 Spot Instances] \n[Contact Sales] \n## Benefits\n### Optimize costs\nSave up-to 90% on On-Deman"
+      ],
+      "latency": 3.9209513664245605
+    }
+  ]
+}

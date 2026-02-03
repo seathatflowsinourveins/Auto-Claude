@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:39:04.706128",
+  "stats": {
+    "sources": 200,
+    "vectors": 180,
+    "findings": 97
+  },
+  "results": [
+    {
+      "topic": "BPE: byte pair encoding tokenization",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Byte-pair encoding",
+        "[exa] Byte-pair encoding",
+        "[exa-h] In[computing],**byte-pair encoding**(**BPE**),[[1]] [[2]] or**digram coding**,[[3]] is an[algorithm], first described in"
+      ],
+      "latency": 7.518895864486694
+    },
+    {
+      "topic": "SentencePiece: unsupervised tokenization",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] ",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Google, Inc.\n{taku,johnri}@google.com\nAbstract\nThis paper describes SentencePiece, a\nlanguage-independent subword tokeni"
+      ],
+      "latency": 4.9864184856414795
+    },
+    {
+      "topic": "WordPiece: BERT tokenization",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Fast WordPiece Tokenization System",
+        "[exa] ",
+        "[exa-h] Cased model]."
+      ],
+      "latency": 4.022119045257568
+    },
+    {
+      "topic": "Unigram: probabilistic tokenization",
+      "area": "methods",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Unigram tokenization",
+        "[exa] Which Pieces Does Unigram Tokenization Really Need?",
+        "[exa-h] Copy page\n# [] Unigram tokenization\n[![Ask a Question]] [![Open In Colab]] [![Open In Studio Lab]] \nThe Unigram algorith"
+      ],
+      "latency": 8.200461149215698
+    },
+    {
+      "topic": "Vocabulary size: tradeoffs",
+      "area": "vocabulary",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Large language models are trained with tokenizers, and the resulting token distribution is highly imbalanced: a few wo"
+      ],
+      "latency": 10.453294515609741
+    },
+    {
+      "topic": "Subword tokenization: handling OOV",
+      "area": "vocabulary",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] operations. At test time, we first split words into\nsequences of characters, then apply the learned op\u0002erations to merge"
+      ],
+      "latency": 8.392513275146484
+    },
+    {
+      "topic": "Multilingual tokenization: cross-lingual",
+      "area": "vocabulary",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How Good is Your Tokenizer? On the Monolingual Performance of Multilingual Language Models",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] monolingually and multilingually trained tok\u0002enizers. We find that while the pretraining data\nsize is an important facto"
+      ],
+      "latency": 8.310837030410767
+    },
+    {
+      "topic": "Token merging: vocabulary compression",
+      "area": "vocabulary",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] size of the model parameters. Around the same time, in computer\nvision and image generation, token optimization started "
+      ],
+      "latency": 9.387798070907593
+    },
+    {
+      "topic": "HuggingFace tokenizers: fast Rust",
+      "area": "implementations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Tokenizers",
+        "[exa-h] Provides an implementation of today's most used tokenizers, with a focus on performance and\nversatility.\n## Main feature"
+      ],
+      "latency": 11.136212348937988
+    },
+    {
+      "topic": "tiktoken: OpenAI tokenizer",
+      "area": "implementations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] How to count tokens with Tiktoken",
+        "[exa-h] |\n|\nView all files\n|\n## Repository files navigation\n# \u23f3tiktoken\n[] \ntiktoken is a fast[BPE] tokeniser for use with\nOpenA"
+      ],
+      "latency": 7.462101459503174
+    },
+    {
+      "topic": "Gemma tokenizer: Google approach",
+      "area": "implementations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gemma model card",
+        "[exa] ",
+        "[exa-h] **Authors**: Google\n## Model Information\nSummary description and brief definition of inputs and outputs.\n### Description"
+      ],
+      "latency": 6.563551187515259
+    },
+    {
+      "topic": "Llama tokenizer: Meta approach",
+      "area": "implementations",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] LLM-Calculator.com",
+        "[exa-h] logger = getLogger(\\_\\_name\\_\\_)\nRole = Literal[\"system\", \"user\", \"assistant\"]\nclass Message(TypedDict):\nrole: Role\ncont"
+      ],
+      "latency": 7.172852993011475
+    },
+    {
+      "topic": "Tokenization artifacts: boundary issues",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] NLP, the notion of token still perfectly matches\nits MAF definition, but it no longer corresponds\nto the traditional def"
+      ],
+      "latency": 8.960355758666992
+    },
+    {
+      "topic": "Numerical tokenization: math tokens",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] xVal: A Continuous Numerical Tokenization for Scientific Language Models - ADS",
+        "[exa] Text2Math: End-to-end Parsing Text into Math Expressions - ACL Anthology",
+        "[exa-h] Due in part to their discontinuous and discrete default encodings for numbers, Large Language Models (LLMs) have not yet"
+      ],
+      "latency": 6.659783840179443
+    },
+    {
+      "topic": "Code tokenization: programming languages",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] tokenize  \u2014 Tokenizer for Python source \u00b6",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] # `tokenize`\u2014 Tokenizer for Python source[\u00b6] \n**Source code:**[Lib/tokenize.py] \nThe[`tokenize`] module provides a lexic"
+      ],
+      "latency": 7.2850096225738525
+    },
+    {
+      "topic": "Special tokens: system, user, assistant",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding User, Assistant, and System Roles in ChatGPT",
+        "[exa] Meaning of roles in the API of GPT-4/ChatGPT (system/user/assistant)",
+        "[exa-h] **The system role is a powerful feature of the ChatGPT API that allows us to set the context and behavior of the AI assi"
+      ],
+      "latency": 6.919900417327881
+    },
+    {
+      "topic": "Token efficiency: tokens per character",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Unlocking the Power of Tokens: Optimizing Token Usage in GPT for Efficient Text Processing",
+        "[exa-h] for distributions over \u2206 of different sizes, it is\nnot directly comparable. The efficiency of a\ntokenization function ad"
+      ],
+      "latency": 7.4881041049957275
+    },
+    {
+      "topic": "Tokenizer training: corpus selection",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Dolma: an Open Corpus of Three Trillion Tokens for Language Model\n  Pretraining Research",
+        "[exa] Training a new tokenizer from an old one",
+        "[exa-h] Dolma, a three trillion token English corpus, and its open-source data curation toolkit facilitate open research in lang"
+      ],
+      "latency": 7.220182180404663
+    },
+    {
+      "topic": "Dynamic vocabulary: adaptive tokenization",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Generation with Dynamic Vocabulary - ACL Anthology",
+        "[exa] ",
+        "[exa-h] We introduce a new dynamic vocabulary for language models. It can involve arbitrary text spans during generation. These "
+      ],
+      "latency": 7.143462419509888
+    },
+    {
+      "topic": "Tokenizer-free: byte-level models",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ByT5: Towards a Token-Free Future with Pre-trained Byte-to-Byte Models - ACL Anthology",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Most widely used pre-trained language models operate on sequences of tokens corresponding to word or subword units. By c"
+      ],
+      "latency": 7.6610798835754395
+    }
+  ]
+}

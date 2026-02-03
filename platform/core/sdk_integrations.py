@@ -93,7 +93,7 @@ LightRAG = None
 QueryParam = None
 
 try:
-    _add_sdk_path("lightrag")
+    # pip-installed lightrag
     from lightrag import LightRAG, QueryParam
     LIGHTRAG_AVAILABLE = True
     logger.info("LightRAG SDK loaded successfully")
@@ -131,15 +131,14 @@ dspy_Module = None
 dspy_ChatAdapter = None
 
 try:
-    _add_sdk_path("dspy")
+    # Try pip-installed dspy first (avoid local sdks/dspy which has broken gepa dependency)
     import dspy
     DSPY_AVAILABLE = True
-    logger.info("DSPy SDK loaded successfully (full)")
+    logger.info("DSPy SDK loaded successfully (full, pip-installed)")
 except ImportError as e:
     logger.debug(f"DSPy full import failed: {e}")
     # Try partial imports (these work without gepa)
     try:
-        _add_sdk_path("dspy")
         from dspy.clients import LM as dspy_LM
         from dspy.primitives.module import Module as dspy_Module
         from dspy.adapters.chat_adapter import ChatAdapter as dspy_ChatAdapter
@@ -156,7 +155,7 @@ BrowserConfig = None
 CrawlResult = None
 
 try:
-    _add_sdk_path("crawl4ai")
+    # pip-installed crawl4ai
     from crawl4ai import (
         AsyncWebCrawler,
         CrawlerRunConfig,
@@ -176,7 +175,7 @@ AsyncTavilyClient = None
 TavilyHybridClient = None
 
 try:
-    _add_sdk_path("tavily")
+    # pip-installed tavily
     from tavily import TavilyClient, AsyncTavilyClient, TavilyHybridClient
     TAVILY_AVAILABLE = True
     logger.info("Tavily SDK loaded successfully")
@@ -191,7 +190,7 @@ langgraph_START = None
 langgraph_END = None
 
 try:
-    _add_sdk_path("langgraph")
+    # pip-installed langgraph
     from langgraph.graph import StateGraph, MessagesState, START as langgraph_START, END as langgraph_END
     LANGGRAPH_AVAILABLE = True
     logger.info("LangGraph SDK loaded successfully")
@@ -208,7 +207,7 @@ mcp_stdio_client = None
 mcp_stdio_server = None
 
 try:
-    _add_sdk_path("mcp")
+    # pip-installed mcp
     from mcp import Client as MCPClient, ClientSession as MCPClientSession
     from mcp import stdio_client as mcp_stdio_client, stdio_server as mcp_stdio_server
     from mcp.server import Server as MCPServer
@@ -224,7 +223,7 @@ GraphitiClient = None
 GraphitiEpisodeType = None
 
 try:
-    _add_sdk_path("graphiti")
+    # pip-installed graphiti-core
     from graphiti_core import Graphiti as GraphitiClient
     from graphiti_core.graphiti_types import EpisodeType as GraphitiEpisodeType
     GRAPHITI_AVAILABLE = True
@@ -250,7 +249,7 @@ FirecrawlApp = None
 AsyncFirecrawlApp = None
 
 try:
-    _add_sdk_path("firecrawl")
+    # pip-installed firecrawl
     from firecrawl import Firecrawl as FirecrawlApp, AsyncFirecrawl as AsyncFirecrawlApp
     FIRECRAWL_AVAILABLE = True
     logger.info("Firecrawl SDK loaded successfully")

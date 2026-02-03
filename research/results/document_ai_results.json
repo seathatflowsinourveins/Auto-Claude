@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:56:40.844897",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 98
+  },
+  "results": [
+    {
+      "topic": "OCR: optical character recognition",
+      "area": "ocr",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OCR (Optical Character Recognition)",
+        "[exa] What is Optical Character Recognition? OCR explained by Google",
+        "[exa-h] Optical Character Recognition (OCR) is a foundational technology behind the conversion of typed, handwritten or printed "
+      ],
+      "latency": 6.35184645652771
+    },
+    {
+      "topic": "Tesseract: open source OCR",
+      "area": "ocr",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tesseract User Manual",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Tesseract is an open source[text recognition (OCR)] Engine, available under the[Apache 2.0 license].\n* Major version 5 i"
+      ],
+      "latency": 8.542551755905151
+    },
+    {
+      "topic": "Textract: AWS document AI",
+      "area": "ocr",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Amazon Textract",
+        "[exa] What is Amazon Textract?",
+        "[exa-h] For additional information about service controls, security features and functionalities, including, as applicable, info"
+      ],
+      "latency": 8.16706919670105
+    },
+    {
+      "topic": "Document AI: Google Cloud",
+      "area": "ocr",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Document AI",
+        "[exa] Document AI",
+        "[exa-h] Document processing and data capture automated at scale.\n] \n* [\nVertex AI Search for commerce\nGoogle-quality search and "
+      ],
+      "latency": 7.776119947433472
+    },
+    {
+      "topic": "Layout analysis: document structure",
+      "area": "layout",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Document Structure and Layout Analysis",
+        "[exa-h] Document structure analysis can be regarded as a syntactic analysis problem. The order and containment\nrelations among t"
+      ],
+      "latency": 10.294833421707153
+    },
+    {
+      "topic": "Table extraction: structured data",
+      "area": "layout",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] > Recently, significant progress has been made applying machine learning to the problem of table structure inference and"
+      ],
+      "latency": 8.085519075393677
+    },
+    {
+      "topic": "Form recognition: field extraction",
+      "area": "layout",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] tasks; 1) Classification of low-level constituent\nelements (TextBlock and empty fillable Wid\u0002get) into ten types such as"
+      ],
+      "latency": 7.815514087677002
+    },
+    {
+      "topic": "Document segmentation: regions",
+      "area": "layout",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Multiscale Document Segmentation",
+        "[exa-h] processes often require the extraction of useful semantic content from documents at a large scale for subsequent decisio"
+      ],
+      "latency": 9.125173807144165
+    },
+    {
+      "topic": "LayoutLM: document understanding",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] to multimodal representation learning. In this paper, we propose\nLayoutLMv3 to pre-train multimodal Transformers for Doc"
+      ],
+      "latency": 8.08185863494873
+    },
+    {
+      "topic": "Donut: document transformer",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transformers",
+        "[exa] Transformers",
+        "[exa-h] [Donut (Document Understanding Transformer)] is a visual document understanding model that doesn\u2019t require an Optical Ch"
+      ],
+      "latency": 5.461985349655151
+    },
+    {
+      "topic": "DocVQA: document question answering",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Information Retrieval",
+        "[exa-h] > Document Visual Question Answering (Document VQA) faces significant challenges when processing long documents in low-r"
+      ],
+      "latency": 7.620925188064575
+    },
+    {
+      "topic": "Nougat: PDF to text model",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Transformers",
+        "[exa] Transformers",
+        "[exa-h] Lukas Blecher, Guillem Cucurull, Thomas Scialom, Robert Stojnic. Nougat uses the same architecture as[Donut], meaning an"
+      ],
+      "latency": 5.363162040710449
+    },
+    {
+      "topic": "PDF parsing: text extraction",
+      "area": "processing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Extract Text from a PDF \uf0c1",
+        "[exa] Extract Text from a PDF \uf0c1",
+        "[exa-h] frompypdfimportPdfReaderreader=PdfReader(\"test Orient.pdf\")page=reader.pages[0]print(page.extract\\_text())# extract only"
+      ],
+      "latency": 8.661776781082153
+    },
+    {
+      "topic": "Invoice processing: automation",
+      "area": "processing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Stripe logo",
+        "[exa] Invoice Processing Automation Guide September 2025 | Extend",
+        "[exa-h] Automated invoice processing means using software to automate the steps involved in handling[invoices]. This reduces the"
+      ],
+      "latency": 8.692988634109497
+    },
+    {
+      "topic": "Contract analysis: legal AI",
+      "area": "processing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Ultimate guide to contract analytics for legal professionals",
+        "[exa] Artificial intelligence contract analysis",
+        "[exa-h] [Contract analytics] is the systematic, software-driven analysis of legal documents to uncover relevant information from"
+      ],
+      "latency": 8.813430070877075
+    },
+    {
+      "topic": "Receipt scanning: expense AI",
+      "area": "processing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Ready to take charge of your spend management?",
+        "[exa] Scan receipts with 95%+ accuracy",
+        "[exa-h] # Track expenses in a snap with Expensify's receipt scanning app\n![] \nMost tools make you manually enter every receipt. "
+      ],
+      "latency": 8.331218242645264
+    },
+    {
+      "topic": "Document RAG: retrieval documents",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] UDA: A Benchmark Suite for Retrieval Augmented Generation in Real-world Document Analysis - ADS",
+        "[exa] MODE: Mixture of Document Experts for RAG",
+        "[exa-h] The use of Retrieval-Augmented Generation (RAG) has improved Large Language Models (LLMs) in collaborating with external"
+      ],
+      "latency": 8.550182342529297
+    },
+    {
+      "topic": "Multimodal documents: vision-text",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] LayoutLMv2: Multi-modal Pre-training for Visually-rich Document Understanding - ACL Anthology",
+        "[exa-h] multi-modal RAG framework that flexibly accommodates various document contexts (closed-domain and open-domain), question"
+      ],
+      "latency": 5.876012563705444
+    },
+    {
+      "topic": "Document workflows: automation",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to Implement Document Automation in 5 Steps (Templates, AI, and PDF Workflows)",
+        "[exa] Navigate the art and science of document workflows.",
+        "[exa-h] * [Release Notes & Security Updates] \n* [Product Downloads] \nblog\n# How to Implement Document Automation in 5 Steps (Tem"
+      ],
+      "latency": 11.287003517150879
+    },
+    {
+      "topic": "Document search: semantic",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic Indexing for Documents",
+        "[exa] ",
+        "[exa-h] Semantic indexing for documents introduces an index type that can make use of information extractors and annotators to s"
+      ],
+      "latency": 8.07352328300476
+    }
+  ]
+}

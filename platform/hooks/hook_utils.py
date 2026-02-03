@@ -146,7 +146,11 @@ from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Set, Tuple, Union
-import structlog
+try:
+    import structlog
+    STRUCTLOG_AVAILABLE = True
+except ImportError:
+    STRUCTLOG_AVAILABLE = False
 
 # Optional Pydantic for schema validation
 try:
@@ -157,17 +161,18 @@ except ImportError:
     BaseModel = object  # type: ignore
 
 # Configure structured logging
-structlog.configure(
-    processors=[
-        structlog.stdlib.filter_by_level,
-        structlog.processors.TimeStamper(fmt="iso"),
-        structlog.processors.add_log_level,
-        structlog.processors.JSONRenderer()
-    ],
-    wrapper_class=structlog.stdlib.BoundLogger,
-    context_class=dict,
-    logger_factory=structlog.stdlib.LoggerFactory(),
-)
+if STRUCTLOG_AVAILABLE:
+    structlog.configure(
+        processors=[
+            structlog.stdlib.filter_by_level,
+            structlog.processors.TimeStamper(fmt="iso"),
+            structlog.processors.add_log_level,
+            structlog.processors.JSONRenderer()
+        ],
+        wrapper_class=structlog.stdlib.BoundLogger,
+        context_class=dict,
+        logger_factory=structlog.stdlib.LoggerFactory(),
+    )
 
 
 class HookEvent(Enum):
@@ -593,9 +598,12 @@ def log_event(
         f.write(json.dumps(event) + "\n")
 
 
-def get_logger(name: str) -> structlog.stdlib.BoundLogger:
+def get_logger(name: str):
     """Get a configured logger for a hook."""
-    return structlog.get_logger(name)
+    if STRUCTLOG_AVAILABLE:
+        return structlog.get_logger(name)
+    import logging
+    return logging.getLogger(name)
 
 
 class ToolMatcher:

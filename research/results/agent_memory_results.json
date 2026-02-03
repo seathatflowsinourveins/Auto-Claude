@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:51:18.047707",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 86
+  },
+  "results": [
+    {
+      "topic": "Agent memory taxonomy: working, episodic, semantic, procedural",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] Long-term storage. In humans and other animals, episodic\nmemory functions as a form of long-term memory, capable\nTable 1"
+      ],
+      "latency": 7.474774360656738
+    },
+    {
+      "topic": "MemGPT: operating system for LLM agents with memory",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] MemGPT: Towards LLMs as Operating Systems",
+        "[exa-h] traditional operating systems that provide the appearance of large memory resources through data movement between fast a"
+      ],
+      "latency": 5.499096870422363
+    },
+    {
+      "topic": "Cognitive architectures: ACT-R, SOAR principles for agents",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Soar (cognitive architecture)",
+        "[exa-h] Cognitive architectures can be organized in several ways. One way is to group them into five categories \nbased on the go"
+      ],
+      "latency": 10.864517211914062
+    },
+    {
+      "topic": "Memory hierarchies: short-term to long-term consolidation",
+      "area": "architecture",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cognitive neuroscience perspective on memory: overview and summary",
+        "[exa] Memory Consolidation",
+        "[exa-h] This paper explores memory from a cognitive neuroscience perspective and examines associated neural mechanisms. It exami"
+      ],
+      "latency": 8.091763734817505
+    },
+    {
+      "topic": "Letta agent memory: core, archival, recall systems",
+      "area": "systems",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Memory overview",
+        "[exa] Key concepts",
+        "[exa-h] Understanding agent memory systems including core memory and archival memory in Letta.\n## What is agent memory?\n[Section"
+      ],
+      "latency": 3.713137149810791
+    },
+    {
+      "topic": "Mem0 for agents: universal memory layer patterns",
+      "area": "systems",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Build with  mem0",
+        "[exa-h] [Mem0] (\"mem-zero\") enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interac"
+      ],
+      "latency": 3.8207690715789795
+    },
+    {
+      "topic": "Vector-based agent memory: embedding storage and retrieval",
+      "area": "systems",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MemR 3 : Memory Retrieval via Reflective Reasoning for LLM Agents",
+        "[exa] Computer Science > Robotics",
+        "[exa-h] Orthogonal to these works, this paper constructs an agentic memory system, MemR3, i.e.,MemoryRetrieval system withReflec"
+      ],
+      "latency": 4.009164094924927
+    },
+    {
+      "topic": "Graph-based memory: knowledge graphs for agents",
+      "area": "systems",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] knowledge graph represents a network of interconnected se\u0002mantic knowledge, while episodic memories are depicted as\nepis"
+      ],
+      "latency": 6.5860679149627686
+    },
+    {
+      "topic": "Agent self-improvement: learning from experiences",
+      "area": "learning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] EvolveR: Self-Evolving LLM Agents through an Experience-Driven Lifecycle",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] this work, we introduceEvolveR, a framework designed to enable agent to self-improve through a complete, closed-loop exp"
+      ],
+      "latency": 11.345761775970459
+    },
+    {
+      "topic": "Skill acquisition: agents learning new capabilities",
+      "area": "learning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Humans excel at reusing prior knowledge to address new challenges and developing skills while solving problems. This p"
+      ],
+      "latency": 7.441443920135498
+    },
+    {
+      "topic": "Preference learning: adapting to user preferences",
+      "area": "learning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Preference Learning",
+        "[exa] Learning Context-dependent Personal Preferences for Adaptive Recommendation",
+        "[exa-h] *Preference learning*refers to the induction of preference models from empirical data. Typically, these models are used "
+      ],
+      "latency": 3.766227960586548
+    },
+    {
+      "topic": "Meta-learning for agents: learning to learn",
+      "area": "learning",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] work we introduce a novel approach to this challenge, which we refer to as deep meta-reinforcement learning. Previous wo"
+      ],
+      "latency": 4.492096900939941
+    },
+    {
+      "topic": "Memory indexing strategies: fast retrieval patterns",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] N-gram Embeddings and Scalable Lookup",
+        "[exa] Index architecture and design guide",
+        "[exa-h] **O(1) Lookup Complexity**|Deterministic hashing|No sequential search; constant-time retrieval regardless of table size|"
+      ],
+      "latency": 5.551825523376465
+    },
+    {
+      "topic": "Memory compression: summarizing and compacting",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Compresso: Pragmatic Main Memory Compression | IEEE Conference Publication | IEEE Xplore",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing te"
+      ],
+      "latency": 4.5670647621154785
+    },
+    {
+      "topic": "Cross-session persistence: maintaining state across runs",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] session | Cypress Documentation | Cypress Documentation",
+        "[exa] Advanced concepts of Streamlit",
+        "[exa-h] `cacheAcrossSpecs`|`false`|When enabled, the newly created session is considered \"global\" and can be restored in any spe"
+      ],
+      "latency": 4.058212041854858
+    },
+    {
+      "topic": "Memory synchronization: multi-agent shared memory",
+      "area": "implementation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] The shared memory or single address space abstraction provides several advantages over the message passing (or\nprivate m"
+      ],
+      "latency": 5.485986232757568
+    },
+    {
+      "topic": "Reflection mechanisms: agents reasoning about memory",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Memory and Reflection: Foundations for Autonomous AI Agents",
+        "[exa-h] Building on recent research, we propose Reflexion, an approach that endows an agent with dynamic memory and self-reflect"
+      ],
+      "latency": 11.137871503829956
+    },
+    {
+      "topic": "Memory-augmented planning: using history for decisions",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] this, we propose Retrieval-Augmented Planning (RAP) framework, designed to dynamically leverage past experiences corresp"
+      ],
+      "latency": 5.361302375793457
+    },
+    {
+      "topic": "Forgetting mechanisms: relevance-based memory pruning",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pruning of memories by context-based prediction error",
+        "[exa] A retrieval-specific mechanism of adaptive forgetting in the mammalian brain",
+        "[exa-h] we report the discovery of an active mechanism for forgetting that weakens memories selectively and without burdening th"
+      ],
+      "latency": 3.9874579906463623
+    },
+    {
+      "topic": "Episodic future thinking: using memory for prediction",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Episodic Future Thinking: Mechanisms and Functions",
+        "[exa] ",
+        "[exa-h] experiences that might occur in one\u2019s personal future. Cognitive,\nneuropsychological, and neuroimaging research concerni"
+      ],
+      "latency": 3.9294331073760986
+    }
+  ]
+}

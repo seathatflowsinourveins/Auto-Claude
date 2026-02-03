@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T03:00:54.021250",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Great Expectations: data testing",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Everything you need to",
+        "[exa] Everything you need to",
+        "[exa-h] GX Core is a flexible, Python-based framework that fits right into your data workflows. Write tests that reflect your bu"
+      ],
+      "latency": 9.000457286834717
+    },
+    {
+      "topic": "Deepchecks: ML validation",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to Deepchecks! #",
+        "[exa] Welcome to Deepchecks! \u00b6",
+        "[exa-h] ## Deepchecks\u2019 Components for Continuous Validation[#] \nDeepchecks provides comprehensive support for your testing requi"
+      ],
+      "latency": 8.184806108474731
+    },
+    {
+      "topic": "Evidently: ML monitoring tests",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is Evidently?",
+        "[exa] What is Evidently?",
+        "[exa-h] ] \nGet started\nRun your first evaluation in a couple of minutes.\n[\n## LLM evaluation\nEvaluate the quality of LLM system "
+      ],
+      "latency": 7.1049110889434814
+    },
+    {
+      "topic": "PromptFoo: prompt testing",
+      "area": "frameworks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] [![npm]] [![GitHub Workflow Status]] [![MIT license]] [![Discord]] \n`promptfoo`is a tool for testing and evaluating LLM "
+      ],
+      "latency": 6.996707439422607
+    },
+    {
+      "topic": "Data validation: schema checks",
+      "area": "data_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build more. Break less. Empower others.",
+        "[exa] Welcome",
+        "[exa-h] Simplify your validation logic to reduce your code\u2019s complexity and save time on development. Define constraints for you"
+      ],
+      "latency": 6.989295482635498
+    },
+    {
+      "topic": "Data drift: distribution shift",
+      "area": "data_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Learning under Concept Drift: A Review - ADS",
+        "[exa] Concept drift",
+        "[exa-h] Concept drift describes unforeseeable changes in the underlying distribution of streaming data over time. Concept drift "
+      ],
+      "latency": 8.165025234222412
+    },
+    {
+      "topic": "Data quality: completeness",
+      "area": "data_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is Data Completeness? Definition, Examples and Best Practices",
+        "[exa] Data Completeness Measures",
+        "[exa-h] Data completeness means that all of the information that is needed is there and all required values are present. It is a"
+      ],
+      "latency": 7.168023347854614
+    },
+    {
+      "topic": "Feature testing: input validation",
+      "area": "data_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Implementing feature detection",
+        "[exa] Input Validation Cheat Sheet \u00b6",
+        "[exa-h] Feature detection involves working out whether a browser supports a certain block of code, and running different code de"
+      ],
+      "latency": 6.012033939361572
+    },
+    {
+      "topic": "Model validation: accuracy testing",
+      "area": "model_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 3.4.  Metrics and scoring: quantifying the quality of predictions #",
+        "[exa] 3.  Model selection and evaluation #",
+        "[exa-h] There are 3 different APIs for evaluating the quality of a model\u2019s\npredictions:\n* **Estimator score method**: Estimators"
+      ],
+      "latency": 7.164953708648682
+    },
+    {
+      "topic": "Behavioral testing: CheckList",
+      "area": "model_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] for evaluating models either focus on individ\u0002ual tasks or on specific behaviors. Inspired\nby principles of behavioral t"
+      ],
+      "latency": 7.522455215454102
+    },
+    {
+      "topic": "Adversarial testing: robustness",
+      "area": "model_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Adversarial Testing for Generative AI \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] **Estimated Read Time:**10 minutes**Learning objectives:**\n* Define adversarial testing, and how it can help build safer"
+      ],
+      "latency": 7.885863780975342
+    },
+    {
+      "topic": "Regression testing: model changes",
+      "area": "model_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Production ML systems \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] ",
+        "[exa-h] * The module covers key aspects of production ML systems, including testing, identifying potential flaws, and monitoring"
+      ],
+      "latency": 6.705224990844727
+    },
+    {
+      "topic": "Prompt testing: evaluation",
+      "area": "llm_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > As language models (LMs) are increasingly adopted across domains, high-quality benchmarking frameworks that accurately"
+      ],
+      "latency": 9.223391056060791
+    },
+    {
+      "topic": "LLM evals: benchmark testing",
+      "area": "llm_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ",
+        "[exa-h] > Progress in AI is often demonstrated by new models claiming improved performance on tasks measuring model capabilities"
+      ],
+      "latency": 7.643528938293457
+    },
+    {
+      "topic": "Red teaming: safety testing",
+      "area": "llm_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] 2.1 Purpose of Red Teaming\nIn the development and operation of AI systems, it is important to take measures \nto mitigate"
+      ],
+      "latency": 9.055752277374268
+    },
+    {
+      "topic": "Hallucination testing: factuality",
+      "area": "llm_testing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Review of Multimodal Hallucinations: Categorization, Assessment, Theoretical Perspectives, and Clinical Recommendations",
+        "[exa] Evaluation of psychosis",
+        "[exa-h] Hallucinations can occur in different sensory modalities, both simultaneously and serially in time. They have typically "
+      ],
+      "latency": 10.092993021011353
+    },
+    {
+      "topic": "Shadow testing: production comparison",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Shadow tests",
+        "[exa] Shadow Testing",
+        "[exa-h] You can use this capability to validate changes to any component of your production variant, namely the model,\nthe conta"
+      ],
+      "latency": 6.511205196380615
+    },
+    {
+      "topic": "Canary deployment: gradual rollout",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Use a canary deployment strategy \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Canarying Releases",
+        "[exa-h] A canary deployment is a progressive rollout of an application that splits\ntraffic between an already-deployed version a"
+      ],
+      "latency": 6.387396812438965
+    },
+    {
+      "topic": "Continuous testing: CI/CD ML",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MLOps: Continuous delivery and automation pipelines in machine learning \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] 5. Continuous integration",
+        "[exa-h] This document discusses techniques for implementing and automating continuous\nintegration (CI), continuous delivery (CD)"
+      ],
+      "latency": 8.12812066078186
+    },
+    {
+      "topic": "Performance testing: latency",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding latency",
+        "[exa] Understanding latency",
+        "[exa-h] **Latency**is the time it takes for a packet of data to travel from source to a destination. In terms of performance opt"
+      ],
+      "latency": 9.18705940246582
+    }
+  ]
+}

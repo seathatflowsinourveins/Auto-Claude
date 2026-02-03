@@ -1,0 +1,1025 @@
+{
+  "timestamp": "2026-02-03T00:57:02.299258",
+  "stats": {
+    "sources": 160,
+    "findings": 79,
+    "implementations": 20
+  },
+  "sqlite_demo": {
+    "conversations": 4,
+    "memory": 4,
+    "checkpoints": 4
+  },
+  "implementations": [
+    {
+      "backend": "sqlite",
+      "status": "implemented",
+      "operations": [
+        {
+          "table": "conversations",
+          "count": 1
+        },
+        {
+          "table": "memory",
+          "count": 1
+        },
+        {
+          "table": "checkpoints",
+          "count": 1
+        }
+      ],
+      "schema": {
+        "conversations": [
+          "id",
+          "session_id",
+          "role",
+          "content",
+          "embedding",
+          "created_at"
+        ],
+        "memory": [
+          "id",
+          "key",
+          "value",
+          "memory_type",
+          "importance",
+          "access_count"
+        ],
+        "checkpoints": [
+          "id",
+          "thread_id",
+          "checkpoint_id",
+          "state",
+          "created_at"
+        ]
+      }
+    },
+    {
+      "backend": "sqlite",
+      "status": "implemented",
+      "operations": [
+        {
+          "table": "conversations",
+          "count": 2
+        },
+        {
+          "table": "memory",
+          "count": 2
+        },
+        {
+          "table": "checkpoints",
+          "count": 2
+        }
+      ],
+      "schema": {
+        "conversations": [
+          "id",
+          "session_id",
+          "role",
+          "content",
+          "embedding",
+          "created_at"
+        ],
+        "memory": [
+          "id",
+          "key",
+          "value",
+          "memory_type",
+          "importance",
+          "access_count"
+        ],
+        "checkpoints": [
+          "id",
+          "thread_id",
+          "checkpoint_id",
+          "state",
+          "created_at"
+        ]
+      }
+    },
+    {
+      "backend": "sqlite",
+      "status": "implemented",
+      "operations": [
+        {
+          "table": "conversations",
+          "count": 3
+        },
+        {
+          "table": "memory",
+          "count": 3
+        },
+        {
+          "table": "checkpoints",
+          "count": 3
+        }
+      ],
+      "schema": {
+        "conversations": [
+          "id",
+          "session_id",
+          "role",
+          "content",
+          "embedding",
+          "created_at"
+        ],
+        "memory": [
+          "id",
+          "key",
+          "value",
+          "memory_type",
+          "importance",
+          "access_count"
+        ],
+        "checkpoints": [
+          "id",
+          "thread_id",
+          "checkpoint_id",
+          "state",
+          "created_at"
+        ]
+      }
+    },
+    {
+      "backend": "sqlite",
+      "status": "implemented",
+      "operations": [
+        {
+          "table": "conversations",
+          "count": 4
+        },
+        {
+          "table": "memory",
+          "count": 4
+        },
+        {
+          "table": "checkpoints",
+          "count": 4
+        }
+      ],
+      "schema": {
+        "conversations": [
+          "id",
+          "session_id",
+          "role",
+          "content",
+          "embedding",
+          "created_at"
+        ],
+        "memory": [
+          "id",
+          "key",
+          "value",
+          "memory_type",
+          "importance",
+          "access_count"
+        ],
+        "checkpoints": [
+          "id",
+          "thread_id",
+          "checkpoint_id",
+          "state",
+          "created_at"
+        ]
+      }
+    },
+    {
+      "backend": "redis",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "cache": "SET/GET with TTL for prompt/response caching",
+        "streams": "XADD/XREAD for event sourcing",
+        "search": "FT.CREATE/FT.SEARCH for vector similarity",
+        "pubsub": "PUBLISH/SUBSCRIBE for agent coordination"
+      },
+      "config": {
+        "max_memory": "2gb",
+        "eviction_policy": "allkeys-lru",
+        "persistence": "AOF"
+      }
+    },
+    {
+      "backend": "redis",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "cache": "SET/GET with TTL for prompt/response caching",
+        "streams": "XADD/XREAD for event sourcing",
+        "search": "FT.CREATE/FT.SEARCH for vector similarity",
+        "pubsub": "PUBLISH/SUBSCRIBE for agent coordination"
+      },
+      "config": {
+        "max_memory": "2gb",
+        "eviction_policy": "allkeys-lru",
+        "persistence": "AOF"
+      }
+    },
+    {
+      "backend": "redis",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "cache": "SET/GET with TTL for prompt/response caching",
+        "streams": "XADD/XREAD for event sourcing",
+        "search": "FT.CREATE/FT.SEARCH for vector similarity",
+        "pubsub": "PUBLISH/SUBSCRIBE for agent coordination"
+      },
+      "config": {
+        "max_memory": "2gb",
+        "eviction_policy": "allkeys-lru",
+        "persistence": "AOF"
+      }
+    },
+    {
+      "backend": "redis",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "cache": "SET/GET with TTL for prompt/response caching",
+        "streams": "XADD/XREAD for event sourcing",
+        "search": "FT.CREATE/FT.SEARCH for vector similarity",
+        "pubsub": "PUBLISH/SUBSCRIBE for agent coordination"
+      },
+      "config": {
+        "max_memory": "2gb",
+        "eviction_policy": "allkeys-lru",
+        "persistence": "AOF"
+      }
+    },
+    {
+      "backend": "postgresql",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "pgvector": "CREATE EXTENSION vector; CREATE INDEX USING ivfflat",
+        "jsonb": "JSONB columns with GIN index for flexible state",
+        "partitioning": "PARTITION BY RANGE on created_at",
+        "triggers": "AFTER INSERT trigger for consolidation"
+      },
+      "schema": {
+        "embeddings": "id, content, embedding vector(1024), metadata JSONB",
+        "conversations": "id, thread_id, messages JSONB, created_at TIMESTAMPTZ",
+        "checkpoints": "thread_id, checkpoint_ns, state BYTEA"
+      }
+    },
+    {
+      "backend": "postgresql",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "pgvector": "CREATE EXTENSION vector; CREATE INDEX USING ivfflat",
+        "jsonb": "JSONB columns with GIN index for flexible state",
+        "partitioning": "PARTITION BY RANGE on created_at",
+        "triggers": "AFTER INSERT trigger for consolidation"
+      },
+      "schema": {
+        "embeddings": "id, content, embedding vector(1024), metadata JSONB",
+        "conversations": "id, thread_id, messages JSONB, created_at TIMESTAMPTZ",
+        "checkpoints": "thread_id, checkpoint_ns, state BYTEA"
+      }
+    },
+    {
+      "backend": "postgresql",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "pgvector": "CREATE EXTENSION vector; CREATE INDEX USING ivfflat",
+        "jsonb": "JSONB columns with GIN index for flexible state",
+        "partitioning": "PARTITION BY RANGE on created_at",
+        "triggers": "AFTER INSERT trigger for consolidation"
+      },
+      "schema": {
+        "embeddings": "id, content, embedding vector(1024), metadata JSONB",
+        "conversations": "id, thread_id, messages JSONB, created_at TIMESTAMPTZ",
+        "checkpoints": "thread_id, checkpoint_ns, state BYTEA"
+      }
+    },
+    {
+      "backend": "postgresql",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "pgvector": "CREATE EXTENSION vector; CREATE INDEX USING ivfflat",
+        "jsonb": "JSONB columns with GIN index for flexible state",
+        "partitioning": "PARTITION BY RANGE on created_at",
+        "triggers": "AFTER INSERT trigger for consolidation"
+      },
+      "schema": {
+        "embeddings": "id, content, embedding vector(1024), metadata JSONB",
+        "conversations": "id, thread_id, messages JSONB, created_at TIMESTAMPTZ",
+        "checkpoints": "thread_id, checkpoint_ns, state BYTEA"
+      }
+    },
+    {
+      "backend": "hybrid",
+      "status": "implemented",
+      "operations": [],
+      "architecture": {
+        "hot": "Redis - recent context, active sessions",
+        "warm": "PostgreSQL - conversation history, searchable memory",
+        "cold": "S3/GCS - archived conversations, embeddings backup"
+      },
+      "sync_patterns": {
+        "write_through": "Write to cache and DB simultaneously",
+        "write_behind": "Write to cache, async sync to DB",
+        "read_through": "Check cache, fallback to DB, populate cache"
+      }
+    },
+    {
+      "backend": "hybrid",
+      "status": "implemented",
+      "operations": [],
+      "architecture": {
+        "hot": "Redis - recent context, active sessions",
+        "warm": "PostgreSQL - conversation history, searchable memory",
+        "cold": "S3/GCS - archived conversations, embeddings backup"
+      },
+      "sync_patterns": {
+        "write_through": "Write to cache and DB simultaneously",
+        "write_behind": "Write to cache, async sync to DB",
+        "read_through": "Check cache, fallback to DB, populate cache"
+      }
+    },
+    {
+      "backend": "hybrid",
+      "status": "implemented",
+      "operations": [],
+      "architecture": {
+        "hot": "Redis - recent context, active sessions",
+        "warm": "PostgreSQL - conversation history, searchable memory",
+        "cold": "S3/GCS - archived conversations, embeddings backup"
+      },
+      "sync_patterns": {
+        "write_through": "Write to cache and DB simultaneously",
+        "write_behind": "Write to cache, async sync to DB",
+        "read_through": "Check cache, fallback to DB, populate cache"
+      }
+    },
+    {
+      "backend": "hybrid",
+      "status": "implemented",
+      "operations": [],
+      "architecture": {
+        "hot": "Redis - recent context, active sessions",
+        "warm": "PostgreSQL - conversation history, searchable memory",
+        "cold": "S3/GCS - archived conversations, embeddings backup"
+      },
+      "sync_patterns": {
+        "write_through": "Write to cache and DB simultaneously",
+        "write_behind": "Write to cache, async sync to DB",
+        "read_through": "Check cache, fallback to DB, populate cache"
+      }
+    },
+    {
+      "backend": "distributed",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "sharding": "Consistent hashing by thread_id",
+        "replication": "Primary-replica with async replication",
+        "consensus": "Raft for leader election",
+        "partitioning": "Geographic partitioning by user region"
+      }
+    },
+    {
+      "backend": "distributed",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "sharding": "Consistent hashing by thread_id",
+        "replication": "Primary-replica with async replication",
+        "consensus": "Raft for leader election",
+        "partitioning": "Geographic partitioning by user region"
+      }
+    },
+    {
+      "backend": "distributed",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "sharding": "Consistent hashing by thread_id",
+        "replication": "Primary-replica with async replication",
+        "consensus": "Raft for leader election",
+        "partitioning": "Geographic partitioning by user region"
+      }
+    },
+    {
+      "backend": "distributed",
+      "status": "implemented",
+      "operations": [],
+      "patterns": {
+        "sharding": "Consistent hashing by thread_id",
+        "replication": "Primary-replica with async replication",
+        "consensus": "Raft for leader election",
+        "partitioning": "Geographic partitioning by user region"
+      }
+    }
+  ],
+  "results": [
+    {
+      "topic": "SQLite for LLM: conversation history, checkpoints, embeddings",
+      "backend": "sqlite",
+      "sources": 8,
+      "findings": [
+        "[exa] Embedded Intelligence: How SQLite-vec Delivers Fast, Local Vector ...",
+        "[exa] External Memory with SqliteSaver"
+      ],
+      "implementation": {
+        "backend": "sqlite",
+        "status": "implemented",
+        "operations": [
+          {
+            "table": "conversations",
+            "count": 1
+          },
+          {
+            "table": "memory",
+            "count": 1
+          },
+          {
+            "table": "checkpoints",
+            "count": 1
+          }
+        ],
+        "schema": {
+          "conversations": [
+            "id",
+            "session_id",
+            "role",
+            "content",
+            "embedding",
+            "created_at"
+          ],
+          "memory": [
+            "id",
+            "key",
+            "value",
+            "memory_type",
+            "importance",
+            "access_count"
+          ],
+          "checkpoints": [
+            "id",
+            "thread_id",
+            "checkpoint_id",
+            "state",
+            "created_at"
+          ]
+        }
+      },
+      "latency": 17.491238355636597
+    },
+    {
+      "topic": "SQLite FTS5: full-text search for agent memory",
+      "backend": "sqlite",
+      "sources": 8,
+      "findings": [
+        "[exa] Instant Semantic Search API: SQLite FTS5 + Python FastAPI",
+        "[exa] SQLite FTS5 Extension"
+      ],
+      "implementation": {
+        "backend": "sqlite",
+        "status": "implemented",
+        "operations": [
+          {
+            "table": "conversations",
+            "count": 2
+          },
+          {
+            "table": "memory",
+            "count": 2
+          },
+          {
+            "table": "checkpoints",
+            "count": 2
+          }
+        ],
+        "schema": {
+          "conversations": [
+            "id",
+            "session_id",
+            "role",
+            "content",
+            "embedding",
+            "created_at"
+          ],
+          "memory": [
+            "id",
+            "key",
+            "value",
+            "memory_type",
+            "importance",
+            "access_count"
+          ],
+          "checkpoints": [
+            "id",
+            "thread_id",
+            "checkpoint_id",
+            "state",
+            "created_at"
+          ]
+        }
+      },
+      "latency": 14.424640655517578
+    },
+    {
+      "topic": "SQLite WAL mode: concurrent reads for agent queries",
+      "backend": "sqlite",
+      "sources": 8,
+      "findings": [
+        "[exa] Understanding WAL Mode in SQLite: Boosting Performance in SQL ...",
+        "[exa] How do you handle concurrent access to your db? - Hacker News"
+      ],
+      "implementation": {
+        "backend": "sqlite",
+        "status": "implemented",
+        "operations": [
+          {
+            "table": "conversations",
+            "count": 3
+          },
+          {
+            "table": "memory",
+            "count": 3
+          },
+          {
+            "table": "checkpoints",
+            "count": 3
+          }
+        ],
+        "schema": {
+          "conversations": [
+            "id",
+            "session_id",
+            "role",
+            "content",
+            "embedding",
+            "created_at"
+          ],
+          "memory": [
+            "id",
+            "key",
+            "value",
+            "memory_type",
+            "importance",
+            "access_count"
+          ],
+          "checkpoints": [
+            "id",
+            "thread_id",
+            "checkpoint_id",
+            "state",
+            "created_at"
+          ]
+        }
+      },
+      "latency": 14.067663431167603
+    },
+    {
+      "topic": "SQLite JSON1: storing structured agent state",
+      "backend": "sqlite",
+      "sources": 8,
+      "findings": [
+        "[exa] JSON Functions And Operators - SQLite",
+        "[exa] Automatically Identifying and Storing JSON Data in SQLite - Medium"
+      ],
+      "implementation": {
+        "backend": "sqlite",
+        "status": "implemented",
+        "operations": [
+          {
+            "table": "conversations",
+            "count": 4
+          },
+          {
+            "table": "memory",
+            "count": 4
+          },
+          {
+            "table": "checkpoints",
+            "count": 4
+          }
+        ],
+        "schema": {
+          "conversations": [
+            "id",
+            "session_id",
+            "role",
+            "content",
+            "embedding",
+            "created_at"
+          ],
+          "memory": [
+            "id",
+            "key",
+            "value",
+            "memory_type",
+            "importance",
+            "access_count"
+          ],
+          "checkpoints": [
+            "id",
+            "thread_id",
+            "checkpoint_id",
+            "state",
+            "created_at"
+          ]
+        }
+      },
+      "latency": 12.962013959884644
+    },
+    {
+      "topic": "Redis for LLM caching: prompt cache, response cache, embedding cache",
+      "backend": "redis",
+      "sources": 8,
+      "findings": [
+        "[exa] Prompt caching vs semantic caching: How to make AI agents faster",
+        "[exa] LLM Cache | Docs - Redis"
+      ],
+      "implementation": {
+        "backend": "redis",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "cache": "SET/GET with TTL for prompt/response caching",
+          "streams": "XADD/XREAD for event sourcing",
+          "search": "FT.CREATE/FT.SEARCH for vector similarity",
+          "pubsub": "PUBLISH/SUBSCRIBE for agent coordination"
+        },
+        "config": {
+          "max_memory": "2gb",
+          "eviction_policy": "allkeys-lru",
+          "persistence": "AOF"
+        }
+      },
+      "latency": 15.402880907058716
+    },
+    {
+      "topic": "Redis Streams: event sourcing for agent actions",
+      "backend": "redis",
+      "sources": 8,
+      "findings": [
+        "[exa] How to Use Redis Streams for Event Sourcing - OneUptime",
+        "[exa] How to Use Redis Streams for Event Sourcing - OneUptime"
+      ],
+      "implementation": {
+        "backend": "redis",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "cache": "SET/GET with TTL for prompt/response caching",
+          "streams": "XADD/XREAD for event sourcing",
+          "search": "FT.CREATE/FT.SEARCH for vector similarity",
+          "pubsub": "PUBLISH/SUBSCRIBE for agent coordination"
+        },
+        "config": {
+          "max_memory": "2gb",
+          "eviction_policy": "allkeys-lru",
+          "persistence": "AOF"
+        }
+      },
+      "latency": 10.775184631347656
+    },
+    {
+      "topic": "Redis Search: vector similarity with RediSearch",
+      "backend": "redis",
+      "sources": 8,
+      "findings": [
+        "[exa] Index and query vectors",
+        "[exa] A complete guide to vector search"
+      ],
+      "implementation": {
+        "backend": "redis",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "cache": "SET/GET with TTL for prompt/response caching",
+          "streams": "XADD/XREAD for event sourcing",
+          "search": "FT.CREATE/FT.SEARCH for vector similarity",
+          "pubsub": "PUBLISH/SUBSCRIBE for agent coordination"
+        },
+        "config": {
+          "max_memory": "2gb",
+          "eviction_policy": "allkeys-lru",
+          "persistence": "AOF"
+        }
+      },
+      "latency": 11.51427960395813
+    },
+    {
+      "topic": "Redis pub/sub: real-time agent coordination",
+      "backend": "redis",
+      "sources": 8,
+      "findings": [
+        "[exa] AI agent orchestration for production systems - Redis",
+        "[exa] AI agent orchestration for production systems"
+      ],
+      "implementation": {
+        "backend": "redis",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "cache": "SET/GET with TTL for prompt/response caching",
+          "streams": "XADD/XREAD for event sourcing",
+          "search": "FT.CREATE/FT.SEARCH for vector similarity",
+          "pubsub": "PUBLISH/SUBSCRIBE for agent coordination"
+        },
+        "config": {
+          "max_memory": "2gb",
+          "eviction_policy": "allkeys-lru",
+          "persistence": "AOF"
+        }
+      },
+      "latency": 10.648569583892822
+    },
+    {
+      "topic": "PostgreSQL pgvector: native vector similarity search",
+      "backend": "postgresql",
+      "sources": 8,
+      "findings": [
+        "[exa] pgvector/pgvector: Open-source vector similarity search for Postgres",
+        "[exa] Vector Similarity Search with PostgreSQL's pgvector - A Deep Dive"
+      ],
+      "implementation": {
+        "backend": "postgresql",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "pgvector": "CREATE EXTENSION vector; CREATE INDEX USING ivfflat",
+          "jsonb": "JSONB columns with GIN index for flexible state",
+          "partitioning": "PARTITION BY RANGE on created_at",
+          "triggers": "AFTER INSERT trigger for consolidation"
+        },
+        "schema": {
+          "embeddings": "id, content, embedding vector(1024), metadata JSONB",
+          "conversations": "id, thread_id, messages JSONB, created_at TIMESTAMPTZ",
+          "checkpoints": "thread_id, checkpoint_ns, state BYTEA"
+        }
+      },
+      "latency": 10.405101776123047
+    },
+    {
+      "topic": "PostgreSQL JSONB: flexible agent state storage",
+      "backend": "postgresql",
+      "sources": 8,
+      "findings": [
+        "[exa] How to Use PostgreSQL JSONB for Document Storage - OneUptime",
+        "[exa] JSONB: PostgreSQL's Secret Weapon for Flexible Data Modeling"
+      ],
+      "implementation": {
+        "backend": "postgresql",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "pgvector": "CREATE EXTENSION vector; CREATE INDEX USING ivfflat",
+          "jsonb": "JSONB columns with GIN index for flexible state",
+          "partitioning": "PARTITION BY RANGE on created_at",
+          "triggers": "AFTER INSERT trigger for consolidation"
+        },
+        "schema": {
+          "embeddings": "id, content, embedding vector(1024), metadata JSONB",
+          "conversations": "id, thread_id, messages JSONB, created_at TIMESTAMPTZ",
+          "checkpoints": "thread_id, checkpoint_ns, state BYTEA"
+        }
+      },
+      "latency": 11.051729917526245
+    },
+    {
+      "topic": "PostgreSQL partitioning: scaling conversation history",
+      "backend": "postgresql",
+      "sources": 8,
+      "findings": [
+        "[exa] Documentation: 18: 5.12. Table Partitioning - PostgreSQL",
+        "[exa] Billions rows in PostgreSql: partition or not to partition?"
+      ],
+      "implementation": {
+        "backend": "postgresql",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "pgvector": "CREATE EXTENSION vector; CREATE INDEX USING ivfflat",
+          "jsonb": "JSONB columns with GIN index for flexible state",
+          "partitioning": "PARTITION BY RANGE on created_at",
+          "triggers": "AFTER INSERT trigger for consolidation"
+        },
+        "schema": {
+          "embeddings": "id, content, embedding vector(1024), metadata JSONB",
+          "conversations": "id, thread_id, messages JSONB, created_at TIMESTAMPTZ",
+          "checkpoints": "thread_id, checkpoint_ns, state BYTEA"
+        }
+      },
+      "latency": 10.398340225219727
+    },
+    {
+      "topic": "PostgreSQL triggers: automated memory consolidation",
+      "backend": "postgresql",
+      "sources": 8,
+      "findings": [
+        "[exa] Postgres runs out of memory with trigger - Stack Overflow",
+        "[exa] Documentation: 18: 37.1. Overview of Trigger Behavior - PostgreSQL"
+      ],
+      "implementation": {
+        "backend": "postgresql",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "pgvector": "CREATE EXTENSION vector; CREATE INDEX USING ivfflat",
+          "jsonb": "JSONB columns with GIN index for flexible state",
+          "partitioning": "PARTITION BY RANGE on created_at",
+          "triggers": "AFTER INSERT trigger for consolidation"
+        },
+        "schema": {
+          "embeddings": "id, content, embedding vector(1024), metadata JSONB",
+          "conversations": "id, thread_id, messages JSONB, created_at TIMESTAMPTZ",
+          "checkpoints": "thread_id, checkpoint_ns, state BYTEA"
+        }
+      },
+      "latency": 10.173412799835205
+    },
+    {
+      "topic": "Multi-tier storage: hot/warm/cold data strategies",
+      "backend": "hybrid",
+      "sources": 8,
+      "findings": [
+        "[exa] Cold Data Storage: How to Optimize Your Data Storage Strategy",
+        "[exa] What is the hot and cold data tiering strategy for large model storage?"
+      ],
+      "implementation": {
+        "backend": "hybrid",
+        "status": "implemented",
+        "operations": [],
+        "architecture": {
+          "hot": "Redis - recent context, active sessions",
+          "warm": "PostgreSQL - conversation history, searchable memory",
+          "cold": "S3/GCS - archived conversations, embeddings backup"
+        },
+        "sync_patterns": {
+          "write_through": "Write to cache and DB simultaneously",
+          "write_behind": "Write to cache, async sync to DB",
+          "read_through": "Check cache, fallback to DB, populate cache"
+        }
+      },
+      "latency": 16.713926076889038
+    },
+    {
+      "topic": "Write-through cache: Redis + PostgreSQL consistency",
+      "backend": "hybrid",
+      "sources": 8,
+      "findings": [
+        "[exa] How to Implement Write-Through and Write-Behind Caching with ...",
+        "[exa] How to use Redis for Write through caching strategy | Redis"
+      ],
+      "implementation": {
+        "backend": "hybrid",
+        "status": "implemented",
+        "operations": [],
+        "architecture": {
+          "hot": "Redis - recent context, active sessions",
+          "warm": "PostgreSQL - conversation history, searchable memory",
+          "cold": "S3/GCS - archived conversations, embeddings backup"
+        },
+        "sync_patterns": {
+          "write_through": "Write to cache and DB simultaneously",
+          "write_behind": "Write to cache, async sync to DB",
+          "read_through": "Check cache, fallback to DB, populate cache"
+        }
+      },
+      "latency": 12.748633623123169
+    },
+    {
+      "topic": "Event sourcing: append-only logs for agent state",
+      "backend": "hybrid",
+      "sources": 8,
+      "findings": [
+        "[exa] Event Sourcing pattern - Azure Architecture Center | Microsoft Learn",
+        "[exa] Event Sourcing: Rebuilding State from a Log of Events | by Sajid Khan"
+      ],
+      "implementation": {
+        "backend": "hybrid",
+        "status": "implemented",
+        "operations": [],
+        "architecture": {
+          "hot": "Redis - recent context, active sessions",
+          "warm": "PostgreSQL - conversation history, searchable memory",
+          "cold": "S3/GCS - archived conversations, embeddings backup"
+        },
+        "sync_patterns": {
+          "write_through": "Write to cache and DB simultaneously",
+          "write_behind": "Write to cache, async sync to DB",
+          "read_through": "Check cache, fallback to DB, populate cache"
+        }
+      },
+      "latency": 13.204343318939209
+    },
+    {
+      "topic": "CQRS: command query separation for agent operations",
+      "backend": "hybrid",
+      "sources": 8,
+      "findings": [
+        "[exa] Command Query Responsibility Segregation",
+        "[exa] A Beginner's Guide to CQRS"
+      ],
+      "implementation": {
+        "backend": "hybrid",
+        "status": "implemented",
+        "operations": [],
+        "architecture": {
+          "hot": "Redis - recent context, active sessions",
+          "warm": "PostgreSQL - conversation history, searchable memory",
+          "cold": "S3/GCS - archived conversations, embeddings backup"
+        },
+        "sync_patterns": {
+          "write_through": "Write to cache and DB simultaneously",
+          "write_behind": "Write to cache, async sync to DB",
+          "read_through": "Check cache, fallback to DB, populate cache"
+        }
+      },
+      "latency": 12.293156623840332
+    },
+    {
+      "topic": "Distributed SQLite: LiteFS for multi-region agents",
+      "backend": "distributed",
+      "sources": 8,
+      "findings": [
+        "[exa] LiteFS - Distributed SQLite \u00b7 Fly Docs - Fly.io",
+        "[exa] Distributed SQLite with LiteFS - golang.dk"
+      ],
+      "implementation": {
+        "backend": "distributed",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "sharding": "Consistent hashing by thread_id",
+          "replication": "Primary-replica with async replication",
+          "consensus": "Raft for leader election",
+          "partitioning": "Geographic partitioning by user region"
+        }
+      },
+      "latency": 18.574744939804077
+    },
+    {
+      "topic": "Redis Cluster: sharding for high-throughput caching",
+      "backend": "distributed",
+      "sources": 8,
+      "findings": [
+        "[exa] High-Throughput Data Storage with Redis - Redis Deep Dive - Oboe",
+        "[exa] Redis Scalability Guide"
+      ],
+      "implementation": {
+        "backend": "distributed",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "sharding": "Consistent hashing by thread_id",
+          "replication": "Primary-replica with async replication",
+          "consensus": "Raft for leader election",
+          "partitioning": "Geographic partitioning by user region"
+        }
+      },
+      "latency": 10.278243064880371
+    },
+    {
+      "topic": "CockroachDB: distributed SQL for global agents",
+      "backend": "distributed",
+      "sources": 8,
+      "findings": [
+        "[exa] Sell globally, manage locally with distributed SQL",
+        "[exa] A Clearer Look at Distributed SQL for Enterprises"
+      ],
+      "implementation": {
+        "backend": "distributed",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "sharding": "Consistent hashing by thread_id",
+          "replication": "Primary-replica with async replication",
+          "consensus": "Raft for leader election",
+          "partitioning": "Geographic partitioning by user region"
+        }
+      },
+      "latency": 16.450857877731323
+    },
+    {
+      "topic": "Vitess: MySQL sharding for conversation scale",
+      "backend": "distributed",
+      "sources": 8,
+      "findings": [
+        "[exa] Sharding - The Vitess Docs",
+        "[exa] Vitess | Sharding"
+      ],
+      "implementation": {
+        "backend": "distributed",
+        "status": "implemented",
+        "operations": [],
+        "patterns": {
+          "sharding": "Consistent hashing by thread_id",
+          "replication": "Primary-replica with async replication",
+          "consensus": "Raft for leader election",
+          "partitioning": "Geographic partitioning by user region"
+        }
+      },
+      "latency": 14.976845979690552
+    }
+  ]
+}

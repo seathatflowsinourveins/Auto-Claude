@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:40:10.970258",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 99
+  },
+  "results": [
+    {
+      "topic": "Entity extraction: NER, relation extraction, coreference",
+      "area": "construction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Named Entity Recognition",
+        "[exa] Coreference Resolution",
+        "[exa-h] ## [] NER Pipeline Overview\nThe full named entity recognition pipeline has become fairly complex and involves a set of d"
+      ],
+      "latency": 7.783580780029297
+    },
+    {
+      "topic": "Knowledge graph from documents: schema design, population",
+      "area": "construction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] How to Create a Knowledge Graph?",
+        "[exa-h] We present AutoSchemaKG, a framework for\nfully autonomous knowledge graph construc\u0002tion that eliminates the need for pre"
+      ],
+      "latency": 11.598875045776367
+    },
+    {
+      "topic": "LLM for KG construction: prompting strategies, validation",
+      "area": "construction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] automatically. Our main contributions are summarized as follows:\n\u2022 Formally define the problem of KG-based prompting, wh"
+      ],
+      "latency": 13.371259689331055
+    },
+    {
+      "topic": "Incremental graph updates: change detection, consistency",
+      "area": "construction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Incrementalizing Graph Algorithms | Proceedings of the 2021 International Conference on Management of Data",
+        "[exa] ",
+        "[exa-h] Incremental algorithms are important to dynamic graph analyses, but are hard to write and analyze. Few incremental graph"
+      ],
+      "latency": 9.337704420089722
+    },
+    {
+      "topic": "Neo4j for knowledge graphs: Cypher queries, graph algorithms",
+      "area": "databases",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Cypher - Neo4j Documentation",
+        "[exa] Introduction",
+        "[exa-h] 2. [**Graph Academy: Cypher Fundamentals**] \nLearn Cypher in a 1-hour course.\n3. [**Cypher queries**] \nContinue your exp"
+      ],
+      "latency": 7.185581684112549
+    },
+    {
+      "topic": "Amazon Neptune: RDF, property graphs, SPARQL",
+      "area": "databases",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What Is Amazon Neptune?",
+        "[exa] Amazon Neptune",
+        "[exa-h] Amazon Neptune supports open graph APIs for both property graphs (Gremlin and openCypher) and RDF graphs (SPARQL). It pr"
+      ],
+      "latency": 9.294409275054932
+    },
+    {
+      "topic": "Graph databases comparison: Neo4j vs Neptune vs TigerGraph",
+      "area": "databases",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Graph Database Buyer's Guide",
+        "[exa] Graph Database Benchmark Report",
+        "[exa-h] This guide is intended to assist you in your buying decision by providing a side-by-side comparison of four leading grap"
+      ],
+      "latency": 9.769846200942993
+    },
+    {
+      "topic": "Graph embeddings: node2vec, TransE, knowledge graph embeddings",
+      "area": "databases",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Categories and Subject Descriptors: H.2.8 [Database Manage\u0002ment]: Database applications\u2014Data mining; I.2.6 [Artificial I"
+      ],
+      "latency": 9.62481689453125
+    },
+    {
+      "topic": "Natural language to graph query: text-to-Cypher, text-to-SPARQL",
+      "area": "querying",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Text2Cypher: Bridging Natural Language and Graph Databases",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Databases are essential in applications, supporting data storage and knowledge management, and are typically accessed vi"
+      ],
+      "latency": 9.765554428100586
+    },
+    {
+      "topic": "Graph reasoning: path finding, inference, rule-based",
+      "area": "querying",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] RelationalAI Reasoners",
+        "[exa] 1. Introduction",
+        "[exa-h] Featured Resources\n[Overview] [Working With Graphs] [Visualizing Graphs] [Running Graph Algorithms] [See all] \nPrescript"
+      ],
+      "latency": 8.959386825561523
+    },
+    {
+      "topic": "Multi-hop reasoning: complex queries, chain of relations",
+      "area": "querying",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] MCMH: Learning Multi-Chain Multi-Hop Rules for Knowledge Graph Reasoning",
+        "[exa-h] model multi-hop relations efficiently, or lack\ntransparency into the model\u2019s prediction ra\u0002tionale. In this paper, we pr"
+      ],
+      "latency": 6.691495895385742
+    },
+    {
+      "topic": "Graph analytics: centrality, community detection, similarity",
+      "area": "querying",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Social and Information Networks",
+        "[exa-h] Community detection in networks is one of the most popular topics of modern network\nscience. Communities, or clusters, a"
+      ],
+      "latency": 7.1269989013671875
+    },
+    {
+      "topic": "Microsoft GraphRAG: community summaries, entity resolution",
+      "area": "graphrag",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to GraphRAG",
+        "[exa] Global Community Summary Retriever",
+        "[exa-h] approaches using plain text snippets. The GraphRAG process involves extracting a knowledge graph out of raw text, buildi"
+      ],
+      "latency": 8.297620296478271
+    },
+    {
+      "topic": "LightRAG: efficient graph-based retrieval",
+      "area": "graphrag",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] LightRAG: Simple and Fast Retrieval-Augmented Generation - ACL Anthology",
+        "[exa-h] which can lead to fragmented answers that fail to capture complex inter-dependencies. To address these challenges, we pr"
+      ],
+      "latency": 6.447606563568115
+    },
+    {
+      "topic": "Graph + vector hybrid: combining structured and unstructured",
+      "area": "graphrag",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Next Generation    Hybrid Search (Graph + Vector)  to Power AI at Scale",
+        "[exa] ",
+        "[exa-h] * [Benefits] \n![] \n##### Multi-Modal Graph+Vector\nBuild sophisticated knowledge graphs with embeddings from structured a"
+      ],
+      "latency": 8.36529803276062
+    },
+    {
+      "topic": "GraphRAG evaluation: faithfulness, coverage metrics",
+      "area": "graphrag",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Information Retrieval",
+        "[exa] Knowledge-Graph Based RAG System Evaluation Framework",
+        "[exa-h] used text-based benchmarks. In this paper, we systematically evaluate RAG and GraphRAG on well-established benchmark tas"
+      ],
+      "latency": 6.8053953647613525
+    },
+    {
+      "topic": "Knowledge graphs for question answering: KGQA systems",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Knowledge from diverse application domains is organized as knowledge graphs (KGs) that are stored in RDF engines acces"
+      ],
+      "latency": 8.950701475143433
+    },
+    {
+      "topic": "Enterprise knowledge graphs: organizational knowledge",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Enterprise Knowledge Graph overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] ",
+        "[exa-h] information into organizational knowledge, which involves consolidating, standardizing, and reconciling data in an effic"
+      ],
+      "latency": 8.512612581253052
+    },
+    {
+      "topic": "Biomedical knowledge graphs: drug discovery, literature",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A comprehensive large-scale biomedical knowledge graph for AI-powered data-driven biomedical research",
+        "[exa] Building a knowledge graph to enable precision medicine.",
+        "[exa-h] interpretable, probabilistic-based inference method to identify indirect causal relations and applied it to real-time CO"
+      ],
+      "latency": 8.511293649673462
+    },
+    {
+      "topic": "Product knowledge graphs: e-commerce, recommendations",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Building commonsense knowledge graphs to aid product recommendation",
+        "[exa] Billion-scale Pre-trained E-commerce Product Knowledge Graph Model",
+        "[exa-h] Early-career research opportunities alongside experienced industry scientists.\n] \n \nSearchSubmit Search\n[Search and info"
+      ],
+      "latency": 10.18475341796875
+    }
+  ]
+}

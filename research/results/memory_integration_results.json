@@ -1,0 +1,234 @@
+{
+  "timestamp": "2026-02-03T00:47:35.596920",
+  "stats": {
+    "sources": 208,
+    "vectors": 160,
+    "insights": 79,
+    "memory_ops": 79
+  },
+  "memory_stats": {
+    "working_memory_size": 14,
+    "episodic_memory_size": 16,
+    "semantic_memory_size": 55,
+    "procedural_memory_size": 15,
+    "total_stores": 80,
+    "total_retrieves": 0,
+    "consolidations": 1,
+    "qdrant_collections": {
+      "working": 50,
+      "episodic": 30,
+      "semantic": 50,
+      "procedural": 30
+    }
+  },
+  "results": [
+    {
+      "topic": "Letta MemGPT: core_memory, recall_memory, archival_memory architecture",
+      "focus": "letta",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Understanding memory management",
+        "[exa] MemGPT | Letta Docs",
+        "[exa-h] To allow additional memory in external storage, MemGPT by default stores two external tables: archival memory (for long "
+      ],
+      "memory_ops": 5,
+      "latency": 12.154645919799805
+    },
+    {
+      "topic": "Mem0 memory layer: add, search, update, delete operations with metadata",
+      "focus": "mem0",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] \u200b How Mem0 Adds Memory",
+        "[exa] Build with  mem0",
+        "[exa-h] Adding memory is how Mem0 captures useful details from a conversation so your agents can reuse them later. Think of it a"
+      ],
+      "memory_ops": 5,
+      "latency": 10.658480644226074
+    },
+    {
+      "topic": "Qdrant vector memory: collections, points, filters, payloads",
+      "focus": "qdrant",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Points - Qdrant",
+        "[exa] Collections",
+        "[exa-h] ```\nare both possible.\n## Vectors\nEach point in qdrant may have one or more vectors.\nVectors are the central component o"
+      ],
+      "memory_ops": 5,
+      "latency": 12.881378650665283
+    },
+    {
+      "topic": "LangGraph checkpointing: SqliteSaver, MemorySaver, PostgresSaver",
+      "focus": "langgraph",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Checkpoint Implementations",
+        "[exa-h] Resetting focus\nYou signed in with another tab or window.[Reload] to refresh your session.You signed out in another tab "
+      ],
+      "memory_ops": 5,
+      "latency": 9.773813724517822
+    },
+    {
+      "topic": "Working memory pattern: recent context, attention window, decay",
+      "focus": "working",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Neural mechanisms of attending to items in working memory",
+        "[exa] On the Short-Lived Nature of Working Memory: Drift and Decay in a Population-coding model",
+        "[exa-h] Working memory, the ability to keep recently accessed information available for immediate manipulation, has been propose"
+      ],
+      "memory_ops": 5,
+      "latency": 12.792062997817993
+    },
+    {
+      "topic": "Episodic memory pattern: event storage, temporal indexing, replay",
+      "focus": "episodic",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Human hippocampal and entorhinal neurons encode the temporal structure of experience",
+        "[exa] Hippocampal neurons code individual episodic memories in humans",
+        "[exa-h] Extracting temporal patterns of recurring events is fundamentally important for organizing information in memory, predic"
+      ],
+      "memory_ops": 5,
+      "latency": 9.923246622085571
+    },
+    {
+      "topic": "Semantic memory pattern: knowledge graphs, concept relations, inference",
+      "focus": "semantic",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Knowledge Graphs",
+        "[exa] ",
+        "[exa-h] *SYNTHESIS LECTURES ON ON DATA, SEMANTICS, AND KNOWLEDGE #22*\n## Abstract\nThis book provides a comprehensive and accessi"
+      ],
+      "memory_ops": 5,
+      "latency": 14.046779870986938
+    },
+    {
+      "topic": "Procedural memory pattern: skill storage, action sequences, habits",
+      "focus": "procedural",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Memory: Procedural Memory, Skill, Perceptual-Motor Learning, and Awareness",
+        "[exa] Procedural Learning: Humans",
+        "[exa-h] This article focuses on how behavioral routines or procedures are learned and stored in memory. It departs from the real"
+      ],
+      "memory_ops": 5,
+      "latency": 8.066698551177979
+    },
+    {
+      "topic": "Memory consolidation: summarization, importance scoring, compression",
+      "focus": "consolidation",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Rethinking Memory in AI: Taxonomy, Operations, Topics, and Future Directions",
+        "[exa] Adaptive compression as a unifying framework for episodic and semantic memory",
+        "[exa-h] Based on the memory types, we classify memory operations into six fundamental types, spanning both memory management and"
+      ],
+      "memory_ops": 5,
+      "latency": 10.48099422454834
+    },
+    {
+      "topic": "Memory retrieval: similarity search, recency weighting, hybrid recall",
+      "focus": "retrieval",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] between fast recognition and slow recollection, guided by the system\u2019s sense of familiarity.\nCurrent retrieval systems o"
+      ],
+      "memory_ops": 5,
+      "latency": 12.037548065185547
+    },
+    {
+      "topic": "Memory forgetting: decay functions, capacity limits, relevance pruning",
+      "focus": "forgetting",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] APA PsycNET",
+        "[exa] The form of the forgetting curve and the fate of memories",
+        "[exa-h] [\u00a9 2026 American Psychological Association. All rights, including for text and data mining, AI training, and similar tec"
+      ],
+      "memory_ops": 4,
+      "latency": 11.744587182998657
+    },
+    {
+      "topic": "Memory sharing: cross-agent memory, namespace isolation, synchronization",
+      "focus": "sharing",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Multiagent Systems",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] context-overlooking the benefits and challenges of knowledge transfer across users under dynamic, asymmetric permissions"
+      ],
+      "memory_ops": 5,
+      "latency": 14.066100120544434
+    },
+    {
+      "topic": "Persistent memory: SQLite, PostgreSQL, Redis backends for agents",
+      "focus": "persistence",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] AgentDock Memory Architecture Overview",
+        "[exa] Build smarter AI agents: Manage short-term and long-term memory with Redis",
+        "[exa-h] **Multi-Adapter Architecture**: Single API works with PostgreSQL, SQLite, ChromaDB, Pinecone, and Qdrant without vendor "
+      ],
+      "memory_ops": 5,
+      "latency": 10.604706048965454
+    },
+    {
+      "topic": "Distributed memory: sharding, replication, consistency models",
+      "focus": "distributed",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] CAP theorem",
+        "[exa] State machine replication",
+        "[exa-h] Some cloud services choose strong consistency but use worldwide private fiber networks and GPS clock synchronization to "
+      ],
+      "memory_ops": 5,
+      "latency": 8.662957668304443
+    },
+    {
+      "topic": "Memory caching: embedding cache, query cache, result cache",
+      "focus": "caching",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tuning the Result Cache",
+        "[exa] Tuning the Result Cache",
+        "[exa-h] ### About the Result Cache\nA result cache is an area of memory, either in the Shared Global Area (SGA) or client applica"
+      ],
+      "memory_ops": 5,
+      "latency": 10.679065704345703
+    },
+    {
+      "topic": "Memory observability: usage tracking, recall metrics, latency profiling",
+      "focus": "observability",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Metrics & SLO  \u200b",
+        "[exa] Measure Memory API",
+        "[exa-h] `l4\\_observability\\_stack:logging:structured\\_logs:format:jsonfields:"
+      ],
+      "memory_ops": 5,
+      "latency": 9.067747116088867
+    }
+  ]
+}

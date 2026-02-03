@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:31:49.579486",
+  "stats": {
+    "sources": 196,
+    "vectors": 196,
+    "findings": 84
+  },
+  "results": [
+    {
+      "topic": "Chain-of-thought prompting: step-by-step",
+      "area": "cot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Chain of Thought Prompting: Enhancing AI Reasoning and Decision-Making",
+        "[exa-h] Consider one\u2019s own thought process when solving a complicated reasoning task such as a multi-step\nmath word problem. It "
+      ],
+      "latency": 4.180414438247681
+    },
+    {
+      "topic": "Zero-shot CoT: let's think step by step",
+      "area": "cot",
+      "sources": 6,
+      "vectors": 6,
+      "findings": [
+        "[exa] Zero-Shot Chain-of-Thought",
+        "[exa-h] \ud83d\udfe2This article is rated[easy] \nReading Time:3 minutes\nLast updated onAugust 7, 2024\n[Sander Schulhoff] \nTakeaways\n* **Zer",
+        "[tavily] Zero-shot Chain of Thought (CoT) uses \"Let\u2019s think step by step\" to prompt LLMs for multi-step reasoning without examples. It significantly improves reasoning performance over traditional zero-shot me"
+      ],
+      "latency": 7.837685585021973
+    },
+    {
+      "topic": "Few-shot CoT: exemplar reasoning",
+      "area": "cot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] offering generality and convenience; it can also tailor the generated exemplars and knowledge to each problem, offering "
+      ],
+      "latency": 3.9171862602233887
+    },
+    {
+      "topic": "Self-consistency: multiple reasoning paths",
+      "area": "cot",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Self-Consistency Improves Chain of Thought Reasoning in Language Models - ADS",
+        "[exa] ",
+        "[exa-h] greedy one, and then selects the most consistent answer by marginalizing out the sampled reasoning paths. Self-consisten"
+      ],
+      "latency": 5.709602355957031
+    },
+    {
+      "topic": "OpenAI o1: reasoning models, thinking",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Reasoning models",
+        "[exa] Learning to reason with LLMs",
+        "[exa-h] **Reasoning models**like[GPT-5] are LLMs trained with reinforcement learning to perform reasoning. Reasoning models[thin"
+      ],
+      "latency": 7.689972400665283
+    },
+    {
+      "topic": "Claude reasoning: extended thinking",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Extended Thinking",
+        "[exa] Extended thinking tips",
+        "[exa-h] Extended Thinking gives Claude enhanced reasoning capabilities for complex tasks, while providing varying levels of tran"
+      ],
+      "latency": 6.128799676895142
+    },
+    {
+      "topic": "DeepSeek reasoning: R1 model",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deepseek.EN",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] **DeepSeek R1**is a family of*reasoning-first*large language models built by the Chinese AI lab[DeepSeek]. Unlike typica"
+      ],
+      "latency": 3.7052745819091797
+    },
+    {
+      "topic": "Reasoning fine-tuning: training for logic",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] > Current large language models can perform reasonably well on complex tasks that require step-by-step reasoning with fe"
+      ],
+      "latency": 7.894188642501831
+    },
+    {
+      "topic": "Tree of thoughts: branching reasoning",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is tree of thoughts prompting?",
+        "[exa] Tree of Thoughts Framework",
+        "[exa-h] Tree of thoughts (ToT) is a ground-breaking framework designed to enhance the reasoning capabilities of[large language m"
+      ],
+      "latency": 3.7279186248779297
+    },
+    {
+      "topic": "ReAct: reasoning and acting",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ReAct: Synergizing Reasoning and Acting in Language Models",
+        "[exa] ",
+        "[exa-h] Language models are getting better at reasoning (e.g. chain-of-thought prompting) and acting (e.g. WebGPT, SayCan, ACT-1"
+      ],
+      "latency": 4.314870834350586
+    },
+    {
+      "topic": "Scratchpad reasoning: working memory",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Working Memory",
+        "[exa] The Role of Working Memory in Problem Solving (Chapter 6) - The Psychology of Problem Solving",
+        "[exa-h] Working memory is an aspect of human memory that permits the maintenance and manipulation of temporary information in th"
+      ],
+      "latency": 3.882901430130005
+    },
+    {
+      "topic": "Deliberation: iterative refinement",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Argument & Deliberation: An Introduction",
+        "[exa] ",
+        "[exa-h] Synthesize. Deliberation combines and builds upon individual contributions to create intellectual activity greater than "
+      ],
+      "latency": 6.498074054718018
+    },
+    {
+      "topic": "Math reasoning: GSM8K, MATH",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Mathematics",
+        "[exa-h] containing at least one variable whose coefficient is 1.\nNYSED Grade 8 Draft\nNew York State Next Generation Mathematics "
+      ],
+      "latency": 5.820111513137817
+    },
+    {
+      "topic": "Logical reasoning: deduction, induction",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Inductive Logic",
+        "[exa] Modal Verbs and   Probability Indicators:",
+        "[exa-h] *First published Mon Sep 6, 2004; substantive revision Mon Feb 24, 2025*\nAn inductive logic is a system of reasoning tha"
+      ],
+      "latency": 4.279052972793579
+    },
+    {
+      "topic": "Commonsense reasoning: world knowledge",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Commonsense Reasoning and Commonsense Knowledge in Artificial Intelligence",
+        "[exa] Commonsense knowledge (artificial intelligence)",
+        "[exa-h] [Back to Top] \n### Key Insights\n* To achieve human-level performance in domains such as natural language processing, vis"
+      ],
+      "latency": 3.403864622116089
+    },
+    {
+      "topic": "Multi-step reasoning: complex problems",
+      "area": "evaluation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] Complex Reasoning in Natural Languag",
+        "[exa-h] Chain-of-thought, has demonstrated strong multi-step reasoning abilities on these benchmarks. The research on LLM reason"
+      ],
+      "latency": 9.07139539718628
+    },
+    {
+      "topic": "Code reasoning: program synthesis",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Program synthesis",
+        "[exa] now publishers - Program Synthesis",
+        "[exa-h] $M$$x$$y$ can be derived as follows.\n\nStarting from the requirement description \"The maximum is larger than or equal to "
+      ],
+      "latency": 4.991631507873535
+    },
+    {
+      "topic": "Scientific reasoning: hypothesis generation",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] 3.5: Developing a Hypothesis",
+        "[exa] 2.5: Developing a Hypothesis",
+        "[exa-h] ##### Learning Objectives\n1. Distinguish between a theory and a hypothesis.\n2. Discover how theories are used to generat"
+      ],
+      "latency": 4.372722387313843
+    },
+    {
+      "topic": "Legal reasoning: case analysis",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] components\u2014or elements of the primary and secondary rules\u2014to those facts of the case that \nare legally relevant. For exa"
+      ],
+      "latency": 5.536137104034424
+    },
+    {
+      "topic": "Medical reasoning: diagnosis chains",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Diagnostic problem\u2010solving with causal chaining",
+        "[exa] A process model of diagnostic reasoning in medicine",
+        "[exa-h] Parsimonious covering theory is a formal model of abductive diagnostic problem-solving, Diagnostic knowledge is represen"
+      ],
+      "latency": 7.471339702606201
+    }
+  ]
+}

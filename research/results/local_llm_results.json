@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:45:36.235056",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 83
+  },
+  "results": [
+    {
+      "topic": "Ollama: easy local LLM deployment and management",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ollama/ollama | DeepWiki",
+        "[exa] Ollama's documentation",
+        "[exa-h] Ollama is a local runtime system for running large language models (LLMs) on consumer hardware. It provides:\n* **Model M"
+      ],
+      "latency": 3.3190317153930664
+    },
+    {
+      "topic": "LM Studio: GUI for running local models",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Your local AI toolkit.",
+        "[exa] Local AI, on Your Computer.",
+        "[exa-h] \ud83d\udc7e[Sign up for community events] \nLibraries:\n## Cross-platform local AI SDK\nLM Studio SDK: Build local AI apps without de"
+      ],
+      "latency": 3.908611536026001
+    },
+    {
+      "topic": "llama.cpp: efficient CPU and GPU inference",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Llama.cpp \u2013 Run LLM Inference in C/C++",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Llama.cpp (LLaMA C++) allows you to run efficient Large Language Model Inference in pure C/C++. You can run any powerful"
+      ],
+      "latency": 4.431729078292847
+    },
+    {
+      "topic": "LocalAI: OpenAI-compatible local API server",
+      "area": "inference",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LocalAI",
+        "[exa] LocalAI",
+        "[exa-h] * **Memory and Knowledge base**: Extend LocalAI with LocalRecall, A local rest api for semantic search and memory manage"
+      ],
+      "latency": 4.348967790603638
+    },
+    {
+      "topic": "Llama 3.1 local deployment: 8B, 70B configurations",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deploying Llama 3.2 1B/3B: Partner Guides",
+        "[exa] Production deployment with Llama",
+        "[exa-h] Vision Capabilities\n] [\nResponsible Use\n] \n[\nIntegration Guides\n] [\nLangChain\n] [\nLlamalndex\n] \n[\nCommunity Support\n] [\n"
+      ],
+      "latency": 10.02316689491272
+    },
+    {
+      "topic": "Mistral models: efficient local inference options",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Offline / Local",
+        "[exa] Self-Deployment",
+        "[exa-h] Copy section link# Run Devstral Locally\nWe provide weights for some Devstral models that you can use to run a server. As"
+      ],
+      "latency": 3.7862772941589355
+    },
+    {
+      "topic": "Phi-3 local: Microsoft's small efficient models",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Introducing Phi-3: Redefining what\u2019s possible with SLMs",
+        "[exa-h] performance of models 25 times larger trained on regular data. In this report we present a new model,\nphi-3-mini (3.8B p"
+      ],
+      "latency": 5.529887437820435
+    },
+    {
+      "topic": "Qwen local deployment: Alibaba's multilingual models",
+      "area": "models",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Key Concepts \u00b6",
+        "[exa] Qwen AI: Alibaba\u2019s Generative AI Ecosystem",
+        "[exa-h] * Hybrid thinking mode is designed so that thinking and non-thinking (instruct) can be achieved without changing models,"
+      ],
+      "latency": 8.577033519744873
+    },
+    {
+      "topic": "Local model quantization: GGUF, GPTQ for RAM reduction",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is GGUF? Complete Guide to GGUF Format",
+        "[exa] GGUF \u2014 vLLM",
+        "[exa-h] **GGUF (GPT-Generated Unified Format)**is a file format designed for storing and running large language models (LLMs) ef"
+      ],
+      "latency": 3.154006242752075
+    },
+    {
+      "topic": "GPU memory management: fitting large models locally",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] GPU Memory Essentials for AI Performance",
+        "[exa] Memory Management and GPU Allocation",
+        "[exa-h] * To run AI models locally, the GPU memory size is crucial as it directly impacts the size and complexity of the models,"
+      ],
+      "latency": 3.48018479347229
+    },
+    {
+      "topic": "CPU inference optimization: AVX, ARM optimizations",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] CPU Device #",
+        "[exa] Best Practices for Backends \u2014 PyTorch 2.7 documentation",
+        "[exa-h] Using the half-precision provides the following performance benefits:\n* `bfloat16`and`float16`enable Intel\u00ae Advanced Mat"
+      ],
+      "latency": 4.647573947906494
+    },
+    {
+      "topic": "Hybrid local+cloud: routing between local and API",
+      "area": "optimization",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Powering hybrid workloads with Amazon API Gateway",
+        "[exa] Edge hybrid pattern \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] [Amazon API Gateway] can provide a single-entry point for all incoming API requests for Hybrid Workloads. You can use AP"
+      ],
+      "latency": 5.288181781768799
+    },
+    {
+      "topic": "Air-gapped LLM deployment: fully offline inference",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Offline AI Agents",
+        "[exa] Air Gap Deployment for NVIDIA NIM for LLMs #",
+        "[exa-h] **Deploy on Local Hardware or Secured Enclaves**\nRun our models on high-performance local servers, edge devices, or secu"
+      ],
+      "latency": 7.847634553909302
+    },
+    {
+      "topic": "Data sovereignty: keeping data on-premise",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is Data Sovereignty?",
+        "[exa] Data controls",
+        "[exa-h] Data sovereignty refers to data being subject to the laws and regulations of its physical location. This can mean data i"
+      ],
+      "latency": 3.490607500076294
+    },
+    {
+      "topic": "Local RAG: private document Q&A systems",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Comments:|10 pages, 5 figures, 3 tables; conference-style (ACL format); fully local RAG system|"
+      ],
+      "latency": 4.043766021728516
+    },
+    {
+      "topic": "Secure local inference: sandboxing and isolation",
+      "area": "privacy",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Docker Sandboxes",
+        "[exa] Isolated Contexts",
+        "[exa-h] * [Guides] \n* [Reference] \n# Docker Sandboxes\nCopy as Markdown\nOpen MarkdownAsk Docs AIClaudeOpen in Claude\nTable of con"
+      ],
+      "latency": 4.314060688018799
+    },
+    {
+      "topic": "Enterprise local LLM: scaling self-hosted models",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Self-Hosted LLM Stack: A Practical Guide to Running Models On-Prem (and Shipping to Production)",
+        "[exa] The Case for Self-Hosting Large Language Models in Enterprise AI",
+        "[exa-h] * Human review loop for high-risk workflows.\n* \u201cStop-the-line\u201d regression gates before rolling model/prompt changes.## H"
+      ],
+      "latency": 3.4683103561401367
+    },
+    {
+      "topic": "Local model serving: internal API endpoints",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MLflow Model Serving",
+        "[exa] Serving Models",
+        "[exa-h] `# Serve using model alias (MLflow 3.x way)\nmlflow models serve\\\\\n--model-uri\"models:/iris\\_classifier@production\"\\\\\n--p"
+      ],
+      "latency": 4.069589853286743
+    },
+    {
+      "topic": "Model caching: optimizing repeated inference",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Model Caching Overview #",
+        "[exa] Model Caching Overview #",
+        "[exa-h] To reduce the resulting delays at application startup, you can use Model Caching. It exports the compiled model\nautomati"
+      ],
+      "latency": 11.06590723991394
+    },
+    {
+      "topic": "Local vs cloud cost comparison: TCO analysis",
+      "area": "enterprise",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] of ownership (TCO) for both serverless and server-based applications, factoring in infrastructure, \ndevelopment, and mai"
+      ],
+      "latency": 8.047426462173462
+    }
+  ]
+}

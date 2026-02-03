@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:33:53.649469",
+  "stats": {
+    "sources": 199,
+    "vectors": 199,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "OpenAI function calling: JSON schema, parameter types",
+      "area": "definition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Function calling",
+        "[exa] Function schema",
+        "[exa-h] **Function calling**(also known as**tool calling**) provides a powerful and flexible way for OpenAI models to interface "
+      ],
+      "latency": 9.333016395568848
+    },
+    {
+      "topic": "Anthropic tool use: tool_choice, parallel tool calls",
+      "area": "definition",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] How to implement tool use",
+        "[exa] Tool use with Claude",
+        "[exa-h] By default, Claude may use multiple tools to answer a user query. You can disable this behavior by:\n* Setting`disable\\_p"
+      ],
+      "latency": 10.442315101623535
+    },
+    {
+      "topic": "Tool description best practices: clarity, examples, constraints",
+      "area": "definition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to implement tool use",
+        "[exa] Common Workflow Language (CWL) Command Line Tool Description, v1.0.2  \u00a7",
+        "[exa-h] {{ TOOL CONFIGURATION }}`\n```\n### Best practices for tool definitions\nTo get the best performance out of Claude when usi"
+      ],
+      "latency": 6.689955472946167
+    },
+    {
+      "topic": "Dynamic tool generation: runtime tool creation from APIs",
+      "area": "definition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] paradigm shift that integrates tool knowledge directly into the LLM's parameters by representing each tool as a unique t"
+      ],
+      "latency": 6.817975044250488
+    },
+    {
+      "topic": "Tool call parsing: structured extraction, validation",
+      "area": "execution",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Extract Structured Output from Unstructured Texts with LLM Tool-Calling",
+        "[exa] Rig Extractors: Structured Data Extraction",
+        "[exa-h] > The goal in this step is not for the Mistral model to run the function directly. It\u2019s to 1) determine the appropriate "
+      ],
+      "latency": 8.774865627288818
+    },
+    {
+      "topic": "Tool result formatting: success, error, partial results",
+      "area": "execution",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Module  result \u00a0 Copy item path",
+        "[exa] The Rust Programming Language",
+        "[exa-h] ```\n[] \n## [\u00a7] Results must be used\nA common problem with using return values to indicate errors is\nthat it is easy to i"
+      ],
+      "latency": 9.752674341201782
+    },
+    {
+      "topic": "Parallel tool execution: concurrent calls, result aggregation",
+      "area": "execution",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] concurrent.futures  \u2014 Launching parallel tasks \u00b6",
+        "[exa] concurrent.futures  \u2014 Launching parallel tasks \u00b6",
+        "[exa-h] The asynchronous execution can be performed with threads, using[`ThreadPoolExecutor`] or[`InterpreterPoolExecutor`],\nor "
+      ],
+      "latency": 8.528399229049683
+    },
+    {
+      "topic": "Tool timeouts and retries: deadline handling, fallbacks",
+      "area": "execution",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deadlines | gRPC",
+        "[exa] Retry | gRPC",
+        "[exa-h] Explains how deadlines can be used to effectively deal with unreliable backends.\n### Overview\nA deadline is used to spec"
+      ],
+      "latency": 8.311395645141602
+    },
+    {
+      "topic": "Tool chaining: sequential execution, data flow",
+      "area": "composition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Linear chaining  \u200b",
+        "[exa] ",
+        "[exa-h] The simplest way to chain tasks together in a workflow is a**linear chain**, whereby the outputs of one tasks feeds into"
+      ],
+      "latency": 10.258610963821411
+    },
+    {
+      "topic": "Tool routing: selecting appropriate tool based on query",
+      "area": "composition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Routers | LlamaIndex Python Documentation",
+        "[exa] Tools | OpenRouter SDK | OpenRouter | Documentation",
+        "[exa-h] Defining a \u201cselector\u201d is at the core of defining a router.\nYou can easily use our routers as a query engine or a retriev"
+      ],
+      "latency": 10.464235305786133
+    },
+    {
+      "topic": "Multi-tool orchestration: complex workflows, dependencies",
+      "area": "composition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AWS Step Functions",
+        "[exa] AWS Step Functions",
+        "[exa-h] Transform complex business logic into clear visual workflows through a drag-and- drop interface, enabling faster develop"
+      ],
+      "latency": 10.559877634048462
+    },
+    {
+      "topic": "Tool augmented generation: interleaved reasoning and tools",
+      "area": "composition",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OctoTools: An Agentic Framework with Extensible Tools for Complex Reasoning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > > Solving complex reasoning tasks may involve visual understanding, domain knowledge retrieval, numerical calculation,"
+      ],
+      "latency": 10.37548017501831
+    },
+    {
+      "topic": "Tool input validation: type checking, sanitization",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Input Validation Cheat Sheet \u00b6",
+        "[exa] Input Validation",
+        "[exa-h] Input validation can be implemented using any programming technique that allows effective enforcement of syntactic and s"
+      ],
+      "latency": 8.111233472824097
+    },
+    {
+      "topic": "Tool permission systems: scopes, user consent",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview of permissions and consent in the Microsoft identity platform",
+        "[exa] Authorizing OAuth apps",
+        "[exa-h] [] ## Other authorization systems"
+      ],
+      "latency": 6.455565929412842
+    },
+    {
+      "topic": "Tool output verification: result validation, hallucination check",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Generation of plausible yet incorrect factual information, termed hallucination, is an unsolved issue in large languag"
+      ],
+      "latency": 12.358051538467407
+    },
+    {
+      "topic": "Sandboxed tool execution: isolation, resource limits",
+      "area": "safety",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Resource Model",
+        "[exa] Isolated Contexts",
+        "[exa-h] request. However, releasing it immediately to the host allows the host to more\neffectively multiplex resources and apply"
+      ],
+      "latency": 13.581884384155273
+    },
+    {
+      "topic": "Computer use tools: browser, file system, GUI automation",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Puppeteer &nbsp;|&nbsp; Chrome for Developers",
+        "[exa] Playwright  enables reliable end-to-end testing for modern web apps.",
+        "[exa-h] * [Puppeteer] \nStay organized with collectionsSave and categorize content based on your preferences.\n![] \n### Puppeteer\n"
+      ],
+      "latency": 8.52042531967163
+    },
+    {
+      "topic": "Code interpreter patterns: execution, state management",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Class Interpreter<TContext, TStateSchema, TEvent, TTypestate>",
+        "[exa] #  Interpreting Machines",
+        "[exa-h] * execute(state:[State] <TContext,TEvent,TStateSchema,TTypestate>, actionsConfig?:MachineOptions<TContext,TEvent>[\"actio"
+      ],
+      "latency": 9.008373975753784
+    },
+    {
+      "topic": "API wrapper tools: REST, GraphQL, database queries",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Intuitive database client for TypeScript and Node.js",
+        "[exa] Postgres, perfectly managed",
+        "[exa-h] Easy to integrate into your framework of choice, Prisma simplifies database access, saves repetitive CRUD boilerplate an"
+      ],
+      "latency": 8.873962879180908
+    },
+    {
+      "topic": "Human-in-the-loop tools: approval workflows, escalation",
+      "area": "advanced",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Set up sequential approvals",
+        "[exa] Human in the Loop: Pause Zaps for human review and approval",
+        "[exa-h] Summarize this article for me\nSome workflows require pre-approval before the final approver can sign off. For example, a"
+      ],
+      "latency": 9.201967716217041
+    }
+  ]
+}

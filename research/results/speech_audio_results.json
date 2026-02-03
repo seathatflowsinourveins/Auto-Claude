@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:48:49.883400",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 97
+  },
+  "results": [
+    {
+      "topic": "Whisper models: OpenAI's speech recognition",
+      "area": "stt",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introducing Whisper",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] Whisper is an automatic speech recognition (ASR) system trained on 680,000 hours of multilingual and multitask supervise"
+      ],
+      "latency": 7.988827466964722
+    },
+    {
+      "topic": "Real-time transcription: streaming ASR systems",
+      "area": "stt",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Realtime transcription",
+        "[exa] Turning Whisper into Real-Time Transcription System",
+        "[exa-h] You can use the Realtime API for transcription-only use cases, either with input from a microphone or from a file. For e"
+      ],
+      "latency": 8.37445878982544
+    },
+    {
+      "topic": "Speaker diarization: identifying who said what",
+      "area": "stt",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Electrical Engineering and Systems Science > Audio and Speech Processing",
+        "[exa-h] > Today, we are open-sourcing our core speech recognition and diarization models for non-commercial use. We are releasin"
+      ],
+      "latency": 5.944910287857056
+    },
+    {
+      "topic": "Multilingual speech recognition: cross-language ASR",
+      "area": "stt",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] ISCA Archive - Unsupervised Cross-Lingual Representation Learning for Speech Recognition",
+        "[exa-h] # Title:Omnilingual ASR: Open-Source Multilingual Speech Recognition for 1600+ Languages"
+      ],
+      "latency": 7.694558620452881
+    },
+    {
+      "topic": "Neural TTS: ElevenLabs, OpenAI TTS, Azure",
+      "area": "tts",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Build production-ready audio AI in minutes",
+        "[exa] What are OpenAI text to speech voices?",
+        "[exa-h] [Introducing ElevenLabs UI: Open-source audio & agent components for the web] \n* ![ElevenLabs logo effect] \n[ElevenLabs "
+      ],
+      "latency": 9.079155206680298
+    },
+    {
+      "topic": "Voice cloning: custom voice generation",
+      "area": "tts",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Custom Voice Overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] What is custom voice?",
+        "[exa-h] **Warning:**Custom Voice isn't onboarding new customers. Try out[instant custom voice] instead.\nCloud Text-to-Speech now"
+      ],
+      "latency": 6.034553289413452
+    },
+    {
+      "topic": "Emotional TTS: expressive speech synthesis",
+      "area": "tts",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] EME-TTS: Unlocking the Emphasis and Emotion Link in Speech Synthesis",
+        "[exa-h] profound exchange of emotions and a connection between individ\u0002uals. While Text-to-Speech (TTS) models have made huge pr"
+      ],
+      "latency": 6.896523952484131
+    },
+    {
+      "topic": "Low-latency TTS: streaming audio generation",
+      "area": "tts",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Sound",
+        "[exa] ",
+        "[exa-h] cost and suboptimal system performance. In this work, we propose StreamMel, a pioneering single-stage streaming TTS fram"
+      ],
+      "latency": 9.846709966659546
+    },
+    {
+      "topic": "Voice assistants: building conversational voice apps",
+      "area": "voice",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Conversational Actions \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Build overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] ## Page Summary\noutlined\\_flag\n* Conversational Actions allow you to create custom, interactive experiences for Google A"
+      ],
+      "latency": 10.643269062042236
+    },
+    {
+      "topic": "Voice agents: autonomous phone call AI",
+      "area": "voice",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Enterprise-Ready AI Voice Agents",
+        "[exa] AI call agents for sales and support",
+        "[exa-h] AI voice agents are advanced systems that handle phone calls without human intervention. They manage inbound and outboun"
+      ],
+      "latency": 8.163344144821167
+    },
+    {
+      "topic": "Wake word detection: local voice activation",
+      "area": "voice",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] On this page",
+        "[exa-h] Lightweight wake word detection that runs locally and is suitable for resource-constrained devices like the Raspberry Pi"
+      ],
+      "latency": 9.082795143127441
+    },
+    {
+      "topic": "Voice biometrics: speaker verification and ID",
+      "area": "voice",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] determination will help to further develop the technology into a \nPage 132 of 166\nSpeaker Recognition \nreliable and cons"
+      ],
+      "latency": 6.479563236236572
+    },
+    {
+      "topic": "Audio embeddings: representing sound semantically",
+      "area": "audio",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Massive Sound Embedding Benchmark (MSEB)",
+        "[exa] ",
+        "[exa-h] Although sound information extraction appear distinct across spectrum of sound classes and technologies, all inherently "
+      ],
+      "latency": 10.676692008972168
+    },
+    {
+      "topic": "Audio classification: sound event detection",
+      "area": "audio",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Electrical Engineering and Systems Science > Audio and Speech Processing",
+        "[exa] Sound event detection  in real life audio",
+        "[exa-h] > Abstract:The goal of automatic sound event detection (SED) methods is to recognize what is happening in an audio signa"
+      ],
+      "latency": 7.543842792510986
+    },
+    {
+      "topic": "Music generation: AI composition, Suno, Udio",
+      "area": "audio",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Udio | AI Music Generator - Official Website",
+        "[exa] Introduction",
+        "[exa-h] Udio | AI Music Generator - Official Website"
+      ],
+      "latency": 6.658533096313477
+    },
+    {
+      "topic": "Podcast processing: transcription, summarization",
+      "area": "audio",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Effortless and Accurate Transcription Solutions for Podcasters",
+        "[exa] The AI summarizer made for videos and podcasts",
+        "[exa-h] Transcribe everything for analysis. We can process 1000 hours of audio in 30 minutes.\n### Pure Transcription!\nIf you are"
+      ],
+      "latency": 4.653753280639648
+    },
+    {
+      "topic": "Voice + LLM integration: speech-first AI apps",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Voice agents",
+        "[exa] Voice agents",
+        "[exa-h] Learn how to build voice agents that can understand audio and respond back in natural language.\nCopy page\nUse the OpenAI"
+      ],
+      "latency": 9.732715129852295
+    },
+    {
+      "topic": "Call center AI: automated support with voice",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AI Call Center and Contact Center Automation",
+        "[exa] Optimize your call center operations with new IBM watsonx assistants features",
+        "[exa-h] AI call center automation is transforming how enterprises handle millions of customer conversations. ElevenLabs voice ag"
+      ],
+      "latency": 4.349369764328003
+    },
+    {
+      "topic": "Meeting transcription: Zoom, Teams AI features",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Meet your new  AI note taker",
+        "[exa] Meet your new  AI note taker",
+        "[exa-h] AI note-taking uses artificial intelligence technology, voice and speech recognition, and machine learning to automatica"
+      ],
+      "latency": 3.8075215816497803
+    },
+    {
+      "topic": "Accessibility: voice interfaces for inclusion",
+      "area": "integration",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to help people navigate the internet, voice-first",
+        "[exa] Natural Language Interface Accessibility User Requirements",
+        "[exa-h] technology they use."
+      ],
+      "latency": 7.905085563659668
+    }
+  ]
+}

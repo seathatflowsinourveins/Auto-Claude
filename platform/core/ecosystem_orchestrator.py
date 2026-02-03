@@ -92,15 +92,8 @@ except ImportError:
         ResearchEngine = None
         get_research_engine = None
 
-# Common paths for SDK loading
-import sys
-SDKS_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-# Graphiti SDK (Knowledge Graphs)
+# Graphiti SDK (Knowledge Graphs) - pip-installed graphiti-core
 try:
-    GRAPHITI_PATH = os.path.join(SDKS_ROOT, "sdks", "graphiti", "graphiti")
-    if GRAPHITI_PATH not in sys.path:
-        sys.path.insert(0, GRAPHITI_PATH)
     from graphiti_core import Graphiti
     from graphiti_core.nodes import EpisodeType
     GRAPHITI_AVAILABLE = True
@@ -109,20 +102,13 @@ except ImportError:
     Graphiti = None
     EpisodeType = None
 
-# Letta SDK (Stateful Agents)
+# Letta SDK (Stateful Agents) - pip-installed letta-client
 try:
-    LETTA_PATH = os.path.join(SDKS_ROOT, "sdks", "letta", "letta-python", "src")
-    if LETTA_PATH not in sys.path:
-        sys.path.insert(0, LETTA_PATH)
     from letta_client import Letta
     LETTA_AVAILABLE = True
 except ImportError:
-    try:
-        from letta_client import Letta
-        LETTA_AVAILABLE = True
-    except ImportError:
-        LETTA_AVAILABLE = False
-        Letta = None
+    LETTA_AVAILABLE = False
+    Letta = None
 
 
 # =============================================================================

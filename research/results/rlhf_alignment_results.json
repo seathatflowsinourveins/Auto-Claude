@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:36:43.774522",
+  "stats": {
+    "sources": 198,
+    "vectors": 198,
+    "findings": 87
+  },
+  "results": [
+    {
+      "topic": "RLHF: reinforcement learning human feedback",
+      "area": "rlhf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Reinforcement learning from human feedback (RLHF) is a variant of reinforcement learning (RL) that learns from human f"
+      ],
+      "latency": 4.503604888916016
+    },
+    {
+      "topic": "Reward modeling: learning human preferences",
+      "area": "rlhf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Statistics > Machine Learning",
+        "[exa] ",
+        "[exa-h] > For sophisticated reinforcement learning (RL) systems to interact usefully with real-world environments, we need to co"
+      ],
+      "latency": 4.1437599658966064
+    },
+    {
+      "topic": "PPO: proximal policy optimization for LLMs",
+      "area": "rlhf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] Proximal Policy Optimization (PPO) serving as the default RL optimizer. Despite its effectiveness, PPO has limitations w"
+      ],
+      "latency": 4.037058353424072
+    },
+    {
+      "topic": "InstructGPT: following instructions",
+      "area": "rlhf",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Aligning language models to follow instructions",
+        "[exa] ",
+        "[exa-h] We\u2019ve trained language models that are much better at following user intentions than GPT\u20113 while also making them more t"
+      ],
+      "latency": 3.434868812561035
+    },
+    {
+      "topic": "DPO: direct preference optimization",
+      "area": "alternatives",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Direct preference optimization",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa-h] [Direct Preference Optimization] (DPO) fine-tuning allows you to fine-tune models based on prompts and pairs of response"
+      ],
+      "latency": 3.401063919067383
+    },
+    {
+      "topic": "ORPO: odds ratio preference optimization",
+      "area": "alternatives",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Odds-Ratio Preference Optimization (ORPO)",
+        "[exa] Odds-Ratio Preference Optimization",
+        "[exa-h] Odds-Ratio Preference Optimization (ORPO) is a unified preference-based learning paradigm for fine-tuning LLMs, sequence"
+      ],
+      "latency": 12.480541229248047
+    },
+    {
+      "topic": "IPO: identity preference optimization",
+      "area": "alternatives",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] The Strategic Value of Identity for CIOs",
+        "[exa-h] 24Berkman Klein Center for Internet & Society, Harvard University, 25Independent Researcher\nAugust 2024\nAbstract\nAnonymi"
+      ],
+      "latency": 8.803338289260864
+    },
+    {
+      "topic": "KTO: Kahneman-Tversky optimization",
+      "area": "alternatives",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] is assigned to gains and losses rather than to final assets and in which probabilities are \nreplaced by decision weights"
+      ],
+      "latency": 10.447763442993164
+    },
+    {
+      "topic": "Human preference data: collection methods",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Comparison of five common acceptance and preference methods \u2606",
+        "[exa] Hedonic measurement for product development: new methods for direct and indirect scaling",
+        "[exa-h] Two general classes of consumer testing methods exist. Acceptance testing presents consumers with products individually,"
+      ],
+      "latency": 7.302035331726074
+    },
+    {
+      "topic": "Comparison data: pairwise preferences",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Pairwise comparison (psychology)",
+        "[exa] Pairwise Comparison Matrices in Decision-Making",
+        "[exa-h] If an individual or organization expresses a preference between two mutually distinct alternatives, this preference can "
+      ],
+      "latency": 6.764028787612915
+    },
+    {
+      "topic": "Red teaming: adversarial testing",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Red Teaming Handbook",
+        "[exa] ",
+        "[exa-h] ## Details\nThe Red Teaming Handbook is designed to be a practical \u2018hands on\u2019 manual for red teaming and is, therefore, n"
+      ],
+      "latency": 9.621111154556274
+    },
+    {
+      "topic": "Synthetic preferences: AI-generated",
+      "area": "data",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Daily Papers",
+        "[exa-h] > Sycophancy is an undesirable behavior where models tailor their responses to follow a human user's view even when that"
+      ],
+      "latency": 7.408977746963501
+    },
+    {
+      "topic": "Constitutional AI: self-improvement",
+      "area": "constitutional",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] C3AI: Crafting and Evaluating Constitutions for Constitutional AI - ADS",
+        "[exa] ",
+        "[exa-h] Constitutional AI (CAI) guides LLM behavior using constitutions, but identifying which principles are most effective for"
+      ],
+      "latency": 5.478729963302612
+    },
+    {
+      "topic": "RLAIF: RL from AI feedback",
+      "area": "constitutional",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] RLAIF vs. RLHF:  scaling reinforcement learning from human feedback with AI feedback",
+        "[exa-h] > Reinforcement learning from human feedback (RLHF) has proven effective in aligning large language models (LLMs) with h"
+      ],
+      "latency": 3.831882953643799
+    },
+    {
+      "topic": "Principle-based training: rules",
+      "area": "constitutional",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Principles of Training - Army PRT",
+        "[exa] Principle-Based Decision Making | Office of Justice Programs",
+        "[exa-h] The eight tenets of train as you will fight, as they relate to PRT, are\u2014"
+      ],
+      "latency": 5.561530351638794
+    },
+    {
+      "topic": "Self-critique: model reflection",
+      "area": "constitutional",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Generating, Deepening, and Documenting Learning: The Power of Critical Reflection in Applied Learning",
+        "[exa-h] Your Reflective Observation will be your initial reflection following the experience. Useful questions \nyou can ask your"
+      ],
+      "latency": 9.94221544265747
+    },
+    {
+      "topic": "Reward hacking: gaming metrics",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Achievements Considered Harmful? - Chris Hecker's Website",
+        "[exa] Intrinsic vs. Extrinsic rewards",
+        "[exa-h] I waded into the debate on game achievements with my lecture at the 2010[Game Developers Conference] titled***Achievemen"
+      ],
+      "latency": 10.521956205368042
+    },
+    {
+      "topic": "Goodhart's law: optimization problems",
+      "area": "challenges",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] Goodhart's law",
+        "[exa] Goodhart's law",
+        "[exa-h] Shortly after Goodhart's publication, others suggested closely related ideas, including the [Lucas critique] (1976). As "
+      ],
+      "latency": 4.592708587646484
+    },
+    {
+      "topic": "Preference inconsistency: human disagreement",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Proceedings of the Annual Meeting of the Cognitive Science Society",
+        "[exa] Choice consistency and strength of preference",
+        "[exa-h] - [Lucas, Christopher];\n- [Kemp, Charles];\n- [Griffiths, Thomas] \n\n...Main ContentMetricsAuthor & Article Info\n\n[Top]"
+      ],
+      "latency": 6.292943954467773
+    },
+    {
+      "topic": "Scalable oversight: supervising AI",
+      "area": "challenges",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] (weak-to-strong oversight), ultimately enabling us to oversee superhuman systems. A key idea is that\nscalable oversight "
+      ],
+      "latency": 3.832397222518921
+    }
+  ]
+}

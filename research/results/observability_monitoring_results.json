@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:57:12.946275",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 87
+  },
+  "results": [
+    {
+      "topic": "LangSmith tracing: runs, spans, feedback, annotations",
+      "area": "langsmith",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to Collect Feedback for Traces | \ud83e\udd9c\ufe0f\ud83d\udee0\ufe0f LangSmith",
+        "[exa] Annotate traces and runs inline",
+        "[exa-h] Feedback allows you to understand how your users are experiencing your application and helps draw attention to problemat"
+      ],
+      "latency": 3.8989953994750977
+    },
+    {
+      "topic": "LangSmith datasets: evaluation, test suites, versioning",
+      "area": "langsmith",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Manage datasets",
+        "[exa] LangSmith Evaluation",
+        "[exa-h] LangSmith provides tools for managing and working with your[*datasets*]. This page describes dataset operations includin"
+      ],
+      "latency": 3.7909703254699707
+    },
+    {
+      "topic": "LangSmith hub: prompt management, deployment, AB testing",
+      "area": "langsmith",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LangSmith docs",
+        "[exa] LangSmith docs",
+        "[exa-h] ## Observability\nGain visibility into every step your application takes to debug faster and improve reliability.\nStart t"
+      ],
+      "latency": 3.858988046646118
+    },
+    {
+      "topic": "LangSmith online evaluation: sampling, automated scoring",
+      "area": "langsmith",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Evaluation concepts",
+        "[exa] LangSmith Evaluation",
+        "[exa-h] ] \nQuick reference: Offline vs online evaluation\nThe following table summarizes the key differences between offline and "
+      ],
+      "latency": 5.024319648742676
+    },
+    {
+      "topic": "LangFuse tracing: generations, spans, observations",
+      "area": "langfuse",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Core Concepts",
+        "[exa] Core Concepts",
+        "[exa-h] Langfuse organizes an application\u2019s data into three core concepts: observations, traces, and sessions.\n### Observations["
+      ],
+      "latency": 3.4064252376556396
+    },
+    {
+      "topic": "LangFuse scoring: human feedback, model-based, custom",
+      "area": "langfuse",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Core Concepts",
+        "[exa] LLM-as-a-Judge",
+        "[exa-h] Evaluation methods are the functions that score traces, observations, sessions, or dataset runs. You can use a variety o"
+      ],
+      "latency": 3.750062942504883
+    },
+    {
+      "topic": "LangFuse prompts: versioning, deployment, experiments",
+      "area": "langfuse",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prompt Version Control",
+        "[exa] Get Started with Prompt Management",
+        "[exa-h] In Langfuse, version control & deployment of prompts is managed via`versions`and`labels`.\n## Versions & Labels[] \nEach p"
+      ],
+      "latency": 3.831923246383667
+    },
+    {
+      "topic": "LangFuse datasets: evaluation, fine-tuning data export",
+      "area": "langfuse",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Query Data via SDKs",
+        "[exa] Export Data from UI",
+        "[exa-h] Langfuse is[open-source] and data tracked with Langfuse is open. You can query data via:[SDKs] and[API]. For export func"
+      ],
+      "latency": 3.3597211837768555
+    },
+    {
+      "topic": "Arize Phoenix: LLM tracing, spans, retrieval analysis",
+      "area": "phoenix",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Overview: Tracing",
+        "[exa] Features: Tracing",
+        "[exa-h] Phoenix traces AI applications, via OpenTelemetry and has first-class integrations with LlamaIndex, LangChain, OpenAI, a"
+      ],
+      "latency": 3.2689199447631836
+    },
+    {
+      "topic": "Phoenix evals: LLM-as-judge, retrieval metrics, hallucination",
+      "area": "phoenix",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Page Not Found",
+        "[exa] Evaluators - Phoenix",
+        "[exa-h] * Get Started with Phoenix\n* [\nEnd to End Features Notebook\n] \n* [\nPhoenix Demo\n] \n##### Tracing\n* Tutorial\n* Overview: "
+      ],
+      "latency": 4.431849479675293
+    },
+    {
+      "topic": "Phoenix experiments: AB testing, prompt comparison",
+      "area": "phoenix",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Prompt Optimization Techniques",
+        "[exa] Test a prompt",
+        "[exa-h] ] You\u2019ll start by creating an experiment in Phoenix that can house the results of each of your resulting prompts. Next y"
+      ],
+      "latency": 4.42116904258728
+    },
+    {
+      "topic": "Phoenix datasets: annotation, export, fine-tuning prep",
+      "area": "phoenix",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Exporting Datasets | Phoenix",
+        "[exa] How to: Datasets",
+        "[exa-h] Phoenix natively exports OpenAI Fine-Tuning JSONL as long as the dataset contains compatible inputs and outputs."
+      ],
+      "latency": 5.264969110488892
+    },
+    {
+      "topic": "OpenTelemetry for LLMs: semantic conventions, instrumentation",
+      "area": "otel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa] Semantic conventions for generative AI systems",
+        "[exa-h] In short, we can do the following:\n* Define semantic conventions for LLM operations and related technologies\n* Build ins"
+      ],
+      "latency": 7.160386800765991
+    },
+    {
+      "topic": "OpenLLMetry: automatic tracing for LLM frameworks",
+      "area": "otel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] What is OpenLLMetry?",
+        "[exa] What is OpenLLMetry?",
+        "[exa-h] OpenLLMetry is an open source project that allows you to easily start monitoring and debugging the execution of your LLM"
+      ],
+      "latency": 7.737379550933838
+    },
+    {
+      "topic": "Distributed tracing: context propagation, multi-service",
+      "area": "otel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Context propagation",
+        "[exa] Trace Context",
+        "[exa-h] with each other, regardless of where they are generated. Although not limited to\ntracing, context propagation allows[tra"
+      ],
+      "latency": 3.5554327964782715
+    },
+    {
+      "topic": "Custom metrics: token usage, latency histograms, cost tracking",
+      "area": "otel",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] User-defined metrics overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] User-defined metrics overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] ## Limits and latencies\n\nFor limits related to user-defined metrics and data retention,\nsee [Quotas and limits].\n\nTo kee"
+      ],
+      "latency": 8.481003999710083
+    },
+    {
+      "topic": "LLM alerting: latency SLOs, error rates, cost anomalies",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] SLO Alerts",
+        "[exa] Alerting on SLOs",
+        "[exa-h] * [Monitor Status] \n* [Status Graphs] \n* [Status Events] \n* [Monitor Settings] \n* [Monitor Quality] \n* [Guides] \n* [\nSer"
+      ],
+      "latency": 4.033822774887085
+    },
+    {
+      "topic": "Dashboard design: Grafana, DataDog for LLM metrics",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] LLM Observability Metrics",
+        "[exa] Monitoring",
+        "[exa-h] * [AWS Accounts] \n* [Azure Accounts] \n* [Blueprints] \n* [Budgets] \n* [Teams] \n* [Users] \n* [\nIn The App\n] \n* [\nDashboard"
+      ],
+      "latency": 10.001842737197876
+    },
+    {
+      "topic": "Log aggregation: structured logging, correlation IDs",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] OpenTelemetry Logging",
+        "[exa] Logs | OpenTelemetry",
+        "[exa-h] ## Log Correlation[] \nLogs can be correlated with the rest of observability data in a few dimensions:\n* By the**time of "
+      ],
+      "latency": 9.925445318222046
+    },
+    {
+      "topic": "Incident response: runbooks, escalation, post-mortems for AI",
+      "area": "production",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Methodology for incident response on generative AI workloads",
+        "[exa] ",
+        "[exa-h] > ## Methodology for incident response on generative AI workloads\nAfter you complete the preparation items, you can use "
+      ],
+      "latency": 7.45256495475769
+    }
+  ]
+}

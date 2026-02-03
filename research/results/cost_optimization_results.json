@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T01:09:27.031106",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Prompt compression: LLMLingua, selective context, summarization",
+      "area": "tokens",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Characterizing Prompt Compression Methods for Long Context Inference",
+        "[exa-h] 2 Related Works\nDepending on whether task information is used\nfor compression, prompt compression methods can\nbe categor"
+      ],
+      "latency": 8.439250469207764
+    },
+    {
+      "topic": "Context window optimization: sliding window, hierarchical context",
+      "area": "tokens",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Context Windows: The Memory Limits of LLMs",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] ## [Interactive Context Window Explorer] \nExplore different windowing strategies and see how they affect token processin"
+      ],
+      "latency": 7.985746383666992
+    },
+    {
+      "topic": "Output length control: max_tokens, stop sequences, structured output",
+      "area": "tokens",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Structured model outputs",
+        "[exa] Controlling the length of OpenAI model responses",
+        "[exa-h] # Structured model outputs\nEnsure text responses from the model adhere to a JSON schema you define.\nCopy page\nJSON is on"
+      ],
+      "latency": 9.600970029830933
+    },
+    {
+      "topic": "Few-shot optimization: example selection, dynamic few-shot",
+      "area": "tokens",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > In few-shot learning, such as meta-learning, few-shot fine-tuning or in-context learning, the limited number of sample"
+      ],
+      "latency": 7.197694778442383
+    },
+    {
+      "topic": "Cascading models: small-to-large routing based on confidence",
+      "area": "routing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] How can we optimize model cascades to maximize deferral performance?\nIn other words, we focus on designing effective mod"
+      ],
+      "latency": 6.960357427597046
+    },
+    {
+      "topic": "Semantic routing: query complexity classification",
+      "area": "routing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] On the feasibility of semantic query metrics",
+        "[exa-h] measures are introduced to"
+      ],
+      "latency": 6.497097492218018
+    },
+    {
+      "topic": "Task-based routing: specialized models for specific tasks",
+      "area": "routing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] > Routing large language models (LLMs) is a new paradigm that uses a router to recommend the best LLM from a pool of can"
+      ],
+      "latency": 8.141216516494751
+    },
+    {
+      "topic": "Cost-aware routing: budget constraints, quality thresholds",
+      "area": "routing",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Application-Layer Traffic Optimization (ALTO) Performance Cost Metrics",
+        "[exa-h] patterns using the networks. Cost metrics are used in both the ALTO cost map service and the\nALTO endpoint cost service "
+      ],
+      "latency": 9.784418821334839
+    },
+    {
+      "topic": "Semantic caching: embedding similarity for cache hits",
+      "area": "caching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Semantic caches return cached responses for semantically similar prompts to\nreduce LLM inference latency and cost. They "
+      ],
+      "latency": 8.13725471496582
+    },
+    {
+      "topic": "KV cache sharing: prefix caching across requests",
+      "area": "caching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] KV-Cache Wins You Can See: From Prefix Caching in vLLM to Distributed Scheduling with llm-d",
+        "[exa-h] shares similar ones but with extra selective recomputation, offers a promising way to tackle this issue. However, prior "
+      ],
+      "latency": 8.87879467010498
+    },
+    {
+      "topic": "Response caching: TTL, invalidation, cache warming",
+      "area": "caching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] HTTP Caching",
+        "[exa] Hypertext Transfer Protocol (HTTP/1.1): Caching",
+        "[exa-h] document defines aspects of HTTP related to caching and reusing response messages."
+      ],
+      "latency": 10.064797163009644
+    },
+    {
+      "topic": "Embedding cache: deduplication, incremental updates",
+      "area": "caching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] in semantic caching learns thresholds online at inference time. Yet, as shown in Figure 3, the optimal\nsimilarity thresh"
+      ],
+      "latency": 7.557605743408203
+    },
+    {
+      "topic": "Request batching: dynamic batching, batch size optimization",
+      "area": "batching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Adaptive batching \u00b6",
+        "[exa] Batch Requests",
+        "[exa-h] Many models achieve higher throughput, better resource utilization, and lower latency when processing requests in batche"
+      ],
+      "latency": 9.070496320724487
+    },
+    {
+      "topic": "Async processing: queue-based inference, priority scheduling",
+      "area": "batching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Statistics > Machine Learning",
+        "[exa-h] > In Large Language Model (LLM) inference, the output length of an LLM request is typically regarded as not known a prio"
+      ],
+      "latency": 9.70499873161316
+    },
+    {
+      "topic": "Bulk operations: batch embeddings, batch completions",
+      "area": "batching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Get batch text embeddings inferences \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Batch Embedding Jobs with the Embed API",
+        "[exa-h] Getting responses in a batch is a way to efficiently send large numbers of non-latency\nsensitive embeddings requests. Di"
+      ],
+      "latency": 8.622883796691895
+    },
+    {
+      "topic": "Offline processing: scheduled jobs, cost-effective timing",
+      "area": "batching",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Schedule workloads",
+        "[exa] Best practices for running batch workloads on GKE \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] Workload scheduling helps data administrators, analysts, and developers\norganize and optimize this chain of actions, cre"
+      ],
+      "latency": 8.415459394454956
+    },
+    {
+      "topic": "Token usage tracking: per-request, per-user, per-feature",
+      "area": "monitoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Usage Accounting",
+        "[exa] Tracking usage",
+        "[exa-h] The OpenRouter API provides built-in**Usage Accounting**that allows you to track AI model usage without making additiona"
+      ],
+      "latency": 7.377147674560547
+    },
+    {
+      "topic": "Budget alerts: threshold notifications, auto-shutoff",
+      "area": "monitoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Create, edit, or delete budgets and budget alerts \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Create, edit, or delete budgets and budget alerts \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa-h] all of your Google Cloud charges in one place. Budgets let you\ntrack your actual Google Cloud costs against your planned"
+      ],
+      "latency": 9.043423414230347
+    },
+    {
+      "topic": "Cost attribution: department allocation, project tracking",
+      "area": "monitoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Gain control of your Google Cloud costs: Introducing the Cost Attribution Solution",
+        "[exa] Smart approaches to allocations in enterprise financial and operational planning",
+        "[exa-h] * **Data-driven decisions:**Make informed choices about where to allocate resources, how to optimize costs, and what fut"
+      ],
+      "latency": 7.016159296035767
+    },
+    {
+      "topic": "ROI measurement: cost-per-query, value metrics",
+      "area": "monitoring",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] About return on investment (ROI)",
+        "[exa] How to Measure and Improve Your Digital Marketing ROI",
+        "[exa-h] For physical products, the cost of goods sold is equal to the manufacturing cost of all the items you sold plus your adv"
+      ],
+      "latency": 9.718929052352905
+    }
+  ]
+}

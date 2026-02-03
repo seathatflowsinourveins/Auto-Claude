@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T02:29:29.145802",
+  "stats": {
+    "sources": 200,
+    "vectors": 200,
+    "findings": 90
+  },
+  "results": [
+    {
+      "topic": "Graph neural networks: GCN, GAT, GraphSAGE",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Social and Information Networks",
+        "[exa-h] > We present a scalable approach for semi-supervised learning on graph-structured data that is based on an efficient var"
+      ],
+      "latency": 9.592122554779053
+    },
+    {
+      "topic": "Message passing neural networks: MPNN framework",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Message Passing Neural Networks - ADS",
+        "[exa-h] To that end, we describe a general framework for super\u0002vised learning on graphs called Message Passing Neural\nNetworks ("
+      ],
+      "latency": 8.299280405044556
+    },
+    {
+      "topic": "Graph transformers: attention on graphs",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] [We gratefully acknowledge support from\\\nthe Simons Foundation and member institutions.]"
+      ],
+      "latency": 7.893094062805176
+    },
+    {
+      "topic": "Heterogeneous graphs: multi-type nodes, edges",
+      "area": "architectures",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Heterogeneous Graph Learning \uf0c1",
+        "[exa-h] Heterogeneous graphs [17] (a.k.a., heterogeneous information\nnetworks) are an important abstraction for modeling relatio"
+      ],
+      "latency": 8.813249349594116
+    },
+    {
+      "topic": "Node classification: predicting node labels",
+      "area": "tasks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Trending Papers",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] Sub"
+      ],
+      "latency": 8.561004161834717
+    },
+    {
+      "topic": "Link prediction: predicting connections",
+      "area": "tasks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Link prediction in complex networks: A survey - ADS",
+        "[exa] Minireview Link prediction techniques, applications, and performance: A survey",
+        "[exa-h] Link prediction in complex networks has attracted increasing attention from both physical and computer science communiti"
+      ],
+      "latency": 8.290470123291016
+    },
+    {
+      "topic": "Graph classification: whole graph labels",
+      "area": "tasks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Weisfeiler-Lehman Graph Kernels",
+        "[exa] Trending Papers",
+        "[exa-h] A family of efficient kernels for large graphs with discrete node labels based on the Weisfeiler-Lehman test of isomorph"
+      ],
+      "latency": 7.246332168579102
+    },
+    {
+      "topic": "Graph generation: creating new graphs",
+      "area": "tasks",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] GraphRNN: Generating Realistic Graphs with Deep Auto-regressive Models",
+        "[exa] ",
+        "[exa-h] Present work. Here we address the above challenges and\npresent Graph Recurrent Neural Networks (GraphRNN),\na scalable fr"
+      ],
+      "latency": 7.112341642379761
+    },
+    {
+      "topic": "Molecular GNN: drug discovery, chemistry",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] MolE: a foundation model for molecular graphs using disentangled attention",
+        "[exa] ",
+        "[exa-h] Machine learning has been successfully applied to chemical sciences for many decades[1]. In particular, molecular proper"
+      ],
+      "latency": 9.297337293624878
+    },
+    {
+      "topic": "Social network analysis: community detection",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Community detection in networks: A user guide - ADS",
+        "[exa] Community detection in networks: A user guide",
+        "[exa-h] Community detection in networks is one of the most popular topics of modern network science. Communities, or clusters, a"
+      ],
+      "latency": 7.421853065490723
+    },
+    {
+      "topic": "Knowledge graph embeddings: TransE, RotatE",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] RotatE: Knowledge Graph Embedding by Relational Rotation in Complex Space",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] \u2022 WN18RR: a subset of WN18, where inversion relations are deleted. The main \nrelation types are symmetry/antisymmetry an"
+      ],
+      "latency": 4.094117641448975
+    },
+    {
+      "topic": "Recommendation graphs: user-item networks",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Graph Convolutional Neural Networks for Web-Scale Recommender Systems - ADS",
+        "[exa-h] Recent advances in graph-based learning approaches have demonstrated their effec\u0002tiveness in modelling users\u2019 preference"
+      ],
+      "latency": 4.260004758834839
+    },
+    {
+      "topic": "Graph self-supervised learning: contrastive",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] > We propose Graph Contrastive Learning (GraphCL), a general framework for learning node representations in a self super"
+      ],
+      "latency": 3.8334085941314697
+    },
+    {
+      "topic": "Scalable GNN: mini-batch, sampling",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Scaling GNNs via Neighbor Sampling \uf0c1",
+        "[exa] Stochastic Training on Large Graphs \u2014 DGL 2.2.1 documentation",
+        "[exa-h] Traditional deep neural networks are known to scale well to large amounts of data by decomposing the training loss into "
+      ],
+      "latency": 5.213207721710205
+    },
+    {
+      "topic": "Dynamic graphs: temporal GNN",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Computer Science > Machine Learning",
+        "[exa-h] of dynamic nature (e.g. evolving features or con\u0002nectivity over time). In this paper, we present\nTemporal Graph Networks"
+      ],
+      "latency": 3.8970329761505127
+    },
+    {
+      "topic": "Explainable GNN: interpretation",
+      "area": "techniques",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Machine Learning",
+        "[exa] ",
+        "[exa-h] > Abstract:Recently, Graph Neural Networks (GNNs) have significantly advanced the performance of machine learning tasks "
+      ],
+      "latency": 4.50100040435791
+    },
+    {
+      "topic": "PyG: PyTorch Geometric library",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] PyG Documentation \uf0c1",
+        "[exa] PyG Documentation \uf0c1",
+        "[exa-h] It consists of various methods for deep learning on graphs and other irregular structures, also known as[geometric deep "
+      ],
+      "latency": 4.075609922409058
+    },
+    {
+      "topic": "DGL: Deep Graph Library",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Welcome to Deep Graph Library Tutorials and Documentation \u2014 DGL 2.3 documentation",
+        "[exa] Welcome to Deep Graph Library Tutorials and Documentation \uf0c1",
+        "[exa-h] Deep Graph Library (DGL) is a Python package built for easy implementation of\ngraph neural network model family, on top "
+      ],
+      "latency": 3.7730560302734375
+    },
+    {
+      "topic": "NetworkX: graph analysis Python",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Software for Complex Networks #",
+        "[exa] Software for Complex Networks #",
+        "[exa-h] # Software for Complex Networks[#] \nRelease:\n3.6.1\nDate:\nDec 08, 2025\nNetworkX is a Python package for the creation, man"
+      ],
+      "latency": 3.6362240314483643
+    },
+    {
+      "topic": "Neo4j: graph database + ML",
+      "area": "tools",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Machine learning",
+        "[exa] Introduction",
+        "[exa-h] **Is this page helpful?**\n[] \n[Raise an issue] \n# Machine learning\nIn GDS, our pipelines offer an end-to-end workflow, f"
+      ],
+      "latency": 4.485182762145996
+    }
+  ]
+}

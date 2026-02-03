@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-02-03T03:02:15.295151",
+  "stats": {
+    "sources": 199,
+    "vectors": 189,
+    "findings": 100
+  },
+  "results": [
+    {
+      "topic": "Text classification: sentiment analysis",
+      "area": "classification",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Introduction \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] ",
+        "[exa-h] * Topic classification and sentiment analysis are two common types of text classification, focusing on categorizing text"
+      ],
+      "latency": 7.490494728088379
+    },
+    {
+      "topic": "Intent classification: chatbot NLU",
+      "area": "classification",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Trending Papers",
+        "[exa] Search code, repositories, users, issues, pull requests...",
+        "[exa-h] ### [Agent Lightning: Train ANY AI Agents with Reinforcement Learning] \nAgent Lightning is a flexible RL framework for t"
+      ],
+      "latency": 7.6235504150390625
+    },
+    {
+      "topic": "Topic classification: document categorization",
+      "area": "classification",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Trending Papers",
+        "[exa] ",
+        "[exa-h] Agentic coding tools receive goals written in natural language as input, break them down into specific tasks, and write "
+      ],
+      "latency": 6.209661245346069
+    },
+    {
+      "topic": "Zero-shot classification: no training",
+      "area": "classification",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa] FZeroTC: fully zero-shot text classification for simultaneously discovering and labeling unseen classes",
+        "[exa-h] > Zero-shot learning models achieve remarkable results on image classification for samples from classes that were not se"
+      ],
+      "latency": 8.658743381500244
+    },
+    {
+      "topic": "Named entity recognition: NER",
+      "area": "extraction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Named-entity recognition",
+        "[exa] ",
+        "[exa-h] Named-entity recognition (NER) (also known as (named) entity identification, entity chunking, and entity extraction) is "
+      ],
+      "latency": 7.493022203445435
+    },
+    {
+      "topic": "Relation extraction: knowledge graphs",
+      "area": "extraction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Comprehensive Survey on Relation Extraction: Recent Advances and New Frontiers",
+        "[exa] Relationship extraction",
+        "[exa-h] Relation extraction (RE) involves identifying the relations between entities from underlying content. RE serves as the f"
+      ],
+      "latency": 9.151124477386475
+    },
+    {
+      "topic": "Keyword extraction: key phrases",
+      "area": "extraction",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] ",
+        "[exa] Trending Papers",
+        "[exa-h] keyphrase extraction approaches, and ships with supervised models trained on the SemEval-2010\ndataset (Kim et al., 2010)"
+      ],
+      "latency": 7.981026887893677
+    },
+    {
+      "topic": "Information extraction: structured data",
+      "area": "extraction",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Information extraction",
+        "[exa] Open information extraction",
+        "[exa-h] A broad goal of IE is to allow computation to be done on the previously unstructured data. A more specific goal is to al"
+      ],
+      "latency": 9.071239471435547
+    },
+    {
+      "topic": "Text summarization: abstractive extractive",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Abstractive vs. Extractive Summarization: An Experimental Review",
+        "[exa] ",
+        "[exa-h] Text summarization is a subtask of natural language processing referring to the automatic creation of a concise and flue"
+      ],
+      "latency": 7.622405052185059
+    },
+    {
+      "topic": "Machine translation: multilingual",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Neural machine translation",
+        "[exa] Exploring Massively Multilingual, Massive Neural Machine Translation",
+        "[exa-h] **Neural machine translation**(**NMT**) is an approach to[machine translation] that uses an[artificial neural network] t"
+      ],
+      "latency": 7.255879640579224
+    },
+    {
+      "topic": "Question answering: reading comprehension",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] text and then answer questions about it, is a chal\u0002lenging task for machines, requiring both under\u0002standing of natural l"
+      ],
+      "latency": 8.117601871490479
+    },
+    {
+      "topic": "Text generation: creative writing",
+      "area": "generation",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Text generation",
+        "[exa] Computer Science > Computation and Language",
+        "[exa-h] # Text generation\nLearn how to prompt a model to generate text.\nCopy page\nWith the OpenAI API, you can use a[large langu"
+      ],
+      "latency": 8.203534126281738
+    },
+    {
+      "topic": "Semantic similarity: text matching",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] Estimating the semantic similarity between text data is one of the challenging and open research problems in the field o"
+      ],
+      "latency": 6.036834955215454
+    },
+    {
+      "topic": "Natural language inference: NLI",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] The semantic concepts of entailment and contra\u0002diction are central to all aspects of natural lan\u0002guage meaning (Katz, 19"
+      ],
+      "latency": 6.469808578491211
+    },
+    {
+      "topic": "Coreference resolution: entity linking",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] refer to the US state, or the capital city, or the person George Washington; the inter\u0002pretation of the sentence will of"
+      ],
+      "latency": 8.291669368743896
+    },
+    {
+      "topic": "Dependency parsing: syntax analysis",
+      "area": "understanding",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Syntax: General Principles",
+        "[exa] Syntax: General Principles",
+        "[exa-h] In the rest of this document, we discuss the fundamental principles of our dependency annotation, focusing on aspects th"
+      ],
+      "latency": 6.382974863052368
+    },
+    {
+      "topic": "Chatbots: conversational NLP",
+      "area": "applications",
+      "sources": 9,
+      "vectors": 9,
+      "findings": [
+        "[exa] What is a chatbot?",
+        "[exa] ChatKit | OpenAI API",
+        "[exa-h] A chatbot is a computer program that simulates human conversation with an end user. Not all chatbots are equipped with[a"
+      ],
+      "latency": 6.662649154663086
+    },
+    {
+      "topic": "Content moderation: toxic detection",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] ",
+        "[exa-h] and a variety of methods to make the model robust and to\navoid overftting. Our moderation system is trained to detect\na "
+      ],
+      "latency": 6.950045347213745
+    },
+    {
+      "topic": "Search relevance: ranking",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Automatically generating and ranking results",
+        "[exa-h] This monograph addresses the classical probabilistic model of informa\u0002tion retrieval. The model is characterised by incl"
+      ],
+      "latency": 6.602366924285889
+    },
+    {
+      "topic": "Document processing: enterprise NLP",
+      "area": "applications",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Document AI overview \n\n    \n    \n       \n    \n\n     \n      \n      Stay organized with collections\n     \n     \n      \n      Save and categorize content based on your preferences.",
+        "[exa] Document AI",
+        "[exa-h] Document AI is a[document processing and understanding] platform that takes unstructured data from documents and transfo"
+      ],
+      "latency": 8.391199350357056
+    }
+  ]
+}

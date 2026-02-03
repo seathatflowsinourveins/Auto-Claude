@@ -168,15 +168,15 @@ class AdapterCircuitBreakerManager:
             if not breaker:
                 return None
 
-            stats = breaker.get_stats()
+            stats = breaker.stats
             return AdapterHealth(
                 name=adapter_name,
-                state=stats.state,
-                failure_count=stats.failure_count,
-                success_count=stats.success_count,
-                last_failure_time=stats.last_failure_time,
-                last_success_time=stats.last_success_time,
-                is_healthy=stats.state != CircuitState.OPEN,
+                state=breaker.state,
+                failure_count=stats.failed_calls,
+                success_count=stats.successful_calls,
+                last_failure_time=datetime.fromtimestamp(stats.last_failure_time) if stats.last_failure_time else None,
+                last_success_time=datetime.fromtimestamp(stats.last_success_time) if stats.last_success_time else None,
+                is_healthy=breaker.state != CircuitState.OPEN,
             )
 
     def get_all_health(self) -> Dict[str, AdapterHealth]:

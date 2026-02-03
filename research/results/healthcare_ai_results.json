@@ -1,0 +1,248 @@
+{
+  "timestamp": "2026-02-03T01:54:27.010201",
+  "stats": {
+    "sources": 195,
+    "vectors": 155,
+    "findings": 86
+  },
+  "results": [
+    {
+      "topic": "Clinical NLP: extracting information from medical records",
+      "area": "clinical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Clinical information extraction applications: A literature review",
+        "[exa] Clinical Information Extraction Applications: A Literature Review",
+        "[exa-h] Clinical IE has been used for a wide range of applications, however, there is a considerable gap between clinical studie"
+      ],
+      "latency": 8.646052598953247
+    },
+    {
+      "topic": "Medical named entity recognition: diseases, drugs, symptoms",
+      "area": "clinical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] Medical Named Entity Recognition (MedNER): A Deep Learning Model for Recognizing Medical Entities (Drug, Disease) from Scientific Texts | IEEE Conference Publication | IEEE Xplore",
+        "[exa-h] Finally, we also retrieve from PubMed the orig\u0002inal metadata associated with each abstract. This\nincludes relevant named"
+      ],
+      "latency": 8.079257011413574
+    },
+    {
+      "topic": "Clinical decision support: AI-assisted diagnosis",
+      "area": "clinical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] ",
+        "[exa] AI\u2010Powered Clinical Decision Support Systems in Disease Diagnosis, Treatment Planning, and Prognosis: A Systematic Review",
+        "[exa-h] The Food and Drug Administration (FDA) has long regulated software that meets the definition \nof a device in section 201"
+      ],
+      "latency": 6.830556869506836
+    },
+    {
+      "topic": "Medical coding automation: ICD-10, CPT from notes",
+      "area": "clinical",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Automating the overburdened clinical coding system: challenges and next steps",
+        "[exa] Nym\u2019s Autonomous Medical Coding Engine",
+        "[exa-h] In the US, one of the predominant coding classification systems is the ICD-10-CM (International Classification of Diseas"
+      ],
+      "latency": 7.511195421218872
+    },
+    {
+      "topic": "Med-PaLM: Google's medical LLM capabilities",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Med-PaLM",
+        "[exa] Med-PaLM - Med-PaLM",
+        "[exa-h] Med-PaLM is a large language model (LLM) designed to provide high quality answers to medical questions. Our second versi"
+      ],
+      "latency": 8.77414846420288
+    },
+    {
+      "topic": "BioGPT and PubMedBERT: domain-specific models",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] BioGPT: Generative Pre-trained Transformer for Biomedical Text Generation and Mining",
+        "[exa] BioGPT: Generative Pre-trained Transformer for Biomedical Text\n  Generation and Mining",
+        "[exa-h] biomedical domain, such as BioBERT and PubMedBERT. While they have achieved great success on a variety of discriminative"
+      ],
+      "latency": 6.370120525360107
+    },
+    {
+      "topic": "Medical chatbots: patient triage, symptom checkers",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Accuracy of online symptom assessment applications, large language models, and laypeople for self\u2013triage decisions",
+        "[exa] www.bmj.com",
+        "[exa-h] Symptom-assessment Applications (SAAs, also known as online symptom checkers or digital triage tools) are digital platfo"
+      ],
+      "latency": 8.03946304321289
+    },
+    {
+      "topic": "Clinical summarization: discharge notes, visit summaries",
+      "area": "llm",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Development and evaluation of a clinical note summarization system using large language models",
+        "[exa] ",
+        "[exa-h] This study developed a system to support physicians in writing hospital discharge summaries. Clinical notes often includ"
+      ],
+      "latency": 6.678791522979736
+    },
+    {
+      "topic": "AI radiology: chest X-ray, CT scan analysis",
+      "area": "imaging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Deep learning improves physician accuracy in the comprehensive detection of abnormalities on chest X-rays",
+        "[exa] Prospective Multi-Site Validation of AI to Detect Tuberculosis and Chest X-Ray Abnormalities",
+        "[exa-h] Chest X-rays are the most commonly performed medical imaging exam, yet they are often misinterpreted by physicians. Here"
+      ],
+      "latency": 7.66284704208374
+    },
+    {
+      "topic": "Pathology AI: histopathology image analysis",
+      "area": "imaging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Artificial intelligence in digital pathology: a systematic review and meta-analysis of diagnostic test accuracy",
+        "[exa] Artificial intelligence applications in histopathology",
+        "[exa-h] ### Similar content being viewed by others\n\n### [Artificial intelligence applications in histopathology] \n\nArticle09 Feb"
+      ],
+      "latency": 9.828777551651001
+    },
+    {
+      "topic": "Dermatology AI: skin lesion classification",
+      "area": "imaging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Multimodal Image Dataset for AI-Based Skin Cancer (MIDAS) Benchmarking",
+        "[exa] Diagnostic accuracy of artificial intelligence compared to family physicians and dermatologists for skin conditions: a systematic review and meta-analysis",
+        "[exa-h] ### Reference Labeling"
+      ],
+      "latency": 5.009305953979492
+    },
+    {
+      "topic": "Medical image segmentation: organ, tumor detection",
+      "area": "imaging",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation",
+        "[exa] Computer Science > Computer Vision and Pattern Recognition",
+        "[exa-h] 21. Heller, N. et al. The KiTS19 challenge data: 300 kidney tumor cases with clinical context, CT semantic segmentations"
+      ],
+      "latency": 4.324826717376709
+    },
+    {
+      "topic": "AI drug discovery: molecule generation, property prediction",
+      "area": "discovery",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Machine learning-aided generative molecular design",
+        "[exa] Quantitative Biology > Biomolecules",
+        "[exa-h] Machine learning has provided a means to accelerate early-stage drug discovery by combining molecule generation and filt"
+      ],
+      "latency": 6.526738882064819
+    },
+    {
+      "topic": "Protein structure prediction: AlphaFold applications",
+      "area": "discovery",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] AlphaFold  Protein Structure Database",
+        "[exa] AlphaFold",
+        "[exa-h] AlphaFold, the state-of-the-art AI system developed by Google DeepMind, is able to computationally predict protein struc"
+      ],
+      "latency": 5.477047443389893
+    },
+    {
+      "topic": "Clinical trial optimization: patient matching, outcomes",
+      "area": "discovery",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Patients\u2019 selection and trial matching in early-phase oncology clinical trials",
+        "[exa] The NCI-MATCH trial: lessons for precision oncology",
+        "[exa-h] New approaches to optimize the early-phase clinical trial referring process in oncology include automatic trial matching"
+      ],
+      "latency": 5.170316219329834
+    },
+    {
+      "topic": "Drug interaction prediction: adverse event detection",
+      "area": "discovery",
+      "sources": 5,
+      "vectors": 5,
+      "findings": [
+        "[tavily] Machine learning models significantly improve drug interaction prediction and adverse event detection, leveraging large datasets and advanced algorithms for better accuracy. Ensemble learning techniqu"
+      ],
+      "latency": 5.210578918457031
+    },
+    {
+      "topic": "HIPAA compliance for AI: data privacy requirements",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Title 45",
+        "[exa] Guidance on Significant Aspects of the Privacy Rule",
+        "[exa-h] [Learn more] about the eCFR, its status, and the editorial process.\n###### Enhanced Content\nView[table of contents] for "
+      ],
+      "latency": 5.24387526512146
+    },
+    {
+      "topic": "FDA AI/ML guidance: regulatory approval pathways",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 10,
+      "findings": [
+        "[exa] Considerations for the Use of Artificial Intelligence To Support Regulatory Decision-Making for Drug and Biological Products\n\t\t \n\t\t\t Draft Guidance for Industry and Other Interested Parties \n\t\t\n\t\t January 2025",
+        "[exa] FDA Proposes Framework to Advance Credibility of AI Models Used for Drug and Biological Product Submissions",
+        "[exa-h] This guidance provides recommendations to sponsors and other interested parties on the use of artificial intelligence (A"
+      ],
+      "latency": 4.359475135803223
+    },
+    {
+      "topic": "Explainability in medical AI: clinician trust",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Transparency of medical artificial intelligence systems",
+        "[exa] How Explainable Artificial Intelligence Can Increase or Decrease Clinicians\u2019 Trust in AI Applications in Health Care: Systematic Review",
+        "[exa-h] Medical artificial intelligence (AI) systems hold promise for transforming healthcare by supporting clinical decision-ma"
+      ],
+      "latency": 6.023723363876343
+    },
+    {
+      "topic": "Bias in healthcare AI: fairness across populations",
+      "area": "compliance",
+      "sources": 10,
+      "vectors": 0,
+      "findings": [
+        "[exa] Bias recognition and mitigation strategies in artificial intelligence healthcare applications",
+        "[exa] Algorithmic fairness in artificial intelligence for medicine and healthcare",
+        "[exa-h] Artificial intelligence (AI) is delivering value across all aspects of clinical practice. However, bias may exacerbate h"
+      ],
+      "latency": 5.555034399032593
+    }
+  ]
+}
