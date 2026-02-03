@@ -1,0 +1,244 @@
+{
+  "ts": "2026-02-03T00:05:53.403855",
+  "totals": {
+    "sources": 234,
+    "vectors": 180,
+    "insights": 108
+  },
+  "results": [
+    {
+      "i": 1,
+      "cat": "Self-Improve",
+      "topic": "Self-RAG: models that critique and refine their own retrieval",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Self-RAG: Learning to Retrieve, Generate, and Critique through Self ...",
+        "[exa] Self-RAG: Learning to Retrieve, Generate, and Critique ...",
+        "[exa-h] In the ever-evolving landscape of artificial intelligence and natural language processing,Self-RAG(S"
+      ],
+      "latency": 13.318269729614258
+    },
+    {
+      "i": 2,
+      "cat": "Self-Improve",
+      "topic": "Reflection agents: learning from mistakes and improving",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] How Do Agents Learn from Their Own Mistakes? The Role of ...",
+        "[exa] Reflection: How AI Agents Learn To Critique and Fix Their Own ...",
+        "[exa-h] That\u2019s where Reflection comes in. More than just thinking ahead, agentic AI needs to analyze past ac"
+      ],
+      "latency": 18.18507218360901
+    },
+    {
+      "i": 3,
+      "cat": "Self-Improve",
+      "topic": "Meta-learning for few-shot adaptation in agents",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] AdaptAgent - Adapting Multimodal Web Agents with Few-Shot ...",
+        "[exa] AdaptAgent: Adapting Multimodal Web Agents with Few-Shot Learning",
+        "[exa-h] Meta-learning\u00a0\\[ [48] \\], often dubbed \u201clearning to learn\u201d, is a training strategy in which a model "
+      ],
+      "latency": 17.568241596221924
+    },
+    {
+      "i": 4,
+      "cat": "Reasoning",
+      "topic": "Tree of Thoughts: exploring multiple reasoning paths",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tree of Thoughts: Deliberate Problem Solving with Large Language ...",
+        "[exa] What is Tree Of Thoughts Prompting? - IBM",
+        "[exa-h] challenges, we introduce a new framework for language model inference, Tree of Thoughts (ToT), which"
+      ],
+      "latency": 10.492727279663086
+    },
+    {
+      "i": 5,
+      "cat": "Reasoning",
+      "topic": "Graph of Thoughts: non-linear reasoning with backtracking",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Graph-of-Thought & Workflow-of-Thought",
+        "[exa] Chain-of-Thought vs Tree-of-Thought vs Graph-of-Thought",
+        "[exa-h] Most AI still \u201cthinks\u201d in lines. That\u2019s fine for simple queries, but fragile for enterprise work tha"
+      ],
+      "latency": 16.154168128967285
+    },
+    {
+      "i": 6,
+      "cat": "Reasoning",
+      "topic": "Chain-of-verification: reducing hallucination through self-check",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Chain-of-Verification Reduces Hallucination in Large Language Models - ACL Anthology",
+        "[exa] ",
+        "[exa-h] Generation of plausible yet incorrect factual information, termed hallucination, is an unsolved issu"
+      ],
+      "latency": 11.722867965698242
+    },
+    {
+      "i": 7,
+      "cat": "Multi-Agent",
+      "topic": "Society of Mind: emergent intelligence from agent collaboration",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Microsoft Word - 109.doc",
+        "[exa] Society of Mind",
+        "[exa-h] agencies. Each agency is comprised of a set of agents and a master agent, which\ncompete hierarchical"
+      ],
+      "latency": 11.136004447937012
+    },
+    {
+      "i": 8,
+      "cat": "Multi-Agent",
+      "topic": "Agent debate: improving answers through adversarial discussion",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] What Happens When Agents Disagree? Building Multi ... - Medium",
+        "[exa] Adversarial Multi-Agent Evaluation of Large Language Models ...",
+        "[exa-h] This is a deterministic, auditable, evaluation-driven system I built out of curiosity about a simple"
+      ],
+      "latency": 18.23787260055542
+    },
+    {
+      "i": 9,
+      "cat": "Multi-Agent",
+      "topic": "Swarm intelligence: collective problem-solving patterns",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Swarm intelligence - Scholarpedia",
+        "[exa] [PDF] Swarm intelligence: from natural to artificial systems | Semantic Scholar",
+        "[exa-h] **Swarm intelligence**is the discipline that deals with natural and artificial systems composed of m"
+      ],
+      "latency": 10.373854398727417
+    },
+    {
+      "i": 10,
+      "cat": "Knowledge",
+      "topic": "Neural-symbolic integration: combining LLMs with knowledge graphs",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Neuro-symbolic synergy in education: a survey of LLM-knowledge ...",
+        "[exa] Neural-Symbolic Reasoning over Knowledge Graphs: A Survey from a Query Perspective",
+        "[exa-h] This article presents a structured survey of recent approaches integrating Large Language Models (LL"
+      ],
+      "latency": 13.238563537597656
+    },
+    {
+      "i": 11,
+      "cat": "Knowledge",
+      "topic": "Continuous learning: updating knowledge without catastrophic forgetting",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Catastrophic Forgetting or the Challenge of Continuous Learning",
+        "[exa] [PDF] Continual Learning and Catastrophic Forgetting",
+        "[exa-h] In a world where new data is always available, training machine learning model from scratch on new d"
+      ],
+      "latency": 15.954884052276611
+    },
+    {
+      "i": 12,
+      "cat": "Knowledge",
+      "topic": "Knowledge distillation: transferring reasoning to smaller models",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Knowledge distillation",
+        "[exa] Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes",
+        "[exa-h] In[machine learning],**knowledge distillation**or**model distillation**is the process of transferrin"
+      ],
+      "latency": 12.008824348449707
+    },
+    {
+      "i": 13,
+      "cat": "Production",
+      "topic": "Inference-time compute scaling: thinking longer for better answers",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Categories of Inference-Time Scaling for Improved LLM Reasoning",
+        "[exa] Scaling Test-Time Compute for Longer Thinking in LLMs",
+        "[exa-h] *Inference-time scaling*(also called*inference-compute scaling*,*test-time scaling*, or just*inferen"
+      ],
+      "latency": 12.526142120361328
+    },
+    {
+      "i": 14,
+      "cat": "Production",
+      "topic": "Dynamic routing: selecting models based on query complexity",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Dynamic LLM Routing: Tools and Frameworks - Latitude.so",
+        "[exa] Geek Out Time: AI Model Routing \u2014 Dynamically Choose ... - Medium",
+        "[exa-h] Dynamic LLM routing offers a smart way to manage costs by directing queries to the most appropriate "
+      ],
+      "latency": 9.86143445968628
+    },
+    {
+      "i": 15,
+      "cat": "Production",
+      "topic": "Cascading inference: starting small, escalating when needed",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Revisiting Cascaded Ensembles for Efficient Inference - arXiv",
+        "[exa] What is the primary purpose of a Model Cascade in machine learning?",
+        "[exa-h] A natural approach for adaptive inference is to cascade over a\nset of models, starting from the leas"
+      ],
+      "latency": 11.309208869934082
+    },
+    {
+      "i": 16,
+      "cat": "Frontier",
+      "topic": "World models: agents that simulate before acting",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Code World Models: Teaching LLMs to Simulate Execution | rewire.it",
+        "[exa] World Models",
+        "[exa-h] The world models concept originates from Ha and Schmidhuber's 2018 paper, which proposed that agents"
+      ],
+      "latency": 12.584431886672974
+    },
+    {
+      "i": 17,
+      "cat": "Frontier",
+      "topic": "Embodied AI: language models controlling physical systems",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Embodied large language models enable robots to complete complex tasks in unpredictable environments",
+        "[exa] Embodied AI: From LLMs to World Models [Feature]",
+        "[exa-h] Embodied LLM-enabled robot (ELLMER) is a framework that integrates approaches in artificial intellig"
+      ],
+      "latency": 10.71057915687561
+    },
+    {
+      "i": 18,
+      "cat": "Frontier",
+      "topic": "Neuromorphic computing: brain-inspired AI architectures",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Neuromorphic computing - Wikipedia",
+        "[exa] How neuromorphic computing takes inspiration from our brains",
+        "[exa-h] Neuromorphic engineering emulates the brain\u2019s structure and operations, focusing on the analog natur"
+      ],
+      "latency": 16.73223614692688
+    }
+  ]
+}
