@@ -255,6 +255,46 @@ def get_portkey_gateway_adapter():
         return None
 
 
+# =============================================================================
+# V36.1 Research Layer Adapters - Unleash Claude's Potential
+# =============================================================================
+
+def get_exa_adapter():
+    """Get Exa neural search adapter if available."""
+    try:
+        from .exa_adapter import ExaAdapter, EXA_AVAILABLE
+        return ExaAdapter
+    except ImportError:
+        return None
+
+
+def get_tavily_adapter():
+    """Get Tavily AI search adapter if available."""
+    try:
+        from .tavily_adapter import TavilyAdapter, TAVILY_AVAILABLE
+        return TavilyAdapter
+    except ImportError:
+        return None
+
+
+def get_jina_adapter():
+    """Get Jina Reader adapter if available."""
+    try:
+        from .jina_adapter import JinaAdapter
+        return JinaAdapter
+    except ImportError:
+        return None
+
+
+def get_perplexity_adapter():
+    """Get Perplexity Sonar adapter if available."""
+    try:
+        from .perplexity_adapter import PerplexityAdapter
+        return PerplexityAdapter
+    except ImportError:
+        return None
+
+
 __all__ = [
     # Core registration
     "ADAPTER_STATUS",
@@ -289,6 +329,11 @@ __all__ = [
     "get_ragatouille_adapter",
     "get_braintrust_adapter",
     "get_portkey_gateway_adapter",
+    # V36.1 Research Layer - Unleash Claude's Potential
+    "get_exa_adapter",
+    "get_tavily_adapter",
+    "get_jina_adapter",
+    "get_perplexity_adapter",
 ]
 
 

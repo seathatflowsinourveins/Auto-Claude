@@ -1,7 +1,34 @@
 {
   "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/mcp-config.json",
   "mcpServers": {
-    "__comment_core": "=== CORE SERVICES ===",
+    "__comment_orchestration": "=== ORCHESTRATION (V36 Core) ===",
+
+    "claude-flow": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@claude-flow/cli@latest", "mcp", "start"],
+      "env": {
+        "CLAUDE_FLOW_MODE": "v3",
+        "CLAUDE_FLOW_HOOKS_ENABLED": "true",
+        "CLAUDE_FLOW_TOPOLOGY": "hierarchical-mesh",
+        "CLAUDE_FLOW_MAX_AGENTS": "15",
+        "CLAUDE_FLOW_MEMORY_BACKEND": "hybrid"
+      },
+      "autoStart": true,
+      "description": "V3 Swarm orchestration with 15-agent hierarchical mesh"
+    },
+
+    "github": {
+      "type": "stdio",
+      "command": "gh",
+      "args": ["mcp"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "description": "GitHub CLI MCP - issues, PRs, repos, actions"
+    },
+
+    "__comment_core": "=== CORE SERVICES (Battle-tested) ===",
 
     "filesystem": {
       "type": "stdio",
@@ -21,97 +48,97 @@
       "type": "stdio",
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-      "description": "Extended reasoning chains"
+      "description": "Extended reasoning chains for complex tasks"
     },
 
-    "__comment_code_intelligence": "=== CODE INTELLIGENCE (UNIFIED 5-LAYER ARCHITECTURE) ===",
-
-    "narsil": {
+    "context7": {
       "type": "stdio",
-      "command": "narsil-mcp",
-      "args": [
-        "--project", "Z:/insider/AUTO CLAUDE/unleash",
-        "--languages", "python,typescript,javascript,go,rust",
-        "--enable-security",
-        "--enable-call-graphs"
-      ],
-      "env": {
-        "VOYAGE_API_KEY": "${VOYAGE_API_KEY}",
-        "NARSIL_CACHE_DIR": "Z:/insider/AUTO CLAUDE/unleash/.narsil-cache"
-      },
-      "description": "PRIMARY L1: 76-tool Rust MCP - neural search, taint analysis, call graphs, security (2 GiB/s)"
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "description": "Library documentation lookup - battle-tested"
     },
+
+    "__comment_code_intelligence": "=== CODE INTELLIGENCE (Production-Ready) ===",
 
     "lsp-python": {
       "type": "stdio",
       "command": "mcp-language-server",
       "args": ["-lsp", "pyright"],
-      "description": "L0 Real-time: Python LSP bridge - go-to-definition, references, diagnostics (<18ms)"
+      "description": "Python LSP - go-to-definition, references, diagnostics (<18ms)"
     },
 
     "lsp-typescript": {
       "type": "stdio",
       "command": "mcp-language-server",
       "args": ["-lsp", "typescript-language-server", "--stdio"],
-      "description": "L0 Real-time: TypeScript/JavaScript LSP bridge - code intelligence"
-    },
-
-    "deepcontext": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["@wildcard-ai/deepcontext"],
-      "env": {
-        "QDRANT_URL": "http://localhost:6333",
-        "JINA_API_KEY": "${JINA_API_KEY}",
-        "WILDCARD_API_KEY": "${WILDCARD_API_KEY}"
-      },
-      "description": "L2 Semantic: Symbol-aware semantic search with hybrid retrieval (40% token reduction)"
+      "description": "TypeScript/JavaScript LSP - code intelligence"
     },
 
     "code-index": {
       "type": "stdio",
       "command": "uvx",
       "args": ["code-index-mcp", "--project-path", "Z:/insider/AUTO CLAUDE/unleash"],
-      "description": "L4 Indexing: 48-language code indexing with tree-sitter + SQLite FTS5"
+      "description": "48-language code indexing with tree-sitter + SQLite FTS5"
     },
 
-    "__comment_web": "=== WEB & RESEARCH ===",
+    "__comment_research": "=== RESEARCH LAYER (Unleash Claude's Potential) ===",
+
+    "exa": {
+      "type": "http",
+      "url": "https://mcp.exa.ai/mcp",
+      "env": {
+        "EXA_API_KEY": "${EXA_API_KEY}"
+      },
+      "description": "Exa neural search: web_search, deep_search, code_context, company_research"
+    },
+
+    "tavily": {
+      "type": "http",
+      "url": "https://mcp.tavily.com/mcp/?tavilyApiKey=${TAVILY_API_KEY}",
+      "description": "Tavily AI search: search, extract, crawl, map - built for AI agents"
+    },
+
+    "jina": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@jina-ai/mcp-server"],
+      "env": {
+        "JINA_API_KEY": "${JINA_API_KEY}"
+      },
+      "description": "Jina Reader: URL-to-markdown, web search, embeddings, reranking"
+    },
+
+    "__comment_web": "=== WEB CRAWLING (Deep Content Extraction) ===",
 
     "firecrawl": {
       "type": "stdio",
       "command": "npx",
       "args": ["-y", "firecrawl-mcp"],
-      "description": "AI-powered web scraping: crawl, scrape, extract, map sites",
       "env": {
         "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}",
         "FIRECRAWL_RETRY_MAX_ATTEMPTS": "5"
-      }
+      },
+      "description": "AI-powered web scraping: crawl, scrape, extract, map sites"
     },
 
-    "exa": {
+    "fetch": {
       "type": "stdio",
       "command": "npx",
-      "args": [
-        "-y",
-        "exa-mcp-server",
-        "tools=web_search_exa,get_code_context_exa,crawling_exa,company_research_exa,deep_researcher_start,deep_researcher_check"
-      ],
-      "env": {
-        "EXA_API_KEY": "${EXA_API_KEY}"
-      },
-      "description": "AI-powered web search with semantic understanding and deep research"
+      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "description": "Direct URL fetching and HTML extraction"
     },
 
-    "__comment_memory": "=== MEMORY & PERSISTENCE ===",
+    "__comment_memory": "=== MEMORY & PERSISTENCE (V36 Memory Layer) ===",
 
     "letta": {
       "type": "stdio",
       "command": "npx",
       "args": ["-y", "@letta-ai/letta-mcp"],
       "env": {
-        "LETTA_BASE_URL": "http://localhost:8283"
+        "LETTA_BASE_URL": "http://localhost:8283",
+        "LETTA_API_KEY": "${LETTA_API_KEY}"
       },
-      "description": "Letta memory persistence server with hierarchical memory"
+      "description": "Letta memory persistence with hierarchical memory (L2)"
     },
 
     "qdrant": {
@@ -123,28 +150,63 @@
         "--qdrant-url", "http://localhost:6333",
         "--embedding-model", "sentence-transformers/all-MiniLM-L6-v2"
       ],
-      "description": "L2 Semantic: Vector database for code embeddings (15ms queries)"
-    },
-
-    "__comment_legacy": "=== LEGACY (Migration in Progress) ===",
-
-    "serena": {
-      "type": "stdio",
-      "command": "python",
-      "args": [
-        "C:/Users/42/.claude/scripts/serena-dynamic.py",
-        "--enable-web-dashboard", "true"
-      ],
-      "env": {
-        "SERENA_PROJECT": "unleash"
-      },
-      "description": "LEGACY: Slow startup (60+ sec) - keep for memories only, use narsil+lsp for code intelligence"
+      "description": "Vector database for code embeddings (15ms queries)"
     }
   },
   "globalShortcuts": {
     "platform-status": "uv run scripts/ecosystem_orchestrator.py --quick",
     "ralph-iterate": "uv run scripts/ralph_loop.py iterate",
     "validate": "uv run scripts/auto_validate.py --quick",
-    "index-codebase": "narsil-mcp index --project Z:/insider/AUTO CLAUDE/unleash"
+    "index-codebase": "code-index-mcp index --project Z:/insider/AUTO CLAUDE/unleash",
+    "sdk-health": "python -c \"from platform.adapters import get_adapter_status; print(get_adapter_status())\""
+  },
+  "_v36_config": {
+    "version": "36.1.0",
+    "purpose": "Unleash Claude's potential through agent-to-agent research orchestration",
+    "layers": {
+      "L0_PROTOCOL": ["claude-flow", "github", "filesystem", "memory", "fetch"],
+      "L1_ORCHESTRATION": ["claude-flow"],
+      "L2_MEMORY": ["letta", "qdrant"],
+      "L4_REASONING": ["sequential-thinking"],
+      "L7_PROCESSING": ["firecrawl", "code-index"],
+      "L8_KNOWLEDGE": ["context7"],
+      "L9_RESEARCH": ["exa", "tavily", "jina", "firecrawl"]
+    },
+    "research_tools": {
+      "exa": {
+        "purpose": "Neural semantic search",
+        "modes": ["fast (<350ms)", "auto", "deep (agentic)"],
+        "use_for": "Finding code patterns, technical docs, similar content"
+      },
+      "tavily": {
+        "purpose": "AI-native search with citations",
+        "modes": ["search", "research (Agent-in-a-Box)", "extract", "qna"],
+        "use_for": "Real-time info, research reports, structured extraction"
+      },
+      "jina": {
+        "purpose": "URL to markdown conversion",
+        "modes": ["read", "search", "embed", "rerank"],
+        "use_for": "Reading full docs, converting pages, embeddings"
+      },
+      "context7": {
+        "purpose": "SDK documentation lookup",
+        "modes": ["resolve-library", "query-docs"],
+        "use_for": "Up-to-date SDK/library documentation"
+      },
+      "firecrawl": {
+        "purpose": "Deep web crawling",
+        "modes": ["scrape", "crawl", "extract", "map"],
+        "use_for": "Crawling entire sites, structured extraction"
+      }
+    },
+    "adapters": {
+      "count": 43,
+      "research_adapters": ["exa", "tavily", "jina", "perplexity"],
+      "new_in_v36": [
+        "openai-agents", "cognee", "mcp-apps", "graphiti", "strands-agents",
+        "a2a-protocol", "ragflow", "simplemem", "ragatouille", "braintrust",
+        "portkey-gateway", "exa", "tavily", "jina", "perplexity"
+      ]
+    }
   }
 }
