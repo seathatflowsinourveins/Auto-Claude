@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-02-02T23:56:29.450480",
+  "summary": {
+    "gaps_identified": 10,
+    "resolved": 6,
+    "skipped": 1,
+    "beyond_implemented": 2
+  },
+  "results": {
+    "resolutions": [
+      {
+        "status": "FAIL",
+        "error": "{\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"",
+        "name": "Anthropic Integration"
+      },
+      {
+        "status": "SKIP",
+        "reason": "No GROQ_API_KEY",
+        "name": "Groq Integration"
+      },
+      {
+        "status": "RESOLVED",
+        "cache_hit": true,
+        "similarity": 0.9664357500068305,
+        "name": "Semantic Cache"
+      },
+      {
+        "status": "RESOLVED",
+        "classified": 4,
+        "name": "Query Classification"
+      },
+      {
+        "status": "RESOLVED",
+        "attempts": 2,
+        "name": "Retry Logic"
+      },
+      {
+        "status": "RESOLVED",
+        "final_state": "HALF_OPEN",
+        "name": "Circuit Breaker"
+      },
+      {
+        "status": "RESOLVED",
+        "facts_persisted": 2,
+        "name": "Persistent Memory"
+      },
+      {
+        "status": "RESOLVED",
+        "tasks": 3,
+        "learnings": 1,
+        "name": "Agent Reflection"
+      }
+    ],
+    "beyond": [
+      {
+        "status": "ERROR",
+        "error": "Cannot send a request, as the client has been closed.",
+        "name": "Hybrid RAG"
+      },
+      {
+        "status": "IMPLEMENTED",
+        "routes_defined": 4,
+        "queries_routed": 4,
+        "name": "Agentic Router"
+      },
+      {
+        "status": "IMPLEMENTED",
+        "hops": 2,
+        "answer": "LangChain (creator of LangGraph) also maintains LangSmith, LangServe, and the core LangChain library",
+        "name": "Multi-Hop Retrieval"
+      }
+    ]
+  }
+}

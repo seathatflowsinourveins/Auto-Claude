@@ -1,0 +1,205 @@
+{
+  "timestamp": "2026-02-03T00:00:31.906620",
+  "summary": {
+    "sources": 195,
+    "vectors": 150,
+    "insights": 58
+  },
+  "results": [
+    {
+      "iteration": 1,
+      "category": "RAG",
+      "topic": "Adaptive RAG: dynamically adjusting retrieval based on query complexity",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Query-Adaptive RAG: Routing Complex Questions to Multi-Hop ...",
+        "[exa] Adaptive-RAG: Dynamic Retrieval Systems - Emergent Mind",
+        "[tavily] Adaptive RAG dynamically adjusts retrieval strategies based on query complexity, optimizing efficiency and accuracy. It uses classifiers to determine "
+      ],
+      "latency": 10.92091679573059
+    },
+    {
+      "iteration": 2,
+      "category": "RAG",
+      "topic": "RAG fusion: combining multiple retrieval strategies with RRF",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Not RAG, but RAG Fusion? Understanding Next-Gen Info Retrieval.",
+        "[exa] Modeling Uncertainty and Using Post-fusion as Fallback Improves Retrieval Augmented Generation with LLMs",
+        "[perplexity] **RAG Fusion** combines multiple retrieval strategies in Retrieval-Augmented Generation (RAG) by generating diverse query rewrites, retrieving documents via complementary methods (e.g., dense and spar..."
+      ],
+      "latency": 10.13527774810791
+    },
+    {
+      "iteration": 3,
+      "category": "RAG",
+      "topic": "Contextual compression: reducing context size while preserving relevance",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Context Compression & Selective Expansion - Emergent Mind",
+        "[exa] Journey with Contextual Compression: Overcoming Challenges in ...",
+        "[tavily] Context compression reduces context size while preserving relevance, using techniques like relevance filtering and summarization. It aims to lower cos"
+      ],
+      "latency": 12.701900959014893
+    },
+    {
+      "iteration": 4,
+      "category": "Agent",
+      "topic": "Plan-and-execute agents: separating planning from execution",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] How to Build a Plan-and-Execute AI Agent - Ema",
+        "[exa] Plan-and-Execute Agents - LangChain Blog",
+        "[tavily] Plan-and-execute agents separate planning from execution, using an LLM to create a detailed plan and then executing it step-by-step. This approach imp"
+      ],
+      "latency": 12.610343217849731
+    },
+    {
+      "iteration": 5,
+      "category": "Agent",
+      "topic": "Tool-use optimization: selecting optimal tools for agent tasks",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Tool calling optimization: Efficient agent actions",
+        "[exa] Optimize and Scale Your AI Agent's Tool Calling - Paragon",
+        "[tavily] Tool-use optimization focuses on selecting the most effective tools for agents, improving accuracy and efficiency, and reducing redundancy through tec"
+      ],
+      "latency": 12.841028213500977
+    },
+    {
+      "iteration": 6,
+      "category": "Agent",
+      "topic": "Agent handoffs: transferring context between specialized agents",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Microsoft Agent Framework Workflows Orchestrations - Handoff",
+        "[exa] How Agent Handoffs Work in Multi-Agent Systems",
+        "[tavily] Agent handoffs involve transferring context between specialized agents to maintain conversation continuity and optimize performance. This method allow"
+      ],
+      "latency": 9.09138798713684
+    },
+    {
+      "iteration": 7,
+      "category": "Memory",
+      "topic": "Hierarchical memory: combining short-term and long-term memory",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] [PDF] LONG SHORT-TERM MEMORY 1 INTRODUCTION",
+        "[exa] [PDF] HST-LSTM: A Hierarchical Spatial-Temporal Long-Short Term ...",
+        "[tavily] Hierarchical memory combines short-term and long-term memory through multi-level structures, optimizing speed and capacity. It uses fast, small memory"
+      ],
+      "latency": 10.862142324447632
+    },
+    {
+      "iteration": 8,
+      "category": "Memory",
+      "topic": "Memory consolidation: summarizing and compacting agent memory",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[tavily] Memory consolidation in AI agents involves summarizing and compressing memory to maintain essential information while discarding less critical details"
+      ],
+      "latency": 7.055117130279541
+    },
+    {
+      "iteration": 9,
+      "category": "Memory",
+      "topic": "Episodic memory retrieval: recalling relevant past experiences",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] A Neurocognitive Perspective on the Forms and Functions of Autobiographical Memory Retrieval",
+        "[exa] Retrieval-Based Model Accounts for Striking Profile of Episodic Memory and Generalization",
+        "[tavily] Episodic memory allows us to recall specific personal experiences with time and place details. It involves reliving past events and is distinct from g"
+      ],
+      "latency": 11.514230012893677
+    },
+    {
+      "iteration": 10,
+      "category": "Production",
+      "topic": "Prompt compression: reducing token count while preserving meaning",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Semantic Prompt Compression: Reducing LLM Costs While ...",
+        "[exa] Prompt Compression: Past, Present & Profit - LinkedIn",
+        "[tavily] Prompt compression reduces token count while preserving meaning in large language models, using techniques like summarization and selective informatio"
+      ],
+      "latency": 12.140862226486206
+    },
+    {
+      "iteration": 11,
+      "category": "Production",
+      "topic": "Speculative decoding: accelerating inference with draft models",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] [2510.12966] 3-Model Speculative Decoding - arXiv",
+        "[exa] Speculative Decoding with CTC-based Draft Model for LLM ... - arXiv",
+        "[tavily] Speculative decoding speeds up large language model inference using a smaller draft model to predict tokens, which a larger model verifies. It reduces"
+      ],
+      "latency": 11.112148523330688
+    },
+    {
+      "iteration": 12,
+      "category": "Production",
+      "topic": "Continuous batching: optimizing throughput for concurrent requests",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Continuous batching from first principles - Hugging Face",
+        "[exa] A practical guide to continuous batching for LLM inference | Hivenet",
+        "[tavily] Continuous batching optimizes throughput for concurrent requests by dynamically scheduling new requests into ongoing batches, maximizing GPU utilizati"
+      ],
+      "latency": 10.553143501281738
+    },
+    {
+      "iteration": 13,
+      "category": "Emerging",
+      "topic": "Constitutional AI: building value-aligned language models",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] ITERALIGN: Iterative constitutional alignment of large language ...",
+        "[exa] What is Constitutional AI? Principles and Alignment - Ultralytics",
+        "[tavily] Constitutional AI aligns language models with ethical principles, making AI behavior more transparent and aligned with public values. It uses a consti"
+      ],
+      "latency": 11.611888647079468
+    },
+    {
+      "iteration": 14,
+      "category": "Emerging",
+      "topic": "Chain-of-verification: self-checking for reduced hallucination",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] Chain-of-Verification (COVE) Reduces Hallucination in ... - YouTube",
+        "[exa] Chain-of-Verification Reduces Hallucination in Large Language Models - ACL Anthology",
+        "[tavily] Chain-of-Verification reduces hallucinations in large language models by having the model verify its own responses through a series of fact-checking q"
+      ],
+      "latency": 13.443179845809937
+    },
+    {
+      "iteration": 15,
+      "category": "Emerging",
+      "topic": "Retrieval-augmented thought: combining reasoning with retrieval",
+      "sources": 13,
+      "vectors": 10,
+      "findings": [
+        "[exa] RAT \u2014 Retrieval Augmented Thoughts | by Cobus Greyling - Medium",
+        "[exa] What is Retrieval Augmented Thinking (RAT) and how does it work?",
+        "[perplexity] **Retrieval-Augmented Thought (RAT)** extends **Retrieval-Augmented Generation (RAG)** by integrating retrieval with iterative reasoning processes, such as chain-of-thought (CoT), where an LLM retriev..."
+      ],
+      "latency": 17.895150661468506
+    }
+  ]
+}
