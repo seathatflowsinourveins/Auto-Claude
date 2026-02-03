@@ -1,0 +1,23 @@
+{
+  "exa": {
+    "status": "OK",
+    "operations": 3
+  },
+  "tavily": {
+    "status": "OK",
+    "operations": 3
+  },
+  "jina": {
+    "status": "OK",
+    "operations": 4
+  },
+  "perplexity": {
+    "status": "OK",
+    "operations": 2
+  },
+  "context7": {
+    "status": "OK",
+    "operations": 1,
+    "note": "MCP-based access recommended"
+  }
+}
