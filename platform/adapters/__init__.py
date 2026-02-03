@@ -74,10 +74,22 @@ def get_llm_reasoners_adapter():
 
 
 def get_evoagentx_adapter():
-    """Get EvoAgentX adapter if available."""
+    """Get EvoAgentX adapter if available.
+
+    Note: EvoAgentX adapter is deprecated - functionality moved to
+    quality_diversity_adapter.py. This function returns None for
+    backwards compatibility.
+    """
+    # DEPRECATED: evoagentx_adapter.py does not exist
+    # Use quality_diversity_adapter.py instead for evolutionary algorithms
+    return None
+
+
+def get_letta_adapter():
+    """Get V36 Letta adapter if available."""
     try:
-        from .evoagentx_adapter import EvoAgentXAdapter, EVOAGENTX_AVAILABLE
-        return EvoAgentXAdapter if EVOAGENTX_AVAILABLE else None
+        from .letta_adapter import LettaAdapter
+        return LettaAdapter
     except ImportError:
         return None
 
@@ -140,6 +152,109 @@ def get_temporal_sdk_client():
         return None
 
 
+# =============================================================================
+# V36 Architecture Adapters (New SDK Integrations)
+# =============================================================================
+
+def get_openai_agents_adapter():
+    """Get OpenAI Agents SDK adapter if available."""
+    try:
+        from .openai_agents_adapter import OpenAIAgentsAdapter, SWARM_AVAILABLE
+        return OpenAIAgentsAdapter
+    except ImportError:
+        return None
+
+
+def get_cognee_adapter():
+    """Get Cognee V36 adapter if available."""
+    try:
+        from .cognee_v36_adapter import CogneeV36Adapter, COGNEE_AVAILABLE
+        return CogneeV36Adapter
+    except ImportError:
+        return None
+
+
+def get_mcp_apps_adapter():
+    """Get MCP Apps adapter if available."""
+    try:
+        from .mcp_apps_adapter import MCPAppsAdapter
+        return MCPAppsAdapter
+    except ImportError:
+        return None
+
+
+def get_graphiti_adapter():
+    """Get Graphiti adapter if available."""
+    try:
+        from .graphiti_adapter import GraphitiAdapter, GRAPHITI_AVAILABLE
+        return GraphitiAdapter
+    except ImportError:
+        return None
+
+
+def get_strands_agents_adapter():
+    """Get AWS Strands Agents adapter if available."""
+    try:
+        from .strands_agents_adapter import StrandsAgentsAdapter, STRANDS_AVAILABLE
+        return StrandsAgentsAdapter
+    except ImportError:
+        return None
+
+
+def get_a2a_protocol_adapter():
+    """Get Google A2A Protocol adapter if available."""
+    try:
+        from .a2a_protocol_adapter import A2AProtocolAdapter, A2A_AVAILABLE
+        return A2AProtocolAdapter
+    except ImportError:
+        return None
+
+
+def get_ragflow_adapter():
+    """Get RAGFlow adapter if available."""
+    try:
+        from .ragflow_adapter import RAGFlowAdapter, RAGFLOW_AVAILABLE
+        return RAGFlowAdapter
+    except ImportError:
+        return None
+
+
+def get_simplemem_adapter():
+    """Get SimpleMem adapter if available."""
+    try:
+        from .simplemem_adapter import SimpleMemAdapter, SIMPLEMEM_AVAILABLE
+        return SimpleMemAdapter
+    except ImportError:
+        return None
+
+
+def get_ragatouille_adapter():
+    """Get RAGatouille adapter if available."""
+    try:
+        from .ragatouille_adapter import RAGatouilleAdapter, RAGATOUILLE_AVAILABLE
+        return RAGatouilleAdapter
+    except ImportError:
+        return None
+
+
+def get_braintrust_adapter():
+    """Get Braintrust adapter if available."""
+    try:
+        from .braintrust_adapter import BraintrustAdapter, BRAINTRUST_AVAILABLE
+        return BraintrustAdapter
+    except ImportError:
+        return None
+
+
+def get_portkey_gateway_adapter():
+    """Get Portkey Gateway adapter if available."""
+    try:
+        from .portkey_gateway_adapter import PortkeyGatewayAdapter, PORTKEY_AVAILABLE
+        return PortkeyGatewayAdapter
+    except ImportError:
+        return None
+
+
 __all__ = [
     # Core registration
     "ADAPTER_STATUS",
@@ -150,7 +265,7 @@ __all__ = [
     "get_langgraph_adapter",
     "get_mem0_adapter",
     "get_llm_reasoners_adapter",
-    "get_evoagentx_adapter",
+    "get_evoagentx_adapter",  # Deprecated, returns None
     "get_textgrad_adapter",
     "get_aider_adapter",
     # V1.0 SDK Integration adapters (Voyage foundation)
@@ -158,6 +273,22 @@ __all__ = [
     "get_dspy_voyage_retriever",
     "get_opik_tracer",
     "get_temporal_sdk_client",
+    # V36 Architecture adapters - Letta
+    "get_letta_adapter",
+    # V36 Architecture adapters - P0 Critical
+    "get_openai_agents_adapter",
+    "get_cognee_adapter",
+    "get_mcp_apps_adapter",
+    # V36 Architecture adapters - P1 Important
+    "get_graphiti_adapter",
+    "get_strands_agents_adapter",
+    "get_a2a_protocol_adapter",
+    "get_ragflow_adapter",
+    # V36 Architecture adapters - P2 Specialized
+    "get_simplemem_adapter",
+    "get_ragatouille_adapter",
+    "get_braintrust_adapter",
+    "get_portkey_gateway_adapter",
 ]
 
 

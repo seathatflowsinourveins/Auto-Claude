@@ -1,0 +1,211 @@
+# UNLEASH Platform Settings
+# V36 Architecture - Unified Configuration
+
+version: "36.0.0"
+architecture: "v36"
+
+# =============================================================================
+# SDK LAYER CONFIGURATION
+# =============================================================================
+sdk_layers:
+  L0_PROTOCOL:
+    description: "Protocol layer - LLM APIs, MCP, gateways"
+    adapters:
+      - anthropic
+      - litellm
+      - mcp-python-sdk
+      - mcp-apps          # NEW V36
+      - a2a-protocol      # NEW V36
+      - portkey-gateway   # NEW V36
+    priority_order: [anthropic, litellm, portkey-gateway]
+
+  L1_ORCHESTRATION:
+    description: "Agent orchestration and workflow"
+    adapters:
+      - temporal-python
+      - langgraph
+      - claude-flow
+      - openai-agents     # NEW V36
+      - strands-agents    # NEW V36
+    priority_order: [langgraph, openai-agents, temporal-python]
+
+  L2_MEMORY:
+    description: "Persistent memory and knowledge"
+    adapters:
+      - letta
+      - graphiti          # NEW V36 (replaces zep-ce)
+      - mem0
+      - simplemem         # NEW V36
+    priority_order: [letta, graphiti, mem0, simplemem]
+
+  L3_STRUCTURED:
+    description: "Structured output generation"
+    adapters:
+      - instructor
+      - baml
+      - outlines
+      - pydantic-ai
+    priority_order: [instructor, pydantic-ai]
+
+  L4_REASONING:
+    description: "Advanced reasoning and optimization"
+    adapters:
+      - dspy
+      - agot
+    priority_order: [dspy]
+
+  L5_OBSERVABILITY:
+    description: "Monitoring, tracing, evaluation"
+    adapters:
+      - langfuse
+      - opik
+      - arize-phoenix
+      - deepeval
+      - ragas
+      - promptfoo
+      - braintrust        # NEW V36
+    priority_order: [langfuse, opik, braintrust]
+
+  L6_SAFETY:
+    description: "Content moderation and guardrails"
+    adapters:
+      - guardrails-ai
+      - llm-guard
+      - nemo-guardrails
+    priority_order: [guardrails-ai]
+
+  L7_PROCESSING:
+    description: "Document processing and retrieval"
+    adapters:
+      - ast-grep
+      - crawl4ai
+      - ragflow           # NEW V36
+      - ragatouille       # NEW V36
+    priority_order: [ragflow, ragatouille, crawl4ai]
+
+  L8_KNOWLEDGE:
+    description: "Knowledge graph and discovery"
+    adapters:
+      - graphrag
+      - pyribs
+      - cognee            # NEW V36 (enhanced)
+    priority_order: [cognee, graphrag]
+
+# =============================================================================
+# ADAPTER REGISTRY SETTINGS
+# =============================================================================
+registry:
+  lazy_loading: true
+  health_check_interval_ms: 60000
+  circuit_breaker:
+    failure_threshold: 5
+    recovery_timeout_ms: 30000
+  fallback_enabled: true
+
+# =============================================================================
+# MCP SERVER CONFIGURATION
+# =============================================================================
+mcp:
+  config_file: "../.mcp.json"
+  servers:
+    core:
+      - claude-flow
+      - github
+      - filesystem
+      - memory
+    code_intelligence:
+      - lsp-python
+      - lsp-typescript
+      - code-index
+    memory:
+      - letta
+      - qdrant
+    research:
+      - firecrawl
+      - fetch
+      - context7
+
+# =============================================================================
+# MEMORY CONFIGURATION
+# =============================================================================
+memory:
+  config_file: "memory_config.yaml"
+  letta_config_file: "letta_config.yaml"
+  default_provider: "letta"
+  hnsw:
+    enabled: true
+    m: 48
+    ef_construction: 200
+    ef_search: 100
+
+# =============================================================================
+# SWARM CONFIGURATION
+# =============================================================================
+swarm:
+  topology: "hierarchical-mesh"
+  max_agents: 15
+  consensus: "raft"
+  memory_backend: "hybrid"
+
+# =============================================================================
+# HOOKS CONFIGURATION
+# =============================================================================
+hooks:
+  enabled: true
+  pre_edit: true
+  post_edit: true
+  pre_command: true
+  post_command: true
+  pre_task: true
+  post_task: true
+  session_restore: true
+
+# =============================================================================
+# LEARNING CONFIGURATION
+# =============================================================================
+learning:
+  enabled: true
+  auto_train: true
+  patterns:
+    - coordination
+    - optimization
+    - prediction
+  retention:
+    short_term: "24h"
+    long_term: "30d"
+
+# =============================================================================
+# SECURITY CONFIGURATION
+# =============================================================================
+security:
+  auto_scan: true
+  scan_on_edit: true
+  cve_check: true
+  threat_model: true
+  critical_cves:
+    - CVE-2025-64439  # LangGraph RCE (fixed in langgraph>=1.0.1)
+    - CVE-2025-68664  # LangChain Core (fixed in langchain-core>=1.2.5)
+
+# =============================================================================
+# PERFORMANCE CONFIGURATION
+# =============================================================================
+performance:
+  batch_size: 50
+  timeout_ms: 30000
+  retry_attempts: 3
+  connection_pool_size: 10
+  cache:
+    enabled: true
+    ttl_hours: 168
+    semantic_cache: true
+
+# =============================================================================
+# LOGGING CONFIGURATION
+# =============================================================================
+logging:
+  level: "INFO"
+  format: "structured"
+  include:
+    api_calls: false
+    memory_ops: true
+    metrics: true

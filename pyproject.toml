@@ -1,7 +1,7 @@
 [project]
 name = "unleash-platform"
-version = "1.0.0"
-description = "Unified SDK Integration Platform - 34 Best-of-Breed SDKs across 8 Layers"
+version = "36.0.0"
+description = "Unified SDK Integration Platform - V36 Architecture with 39 SDKs across 8 Layers"
 requires-python = ">=3.11"
 readme = "README.md"
 
@@ -15,16 +15,18 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-# Phase 2: Protocol Layer (Layer 0)
+# Layer 0: Protocol
 protocol = [
     "mcp>=0.1.0",
     "anthropic>=0.18.0",
     "openai>=1.12.0",
     "litellm>=1.30.0",
     "fastmcp>=0.1.0",
+    # V36 New
+    "portkey-ai>=1.0.0",          # Portkey Gateway
 ]
 
-# Phase 3: Orchestration Layer (Layer 1)
+# Layer 1: Orchestration
 # CVE-2025-64439: langgraph>=1.0.1, langgraph-checkpoint>=3.0.0 required for RCE fix
 orchestration = [
     "temporalio>=1.4.0",
@@ -32,24 +34,28 @@ orchestration = [
     "langgraph-checkpoint>=3.0.0",
     "crewai>=0.28.0",
     "pyautogen>=0.2.0",
+    # V36 New
+    "openai-swarm>=0.1.0",        # OpenAI Agents SDK
+    "strands-agents>=0.1.0",      # AWS Strands Agents
 ]
 
-# Phase 4: Memory Layer (Layer 2)
+# Layer 2: Memory
 memory = [
     "letta>=0.3.0",
-    "zep-python>=2.0.0",
     "mem0ai>=0.0.20",
+    # V36 New (replaces zep-python)
+    "graphiti-core>=0.5.0",       # Graphiti (replaces Zep CE)
 ]
 
-# Phase 5: Intelligence Layer (Layers 3-4)
+# Layers 3-4: Intelligence (Structured + Reasoning)
 intelligence = [
     "instructor>=1.0.0",
     "outlines>=0.0.40",
-    "pydantic-ai>=0.0.10",
-    "dspy-ai>=2.4.0",
+    "pydantic-ai>=1.51.0",        # Upgraded for agent features
+    "dspy-ai>=2.6.0",             # Upgraded for MIPROv2 optimizer
 ]
 
-# Phase 6: Observability Layer (Layer 5)
+# Layer 5: Observability
 observability = [
     "langfuse>=2.0.0",
     "opik>=1.0.0",
@@ -57,26 +63,36 @@ observability = [
     "deepeval>=0.21.0",
     "ragas>=0.1.0",
     "promptfoo>=0.1.0",
+    # V36 New
+    "braintrust>=0.1.0",          # Braintrust evaluation
 ]
 
-# Phase 7: Safety Layer (Layer 6)
+# Layer 6: Safety
 safety = [
     "guardrails-ai>=0.4.0",
     "llm-guard>=0.3.0",
     "nemoguardrails>=0.8.0",
 ]
 
-# Phase 8: Processing & Knowledge Layer (Layers 7-8)
+# Layers 7-8: Processing & Knowledge
 processing = [
     "aider-chat>=0.30.0",
     "crawl4ai>=0.3.0",
     "graphrag>=0.3.0",
     "ribs>=0.7.0",
+    # V36 New
+    "ragatouille>=0.1.0",         # ColBERT late interaction
+    "cognee>=0.1.0",              # Knowledge graph construction
 ]
 
-# All SDKs combined
-all = [
+# V36 Complete SDK Bundle
+v36 = [
     "unleash-platform[protocol,orchestration,memory,intelligence,observability,safety,processing]",
+]
+
+# All SDKs combined (alias for v36)
+all = [
+    "unleash-platform[v36]",
 ]
 
 # Development dependencies
