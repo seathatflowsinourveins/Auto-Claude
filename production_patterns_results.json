@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-02-02T23:29:50.205240",
+  "summary": {
+    "total_tests": 11,
+    "passed": 9,
+    "success_rate": 0.8181818181818182
+  },
+  "results": [
+    {
+      "pattern": "langchain_rag",
+      "tests": [],
+      "status": "FAIL",
+      "error": "No module named 'langchain_huggingface'"
+    },
+    {
+      "pattern": "langgraph_agent",
+      "tests": [
+        {
+          "name": "state_definition",
+          "success": true,
+          "latency_ms": 0.09894371032714844
+        },
+        {
+          "name": "tool_nodes",
+          "success": true,
+          "latency_ms": 0.0040531158447265625
+        }
+      ],
+      "status": "FAIL",
+      "error": "Recursion limit of 10000 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+    },
+    {
+      "pattern": "multi_source_research",
+      "tests": [
+        {
+          "name": "exa_search",
+          "success": true,
+          "latency_ms": 846.1637496948242,
+          "count": 3
+        },
+        {
+          "name": "tavily_search",
+          "success": true,
+          "latency_ms": 2231.5664291381836,
+          "count": 3
+        },
+        {
+          "name": "jina_rerank",
+          "success": true,
+          "latency_ms": 674.7093200683594
+        }
+      ],
+      "status": "PASS",
+      "tests_passed": 3,
+      "total_sources": 6
+    },
+    {
+      "pattern": "hybrid_search",
+      "tests": [
+        {
+          "name": "collection_create",
+          "success": true,
+          "latency_ms": 7.361173629760742
+        },
+        {
+          "name": "insert_docs",
+          "success": true,
+          "latency_ms": 2.4652481079101562
+        },
+        {
+          "name": "hybrid_search",
+          "success": true,
+          "latency_ms": 1.1920928955078125
+        }
+      ],
+      "status": "PASS",
+      "tests_passed": 3
+    },
+    {
+      "pattern": "streaming_response",
+      "tests": [
+        {
+          "name": "stream_init",
+          "success": true,
+          "latency_ms": 785.9342098236084
+        },
+        {
+          "name": "stream_collect",
+          "success": true,
+          "latency_ms": 3618.685722351074
+        },
+        {
+          "name": "verify_complete",
+          "success": true,
+          "latency_ms": 0.000476837158203125
+        }
+      ],
+      "status": "PASS",
+      "tests_passed": 3
+    }
+  ]
+}
