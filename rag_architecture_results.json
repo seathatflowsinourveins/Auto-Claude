@@ -1,0 +1,324 @@
+{
+  "timestamp": "2026-02-02T23:41:29.937058",
+  "summary": {
+    "total_topics": 15,
+    "successful": 14,
+    "total_sources": 135,
+    "total_embedded": 135
+  },
+  "results": [
+    {
+      "iteration": 1,
+      "category": "Core Architecture",
+      "topic": "Naive RAG vs Advanced RAG vs Modular RAG architecture comparison",
+      "timestamp": "2026-02-02T23:39:51.152648",
+      "sources_count": 10,
+      "findings": [
+        "[exa] The 3 types of RAG models: Naive RAG, Modular RAG ... - LinkedIn",
+        "[exa] LLM RAG Paradigms: Naive RAG, Advanced RAG & Modular RAG",
+        "[exa] Naive RAG vs. advanced RAG: What are the differences? - Meilisearch",
+        "[tavily] Naive RAG is simple and quick, while Advanced RAG enhances accuracy with real-time data. Modular RAG offers flexibility and scalability for complex applications.",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "While naive RAG is straightforward and quick, modular RAG\u2014often built with frameworks such as LangChain\u2014provides enhanced flexibility, scalability and performance, making it more suitable for intricat",
+        "A monumental jump in accuracy: Thanks to extra layers, such as reranking, filtering, and query rewriting, advanced RAG generates responses that meet the user\u2019s needs much better than naive RAG respons",
+        "Advanced RAG  \nAdvanced RAG builds upon the naive approach by incorporating more sophisticated techniques for retrieving and integrating information. It is designed to enhance the accuracy and relevan"
+      ],
+      "latency_s": 8.833605289459229
+    },
+    {
+      "iteration": 2,
+      "category": "Ingestion",
+      "topic": "Chunking strategies: fixed-size vs semantic vs agentic chunking production patterns",
+      "timestamp": "2026-02-02T23:40:00.491096",
+      "sources_count": 10,
+      "findings": [
+        "[exa] Chunks, Schemata, and Retrieval Structures: Past and Current Computational Models",
+        "[exa] 11_03_24_LPLTAR_AP_finalversion",
+        "[exa] What's in a Name? The Multiple Meanings of \u201cChunk\u201d and \u201cChunking\u201d",
+        "[tavily] Fixed-size chunking divides text into uniform segments, often by tokens. Semantic chunking segments based on meaning, preserving coherence. Agentic chunking adapts dynamically based on context and use",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "I tested 7 chunking strategies on production RAG. Here's what failed and what actually won: \u2192 Fixed-size: Fast but dumb. Splits sentences in half. Prototype only. \u2192 Recursive: The safe default. 80% of",
+        "## Features tested:\n\n Character-based Chunking: Splitting text into fixed-size chunks manually or using `CharacterTextSplitter`.\n Recursive Character Chunking: Handling large documents with recursive ",
+        "## Bottom Line\n\nChunking strategies are the backbone of efficient RAG systems. Here's a quick guide to help you choose your chunking strategy:\n\n For complex documents with varied content: Start with s"
+      ],
+      "latency_s": 5.6483612060546875
+    },
+    {
+      "iteration": 3,
+      "category": "Embeddings",
+      "topic": "Embedding model selection: OpenAI vs Cohere vs Jina vs BGE benchmarks 2026",
+      "timestamp": "2026-02-02T23:40:06.653168",
+      "sources_count": 10,
+      "findings": [
+        "[exa] MTEB Scores & Leaderboard (Cohere, OpenAI, BGE) - Ailog",
+        "[exa] Embedding Models Comparison 2026: OpenAI vs Cohere ...",
+        "[exa] Embedding Model Leaderboard - For RAG and semantic search",
+        "[tavily] In 2026, the top embedding models include BGE-M3 for versatility, Cohere embed-v4.0 for enterprise needs, and OpenAI text-embedding-3-large for high accuracy. Self-hosted models like BGE-M3 offer lowe",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "Embedding Models Comparison 2026: OpenAI vs Cohere vs Voyage vs BGE | Reintech media\n[![Reintech logo]] \n[Home] [Sign in] [Contact us] \n[![burger menu icon]] \n* [Sign in] \n* [Contact us] \n* [Home] \n* ",
+        "10 Best Embedding Models 2026: Complete Comparison Guide - Openxcell\nAI/ML\n# 10 Best Embedding Models Powering AI Systems in 2026\n[Girish Vidhani] \n09 January 2026\n![calender] **Last updated:**January",
+        "13 Best Embedding Models in 2026: OpenAI vs Voyage AI vs Ollama | Complete Guide + Pricing &amp; Performance\n\u00d7\ud83e\udde0Ready to try Elephas?\nBuild your AI-powered knowledge assistant. Start for free on Mac.\n["
+      ],
+      "latency_s": 6.699548006057739
+    },
+    {
+      "iteration": 4,
+      "category": "Storage",
+      "error": "'charmap' codec can't encode character '\\U0001f539' in position 30: character maps to <undefined>"
+    },
+    {
+      "iteration": 5,
+      "category": "Retrieval",
+      "topic": "Hybrid search: combining BM25 keyword with dense vector retrieval",
+      "timestamp": "2026-02-02T23:40:21.118771",
+      "sources_count": 10,
+      "findings": [
+        "[exa] Hybrid Search Explained | Weaviate",
+        "[exa] Building effective hybrid search in OpenSearch: Techniques and ...",
+        "[exa] Dense vs Sparse Retrieval: Mastering FAISS, BM25, and Hybrid ...",
+        "[tavily] Hybrid search combines BM25 keyword matching with dense vector retrieval for improved recall. It uses both exact keyword and semantic similarity to find the best results. Fusion techniques like Recipr",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "To implement BM25 alongside vector search, you need to combine traditional keyword-based ranking with modern semantic search techniques. Start by running both search methods independently and then mer",
+        "Hybrid Retrieval: BM25 vs. Dense Embeddings \u2014Smarter Search using ElasticSearch + HuggingFace | by Dinesh karthik | Medium\n[Sitemap] \n[Open in app] \nSign up\n[Sign in] \n[Medium Logo] \n[\nWrite\n] \n[\nSear",
+        "## Hybrid Search: Best of Both Worlds\n\nHybrid search combines sparse (keyword) and dense (semantic) retrieval, capturing both exact matches and semantic similarity. [...] from typing import List, Tupl"
+      ],
+      "latency_s": 4.816623687744141
+    },
+    {
+      "iteration": 6,
+      "category": "Query Processing",
+      "topic": "Query transformation: HyDE vs query expansion vs multi-query retrieval",
+      "timestamp": "2026-02-02T23:40:26.437130",
+      "sources_count": 10,
+      "findings": [
+        "[exa] RAG Query Augmentation | Expansion & Transformation",
+        "[exa] HyDE with hybrid search approaches - API",
+        "[exa] Advanced RAG \u2014 Improving retrieval using Hypothetical Document ...",
+        "[tavily] HyDE improves retrieval by generating hypothetical documents to bridge semantic gaps; query expansion enhances retrieval by adding relevant terms; multi-query retrieval expands search scope through mu",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "The GEO Community\nBlog post\n# Query Rewriting and Multi-Query Retrieval: The Fastest Way to Improve Recall in RAG\nUse query expansion patterns to improve recall without rebuilding embeddings.\nExperime",
+        "What is Query Expansion?\n\nQuery expansion is a technique used to improve the accuracy of information retrieval systems by enhancing the original query with additional, contextually relevant terms or p",
+        "#### Retrieval with Expanded Queries.\n\nIn query expansion, Information Retrieval (IR) integrates the initial query with generated augmentations using various strategies. For sparse retrieval, the comm"
+      ],
+      "latency_s": 5.714193344116211
+    },
+    {
+      "iteration": 7,
+      "category": "Reranking",
+      "topic": "Reranking strategies: cross-encoder vs ColBERT vs Cohere rerank comparison",
+      "timestamp": "2026-02-02T23:40:32.667439",
+      "sources_count": 10,
+      "findings": [
+        "[exa] Reranking Models Guide 2025: 5 Types That Boost Search Results ...",
+        "[exa] Reranking for RAG: +40% Accuracy with Cross-Encoders (2025 Guide)",
+        "[exa] A Thorough Comparison of Cross-Encoders and LLMs for Reranking SPLADE",
+        "[tavily] Cross-encoders offer high precision but are costly; ColBERT provides a balance of relevance and efficiency; LLM-based rerankers adapt dynamically but incur high latency and expense.",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "[2403.10407] A Thorough Comparison of Cross-Encoders and LLMs for Reranking SPLADE\n[Skip to main content] \n[![Cornell University]] \nWe gratefully acknowledge support from the Simons Foundation,[member",
+        "Your choice ultimately hinges on your constraints and goals. Cross-encoders excel when precision and subtlety matter most, but only if you can handle their runtime cost on a small, curated set. ColBER",
+        "Reranking for RAG: +40% Accuracy with Cross-Encoders (2025 Guide) | Ailog RAG\nMur\n[All guides] \nEN[Launch App] \n6.RerankingAdvanced\n# Reranking for RAG: +40% Accuracy with Cross-Encoders (2025 Guide)\n"
+      ],
+      "latency_s": 5.531329870223999
+    },
+    {
+      "iteration": 8,
+      "category": "Context",
+      "topic": "Context compression and summarization for long document RAG",
+      "timestamp": "2026-02-02T23:40:38.709489",
+      "sources_count": 5,
+      "findings": [
+        "[exa] SARA: Selective and Adaptive Retrieval-augmented Generation with Context Compression",
+        "[exa] [PDF] Efficient Long Context Language Model Retrieval with Compression",
+        "[exa] BRIEF-Pro: Universal Context Compression with Short-to-Long Synthesis for Fast and Accurate Multi-Hop Reasoning",
+        "[tavily] Error: 'NoneType' object is not subscriptable",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 5,
+      "dimensions": 1024,
+      "reranked_top": [
+        "[2405.13792] xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token\n[Skip to main content] \n[![Cornell University]] \nWe gratefully acknowledge support from the Simons Foun",
+        "[2510.13799] BRIEF-Pro: Universal Context Compression with Short-to-Long Synthesis for Fast and Accurate Multi-Hop Reasoning\n[Skip to main content] \n[![Cornell University]] \nWe gratefully acknowledge ",
+        "[2507.05633] SARA: Selective and Adaptive Retrieval-augmented Generation with Context Compression\n[Skip to main content] \n[![Cornell University]] \nIn just 5 minutes help us improve arXiv:\n[Annual Glob"
+      ],
+      "latency_s": 5.158182859420776
+    },
+    {
+      "iteration": 9,
+      "category": "Self-Improvement",
+      "topic": "Self-RAG and Corrective RAG implementation patterns",
+      "timestamp": "2026-02-02T23:40:44.370010",
+      "sources_count": 10,
+      "findings": [
+        "[exa] Self-Rag: A Guide With LangGraph Implementation | DataCamp",
+        "[exa] Building an Effective RAG Pipeline: A Guide to Integrating Self-RAG, Corrective RAG, and Adaptive\u2026",
+        "[exa] \ud83d\udee0\ufe0f Corrective RAG with LangGraph: Building a Smarter, Self-Correcting LLM Pipeline",
+        "[tavily] Self-RAG and Corrective RAG both enhance RAG by refining responses; Self-RAG uses self-reflection for iterative improvement, while Corrective RAG fact-checks retrieved documents to boost accuracy.",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "Corrective RAG (CRAG)\n\n## 7. Self-RAG\n\nSelf-RAG introduces a self-retrieval mechanism, allowing the model to autonomously generate retrieval queries during the generation process. Unlike traditional R",
+        "So let\u2019s stop pretending basic RAG is a silver bullet. You need grown-up patterns. Three keep coming up in real deployments: GraphRAG, Corrective RAG (CRAG), and Self-RAG. Different instincts. Differe",
+        "Building an Effective RAG Pipeline: A Guide to Integrating Self-RAG, Corrective RAG, and Adaptive RAG | by kirouane Ayoub | GoPenAI\n[Sitemap] \n[Open in app] \nSign up\n[Sign in] \n[Medium Logo] \n[\nWrite\n"
+      ],
+      "latency_s": 6.037403106689453
+    },
+    {
+      "iteration": 10,
+      "category": "Graph RAG",
+      "topic": "GraphRAG: combining knowledge graphs with vector retrieval",
+      "timestamp": "2026-02-02T23:40:50.909045",
+      "sources_count": 10,
+      "findings": [
+        "[exa] Combining Knowledge Graphs with Vector Search",
+        "[exa] [2408.04948] HybridRAG: Integrating Knowledge Graphs ...",
+        "[exa] HybridRAG and Why Combine Vector Embeddings with ...",
+        "[tavily] GraphRAG combines knowledge graphs with vector retrieval to enhance NLP tasks, offering more accurate context-aware responses. It integrates structured information from knowledge graphs with language ",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "Sitemap\n\nOpen in app\n\nSign in\n\nSign in\n\nMastodon\n\n# Complete GraphRAG Tutorial: Combining Knowledge Graphs with Vector Search\n\n## GraphRAG is a Retrieval-Augmented Generation system that combines know",
+        "Complete GraphRAG Tutorial: Combining Knowledge Graphs with Vector Search | by Vishal Mysore | Dec, 2025 | Medium\n[Sitemap] \n[Open in app] \nSign up\n[Sign in] \n[Medium Logo] \n[\nWrite\n] \n[\nSearch\n] \nSig",
+        "\u200d\n\n# Introducing GraphRAG\n\nFundamentally, GraphRAG is a new retrieval approach that uses knowledge graphs in addition to vector search in a basic RAG architecture. Because of it\u2019s structure, it can in"
+      ],
+      "latency_s": 5.766628265380859
+    },
+    {
+      "iteration": 11,
+      "category": "Evaluation",
+      "topic": "RAG evaluation metrics: faithfulness, relevance, answer correctness",
+      "timestamp": "2026-02-02T23:40:57.190779",
+      "sources_count": 10,
+      "findings": [
+        "[exa] RAG Evaluation Metrics: Assessing Answer Relevancy, Faithfulness ...",
+        "[exa] RAG Evaluation Metrics Explained: A Complete Guide with Examples",
+        "[exa] RAG Evaluation in Practice: Faithfulness, Context Recall & Answer ...",
+        "[tavily] RAG evaluation metrics include faithfulness, relevance, and answer correctness. Faithfulness checks if the answer is based on retrieved context. Relevance measures how relevant the answer is to the in",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "Key metrics for evaluating RAG answer quality include precision, recall, and faithfulness. Precision measures the correctness of the information provided, recall assesses the completeness of relevant ",
+        "3. RAG Evaluation We focus on the following metrics from the RAGAS frame-work (Es et al., 2023). Higher value is better for all of them.\n\u2022 Faithfulness (FaiFul): Checks if the (generated) state-ments ",
+        "Kinde RAG Evaluation in Practice: Faithfulness, Context Recall & Answer Relevancy\nWe use cookies to ensure you get the best experience on our website.\nConsent banner optionsSettings\nAccept necessaryAc"
+      ],
+      "latency_s": 6.62336802482605
+    },
+    {
+      "iteration": 12,
+      "category": "Caching",
+      "topic": "RAG caching strategies: semantic cache vs query cache patterns",
+      "timestamp": "2026-02-02T23:41:04.329142",
+      "sources_count": 10,
+      "findings": [
+        "[exa] Caching Patterns in Retrieval Augmented Generation - Creospan",
+        "[exa] Semantic Cache: The Smartest Way to Speed Up RAG (Without ...",
+        "[exa] Smarter RAG: Cut Costs and Latency with Intelligent Caching",
+        "[tavily] Semantic caching improves RAG performance by reusing answers for similar questions, but it risks incorrect reuse and hallucinations. Exact caching is safer for authoritative answers. Use a two-tier ca",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "### Semantic cache in RAG\n\nRetrieval-Augmented Generation (RAG) systems use semantic caching to improve performance and reduce costs. When a user submits a query, the system first checks the semantic ",
+        "Semantic Cache: The Smartest Way to Speed Up RAG (Without More GPUs)\n* [Facebook] \n* [Twitter] \n* [LinkedIn] \n* [Email us] \n# Semantic Cache: The Smartest Way to Speed Up RAG (Without More GPUs)\nByAnk",
+        "Semantic caching is acceptable when:\n\n questions are FAQs\n answers are generic\n correctness tolerance is high\n fallback to exact cache exists\n The safe pattern is two-tier caching:\n Exact cache (norma"
+      ],
+      "latency_s": 5.108168125152588
+    },
+    {
+      "iteration": 13,
+      "category": "Multi-Modal",
+      "topic": "Multi-modal RAG: images, tables, and code in retrieval",
+      "timestamp": "2026-02-02T23:41:09.951126",
+      "sources_count": 10,
+      "findings": [
+        "[exa] Multimodal RAG: A Hands-On Guide to Learning from Documents",
+        "[exa] How to build a Multi-Modal RAG system that finally understands ...",
+        "[exa] Building a Multimodal RAG That Responds with Text, Images, and ...",
+        "[tavily] Multimodal RAG systems integrate text, images, tables, and code for comprehensive information retrieval; they use embeddings and vector databases for efficient data storage and retrieval. Key models i",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "Building a Multimodal RAG That Responds with Text, Images, and Tables from Sources | Towards Data Science\n[![Towards Data Science]] \nPublish AI, ML &amp; data-science insights to a global community of",
+        "How to build a Multi-Modal RAG system that finally understands images, tables, and text? | by Vivedha Elango | Nov, 2025 | Level Up Coding\n[Sitemap] \n[Open in app] \nSign up\n[Sign in] \n[Medium Logo] \n[",
+        "Multimodal Retrieval-Augmented Generation: Unified Information Processing Across Text, Image, Table, and Video Modalities - ACL Anthology\n## [Multimodal Retrieval-Augmented Generation: Unified Informa"
+      ],
+      "latency_s": 5.949583053588867
+    },
+    {
+      "iteration": 14,
+      "category": "Observability",
+      "topic": "RAG observability: tracing, logging, and debugging pipelines",
+      "timestamp": "2026-02-02T23:41:16.410293",
+      "sources_count": 10,
+      "findings": [
+        "[exa] The RAG Debugging Playbook: A Step-by-Step Guide to Trace ...",
+        "[exa] A Complete Guide to Tracing and Evaluating RAG Pipelines",
+        "[exa] Best Tools and Techniques for Debugging RAG Pipeline Production ...",
+        "[tavily] Observability in RAG pipelines involves tracing, logging, and debugging tools like Traceloop and Langfuse for detailed visibility and systematic evaluation. Monitoring tools like Prometheus and Grafan",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "### Distributed Tracing for Complete Pipeline Visibility\n\nRAG observability with distributed tracing captures execution across all pipeline stages. Each retrieval operation, reranking decision, and ge",
+        "Day 27: RAG Observability: Monitoring and Debugging Production Systems\nAgree & Join LinkedIn\nBy clicking Continue to join or sign in, you agree to LinkedIn\u2019s[User Agreement],[Privacy Policy], and[Cook",
+        "## Conclusion\n\nFinally, efficiently debugging RAG pipelines necessitates a comprehensive set of tools and procedures. In my perspective, utilizing logging technologies like Logstash and Fluentd, monit"
+      ],
+      "latency_s": 7.664493083953857
+    },
+    {
+      "iteration": 15,
+      "category": "Security",
+      "topic": "RAG security: prompt injection, data poisoning, access control",
+      "timestamp": "2026-02-02T23:41:24.585589",
+      "sources_count": 10,
+      "findings": [
+        "[exa] The Embedded Threat in Your LLM: Poisoning RAG Pipelines via ...",
+        "[exa] RAG Data Poisoning: Key Concepts Explained - Promptfoo",
+        "[exa] RAGPoison: Persistent Prompt Injection via Poisoned Vector ...",
+        "[tavily] RAG systems face risks from prompt injection and data poisoning, compromising security and accuracy. Access controls can be bypassed, leading to unauthorized data access. Mitigation strategies include",
+        "[perplexity] Error: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "embedded": 10,
+      "dimensions": 1024,
+      "reranked_top": [
+        "GitHub - prompt-security/RAG\\_Poisoning\\_POC: Stealthy Prompt Injection and Poisoning in RAG Systems via Vector Database Embeddings\n[Skip to content] \n## Navigation Menu\nToggle navigation\n[] \n[Sign in",
+        "RAGPoison: Persistent Prompt Injection via Poisoned Vector Databases | Snyk Labs\n[Skip to main content] \n![] \nSecurity Labs\nAugust 18, 2025\n# RAGPoison: Persistent Prompt Injection via Poisoned Vector",
+        "Security Risks: Data poisoning attacks can undermine the security of RAG systems, leading to the generation of incorrect or misleading responses that could be exploited by malicious actors.\n Access Co"
+      ],
+      "latency_s": 5.351033687591553
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+{
+  "timestamp": "2026-02-02T23:46:50.370377",
+  "summary": {
+    "total": 18,
+    "successful": 18,
+    "sources": 243,
+    "indexed": 180,
+    "insights": 90
+  },
+  "results": [
+    {
+      "iteration": 1,
+      "category": "Agentic RAG",
+      "topic": "Agentic RAG: routing queries to specialized retrievers with LangGraph",
+      "timestamp": "2026-02-02T23:42:46.382227",
+      "sources": 10,
+      "findings": [
+        "[exa] Building a Multi-Agent RAG System with LangGraph - Wesley Huber",
+        "[exa] Part 2: Building an Agentic RAG Workflow with Query Router Using ...",
+        "[exa] Built Agentic RAG System with LangGraph: A Step-by-Step Guide",
+        "[exa] Build a custom RAG agent with LangGraph - Docs by LangChain",
+        "[exa] Agentic RAG - Docs by LangChain"
+      ],
+      "insights": [
+        "[exa-highlight] The architecture has three key components:\n1. **The Supervisor Agent (Router)**\nThis is the traffic controller. When a query comes in, the supervisor ",
+        "[exa-highlight] Getting Started\nIf you want to build something similar:\nTake LangChain Academy\u2019s courses\u200a\u2014\u200aEspecially the agent orchestration track\nStart with the sup",
+        "[exa-highlight] In this blog post, we\u2019ve explored the concept of an Agentic RAG Workflow with a Query Router, implemented using LangGraph. By incorporating an intelli",
+        "[exa-highlight] To address the limitations of our basic RAG pipeline, we\u2019ll now build an agentic RAG workflow that can intelligently route queries to the most appropr",
+        "[exa-highlight] Instead of a single LLM running a RAG pipeline, an agentic system coordinates multiple decision-making steps: routing, retrieval, validation, and reas"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 6.120516538619995
+    },
+    {
+      "iteration": 2,
+      "category": "Tool Augmentation",
+      "topic": "Tool-augmented RAG: when to retrieve vs when to call external APIs",
+      "timestamp": "2026-02-02T23:42:52.809078",
+      "sources": 10,
+      "findings": [
+        "[exa] Tool-Augmented Generation (TAG) vs. Retrieval ... - GoPenAI",
+        "[exa] RAG vs Tools: When to Use Each for Data Retrieval - LinkedIn",
+        "[exa] A real-world test of RAG vs. Direct API calls - SolDevelo",
+        "[exa] RAG vs Tool Use for LLMs: The Ultimate Guide to Choosing the ...",
+        "[exa] Beyond Semantic Similarity: Reducing Unnecessary API Calls via Behavior-Aligned Retriever"
+      ],
+      "insights": [
+        "[exa-highlight] |-------------------------------------------|-------------|\n| Large knowledge base search | RAG |\n| Real-time data, APIs, or tool execution | TAG |\n| ",
+        "[exa-highlight] ### Real-World Applications\n### RAG:\n* Customer support bots with product manual database\n* Legal document Q&A\n* Academic tutoring tools### TAG:\n* Fin",
+        "[exa-highlight] This title was summarized by AI from the post below.\n[![View profile for Allen Helton]] \n[Allen Helton] \n3mo\n* [Report this post] \nWhen should you rel",
+        "[exa-highlight] With tools, you're making direct API calls or DB queries to get the exact data you want. Nothing semantic about it.\nThis makes tools an ideal use case",
+        "[exa-highlight] the job**. Do you go with the sophisticated, multi-step pipeline, or does a simpler, more direct approach hold the answer? Should you use Retrieval-Au"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 5.5818705558776855
+    },
+    {
+      "iteration": 3,
+      "category": "ReAct RAG",
+      "topic": "ReAct pattern with RAG: reasoning and acting with retrieved context",
+      "timestamp": "2026-02-02T23:42:58.695865",
+      "sources": 10,
+      "findings": [
+        "[exa] ReAct - Prompt Engineering Guide",
+        "[exa] Implementing ReAct Agentic Pattern From Scratch",
+        "[exa] ReAct (Reasoning and Acting) Prompting - Latitude Docs",
+        "[exa] ReAct Design Pattern: Empowering AI with Reasoning and Action in ...",
+        "[exa] What is a ReAct Agent? | IBM"
+      ],
+      "insights": [
+        "[exa-highlight] ReAct is a general paradigm that combines reasoning and acting with LLMs. ReAct prompts LLMs to generate verbal reasoning traces and actions for a tas",
+        "[exa-highlight] [Prompting Techniques] \nReAct\nCopy page\n# ReAct Prompting\n[Yao et al., 2022(opens in a new tab)] introduced a framework named ReAct where LLMs are use",
+        "[exa-highlight] ReAct (short for Reasoning and Acting) is a paradigm for AI agent design where an agent uses chain-of-thought reasoning and tool-using actions in aggr",
+        "[exa-highlight] More specifically, under the hood, many such frameworks use the ReAct (Reasoning and Acting) pattern to let large language models (LLMs) think through",
+        "[exa-highlight] Get a prompt\n] \n* [\nCreate a prompt\n] \n* [\nGet all prompts\n] \n* [\nCreate a log\n] \n* [\nAnnotate log (HITL)\n] \n* [\nPause a Tool Execution\n] \n* [\nRAG ret"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 4.443820238113403
+    },
+    {
+      "iteration": 4,
+      "category": "Agent Memory",
+      "topic": "Long-term memory for agents: episodic vs semantic vs procedural memory",
+      "timestamp": "2026-02-02T23:43:03.446162",
+      "sources": 10,
+      "findings": [
+        "[exa] Position: Episodic Memory is the Missing Piece for Long-Term LLM Agents",
+        "[exa] Computer Science > Artificial Intelligence",
+        "[exa] [PDF] Position: Episodic Memory is the Missing Piece for Long-Term LLM Agents | Semantic Scholar",
+        "[exa] Memory in the Age of AI Agents\n     \n      (2512.13564v1)",
+        "[exa] A Machine with Short-Term, Episodic, and Semantic Memory Systems"
+      ],
+      "insights": [
+        "[exa-highlight] systems that share some, but not all, properties of episodic\nmemory are 1) procedural memory (Milner, 1962; Cohen\n& Squire, 1980), which allows for lo",
+        "[exa-highlight] Long-term storage. In humans and other animals, episodic\nmemory functions as a form of long-term memory, capable\nTable 1. Properties of episodic memor",
+        "[exa-highlight] > As Large Language Models (LLMs) evolve from text-completion tools into fully fledged agents operating in dynamic environments, they must address the",
+        "[exa-highlight] Inspired by this, we present an episodic memory framework for LLM agents, centered around five key properties of episodic memory that underlie adaptiv",
+        "[exa-highlight] Episodic and semantic memory are classically thought to play distinct roles: episodic memory encodes unique experiences, while semantic memory general"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 4.519454479217529
+    },
+    {
+      "iteration": 5,
+      "category": "Memory Systems",
+      "topic": "Mem0 vs Letta vs MemGPT: production memory architectures comparison",
+      "timestamp": "2026-02-02T23:43:08.270419",
+      "sources": 10,
+      "findings": [
+        "[exa] MemGPT/Letta vs memory tools: context management vs storage",
+        "[exa] AI Memory Systems Benchmark: Mem0 vs OpenAI vs LangMem 2025",
+        "[exa] 5 Open-Source Frameworks for Giving Memory to AI Agents",
+        "[exa] Benchmarking AI Agent Memory: Is a Filesystem All You Need? - Letta",
+        "[exa] Survey of AI Agent Memory Frameworks | Graphlit Blog"
+      ],
+      "insights": [
+        "[exa-highlight] [Letta] often gets compared to what I would call \u201cmemory tools\u201d - tools that save/retrieve memory as tools that can be attached to any agent framework",
+        "[exa-highlight] # MemGPT/Letta vs memory tools: context management vs storage\nThis title was summarized by AI from the post below.\n[![View profile for Sarah Wooders, ",
+        "[exa-highlight] Here's where it gets interesting.**Mem0 leads overall**, striking the best balance across tasks. Its graph-enhanced variant consumes more tokens but d",
+        "[exa-highlight] Most AI agents forget everything very soon. I benchmarked OpenAI Memory, LangMem, MemGPT, and Mem0 in real production environments. One system deliver",
+        "[exa-highlight] 3. Mem0 is an intelligent memory layer for AI agents to actively learn from and adapt to user interactions over time. It combines LLMs with vector sto"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 6.174420595169067
+    },
+    {
+      "iteration": 6,
+      "category": "Conversation Memory",
+      "topic": "Conversation memory management: sliding window vs summarization vs compression",
+      "timestamp": "2026-02-02T23:43:14.758311",
+      "sources": 15,
+      "findings": [
+        "[exa] LLM Chat History Summarization Guide October 2025 - Mem0",
+        "[exa] Memory overview - Docs by LangChain",
+        "[exa] Overcoming Memory Limitations in Generative AI: Managing Context ...",
+        "[exa] Context Window Management Strategies - ApX Machine Learning",
+        "[exa] Regarding working with the API, who's had success here using ..."
+      ],
+      "insights": [
+        "[exa-highlight] ### What's the difference between chat history summarization and memory formation?\nSummarization compresses entire conversations into shorter text, of",
+        "[exa-highlight] Traditional summarization compresses conversations into shorter text while trying to preserve key information. The SummarizingTokenWindowChatMemory ap",
+        "[exa-highlight] ] \nLong-term memory",
+        "[exa-highlight] ] \nEpisodic memory",
+        "[exa-highlight] **What**: Split long inputs into smaller segments. Use*sliding windows*with overlapping tokens to preserve continuity.\n**Example**: A 10K-token docume"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 12.579016923904419
+    },
+    {
+      "iteration": 7,
+      "category": "Multi-Agent",
+      "topic": "Multi-agent orchestration: CrewAI vs AutoGen vs LangGraph comparison",
+      "timestamp": "2026-02-02T23:43:27.639629",
+      "sources": 15,
+      "findings": [
+        "[exa] Multi-Agent Orchestration: LangGraph vs. CrewAI vs. AutoGen for Enterprise Workflows",
+        "[exa] Multi-Agent AI Systems in 2026: Comparing LangGraph, CrewAI, AutoGen, and Pydantic AI for Production Use Cases",
+        "[exa] Building Production Agentic AI Systems in 2026: LangGraph vs AutoGen vs CrewAI\u2014Complete Architecture Guide",
+        "[exa] Agent Orchestration 2026: LangGraph, CrewAI & AutoGen Guide",
+        "[exa] CrewAI vs AutoGen vs LangGraph: Top Multi-Agent Frameworks for 2026"
+      ],
+      "insights": [
+        "[exa-highlight] This guide dissects three leading frameworks\u2014LangGraph, CrewAI, and AutoGen\u2014through the lens of enterprise requirements: state management, fault toler",
+        "[exa-highlight] \ud83c\udfa7Listen to this article\nChecking audio availability...\n**\n0:000:00\n**\n1x\n# Multi-Agent Orchestration: LangGraph vs. CrewAI vs. AutoGen for Enterprise ",
+        "[exa-highlight] This matrix summarizes architectural differences. Key insights:",
+        "[exa-highlight] This analysis compares four frameworks that have crossed the production threshold:**LangGraph**,**CrewAI**,**AutoGen**, and**Pydantic AI**. We examine",
+        "[exa-highlight] The culprit is not the technology itself but the architectural choices made in the first 90 days. Three frameworks dominate production deployments:**L"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 15.938644170761108
+    },
+    {
+      "iteration": 8,
+      "category": "Agent Communication",
+      "topic": "Agent communication patterns: shared memory vs message passing vs blackboard",
+      "timestamp": "2026-02-02T23:43:43.884593",
+      "sources": 15,
+      "findings": [
+        "[exa] A temporal blackboard for a multi-agent environment",
+        "[exa] Blackboard system",
+        "[exa] The blackboard model: a survey of its application",
+        "[exa] Blackboard systems",
+        "[exa] Concurrency and knowledge-level communication in agent languages"
+      ],
+      "insights": [
+        "[exa-highlight] the other hand time plays a crucial role in a wide range of KBS applications. Temporal reasoning and representations consists of formalizing the notio",
+        "[exa-highlight] Distributed blackboard is one of the popular agent communication architectures. However, in current agent systems, the distributed blackboard architec",
+        "[exa-highlight] A blackboard system is the central space in a[multi-agent system]. It's used for describing the world as a communication platform for agents. To reali",
+        "[exa-highlight] A**blackboard system**is an[artificial intelligence] approach based on the[blackboard architectural model] created by Devesh Shah,[[1]] [[2]] [[3]] [[",
+        "[exa-highlight] The need for co-operation and communication between Knowledge-Based Systems (KBSs) has prompted research into the field of Distributed Artificial Inte"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 17.368415355682373
+    },
+    {
+      "iteration": 9,
+      "category": "Agent Hierarchy",
+      "topic": "Hierarchical agent architectures: supervisor vs peer-to-peer patterns",
+      "timestamp": "2026-02-02T23:44:01.565538",
+      "sources": 15,
+      "findings": [
+        "[exa] Multi-Agent System Patterns: A Unified Guide to Designing Agentic Architectures",
+        "[exa] Multi-Agent Patterns | Claude Code Skill - MCP Market",
+        "[exa] Hierarchical Agent Systems: Manager, Specialist, and Worker Agent Patterns",
+        "[exa] Architectures for Multi-Agent Systems",
+        "[exa] Multi-Agent collaboration patterns with Strands Agents and Amazon ..."
+      ],
+      "insights": [
+        "[exa-highlight] ### **3.1 Centralized Orchestration: Supervisor / Manager\u2013Worker (Conductor Model)**\n**Core idea**",
+        "[exa-highlight] **Hierarchical orchestration**introduces layers of control. A high-level agent makes strategic decisions, but it delegates tactical control to mid-lev",
+        "[exa-highlight] This skill provides expert guidance for engineering multi-agent systems that overcome single-agent context limitations through strategic distribution.",
+        "[exa-highlight] ## Key Features\n* Advanced coordination protocols including weighted voting and debate mechanisms\n* Context isolation strategies to prevent attention ",
+        "[exa-highlight] #### Supervisor-Worker Pattern: Simplified Coordination\nA streamlined two-tier hierarchy where a central supervisor directly manages multiple worker a"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 15.25985336303711
+    },
+    {
+      "iteration": 10,
+      "category": "Late Interaction",
+      "topic": "Late interaction models: ColBERT vs PLAID vs ColBERTv2 for retrieval",
+      "timestamp": "2026-02-02T23:44:17.129247",
+      "sources": 15,
+      "findings": [
+        "[exa] #236 PLAID: An efficient engine for late interaction retrieval - YouTube",
+        "[exa] An Overview of Late Interaction Retrieval Models: ColBERT, ColPali ...",
+        "[exa] Revolutionizing Information Retrieval with RAG Reranking ... - Medium",
+        "[exa] colbert-ir/colbertv2.0 - Hugging Face",
+        "[exa] What is ColBERT and Late Interaction and Why They Matter in Search?"
+      ],
+      "insights": [
+        "[exa-highlight] scale, even at a scale of 140M passages.\\n\\nIn this video, I talk about the following: How does ColBERTv2 work? How does PLAID (Performance-optimized ",
+        "[exa-highlight] highly-optimized engine to reduce late interaction search latency by up to 7\u00d7 on a GPU and 45\u00d7 on a CPU against vanilla ColBERTv2, while continuing to",
+        "[exa-highlight] Late interaction retrieval models are changing how we find and retrieve information. These models allow for semantically rich interactions that enable",
+        "[exa-highlight] use multi-vector retrieval and improve both accuracy and scalability compared to no-interaction and full-interaction dense retrieval models.",
+        "[exa-highlight] Information retrieval (IR) has seen a seismic shift with advancements in neural architectures like[ColBERT] (Contextualized Late Interaction over BERT"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 27.550830841064453
+    },
+    {
+      "iteration": 11,
+      "category": "Dense Retrieval",
+      "topic": "Dense passage retrieval vs sparse retrieval: ANCE, DPR, SPLADE comparison",
+      "timestamp": "2026-02-02T23:44:44.981421",
+      "sources": 13,
+      "findings": [
+        "[exa] Deep Learning Based Dense Retrieval: A Comparative Study - arXiv",
+        "[exa] Dense Passage Retrieval - Emergent Mind",
+        "[exa] Introducing cascading retrieval: Unifying dense and sparse with ...",
+        "[exa] What is Dense Passage Retrieval (DPR)? - GeeksforGeeks",
+        "[exa] Salient Phrase Aware Dense Retrieval: Can a Dense Retriever Imitate a Sparse One?"
+      ],
+      "insights": [
+        "[exa-highlight] We find that supervised models like BERT and DPR experience significant performance degradation when tokenizers are compromised, while unsupervised mo",
+        "[exa-highlight] For a long time, the Information Retrieval (IR) field has been dominated by sparse retrieval systems, which match texts based on lexical patterns (e.g",
+        "[exa-highlight] * Dense Passage Retrieval is a neural information retrieval paradigm that encodes queries and passages into dense vectors using dual-encoder architect",
+        "[exa-highlight] DPR models are evaluated across standard IR metrics: MRR@10, Recall@50/1000, NDCG@10, and precision at k. In MS-MARCO, Natural Questions, and TriviaQA",
+        "[exa-highlight] Dense retrieval has become a foundation of modern search systems due to its ability to capture the semantics of unstructured data. Likewise, dense emb"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 13.497031688690186
+    },
+    {
+      "iteration": 12,
+      "category": "Fine-tuning",
+      "topic": "Cross-encoder fine-tuning for domain-specific reranking",
+      "timestamp": "2026-02-02T23:44:58.789627",
+      "sources": 15,
+      "findings": [
+        "[exa] Training and Finetuning Reranker Models with Sentence ...",
+        "[exa] Training Overview \u2014 Sentence Transformers documentation",
+        "[exa] Cross-Encoders, ColBERT, and LLM-Based Re-Rankers - Medium",
+        "[exa] Using Cross-Encoders as reranker in multistage vector search",
+        "[exa] Ensembling Cross-Encoders and GPT Rerankers with LLMs ... - arXiv"
+      ],
+      "insights": [
+        "[exa-highlight] [Sentence Transformers] is a Python library for using and training embedding and reranker models for a wide range of applications, such as retrieval a",
+        "[exa-highlight] > General-purpose reranker models are trained to perform adequately on this exact question in a wide range of domains and topics, preventing them from",
+        "[exa-highlight] Cross Encoder models are very often used as 2nd stage rerankers in a[Retrieve and Rerank] search stack. In such a situation, the Cross Encoder reranks",
+        "[exa-highlight] fromdatasetsimportload\\_datasetfromsentence\\_transformersimportCrossEncoderfromsentence\\_transformers.cross\\_encoder.lossesimportMultipleNegativesRank",
+        "[exa-highlight] 3. **Final Touch (Cross-Encoder or LLM):**For those top 50\u2013100 documents, run a cross-encoder if you need crisp relevance improvements at a tolerable "
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 15.651734590530396
+    },
+    {
+      "iteration": 13,
+      "category": "Scale",
+      "topic": "RAG at scale: sharding, replication, and distributed vector search",
+      "timestamp": "2026-02-02T23:45:14.748979",
+      "sources": 15,
+      "findings": [
+        "[exa] Scale Vector Search RAG | Sharding & Replication",
+        "[exa] Strategies to scale vector store for RAG: Sharding, Indexing",
+        "[exa] Hybrid RAG with Qdrant: multi-tenancy, custom sharding ...",
+        "[exa] How do distributed vector databases handle sharding and replication?",
+        "[exa] How to scale RAG from prototype to production"
+      ],
+      "insights": [
+        "[exa-highlight] Successfully scaling vector search is foundational to building large-scale RAG systems. By carefully applying sharding, replication, and choosing appr",
+        "[exa-highlight] Scaling Vector Search: Sharding Replication and Indexing\n] [\nDistributed Dense Retrieval: Implementations and Optimizations\n] [\nHybrid Search at Scale",
+        "[exa-highlight] To scale a vector store for a RAG system handling large knowledge bases or high query volume, three key strategies are sharding, optimized indexing, a",
+        "[exa-highlight] FAISS or Elasticsearch support sharding by distributing indexes across clusters. Replication can complement sharding: creating read-only copies of sha",
+        "[exa-highlight] * Hybrid search: dense embeddings + sparse BM25 for higher recall and precision.\n* Multitenancy: isolate tenants using payload filters and shard routi"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 12.01789379119873
+    },
+    {
+      "iteration": 14,
+      "category": "Real-time",
+      "topic": "Real-time RAG: streaming updates and incremental indexing",
+      "timestamp": "2026-02-02T23:45:27.075438",
+      "sources": 15,
+      "findings": [
+        "[exa] Optimizing RAG for Real-Time Updates with Incremental Indexing",
+        "[exa] Adaptive Real-Time RAG Systems for Streaming Knowledge Bases",
+        "[exa] A Streaming RAG Approach to Real-time Knowledge Base - arXiv",
+        "[exa] Real-Time RAG: Streaming Responses and Dynamic Content Updates",
+        "[exa] A Complete Guide to Implementing Streaming RAG"
+      ],
+      "insights": [
+        "[exa-highlight] This title was summarized by AI from the post below.\n[![View profile for Mandar Joshi]] \n[Mandar Joshi] \n5d\n* [Report this post] \nHi folks\nday 20 \u2014rea",
+        "[exa-highlight] Can't reindex 200k chunks every time something changes.\nNeeded real-time updates.\n\u25b8The problem:\nTraditional approach: \u2192New document added \u2192Rebuild ent",
+        "[exa-highlight] Instead of rebuilding, we append-only the centroids in the heavy-hitter map into a FAISS IndexFlatIP every 1,000 steps. The operation is lock-free; qu",
+        "[exa-highlight] Streaming RAG closes this gap by treating the knowledge base as an**unbounded event stream**S={*d*1\u200b,*d*2\u200b,\u2026} and continuously refreshing a**memory-bo",
+        "[exa-highlight] * \u2022A dynamic knowledge\u2011base reconstruction protocol that updates retrieval indices incrementally and obviates full\u2011scale rebuilds\n* \u2022A comprehensive e"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 14.864340782165527
+    },
+    {
+      "iteration": 15,
+      "category": "Cost",
+      "topic": "RAG cost optimization: embedding caching, query deduplication, batching",
+      "timestamp": "2026-02-02T23:45:42.247743",
+      "sources": 15,
+      "findings": [
+        "[exa] RAGO: Systematic Performance Optimization for Retrieval-Augmented Generation Serving",
+        "[exa] EchoLM: Accelerating LLM Serving with Real-time Knowledge Distillation",
+        "[exa] Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation",
+        "[exa] Batch Query Processing and Optimization for Agentic Workflows",
+        "[exa] Optimizing Large Language Model Infrastructure: A Practitioner\u2019s Guide to Latency, Cost, and Quality Trade-offs"
+      ],
+      "insights": [
+        "[exa-highlight] > Retrieval-augmented generation (RAG), which combines large language models (LLMs) with retrievals from external knowledge databases, is emerging as ",
+        "[exa-highlight] across them. In this paper, we make three fundamental contributions to advancing RAG serving. First, we introduce RAGSchema, a structured abstraction ",
+        "[exa-highlight] Unlike Retrieval-Augmented Generation (RAG), which retrieves static, external documents as input, repurposing historical request-response pairs from t",
+        "[exa-highlight] * \u2022*Accuracy*:\nSelecting high-utility examples requires going beyond relevance, used in traditional RAG systems. It must consider factors like example",
+        "[exa-highlight] > Retrieval-Augmented Generation (RAG) is often used with Large Language Models (LLMs) to infuse domain knowledge or user-specific information. In RAG"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 13.318693161010742
+    },
+    {
+      "iteration": 16,
+      "category": "Speculative",
+      "topic": "Speculative RAG: parallel retrieval with early termination",
+      "timestamp": "2026-02-02T23:45:55.879880",
+      "sources": 15,
+      "findings": [
+        "[exa] Computer Science > Computation and Language",
+        "[exa] READER: Retrieval-Assisted Drafter for Efficient LLM Inference",
+        "[exa] Computer Science > Machine Learning",
+        "[exa] SpecExit: Accelerating Large Reasoning Model via Speculative Exit",
+        "[exa] REST: Retrieval-Based Speculative Decoding"
+      ],
+      "insights": [
+        "[exa-highlight] of LLMs. In this work, we introduce Speculative RAG - a framework that leverages a larger generalist LM to efficiently verify multiple RAG drafts prod",
+        "[exa-highlight] > Retrieval augmented generation (RAG) combines the generative abilities of large language models (LLMs) with external knowledge sources to provide mo",
+        "[exa-highlight] > Autoregressive Language Models instantiate a factorized likelihood over token sequences, yet their strictly sequential decoding process imposes an i",
+        "[exa-highlight] Comprehensive experiments demonstrate up to 6.13x wall-clock speedup on single-prompt inference and up to 5.92x on batched inference, consistently sur",
+        "[exa-highlight] > Iterative retrieval-augmented generation (RAG) enables large language models to answer complex multi-hop questions, but each additional loop increas"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 12.132040739059448
+    },
+    {
+      "iteration": 17,
+      "category": "Safety",
+      "topic": "Constitutional RAG: alignment and safety in retrieval systems",
+      "timestamp": "2026-02-02T23:46:08.327624",
+      "sources": 15,
+      "findings": [
+        "[exa] Research",
+        "[exa] Alignment tuning and RAG: What you should know",
+        "[exa] MEGA-RAG: a retrieval-augmented generation framework ...",
+        "[exa] Retrieval augmented generation for 10 large language ...",
+        "[exa] Hybrid Knowledge Retrieval with Security Filtering"
+      ],
+      "insights": [
+        "[exa-highlight] #### Constitutional Classifiers: Defending against universal jailbreaks\nThese classifiers filter the overwhelming majority of jailbreaks while maintai",
+        "[exa-highlight] ### Interpretability\nThe mission of the Interpretability team is to discover and understand how large language models work internally, as a foundation",
+        "[exa-highlight] - [Red Hat Developer blog] \n- [Red Hat Partner Connect blog] \n\n# Alignment tuning and RAG: What you should know\n\nMarch 26, 2025[Cedric Clyburn] _5_-mi",
+        "[exa-highlight] ### The best of both worlds: Combining alignment tuning and RAG",
+        "[exa-highlight] contrast,**MEGA-RAG**integrates a four-stage architecture designed to overcome these limitations."
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 25.363142251968384
+    },
+    {
+      "iteration": 18,
+      "category": "Structured Data",
+      "topic": "RAG with structured data: SQL, knowledge graphs, and APIs",
+      "timestamp": "2026-02-02T23:46:33.995750",
+      "sources": 15,
+      "findings": [
+        "[exa] Welcome SQL2Graph + Unstructured2Graph: Your New RAG Tools ...",
+        "[exa] Graph RAG vs SQL RAG - Towards Data Science",
+        "[exa] RAG for Structured Data: Benefits, Challenges & Examples - AI21",
+        "[exa] Three Alternative RAG Models | SQL, Knowledge Bases, & APIs | Exxact Blog",
+        "[exa] GraphRAG SDK"
+      ],
+      "insights": [
+        "[exa-highlight] Enterprises want to ask questions about their data. Yet, SQL is the format where most enterprise knowledge is locked away.\n[**SQL2Graph**] is a migrat",
+        "[exa-highlight] With the SQL2Graph and Unstructured2Graph live, Memgraph takes broader steps into enabling every AI Engineer and data scientist to take their data int",
+        "[exa-highlight] Graph databases store data as**nodes**(entities) and**edges**(relationships) with optional**properties**attached to both. Instead of joining tables, t",
+        "[exa-highlight] significant difference in performance between the graph and SQL database approaches \u2013 users can simply choose the database paradigm that best fits the",
+        "[exa-highlight] **Data Type**|**Description**|**Examples**|**RAG Usage**|\nStructured Data|Organized data with a fixed schema (e.g., rows and columns).|Relational data"
+      ],
+      "indexed": 10,
+      "dimensions": 1024,
+      "latency_s": 16.3740394115448
+    }
+  ]
+}
