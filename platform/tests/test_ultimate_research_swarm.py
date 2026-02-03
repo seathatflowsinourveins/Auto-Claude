@@ -74,6 +74,13 @@ def sample_sources() -> List[ResearchSource]:
             content="The StateGraph class provides a way to orchestrate multi-step agent workflows...",
             score=0.92,
         ),
+        ResearchSource(
+            tool="context7",
+            title="LangGraph SDK Documentation",
+            url="https://langchain-ai.github.io/langgraph/",
+            content="StateGraph is the core abstraction in LangGraph for building complex agent graphs...",
+            score=0.94,
+        ),
     ]
 
 
@@ -370,6 +377,31 @@ class TestIntegration:
 
         await swarm.shutdown()
 
+    @pytest.mark.asyncio
+    @pytest.mark.integration
+    async def test_sdk_documentation_research(self):
+        """Test Context7 SDK documentation research."""
+        swarm = UltimateResearchSwarm()
+        await swarm.initialize()
+
+        # Research SDK documentation for LangGraph
+        result = await swarm.research_sdk_docs(
+            library="langgraph",
+            query="StateGraph nodes edges",
+        )
+
+        # Verify result
+        assert result.query is not None
+        assert isinstance(result.sources, list)
+        assert result.latency_ms >= 0
+
+        # Check if context7 was used (if available)
+        if result.tools_used:
+            # At least one tool should be used
+            assert len(result.tools_used) > 0
+
+        await swarm.shutdown()
+
 
 # =============================================================================
 # ResearchDepth Tests
@@ -404,6 +436,137 @@ class TestResearchAgentType:
         assert ResearchAgentType.TAVILY_AI.value == "tavily-ai"
         assert ResearchAgentType.JINA_READER.value == "jina-reader"
         assert ResearchAgentType.PERPLEXITY_DEEP.value == "perplexity"
+        assert ResearchAgentType.CONTEXT7_DOCS.value == "context7"
+
+
+# =============================================================================
+# Deep Dive Tests
+# =============================================================================
+
+class TestDeepDive:
+    """Tests for the deep_dive advanced research mode."""
+
+    @pytest.mark.asyncio
+    @pytest.mark.integration
+    async def test_deep_dive_basic(self):
+        """Test deep dive research mode."""
+        swarm = UltimateResearchSwarm()
+        await swarm.initialize()
+
+        result = await swarm.deep_dive(
+            "distributed consensus algorithms",
+            include_reasoning=True,
+            include_deepsearch=True,
+        )
+
+        assert isinstance(result, UltimateResearchResult)
+        assert result.depth == ResearchDepth.DEEP
+        # Deep dive should spawn multiple agents
+        assert result.agents_spawned >= 2
+        # Confidence should be boosted
+        assert result.confidence > 0.5
+
+        await swarm.shutdown()
+
+    @pytest.mark.asyncio
+    @pytest.mark.integration
+    async def test_deep_dive_with_crawl(self):
+        """Test deep dive with site crawling."""
+        swarm = UltimateResearchSwarm()
+        await swarm.initialize()
+
+        result = await swarm.deep_dive(
+            "LangGraph patterns",
+            site_to_crawl="https://langchain-ai.github.io/langgraph/",
+            include_reasoning=False,  # Speed up test
+            include_deepsearch=False,
+        )
+
+        assert isinstance(result, UltimateResearchResult)
+        # Should have attempted crawl
+        assert result.agents_spawned >= 1
+
+        await swarm.shutdown()
+
+    @pytest.mark.asyncio
+    @pytest.mark.integration
+    async def test_deep_dive_with_memory(self):
+        """Test deep dive with memory storage."""
+        swarm = UltimateResearchSwarm()
+        await swarm.initialize()
+
+        result = await swarm.deep_dive(
+            "test query for memory",
+            memory_key="deep_dive_test",
+            include_reasoning=False,
+            include_deepsearch=False,
+        )
+
+        assert result.memory_key == "deep_dive_test"
+
+        await swarm.shutdown()
+
+
+# =============================================================================
+# Query Classification Tests
+# =============================================================================
+
+class TestQueryClassification:
+    """Tests for query classification."""
+
+    @pytest.mark.asyncio
+    async def test_classify_query_no_jina(self):
+        """Test classification returns None without Jina."""
+        swarm = UltimateResearchSwarm()
+        # Don't initialize - no adapters
+        result = await swarm._classify_query("test query")
+        assert result is None
+
+    @pytest.mark.asyncio
+    @pytest.mark.integration
+    async def test_classify_query_with_jina(self):
+        """Test classification with Jina adapter."""
+        swarm = UltimateResearchSwarm()
+        await swarm.initialize()
+
+        if swarm._jina:
+            result = await swarm._classify_query("How do I install the SDK?")
+            # May return a classification or None depending on API
+            assert result is None or isinstance(result, str)
+
+        await swarm.shutdown()
+
+
+# =============================================================================
+# Advanced Agent Type Tests
+# =============================================================================
+
+class TestAdvancedAgentTypes:
+    """Tests for advanced research agent types."""
+
+    def test_new_agent_types_exist(self):
+        """Test that new agent types are defined."""
+        assert ResearchAgentType.EXA_DEEP.value == "exa-deep"
+        assert ResearchAgentType.TAVILY_MAP.value == "tavily-map"
+        assert ResearchAgentType.TAVILY_CRAWL.value == "tavily-crawl"
+        assert ResearchAgentType.JINA_DEEPSEARCH.value == "jina-deepsearch"
+        assert ResearchAgentType.JINA_CLASSIFY.value == "jina-classify"
+        assert ResearchAgentType.PERPLEXITY_REASON.value == "perplexity-reasoning"
+
+    def test_agent_configs_complete(self):
+        """Test all agent types have configs."""
+        try:
+            from platform.core.ultimate_research_swarm import RESEARCH_AGENT_CONFIGS
+        except ImportError:
+            from core.ultimate_research_swarm import RESEARCH_AGENT_CONFIGS
+
+        for agent_type in ResearchAgentType:
+            assert agent_type in RESEARCH_AGENT_CONFIGS, f"Missing config for {agent_type}"
+            config = RESEARCH_AGENT_CONFIGS[agent_type]
+            assert "adapter_class" in config
+            assert "priority" in config
+            assert "latency_target_ms" in config
+            assert "operations" in config
 
 
 if __name__ == "__main__":

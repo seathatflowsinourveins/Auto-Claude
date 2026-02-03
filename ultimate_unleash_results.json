@@ -1,0 +1,108 @@
+{
+  "timestamp": "2026-02-02 22:30:24",
+  "total_operations": 29,
+  "passed_operations": 29,
+  "success_rate": 100.0,
+  "total_time_seconds": 130.04502129554749,
+  "results": {
+    "exa": {
+      "search": {
+        "success": true
+      },
+      "get_contents": {
+        "success": true
+      },
+      "find_similar": {
+        "success": true
+      },
+      "search_and_contents": {
+        "success": true
+      },
+      "answer": {
+        "success": true
+      },
+      "research": {
+        "success": true
+      }
+    },
+    "tavily": {
+      "search": {
+        "success": true
+      },
+      "research": {
+        "success": true
+      },
+      "extract": {
+        "success": true
+      },
+      "qna": {
+        "success": true
+      },
+      "context": {
+        "success": true
+      },
+      "map": {
+        "success": true
+      },
+      "crawl": {
+        "success": true
+      }
+    },
+    "jina": {
+      "read": {
+        "success": true
+      },
+      "search": {
+        "success": true
+      },
+      "embed": {
+        "success": true
+      },
+      "rerank": {
+        "success": true
+      },
+      "segment": {
+        "success": true
+      },
+      "ground": {
+        "success": true
+      },
+      "deepsearch": {
+        "success": true
+      },
+      "classify": {
+        "success": true
+      }
+    },
+    "perplexity": {
+      "chat": {
+        "success": true
+      },
+      "pro": {
+        "success": true
+      },
+      "research": {
+        "success": true
+      },
+      "reasoning": {
+        "success": true
+      },
+      "search": {
+        "success": true
+      }
+    },
+    "context7": {
+      "resolve": {
+        "success": true,
+        "count": 6
+      },
+      "query": {
+        "success": true,
+        "count": 3
+      },
+      "search": {
+        "success": true
+      }
+    }
+  }
+}

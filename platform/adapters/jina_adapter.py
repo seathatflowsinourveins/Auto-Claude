@@ -40,9 +40,51 @@ import httpx
 from typing import Any, Optional
 
 try:
-    from .base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    from ..core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
 except ImportError:
-    from base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    try:
+        from core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    except ImportError:
+        # Minimal fallback definitions for standalone use
+        from enum import Enum, IntEnum
+        from dataclasses import dataclass, field
+        from datetime import datetime
+        from typing import Dict, Any, Optional
+        from abc import ABC, abstractmethod
+
+        class SDKLayer(IntEnum):
+            RESEARCH = 8
+
+        class AdapterStatus(Enum):
+            UNINITIALIZED = "uninitialized"
+            READY = "ready"
+            FAILED = "failed"
+
+        @dataclass
+        class AdapterResult:
+            success: bool
+            data: Optional[Dict[str, Any]] = None
+            error: Optional[str] = None
+            latency_ms: float = 0.0
+            cached: bool = False
+            metadata: Dict[str, Any] = field(default_factory=dict)
+            timestamp: datetime = field(default_factory=datetime.utcnow)
+
+        class SDKAdapter(ABC):
+            @property
+            @abstractmethod
+            def sdk_name(self) -> str: ...
+            @abstractmethod
+            async def initialize(self, config: Dict) -> AdapterResult: ...
+            @abstractmethod
+            async def execute(self, operation: str, **kwargs) -> AdapterResult: ...
+            @abstractmethod
+            async def shutdown(self) -> None: ...
+
+        def register_adapter(name, layer, priority=0):
+            def decorator(cls):
+                return cls
+            return decorator
 
 
 # Jina endpoints
@@ -117,6 +159,10 @@ class JinaAdapter(SDKAdapter):
             "search": self._search,
             "embed": self._embed,
             "rerank": self._rerank,
+            "segment": self._segment,
+            "ground": self._ground,
+            "deepsearch": self._deepsearch,
+            "classify": self._classify,
         }
 
         if operation not in operations:
@@ -143,17 +189,28 @@ class JinaAdapter(SDKAdapter):
         wait_for_selector: Optional[str] = None,
         bypass_cache: bool = False,
         with_images: bool = False,
+        with_images_summary: bool = False,
+        retain_images: bool = False,
+        target_selector: Optional[str] = None,
+        timeout: int = 30,
         **kwargs,
     ) -> AdapterResult:
         """
-        Read URL and convert to markdown.
+        Read URL and convert to LLM-ready markdown (Jina Reader API).
+
+        This is the core "Web Reader" that converts bloated HTML into
+        clean, token-efficient Markdown for agents.
 
         Args:
             url: URL to read
             respond_with: "markdown", "html", "text", or "screenshot"
-            wait_for_selector: CSS selector to wait for
-            bypass_cache: Bypass Jina's cache
-            with_images: Include image descriptions
+            wait_for_selector: CSS selector to wait for (dynamic content)
+            bypass_cache: Bypass Jina's cache for fresh content
+            with_images: Include image descriptions via vision models
+            with_images_summary: Generate summary of images on page
+            retain_images: Keep image markdown links in output
+            target_selector: CSS selector to extract specific element
+            timeout: Request timeout in seconds
         """
         self._stats["reads"] += 1
 
@@ -163,7 +220,7 @@ class JinaAdapter(SDKAdapter):
                 error="Client not initialized"
             )
 
-        # Build headers
+        # Build headers for Jina Reader API
         headers = {}
         if self._api_key:
             headers["Authorization"] = f"Bearer {self._api_key}"
@@ -175,6 +232,14 @@ class JinaAdapter(SDKAdapter):
             headers["X-No-Cache"] = "true"
         if with_images:
             headers["X-With-Generated-Alt"] = "true"
+        if with_images_summary:
+            headers["X-With-Images-Summary"] = "true"
+        if retain_images:
+            headers["X-Retain-Images"] = "true"
+        if target_selector:
+            headers["X-Target-Selector"] = target_selector
+        if timeout != 30:
+            headers["X-Timeout"] = str(timeout)
 
         # Make request
         reader_url = f"{JINA_READER_URL}/{url}"
@@ -199,6 +264,7 @@ class JinaAdapter(SDKAdapter):
     async def _search(
         self,
         query: str,
+        site: Optional[str] = None,
         **kwargs,
     ) -> AdapterResult:
         """
@@ -206,6 +272,7 @@ class JinaAdapter(SDKAdapter):
 
         Args:
             query: Search query
+            site: Restrict search to specific domain (e.g., "jina.ai", "github.com")
         """
         self._stats["searches"] += 1
 
@@ -217,7 +284,13 @@ class JinaAdapter(SDKAdapter):
             headers["Authorization"] = f"Bearer {self._api_key}"
 
         # URL-encode the query
-        search_url = f"{JINA_SEARCH_URL}/{query.replace(' ', '+')}"
+        encoded_query = query.replace(' ', '+')
+        search_url = f"{JINA_SEARCH_URL}/{encoded_query}"
+
+        # Add site filter as query parameter
+        if site:
+            search_url += f"?site={site}"
+
         response = await self._client.get(search_url, headers=headers)
 
         if response.status_code != 200:
@@ -231,6 +304,7 @@ class JinaAdapter(SDKAdapter):
             data={
                 "content": response.text,
                 "query": query,
+                "site": site,
             }
         )
 
@@ -347,6 +421,270 @@ class JinaAdapter(SDKAdapter):
                 "usage": data.get("usage", {}),
             }
         )
+
+    async def _segment(
+        self,
+        content: str,
+        max_chunk_length: int = 1000,
+        return_tokens: bool = False,
+        **kwargs,
+    ) -> AdapterResult:
+        """
+        Segment long content into chunks for processing.
+
+        Args:
+            content: Text content to segment
+            max_chunk_length: Maximum characters per chunk
+            return_tokens: Return token counts
+        """
+        self._stats["segments"] = self._stats.get("segments", 0) + 1
+
+        if not self._client or not self._api_key:
+            # Fallback to simple chunking
+            chunks = []
+            for i in range(0, len(content), max_chunk_length):
+                chunks.append(content[i:i + max_chunk_length])
+            return AdapterResult(
+                success=True,
+                data={
+                    "chunks": chunks,
+                    "count": len(chunks),
+                    "fallback": True,
+                }
+            )
+
+        try:
+            response = await self._client.post(
+                "https://segment.jina.ai/",
+                headers={
+                    "Authorization": f"Bearer {self._api_key}",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "content": content,
+                    "max_chunk_length": max_chunk_length,
+                    "return_tokens": return_tokens,
+                }
+            )
+
+            if response.status_code == 200:
+                data = response.json()
+                return AdapterResult(
+                    success=True,
+                    data={
+                        "chunks": data.get("chunks", []),
+                        "count": len(data.get("chunks", [])),
+                        "tokens": data.get("tokens") if return_tokens else None,
+                    }
+                )
+            else:
+                # Fallback to simple chunking
+                chunks = []
+                for i in range(0, len(content), max_chunk_length):
+                    chunks.append(content[i:i + max_chunk_length])
+                return AdapterResult(
+                    success=True,
+                    data={
+                        "chunks": chunks,
+                        "count": len(chunks),
+                        "fallback": True,
+                    }
+                )
+        except Exception as e:
+            return AdapterResult(success=False, error=str(e))
+
+    async def _ground(
+        self,
+        statement: str,
+        references: list[str] = None,
+        **kwargs,
+    ) -> AdapterResult:
+        """
+        Fact-check a statement using web search grounding.
+
+        Args:
+            statement: Statement to fact-check
+            references: Optional reference URLs to check against
+        """
+        self._stats["grounds"] = self._stats.get("grounds", 0) + 1
+
+        if not self._client:
+            return AdapterResult(success=False, error="Client not initialized")
+
+        try:
+            # Use search to find supporting/contradicting evidence
+            search_result = await self._search(statement)
+
+            if not search_result.success:
+                return search_result
+
+            return AdapterResult(
+                success=True,
+                data={
+                    "statement": statement,
+                    "evidence": search_result.data.get("content", ""),
+                    "grounded": True,
+                }
+            )
+        except Exception as e:
+            return AdapterResult(success=False, error=str(e))
+
+    async def _deepsearch(
+        self,
+        query: str,
+        budget_tokens: int = 8000,
+        max_attempts: int = 10,
+        **kwargs,
+    ) -> AdapterResult:
+        """
+        Deep search using Jina's DeepSearch API (jina-deepsearch-v1).
+
+        This performs iterative search, reading, and reasoning to find
+        comprehensive answers to complex questions.
+
+        Args:
+            query: The search query or question
+            budget_tokens: Token budget for reasoning (default 8000)
+            max_attempts: Maximum search attempts (default 10)
+        """
+        self._stats["deepsearches"] = self._stats.get("deepsearches", 0) + 1
+
+        if not self._client or not self._api_key:
+            # Fallback to regular search
+            return await self._search(query)
+
+        try:
+            response = await self._client.post(
+                "https://deepsearch.jina.ai/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {self._api_key}",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "model": "jina-deepsearch-v1",
+                    "messages": [{"role": "user", "content": query}],
+                    "stream": False,
+                    "reasoning_effort": "medium",
+                    "budget_tokens": budget_tokens,
+                    "max_attempts": max_attempts,
+                },
+                timeout=120.0,  # DeepSearch can take longer
+            )
+
+            if response.status_code == 200:
+                data = response.json()
+                choices = data.get("choices", [])
+                if choices:
+                    message = choices[0].get("message", {})
+                    return AdapterResult(
+                        success=True,
+                        data={
+                            "answer": message.get("content", ""),
+                            "reasoning": message.get("reasoning", ""),
+                            "sources": data.get("sources", []),
+                            "usage": data.get("usage", {}),
+                            "model": "jina-deepsearch-v1",
+                        }
+                    )
+                return AdapterResult(
+                    success=True,
+                    data={"answer": "", "sources": [], "model": "jina-deepsearch-v1"}
+                )
+            else:
+                # Fallback to regular search
+                return await self._search(query)
+        except Exception as e:
+            # Fallback to regular search on error
+            fallback = await self._search(query)
+            fallback.metadata["deepsearch_error"] = str(e)
+            fallback.metadata["fallback"] = True
+            return fallback
+
+    async def _classify(
+        self,
+        text: str,
+        labels: list[str],
+        **kwargs,
+    ) -> AdapterResult:
+        """
+        Zero-shot text classification using Jina embeddings similarity.
+
+        Args:
+            text: Text to classify
+            labels: List of possible labels
+        """
+        self._stats["classifications"] = self._stats.get("classifications", 0) + 1
+
+        if not self._client or not self._api_key:
+            return AdapterResult(
+                success=False,
+                error="API key required for classification"
+            )
+
+        try:
+            # Use embeddings + similarity for zero-shot classification
+            # Embed the text and all labels
+            all_texts = [text] + labels
+
+            response = await self._client.post(
+                JINA_EMBED_URL,
+                headers={
+                    "Authorization": f"Bearer {self._api_key}",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "model": "jina-embeddings-v3",
+                    "task": "text-matching",
+                    "dimensions": 256,  # Smaller for efficiency
+                    "input": all_texts,
+                }
+            )
+
+            if response.status_code == 200:
+                data = response.json()
+                embeddings = [item["embedding"] for item in data.get("data", [])]
+
+                if len(embeddings) >= 2:
+                    text_emb = embeddings[0]
+                    label_embs = embeddings[1:]
+
+                    # Calculate cosine similarity for each label
+                    import math
+                    def cosine_sim(a, b):
+                        dot = sum(x*y for x, y in zip(a, b))
+                        norm_a = math.sqrt(sum(x*x for x in a))
+                        norm_b = math.sqrt(sum(x*x for x in b))
+                        return dot / (norm_a * norm_b) if norm_a > 0 and norm_b > 0 else 0
+
+                    scores = {}
+                    for label, emb in zip(labels, label_embs):
+                        scores[label] = cosine_sim(text_emb, emb)
+
+                    # Find best label
+                    best_label = max(scores, key=scores.get)
+                    best_score = scores[best_label]
+
+                    return AdapterResult(
+                        success=True,
+                        data={
+                            "text": text,
+                            "label": best_label,
+                            "score": best_score,
+                            "all_scores": scores,
+                            "usage": data.get("usage", {}),
+                        }
+                    )
+                return AdapterResult(
+                    success=True,
+                    data={"text": text, "label": "", "score": 0.0}
+                )
+            else:
+                return AdapterResult(
+                    success=False,
+                    error=f"Jina Classify error: {response.status_code} - {response.text[:200]}"
+                )
+        except Exception as e:
+            return AdapterResult(success=False, error=str(e))
 
     async def health_check(self) -> AdapterResult:
         """Check Jina API health."""

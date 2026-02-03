@@ -38,9 +38,51 @@ import httpx
 from typing import Any, Optional
 
 try:
-    from .base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    from ..core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
 except ImportError:
-    from base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    try:
+        from core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    except ImportError:
+        # Minimal fallback definitions for standalone use
+        from enum import Enum, IntEnum
+        from dataclasses import dataclass, field
+        from datetime import datetime
+        from typing import Dict, Any, Optional
+        from abc import ABC, abstractmethod
+
+        class SDKLayer(IntEnum):
+            RESEARCH = 8
+
+        class AdapterStatus(Enum):
+            UNINITIALIZED = "uninitialized"
+            READY = "ready"
+            FAILED = "failed"
+
+        @dataclass
+        class AdapterResult:
+            success: bool
+            data: Optional[Dict[str, Any]] = None
+            error: Optional[str] = None
+            latency_ms: float = 0.0
+            cached: bool = False
+            metadata: Dict[str, Any] = field(default_factory=dict)
+            timestamp: datetime = field(default_factory=datetime.utcnow)
+
+        class SDKAdapter(ABC):
+            @property
+            @abstractmethod
+            def sdk_name(self) -> str: ...
+            @abstractmethod
+            async def initialize(self, config: Dict) -> AdapterResult: ...
+            @abstractmethod
+            async def execute(self, operation: str, **kwargs) -> AdapterResult: ...
+            @abstractmethod
+            async def shutdown(self) -> None: ...
+
+        def register_adapter(name, layer, priority=0):
+            def decorator(cls):
+                return cls
+            return decorator
 
 
 PERPLEXITY_API_URL = "https://api.perplexity.ai"
@@ -111,6 +153,8 @@ class PerplexityAdapter(SDKAdapter):
             "chat": self._chat,
             "research": self._research,
             "pro": self._pro_chat,
+            "reasoning": self._reasoning,
+            "search": self._search,
         }
 
         if operation not in operations:
@@ -136,6 +180,10 @@ class PerplexityAdapter(SDKAdapter):
         system_prompt: Optional[str] = None,
         return_citations: bool = True,
         return_images: bool = False,
+        return_related_questions: bool = False,
+        search_recency_filter: Optional[str] = None,
+        search_domain_filter: Optional[list[str]] = None,
+        search_mode: str = "web",
         **kwargs,
     ) -> AdapterResult:
         """
@@ -145,7 +193,11 @@ class PerplexityAdapter(SDKAdapter):
             query: User query
             system_prompt: Optional system prompt
             return_citations: Include citation URLs
-            return_images: Include relevant images
+            return_images: Include relevant images (Tier 2+)
+            return_related_questions: Include related questions (Tier 2+)
+            search_recency_filter: "hour", "day", "week", "month", or "year"
+            search_domain_filter: Include/exclude domains (prefix with - to exclude)
+            search_mode: "web", "academic", or "sec" (SEC EDGAR filings)
         """
         self._stats["chats"] += 1
 
@@ -164,18 +216,30 @@ class PerplexityAdapter(SDKAdapter):
             messages.append({"role": "system", "content": system_prompt})
         messages.append({"role": "user", "content": query})
 
+        # Build request payload
+        payload = {
+            "model": "sonar",
+            "messages": messages,
+            "return_citations": return_citations,
+            "return_images": return_images,
+            "return_related_questions": return_related_questions,
+        }
+
+        # Add optional search parameters
+        if search_recency_filter:
+            payload["search_recency_filter"] = search_recency_filter
+        if search_domain_filter:
+            payload["search_domain_filter"] = search_domain_filter[:20]  # Max 20
+        if search_mode and search_mode != "web":
+            payload["search_mode"] = search_mode
+
         response = await self._client.post(
             "/chat/completions",
             headers={
                 "Authorization": f"Bearer {self._api_key}",
                 "Content-Type": "application/json",
             },
-            json={
-                "model": "sonar",
-                "messages": messages,
-                "return_citations": return_citations,
-                "return_images": return_images,
-            }
+            json=payload
         )
 
         if response.status_code != 200:
@@ -196,6 +260,7 @@ class PerplexityAdapter(SDKAdapter):
                 "content": message.get("content", ""),
                 "citations": data.get("citations", []),
                 "images": data.get("images", []),
+                "related_questions": data.get("related_questions", []),
                 "model": "sonar",
                 "usage": data.get("usage", {}),
             }
@@ -268,14 +333,14 @@ class PerplexityAdapter(SDKAdapter):
         **kwargs,
     ) -> AdapterResult:
         """
-        Deep research using sonar-deep-research.
+        Deep research using sonar-reasoning or sonar-pro with enhanced prompting.
 
-        This model:
-        - Autonomously searches and reads sources
-        - Refines approach as it gathers information
-        - Performs multi-step retrieval and synthesis
+        This provides multi-step research by:
+        - Using advanced reasoning models
+        - Requesting comprehensive analysis
+        - Gathering multiple citations
 
-        Note: Priced at $5/1000 searches
+        Note: Uses sonar-reasoning for best results
         """
         self._stats["research_queries"] += 1
 
@@ -289,36 +354,205 @@ class PerplexityAdapter(SDKAdapter):
                 }
             )
 
+        # Use sonar-reasoning for deep research (more reliable than sonar-deep-research)
+        # Fallback chain: sonar-reasoning -> sonar-pro -> sonar
+        models_to_try = ["sonar-reasoning", "sonar-pro", "sonar"]
+
+        for model in models_to_try:
+            try:
+                # Enhanced prompt for deep research
+                research_prompt = f"""Please provide a comprehensive, well-researched analysis of the following topic.
+Include multiple perspectives, cite your sources, and provide detailed explanations.
+
+Topic: {query}
+
+Please structure your response with:
+1. Overview and key concepts
+2. Detailed analysis
+3. Comparisons (if applicable)
+4. Real-world applications
+5. Conclusions"""
+
+                response = await self._client.post(
+                    "/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {self._api_key}",
+                        "Content-Type": "application/json",
+                    },
+                    json={
+                        "model": model,
+                        "messages": [{"role": "user", "content": research_prompt}],
+                        "return_citations": True,
+                    },
+                    timeout=60.0  # Longer timeout for research
+                )
+
+                if response.status_code == 200:
+                    data = response.json()
+                    choice = data.get("choices", [{}])[0]
+                    message = choice.get("message", {})
+                    content = message.get("content", "")
+
+                    if content:  # Success if we got content
+                        return AdapterResult(
+                            success=True,
+                            data={
+                                "content": content,
+                                "citations": data.get("citations", []),
+                                "model": model,
+                                "usage": data.get("usage", {}),
+                            }
+                        )
+            except Exception:
+                continue  # Try next model
+
+        return AdapterResult(
+            success=False,
+            error="All research models failed"
+        )
+
+    async def _reasoning(
+        self,
+        query: str,
+        reasoning_effort: str = "medium",
+        system_prompt: Optional[str] = None,
+        **kwargs,
+    ) -> AdapterResult:
+        """
+        Reasoning-focused query using sonar-reasoning or sonar-pro model.
+
+        Args:
+            query: User query requiring reasoning
+            reasoning_effort: "minimal", "low", "medium", or "high"
+            system_prompt: Optional system prompt
+        """
+        self._stats["chats"] += 1
+
+        if not self._api_key:
+            return AdapterResult(
+                success=True,
+                data={
+                    "content": f"Mock reasoning for: {query}",
+                    "reasoning_steps": [],
+                    "citations": [],
+                    "mock": True,
+                }
+            )
+
+        messages = []
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt})
+
+        # Enhanced reasoning prompt
+        reasoning_prompt = f"""Please reason through the following question step-by-step,
+considering multiple perspectives before providing your answer.
+
+Question: {query}
+
+Think through this carefully and explain your reasoning."""
+
+        messages.append({"role": "user", "content": reasoning_prompt})
+
+        # Try sonar-reasoning first, fall back to sonar-pro
+        models_to_try = ["sonar-reasoning", "sonar-pro", "sonar"]
+
+        for model in models_to_try:
+            try:
+                payload = {
+                    "model": model,
+                    "messages": messages,
+                    "return_citations": True,
+                }
+
+                response = await self._client.post(
+                    "/chat/completions",
+                    headers={
+                        "Authorization": f"Bearer {self._api_key}",
+                        "Content-Type": "application/json",
+                    },
+                    json=payload
+                )
+
+                if response.status_code == 200:
+                    data = response.json()
+                    choice = data.get("choices", [{}])[0]
+                    message = choice.get("message", {})
+                    content = message.get("content", "")
+
+                    if content:
+                        return AdapterResult(
+                            success=True,
+                            data={
+                                "content": content,
+                                "reasoning_steps": message.get("reasoning_steps", []),
+                                "citations": data.get("citations", []),
+                                "model": model,
+                                "usage": data.get("usage", {}),
+                            }
+                        )
+            except Exception:
+                continue  # Try next model
+
+        return AdapterResult(
+            success=False,
+            error="All reasoning models failed"
+        )
+
+    async def _search(
+        self,
+        query: str,
+        max_results: int = 10,
+        country: Optional[str] = None,
+        **kwargs,
+    ) -> AdapterResult:
+        """
+        Raw web search without LLM synthesis (Search API).
+
+        Args:
+            query: Search query (or list of up to 5 queries)
+            max_results: Maximum results (1-20)
+            country: ISO alpha-2 country code for localization
+        """
+        self._stats["searches"] = self._stats.get("searches", 0) + 1
+
+        if not self._api_key:
+            return AdapterResult(
+                success=True,
+                data={
+                    "results": [{"title": f"Mock: {query}", "url": "https://example.com"}],
+                    "mock": True,
+                }
+            )
+
+        payload = {
+            "query": query,
+            "max_results": min(max_results, 20),
+        }
+        if country:
+            payload["country"] = country
+
         response = await self._client.post(
-            "/chat/completions",
+            "/search",
             headers={
                 "Authorization": f"Bearer {self._api_key}",
                 "Content-Type": "application/json",
             },
-            json={
-                "model": "sonar-deep-research",
-                "messages": [{"role": "user", "content": query}],
-                "return_citations": True,
-            }
+            json=payload
         )
 
         if response.status_code != 200:
             return AdapterResult(
                 success=False,
-                error=f"Perplexity research error: {response.status_code}"
+                error=f"Perplexity search error: {response.status_code}"
             )
 
         data = response.json()
-        choice = data.get("choices", [{}])[0]
-        message = choice.get("message", {})
 
         return AdapterResult(
             success=True,
             data={
-                "content": message.get("content", ""),
-                "citations": data.get("citations", []),
-                "model": "sonar-deep-research",
-                "usage": data.get("usage", {}),
+                "results": data.get("results", []),
+                "count": len(data.get("results", [])),
             }
         )
 

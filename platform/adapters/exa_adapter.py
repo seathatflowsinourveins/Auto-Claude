@@ -39,9 +39,51 @@ from typing import Any, Optional
 
 # SDK Layer imports
 try:
-    from .base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    from ..core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
 except ImportError:
-    from base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    try:
+        from core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    except ImportError:
+        # Minimal fallback definitions for standalone use
+        from enum import Enum, IntEnum
+        from dataclasses import dataclass, field
+        from datetime import datetime
+        from typing import Dict, Any, Optional
+        from abc import ABC, abstractmethod
+
+        class SDKLayer(IntEnum):
+            RESEARCH = 8
+
+        class AdapterStatus(Enum):
+            UNINITIALIZED = "uninitialized"
+            READY = "ready"
+            FAILED = "failed"
+
+        @dataclass
+        class AdapterResult:
+            success: bool
+            data: Optional[Dict[str, Any]] = None
+            error: Optional[str] = None
+            latency_ms: float = 0.0
+            cached: bool = False
+            metadata: Dict[str, Any] = field(default_factory=dict)
+            timestamp: datetime = field(default_factory=datetime.utcnow)
+
+        class SDKAdapter(ABC):
+            @property
+            @abstractmethod
+            def sdk_name(self) -> str: ...
+            @abstractmethod
+            async def initialize(self, config: Dict) -> AdapterResult: ...
+            @abstractmethod
+            async def execute(self, operation: str, **kwargs) -> AdapterResult: ...
+            @abstractmethod
+            async def shutdown(self) -> None: ...
+
+        def register_adapter(name, layer, priority=0):
+            def decorator(cls):
+                return cls
+            return decorator
 
 # Exa SDK
 EXA_AVAILABLE = False
@@ -150,6 +192,8 @@ class ExaAdapter(SDKAdapter):
             "get_contents": self._get_contents,
             "find_similar": self._find_similar,
             "search_and_contents": self._search_and_contents,
+            "answer": self._answer,
+            "research": self._research,
         }
 
         if operation not in operations:
@@ -179,20 +223,38 @@ class ExaAdapter(SDKAdapter):
         start_published_date: Optional[str] = None,
         end_published_date: Optional[str] = None,
         use_autoprompt: bool = True,
+        category: Optional[str] = None,
+        livecrawl: str = "fallback",
+        include_text: Optional[list[str]] = None,
+        exclude_text: Optional[list[str]] = None,
+        moderation: bool = False,
+        user_location: Optional[str] = None,
         **kwargs,
     ) -> AdapterResult:
         """
-        Execute neural search.
+        Execute neural search with full Exa 2.0+ capabilities.
 
         Args:
             query: Search query
-            type: Search type (fast/auto/neural/deep)
+            type: Search type:
+                - "auto" (default): Intelligent hybrid selection
+                - "neural": Semantic/embedding-based search
+                - "keyword": Traditional BM25-style search
+                - "fast": <350ms latency optimized
+                - "deep": Exhaustive multi-step agentic search
             num_results: Number of results (max 100)
-            include_domains: Only search these domains
-            exclude_domains: Exclude these domains
+            include_domains: Only search these domains (max 1200, supports paths)
+            exclude_domains: Exclude these domains (max 1200)
             start_published_date: Filter by date (YYYY-MM-DD)
             end_published_date: Filter by date
             use_autoprompt: Let Exa optimize the query
+            category: Focus on: "company", "research paper", "news", "tweet",
+                      "personal site", "financial report", "people", "pdf"
+            livecrawl: "never", "fallback", "preferred", "always", "auto"
+            include_text: Strings that must appear in results (max 1 string, 5 words)
+            exclude_text: Strings to exclude from results
+            moderation: Filter unsafe content
+            user_location: Two-letter ISO country code for localization
         """
         self._stats["searches"] += 1
 
@@ -218,8 +280,17 @@ class ExaAdapter(SDKAdapter):
         search_params = {
             "query": query,
             "num_results": min(num_results, 100),
-            "use_autoprompt": use_autoprompt,
         }
+
+        # use_autoprompt is deprecated in newer Exa SDK versions
+        # Only add if the SDK version supports it
+        try:
+            import inspect
+            sig = inspect.signature(self._client.search)
+            if 'use_autoprompt' in sig.parameters:
+                search_params["use_autoprompt"] = use_autoprompt
+        except Exception:
+            pass  # Skip if we can't introspect
 
         # Map type to Exa search type
         if type == "fast":
@@ -235,13 +306,24 @@ class ExaAdapter(SDKAdapter):
 
         # Add filters
         if include_domains:
-            search_params["include_domains"] = include_domains
+            search_params["include_domains"] = include_domains[:1200]
         if exclude_domains:
-            search_params["exclude_domains"] = exclude_domains
+            search_params["exclude_domains"] = exclude_domains[:1200]
         if start_published_date:
             search_params["start_published_date"] = start_published_date
         if end_published_date:
             search_params["end_published_date"] = end_published_date
+        if category:
+            # Note: company/people categories don't support date filtering
+            search_params["category"] = category
+        if include_text:
+            search_params["include_text"] = include_text[:1]  # Max 1 string, 5 words
+        if exclude_text:
+            search_params["exclude_text"] = exclude_text
+        if moderation:
+            search_params["moderation"] = True
+        if user_location:
+            search_params["user_location"] = user_location
 
         # Execute search
         response = self._client.search(**search_params)
@@ -276,6 +358,9 @@ class ExaAdapter(SDKAdapter):
         urls: list[str],
         text: bool = True,
         highlights: bool = False,
+        summary: bool = False,
+        subpages: int = 0,
+        livecrawl: str = "fallback",
         **kwargs,
     ) -> AdapterResult:
         """
@@ -285,6 +370,9 @@ class ExaAdapter(SDKAdapter):
             urls: List of URLs to fetch
             text: Include full text
             highlights: Include highlights
+            summary: Generate AI summary
+            subpages: Number of subpages to crawl (0-10)
+            livecrawl: "never", "fallback", "preferred", "always", "auto"
         """
         self._stats["contents_fetched"] += len(urls)
 
@@ -303,6 +391,12 @@ class ExaAdapter(SDKAdapter):
             contents_options["text"] = True
         if highlights:
             contents_options["highlights"] = {"num_sentences": 3}
+        if summary:
+            contents_options["summary"] = True
+        if subpages > 0:
+            contents_options["subpages"] = min(subpages, 10)
+        if livecrawl and livecrawl != "fallback":
+            contents_options["livecrawl"] = livecrawl
 
         response = self._client.get_contents(urls, **contents_options)
 
@@ -398,6 +492,95 @@ class ExaAdapter(SDKAdapter):
                 "count": len(results),
             }
         )
+
+    async def _answer(
+        self,
+        query: str,
+        **kwargs,
+    ) -> AdapterResult:
+        """
+        Ask a question and get an AI-generated answer with citations.
+
+        Args:
+            query: The question to answer
+        """
+        self._stats["searches"] += 1
+
+        if not self._client:
+            return AdapterResult(
+                success=True,
+                data={
+                    "answer": f"Mock answer for: {query}",
+                    "citations": [],
+                    "mock": True,
+                }
+            )
+
+        try:
+            response = self._client.answer(query)
+            return AdapterResult(
+                success=True,
+                data={
+                    "answer": getattr(response, "answer", ""),
+                    "citations": getattr(response, "citations", []),
+                }
+            )
+        except Exception as e:
+            return AdapterResult(success=False, error=str(e))
+
+    async def _research(
+        self,
+        instructions: str,
+        output_schema: dict = None,
+        **kwargs,
+    ) -> AdapterResult:
+        """
+        Perform complex research with structured output.
+
+        Args:
+            instructions: Research instructions
+            output_schema: JSON schema for structured output
+        """
+        self._stats["searches"] += 1
+
+        if not self._client:
+            return AdapterResult(
+                success=True,
+                data={
+                    "result": f"Mock research for: {instructions}",
+                    "mock": True,
+                }
+            )
+
+        try:
+            # Check if research API is available
+            if hasattr(self._client, 'research'):
+                params = {"instructions": instructions}
+                if output_schema:
+                    params["output_schema"] = output_schema
+                response = self._client.research.create(**params)
+                return AdapterResult(
+                    success=True,
+                    data={
+                        "result": response,
+                    }
+                )
+            else:
+                # Fallback to search + answer
+                search_result = await self._search(instructions, num_results=5, include_contents=True)
+                if search_result.success:
+                    answer_result = await self._answer(instructions)
+                    return AdapterResult(
+                        success=True,
+                        data={
+                            "result": answer_result.data.get("answer", ""),
+                            "sources": search_result.data.get("results", []),
+                            "fallback": True,
+                        }
+                    )
+                return search_result
+        except Exception as e:
+            return AdapterResult(success=False, error=str(e))
 
     async def health_check(self) -> AdapterResult:
         """Check Exa API health."""
