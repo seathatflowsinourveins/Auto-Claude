@@ -1,98 +1,133 @@
 # Unified Memory Configuration
-# V33 Architecture - Multi-Provider Memory Layer
+# V36 Architecture - Multi-Provider Memory Layer
+
+version: "36.0.0"
 
 # Default Settings
 defaults:
-  provider: "local"
+  provider: "letta"
   tier: "archival"
   importance: 0.5
   auto_sync: true
 
+# V36 Memory Tier Configuration
+tiers:
+  main_context:
+    description: "Immediate working memory (in LLM context)"
+    max_tokens: 8000
+    persistence: false
+
+  core_memory:
+    description: "Essential persistent facts"
+    max_tokens: 4000
+    persistence: true
+    backend: "letta"
+
+  recall_memory:
+    description: "Recent conversation history"
+    max_entries: 100
+    ttl_hours: 24
+    backend: "local"
+
+  archival_memory:
+    description: "Long-term searchable storage"
+    backend: "qdrant"
+    embedding_model: "text-embedding-3-small"
+    max_entries: 50000
+
 # Provider Configuration
 providers:
-  # Local Three-Tier Memory
-  local:
+  # Letta Provider (Primary - V36)
+  letta:
     enabled: true
     priority: 1
-    storage_path: "./data/memory"
+    api_url: ${LETTA_BASE_URL:-http://localhost:8283}
+    api_key: ${LETTA_API_KEY}
+    features:
+      blocks: true
+      passages: true
+      sleep_compute: true
 
-    # Core Memory (always in-context)
-    core:
-      max_total_tokens: 12000
-      blocks:
-        system_persona: 3000
-        user_context: 2000
-        task_state: 2000
-        working_memory: 5000
-
-    # Archival Memory (vector-retrieved)
-    archival:
-      enabled: true
-      backend: "local"
-      max_entries: 50000
-      categories:
-        - episodic
-        - semantic
-        - procedural
-
-    # Temporal Graph (knowledge graph)
-    temporal:
-      enabled: true
-      storage_file: "temporal_graph.json"
-      contradiction_handling: "version"
+  # Graphiti Provider (NEW - V36, replaces Zep)
+  graphiti:
+    enabled: true
+    priority: 2
+    neo4j_uri: ${NEO4J_URI:-bolt://localhost:7687}
+    neo4j_user: ${NEO4J_USER:-neo4j}
+    neo4j_password: ${NEO4J_PASSWORD}
+    features:
+      temporal_graphs: true
+      entity_extraction: true
+      relationship_tracking: true
 
   # Mem0 Provider
   mem0:
     enabled: true
-    priority: 2
+    priority: 3
     api_key: ${MEM0_API_KEY}
     options:
       user_id: "default"
       auto_tag: true
 
-  # Zep Provider
-  zep:
-    enabled: true
-    priority: 3
-    api_url: ${ZEP_API_URL}
-    api_key: ${ZEP_API_KEY}
-    session_timeout_hours: 24
-
-  # Letta Provider
-  letta:
+  # SimpleMem Provider (NEW - V36)
+  simplemem:
     enabled: true
     priority: 4
-    config_file: "letta_config.yaml"
+    max_tokens: 4096
+    compression_level: "aggressive"
+    features:
+      context_compression: true
+      learned_context: true
+
+  # Local Provider (Fallback)
+  local:
+    enabled: true
+    priority: 99
+    storage_path: "./data/memory"
+    features:
+      core_memory: true
+      archival_memory: true
+      temporal_graph: true
 
 # Embedding Configuration
 embeddings:
-  provider: "openai"
-  model: "text-embedding-3-small"
-  dimensions: 1536
-  fallback_provider: "local"
+  provider: "voyage"
+  model: "voyage-3"
+  dimensions: 1024
+  fallback:
+    provider: "openai"
+    model: "text-embedding-3-small"
   cache_embeddings: true
   cache_ttl_hours: 168  # 1 week
 
-# Semantic Search Settings
-search:
+# Vector Search Settings (HNSW)
+# Optimized: M=16 saves ~200MB vs M=48 with <2% recall loss at 10K vectors
+vector_search:
+  backend: "qdrant"
+  hnsw:
+    m: 16
+    ef_construction: 200
+    ef_search: 100
+    max_elements: 50000
   default_limit: 10
   min_score: 0.3
   rerank_results: true
-  cross_provider: true
-  dedup_threshold: 0.95
+  reranker: "ragatouille"  # ColBERT late interaction
 
-# Consolidation Settings
+# Consolidation Settings (Sleep-Time Compute)
 consolidation:
   enabled: true
   strategy: "hierarchical"
   schedule:
-    hourly: false
+    idle_trigger: true
+    min_turns: 5
     daily: true
-    weekly: true
   thresholds:
     age_days: 7
     min_access_count: 1
     importance_cutoff: 0.2
+  simplemem:
+    target_compression: 30  # 30x reduction
 
 # Import Scoring (for cross-session bootstrap)
 import_scoring:
@@ -107,11 +142,11 @@ import_scoring:
     validations: 0.7
     info: 0.4
   source_scores:
-    claude-mem: 0.9
-    serena: 0.85
-    episodic: 0.8
-    unified: 0.75
-    local: 0.6
+    letta: 0.95
+    graphiti: 0.90
+    mem0: 0.85
+    simplemem: 0.80
+    local: 0.60
 
 # Logging
 logging:

@@ -1,28 +1,186 @@
 # Claude Flow V3 Runtime Configuration
-# Generated: 2026-01-27T05:58:54.998Z
+# Optimized: 2026-02-03 - Performance tuning, HNSW, pooling, security
+# Original: 2026-02-02T21:54:44.378Z
 
 version: "3.0.0"
 
+# =============================================================================
+# SWARM CONFIGURATION
+# =============================================================================
 swarm:
   topology: hierarchical-mesh
   maxAgents: 15
   autoScale: true
-  coordinationStrategy: consensus
+  coordinationStrategy: raft
 
+  # Agent Pool (reduces spawn latency 30-50%)
+  pooling:
+    enabled: true
+    minIdle: 2
+    maxIdle: 5
+    idleTimeout: 300
+
+  # Workflow Caching (60-80% speedup on cache hits)
+  caching:
+    enabled: true
+    strategy: content-hash
+    ttl: 3600
+
+  # Parallel Execution
+  parallelExecution:
+    enabled: true
+    maxConcurrent: 10
+    resourceAllocation: dynamic
+
+  # Anti-Drift
+  drift:
+    checkpointInterval: 5
+    stateSync: true
+    conflictResolution: leader-wins
+
+# =============================================================================
+# MEMORY CONFIGURATION
+# =============================================================================
 memory:
   backend: hybrid
   enableHNSW: true
   persistPath: .claude-flow/data
   cacheSize: 100
 
+  # Automatic cleanup (prevents memory bloat)
+  cleanup:
+    enabled: true
+    strategy: lru
+    threshold: 80
+    interval: 1800
+
+  # HNSW Index (optimized: M=16 saves ~200MB vs M=48, minimal recall loss)
+  hnsw:
+    m: 16
+    efConstruction: 200
+    efSearch: 100
+    maxElements: 10000
+
+# =============================================================================
+# NEURAL LEARNING
+# =============================================================================
 neural:
   enabled: true
   modelPath: .claude-flow/neural
+  training:
+    enabled: true
+    batchSize: 32
+    learningRate: 0.001
+    saveInterval: 100
+  patterns:
+    - coordination
+    - optimization
+    - prediction
+    - error-recovery
 
+# =============================================================================
+# HOOKS SYSTEM
+# =============================================================================
 hooks:
   enabled: true
   autoExecute: true
+  timeout: 5000
+  continueOnError: true
 
+# =============================================================================
+# MCP SERVER SETTINGS
+# =============================================================================
 mcp:
   autoStart: false
   port: 3000
+  transport: stdio
+  connection:
+    timeout: 30000
+    retryAttempts: 3
+    retryBackoff: exponential
+    keepAlive: true
+
+# =============================================================================
+# 3-TIER MODEL ROUTING (ADR-026)
+# =============================================================================
+routing:
+  enabled: true
+  strategy: complexity-based
+  tiers:
+    - name: fast
+      model: claude-3-5-haiku-20241022
+      complexityThreshold: 0.3
+      latencyMs: 500
+    - name: balanced
+      model: claude-sonnet-4-5-20250929
+      complexityThreshold: 0.7
+      latencyMs: 2000
+    - name: powerful
+      model: claude-opus-4-5-20251101
+      complexityThreshold: 1.0
+      latencyMs: 5000
+
+# =============================================================================
+# PERFORMANCE TUNING
+# =============================================================================
+performance:
+  batch:
+    enabled: true
+    maxSize: 50
+    timeout: 30000
+  connectionPool:
+    size: 10
+    timeout: 5000
+  circuitBreaker:
+    enabled: true
+    failureThreshold: 5
+    recoveryTimeout: 30000
+    halfOpenRequests: 3
+
+# =============================================================================
+# LOGGING & MONITORING
+# =============================================================================
+logging:
+  level: INFO
+  format: structured
+  file:
+    path: .claude-flow/logs
+    maxSize: 10485760
+    maxFiles: 5
+    compress: true
+  metrics:
+    enabled: true
+    interval: 60000
+    include:
+      - agent_spawn_time
+      - task_duration
+      - memory_usage
+      - cache_hit_rate
+      - model_routing
+
+# =============================================================================
+# SECURITY
+# =============================================================================
+security:
+  validation:
+    enabled: true
+    maxInputSize: 100000
+    sanitizePaths: true
+  secrets:
+    provider: env
+    prefix: CLAUDE_FLOW_
+  audit:
+    enabled: true
+    logLevel: INFO
+    sensitiveFields:
+      - apiKey
+      - token
+      - password
+
+# =============================================================================
+# RATE LIMITING
+# =============================================================================
+rateLimit:
+  enabled: true
+  maxRequests: 100
+  windowMs: 60000
