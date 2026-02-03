@@ -1,0 +1,95 @@
+[
+  {
+    "query": "Anthropic MCP (Model Context Protocol) architecture and tool patterns",
+    "agents": 6,
+    "sources": 35,
+    "confidence": 0.98,
+    "tools": [
+      "perplexity",
+      "exa",
+      "tavily",
+      "jina",
+      "context7"
+    ],
+    "latency_s": 14.47003698348999,
+    "patterns": [
+      "Query Type: Technical Documentation",
+      "Strong coverage from tavily (11 sources)"
+    ],
+    "key_finding": "[tavily] The Model Context Protocol (MCP) uses a client-server architecture to connect AI systems with external data sources securely"
+  },
+  {
+    "query": "Claude Code vs Cursor vs GitHub Copilot comparison 2026",
+    "agents": 6,
+    "sources": 35,
+    "confidence": 0.98,
+    "tools": [
+      "perplexity",
+      "exa",
+      "tavily",
+      "jina",
+      "context7"
+    ],
+    "latency_s": 23.310115337371826,
+    "patterns": [
+      "Query Type: Code Example",
+      "Strong coverage from tavily (11 sources)"
+    ],
+    "key_finding": "[tavily] GitHub Copilot is best for daily coding and autocomplete; Cursor excels in multi-file editing and large projects; Claude Code is ideal for complex debugging and architecture work."
+  },
+  {
+    "query": "SONA Self-Optimizing Neural Architecture patterns",
+    "agents": 5,
+    "sources": 33,
+    "confidence": 0.98,
+    "tools": [
+      "tavily",
+      "perplexity",
+      "jina",
+      "exa"
+    ],
+    "latency_s": 27.132823944091797,
+    "patterns": [
+      "Query Type: Code Example",
+      "Strong coverage from tavily (11 sources)"
+    ],
+    "key_finding": "[tavily] SONA is a self-optimizing neural architecture system that adapts and optimizes its structure based on training data"
+  },
+  {
+    "query": "Agentic AI workflows: planning, execution, reflection loops",
+    "agents": 5,
+    "sources": 34,
+    "confidence": 0.98,
+    "tools": [
+      "tavily",
+      "perplexity",
+      "jina",
+      "exa"
+    ],
+    "latency_s": 27.01239323616028,
+    "patterns": [
+      "Query Type: API Reference",
+      "Strong coverage from tavily (11 sources)"
+    ],
+    "key_finding": "[tavily] Agentic AI workflows involve planning, execution, and reflection loops for adaptive, iterative problem-solving"
+  },
+  {
+    "query": "Embedding models comparison: OpenAI vs Cohere vs Jina vs BGE",
+    "agents": 6,
+    "sources": 35,
+    "confidence": 0.98,
+    "tools": [
+      "perplexity",
+      "exa",
+      "tavily",
+      "jina",
+      "context7"
+    ],
+    "latency_s": 15.652994394302368,
+    "patterns": [
+      "Query Type: API Reference",
+      "Strong coverage from tavily (11 sources)"
+    ],
+    "key_finding": "[tavily] For RAG, Cohere embed-v4 leads, followed by OpenAI text-embedding-3-large; open-source BGE-M3 is also competitive"
+  }
+]

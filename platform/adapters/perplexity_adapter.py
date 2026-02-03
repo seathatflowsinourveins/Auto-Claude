@@ -354,9 +354,9 @@ class PerplexityAdapter(SDKAdapter):
                 }
             )
 
-        # Use sonar-reasoning for deep research (more reliable than sonar-deep-research)
-        # Fallback chain: sonar-reasoning -> sonar-pro -> sonar
-        models_to_try = ["sonar-reasoning", "sonar-pro", "sonar"]
+        # Use sonar-pro for deep research (sonar-reasoning not available as of 2026-02)
+        # Fallback chain: sonar-pro -> sonar
+        models_to_try = ["sonar-pro", "sonar"]
 
         for model in models_to_try:
             try:
@@ -453,8 +453,8 @@ Think through this carefully and explain your reasoning."""
 
         messages.append({"role": "user", "content": reasoning_prompt})
 
-        # Try sonar-reasoning first, fall back to sonar-pro
-        models_to_try = ["sonar-reasoning", "sonar-pro", "sonar"]
+        # Use available models (sonar-reasoning not available as of 2026-02)
+        models_to_try = ["sonar-pro", "sonar"]
 
         for model in models_to_try:
             try:

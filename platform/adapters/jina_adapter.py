@@ -554,21 +554,22 @@ class JinaAdapter(SDKAdapter):
             return await self._search(query)
 
         try:
+            # Jina DeepSearch - OpenAI compatible with reasoning parameters
+            # Note: streaming is recommended but we use non-streaming for simplicity
             response = await self._client.post(
                 "https://deepsearch.jina.ai/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {self._api_key}",
                     "Content-Type": "application/json",
+                    "Accept": "application/json",
                 },
                 json={
                     "model": "jina-deepsearch-v1",
                     "messages": [{"role": "user", "content": query}],
                     "stream": False,
-                    "reasoning_effort": "medium",
-                    "budget_tokens": budget_tokens,
-                    "max_attempts": max_attempts,
+                    "reasoning_effort": "low",  # low/medium/high - use low for speed
                 },
-                timeout=120.0,  # DeepSearch can take longer
+                timeout=180.0,  # DeepSearch can take longer
             )
 
             if response.status_code == 200:
