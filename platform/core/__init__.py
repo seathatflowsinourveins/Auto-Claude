@@ -990,6 +990,23 @@ __all__ = [
     "ResearchBridge",
     "get_bridge",
     "research",
+    # ==========================================================================
+    # V36.1 Ultimate Research Swarm - Claude Flow V3 + Research Orchestration
+    # ==========================================================================
+    "ULTIMATE_RESEARCH_SWARM_AVAILABLE",
+    "UltimateResearchDepth",
+    "ResearchAgentType",
+    "UltimateResearchSource",
+    "SynthesizedResult",
+    "UltimateResearchResult",
+    "ResearchSwarmConfig",
+    "SynthesisQueen",
+    "ResearchMemoryManager",
+    "UltimateResearchSwarm",
+    "get_ultimate_swarm",
+    "quick_research",
+    "comprehensive_research",
+    "ultimate_deep_research",
 ]
 
 
@@ -1784,3 +1801,46 @@ except ImportError:
     record_pattern = None
     query_patterns = None
     load_known_patterns = None
+
+# =============================================================================
+# V36.1 Ultimate Research Swarm - Claude Flow V3 + Research Orchestration
+# =============================================================================
+# Unleashes Claude's potential through multi-agent research orchestration
+# - Synthesis Queen: 100KB+ research results → 2-4KB context-fitting summaries
+# - Parallel agents: Exa (<350ms), Tavily (AI search), Jina (URL→MD), Perplexity (deep)
+# - Memory integration: Letta (archival), Mem0 (universal), Qdrant (vector)
+try:
+    from .ultimate_research_swarm import (
+        # Core types
+        ResearchDepth as UltimateResearchDepth,
+        ResearchAgentType,
+        ResearchSource as UltimateResearchSource,
+        SynthesizedResult,
+        UltimateResearchResult,
+        ResearchSwarmConfig,
+        # Main classes
+        SynthesisQueen,
+        ResearchMemoryManager,
+        UltimateResearchSwarm,
+        # Factory functions
+        get_ultimate_swarm,
+        quick_research,
+        comprehensive_research,
+        deep_research as ultimate_deep_research,
+    )
+    ULTIMATE_RESEARCH_SWARM_AVAILABLE = True
+except ImportError:
+    ULTIMATE_RESEARCH_SWARM_AVAILABLE = False
+    UltimateResearchDepth = None
+    ResearchAgentType = None
+    UltimateResearchSource = None
+    SynthesizedResult = None
+    UltimateResearchResult = None
+    ResearchSwarmConfig = None
+    SynthesisQueen = None
+    ResearchMemoryManager = None
+    UltimateResearchSwarm = None
+    get_ultimate_swarm = None
+    quick_research = None
+    comprehensive_research = None
+    ultimate_deep_research = None
