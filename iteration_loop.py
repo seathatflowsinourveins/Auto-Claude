@@ -24,27 +24,27 @@ from core.ultimate_research_swarm import (
 )
 
 
-# Research topics for deep dive iteration - ROUND 3: EMERGING TECH
+# Research topics for deep dive iteration - ROUND 5: FUTURE FRONTIERS
 RESEARCH_TOPICS = [
-    # Round 3: Next-Gen Architectures
-    "Mixture of Experts MoE vs dense transformer architecture tradeoffs 2026",
-    "Sparse attention vs linear attention vs state space models comparison",
+    # Round 5: Reasoning & Planning
+    "Tree of Thought vs Chain of Thought vs Graph of Thought reasoning comparison",
+    "AI planning algorithms: MCTS vs beam search vs A* for agent planning",
 
-    # Round 3: Agentic Workflows
-    "Tool use patterns: function calling vs structured outputs vs JSON mode",
-    "Multi-modal agents: vision-language-action models production deployment",
+    # Round 5: Multi-Agent Systems
+    "Agent swarm coordination patterns: hierarchical vs mesh vs stigmergy",
+    "Inter-agent communication protocols: shared memory vs message passing",
 
-    # Round 3: Fine-tuning & Adaptation
-    "LoRA vs QLoRA vs DoRA vs ReLoRA fine-tuning comparison 2026",
-    "Continual learning vs catastrophic forgetting mitigation strategies",
+    # Round 5: Safety & Alignment
+    "Interpretability tools: TransformerLens vs Baukit vs Anthropic attribution",
+    "Prompt injection defense: guardrails vs input sanitization vs output filtering",
 
-    # Round 3: Evaluation & Testing
-    "LLM evaluation frameworks: RAGAS vs DeepEval vs OpenAI Evals comparison",
-    "Red teaming and adversarial testing for AI agents best practices",
+    # Round 5: Efficiency
+    "Speculative decoding: Medusa vs Eagle vs Lookahead decoding comparison",
+    "KV cache optimization: PagedAttention vs RadixAttention vs ChunkAttention",
 
-    # Round 3: Enterprise Patterns
-    "AI gateway patterns: LiteLLM vs Portkey vs AI Router comparison",
-    "Observability stack for LLM applications: LangSmith vs Langfuse vs Helicone",
+    # Round 5: Ecosystem
+    "AI orchestration: Prefect vs Airflow vs Dagster for ML pipelines 2026",
+    "Feature stores: Feast vs Tecton vs Hopsworks for LLM applications",
 ]
 
 

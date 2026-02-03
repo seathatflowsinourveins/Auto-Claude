@@ -1,0 +1,159 @@
+{
+  "timestamp": "2026-02-02T23:27:42.366956",
+  "summary": {
+    "total_tests": 18,
+    "passed": 18,
+    "success_rate": 1.0
+  },
+  "results": [
+    {
+      "sdk": "anthropic",
+      "tests": [],
+      "status": "FAIL",
+      "error": "Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CXkW9AojQi1AmLazH9ZRC'}"
+    },
+    {
+      "sdk": "openai",
+      "tests": [
+        {
+          "name": "chat_completion",
+          "success": true,
+          "latency_ms": 808.0942630767822
+        },
+        {
+          "name": "function_calling",
+          "success": true,
+          "latency_ms": 1731.476068496704
+        },
+        {
+          "name": "embeddings",
+          "success": true,
+          "latency_ms": 984.2274188995361
+        }
+      ],
+      "status": "PASS",
+      "tests_passed": 3
+    },
+    {
+      "sdk": "langchain",
+      "tests": [],
+      "status": "SKIP"
+    },
+    {
+      "sdk": "langgraph",
+      "tests": [
+        {
+          "name": "graph_creation",
+          "success": true,
+          "latency_ms": 3.0558109283447266
+        },
+        {
+          "name": "graph_execution",
+          "success": true,
+          "latency_ms": 7.3337554931640625
+        },
+        {
+          "name": "conditional_edges",
+          "success": true,
+          "latency_ms": 3.0641555786132812
+        }
+      ],
+      "status": "PASS",
+      "tests_passed": 3
+    },
+    {
+      "sdk": "exa",
+      "tests": [
+        {
+          "name": "neural_search",
+          "success": true,
+          "latency_ms": 736.952543258667
+        },
+        {
+          "name": "search_contents",
+          "success": true,
+          "latency_ms": 1466.8574333190918
+        },
+        {
+          "name": "find_similar",
+          "success": true,
+          "latency_ms": 959.230899810791
+        }
+      ],
+      "status": "PASS",
+      "tests_passed": 3
+    },
+    {
+      "sdk": "tavily",
+      "tests": [
+        {
+          "name": "basic_search",
+          "success": true,
+          "latency_ms": 1477.5924682617188
+        },
+        {
+          "name": "advanced_search",
+          "success": true,
+          "latency_ms": 1829.516887664795
+        },
+        {
+          "name": "extract",
+          "success": true,
+          "latency_ms": 46.28252983093262
+        }
+      ],
+      "status": "PASS",
+      "tests_passed": 3
+    },
+    {
+      "sdk": "jina",
+      "tests": [
+        {
+          "name": "reader_api",
+          "success": true,
+          "latency_ms": 1757.4760913848877
+        },
+        {
+          "name": "embeddings",
+          "success": true,
+          "latency_ms": 227.91051864624023
+        },
+        {
+          "name": "reranker",
+          "success": true,
+          "latency_ms": 162.70065307617188
+        }
+      ],
+      "status": "PASS",
+      "tests_passed": 3
+    },
+    {
+      "sdk": "perplexity",
+      "tests": [],
+      "status": "FAIL",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "sdk": "qdrant",
+      "tests": [
+        {
+          "name": "client_creation",
+          "success": true,
+          "latency_ms": 6.528139114379883
+        },
+        {
+          "name": "create_collection",
+          "success": true,
+          "latency_ms": 0.12373924255371094
+        },
+        {
+          "name": "upsert_search",
+          "success": true,
+          "latency_ms": 6.1817169189453125
+        }
+      ],
+      "status": "PASS",
+      "tests_passed": 3
+    }
+  ]
+}
