@@ -18,7 +18,7 @@ API Patterns (verified from openai-swarm 0.1.0):
 - Handoff patterns via function returns
 
 Usage:
-    from platform.adapters.openai_agents_adapter import OpenAIAgentsAdapter
+    from adapters.openai_agents_adapter import OpenAIAgentsAdapter
 
     adapter = OpenAIAgentsAdapter()
     await adapter.initialize({})
@@ -55,7 +55,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -435,7 +435,7 @@ class OpenAIAgentsAdapter(SDKAdapter):
 
 # Register with SDK registry if available
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("openai-agents", SDKLayer.ORCHESTRATION, priority=15)
     class RegisteredOpenAIAgentsAdapter(OpenAIAgentsAdapter):

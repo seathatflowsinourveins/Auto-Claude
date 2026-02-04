@@ -20,7 +20,7 @@ MCP Ecosystem (from claude-flow and mcp-ecosystem):
 - Custom servers via stdio/SSE transport
 
 Usage:
-    from platform.adapters.mcp_apps_adapter import MCPAppsAdapter
+    from adapters.mcp_apps_adapter import MCPAppsAdapter
 
     adapter = MCPAppsAdapter()
     await adapter.initialize({
@@ -62,7 +62,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -583,7 +583,7 @@ class MCPAppsAdapter(SDKAdapter):
 
 # Register with SDK registry if available
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("mcp-apps", SDKLayer.PROTOCOL, priority=25)
     class RegisteredMCPAppsAdapter(MCPAppsAdapter):

@@ -19,7 +19,7 @@ ColBERT Architecture:
 - 32x-128x faster than cross-encoders
 
 Usage:
-    from platform.adapters.ragatouille_adapter import RAGatouilleAdapter
+    from adapters.ragatouille_adapter import RAGatouilleAdapter
 
     adapter = RAGatouilleAdapter()
     await adapter.initialize({"model": "colbert-ir/colbertv2.0"})
@@ -55,7 +55,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -542,7 +542,7 @@ class RAGatouilleAdapter(SDKAdapter):
 
 # Register with SDK registry
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("ragatouille", SDKLayer.PROCESSING, priority=14)
     class RegisteredRAGatouilleAdapter(RAGatouilleAdapter):

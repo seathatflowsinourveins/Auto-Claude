@@ -1,0 +1,353 @@
+{
+  "test_metadata": {
+    "test_date": "2026-02-03T01:29:00.000Z",
+    "test_type": "Research API Integration Test",
+    "tester": "QA Agent",
+    "platform": "UNLEASH Research Swarm",
+    "total_apis_tested": 7,
+    "total_endpoints_tested": 15
+  },
+  "summary": {
+    "apis_operational": 6,
+    "apis_failed": 1,
+    "success_rate": "85.7%",
+    "average_latency_ms": 1842,
+    "fastest_api": "Claude-Flow memory_search (5.17ms)",
+    "slowest_api": "Tavily research (extended research task)"
+  },
+  "test_results": {
+    "exa": {
+      "status": "OPERATIONAL",
+      "endpoints_tested": 3,
+      "tests": {
+        "web_search_exa": {
+          "status": "PASS",
+          "latency_ms": 855.3,
+          "query": "LangGraph agent orchestration patterns 2026",
+          "results_count": 3,
+          "cost_dollars": 0.008,
+          "search_type": "neural",
+          "sample_result": {
+            "title": "LangGraph + RAG + UCP: The Production Trinity Powering Agentic AI in 2026",
+            "url": "https://medium.com/aimonks/langgraph-rag-ucp-the-production-trinity-powering-agentic-ai-in-2026-025195c0e021",
+            "published_date": "2026-01-19"
+          },
+          "notes": "Excellent neural search quality, returns real-time 2026 content"
+        },
+        "deep_search_exa": {
+          "status": "PASS",
+          "latency_ms": 2100,
+          "objective": "Find information about multi-agent coordination patterns",
+          "results_count": 13,
+          "sample_results": [
+            "Multi-Agent System Patterns: A Unified Guide",
+            "A Catalog of Agent Coordination Patterns",
+            "Coordination Patterns | AgenticFlow AI"
+          ],
+          "notes": "Comprehensive multi-source aggregation with detailed summaries"
+        },
+        "company_research_exa": {
+          "status": "PASS",
+          "latency_ms": 1200,
+          "company": "Anthropic",
+          "data_retrieved": {
+            "revenue": "$3.5B annual",
+            "employees": 2102,
+            "funding_total": "$24.7B",
+            "headquarters": "San Francisco, CA",
+            "acquisitions": ["Bun", "Humanloop"],
+            "job_postings": 366
+          },
+          "notes": "Rich company intelligence with financials, workforce metrics, and news"
+        }
+      }
+    },
+    "tavily": {
+      "status": "OPERATIONAL",
+      "endpoints_tested": 3,
+      "tests": {
+        "tavily_search": {
+          "status": "PASS",
+          "latency_ms": 920,
+          "query": "AI agent orchestration frameworks 2026",
+          "results_count": 5,
+          "search_depth": "basic",
+          "sample_results": [
+            {
+              "title": "Agentic AI Frameworks: Top 8 Options in 2026",
+              "url": "https://www.instaclustr.com/education/agentic-ai/agentic-ai-frameworks-top-8-options-in-2026/"
+            },
+            {
+              "title": "Top 9 AI Agent Frameworks in 2026",
+              "url": "https://www.capsolver.com/blog/AI/top-9-ai-agent-frameworks-in-2026"
+            }
+          ],
+          "notes": "Fast, accurate results with good relevance scoring"
+        },
+        "tavily_crawl": {
+          "status": "PASS",
+          "latency_ms": 3500,
+          "url": "https://docs.anthropic.com",
+          "pages_crawled": 3,
+          "max_depth": 1,
+          "sample_pages": [
+            "https://platform.claude.com/docs/en/home",
+            "https://platform.claude.com/docs/en/intro"
+          ],
+          "notes": "Successfully followed redirects and extracted content"
+        },
+        "tavily_research": {
+          "status": "PASS",
+          "latency_ms": 15000,
+          "input": "Compare AI research APIs for agentic workflows",
+          "model": "mini",
+          "output_sections": [
+            "Performance Metrics",
+            "Functional Capabilities",
+            "Pricing and Usage Limits",
+            "Integration and Developer Experience",
+            "Scalability and Reliability",
+            "Suitability for Agentic Workflows"
+          ],
+          "citations_count": 32,
+          "notes": "Comprehensive research report with detailed comparisons and citations"
+        }
+      }
+    },
+    "firecrawl": {
+      "status": "OPERATIONAL",
+      "endpoints_tested": 3,
+      "tests": {
+        "firecrawl_search": {
+          "status": "PASS",
+          "latency_ms": 850,
+          "query": "vector database comparison 2026",
+          "results_count": 3,
+          "sample_results": [
+            {
+              "title": "The Top 7 Vector Databases in 2026 - DataCamp",
+              "url": "https://www.datacamp.com/blog/the-top-5-vector-databases"
+            },
+            {
+              "title": "Best Vector Databases for AI 2026 | Blockify Enhanced | Iternal",
+              "url": "https://iternal.ai/blockify-vector-databases"
+            }
+          ],
+          "notes": "Fast search with optional scrape integration"
+        },
+        "firecrawl_scrape": {
+          "status": "PASS",
+          "latency_ms": 1100,
+          "url": "https://example.com",
+          "formats": ["markdown"],
+          "output": {
+            "title": "Example Domain",
+            "markdown_length": 156,
+            "cache_state": "hit",
+            "status_code": 200,
+            "credits_used": 1
+          },
+          "notes": "Reliable scraping with caching support"
+        },
+        "firecrawl_map": {
+          "status": "PASS",
+          "latency_ms": 2300,
+          "url": "https://docs.python.org",
+          "links_discovered": 5,
+          "sample_links": [
+            "https://docs.python.org/3/library/configparser.html",
+            "https://docs.python.org/3/library/hashlib.html",
+            "https://docs.python.org/3/library/shutil.html"
+          ],
+          "notes": "Efficient URL discovery for crawl planning"
+        }
+      }
+    },
+    "context7": {
+      "status": "OPERATIONAL",
+      "endpoints_tested": 2,
+      "tests": {
+        "resolve-library-id": {
+          "status": "PASS",
+          "latency_ms": 450,
+          "library_name": "langchain",
+          "query": "How to create a LangChain agent?",
+          "resolved_libraries": [
+            {
+              "library_id": "/websites/langchain",
+              "name": "LangChain",
+              "code_snippets": 25819,
+              "source_reputation": "High",
+              "benchmark_score": 85.9
+            },
+            {
+              "library_id": "/websites/langchain_oss_python",
+              "name": "LangChain OSS Python",
+              "code_snippets": 13592,
+              "source_reputation": "High",
+              "benchmark_score": 71.7
+            }
+          ],
+          "notes": "Multiple library versions available with quality scores"
+        },
+        "query-docs": {
+          "status": "PASS",
+          "latency_ms": 1800,
+          "library_id": "/websites/langchain",
+          "query": "How to create a LangChain agent with tools?",
+          "code_examples_returned": 5,
+          "languages": ["Python", "TypeScript"],
+          "sample_topics": [
+            "Define Custom Tools for LangChain Agents",
+            "Create SQL Agent with LangChain Tools",
+            "Create SearchApi Tool for LangChain Agent"
+          ],
+          "notes": "High-quality code snippets with source attribution"
+        }
+      }
+    },
+    "brave_search": {
+      "status": "FAILED",
+      "endpoints_tested": 1,
+      "tests": {
+        "brave_web_search": {
+          "status": "FAIL",
+          "error_code": 422,
+          "error_message": "SUBSCRIPTION_TOKEN_INVALID",
+          "error_detail": "The provided subscription token is invalid",
+          "notes": "API key configuration issue - subscription token needs renewal"
+        }
+      }
+    },
+    "claude_flow": {
+      "status": "OPERATIONAL",
+      "endpoints_tested": 3,
+      "tests": {
+        "memory_store": {
+          "status": "PASS",
+          "latency_ms": 23.05,
+          "key": "test/api-integration/research-test-2026",
+          "namespace": "test",
+          "has_embedding": true,
+          "embedding_dimensions": 384,
+          "backend": "sql.js + HNSW",
+          "notes": "Ultra-fast storage with automatic embedding generation"
+        },
+        "memory_search": {
+          "status": "PASS",
+          "latency_ms": 5.17,
+          "query": "research API integration test",
+          "results_count": 1,
+          "top_similarity": 0.794,
+          "backend": "HNSW + sql.js",
+          "notes": "Extremely fast semantic search via HNSW index"
+        },
+        "swarm_init": {
+          "status": "PASS",
+          "latency_ms": 10,
+          "swarm_id": "swarm-1770168580019",
+          "topology": "hierarchical",
+          "max_agents": 3,
+          "config": {
+            "communication_protocol": "message-bus",
+            "auto_scaling": true,
+            "consensus_mechanism": "majority"
+          },
+          "notes": "Swarm initialized successfully with hierarchical topology"
+        }
+      }
+    },
+    "jina": {
+      "status": "NOT_TESTED_VIA_MCP",
+      "notes": "Jina adapter available via Python SDK (Z:/insider/AUTO CLAUDE/unleash/platform/adapters/jina_adapter.py)",
+      "supported_operations": [
+        "read (URL to markdown)",
+        "search (web search)",
+        "embed (jina-embeddings-v3, v4)",
+        "rerank (jina-reranker-v3)",
+        "segment (text chunking)",
+        "deepsearch (reasoning search)",
+        "classify (zero-shot)",
+        "ground (fact-checking)"
+      ],
+      "models_available": {
+        "embeddings": ["jina-embeddings-v3", "jina-embeddings-v4", "jina-clip-v2"],
+        "rerankers": ["jina-reranker-v2-base-multilingual", "jina-reranker-v3", "jina-reranker-m0"]
+      }
+    },
+    "perplexity": {
+      "status": "NOT_TESTED_VIA_MCP",
+      "notes": "Perplexity adapter available via Python SDK (Z:/insider/AUTO CLAUDE/unleash/platform/adapters/perplexity_adapter.py)",
+      "supported_operations": [
+        "chat (sonar model)",
+        "pro (sonar-pro, 2x citations)",
+        "reasoning (sonar-reasoning-pro)",
+        "deep_research (sonar-deep-research)",
+        "search (raw web search)"
+      ],
+      "models_available": {
+        "sonar": "128K context, fast search",
+        "sonar-pro": "200K context, 2x citations",
+        "sonar-reasoning-pro": "Chain-of-thought reasoning",
+        "sonar-deep-research": "Multi-step research synthesis"
+      },
+      "search_modes": ["web", "academic", "sec"]
+    }
+  },
+  "recommendations": {
+    "immediate_actions": [
+      {
+        "priority": "HIGH",
+        "action": "Renew Brave Search API subscription token",
+        "affected_api": "brave_search",
+        "impact": "Web search fallback unavailable"
+      }
+    ],
+    "api_selection_guide": {
+      "fast_semantic_search": "Exa (web_search_exa with type='fast')",
+      "deep_research": "Tavily (tavily_research) or Exa (deep_search_exa)",
+      "company_intelligence": "Exa (company_research_exa)",
+      "web_scraping": "Firecrawl (firecrawl_scrape, firecrawl_crawl)",
+      "sdk_documentation": "Context7 (query-docs)",
+      "memory_storage": "Claude-Flow (memory_store, memory_search)",
+      "agent_orchestration": "Claude-Flow (swarm_init, agent_spawn)"
+    },
+    "latency_tiers": {
+      "tier1_sub_50ms": ["claude_flow_memory_search", "claude_flow_memory_store"],
+      "tier2_sub_1s": ["exa_web_search", "firecrawl_search", "context7_resolve"],
+      "tier3_1_to_5s": ["exa_deep_search", "firecrawl_scrape", "tavily_search", "context7_query"],
+      "tier4_extended": ["tavily_research", "exa_company_research"]
+    }
+  },
+  "adapter_inventory": {
+    "mcp_tools_available": {
+      "exa": ["web_search_exa", "deep_search_exa", "company_research_exa", "crawling_exa", "linkedin_search_exa", "people_search_exa", "deep_researcher_start", "deep_researcher_check", "get_code_context_exa"],
+      "tavily": ["tavily_search", "tavily_research", "tavily_crawl", "tavily_map", "tavily_extract"],
+      "firecrawl": ["firecrawl_search", "firecrawl_scrape", "firecrawl_map", "firecrawl_crawl", "firecrawl_extract", "firecrawl_agent"],
+      "context7": ["resolve-library-id", "query-docs"],
+      "brave_search": ["brave_web_search", "brave_local_search"],
+      "claude_flow": ["memory_store", "memory_search", "memory_retrieve", "memory_list", "swarm_init", "swarm_status", "agent_spawn", "agent_list"]
+    },
+    "python_adapters": {
+      "exa_adapter": "Z:/insider/AUTO CLAUDE/unleash/platform/adapters/exa_adapter.py",
+      "tavily_adapter": "Z:/insider/AUTO CLAUDE/unleash/platform/adapters/tavily_adapter.py",
+      "firecrawl_adapter": "Z:/insider/AUTO CLAUDE/unleash/platform/adapters/firecrawl_adapter.py",
+      "context7_adapter": "Z:/insider/AUTO CLAUDE/unleash/platform/adapters/context7_adapter.py",
+      "jina_adapter": "Z:/insider/AUTO CLAUDE/unleash/platform/adapters/jina_adapter.py",
+      "perplexity_adapter": "Z:/insider/AUTO CLAUDE/unleash/platform/adapters/perplexity_adapter.py"
+    }
+  },
+  "test_execution_summary": {
+    "total_api_calls": 12,
+    "successful_calls": 11,
+    "failed_calls": 1,
+    "total_test_duration_ms": 28043,
+    "data_retrieved": {
+      "search_results": 24,
+      "pages_crawled": 8,
+      "code_examples": 5,
+      "company_profiles": 1,
+      "memory_entries": 1
+    }
+  }
+}

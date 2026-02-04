@@ -20,7 +20,7 @@ API Patterns (from RAGFlow):
 - client.ask(dataset_id, query) → RAG with citations
 
 Usage:
-    from platform.adapters.ragflow_adapter import RAGFlowAdapter
+    from adapters.ragflow_adapter import RAGFlowAdapter
 
     adapter = RAGFlowAdapter()
     await adapter.initialize({"api_key": "...", "base_url": "http://localhost:9380"})
@@ -58,7 +58,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -589,7 +589,7 @@ class RAGFlowAdapter(SDKAdapter):
 
 # Register with SDK registry
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("ragflow", SDKLayer.PROCESSING, priority=15)
     class RegisteredRAGFlowAdapter(RAGFlowAdapter):

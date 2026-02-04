@@ -19,7 +19,7 @@ API Patterns (from strands-agents SDK):
 - Tool(name, description, handler) → define tools
 
 Usage:
-    from platform.adapters.strands_agents_adapter import StrandsAgentsAdapter
+    from adapters.strands_agents_adapter import StrandsAgentsAdapter
 
     adapter = StrandsAgentsAdapter()
     await adapter.initialize({"model": "anthropic.claude-3-sonnet"})
@@ -49,7 +49,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -455,7 +455,7 @@ class StrandsAgentsAdapter(SDKAdapter):
 
 # Register with SDK registry
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("strands-agents", SDKLayer.ORCHESTRATION, priority=12)
     class RegisteredStrandsAgentsAdapter(StrandsAgentsAdapter):

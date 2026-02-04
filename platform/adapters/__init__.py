@@ -55,7 +55,7 @@ Utilities:
 
 Usage:
     # Using the registry (recommended)
-    from platform.adapters.registry import get_registry
+    from adapters.registry import get_registry
 
     registry = get_registry()
     available = registry.list_available()

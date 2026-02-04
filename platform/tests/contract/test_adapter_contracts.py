@@ -20,7 +20,7 @@ from dataclasses import dataclass
 
 # Import base types
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         AdapterResult,
         AdapterStatus,
@@ -47,7 +47,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
 
     # P0 Critical
     try:
-        from platform.adapters.openai_agents_adapter import OpenAIAgentsAdapter
+        from adapters.openai_agents_adapter import OpenAIAgentsAdapter
         adapters.append(AdapterTestCase(
             name="openai-agents",
             adapter_class=OpenAIAgentsAdapter,
@@ -59,7 +59,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
         pass
 
     try:
-        from platform.adapters.cognee_v36_adapter import CogneeV36Adapter
+        from adapters.cognee_v36_adapter import CogneeV36Adapter
         adapters.append(AdapterTestCase(
             name="cognee",
             adapter_class=CogneeV36Adapter,
@@ -71,7 +71,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
         pass
 
     try:
-        from platform.adapters.mcp_apps_adapter import MCPAppsAdapter
+        from adapters.mcp_apps_adapter import MCPAppsAdapter
         adapters.append(AdapterTestCase(
             name="mcp-apps",
             adapter_class=MCPAppsAdapter,
@@ -84,7 +84,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
 
     # P1 Important
     try:
-        from platform.adapters.graphiti_adapter import GraphitiAdapter
+        from adapters.graphiti_adapter import GraphitiAdapter
         adapters.append(AdapterTestCase(
             name="graphiti",
             adapter_class=GraphitiAdapter,
@@ -96,7 +96,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
         pass
 
     try:
-        from platform.adapters.strands_agents_adapter import StrandsAgentsAdapter
+        from adapters.strands_agents_adapter import StrandsAgentsAdapter
         adapters.append(AdapterTestCase(
             name="strands-agents",
             adapter_class=StrandsAgentsAdapter,
@@ -108,7 +108,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
         pass
 
     try:
-        from platform.adapters.a2a_protocol_adapter import A2AProtocolAdapter
+        from adapters.a2a_protocol_adapter import A2AProtocolAdapter
         adapters.append(AdapterTestCase(
             name="a2a-protocol",
             adapter_class=A2AProtocolAdapter,
@@ -120,7 +120,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
         pass
 
     try:
-        from platform.adapters.ragflow_adapter import RAGFlowAdapter
+        from adapters.ragflow_adapter import RAGFlowAdapter
         adapters.append(AdapterTestCase(
             name="ragflow",
             adapter_class=RAGFlowAdapter,
@@ -133,7 +133,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
 
     # P2 Specialized
     try:
-        from platform.adapters.simplemem_adapter import SimpleMemAdapter
+        from adapters.simplemem_adapter import SimpleMemAdapter
         adapters.append(AdapterTestCase(
             name="simplemem",
             adapter_class=SimpleMemAdapter,
@@ -145,7 +145,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
         pass
 
     try:
-        from platform.adapters.ragatouille_adapter import RAGatouilleAdapter
+        from adapters.ragatouille_adapter import RAGatouilleAdapter
         adapters.append(AdapterTestCase(
             name="ragatouille",
             adapter_class=RAGatouilleAdapter,
@@ -157,7 +157,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
         pass
 
     try:
-        from platform.adapters.braintrust_adapter import BraintrustAdapter
+        from adapters.braintrust_adapter import BraintrustAdapter
         adapters.append(AdapterTestCase(
             name="braintrust",
             adapter_class=BraintrustAdapter,
@@ -169,7 +169,7 @@ def get_v36_adapters() -> List[AdapterTestCase]:
         pass
 
     try:
-        from platform.adapters.portkey_gateway_adapter import PortkeyGatewayAdapter
+        from adapters.portkey_gateway_adapter import PortkeyGatewayAdapter
         adapters.append(AdapterTestCase(
             name="portkey-gateway",
             adapter_class=PortkeyGatewayAdapter,

@@ -1,7 +1,7 @@
 [project]
 name = "unleash-platform"
-version = "44.0.0"
-description = "Unified SDK Integration Platform - V44 Architecture with 40+ SDKs across 8 Layers"
+version = "45.0.0"
+description = "Unified SDK Integration Platform - V45 Lazy-Loading Architecture with 40+ SDKs across 9 Layers"
 requires-python = ">=3.11"
 readme = "README.md"
 

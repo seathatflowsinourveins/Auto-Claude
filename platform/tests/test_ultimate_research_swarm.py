@@ -12,7 +12,7 @@ from dataclasses import dataclass
 
 # Import the module under test
 try:
-    from platform.core.ultimate_research_swarm import (
+    from core.ultimate_research_swarm import (
         UltimateResearchSwarm,
         ResearchSwarmConfig,
         ResearchDepth,
@@ -556,7 +556,7 @@ class TestAdvancedAgentTypes:
     def test_agent_configs_complete(self):
         """Test all agent types have configs."""
         try:
-            from platform.core.ultimate_research_swarm import RESEARCH_AGENT_CONFIGS
+            from core.ultimate_research_swarm import RESEARCH_AGENT_CONFIGS
         except ImportError:
             from core.ultimate_research_swarm import RESEARCH_AGENT_CONFIGS
 

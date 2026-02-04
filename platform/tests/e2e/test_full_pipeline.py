@@ -55,7 +55,7 @@ class TestDocumentProcessingPipeline:
 
         try:
             # Stage 1: Ingest into RAGatouille
-            from platform.adapters.ragatouille_adapter import RAGatouilleAdapter
+            from adapters.ragatouille_adapter import RAGatouilleAdapter
             indexer = RAGatouilleAdapter()
             await indexer.initialize({})
 
@@ -66,7 +66,7 @@ class TestDocumentProcessingPipeline:
                 errors.append(f"Indexing failed: {index_result.error}")
 
             # Stage 2: Compress context with SimpleMem
-            from platform.adapters.simplemem_adapter import SimpleMemAdapter
+            from adapters.simplemem_adapter import SimpleMemAdapter
             memory = SimpleMemAdapter()
             await memory.initialize({"max_tokens": 4096})
 
@@ -119,8 +119,8 @@ class TestDocumentProcessingPipeline:
     async def test_pipeline_with_observability(self, sample_documents):
         """Test pipeline with observability tracking."""
         try:
-            from platform.adapters.braintrust_adapter import BraintrustAdapter
-            from platform.adapters.simplemem_adapter import SimpleMemAdapter
+            from adapters.braintrust_adapter import BraintrustAdapter
+            from adapters.simplemem_adapter import SimpleMemAdapter
 
             # Initialize observability
             tracker = BraintrustAdapter()
@@ -168,7 +168,7 @@ class TestAgentCoordinationPipeline:
     async def test_agent_discovery_and_delegation(self):
         """Test agent discovery -> capability matching -> task delegation."""
         try:
-            from platform.adapters.a2a_protocol_adapter import A2AProtocolAdapter
+            from adapters.a2a_protocol_adapter import A2AProtocolAdapter
 
             # Initialize coordinator
             coordinator = A2AProtocolAdapter()
@@ -221,8 +221,8 @@ class TestAgentCoordinationPipeline:
     async def test_multi_orchestrator_workflow(self):
         """Test workflow spanning multiple orchestration adapters."""
         try:
-            from platform.adapters.openai_agents_adapter import OpenAIAgentsAdapter
-            from platform.adapters.strands_agents_adapter import StrandsAgentsAdapter
+            from adapters.openai_agents_adapter import OpenAIAgentsAdapter
+            from adapters.strands_agents_adapter import StrandsAgentsAdapter
 
             # Initialize both orchestrators
             openai_orch = OpenAIAgentsAdapter()
@@ -269,7 +269,7 @@ class TestFullStackPipeline:
 
         try:
             # L0: Protocol - Gateway
-            from platform.adapters.portkey_gateway_adapter import PortkeyGatewayAdapter
+            from adapters.portkey_gateway_adapter import PortkeyGatewayAdapter
             gateway = PortkeyGatewayAdapter()
             await gateway.initialize({"config": {"cache_mode": "semantic"}})
             layers_touched.append("L0_PROTOCOL")
@@ -282,7 +282,7 @@ class TestFullStackPipeline:
             assert gateway_result.success
 
             # L2: Memory - SimpleMem
-            from platform.adapters.simplemem_adapter import SimpleMemAdapter
+            from adapters.simplemem_adapter import SimpleMemAdapter
             memory = SimpleMemAdapter()
             await memory.initialize({})
             layers_touched.append("L2_MEMORY")
@@ -295,7 +295,7 @@ class TestFullStackPipeline:
             assert memory_result.success
 
             # L5: Observability - Braintrust
-            from platform.adapters.braintrust_adapter import BraintrustAdapter
+            from adapters.braintrust_adapter import BraintrustAdapter
             tracker = BraintrustAdapter()
             await tracker.initialize({"project": "full-stack-test"})
             layers_touched.append("L5_OBSERVABILITY")
@@ -309,7 +309,7 @@ class TestFullStackPipeline:
             )
 
             # L7: Processing - RAGatouille
-            from platform.adapters.ragatouille_adapter import RAGatouilleAdapter
+            from adapters.ragatouille_adapter import RAGatouilleAdapter
             processor = RAGatouilleAdapter()
             await processor.initialize({})
             layers_touched.append("L7_PROCESSING")
@@ -344,8 +344,8 @@ class TestPipelineResilience:
         successful_stages = []
 
         try:
-            from platform.adapters.simplemem_adapter import SimpleMemAdapter
-            from platform.adapters.graphiti_adapter import GraphitiAdapter
+            from adapters.simplemem_adapter import SimpleMemAdapter
+            from adapters.graphiti_adapter import GraphitiAdapter
 
             # SimpleMem always works
             memory = SimpleMemAdapter()

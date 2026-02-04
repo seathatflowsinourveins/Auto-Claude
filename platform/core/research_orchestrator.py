@@ -69,10 +69,10 @@ from typing import Any, Callable, Optional
 
 # Import research adapters
 try:
-    from platform.adapters.exa_adapter import ExaAdapter
-    from platform.adapters.tavily_adapter import TavilyAdapter
-    from platform.adapters.jina_adapter import JinaAdapter
-    from platform.adapters.perplexity_adapter import PerplexityAdapter
+    from adapters.exa_adapter import ExaAdapter
+    from adapters.tavily_adapter import TavilyAdapter
+    from adapters.jina_adapter import JinaAdapter
+    from adapters.perplexity_adapter import PerplexityAdapter
 except ImportError:
     try:
         from ..adapters.exa_adapter import ExaAdapter

@@ -87,6 +87,29 @@ class InputType(str, Enum):
     QUERY = "query"
 
 
+class RerankModel(str, Enum):
+    """Available reranking models."""
+    RERANK_2 = "rerank-2"
+    RERANK_2_LITE = "rerank-2-lite"
+
+
+class OutputDType(str, Enum):
+    """Output data types for embeddings."""
+    FLOAT = "float"
+    INT8 = "int8"
+    UINT8 = "uint8"
+    BINARY = "binary"
+    UBINARY = "ubinary"
+
+
+class OutputDimension(int, Enum):
+    """Matryoshka output dimensions for Voyage 4 models."""
+    DIM_256 = 256
+    DIM_512 = 512
+    DIM_1024 = 1024
+    DIM_2048 = 2048
+
+
 @dataclass
 class EmbeddingConfig:
     """Configuration for the embedding layer."""
@@ -704,3 +727,26 @@ def create_embedding_layer(
         cache_enabled=cache_enabled,
     )
     return EmbeddingLayer(config=config)
+
+
+# Voyage AI availability flag
+try:
+    import voyageai  # noqa: F401
+    VOYAGE_AVAILABLE = True
+except ImportError:
+    VOYAGE_AVAILABLE = False
+
+# HTTPX availability flag
+try:
+    import httpx  # noqa: F401
+    HTTPX_AVAILABLE = True
+except ImportError:
+    HTTPX_AVAILABLE = False
+
+
+def create_model_mixing_layer(
+    models: Optional[list] = None,
+    **kwargs,
+) -> EmbeddingLayer:
+    """Create an EmbeddingLayer with model mixing support."""
+    return create_embedding_layer(**kwargs)

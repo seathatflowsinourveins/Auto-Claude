@@ -20,7 +20,7 @@ Portkey Gateway Capabilities:
 - Budget limits and rate limiting
 
 Usage:
-    from platform.adapters.portkey_gateway_adapter import PortkeyGatewayAdapter
+    from adapters.portkey_gateway_adapter import PortkeyGatewayAdapter
 
     adapter = PortkeyGatewayAdapter()
     await adapter.initialize({
@@ -58,7 +58,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -576,7 +576,7 @@ class PortkeyGatewayAdapter(SDKAdapter):
 
 # Register with SDK registry
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("portkey-gateway", SDKLayer.PROTOCOL, priority=22)
     class RegisteredPortkeyGatewayAdapter(PortkeyGatewayAdapter):

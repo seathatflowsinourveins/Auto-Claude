@@ -17,7 +17,7 @@ from unittest.mock import AsyncMock, MagicMock, patch
 
 # Import memory types
 try:
-    from platform.core.memory.backends.base import (
+    from core.memory.backends.base import (
         MemoryEntry,
         MemoryTier,
         MemoryPriority,
@@ -25,7 +25,7 @@ try:
         MemoryLayer,
         TierBackend,
     )
-    from platform.core.memory.backends.in_memory import InMemoryTierBackend
+    from core.memory.backends.in_memory import InMemoryTierBackend
 except ImportError:
     pytest.skip("Memory backend modules not available", allow_module_level=True)
 
@@ -277,7 +277,7 @@ class TestLettaTierBackendMocked:
     async def test_letta_backend_import(self):
         """LettaTierBackend should be importable."""
         try:
-            from platform.core.memory.backends.letta import LettaTierBackend
+            from core.memory.backends.letta import LettaTierBackend
             assert LettaTierBackend is not None
         except ImportError:
             pytest.skip("Letta backend not available")
@@ -286,7 +286,7 @@ class TestLettaTierBackendMocked:
     async def test_letta_backend_initialization(self, mock_letta_client):
         """LettaTierBackend initializes correctly."""
         try:
-            from platform.core.memory.backends.letta import LettaTierBackend
+            from core.memory.backends.letta import LettaTierBackend
 
             with patch('platform.core.memory.backends.letta.LETTA_AVAILABLE', True):
                 backend = LettaTierBackend(

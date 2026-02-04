@@ -22,7 +22,7 @@ API Patterns (verified from graphiti-core 0.5.0):
 - client.delete_episode(episode_id) → remove episode
 
 Usage:
-    from platform.adapters.graphiti_adapter import GraphitiAdapter
+    from adapters.graphiti_adapter import GraphitiAdapter
 
     adapter = GraphitiAdapter()
     await adapter.initialize({
@@ -62,7 +62,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -498,7 +498,7 @@ class GraphitiAdapter(SDKAdapter):
 
 # Register with SDK registry
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("graphiti", SDKLayer.MEMORY, priority=18, replaces="zep-ce")
     class RegisteredGraphitiAdapter(GraphitiAdapter):

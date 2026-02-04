@@ -19,7 +19,7 @@ SimpleMem Research (2024):
 - Background consolidation support
 
 Usage:
-    from platform.adapters.simplemem_adapter import SimpleMemAdapter
+    from adapters.simplemem_adapter import SimpleMemAdapter
 
     adapter = SimpleMemAdapter()
     await adapter.initialize({"max_tokens": 4096})
@@ -55,7 +55,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -456,7 +456,7 @@ class SimpleMemAdapter(SDKAdapter):
 
 # Register with SDK registry
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("simplemem", SDKLayer.MEMORY, priority=16)
     class RegisteredSimpleMemAdapter(SimpleMemAdapter):

@@ -20,7 +20,7 @@ Braintrust Capabilities:
 - Scores: Custom and built-in metrics
 
 Usage:
-    from platform.adapters.braintrust_adapter import BraintrustAdapter
+    from adapters.braintrust_adapter import BraintrustAdapter
 
     adapter = BraintrustAdapter()
     await adapter.initialize({"api_key": "...", "project": "my-project"})
@@ -57,7 +57,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -562,7 +562,7 @@ class BraintrustAdapter(SDKAdapter):
 
 # Register with SDK registry
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("braintrust", SDKLayer.OBSERVABILITY, priority=12)
     class RegisteredBraintrustAdapter(BraintrustAdapter):

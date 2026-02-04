@@ -15,12 +15,12 @@ from unittest.mock import MagicMock, AsyncMock
 
 # Import registry types
 try:
-    from platform.core.orchestration.sdk_registry import (
+    from core.orchestration.sdk_registry import (
         SDKRegistry,
         SDKRegistration,
         register_adapter,
     )
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterResult,

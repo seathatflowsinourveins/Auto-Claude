@@ -19,7 +19,7 @@ A2A Protocol Spec (from Google):
 - Security: Signature verification
 
 Usage:
-    from platform.adapters.a2a_protocol_adapter import A2AProtocolAdapter
+    from adapters.a2a_protocol_adapter import A2AProtocolAdapter
 
     adapter = A2AProtocolAdapter()
     await adapter.initialize({"agent_id": "my-agent", "capabilities": ["code", "research"]})
@@ -58,7 +58,7 @@ except ImportError:
 
 # Import base adapter interface
 try:
-    from platform.core.orchestration.base import (
+    from core.orchestration.base import (
         SDKAdapter,
         SDKLayer,
         AdapterConfig,
@@ -550,7 +550,7 @@ class A2AProtocolAdapter(SDKAdapter):
 
 # Register with SDK registry
 try:
-    from platform.core.orchestration.sdk_registry import register_adapter, SDKLayer
+    from core.orchestration.sdk_registry import register_adapter, SDKLayer
 
     @register_adapter("a2a-protocol", SDKLayer.PROTOCOL, priority=20)
     class RegisteredA2AProtocolAdapter(A2AProtocolAdapter):
