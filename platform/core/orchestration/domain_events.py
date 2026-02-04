@@ -1710,6 +1710,7 @@ class EventStore:
         Raises:
             ConcurrencyError: If expected_version doesn't match
         """
+        version_checked = False
         for event in events:
             aggregate_id = event.aggregate_id
 
@@ -1719,12 +1720,14 @@ class EventStore:
 
             stream = self._streams[aggregate_id]
 
-            # Check concurrency
+            # Check concurrency only once per batch (on first event)
             current_version = len(stream)
-            if expected_version is not None and current_version != expected_version:
-                raise ConcurrencyError(
-                    f"Expected version {expected_version}, got {current_version}"
-                )
+            if expected_version is not None and not version_checked:
+                version_checked = True
+                if current_version != expected_version:
+                    raise ConcurrencyError(
+                        f"Expected version {expected_version}, got {current_version}"
+                    )
 
             # Set version on event
             event.version = current_version + 1

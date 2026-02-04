@@ -730,6 +730,7 @@ class SemanticReranker:
         token_sets = [tokenize(d.document.content) for d in documents]
 
         selected: List[ScoredDocument] = []
+        selected_indices: List[int] = []
         remaining = list(range(len(documents)))
 
         # Normalize scores
@@ -748,9 +749,8 @@ class SemanticReranker:
 
                 # Max Jaccard similarity to selected
                 max_sim = 0.0
-                if selected:
-                    for sel in selected:
-                        sel_idx = documents.index(sel)
+                if selected_indices:
+                    for sel_idx in selected_indices:
                         sim = jaccard_similarity(token_sets[idx], token_sets[sel_idx])
                         max_sim = max(max_sim, sim)
 
@@ -762,6 +762,7 @@ class SemanticReranker:
 
             if best_idx >= 0:
                 remaining.remove(best_idx)
+                selected_indices.append(best_idx)
                 original_doc = documents[best_idx]
                 new_doc = ScoredDocument(
                     document=original_doc.document,

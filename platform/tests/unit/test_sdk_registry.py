@@ -97,9 +97,10 @@ class TestSDKRegistry:
         adapter = registry.get("test-adapter")
         assert adapter is not None
 
-    def test_get_nonexistent_adapter(self, registry):
+    @pytest.mark.asyncio
+    async def test_get_nonexistent_adapter(self, registry):
         """Getting nonexistent adapter returns None."""
-        adapter = registry.get("nonexistent")
+        adapter = await registry.get("nonexistent")
         assert adapter is None
 
     def test_get_by_layer(self, registry):
@@ -198,17 +199,18 @@ class TestSDKRegistration:
 
         assert reg.replaces == "zep-ce"
 
-    def test_registration_with_metadata(self):
-        """Registration can include metadata."""
+    def test_registration_with_tags(self):
+        """Registration can include tags for categorization."""
         reg = SDKRegistration(
             name="test",
             adapter_class=MockAdapter,
             layer=SDKLayer.PROTOCOL,
             priority=10,
-            metadata={"version": "1.0.0", "author": "test"}
+            tags={"v1.0.0", "production"}
         )
 
-        assert reg.metadata["version"] == "1.0.0"
+        assert "v1.0.0" in reg.tags
+        assert "production" in reg.tags
 
 
 class TestLayerRouting:

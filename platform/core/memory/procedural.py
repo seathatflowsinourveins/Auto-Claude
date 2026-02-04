@@ -598,14 +598,28 @@ class ProceduralMemory:
     async def _store_procedure(self, procedure: Procedure) -> None:
         """Store a procedure in the database."""
         with self._get_connection() as conn:
-            # Insert procedure
+            # Upsert procedure (avoid INSERT OR REPLACE which triggers CASCADE deletes)
             conn.execute("""
-                INSERT OR REPLACE INTO procedures (
+                INSERT INTO procedures (
                     id, name, description, status, confidence,
                     success_count, failure_count, last_executed,
                     created_at, updated_at, source_session,
                     version, parent_id, tags, metadata
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(id) DO UPDATE SET
+                    name = excluded.name,
+                    description = excluded.description,
+                    status = excluded.status,
+                    confidence = excluded.confidence,
+                    success_count = excluded.success_count,
+                    failure_count = excluded.failure_count,
+                    last_executed = excluded.last_executed,
+                    updated_at = excluded.updated_at,
+                    source_session = excluded.source_session,
+                    version = excluded.version,
+                    parent_id = excluded.parent_id,
+                    tags = excluded.tags,
+                    metadata = excluded.metadata
             """, (
                 procedure.id,
                 procedure.name,

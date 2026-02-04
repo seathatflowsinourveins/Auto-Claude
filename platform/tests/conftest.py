@@ -36,10 +36,12 @@ else:
 sys.path = _original_path
 
 # Add platform dir for 'from adapters...' and 'from core...' imports
-if _platform_pkg_dir not in sys.path:
-    sys.path.insert(0, _platform_pkg_dir)
+# IMPORTANT: _platform_pkg_dir must be inserted LAST (so it ends up at index 0)
+# to ensure 'from core...' resolves to platform/core/ not unleash/core/
 if _unleash_root not in sys.path:
     sys.path.insert(0, _unleash_root)
+if _platform_pkg_dir not in sys.path:
+    sys.path.insert(0, _platform_pkg_dir)
 
 import pytest
 import asyncio
