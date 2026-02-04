@@ -255,3 +255,165 @@ def check_sdk():
         if skip_if_no_sdk(sdk_name):
             pytest.skip(f"{sdk_name} SDK not available")
     return _check
+
+
+# =============================================================================
+# Research Adapter Fixtures
+# =============================================================================
+
+@pytest.fixture
+async def exa_adapter():
+    """Create and initialize an Exa adapter."""
+    try:
+        from platform.adapters.exa_adapter import ExaAdapter
+        adapter = ExaAdapter()
+        await adapter.initialize({})
+        yield adapter
+        await adapter.shutdown()
+    except ImportError:
+        pytest.skip("ExaAdapter not available")
+
+
+@pytest.fixture
+async def tavily_adapter():
+    """Create and initialize a Tavily adapter."""
+    try:
+        from platform.adapters.tavily_adapter import TavilyAdapter
+        adapter = TavilyAdapter()
+        await adapter.initialize({})
+        yield adapter
+        await adapter.shutdown()
+    except ImportError:
+        pytest.skip("TavilyAdapter not available")
+
+
+@pytest.fixture
+async def jina_adapter():
+    """Create and initialize a Jina adapter."""
+    try:
+        from platform.adapters.jina_adapter import JinaAdapter
+        adapter = JinaAdapter()
+        await adapter.initialize({})
+        yield adapter
+        await adapter.shutdown()
+    except ImportError:
+        pytest.skip("JinaAdapter not available")
+
+
+@pytest.fixture
+async def perplexity_adapter():
+    """Create and initialize a Perplexity adapter."""
+    try:
+        from platform.adapters.perplexity_adapter import PerplexityAdapter
+        adapter = PerplexityAdapter()
+        await adapter.initialize({})
+        yield adapter
+        await adapter.shutdown()
+    except ImportError:
+        pytest.skip("PerplexityAdapter not available")
+
+
+# =============================================================================
+# MCP Fixtures
+# =============================================================================
+
+@pytest.fixture
+def mcp_server():
+    """Create a FastMCP server for testing."""
+    try:
+        from hooks.hook_utils import FastMCPServer
+        return FastMCPServer("test-server", version="1.0.0")
+    except ImportError:
+        pytest.skip("FastMCPServer not available")
+
+
+@pytest.fixture
+def mcp_context(mcp_server):
+    """Create an MCP context for testing."""
+    try:
+        from hooks.hook_utils import MCPContext
+        return MCPContext(request_id="test-001", server=mcp_server)
+    except ImportError:
+        pytest.skip("MCPContext not available")
+
+
+@pytest.fixture
+def lifespan_context(mcp_server):
+    """Create a lifespan context for testing."""
+    try:
+        from hooks.hook_utils import LifespanContext
+        return LifespanContext(server=mcp_server)
+    except ImportError:
+        pytest.skip("LifespanContext not available")
+
+
+# =============================================================================
+# Search Results Fixtures
+# =============================================================================
+
+@pytest.fixture
+def sample_search_results() -> List[Dict[str, Any]]:
+    """Sample search results for testing."""
+    return [
+        {
+            "title": "Introduction to Machine Learning",
+            "url": "https://example.com/ml-intro",
+            "content": "Machine learning is a branch of artificial intelligence...",
+            "score": 0.95,
+            "published_date": "2026-01-15"
+        },
+        {
+            "title": "Deep Learning Fundamentals",
+            "url": "https://example.com/deep-learning",
+            "content": "Deep learning uses neural networks with many layers...",
+            "score": 0.87,
+            "published_date": "2026-01-10"
+        },
+        {
+            "title": "Natural Language Processing Guide",
+            "url": "https://example.com/nlp-guide",
+            "content": "NLP enables computers to understand human language...",
+            "score": 0.82,
+            "published_date": "2026-01-05"
+        },
+    ]
+
+
+@pytest.fixture
+def sample_embeddings() -> List[List[float]]:
+    """Sample embeddings for testing."""
+    import random
+    random.seed(42)
+    return [
+        [random.random() for _ in range(768)]
+        for _ in range(5)
+    ]
+
+
+# =============================================================================
+# Additional Markers
+# =============================================================================
+
+def pytest_configure(config):
+    """Register custom markers."""
+    config.addinivalue_line(
+        "markers", "slow: marks tests as slow (deselect with '-m \"not slow\"')"
+    )
+    config.addinivalue_line(
+        "markers", "integration: marks tests as integration tests"
+    )
+    config.addinivalue_line(
+        "markers", "e2e: marks tests as end-to-end tests"
+    )
+    config.addinivalue_line(
+        "markers", "performance: marks tests as performance benchmarks"
+    )
+    config.addinivalue_line(
+        "markers", "security: marks tests as security tests"
+    )
+    config.addinivalue_line(
+        "markers", "requires_sdk(sdk_name): marks test as requiring a specific SDK"
+    )
+    config.addinivalue_line(
+        "markers", "requires_api_key(key_name): marks test as requiring an API key"
+    )

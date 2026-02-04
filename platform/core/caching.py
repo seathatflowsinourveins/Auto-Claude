@@ -384,8 +384,9 @@ class FileCache(CacheBackend[T]):
 
     def _key_to_path(self, key: str) -> Path:
         """Convert cache key to file path."""
-        # Use hash to avoid filesystem issues with special characters
-        key_hash = hashlib.md5(key.encode()).hexdigest()
+        # Use SHA-256 hash to avoid filesystem issues with special characters
+        # V2: Upgraded from MD5 (CVE-UNLEASH-002 remediation)
+        key_hash = hashlib.sha256(key.encode()).hexdigest()
         return self.cache_dir / f"{key_hash}.cache"
 
     def _serialize(self, entry: CacheEntry) -> bytes:

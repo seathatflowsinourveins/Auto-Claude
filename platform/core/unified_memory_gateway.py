@@ -245,10 +245,11 @@ class MemoryEntry:
         """Generate a hash of the content for deduplication.
 
         V12 OPTIMIZATION: Caches hash on first computation to avoid
-        repeated MD5 calculations during deduplication loops.
+        repeated hash calculations during deduplication loops.
+        V13 SECURITY: Use SHA-256 instead of MD5 for consistency.
         """
         if self._content_hash is None:
-            self._content_hash = hashlib.md5(self.content.encode()).hexdigest()[:12]
+            self._content_hash = hashlib.sha256(self.content.encode()).hexdigest()[:16]
         return self._content_hash
 
 

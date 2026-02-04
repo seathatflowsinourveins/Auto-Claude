@@ -19,9 +19,15 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from enum import Enum, auto
 from typing import Any, Dict, List, Optional
-import logging
 
-logger = logging.getLogger(__name__)
+# Structured logging
+try:
+    from .logging_config import get_logger, generate_correlation_id
+    _logger = get_logger("rag_pipeline")
+except ImportError:
+    import logging
+    _logger = logging.getLogger(__name__)
+    generate_correlation_id = lambda: "corr-fallback"
 
 
 # =============================================================================
@@ -98,13 +104,34 @@ class Pipeline:
         start_time = time.time()
         outputs = initial_inputs.copy()
         executed_steps = []
+        correlation_id = generate_correlation_id()
+
+        # Log pipeline start with structured context
+        _logger.info(
+            "Pipeline execution started",
+            pipeline=self.name,
+            correlation_id=correlation_id,
+            step_count=len(self._steps),
+            inputs=list(initial_inputs.keys()),
+        )
 
         try:
             orch = await self._get_orchestrator()
 
-            for step in self._steps:
+            for step_index, step in enumerate(self._steps):
                 step.status = PipelineStatus.RUNNING
                 step.started_at = datetime.now(timezone.utc).isoformat()
+
+                # Log step start
+                _logger.debug(
+                    "Pipeline step started",
+                    pipeline=self.name,
+                    correlation_id=correlation_id,
+                    step_name=step.name,
+                    step_index=step_index,
+                    layer=step.layer,
+                    operation=step.operation,
+                )
 
                 # Resolve input references
                 resolved_inputs = {}
@@ -156,10 +183,29 @@ class Pipeline:
                 except Exception as e:
                     step.status = PipelineStatus.FAILED
                     step.error = str(e)
+                    _logger.exception(
+                        "Pipeline step execution failed",
+                        pipeline=self.name,
+                        correlation_id=correlation_id,
+                        step_name=step.name,
+                        error_type=type(e).__name__,
+                    )
 
                 step.latency_ms = (time.time() - step_start) * 1000
                 step.completed_at = datetime.now(timezone.utc).isoformat()
                 executed_steps.append(step)
+
+                # Log step completion
+                _logger.info(
+                    "Pipeline step completed",
+                    pipeline=self.name,
+                    correlation_id=correlation_id,
+                    step_name=step.name,
+                    step_index=step_index,
+                    status=step.status.name,
+                    duration_ms=step.latency_ms,
+                    error=step.error,
+                )
 
                 # Stop on failure unless configured otherwise
                 if step.status == PipelineStatus.FAILED:
@@ -168,24 +214,47 @@ class Pipeline:
             # Determine overall status
             failed_steps = [s for s in executed_steps if s.status == PipelineStatus.FAILED]
             overall_status = PipelineStatus.FAILED if failed_steps else PipelineStatus.COMPLETED
+            total_latency = (time.time() - start_time) * 1000
+
+            # Log pipeline completion
+            _logger.info(
+                "Pipeline execution completed",
+                pipeline=self.name,
+                correlation_id=correlation_id,
+                status=overall_status.name,
+                total_duration_ms=total_latency,
+                steps_executed=len(executed_steps),
+                steps_failed=len(failed_steps),
+                error=failed_steps[0].error if failed_steps else None,
+            )
 
             return PipelineResult(
                 pipeline_name=self.name,
                 status=overall_status,
                 steps=executed_steps,
-                total_latency_ms=(time.time() - start_time) * 1000,
+                total_latency_ms=total_latency,
                 outputs=outputs,
-                error=failed_steps[0].error if failed_steps else None
+                error=failed_steps[0].error if failed_steps else None,
+                metadata={"correlation_id": correlation_id},
             )
 
         except Exception as e:
+            total_latency = (time.time() - start_time) * 1000
+            _logger.exception(
+                "Pipeline execution failed",
+                pipeline=self.name,
+                correlation_id=correlation_id,
+                duration_ms=total_latency,
+                error_type=type(e).__name__,
+            )
             return PipelineResult(
                 pipeline_name=self.name,
                 status=PipelineStatus.FAILED,
                 steps=executed_steps,
-                total_latency_ms=(time.time() - start_time) * 1000,
+                total_latency_ms=total_latency,
                 outputs=outputs,
-                error=str(e)
+                error=str(e),
+                metadata={"correlation_id": correlation_id},
             )
 
 

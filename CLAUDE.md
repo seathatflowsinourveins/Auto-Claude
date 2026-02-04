@@ -1,186 +1,206 @@
-# Claude Code Configuration - Claude Flow V3
+# Claude Code Configuration - UNLEASH V6
 
-## Behavioral Rules (Always Enforced)
+## Behavioral Rules (CRITICAL)
 
 - Do what has been asked; nothing more, nothing less
-- NEVER create files unless they're absolutely necessary for achieving your goal
-- ALWAYS prefer editing an existing file to creating a new one
-- NEVER proactively create documentation files (*.md) or README files unless explicitly requested
-- NEVER save working files, text/mds, or tests to the root folder
-- Never continuously check status after spawning a swarm — wait for results
 - ALWAYS read a file before editing it
-- NEVER commit secrets, credentials, or .env files
+- NEVER create files unless absolutely necessary - prefer editing existing
+- NEVER save to root folder - use `/platform`, `/docs`, `/scripts`, `/tests`
+- NEVER commit secrets, .env files, or credentials
+- NEVER continuously poll status after spawning swarms - wait for results
+- After 2 failed corrections, `/clear` and write a better prompt
 
 ## File Organization
 
-- NEVER save to root folder — use the directories below
-- Use `/src` for source code files
-- Use `/tests` for test files
-- Use `/docs` for documentation and markdown files
-- Use `/config` for configuration files
-- Use `/scripts` for utility scripts
-- Use `/examples` for example code
-
-## Project Architecture
-
-- Follow Domain-Driven Design with bounded contexts
-- Keep files under 500 lines
-- Use typed interfaces for all public APIs
-- Prefer TDD London School (mock-first) for new code
-- Use event sourcing for state changes
-- Ensure input validation at system boundaries
-
-### Project Config
-
-- **Topology**: hierarchical-mesh
-- **Max Agents**: 15
-- **Memory**: hybrid
-- **HNSW**: Enabled
-- **Neural**: Enabled
+| Directory | Purpose |
+|-----------|---------|
+| `/platform/core` | Core modules (orchestration, RAG, memory) |
+| `/platform/adapters` | SDK adapters (40+ adapters) |
+| `/platform/tests` | Test files |
+| `/docs` | Documentation and markdown |
+| `/scripts` | Utility scripts |
+| `/research` | Research iteration configs |
 
 ## Build & Test
 
 ```bash
-# Build
-npm run build
-
-# Test
-npm test
-
-# Lint
-npm run lint
+npm run build    # Build project
+npm test         # Run tests
+npm run lint     # Lint code
 ```
 
-- ALWAYS run tests after making code changes
-- ALWAYS verify build succeeds before committing
+ALWAYS run tests after code changes. ALWAYS verify build before committing.
 
-## Security Rules
+## Concurrency: 1 MESSAGE = ALL OPERATIONS
 
-- NEVER hardcode API keys, secrets, or credentials in source files
-- NEVER commit .env files or any file containing secrets
-- Always validate user input at system boundaries
-- Always sanitize file paths to prevent directory traversal
-- Run `npx @claude-flow/cli@latest security scan` after security-related changes
-
-## Concurrency: 1 MESSAGE = ALL RELATED OPERATIONS
-
-- All operations MUST be concurrent/parallel in a single message
-- Use Claude Code's Task tool for spawning agents, not just MCP
-- ALWAYS batch ALL todos in ONE TodoWrite call (5-10+ minimum)
-- ALWAYS spawn ALL agents in ONE message with full instructions via Task tool
 - ALWAYS batch ALL file reads/writes/edits in ONE message
+- ALWAYS spawn ALL agents in ONE message with full instructions
 - ALWAYS batch ALL Bash commands in ONE message
+- Use `run_in_background: true` for all agent Task calls
+- After spawning agents, STOP - do NOT check status
 
-## Swarm Orchestration
+## 3-Tier Model Routing (ADR-026)
 
-- MUST initialize the swarm using CLI tools when starting complex tasks
-- MUST spawn concurrent agents using Claude Code's Task tool
-- Never use CLI tools alone for execution — Task tool agents do the actual work
-- MUST call CLI tools AND Task tool in ONE message for complex work
+| Tier | Handler | Latency | Use Case |
+|------|---------|---------|----------|
+| **1** | Agent Booster (WASM) | <1ms | Simple transforms (var to const, add types) |
+| **2** | Haiku | ~500ms | Simple tasks, complexity <30% |
+| **3** | Sonnet/Opus | 2-5s | Complex reasoning, architecture, security |
 
-### 3-Tier Model Routing (ADR-026)
+**IMPORTANT**: Check for `[AGENT_BOOSTER_AVAILABLE]` or `[TASK_MODEL_RECOMMENDATION]` before spawning agents. Use Edit tool directly when Agent Booster is available.
 
-| Tier | Handler | Latency | Cost | Use Cases |
-|------|---------|---------|------|-----------|
-| **1** | Agent Booster (WASM) | <1ms | $0 | Simple transforms (var→const, add types) — Skip LLM |
-| **2** | Haiku | ~500ms | $0.0002 | Simple tasks, low complexity (<30%) |
-| **3** | Sonnet/Opus | 2-5s | $0.003-0.015 | Complex reasoning, architecture, security (>30%) |
-
-- Always check for `[AGENT_BOOSTER_AVAILABLE]` or `[TASK_MODEL_RECOMMENDATION]` before spawning agents
-- Use Edit tool directly when `[AGENT_BOOSTER_AVAILABLE]`
-
-## Swarm Configuration & Anti-Drift
-
-- ALWAYS use hierarchical topology for coding swarms
-- Keep maxAgents at 6-8 for tight coordination
-- Use specialized strategy for clear role boundaries
-- Use `raft` consensus for hive-mind (leader maintains authoritative state)
-- Run frequent checkpoints via `post-task` hooks
-- Keep shared memory namespace for all agents
+## Swarm Configuration (Anti-Drift)
 
 ```bash
 npx @claude-flow/cli@latest swarm init --topology hierarchical --max-agents 8 --strategy specialized
 ```
 
-## Swarm Execution Rules
+**Mandatory settings:**
+- Topology: `hierarchical` (prevents drift via single coordinator)
+- Max agents: 6-8 (tight coordination)
+- Strategy: `specialized` (clear role boundaries)
+- Consensus: `raft` (leader maintains authoritative state)
+- Memory namespace: shared across all agents
 
-- ALWAYS use `run_in_background: true` for all agent Task calls
-- ALWAYS put ALL agent Task calls in ONE message for parallel execution
-- After spawning, STOP — do NOT add more tool calls or check status
-- Never poll TaskOutput or check swarm status — trust agents to return
-- When agent results arrive, review ALL results before proceeding
+**Checkpoint rules:**
+- Run frequent checkpoints via `post-task` hooks
+- Store state in memory before complex operations
+- Use `/rewind` to restore on failure
 
-## V3 CLI Commands
+## Memory Persistence
 
-### Core Commands
+**Session Start:**
+```bash
+npx @claude-flow/cli@latest memory search --query "project:$(basename $PWD) architecture" --limit 10
+```
 
-| Command | Subcommands | Description |
-|---------|-------------|-------------|
-| `init` | 4 | Project initialization |
-| `agent` | 8 | Agent lifecycle management |
-| `swarm` | 6 | Multi-agent swarm coordination |
-| `memory` | 11 | AgentDB memory with HNSW search |
-| `task` | 6 | Task creation and lifecycle |
-| `session` | 7 | Session state management |
-| `hooks` | 17 | Self-learning hooks + 12 workers |
-| `hive-mind` | 6 | Byzantine fault-tolerant consensus |
+**Session End:**
+```bash
+npx @claude-flow/cli@latest memory store --key "session-$(date +%Y%m%d)" --value "SUMMARY" --namespace decisions --ttl 30d
+```
 
-### Quick CLI Examples
+**Cross-session patterns:**
+- Store architectural decisions in `decisions` namespace
+- Store code patterns in `patterns` namespace
+- Use `--tags` for filtering: `--tags "api,auth,critical"`
+- Confidence decay: decisions/patterns never decay, progress decays in 7 days
+
+## Research Tools (Priority Order)
+
+| Tool | Use Case | Speed |
+|------|----------|-------|
+| **Exa** | Neural semantic search, code context | Fast: <350ms |
+| **Tavily** | Factual research with citations | Sub-second |
+| **Context7** | Library documentation lookup | Fast |
+| **Jina** | Embeddings, reranking, HTML to MD | ~500ms |
+| **Firecrawl** | Deep web scraping, JS-heavy sites | Variable |
+| **Perplexity** | AI synthesis when others fail | Backup |
+
+**Query pattern:**
+1. Start with Exa for semantic search
+2. Add Tavily for citations
+3. Use Context7 for library-specific docs
+4. Fall back to Firecrawl for deep extraction
+
+## Error Recovery
+
+**API Failures:**
+1. Retry with exponential backoff (1s, 2s, 4s)
+2. Fall back to alternative tool (Exa -> Tavily -> Perplexity)
+3. Log failure to memory for pattern detection
+4. If 3+ failures, alert and switch to manual mode
+
+**Swarm Failures:**
+1. Check agent logs: `npx @claude-flow/cli@latest agent logs <id>`
+2. Restore from checkpoint: `/rewind`
+3. Reduce agent count and retry
+4. Store failure pattern in memory for future avoidance
+
+**Context Overflow:**
+1. Run `/compact` with focus instructions
+2. Clear unrelated context with `/clear`
+3. Use subagents for investigation (separate context)
+4. Store important state to memory before clearing
+
+## Token Efficiency
+
+- Use subagents for file exploration (keeps main context clean)
+- Scope investigations narrowly - avoid "explore everything"
+- Prefer `--limit` flags on searches
+- Use streaming for long operations
+- Compact frequently during long sessions
+
+## Security Rules
+
+- NEVER hardcode API keys or secrets
+- Always validate user input at system boundaries
+- Sanitize file paths (prevent directory traversal)
+- Run security scan after security-related changes:
+  ```bash
+  npx @claude-flow/cli@latest security scan
+  ```
+
+## Agent Types (Quick Reference)
+
+**Core:** `coder`, `reviewer`, `tester`, `planner`, `researcher`
+**Specialized:** `security-architect`, `memory-specialist`, `performance-engineer`
+**Swarm:** `hierarchical-coordinator`, `mesh-coordinator`
+**GitHub:** `pr-manager`, `code-review-swarm`, `issue-tracker`
+
+## CLI Quick Reference
 
 ```bash
+# Initialization
 npx @claude-flow/cli@latest init --wizard
+npx @claude-flow/cli@latest doctor --fix
+
+# Agent management
 npx @claude-flow/cli@latest agent spawn -t coder --name my-coder
 npx @claude-flow/cli@latest swarm init --v3-mode
-npx @claude-flow/cli@latest memory search --query "authentication patterns"
-npx @claude-flow/cli@latest doctor --fix
+
+# Memory operations
+npx @claude-flow/cli@latest memory store --key "KEY" --value "VALUE" --namespace NS
+npx @claude-flow/cli@latest memory search --query "QUERY" --limit 10
+npx @claude-flow/cli@latest memory retrieve --key "KEY" --namespace NS
 ```
 
-## Available Agents (60+ Types)
+## Architecture Principles
 
-### Core Development
-`coder`, `reviewer`, `tester`, `planner`, `researcher`
+- Domain-Driven Design with bounded contexts
+- Files under 500 lines
+- Typed interfaces for all public APIs
+- TDD London School (mock-first) for new code
+- Event sourcing for state changes
+- Input validation at system boundaries
 
-### Specialized
-`security-architect`, `security-auditor`, `memory-specialist`, `performance-engineer`
+## Project Config
 
-### Swarm Coordination
-`hierarchical-coordinator`, `mesh-coordinator`, `adaptive-coordinator`
+- **Topology**: hierarchical-mesh
+- **Max Agents**: 15
+- **Memory**: hybrid (SQLite + HNSW vectors)
+- **HNSW**: M=16, efConstruction=200
 
-### GitHub & Repository
-`pr-manager`, `code-review-swarm`, `issue-tracker`, `release-manager`
+## Hooks Configuration
 
-### SPARC Methodology
-`sparc-coord`, `sparc-coder`, `specification`, `pseudocode`, `architecture`
-
-## Memory Commands Reference
-
-```bash
-# Store (REQUIRED: --key, --value; OPTIONAL: --namespace, --ttl, --tags)
-npx @claude-flow/cli@latest memory store --key "pattern-auth" --value "JWT with refresh" --namespace patterns
-
-# Search (REQUIRED: --query; OPTIONAL: --namespace, --limit, --threshold)
-npx @claude-flow/cli@latest memory search --query "authentication patterns"
-
-# List (OPTIONAL: --namespace, --limit)
-npx @claude-flow/cli@latest memory list --namespace patterns --limit 10
-
-# Retrieve (REQUIRED: --key; OPTIONAL: --namespace)
-npx @claude-flow/cli@latest memory retrieve --key "pattern-auth" --namespace patterns
+```json
+{
+  "PostToolUse": [
+    {"matcher": "Edit(**/*.py)", "hooks": [{"type": "command", "command": "python -m py_compile %CLAUDE_FILE_PATHS%"}]},
+    {"matcher": "Edit(**/*.ts)", "hooks": [{"type": "command", "command": "npx tsc --noEmit"}]}
+  ],
+  "Stop": [
+    {"hooks": [{"type": "prompt", "prompt": "Verify tests pass before completing"}]}
+  ]
+}
 ```
 
-## Quick Setup
+## External Documentation
 
-```bash
-claude mcp add claude-flow -- npx -y @claude-flow/cli@latest
-npx @claude-flow/cli@latest daemon start
-npx @claude-flow/cli@latest doctor --fix
-```
-
-## Claude Code vs CLI Tools
-
-- Claude Code's Task tool handles ALL execution: agents, file ops, code generation, git
-- CLI tools handle coordination via Bash: swarm init, memory, hooks, routing
-- NEVER use CLI tools as a substitute for Task tool agents
+For detailed patterns, see:
+- `docs/essential/UNLEASHED_PATTERNS.md` - Production patterns
+- `docs/RESEARCH_STACK_2026.md` - Research tool details
+- `docs/ADR-027-MCP-CONFIGURATION-OPTIMIZATION.md` - MCP optimization
+- `docs/gap-resolution/` - Gap resolution guides
 
 ## Support
 

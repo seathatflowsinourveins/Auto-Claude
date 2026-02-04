@@ -9,6 +9,12 @@
             "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"if ($env:TOOL_INPUT_file_path) { npx @claude-flow/cli@latest hooks pre-edit --file $env:TOOL_INPUT_file_path 2>$null }\"",
             "timeout": 5000,
             "continueOnError": true
+          },
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"if ($env:TOOL_INPUT_file_path) { npx @claude-flow/cli@latest hooks security-check --file $env:TOOL_INPUT_file_path --detect-patterns true 2>$null }\"",
+            "timeout": 3000,
+            "continueOnError": true
           }
         ]
       },
@@ -30,6 +36,17 @@
             "type": "command",
             "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"if ($env:TOOL_INPUT_prompt) { npx @claude-flow/cli@latest hooks pre-task --task-id ('task-' + [DateTimeOffset]::Now.ToUnixTimeSeconds()) --description $env:TOOL_INPUT_prompt 2>$null }\"",
             "timeout": 5000,
+            "continueOnError": true
+          }
+        ]
+      },
+      {
+        "matcher": "^(Read|Grep|Glob)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"npx @claude-flow/cli@latest hooks pre-search --cache-check true 2>$null\"",
+            "timeout": 2000,
             "continueOnError": true
           }
         ]
@@ -65,6 +82,17 @@
             "type": "command",
             "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"if ($env:TOOL_RESULT_agent_id) { $success = if ($env:TOOL_SUCCESS) { $env:TOOL_SUCCESS } else { 'true' }; npx @claude-flow/cli@latest hooks post-task --task-id $env:TOOL_RESULT_agent_id --success $success 2>$null }\"",
             "timeout": 5000,
+            "continueOnError": true
+          }
+        ]
+      },
+      {
+        "matcher": "^(Read|Grep|Glob)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"npx @claude-flow/cli@latest hooks post-search --cache-results true 2>$null\"",
+            "timeout": 2000,
             "continueOnError": true
           }
         ]
@@ -112,13 +140,70 @@
         ]
       }
     ],
+    "PreCompact": [
+      {
+        "matcher": "manual",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"npx @claude-flow/cli@latest hooks pre-compact --mode manual --preserve-context true 2>$null\"",
+            "timeout": 5000,
+            "continueOnError": true
+          }
+        ]
+      },
+      {
+        "matcher": "auto",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"npx @claude-flow/cli@latest hooks pre-compact --mode auto --summary true 2>$null\"",
+            "timeout": 5000,
+            "continueOnError": true
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Evaluate if the subagent has completed its assigned task. Check: 1) Were all requested changes made? 2) Did any errors occur? 3) Is the output complete? Respond with {\"decision\": \"stop\"} if complete, or {\"decision\": \"continue\", \"reason\": \"...\"} if more work is needed.",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "^mcp__claude-flow__.*$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"Write-Output '{\\\"hookSpecificOutput\\\": {\\\"hookEventName\\\": \\\"PermissionRequest\\\", \\\"decision\\\": {\\\"behavior\\\": \\\"allow\\\", \\\"message\\\": \\\"Claude Flow MCP tool auto-approved\\\"}}}'\"",
+            "timeout": 1000
+          }
+        ]
+      },
+      {
+        "matcher": "^mcp__(exa|tavily|firecrawl|jina|perplexity|context7|serper|linear)__.*$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"Write-Output '{\\\"hookSpecificOutput\\\": {\\\"hookEventName\\\": \\\"PermissionRequest\\\", \\\"decision\\\": {\\\"behavior\\\": \\\"allow\\\", \\\"message\\\": \\\"Research tool auto-approved\\\"}}}'\"",
+            "timeout": 1000
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "hooks": [
           {
-            "type": "command",
-            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"Write-Output '{\\\"ok\\\": true}'\"",
-            "timeout": 1000
+            "type": "prompt",
+            "prompt": "Evaluate if the current task has been completed successfully. Consider: 1) Were all requested changes made? 2) Did tests pass (if applicable)? 3) Were any errors unresolved? 4) Is there explicit follow-up work needed? Respond with {\"decision\": \"stop\", \"reason\": \"Task completed successfully\"} if complete, or {\"decision\": \"block\", \"reason\": \"[specific remaining work]\"} if more work is needed.",
+            "timeout": 30
           }
         ]
       }
@@ -130,6 +215,28 @@
             "type": "command",
             "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"if ($env:NOTIFICATION_MESSAGE) { $key = 'notify-' + [DateTimeOffset]::Now.ToUnixTimeSeconds(); npx @claude-flow/cli@latest memory store --namespace notifications --key $key --value $env:NOTIFICATION_MESSAGE 2>$null }\"",
             "timeout": 3000,
+            "continueOnError": true
+          }
+        ]
+      },
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"npx @claude-flow/cli@latest hooks notify --type permission --log true 2>$null\"",
+            "timeout": 2000,
+            "continueOnError": true
+          }
+        ]
+      },
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -Command \"npx @claude-flow/cli@latest hooks notify --type idle --check-background-tasks true 2>$null\"",
+            "timeout": 2000,
             "continueOnError": true
           }
         ]

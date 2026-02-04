@@ -262,6 +262,66 @@ from .resilience import (
     create_telemetry,
 )
 
+# Error Recovery - Comprehensive error recovery with classification and fallbacks
+try:
+    from .error_recovery import (
+        # Error classification
+        ErrorType,
+        RecoveryAction,
+        ClassifiedError,
+        ErrorClassifier,
+        # Recovery strategies
+        RecoveryStrategy as ErrorRecoveryStrategy,
+        RetryStrategy as ErrorRetryStrategy,
+        FallbackChainStrategy,
+        CacheRecoveryStrategy,
+        DegradedResponseStrategy,
+        MemoryFallbackStrategy,
+        # Partial results
+        PartialResult,
+        PartialResultHandler,
+        # Error aggregation
+        ErrorPattern,
+        ErrorAggregator,
+        # Configuration
+        RecoveryConfig,
+        # Main classes
+        RecoveryResult,
+        ErrorRecovery,
+        # Decorator
+        with_recovery,
+        # Factory functions
+        create_recovery,
+        create_classifier,
+        create_aggregator,
+        get_error_recovery,
+    )
+    ERROR_RECOVERY_AVAILABLE = True
+except ImportError:
+    ERROR_RECOVERY_AVAILABLE = False
+    ErrorType = None
+    RecoveryAction = None
+    ClassifiedError = None
+    ErrorClassifier = None
+    ErrorRecoveryStrategy = None
+    ErrorRetryStrategy = None
+    FallbackChainStrategy = None
+    CacheRecoveryStrategy = None
+    DegradedResponseStrategy = None
+    MemoryFallbackStrategy = None
+    PartialResult = None
+    PartialResultHandler = None
+    ErrorPattern = None
+    ErrorAggregator = None
+    RecoveryConfig = None
+    RecoveryResult = None
+    ErrorRecovery = None
+    with_recovery = None
+    create_recovery = None
+    create_classifier = None
+    create_aggregator = None
+    get_error_recovery = None
+
 # Optional: Firecrawl integration (requires firecrawl-py)
 try:
     from .firecrawl_integration import (
@@ -630,6 +690,30 @@ __all__ = [
     "create_rate_limiter",
     "create_resilience_handler",
     "create_telemetry",
+    # Error Recovery
+    "ERROR_RECOVERY_AVAILABLE",
+    "ErrorType",
+    "RecoveryAction",
+    "ClassifiedError",
+    "ErrorClassifier",
+    "ErrorRecoveryStrategy",
+    "ErrorRetryStrategy",
+    "FallbackChainStrategy",
+    "CacheRecoveryStrategy",
+    "DegradedResponseStrategy",
+    "MemoryFallbackStrategy",
+    "PartialResult",
+    "PartialResultHandler",
+    "ErrorPattern",
+    "ErrorAggregator",
+    "RecoveryConfig",
+    "RecoveryResult",
+    "ErrorRecovery",
+    "with_recovery",
+    "create_recovery",
+    "create_classifier",
+    "create_aggregator",
+    "get_error_recovery",
     # Firecrawl Integration
     "FIRECRAWL_AVAILABLE",
     "FirecrawlResearch",
@@ -991,6 +1075,84 @@ __all__ = [
     "get_bridge",
     "research",
     # ==========================================================================
+    # Structured Logging Configuration
+    # ==========================================================================
+    "LOGGING_CONFIG_AVAILABLE",
+    "StructuredLogger",
+    "StructuredJSONFormatter",
+    "LogContext",
+    "get_logger",
+    "configure_logging",
+    "reset_logging",
+    "get_current_context",
+    "set_current_context",
+    "clear_current_context",
+    "ComponentLogLevel",
+    "COMPONENT_LOG_LEVELS",
+    "set_component_log_level",
+    "get_component_log_level",
+    "logged",
+    "generate_correlation_id",
+    "generate_request_id",
+    "generate_trace_id",
+    "generate_span_id",
+    # ==========================================================================
+    # OpenTelemetry Distributed Tracing
+    # ==========================================================================
+    "OTEL_TRACING_AVAILABLE",
+    # Core types
+    "SpanKind",
+    "SpanStatus",
+    "TraceContext",
+    "Baggage",
+    "SpanEvent",
+    "SpanLink",
+    "Span",
+    # Processors
+    "SpanProcessor",
+    "SimpleSpanProcessor",
+    "BatchSpanProcessor",
+    # Exporters
+    "SpanExporter",
+    "ConsoleSpanExporter",
+    "InMemorySpanExporter",
+    "OTLPSpanExporter",
+    "JaegerSpanExporter",
+    "ZipkinSpanExporter",
+    # Samplers
+    "Sampler",
+    "AlwaysOnSampler",
+    "AlwaysOffSampler",
+    "TraceIdRatioSampler",
+    "ParentBasedSampler",
+    # Tracer
+    "OTelTracer",
+    # Manager
+    "TracingConfig",
+    "TracingManager",
+    # Context propagation
+    "inject_context",
+    "extract_context",
+    "extract_baggage",
+    # Decorators
+    "traced",
+    "traced_async",
+    # Integration helpers
+    "TracedOperation",
+    "trace_rag_retrieve",
+    "trace_rag_rerank",
+    "trace_rag_generate",
+    "trace_adapter_call",
+    "trace_memory_operation",
+    # Global functions
+    "get_tracing_manager",
+    "get_tracer",
+    "configure_tracing",
+    "reset_tracing",
+    # Quick setup
+    "setup_development_tracing",
+    "setup_production_tracing",
+    # ==========================================================================
     # V36.1 Ultimate Research Swarm - Claude Flow V3 + Research Orchestration
     # ==========================================================================
     "ULTIMATE_RESEARCH_SWARM_AVAILABLE",
@@ -1007,6 +1169,69 @@ __all__ = [
     "quick_research",
     "comprehensive_research",
     "ultimate_deep_research",
+    # ==========================================================================
+    # Adapter Rate Limiting Middleware
+    # ==========================================================================
+    "ADAPTER_RATE_LIMITER_AVAILABLE",
+    "AdapterRateLimiter",
+    "RateLimitConfig",
+    "AdapterRateLimitStats",
+    "RateLimitState",
+    "TokenBucket",
+    "AdapterRateLimitExceeded",
+    "get_adapter_rate_limiter",
+    "configure_rate_limit",
+    "adapter_rate_limited",
+    "with_rate_limit",
+    "parse_rate_limit_headers",
+    "DEFAULT_RATE_LIMITS",
+    # ==========================================================================
+    # Lifecycle Management - Graceful Shutdown Handling (V50)
+    # ==========================================================================
+    "LIFECYCLE_AVAILABLE",
+    "LifecycleManager",
+    "ShutdownPhase",
+    "ShutdownPriority",
+    "HandlerRegistration",
+    "ShutdownResult",
+    "ShutdownReport",
+    "get_lifecycle_manager",
+    "reset_lifecycle_manager",
+    "on_shutdown",
+    "graceful_shutdown_context",
+    "register_platform_components",
+    # ==========================================================================
+    # Request Deduplication - Prevent Duplicate API Calls (V51)
+    # ==========================================================================
+    "DEDUPLICATION_AVAILABLE",
+    "DeduplicationConfig",
+    "DeduplicationStrategy",
+    "DeduplicationStats",
+    "CachedResponse",
+    "DeduplicationResult",
+    "RequestDeduplicator",
+    "get_deduplicator",
+    "get_deduplicator_sync",
+    "reset_deduplicator",
+    "deduplicated",
+    "DeduplicatedAdapter",
+    # ==========================================================================
+    # Adaptive Timeout - Dynamic Timeout Based on Historical Latency (V52)
+    # ==========================================================================
+    "ADAPTIVE_TIMEOUT_AVAILABLE",
+    "AdaptiveTimeout",
+    "TimeoutProfile",
+    "LatencyStats",
+    "MeasurementContext",
+    "get_adaptive_timeout",
+    "get_adaptive_timeout_sync",
+    "get_all_timeout_stats",
+    "reset_all_timeouts",
+    "AdaptiveTimeoutMiddleware",
+    "TimeoutAlertManager",
+    "get_timeout_alert_manager",
+    "TIMEOUT_PROFILES",
+    "calculate_percentile",
 ]
 
 
@@ -1803,6 +2028,166 @@ except ImportError:
     load_known_patterns = None
 
 # =============================================================================
+# Structured Logging Configuration
+# =============================================================================
+# JSON-structured logging for all components with correlation IDs and sampling
+try:
+    from .logging_config import (
+        # Core classes
+        StructuredLogger,
+        StructuredJSONFormatter,
+        LogContext,
+        # Factory functions
+        get_logger,
+        configure_logging,
+        reset_logging,
+        # Context management
+        get_current_context,
+        set_current_context,
+        clear_current_context,
+        # Component levels
+        ComponentLogLevel,
+        COMPONENT_LOG_LEVELS,
+        set_component_log_level,
+        get_component_log_level,
+        # Decorators
+        logged,
+        # Utilities
+        generate_correlation_id,
+        generate_request_id,
+        generate_trace_id,
+        generate_span_id,
+    )
+    LOGGING_CONFIG_AVAILABLE = True
+except ImportError:
+    LOGGING_CONFIG_AVAILABLE = False
+    StructuredLogger = None
+    StructuredJSONFormatter = None
+    LogContext = None
+    get_logger = None
+    configure_logging = None
+    reset_logging = None
+    get_current_context = None
+    set_current_context = None
+    clear_current_context = None
+    ComponentLogLevel = None
+    COMPONENT_LOG_LEVELS = None
+    set_component_log_level = None
+    get_component_log_level = None
+    logged = None
+    generate_correlation_id = None
+    generate_request_id = None
+    generate_trace_id = None
+    generate_span_id = None
+
+# =============================================================================
+# OpenTelemetry Distributed Tracing
+# =============================================================================
+# Production-grade distributed tracing with OpenTelemetry compatibility
+# - W3C Trace Context propagation
+# - Export formats: OTLP, Jaeger, Zipkin
+# - Integration with structured logging
+try:
+    from .tracing import (
+        # Core types
+        SpanKind,
+        SpanStatus,
+        TraceContext,
+        Baggage,
+        SpanEvent,
+        SpanLink,
+        Span,
+        # Processors
+        SpanProcessor,
+        SimpleSpanProcessor,
+        BatchSpanProcessor,
+        # Exporters
+        SpanExporter,
+        ConsoleSpanExporter,
+        InMemorySpanExporter,
+        OTLPSpanExporter,
+        JaegerSpanExporter,
+        ZipkinSpanExporter,
+        # Samplers
+        Sampler,
+        AlwaysOnSampler,
+        AlwaysOffSampler,
+        TraceIdRatioSampler,
+        ParentBasedSampler,
+        # Tracer
+        Tracer as OTelTracer,
+        # Manager
+        TracingConfig,
+        TracingManager,
+        # Context propagation
+        inject_context,
+        extract_context,
+        extract_baggage,
+        # Decorators
+        traced,
+        traced_async,
+        # Integration helpers
+        TracedOperation,
+        trace_rag_retrieve,
+        trace_rag_rerank,
+        trace_rag_generate,
+        trace_adapter_call,
+        trace_memory_operation,
+        # Global functions
+        get_tracing_manager,
+        get_tracer,
+        configure_tracing,
+        reset_tracing,
+        # Quick setup
+        setup_development_tracing,
+        setup_production_tracing,
+    )
+    OTEL_TRACING_AVAILABLE = True
+except ImportError:
+    OTEL_TRACING_AVAILABLE = False
+    SpanKind = None
+    SpanStatus = None
+    TraceContext = None
+    Baggage = None
+    SpanEvent = None
+    SpanLink = None
+    Span = None
+    SpanProcessor = None
+    SimpleSpanProcessor = None
+    BatchSpanProcessor = None
+    SpanExporter = None
+    ConsoleSpanExporter = None
+    InMemorySpanExporter = None
+    OTLPSpanExporter = None
+    JaegerSpanExporter = None
+    ZipkinSpanExporter = None
+    Sampler = None
+    AlwaysOnSampler = None
+    AlwaysOffSampler = None
+    TraceIdRatioSampler = None
+    ParentBasedSampler = None
+    OTelTracer = None
+    TracingConfig = None
+    TracingManager = None
+    inject_context = None
+    extract_context = None
+    extract_baggage = None
+    traced = None
+    traced_async = None
+    TracedOperation = None
+    trace_rag_retrieve = None
+    trace_rag_rerank = None
+    trace_rag_generate = None
+    trace_adapter_call = None
+    trace_memory_operation = None
+    get_tracing_manager = None
+    get_tracer = None
+    configure_tracing = None
+    reset_tracing = None
+    setup_development_tracing = None
+    setup_production_tracing = None
+
+# =============================================================================
 # V36.1 Ultimate Research Swarm - Claude Flow V3 + Research Orchestration
 # =============================================================================
 # Unleashes Claude's potential through multi-agent research orchestration
@@ -1844,3 +2229,167 @@ except ImportError:
     quick_research = None
     comprehensive_research = None
     ultimate_deep_research = None
+
+# =============================================================================
+# Adapter Rate Limiting Middleware
+# =============================================================================
+# Token bucket rate limiting with adaptive backoff for all adapters
+# Parses X-RateLimit-* and Retry-After headers for intelligent throttling
+try:
+    from .rate_limiter import (
+        # Core classes
+        RateLimiter as AdapterRateLimiter,
+        RateLimitConfig,
+        RateLimitStats as AdapterRateLimitStats,
+        RateLimitState,
+        TokenBucket,
+        RateLimitExceeded as AdapterRateLimitExceeded,
+        # Functions
+        get_rate_limiter as get_adapter_rate_limiter,
+        configure_rate_limit,
+        rate_limited as adapter_rate_limited,
+        with_rate_limit,
+        parse_rate_limit_headers,
+        # Constants
+        DEFAULT_RATE_LIMITS,
+    )
+    ADAPTER_RATE_LIMITER_AVAILABLE = True
+except ImportError:
+    ADAPTER_RATE_LIMITER_AVAILABLE = False
+    AdapterRateLimiter = None
+    RateLimitConfig = None
+    AdapterRateLimitStats = None
+    RateLimitState = None
+    TokenBucket = None
+    AdapterRateLimitExceeded = None
+    get_adapter_rate_limiter = None
+    configure_rate_limit = None
+    adapter_rate_limited = None
+    with_rate_limit = None
+    parse_rate_limit_headers = None
+    DEFAULT_RATE_LIMITS = None
+
+# =============================================================================
+# Lifecycle Management - Graceful Shutdown Handling (V50)
+# =============================================================================
+# Centralized shutdown handling for all platform components
+# Ensures no data loss: drains connections, flushes memory, persists caches
+try:
+    from .lifecycle import (
+        # Core class
+        LifecycleManager,
+        # Enums
+        ShutdownPhase,
+        ShutdownPriority,
+        # Data classes
+        HandlerRegistration,
+        ShutdownResult,
+        ShutdownReport,
+        # Factory functions
+        get_lifecycle_manager,
+        reset_lifecycle_manager,
+        # Decorators
+        on_shutdown,
+        # Helpers
+        graceful_shutdown_context,
+        register_platform_components,
+    )
+    LIFECYCLE_AVAILABLE = True
+except ImportError:
+    LIFECYCLE_AVAILABLE = False
+    LifecycleManager = None
+    ShutdownPhase = None
+    ShutdownPriority = None
+    HandlerRegistration = None
+    ShutdownResult = None
+    ShutdownReport = None
+    get_lifecycle_manager = None
+    reset_lifecycle_manager = None
+    on_shutdown = None
+    graceful_shutdown_context = None
+    register_platform_components = None
+
+# =============================================================================
+# Request Deduplication - Prevent Duplicate API Calls (V51)
+# =============================================================================
+# Hash-based request fingerprinting with in-flight tracking and TTL cache
+# Performance target: Eliminate 30%+ duplicate calls in batch scenarios
+try:
+    from .deduplication import (
+        # Configuration
+        DeduplicationConfig,
+        DeduplicationStrategy,
+        # Statistics
+        DeduplicationStats,
+        # Core types
+        CachedResponse,
+        DeduplicationResult,
+        # Main class
+        RequestDeduplicator,
+        # Factory functions
+        get_deduplicator,
+        get_deduplicator_sync,
+        reset_deduplicator,
+        # Decorator
+        deduplicated,
+        # Mixin
+        DeduplicatedAdapter,
+    )
+    DEDUPLICATION_AVAILABLE = True
+except ImportError:
+    DEDUPLICATION_AVAILABLE = False
+    DeduplicationConfig = None
+    DeduplicationStrategy = None
+    DeduplicationStats = None
+    CachedResponse = None
+    DeduplicationResult = None
+    RequestDeduplicator = None
+    get_deduplicator = None
+    get_deduplicator_sync = None
+    reset_deduplicator = None
+    deduplicated = None
+    DeduplicatedAdapter = None
+
+# =============================================================================
+# Adaptive Timeout - Dynamic Timeout Based on Historical Latency (V52)
+# =============================================================================
+# Track per-operation latency percentiles and calculate dynamic timeouts using
+# p99 * 1.5 formula. Performance target: 30% reduction in timeout-related failures.
+try:
+    from .adaptive_timeout import (
+        # Core classes
+        AdaptiveTimeout,
+        TimeoutProfile,
+        LatencyStats,
+        MeasurementContext,
+        # Registry functions
+        get_adaptive_timeout,
+        get_adaptive_timeout_sync,
+        get_all_timeout_stats,
+        reset_all_timeouts,
+        # Integration helpers
+        AdaptiveTimeoutMiddleware,
+        # Alerting
+        TimeoutAlertManager,
+        get_timeout_alert_manager,
+        # Constants
+        DEFAULT_PROFILES as TIMEOUT_PROFILES,
+        # Utility functions
+        calculate_percentile,
+    )
+    ADAPTIVE_TIMEOUT_AVAILABLE = True
+except ImportError:
+    ADAPTIVE_TIMEOUT_AVAILABLE = False
+    AdaptiveTimeout = None
+    TimeoutProfile = None
+    LatencyStats = None
+    MeasurementContext = None
+    get_adaptive_timeout = None
+    get_adaptive_timeout_sync = None
+    get_all_timeout_stats = None
+    reset_all_timeouts = None
+    AdaptiveTimeoutMiddleware = None
+    TimeoutAlertManager = None
+    get_timeout_alert_manager = None
+    TIMEOUT_PROFILES = None
+    calculate_percentile = None

@@ -252,8 +252,8 @@ class DiskCache(CacheBackend):
 
     def _key_to_path(self, key: str) -> Path:
         """Convert cache key to file path."""
-        # Use hash for safe filesystem name
-        key_hash = hashlib.md5(key.encode()).hexdigest()
+        # V37: Use SHA-256 for safe filesystem name (CVE-UNLEASH-002 remediation)
+        key_hash = hashlib.sha256(key.encode()).hexdigest()
         ext = ".json.gz" if self.compress else ".json"
         return self.cache_dir / f"{key_hash}{ext}"
 

@@ -87,17 +87,59 @@ class ThinkingChain(BaseModel):
 
 
 class ThinkingBudget(BaseModel):
-    """Token budget configuration for thinking."""
+    """Token budget configuration for thinking.
 
+    Aligned with Anthropic's Extended Thinking API requirements:
+    - budget_tokens: Minimum 1024 tokens (Anthropic requirement)
+    - Supports up to 128K tokens for complex reasoning
+
+    For Anthropic's extended thinking, use:
+    - budget_tokens: Primary thinking budget (min 1024)
+    - interleaved_thinking: Enable thinking between tool calls (beta)
+    """
+
+    # Primary budget for Anthropic extended thinking (min 1024 per API docs)
+    budget_tokens: int = Field(default=8000, ge=1024, le=128000)
+
+    # Legacy fields for backward compatibility
     total_tokens: int = Field(default=16000, ge=1000, le=128000)
-    min_tokens: int = Field(default=1000, ge=100)
+    min_tokens: int = Field(default=1024, ge=1024)  # Updated minimum to 1024
     max_tokens_per_step: int = Field(default=4000, ge=500)
     reserved_for_output: int = Field(default=2000, ge=500)
+
+    # Interleaved thinking support (beta: thinking-interleaved-2025-02-19)
+    interleaved_thinking: bool = Field(
+        default=False,
+        description="Enable interleaved thinking between tool calls (beta feature)"
+    )
 
     @property
     def available_for_thinking(self) -> int:
         """Tokens available for thinking (excluding output reserve)."""
         return self.total_tokens - self.reserved_for_output
+
+    def to_anthropic_config(self) -> Dict[str, Any]:
+        """Convert to Anthropic API thinking configuration.
+
+        Returns:
+            Dict suitable for the 'thinking' parameter in Anthropic API calls.
+        """
+        return {
+            "type": "enabled",
+            "budget_tokens": self.budget_tokens
+        }
+
+    def get_beta_headers(self) -> List[str]:
+        """Get beta headers for Anthropic API call.
+
+        Returns:
+            List of beta feature headers to include.
+        """
+        headers = []
+        if self.interleaved_thinking:
+            # Beta header for interleaved thinking
+            headers.append("interleaved-thinking-2025-05-14")
+        return headers
 
 
 class MetacognitiveState(BaseModel):
@@ -161,6 +203,130 @@ PATTERNS: Dict[str, ThinkingPattern] = {
         strategy=ThinkingStrategy.REFLEXION,
     ),
 }
+
+
+# =============================================================================
+# Anthropic Extended Thinking Support
+# =============================================================================
+
+# Models that support extended thinking (as of 2025)
+EXTENDED_THINKING_MODELS: Dict[str, Dict[str, Any]] = {
+    "claude-opus-4-5-20250514": {
+        "alias": "claude-opus-4.5",
+        "max_thinking_tokens": 128000,
+        "supports_interleaved": True,
+    },
+    "claude-sonnet-4-5-20250514": {
+        "alias": "claude-sonnet-4.5",
+        "max_thinking_tokens": 128000,
+        "supports_interleaved": True,
+    },
+    "claude-3-7-sonnet-20250219": {
+        "alias": "claude-3.7-sonnet",
+        "max_thinking_tokens": 128000,
+        "supports_interleaved": True,
+    },
+    "claude-haiku-4-5-20250514": {
+        "alias": "claude-haiku-4.5",
+        "max_thinking_tokens": 64000,
+        "supports_interleaved": True,
+    },
+}
+
+
+def supports_extended_thinking(model: str) -> bool:
+    """Check if a model supports extended thinking.
+
+    Args:
+        model: Model name or alias
+
+    Returns:
+        True if the model supports extended thinking
+    """
+    model_lower = model.lower()
+    for model_id, info in EXTENDED_THINKING_MODELS.items():
+        if model_lower in model_id.lower() or model_lower in info["alias"].lower():
+            return True
+    return False
+
+
+def get_max_thinking_tokens(model: str) -> int:
+    """Get the maximum thinking tokens for a model.
+
+    Args:
+        model: Model name or alias
+
+    Returns:
+        Maximum thinking tokens (defaults to 64000 if unknown)
+    """
+    model_lower = model.lower()
+    for model_id, info in EXTENDED_THINKING_MODELS.items():
+        if model_lower in model_id.lower() or model_lower in info["alias"].lower():
+            return info["max_thinking_tokens"]
+    return 64000  # Conservative default
+
+
+def supports_interleaved_thinking(model: str) -> bool:
+    """Check if a model supports interleaved thinking (beta).
+
+    Interleaved thinking allows thinking blocks between tool calls
+    in agentic workflows.
+
+    Args:
+        model: Model name or alias
+
+    Returns:
+        True if the model supports interleaved thinking
+    """
+    model_lower = model.lower()
+    for model_id, info in EXTENDED_THINKING_MODELS.items():
+        if model_lower in model_id.lower() or model_lower in info["alias"].lower():
+            return info.get("supports_interleaved", False)
+    return False
+
+
+def create_thinking_config(
+    budget_tokens: int = 8000,
+    interleaved: bool = False,
+    model: Optional[str] = None
+) -> Dict[str, Any]:
+    """Create a thinking configuration for Anthropic API calls.
+
+    Args:
+        budget_tokens: Token budget for thinking (min 1024)
+        interleaved: Enable interleaved thinking (beta)
+        model: Optional model name to validate against
+
+    Returns:
+        Dict with 'thinking' config and optional 'beta_headers'
+
+    Example:
+        config = create_thinking_config(budget_tokens=16000, interleaved=True)
+        # Use config['thinking'] in API call
+        # Use config['beta_headers'] for extra_headers
+    """
+    # Validate budget
+    if budget_tokens < 1024:
+        budget_tokens = 1024
+        logger.warning("budget_tokens increased to minimum of 1024")
+
+    if model:
+        max_tokens = get_max_thinking_tokens(model)
+        if budget_tokens > max_tokens:
+            budget_tokens = max_tokens
+            logger.warning(f"budget_tokens capped to {max_tokens} for model {model}")
+
+    result = {
+        "thinking": {
+            "type": "enabled",
+            "budget_tokens": budget_tokens
+        }
+    }
+
+    if interleaved:
+        result["beta_headers"] = ["interleaved-thinking-2025-05-14"]
+
+    return result
 
 
 # =============================================================================

@@ -38,6 +38,15 @@ from uuid import uuid4
 
 from pydantic import BaseModel, Field
 
+# Structured logging
+try:
+    from .logging_config import get_logger, generate_correlation_id
+    _logger = get_logger("memory")
+except ImportError:
+    import logging
+    _logger = logging.getLogger(__name__)
+    generate_correlation_id = lambda: "corr-fallback"
+
 
 # =============================================================================
 # Core Memory (Tier 1) - Always In-Context
@@ -324,6 +333,15 @@ class ArchivalMemory:
             }
         )
         await self.backend.store(entry)
+
+        _logger.info(
+            "Stored entry in archival memory",
+            component="memory.archival",
+            agent_id=self.agent_id,
+            entry_id=entry_id,
+            category=category,
+            content_length=len(content),
+        )
         return entry_id
 
     async def search(
@@ -336,12 +354,39 @@ class ArchivalMemory:
         filters = {"agent_id": self.agent_id}
         if category:
             filters["category"] = category
-        return await self.backend.search(query, limit, filters)
+
+        _logger.debug(
+            "Searching archival memory",
+            component="memory.archival",
+            agent_id=self.agent_id,
+            query_length=len(query),
+            category=category,
+            limit=limit,
+            sample_rate=0.2,
+        )
+
+        results = await self.backend.search(query, limit, filters)
+
+        _logger.info(
+            "Archival memory search completed",
+            component="memory.archival",
+            agent_id=self.agent_id,
+            results_count=len(results),
+            category=category,
+            sample_rate=0.5,
+        )
+        return results
 
     async def recall(self, query: str, limit: int = 5) -> str:
         """Recall relevant memories as formatted string."""
         entries = await self.search(query, limit=limit)
         if not entries:
+            _logger.debug(
+                "No memories found for recall",
+                component="memory.archival",
+                agent_id=self.agent_id,
+                query_length=len(query),
+            )
             return "No relevant memories found."
 
         memories = []
@@ -554,6 +599,13 @@ class MemorySystem:
     ):
         self.agent_id = agent_id
 
+        _logger.info(
+            "Initializing memory system",
+            component="memory",
+            agent_id=agent_id,
+            storage_path=str(storage_base) if storage_base else "default",
+        )
+
         if storage_base is None:
             storage_base = Path.home() / ".uap" / "memory" / agent_id
 
@@ -567,8 +619,24 @@ class MemorySystem:
 
         self.temporal = TemporalGraph(agent_id, storage_base / "temporal")
 
+        _logger.info(
+            "Memory system initialized",
+            component="memory",
+            agent_id=agent_id,
+            core_blocks=len(self.core.blocks),
+            temporal_facts=len(self.temporal.facts),
+        )
+
     def render_context(self, include_temporal: bool = True) -> str:
         """Render all memory for context injection."""
+        _logger.debug(
+            "Rendering memory context",
+            component="memory",
+            agent_id=self.agent_id,
+            include_temporal=include_temporal,
+            sample_rate=0.1,
+        )
+
         parts = [self.core.render_all()]
 
         if include_temporal:
@@ -580,6 +648,14 @@ class MemorySystem:
 
     def export_state(self) -> Dict[str, Any]:
         """Export full memory state for checkpointing."""
+        _logger.info(
+            "Exporting memory state",
+            component="memory",
+            agent_id=self.agent_id,
+            core_blocks=len(self.core.blocks),
+            temporal_facts=len(self.temporal.facts),
+        )
+
         return {
             "agent_id": self.agent_id,
             "core": self.core.export(),
@@ -600,6 +676,14 @@ class MemorySystem:
 
     async def import_state(self, state: Dict[str, Any]) -> None:
         """Import memory state from checkpoint."""
+        _logger.info(
+            "Importing memory state",
+            component="memory",
+            agent_id=self.agent_id,
+            has_core=("core" in state),
+            has_temporal=("temporal_facts" in state),
+        )
+
         if "core" in state:
             self.core.import_state(state["core"])
 

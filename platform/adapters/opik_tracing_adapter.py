@@ -517,8 +517,8 @@ class OpikTracer:
                 # Let the breaker know about the failure by attempting to use it
                 try:
                     breaker._on_failure()
-                except:
-                    pass
+                except Exception as breaker_error:
+                    logger.debug("circuit_breaker_update_failed", error=str(breaker_error))
 
     def get_status(self) -> Dict[str, Any]:
         """Get adapter status including circuit breaker health (V47)."""

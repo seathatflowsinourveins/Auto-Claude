@@ -97,6 +97,14 @@ class AdapterCircuitBreakerManager:
         "knowledge_adapter": AdapterCircuitConfig(failure_threshold=5, recovery_timeout=30.0),
         "chonkie_adapter": AdapterCircuitConfig(failure_threshold=5, recovery_timeout=30.0),
 
+        # Research adapters - standard tolerance (5 failures, 30s reset)
+        "exa_adapter": AdapterCircuitConfig(failure_threshold=5, recovery_timeout=30.0),
+        "tavily_adapter": AdapterCircuitConfig(failure_threshold=5, recovery_timeout=30.0),
+        "serper_adapter": AdapterCircuitConfig(failure_threshold=5, recovery_timeout=30.0),
+        "perplexity_adapter": AdapterCircuitConfig(failure_threshold=5, recovery_timeout=30.0),
+        "firecrawl_adapter": AdapterCircuitConfig(failure_threshold=5, recovery_timeout=30.0),
+        "jina_adapter": AdapterCircuitConfig(failure_threshold=5, recovery_timeout=30.0),
+
         # Default for unknown adapters
         "_default": AdapterCircuitConfig(failure_threshold=5, recovery_timeout=30.0),
     }

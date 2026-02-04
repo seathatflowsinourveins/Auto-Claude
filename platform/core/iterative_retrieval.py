@@ -385,9 +385,10 @@ class IterativeRetriever:
         try:
             if block_label:
                 # Update memory block
+                # V3.1 FIX: Correct Letta SDK signature - label is named param, not positional
                 client.agents.blocks.update(
-                    block_label,
                     agent_id=self.agent_id,
+                    label=block_label,
                     value=content
                 )
                 return StorageResult(success=True, block_updated=block_label)

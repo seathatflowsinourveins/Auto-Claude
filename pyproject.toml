@@ -7,21 +7,34 @@ readme = "README.md"
 
 dependencies = [
     # Core dependencies only - SDKs installed per phase
-    "structlog>=24.1.0",
-    "httpx>=0.26.0",
-    "pydantic>=2.0.0",
-    "python-dotenv>=1.0.0",
-    "rich>=13.0.0",
+    "structlog>=25.5.0",
+    "httpx>=0.28.0",
+    "pydantic>=2.12.0",
+    "python-dotenv>=1.2.0",
+    "rich>=14.0.0",
+    "click>=8.1.0",
+    "pyyaml>=6.0",
+    # Core Anthropic SDKs (updated 2026-02-03)
+    "anthropic>=0.77.0",
+    "claude-agent-sdk>=0.1.29",
+    # HTTP/Async
+    "aiohttp>=3.13.0",
+    # Vector Search
+    "hnswlib>=0.8.0",
+    "numpy>=2.0.0",
 ]
+
+[project.scripts]
+unleash = "platform.cli:main"
 
 [project.optional-dependencies]
 # Layer 0: Protocol
 protocol = [
-    "mcp>=0.1.0",
-    "anthropic>=0.18.0",
-    "openai>=1.12.0",
-    "litellm>=1.30.0",
-    "fastmcp>=0.1.0",
+    "mcp>=1.23.0",
+    "anthropic>=0.77.0",
+    "openai>=2.15.0",
+    "litellm>=1.80.0",
+    "fastmcp>=2.14.0",
     # V36 New
     "portkey-ai>=1.0.0",          # Portkey Gateway
 ]
@@ -29,11 +42,11 @@ protocol = [
 # Layer 1: Orchestration
 # CVE-2025-64439: langgraph>=1.0.1, langgraph-checkpoint>=3.0.0 required for RCE fix
 orchestration = [
-    "temporalio>=1.4.0",
-    "langgraph>=1.0.1",
-    "langgraph-checkpoint>=3.0.0",
+    "temporalio>=1.20.0",
+    "langgraph>=1.0.7",
+    "langgraph-checkpoint>=3.0.1",
     "crewai>=0.28.0",
-    "pyautogen>=0.2.0",
+    "pyautogen>=0.7.0",
     # V36 New
     "openai-swarm>=0.1.0",        # OpenAI Agents SDK
     "strands-agents>=0.1.0",      # AWS Strands Agents
@@ -41,27 +54,27 @@ orchestration = [
 
 # Layer 2: Memory
 memory = [
-    "letta>=0.3.0",
-    "mem0ai>=0.0.20",
+    "letta>=0.6.0",
+    "mem0ai>=1.0.0",
     # V36 New (replaces zep-python)
-    "graphiti-core>=0.5.0",       # Graphiti (replaces Zep CE)
+    "graphiti-core>=0.25.0",      # Graphiti (replaces Zep CE)
 ]
 
 # Layers 3-4: Intelligence (Structured + Reasoning)
 intelligence = [
-    "instructor>=1.0.0",
+    "instructor>=1.14.0",
     "outlines>=0.0.40",
-    "pydantic-ai>=1.51.0",        # Upgraded for agent features
-    "dspy-ai>=2.6.0",             # Upgraded for MIPROv2 optimizer
+    "pydantic-ai>=1.47.0",        # Upgraded for agent features
+    "dspy-ai>=2.6.27",            # Upgraded for MIPROv2 optimizer
 ]
 
 # Layer 5: Observability
 observability = [
-    "langfuse>=2.0.0",
-    "opik>=1.0.0",
+    "langfuse>=3.12.0",
+    "opik>=1.10.0",
     "arize-phoenix>=3.0.0",
     "deepeval>=0.21.0",
-    "ragas>=0.1.0",
+    "ragas>=0.2.8",
     "promptfoo>=0.1.0",
     # V36 New
     "braintrust>=0.1.0",          # Braintrust evaluation
@@ -69,25 +82,33 @@ observability = [
 
 # Layer 6: Safety
 safety = [
-    "guardrails-ai>=0.4.0",
+    "guardrails-ai>=0.7.0",
     "llm-guard>=0.3.0",
-    "nemoguardrails>=0.8.0",
+    "nemoguardrails>=0.17.0",
 ]
 
 # Layers 7-8: Processing & Knowledge
 processing = [
     "aider-chat>=0.30.0",
-    "crawl4ai>=0.3.0",
+    "crawl4ai>=0.8.0",
     "graphrag>=0.3.0",
-    "ribs>=0.7.0",
+    "ribs>=0.9.0",
     # V36 New
     "ragatouille>=0.1.0",         # ColBERT late interaction
     "cognee>=0.1.0",              # Knowledge graph construction
 ]
 
+# Research Stack SDKs (updated 2026-02-03)
+research = [
+    "exa-py>=2.3.0",
+    "tavily-python>=0.7.21",
+    "firecrawl-py>=4.14.0",
+    # Jina via MCP remote
+]
+
 # V36 Complete SDK Bundle
 v36 = [
-    "unleash-platform[protocol,orchestration,memory,intelligence,observability,safety,processing]",
+    "unleash-platform[protocol,orchestration,memory,intelligence,observability,safety,processing,research]",
 ]
 
 # All SDKs combined (alias for v36)
@@ -97,11 +118,11 @@ all = [
 
 # Development dependencies
 dev = [
-    "pytest>=8.0.0",
-    "pytest-asyncio>=0.23.0",
-    "pytest-cov>=4.1.0",
-    "mypy>=1.8.0",
-    "ruff>=0.2.0",
+    "pytest>=9.0.0",
+    "pytest-asyncio>=1.3.0",
+    "pytest-cov>=7.0.0",
+    "mypy>=1.19.0",
+    "ruff>=0.14.0",
 ]
 
 [build-system]
