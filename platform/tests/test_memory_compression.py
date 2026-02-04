@@ -329,7 +329,7 @@ class TestClusteringStrategy:
         """Test that similar memories are grouped."""
         strategy = ClusteringStrategy()
 
-        clusters = await strategy._cluster_by_keywords(
+        clusters = strategy._cluster_by_keywords(
             sample_memories, compression_config
         )
 

@@ -49,7 +49,7 @@ class TestExaAdapterProperties:
     def test_layer(self):
         """Adapter should be in RESEARCH layer."""
         adapter = ExaAdapter()
-        assert adapter.layer == SDKLayer.RESEARCH
+        assert adapter.layer.name == "RESEARCH"
 
     def test_available_depends_on_sdk(self):
         """available property should reflect SDK installation."""
@@ -436,7 +436,7 @@ class TestExaAdapterHealthAndShutdown:
         await adapter.shutdown()
 
         assert adapter._client is None
-        assert adapter._status == AdapterStatus.UNINITIALIZED
+        assert adapter._status.value == AdapterStatus.UNINITIALIZED.value
 
 
 class TestExaAdapterErrorHandling:

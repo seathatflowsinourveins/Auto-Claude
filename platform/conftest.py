@@ -35,7 +35,22 @@ else:
 sys.path = _original_path
 
 # Ensure platform dir is FIRST so 'from core.xxx' resolves to platform/core/
+# Remove unleash_root first if present (it has a conflicting core/ package)
+sys.path = [p for p in sys.path
+            if os.path.normpath(p) != os.path.normpath(_unleash_root)]
 if _platform_pkg_dir not in sys.path:
     sys.path.insert(0, _platform_pkg_dir)
-if _unleash_root not in sys.path:
-    sys.path.insert(1, _unleash_root)
+# Add unleash root AFTER platform dir
+sys.path.append(_unleash_root)
+
+# Purge any cached 'core' module that points to the wrong location
+# (unleash/core/ instead of platform/core/)
+_platform_core = os.path.normpath(os.path.join(_platform_pkg_dir, 'core'))
+if 'core' in sys.modules:
+    _core_mod = sys.modules['core']
+    _core_file = getattr(_core_mod, '__file__', '') or ''
+    if _core_file and os.path.normpath(os.path.dirname(_core_file)) != _platform_core:
+        # Wrong core package loaded - purge it and all submodules
+        _to_remove = [k for k in sys.modules if k == 'core' or k.startswith('core.')]
+        for k in _to_remove:
+            del sys.modules[k]

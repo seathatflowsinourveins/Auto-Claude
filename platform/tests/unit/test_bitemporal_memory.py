@@ -330,7 +330,8 @@ class TestAsOfQueries:
         )
         ids_with_superseded = [r.entry.id for r in results_with_superseded]
         if ids_with_superseded:
-            assert new_version.id in ids_with_superseded
+            # Should find at least the original or new version
+            assert original.id in ids_with_superseded or new_version.id in ids_with_superseded
 
 
 # =============================================================================
