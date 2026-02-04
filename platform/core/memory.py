@@ -44,7 +44,18 @@ try:
     _logger = get_logger("memory")
 except ImportError:
     import logging
-    _logger = logging.getLogger(__name__)
+
+    class _FallbackLogger:
+        """Wrapper that accepts **kwargs like StructuredLogger."""
+        def __init__(self, name):
+            self._log = logging.getLogger(name)
+        def debug(self, msg, *args, **kwargs): self._log.debug(msg, *args)
+        def info(self, msg, *args, **kwargs): self._log.info(msg, *args)
+        def warning(self, msg, *args, **kwargs): self._log.warning(msg, *args)
+        def error(self, msg, *args, **kwargs): self._log.error(msg, *args)
+        def critical(self, msg, *args, **kwargs): self._log.critical(msg, *args)
+
+    _logger = _FallbackLogger(__name__)
     generate_correlation_id = lambda: "corr-fallback"
 
 

@@ -4,6 +4,7 @@ Unleashed Platform - Unified Observability Layer
 Integrates logging, metrics, tracing, and alerting into a cohesive observability stack.
 Provides structured logging, context propagation, and export capabilities.
 """
+from __future__ import annotations
 
 import asyncio
 import inspect

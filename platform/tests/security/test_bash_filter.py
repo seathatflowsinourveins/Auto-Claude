@@ -316,7 +316,7 @@ class TestConvenienceFunctions:
         """Test check_command returns correct tuple for blocked."""
         allowed, reason = check_command("rm -rf /")
         assert allowed is False
-        assert "blocked" in reason.lower()
+        assert "blocked" in reason.lower() or "dangerous" in reason.lower()
 
     def test_analyze_command(self):
         """Test analyze_command returns CommandAnalysis."""

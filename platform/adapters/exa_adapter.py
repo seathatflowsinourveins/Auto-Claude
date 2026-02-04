@@ -623,7 +623,12 @@ class ExaAdapter(SDKAdapter):
         """Extract and track cost from response."""
         cost = getattr(response, "cost_dollars", None)
         if cost is not None:
-            self._stats["total_cost_dollars"] += cost
+            # CostDollars object has .total attribute
+            cost_value = getattr(cost, "total", cost)
+            if not isinstance(cost_value, (int, float)):
+                cost_value = 0.0
+            self._stats["total_cost_dollars"] += cost_value
+            return cost_value
         return cost
 
     async def _search(
@@ -755,9 +760,15 @@ class ExaAdapter(SDKAdapter):
         if type == "deep" and additional_queries:
             search_params["additional_queries"] = additional_queries[:5]
 
-        # Autoprompt - only for neural/auto search
+        # Autoprompt - only for neural/auto search (removed in newer SDK versions)
         if use_autoprompt and type in ["neural", "auto"]:
-            search_params["use_autoprompt"] = True
+            try:
+                import inspect
+                sig = inspect.signature(self._client.search)
+                if "use_autoprompt" in sig.parameters:
+                    search_params["use_autoprompt"] = True
+            except Exception:
+                pass  # Skip if parameter not supported
 
         # Domain filtering (max 1200 each)
         if include_domains:

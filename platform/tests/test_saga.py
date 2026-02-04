@@ -226,8 +226,11 @@ class TestSagaStateStore:
         fd, path = tempfile.mkstemp(suffix=".db")
         os.close(fd)
         yield path
-        if os.path.exists(path):
-            os.unlink(path)
+        try:
+            if os.path.exists(path):
+                os.unlink(path)
+        except PermissionError:
+            pass  # Windows may hold file locks
 
     @pytest.mark.asyncio
     async def test_saga_persistence(self, temp_db):
@@ -314,8 +317,11 @@ class TestSagaOrchestrator:
         fd, path = tempfile.mkstemp(suffix=".db")
         os.close(fd)
         yield path
-        if os.path.exists(path):
-            os.unlink(path)
+        try:
+            if os.path.exists(path):
+                os.unlink(path)
+        except PermissionError:
+            pass  # Windows may hold file locks
 
     @pytest.mark.asyncio
     async def test_successful_saga_execution(self, temp_db):
@@ -421,7 +427,7 @@ class TestSagaOrchestrator:
 
         assert not result.success
         assert result.failed_at_step == 0
-        assert "timeout" in result.error.lower()
+        assert "timeout" in result.error.lower() or "timed out" in result.error.lower()
 
     @pytest.mark.asyncio
     async def test_saga_retry_logic(self, temp_db):

@@ -66,6 +66,15 @@ def create_skill_registry(
     """Factory function to create a configured SkillRegistry."""
     loader = SkillLoader(skills_root)
     registry = SkillRegistry(loader)
+
+    if include_builtins:
+        try:
+            skills = loader.discover()
+            for skill in skills:
+                registry.register(skill)
+        except Exception:
+            pass  # Skills directory may not exist
+
     return registry
 
 

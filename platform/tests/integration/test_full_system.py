@@ -781,20 +781,25 @@ if __name__ == "__main__":
 
         # Create test nodes
         leaf1 = RAPTORNode(
+            id="leaf-1",
             content="Machine learning is a branch of AI.",
             level=0,
-            is_leaf=True
+            is_summary=False
         )
         leaf2 = RAPTORNode(
+            id="leaf-2",
             content="Deep learning uses neural networks.",
             level=0,
-            is_leaf=True
+            is_summary=False
         )
 
         # Add nodes to tree
         tree.add_node(leaf1)
         tree.add_node(leaf2)
-        tree.leaf_ids.extend([leaf1.id, leaf2.id])
+        # add_node may already track leaf_ids; ensure no duplicates
+        for lid in [leaf1.id, leaf2.id]:
+            if lid not in tree.leaf_ids:
+                tree.leaf_ids.append(lid)
 
         # Verify tree structure
         assert len(tree.nodes) == 2

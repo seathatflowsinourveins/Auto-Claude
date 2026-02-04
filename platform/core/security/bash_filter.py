@@ -72,7 +72,7 @@ ALLOWLIST_SAFE: Set[str] = {
     # Utilities
     "echo", "date", "which", "type", "env", "printenv", "whoami", "id",
     "sort", "uniq", "diff", "patch", "tr", "cut", "paste", "join",
-    "xargs", "tee", "basename", "dirname", "realpath", "readlink",
+    "tee", "basename", "dirname", "realpath", "readlink",
     "printf", "seq", "yes", "true", "false", "test", "[",
     # Claude Flow
     "claude", "claude-flow",

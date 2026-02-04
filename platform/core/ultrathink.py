@@ -136,7 +136,7 @@ def get_budget_for_level(level: ThinkingLevel) -> ThinkingBudget:
     total_tokens = THINKING_BUDGETS[level]
     return ThinkingBudget(
         total_tokens=total_tokens,
-        min_tokens=max(500, total_tokens // 20),
+        min_tokens=max(1024, total_tokens // 20),
         max_tokens_per_step=max(500, min(8000, total_tokens // 4)),
         reserved_for_output=max(1000, total_tokens // 10),
     )
