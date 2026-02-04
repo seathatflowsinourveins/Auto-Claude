@@ -566,7 +566,7 @@ class TavilyAdapter(SDKAdapter):
         """
         # Backward compatibility: 'query' param deprecated, use 'input'
         if query and not input:
-            logger.warning("Tavily research: 'query' param is deprecated, use 'input' instead")
+            _logger.warning("Tavily research: 'query' param is deprecated, use 'input' instead")
             input = query
 
         if not input:

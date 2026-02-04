@@ -5,6 +5,7 @@ Tests the Tavily AI search adapter in isolation with mocked dependencies.
 """
 
 import pytest
+import os
 from unittest.mock import AsyncMock, MagicMock, patch
 from datetime import datetime
 
@@ -27,6 +28,13 @@ except ImportError:
     pytest.skip("Tavily adapter not available", allow_module_level=True)
 
 
+@pytest.fixture
+def clean_env():
+    """Ensure no API keys in environment so adapter runs in mock mode."""
+    with patch.dict(os.environ, {}, clear=True):
+        yield
+
+
 class TestTavilyAdapterProperties:
     """Tests for TavilyAdapter basic properties."""
 
@@ -36,7 +44,7 @@ class TestTavilyAdapterProperties:
         assert adapter.sdk_name == "tavily"
 
     def test_layer(self):
-        """Adapter should be in RESEARCH layer (8)."""
+        """Adapter should be in RESEARCH layer."""
         adapter = TavilyAdapter()
         assert adapter.layer == SDKLayer.RESEARCH
 
@@ -50,32 +58,35 @@ class TestTavilyAdapterInitialization:
     """Tests for TavilyAdapter initialization."""
 
     @pytest.mark.asyncio
-    async def test_initialization_without_api_key(self):
+    async def test_initialization_without_api_key(self, clean_env):
         """Initialization without API key should enter degraded mode."""
         adapter = TavilyAdapter()
-        with patch.dict('os.environ', {}, clear=True):
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
             result = await adapter.initialize({})
 
         assert result.success is True
         assert result.data.get("status") == "degraded"
 
     @pytest.mark.asyncio
-    async def test_initialization_with_api_key(self):
+    async def test_initialization_with_api_key(self, clean_env):
         """Initialization with API key should succeed."""
         adapter = TavilyAdapter()
-        with patch('platform.adapters.tavily_adapter.TAVILY_AVAILABLE', True):
-            with patch('platform.adapters.tavily_adapter.TavilyClient'):
-                with patch('platform.adapters.tavily_adapter.AsyncTavilyClient'):
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            with patch('adapters.tavily_adapter.TavilyClient'):
+                with patch('adapters.tavily_adapter.AsyncTavilyClient'):
                     result = await adapter.initialize({"api_key": "test-key"})
 
         assert result.success is True
         assert result.data.get("status") == "ready"
 
     @pytest.mark.asyncio
-    async def test_initialization_lists_features(self):
-        """Initialization should list available features."""
+    async def test_initialization_lists_features(self, clean_env):
+        """Initialization with API key should list available features."""
         adapter = TavilyAdapter()
-        result = await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            with patch('adapters.tavily_adapter.TavilyClient'):
+                with patch('adapters.tavily_adapter.AsyncTavilyClient'):
+                    result = await adapter.initialize({"api_key": "test-key"})
 
         assert "features" in result.data
         expected_features = ["search", "research", "extract", "qna", "context", "map", "crawl"]
@@ -83,10 +94,13 @@ class TestTavilyAdapterInitialization:
             assert feature in result.data["features"]
 
     @pytest.mark.asyncio
-    async def test_initialization_lists_search_depths(self):
-        """Initialization should list search depths."""
+    async def test_initialization_lists_search_depths(self, clean_env):
+        """Initialization with API key should list search depths."""
         adapter = TavilyAdapter()
-        result = await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            with patch('adapters.tavily_adapter.TavilyClient'):
+                with patch('adapters.tavily_adapter.AsyncTavilyClient'):
+                    result = await adapter.initialize({"api_key": "test-key"})
 
         assert "search_depths" in result.data
         assert "basic" in result.data["search_depths"]
@@ -97,13 +111,14 @@ class TestTavilyAdapterSearch:
     """Tests for search operation."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_search_basic(self, adapter):
         """Basic search should work in mock mode."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute("search", query="test query")
 
         assert result.success is True
@@ -113,7 +128,8 @@ class TestTavilyAdapterSearch:
     @pytest.mark.asyncio
     async def test_search_with_depth_advanced(self, adapter):
         """Search with advanced depth should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "search",
             query="test",
@@ -125,7 +141,8 @@ class TestTavilyAdapterSearch:
     @pytest.mark.asyncio
     async def test_search_with_topic_news(self, adapter):
         """Search with news topic should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "search",
             query="AI news",
@@ -137,7 +154,8 @@ class TestTavilyAdapterSearch:
     @pytest.mark.asyncio
     async def test_search_with_topic_finance(self, adapter):
         """Search with finance topic should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "search",
             query="stock market",
@@ -149,7 +167,8 @@ class TestTavilyAdapterSearch:
     @pytest.mark.asyncio
     async def test_search_with_domain_filters(self, adapter):
         """Search with domain filters should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "search",
             query="test",
@@ -162,7 +181,8 @@ class TestTavilyAdapterSearch:
     @pytest.mark.asyncio
     async def test_search_with_time_range(self, adapter):
         """Search with time range should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "search",
             query="recent news",
@@ -174,7 +194,8 @@ class TestTavilyAdapterSearch:
     @pytest.mark.asyncio
     async def test_search_with_country(self, adapter):
         """Search with country should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "search",
             query="local news",
@@ -186,7 +207,8 @@ class TestTavilyAdapterSearch:
     @pytest.mark.asyncio
     async def test_search_include_answer(self, adapter):
         """Search with include_answer should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "search",
             query="What is Python?",
@@ -199,7 +221,8 @@ class TestTavilyAdapterSearch:
     @pytest.mark.asyncio
     async def test_search_include_images(self, adapter):
         """Search with include_images should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "search",
             query="cats",
@@ -211,7 +234,8 @@ class TestTavilyAdapterSearch:
     @pytest.mark.asyncio
     async def test_search_increments_stats(self, adapter):
         """Search should increment stats."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         initial = adapter._stats["searches"]
         await adapter.execute("search", query="test")
 
@@ -222,13 +246,14 @@ class TestTavilyAdapterResearch:
     """Tests for research operation."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_research_synchronous(self, adapter):
         """Synchronous research should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "research",
             query="AI safety"
@@ -240,7 +265,8 @@ class TestTavilyAdapterResearch:
     @pytest.mark.asyncio
     async def test_research_async_mode(self, adapter):
         """Async research mode should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "research",
             query="AI safety",
@@ -248,17 +274,17 @@ class TestTavilyAdapterResearch:
         )
 
         assert result.success is True
-        # In mock mode, still returns report
         assert "report" in result.data or "request_id" in result.data or "mock" in result.data
 
     @pytest.mark.asyncio
     async def test_research_with_citation_format(self, adapter):
         """Research with citation format should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "research",
             query="AI research",
-            citation_format="markdown"
+            citation_format="apa"
         )
 
         assert result.success is True
@@ -266,7 +292,8 @@ class TestTavilyAdapterResearch:
     @pytest.mark.asyncio
     async def test_research_increments_stats(self, adapter):
         """Research should increment stats."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         initial = adapter._stats["research_queries"]
         await adapter.execute("research", query="test")
 
@@ -277,13 +304,14 @@ class TestTavilyAdapterGetResearch:
     """Tests for get_research operation."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_get_research_mock(self, adapter):
         """Get research should work in mock mode."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "get_research",
             request_id="test-request-id"
@@ -297,13 +325,14 @@ class TestTavilyAdapterExtract:
     """Tests for extract operation."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_extract_single_url(self, adapter):
         """Extract from single URL should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "extract",
             urls=["https://example.com"]
@@ -315,7 +344,8 @@ class TestTavilyAdapterExtract:
     @pytest.mark.asyncio
     async def test_extract_multiple_urls(self, adapter):
         """Extract from multiple URLs should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "extract",
             urls=["https://example.com", "https://example.org"]
@@ -326,7 +356,8 @@ class TestTavilyAdapterExtract:
     @pytest.mark.asyncio
     async def test_extract_increments_stats(self, adapter):
         """Extract should increment stats."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         initial = adapter._stats["extractions"]
         await adapter.execute("extract", urls=["https://example.com", "https://example.org"])
 
@@ -337,13 +368,14 @@ class TestTavilyAdapterQnA:
     """Tests for qna operation."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_qna_basic(self, adapter):
         """QnA should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "qna",
             query="What is the capital of France?"
@@ -357,13 +389,14 @@ class TestTavilyAdapterContext:
     """Tests for context operation."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_context_basic(self, adapter):
         """Context should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "context",
             query="Python programming"
@@ -375,7 +408,8 @@ class TestTavilyAdapterContext:
     @pytest.mark.asyncio
     async def test_context_with_max_tokens(self, adapter):
         """Context with max_tokens should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "context",
             query="Python",
@@ -389,13 +423,14 @@ class TestTavilyAdapterMap:
     """Tests for map operation."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_map_website(self, adapter):
         """Map should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "map",
             url="https://example.com"
@@ -407,7 +442,8 @@ class TestTavilyAdapterMap:
     @pytest.mark.asyncio
     async def test_map_with_depth(self, adapter):
         """Map with depth should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "map",
             url="https://example.com",
@@ -421,13 +457,14 @@ class TestTavilyAdapterCrawl:
     """Tests for crawl operation."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_crawl_website(self, adapter):
         """Crawl should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "crawl",
             url="https://example.com"
@@ -439,7 +476,8 @@ class TestTavilyAdapterCrawl:
     @pytest.mark.asyncio
     async def test_crawl_with_format(self, adapter):
         """Crawl with format should work."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute(
             "crawl",
             url="https://example.com",
@@ -453,14 +491,15 @@ class TestTavilyAdapterHealthAndShutdown:
     """Tests for health check and shutdown."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_health_check_degraded(self, adapter):
         """Health check in degraded mode should work."""
-        await adapter.initialize({})
-        result = await adapter.health_check()
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
+            result = await adapter.health_check()
 
         assert result.success is True
         assert result.data.get("status") in ["healthy", "degraded"]
@@ -468,7 +507,8 @@ class TestTavilyAdapterHealthAndShutdown:
     @pytest.mark.asyncio
     async def test_shutdown_returns_stats(self, adapter):
         """Shutdown should return stats."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         await adapter.execute("search", query="test")
         result = await adapter.shutdown()
 
@@ -478,7 +518,8 @@ class TestTavilyAdapterHealthAndShutdown:
     @pytest.mark.asyncio
     async def test_get_stats(self, adapter):
         """get_stats should return stats dictionary."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         await adapter.execute("search", query="test")
         stats = adapter.get_stats()
 
@@ -490,13 +531,14 @@ class TestTavilyAdapterErrorHandling:
     """Tests for error handling."""
 
     @pytest.fixture
-    def adapter(self):
+    def adapter(self, clean_env):
         return TavilyAdapter()
 
     @pytest.mark.asyncio
     async def test_unknown_operation_returns_error(self, adapter):
         """Unknown operation should return error."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute("__invalid__")
 
         assert result.success is False
@@ -505,7 +547,8 @@ class TestTavilyAdapterErrorHandling:
     @pytest.mark.asyncio
     async def test_error_includes_latency(self, adapter):
         """Error results should include latency."""
-        await adapter.initialize({})
+        with patch('adapters.tavily_adapter.TAVILY_AVAILABLE', True):
+            await adapter.initialize({})
         result = await adapter.execute("__invalid__")
 
         assert result.latency_ms >= 0
@@ -528,12 +571,16 @@ class TestTavilyEnums:
 
     def test_research_model_values(self):
         """Verify research model enum values."""
-        assert TavilyResearchModel.RESEARCH.value == "research"
+        assert TavilyResearchModel.MINI.value == "mini"
+        assert TavilyResearchModel.PRO.value == "pro"
+        assert TavilyResearchModel.AUTO.value == "auto"
 
     def test_citation_format_values(self):
         """Verify citation format enum values."""
-        assert TavilyCitationFormat.MARKDOWN.value == "markdown"
         assert TavilyCitationFormat.NUMBERED.value == "numbered"
+        assert TavilyCitationFormat.MLA.value == "mla"
+        assert TavilyCitationFormat.APA.value == "apa"
+        assert TavilyCitationFormat.CHICAGO.value == "chicago"
 
 
 if __name__ == "__main__":
