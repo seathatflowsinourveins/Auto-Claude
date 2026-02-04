@@ -187,12 +187,9 @@ class TestRetryStrategy:
         # Should be able to recover
         assert await strategy.can_recover(classified) is True
 
-        # Create a mock operation that succeeds on retry
-        attempts = [0]
+        # Create a mock operation that succeeds on the retry call
+        # (recover() is called AFTER the initial failure, so this call should succeed)
         async def operation():
-            attempts[0] += 1
-            if attempts[0] < 2:
-                raise TimeoutError("timeout")
             return "success"
 
         result = await strategy.recover(

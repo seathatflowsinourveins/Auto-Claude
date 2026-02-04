@@ -387,11 +387,13 @@ class TestMixin:
     @pytest.mark.asyncio
     async def test_mixin_integration(self):
         """Mixin should provide deduplication capabilities."""
+        # Reset global deduplicator to avoid cross-test cache hits
+        await reset_deduplicator()
 
         class TestAdapter(DeduplicatedAdapter):
             def __init__(self):
                 self.init_deduplication(
-                    adapter_name="test_adapter",
+                    adapter_name="test_adapter_mixin",
                     default_ttl=60.0,
                 )
                 self.call_count = 0
@@ -399,7 +401,7 @@ class TestMixin:
             async def search(self, query: str) -> dict:
                 return await self.deduplicated_call(
                     self._do_search,
-                    operation="search",
+                    operation="mixin_search",
                     query=query,
                 )
 
@@ -410,13 +412,13 @@ class TestMixin:
         adapter = TestAdapter()
 
         # First call
-        result1 = await adapter.search("test")
+        result1 = await adapter.search("test_mixin")
 
         # Second call should use cache
-        result2 = await adapter.search("test")
+        result2 = await adapter.search("test_mixin")
 
-        assert result1 == {"result": "test"}
-        assert result2 == {"result": "test"}
+        assert result1 == {"result": "test_mixin"}
+        assert result2 == {"result": "test_mixin"}
         assert adapter.call_count == 1
 
 

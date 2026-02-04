@@ -657,177 +657,47 @@ if TYPE_CHECKING:
     )
 
 
+_GETATTR_LOADING = set()
+
+
 def __getattr__(name: str):
     """Lazy load module contents."""
+    if name in _GETATTR_LOADING:
+        raise AttributeError(f"module 'core.rag' has no attribute '{name}'")
+    _GETATTR_LOADING.add(name)
+    try:
+        return _lazy_resolve(name)
+    finally:
+        _GETATTR_LOADING.discard(name)
+
+
+def _lazy_resolve(name: str):
+    """Resolve attribute from submodules without recursion."""
     # Try reranker module first
     try:
         from . import reranker
         if hasattr(reranker, name):
             return getattr(reranker, name)
-    except ImportError:
+    except (ImportError, RecursionError):
         pass
 
-    # Try semantic_chunker module
-    try:
-        from . import semantic_chunker
-        if hasattr(semantic_chunker, name):
-            return getattr(semantic_chunker, name)
-    except ImportError:
-        pass
+    _submodules = [
+        'semantic_chunker', 'self_rag', 'corrective_rag', 'hyde', 'raptor',
+        'evaluation', 'agentic_rag', 'graph_rag', 'metrics', 'query_rewriter',
+        'pipeline', 'context_manager', 'colbert_retriever', 'cache_warmer',
+        'result_cache', 'complexity_analyzer', 'streaming', 'hallucination_guard',
+        'contextual_retrieval', 'dual_level_retrieval',
+    ]
+    import importlib
+    for mod_name in _submodules:
+        try:
+            mod = importlib.import_module(f'.{mod_name}', __name__)
+            if hasattr(mod, name):
+                return getattr(mod, name)
+        except (ImportError, RecursionError):
+            pass
 
-    # Try self_rag module
-    try:
-        from . import self_rag
-        if hasattr(self_rag, name):
-            return getattr(self_rag, name)
-    except ImportError:
-        pass
-
-    # Try corrective_rag module
-    try:
-        from . import corrective_rag
-        if hasattr(corrective_rag, name):
-            return getattr(corrective_rag, name)
-    except ImportError:
-        pass
-
-    # Try hyde module
-    try:
-        from . import hyde
-        if hasattr(hyde, name):
-            return getattr(hyde, name)
-    except ImportError:
-        pass
-
-    # Try raptor module
-    try:
-        from . import raptor
-        if hasattr(raptor, name):
-            return getattr(raptor, name)
-    except ImportError:
-        pass
-
-    # Try evaluation module
-    try:
-        from . import evaluation
-        if hasattr(evaluation, name):
-            return getattr(evaluation, name)
-    except ImportError:
-        pass
-
-    # Try agentic_rag module
-    try:
-        from . import agentic_rag
-        if hasattr(agentic_rag, name):
-            return getattr(agentic_rag, name)
-    except ImportError:
-        pass
-
-    # Try graph_rag module
-    try:
-        from . import graph_rag
-        if hasattr(graph_rag, name):
-            return getattr(graph_rag, name)
-    except ImportError:
-        pass
-
-    # Try metrics module
-    try:
-        from . import metrics
-        if hasattr(metrics, name):
-            return getattr(metrics, name)
-    except ImportError:
-        pass
-
-    # Try query_rewriter module
-    try:
-        from . import query_rewriter
-        if hasattr(query_rewriter, name):
-            return getattr(query_rewriter, name)
-    except ImportError:
-        pass
-
-    # Try pipeline module
-    try:
-        from . import pipeline
-        if hasattr(pipeline, name):
-            return getattr(pipeline, name)
-    except ImportError:
-        pass
-
-    # Try context_manager module
-    try:
-        from . import context_manager
-        if hasattr(context_manager, name):
-            return getattr(context_manager, name)
-    except ImportError:
-        pass
-
-    # Try colbert_retriever module
-    try:
-        from . import colbert_retriever
-        if hasattr(colbert_retriever, name):
-            return getattr(colbert_retriever, name)
-    except ImportError:
-        pass
-
-    # Try cache_warmer module
-    try:
-        from . import cache_warmer
-        if hasattr(cache_warmer, name):
-            return getattr(cache_warmer, name)
-    except ImportError:
-        pass
-
-    # Try result_cache module
-    try:
-        from . import result_cache
-        if hasattr(result_cache, name):
-            return getattr(result_cache, name)
-    except ImportError:
-        pass
-
-    # Try complexity_analyzer module
-    try:
-        from . import complexity_analyzer
-        if hasattr(complexity_analyzer, name):
-            return getattr(complexity_analyzer, name)
-    except ImportError:
-        pass
-
-    # Try streaming module
-    try:
-        from . import streaming
-        if hasattr(streaming, name):
-            return getattr(streaming, name)
-    except ImportError:
-        pass
-
-    # Try hallucination_guard module
-    try:
-        from . import hallucination_guard
-        if hasattr(hallucination_guard, name):
-            return getattr(hallucination_guard, name)
-    except ImportError:
-        pass
-
-    # Try contextual_retrieval module (Anthropic's pattern)
-    try:
-        from . import contextual_retrieval
-        if hasattr(contextual_retrieval, name):
-            return getattr(contextual_retrieval, name)
-    except ImportError:
-        pass
-
-    # Try dual_level_retrieval module (LightRAG-style)
-    try:
-        from . import dual_level_retrieval
-        if hasattr(dual_level_retrieval, name):
-            return getattr(dual_level_retrieval, name)
-    except ImportError:
-        pass
-
-    raise AttributeError(f"module 'platform.core.rag' has no attribute '{name}'")
+    raise AttributeError(f"module 'core.rag' has no attribute '{name}'")
 
 
 def __dir__():

@@ -1162,6 +1162,16 @@ class Tracer:
         finally:
             self.end_span(span)
 
+    def force_flush(self, timeout_millis: int = 30000) -> bool:
+        """Force flush all processors to export buffered spans."""
+        for processor in self._processors:
+            try:
+                processor.force_flush(timeout_millis)
+            except Exception as e:
+                logger.error(f"Processor flush failed: {e}")
+                return False
+        return True
+
     def shutdown(self) -> None:
         """Shutdown all processors."""
         for processor in self._processors:
@@ -1313,6 +1323,9 @@ class TracingManager:
 
     def get_spans(self, limit: int = 100) -> List[Span]:
         """Get exported spans from memory."""
+        # Force flush any batch processors to ensure spans are exported
+        if self._tracer:
+            self._tracer.force_flush()
         if self._memory_exporter:
             spans = self._memory_exporter.get_spans()
             return spans[-limit:]
@@ -1669,6 +1682,8 @@ def reset_tracing() -> None:
         if _tracing_manager:
             _tracing_manager.shutdown()
         _tracing_manager = None
+        # Reset the singleton class instance so next creation starts fresh
+        TracingManager._instance = None
 
 
 # =============================================================================

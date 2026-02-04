@@ -225,7 +225,7 @@ async def retry_async(
             # Check if we have retries left
             if attempt >= config.max_retries:
                 logger.warning(
-                    f"All {config.max_retries} retries exhausted for {func.__name__}. "
+                    f"All {config.max_retries} retries exhausted for {getattr(func, '__name__', repr(func))}. "
                     f"Last error: {type(exc).__name__}: {exc}"
                 )
                 raise
@@ -240,7 +240,7 @@ async def retry_async(
             )
 
             logger.info(
-                f"Retry {attempt + 1}/{config.max_retries} for {func.__name__} "
+                f"Retry {attempt + 1}/{config.max_retries} for {getattr(func, '__name__', repr(func))} "
                 f"after {type(exc).__name__}: {exc}. Waiting {delay:.2f}s..."
             )
 
@@ -257,7 +257,7 @@ async def retry_async(
     # This should not be reached, but just in case
     if last_exception:
         raise last_exception
-    raise RuntimeError(f"Unexpected state in retry_async for {func.__name__}")
+    raise RuntimeError(f"Unexpected state in retry_async for {getattr(func, '__name__', repr(func))}")
 
 
 def retry_sync(
@@ -305,7 +305,7 @@ def retry_sync(
             # Check if we have retries left
             if attempt >= config.max_retries:
                 logger.warning(
-                    f"All {config.max_retries} retries exhausted for {func.__name__}. "
+                    f"All {config.max_retries} retries exhausted for {getattr(func, '__name__', repr(func))}. "
                     f"Last error: {type(exc).__name__}: {exc}"
                 )
                 raise
@@ -320,7 +320,7 @@ def retry_sync(
             )
 
             logger.info(
-                f"Retry {attempt + 1}/{config.max_retries} for {func.__name__} "
+                f"Retry {attempt + 1}/{config.max_retries} for {getattr(func, '__name__', repr(func))} "
                 f"after {type(exc).__name__}: {exc}. Waiting {delay:.2f}s..."
             )
 
@@ -337,7 +337,7 @@ def retry_sync(
     # This should not be reached, but just in case
     if last_exception:
         raise last_exception
-    raise RuntimeError(f"Unexpected state in retry_sync for {func.__name__}")
+    raise RuntimeError(f"Unexpected state in retry_sync for {getattr(func, '__name__', repr(func))}")
 
 
 def with_retry(

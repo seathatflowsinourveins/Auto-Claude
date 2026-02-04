@@ -165,7 +165,7 @@ class ErrorClassifier:
 
     # Keywords in error messages that suggest transient issues
     TRANSIENT_KEYWORDS: Set[str] = {
-        "timeout", "connection reset", "connection refused",
+        "timeout", "timed out", "connection reset", "connection refused",
         "network unreachable", "temporary", "unavailable",
         "retry", "overloaded", "busy", "capacity",
     }
@@ -780,7 +780,6 @@ class ErrorAggregator:
         self._errors: List[ClassifiedError] = []
         self._patterns: Dict[str, ErrorPattern] = {}
         self._operation_errors: Dict[str, List[ClassifiedError]] = defaultdict(list)
-        self._lock = asyncio.Lock()
 
     async def record(
         self,
@@ -788,7 +787,7 @@ class ErrorAggregator:
         operation_name: str,
     ) -> None:
         """Record an error occurrence."""
-        async with self._lock:
+        if True:  # Lock removed: non-reentrant asyncio.Lock caused deadlock
             self._errors.append(classified_error)
             self._operation_errors[operation_name].append(classified_error)
 
@@ -822,7 +821,7 @@ class ErrorAggregator:
         error_type: Optional[ErrorType] = None,
     ) -> List[ClassifiedError]:
         """Get errors from recent time window."""
-        async with self._lock:
+        if True:  # Lock removed: non-reentrant asyncio.Lock caused deadlock
             cutoff = datetime.now() - timedelta(minutes=minutes)
             errors = [e for e in self._errors if e.timestamp > cutoff]
             if error_type:
@@ -834,13 +833,13 @@ class ErrorAggregator:
         min_count: int = 3,
     ) -> List[ErrorPattern]:
         """Get recurring error patterns."""
-        async with self._lock:
+        if True:  # Lock removed: non-reentrant asyncio.Lock caused deadlock
             patterns = [p for p in self._patterns.values() if p.count >= min_count]
             return sorted(patterns, key=lambda p: p.count, reverse=True)
 
     async def get_statistics(self) -> Dict[str, Any]:
         """Get error statistics."""
-        async with self._lock:
+        if True:  # Lock removed: non-reentrant asyncio.Lock caused deadlock
             total = len(self._errors)
             by_type: Dict[ErrorType, int] = defaultdict(int)
             by_class: Dict[str, int] = defaultdict(int)
@@ -939,7 +938,7 @@ class ErrorAggregator:
 
     async def clear(self) -> None:
         """Clear all error records."""
-        async with self._lock:
+        if True:  # Lock removed: non-reentrant asyncio.Lock caused deadlock
             self._errors.clear()
             self._patterns.clear()
             self._operation_errors.clear()

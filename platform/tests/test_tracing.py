@@ -646,6 +646,10 @@ class TestIntegrationHelpers(unittest.TestCase):
 class TestQuickSetup(unittest.TestCase):
     """Test quick setup functions."""
 
+    def setUp(self):
+        """Reset tracing before each test."""
+        reset_tracing()
+
     def tearDown(self):
         """Reset tracing after each test."""
         reset_tracing()
