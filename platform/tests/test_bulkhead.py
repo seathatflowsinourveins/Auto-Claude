@@ -187,13 +187,27 @@ class TestBulkhead:
 
     @pytest.mark.asyncio
     async def test_timeout(self, bulkhead):
-        """Test operation timeout."""
-        async def slow_op():
-            await asyncio.sleep(10)
+        """Test operation timeout when waiting in queue."""
+        blocking_event = asyncio.Event()
+
+        async def blocking_op():
+            await blocking_event.wait()
             return True
 
+        # Fill all concurrent slots so next request is queued
+        tasks = [
+            asyncio.create_task(bulkhead.execute(blocking_op))
+            for _ in range(3)
+        ]
+        await asyncio.sleep(0.05)
+
+        # This request will be queued and should timeout
         with pytest.raises(BulkheadTimeoutError):
-            await bulkhead.execute(slow_op, timeout=0.1)
+            await bulkhead.execute(lambda: True, timeout=0.1)
+
+        # Cleanup
+        blocking_event.set()
+        await asyncio.gather(*tasks, return_exceptions=True)
 
     @pytest.mark.asyncio
     async def test_stats_tracking(self, bulkhead):

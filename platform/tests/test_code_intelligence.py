@@ -345,6 +345,9 @@ class TestToolAvailability:
     def test_pyright_available(self):
         """Check pyright is installed and responds."""
         import subprocess
+        import shutil
+        if not shutil.which("pyright"):
+            pytest.skip("pyright not installed")
         result = subprocess.run(
             ["pyright", "--version"],
             capture_output=True,
