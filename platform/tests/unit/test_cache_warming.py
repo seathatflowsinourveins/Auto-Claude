@@ -300,7 +300,8 @@ class TestCacheWarmer:
 
         assert result.status == WarmingStatus.SUCCESS
         assert result.strategy_name == "test_strategy"
-        assert result.duration_ms > 0
+        # Mock functions return instantly, so duration may be 0 or very small
+        assert result.duration_ms >= 0
         assert strategy.success_count == 1
         assert strategy.last_warmed is not None
         mock_warmup_fn.assert_called_once()

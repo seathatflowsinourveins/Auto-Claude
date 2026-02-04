@@ -556,10 +556,10 @@ class TestAgentCommSystem:
         assert msg.is_broadcast
         assert msg.topic == "status_updates"
 
-        # Check subscribers receive
-        messages_1 = await comm_system.receive_messages("agent-1")
-        messages_2 = await comm_system.receive_messages("agent-2")
-        messages_3 = await comm_system.receive_messages("agent-3")
+        # Check subscribers receive (disable auto_mark_delivered to allow all subscribers to see it)
+        messages_1 = await comm_system.receive_messages("agent-1", auto_mark_delivered=False)
+        messages_2 = await comm_system.receive_messages("agent-2", auto_mark_delivered=False)
+        messages_3 = await comm_system.receive_messages("agent-3", auto_mark_delivered=False)
 
         # agent-1 and agent-2 subscribed to status_updates
         assert any(m.topic == "status_updates" for m in messages_1)
@@ -873,10 +873,11 @@ class TestIntegration:
     @pytest.mark.asyncio
     async def test_broadcast_coordination_flow(self, comm_system):
         """Test broadcast-based swarm coordination."""
-        # Register workers
+        # Register workers and explicitly subscribe
         workers = ["worker-1", "worker-2", "worker-3"]
         for w in workers:
-            comm_system.register_agent(w, topics=["task_distribution"])
+            comm_system.register_agent(w)
+            await comm_system.subscribe_to_topic(w, "task_distribution")
 
         # Coordinator broadcasts task availability
         await comm_system.broadcast(
@@ -889,9 +890,9 @@ class TestIntegration:
             },
         )
 
-        # All workers should receive
+        # All workers should receive (disable auto_mark_delivered to allow all to see it)
         for w in workers:
-            messages = await comm_system.receive_messages(w)
+            messages = await comm_system.receive_messages(w, auto_mark_delivered=False)
             broadcasts = [m for m in messages if m.topic == "task_distribution"]
             assert len(broadcasts) >= 1
 

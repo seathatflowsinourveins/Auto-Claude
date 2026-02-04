@@ -663,11 +663,15 @@ class TestTransactionalOutbox:
     @pytest.mark.asyncio
     async def test_cleanup(self, outbox):
         """Test cleanup of old processed messages."""
+        import asyncio
         event = MemoryStoredEvent(aggregate_id="agg-1", memory_id="m1")
         message_id = await outbox.add(event)
         await outbox.mark_processed(message_id)
 
-        # With 0 age threshold, should remove immediately
+        # Need to wait briefly for age to be > 0
+        await asyncio.sleep(0.001)
+
+        # With 0 age threshold, should remove if any time has passed
         removed = await outbox.cleanup(older_than_seconds=0)
 
         assert removed == 1

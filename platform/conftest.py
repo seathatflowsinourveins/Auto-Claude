@@ -10,6 +10,10 @@ import sys
 import os
 from pathlib import Path
 
+# Prevent Keras 3 / TensorFlow incompatibility crash in transformers
+os.environ.setdefault('USE_TF', '0')
+os.environ.setdefault('TRANSFORMERS_NO_TF', '1')
+
 # CRITICAL: Fix platform namespace collision BEFORE any other imports.
 _platform_pkg_dir = str(Path(__file__).parent)
 _unleash_root = str(Path(__file__).parent.parent)
