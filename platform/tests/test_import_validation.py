@@ -152,31 +152,31 @@ def validate_rag_modules() -> List[ImportResult]:
     results = []
 
     # Main RAG package
-    results.append(try_import("platform.core.rag"))
+    results.append(try_import("core.rag"))
 
     # Individual RAG modules
     rag_modules = [
-        "platform.core.rag.semantic_chunker",
-        "platform.core.rag.self_rag",
-        "platform.core.rag.corrective_rag",
-        "platform.core.rag.hyde",
-        "platform.core.rag.reranker",
-        "platform.core.rag.raptor",
-        "platform.core.rag.evaluation",
-        "platform.core.rag.graph_rag",
-        "platform.core.rag.metrics",
-        "platform.core.rag.context_manager",
-        "platform.core.rag.query_rewriter",
-        "platform.core.rag.colbert_retriever",
-        "platform.core.rag.agentic_rag",
-        "platform.core.rag.cache_warmer",
-        "platform.core.rag.streaming",
-        "platform.core.rag.result_cache",
-        "platform.core.rag.complexity_analyzer",
-        "platform.core.rag.hallucination_guard",
-        "platform.core.rag.contextual_retrieval",
-        "platform.core.rag.dual_level_retrieval",
-        "platform.core.rag.pipeline",
+        "core.rag.semantic_chunker",
+        "core.rag.self_rag",
+        "core.rag.corrective_rag",
+        "core.rag.hyde",
+        "core.rag.reranker",
+        "core.rag.raptor",
+        "core.rag.evaluation",
+        "core.rag.graph_rag",
+        "core.rag.metrics",
+        "core.rag.context_manager",
+        "core.rag.query_rewriter",
+        "core.rag.colbert_retriever",
+        "core.rag.agentic_rag",
+        "core.rag.cache_warmer",
+        "core.rag.streaming",
+        "core.rag.result_cache",
+        "core.rag.complexity_analyzer",
+        "core.rag.hallucination_guard",
+        "core.rag.contextual_retrieval",
+        "core.rag.dual_level_retrieval",
+        "core.rag.pipeline",
     ]
 
     for module in rag_modules:
@@ -190,25 +190,25 @@ def validate_memory_modules() -> List[ImportResult]:
     results = []
 
     # Main memory package
-    results.append(try_import("platform.core.memory"))
+    results.append(try_import("core.memory"))
 
     # Backend modules
     memory_modules = [
-        "platform.core.memory.backends",
-        "platform.core.memory.backends.base",
-        "platform.core.memory.backends.in_memory",
-        "platform.core.memory.backends.letta",
-        "platform.core.memory.backends.sqlite",
-        "platform.core.memory.backends.hnsw",
-        "platform.core.memory.backends.graphiti",
-        "platform.core.memory.hooks",
-        "platform.core.memory.quality",
-        "platform.core.memory.forgetting",
-        "platform.core.memory.temporal",
-        "platform.core.memory.procedural",
-        "platform.core.memory.compression",
-        "platform.core.memory.unified",
-        "platform.core.memory.compaction",
+        "core.memory.backends",
+        "core.memory.backends.base",
+        "core.memory.backends.in_memory",
+        "core.memory.backends.letta",
+        "core.memory.backends.sqlite",
+        "core.memory.backends.hnsw",
+        "core.memory.backends.graphiti",
+        "core.memory.hooks",
+        "core.memory.quality",
+        "core.memory.forgetting",
+        "core.memory.temporal",
+        "core.memory.procedural",
+        "core.memory.compression",
+        "core.memory.unified",
+        "core.memory.compaction",
     ]
 
     for module in memory_modules:
@@ -226,57 +226,57 @@ def validate_adapter_modules() -> List[ImportResult]:
 
     # Research adapters
     adapter_modules = [
-        "platform.adapters.exa_adapter",
-        "platform.adapters.tavily_adapter",
-        "platform.adapters.perplexity_adapter",
-        "platform.adapters.jina_adapter",
-        "platform.adapters.firecrawl_adapter",
-        "platform.adapters.context7_adapter",
-        "platform.adapters.serper_adapter",
+        "adapters.exa_adapter",
+        "adapters.tavily_adapter",
+        "adapters.perplexity_adapter",
+        "adapters.jina_adapter",
+        "adapters.firecrawl_adapter",
+        "adapters.context7_adapter",
+        "adapters.serper_adapter",
         # Memory adapters
-        "platform.adapters.letta_adapter",
-        "platform.adapters.cognee_adapter",
-        "platform.adapters.cognee_v36_adapter",
-        "platform.adapters.mem0_adapter",
-        "platform.adapters.graphiti_adapter",
+        "adapters.letta_adapter",
+        "adapters.cognee_adapter",
+        "adapters.cognee_v36_adapter",
+        "adapters.mem0_adapter",
+        "adapters.graphiti_adapter",
         # Orchestration adapters
-        "platform.adapters.dspy_adapter",
-        "platform.adapters.langgraph_adapter",
-        "platform.adapters.openai_agents_adapter",
-        "platform.adapters.strands_agents_adapter",
-        "platform.adapters.a2a_protocol_adapter",
+        "adapters.dspy_adapter",
+        "adapters.langgraph_adapter",
+        "adapters.openai_agents_adapter",
+        "adapters.strands_agents_adapter",
+        "adapters.a2a_protocol_adapter",
         # Code/Reasoning adapters
-        "platform.adapters.aider_adapter",
-        "platform.adapters.llm_reasoners_adapter",
-        "platform.adapters.textgrad_adapter",
+        "adapters.aider_adapter",
+        "adapters.llm_reasoners_adapter",
+        "adapters.textgrad_adapter",
         # Observability adapters
-        "platform.adapters.opik_tracing_adapter",
-        "platform.adapters.braintrust_adapter",
-        "platform.adapters.portkey_gateway_adapter",
-        "platform.adapters.observability_adapter",
+        "adapters.opik_tracing_adapter",
+        "adapters.braintrust_adapter",
+        "adapters.portkey_gateway_adapter",
+        "adapters.observability_adapter",
         # Workflow/Utility adapters
-        "platform.adapters.temporal_workflow_activities",
-        "platform.adapters.ragflow_adapter",
-        "platform.adapters.simplemem_adapter",
-        "platform.adapters.ragatouille_adapter",
-        "platform.adapters.chonkie_adapter",
-        "platform.adapters.quality_diversity_adapter",
-        "platform.adapters.agent_mesh",
-        "platform.adapters.letta_voyage_adapter",
-        "platform.adapters.dspy_voyage_retriever",
-        "platform.adapters.mcp_apps_adapter",
-        "platform.adapters.async_letta",
+        "adapters.temporal_workflow_activities",
+        "adapters.ragflow_adapter",
+        "adapters.simplemem_adapter",
+        "adapters.ragatouille_adapter",
+        "adapters.chonkie_adapter",
+        "adapters.quality_diversity_adapter",
+        "adapters.agent_mesh",
+        "adapters.letta_voyage_adapter",
+        "adapters.dspy_voyage_retriever",
+        "adapters.mcp_apps_adapter",
+        "adapters.async_letta",
         # Infrastructure
-        "platform.adapters.registry",
-        "platform.adapters.retry",
-        "platform.adapters.http_pool",
-        "platform.adapters.circuit_breaker_manager",
-        "platform.adapters.model_router",
-        "platform.adapters.safety_adapter",
-        "platform.adapters.token_optimizer",
-        "platform.adapters.knowledge_adapter",
-        "platform.adapters.platform_orchestrator_v2",
-        "platform.adapters.rag_evaluator",
+        "adapters.registry",
+        "adapters.retry",
+        "adapters.http_pool",
+        "adapters.circuit_breaker_manager",
+        "adapters.model_router",
+        "adapters.safety_adapter",
+        "adapters.token_optimizer",
+        "adapters.knowledge_adapter",
+        "adapters.platform_orchestrator_v2",
+        "adapters.rag_evaluator",
     ]
 
     for module in adapter_modules:
@@ -298,7 +298,7 @@ def validate_platform_modules() -> List[ImportResult]:
         "platform.cli",
         # Core platform modules
         "platform.core",
-        "platform.core.api_validator",
+        "core.api_validator",
     ]
 
     for module in platform_modules:

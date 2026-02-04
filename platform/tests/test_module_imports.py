@@ -174,7 +174,7 @@ def safe_import(
     Safely attempt to import a module and optionally specific items.
 
     Args:
-        display_name: Display name for the module (e.g., "platform.core.rag")
+        display_name: Display name for the module (e.g., "core.rag")
         file_path: Absolute path to the module __init__.py file
         items: Optional list of specific items to check for
 
@@ -289,7 +289,7 @@ def validate_rag_module() -> ImportResult:
         "create_pipeline",
     ]
 
-    return safe_import("platform.core.rag", file_path, key_items)
+    return safe_import("core.rag", file_path, key_items)
 
 
 def validate_memory_module() -> ImportResult:
@@ -321,7 +321,7 @@ def validate_memory_module() -> ImportResult:
         "CoreMemory",
     ]
 
-    return safe_import("platform.core.memory", file_path, key_items)
+    return safe_import("core.memory", file_path, key_items)
 
 
 def validate_memory_backends() -> ImportResult:
@@ -338,7 +338,7 @@ def validate_memory_backends() -> ImportResult:
         "InMemoryTierBackend",
     ]
 
-    return safe_import("platform.core.memory.backends", file_path, key_items)
+    return safe_import("core.memory.backends", file_path, key_items)
 
 
 def validate_adapters_module() -> ImportResult:
@@ -380,7 +380,7 @@ def validate_adapter_registry() -> ImportResult:
         "register_adapter",
     ]
 
-    return safe_import("platform.adapters.registry", file_path, key_items)
+    return safe_import("adapters.registry", file_path, key_items)
 
 
 def validate_health_check_module() -> ImportResult:
@@ -400,7 +400,7 @@ def validate_health_check_module() -> ImportResult:
         "create_prometheus_endpoint",
     ]
 
-    return safe_import("platform.core.health_check", file_path, key_items)
+    return safe_import("core.health_check", file_path, key_items)
 
 
 def validate_logging_config_module() -> ImportResult:
@@ -424,7 +424,7 @@ def validate_logging_config_module() -> ImportResult:
         "generate_trace_id",
     ]
 
-    return safe_import("platform.core.logging_config", file_path, key_items)
+    return safe_import("core.logging_config", file_path, key_items)
 
 
 def run_validation() -> ValidationReport:

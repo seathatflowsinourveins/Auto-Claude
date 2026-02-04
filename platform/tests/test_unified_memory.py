@@ -566,7 +566,7 @@ class TestFactoryFunctions:
         """Test singleton creation."""
         reset_unified_memory()
 
-        with patch('platform.core.memory.unified.UnifiedMemory') as MockUnified:
+        with patch('core.memory.unified.UnifiedMemory') as MockUnified:
             mock_instance = AsyncMock()
             mock_instance._ensure_initialized = AsyncMock()
             MockUnified.return_value = mock_instance

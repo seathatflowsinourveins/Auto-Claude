@@ -54,9 +54,9 @@ _metrics = _load_module("_test_metrics", str(_base_path / "infrastructure" / "me
 _backpressure = _load_module("_test_backpressure", str(_base_path / "execution" / "backpressure.py"))
 
 # Patch the extreme_swarm imports
-sys.modules["platform.core.orchestration.base"] = _base
-sys.modules["platform.core.orchestration.infrastructure.metrics"] = _metrics
-sys.modules["platform.core.orchestration.execution.backpressure"] = _backpressure
+sys.modules["core.orchestration.base"] = _base
+sys.modules["core.orchestration.infrastructure.metrics"] = _metrics
+sys.modules["core.orchestration.execution.backpressure"] = _backpressure
 sys.modules[".base"] = _base
 sys.modules[".infrastructure.metrics"] = _metrics
 sys.modules[".execution.backpressure"] = _backpressure
