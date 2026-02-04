@@ -42,7 +42,7 @@ def event_loop():
 async def simplemem_adapter():
     """Create and initialize a SimpleMem adapter."""
     try:
-        from platform.adapters.simplemem_adapter import SimpleMemAdapter
+        from adapters.simplemem_adapter import SimpleMemAdapter
         adapter = SimpleMemAdapter()
         await adapter.initialize({"max_tokens": 4096})
         yield adapter
@@ -55,7 +55,7 @@ async def simplemem_adapter():
 async def braintrust_adapter():
     """Create and initialize a Braintrust adapter."""
     try:
-        from platform.adapters.braintrust_adapter import BraintrustAdapter
+        from adapters.braintrust_adapter import BraintrustAdapter
         adapter = BraintrustAdapter()
         await adapter.initialize({"project": "test-project"})
         yield adapter
@@ -68,7 +68,7 @@ async def braintrust_adapter():
 async def a2a_adapter():
     """Create and initialize an A2A Protocol adapter."""
     try:
-        from platform.adapters.a2a_protocol_adapter import A2AProtocolAdapter
+        from adapters.a2a_protocol_adapter import A2AProtocolAdapter
         adapter = A2AProtocolAdapter()
         await adapter.initialize({
             "agent_id": "test-agent",
@@ -84,7 +84,7 @@ async def a2a_adapter():
 async def ragatouille_adapter():
     """Create and initialize a RAGatouille adapter."""
     try:
-        from platform.adapters.ragatouille_adapter import RAGatouilleAdapter
+        from adapters.ragatouille_adapter import RAGatouilleAdapter
         adapter = RAGatouilleAdapter()
         await adapter.initialize({})
         yield adapter
@@ -97,7 +97,7 @@ async def ragatouille_adapter():
 async def portkey_adapter():
     """Create and initialize a Portkey Gateway adapter."""
     try:
-        from platform.adapters.portkey_gateway_adapter import PortkeyGatewayAdapter
+        from adapters.portkey_gateway_adapter import PortkeyGatewayAdapter
         adapter = PortkeyGatewayAdapter()
         await adapter.initialize({})
         yield adapter
@@ -114,7 +114,7 @@ async def portkey_adapter():
 def memory_entry_factory():
     """Factory for creating memory entries."""
     try:
-        from platform.core.memory.backends.base import MemoryEntry, MemoryTier
+        from core.memory.backends.base import MemoryEntry, MemoryTier
     except ImportError:
         pytest.skip("Memory backend not available")
 
@@ -138,7 +138,7 @@ def memory_entry_factory():
 async def in_memory_backend():
     """Create an in-memory tier backend."""
     try:
-        from platform.core.memory.backends.in_memory import InMemoryTierBackend
+        from core.memory.backends.in_memory import InMemoryTierBackend
         backend = InMemoryTierBackend()
         yield backend
         await backend.clear()
@@ -218,7 +218,16 @@ def pytest_configure(config):
         "markers", "e2e: marks tests as end-to-end tests"
     )
     config.addinivalue_line(
+        "markers", "performance: marks tests as performance benchmarks"
+    )
+    config.addinivalue_line(
+        "markers", "security: marks tests as security tests"
+    )
+    config.addinivalue_line(
         "markers", "requires_sdk(sdk_name): marks test as requiring a specific SDK"
+    )
+    config.addinivalue_line(
+        "markers", "requires_api_key(key_name): marks test as requiring an API key"
     )
 
 
@@ -265,7 +274,7 @@ def check_sdk():
 async def exa_adapter():
     """Create and initialize an Exa adapter."""
     try:
-        from platform.adapters.exa_adapter import ExaAdapter
+        from adapters.exa_adapter import ExaAdapter
         adapter = ExaAdapter()
         await adapter.initialize({})
         yield adapter
@@ -278,7 +287,7 @@ async def exa_adapter():
 async def tavily_adapter():
     """Create and initialize a Tavily adapter."""
     try:
-        from platform.adapters.tavily_adapter import TavilyAdapter
+        from adapters.tavily_adapter import TavilyAdapter
         adapter = TavilyAdapter()
         await adapter.initialize({})
         yield adapter
@@ -291,7 +300,7 @@ async def tavily_adapter():
 async def jina_adapter():
     """Create and initialize a Jina adapter."""
     try:
-        from platform.adapters.jina_adapter import JinaAdapter
+        from adapters.jina_adapter import JinaAdapter
         adapter = JinaAdapter()
         await adapter.initialize({})
         yield adapter
@@ -304,7 +313,7 @@ async def jina_adapter():
 async def perplexity_adapter():
     """Create and initialize a Perplexity adapter."""
     try:
-        from platform.adapters.perplexity_adapter import PerplexityAdapter
+        from adapters.perplexity_adapter import PerplexityAdapter
         adapter = PerplexityAdapter()
         await adapter.initialize({})
         yield adapter
@@ -390,30 +399,4 @@ def sample_embeddings() -> List[List[float]]:
     ]
 
 
-# =============================================================================
-# Additional Markers
-# =============================================================================
-
-def pytest_configure(config):
-    """Register custom markers."""
-    config.addinivalue_line(
-        "markers", "slow: marks tests as slow (deselect with '-m \"not slow\"')"
-    )
-    config.addinivalue_line(
-        "markers", "integration: marks tests as integration tests"
-    )
-    config.addinivalue_line(
-        "markers", "e2e: marks tests as end-to-end tests"
-    )
-    config.addinivalue_line(
-        "markers", "performance: marks tests as performance benchmarks"
-    )
-    config.addinivalue_line(
-        "markers", "security: marks tests as security tests"
-    )
-    config.addinivalue_line(
-        "markers", "requires_sdk(sdk_name): marks test as requiring a specific SDK"
-    )
-    config.addinivalue_line(
-        "markers", "requires_api_key(key_name): marks test as requiring an API key"
-    )
+# NOTE: Additional markers merged into pytest_configure above (removed duplicate)

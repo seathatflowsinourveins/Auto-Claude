@@ -209,27 +209,35 @@ PATTERNS: Dict[str, ThinkingPattern] = {
 # Anthropic Extended Thinking Support
 # =============================================================================
 
-# Models that support extended thinking (as of 2025)
+# Models that support extended thinking (updated 2026-02-04, SDK 0.77.1)
 EXTENDED_THINKING_MODELS: Dict[str, Dict[str, Any]] = {
-    "claude-opus-4-5-20250514": {
+    # Claude Opus 4.5 (latest flagship)
+    "claude-opus-4-5-20251101": {
         "alias": "claude-opus-4.5",
         "max_thinking_tokens": 128000,
         "supports_interleaved": True,
+        "max_output_tokens": 16384,
     },
-    "claude-sonnet-4-5-20250514": {
-        "alias": "claude-sonnet-4.5",
+    # Claude Sonnet 4 (fast + capable)
+    "claude-sonnet-4-20250514": {
+        "alias": "claude-sonnet-4",
         "max_thinking_tokens": 128000,
         "supports_interleaved": True,
+        "max_output_tokens": 16384,
     },
+    # Claude 3.7 Sonnet (extended thinking pioneer)
     "claude-3-7-sonnet-20250219": {
         "alias": "claude-3.7-sonnet",
         "max_thinking_tokens": 128000,
         "supports_interleaved": True,
+        "max_output_tokens": 16384,
     },
-    "claude-haiku-4-5-20250514": {
-        "alias": "claude-haiku-4.5",
-        "max_thinking_tokens": 64000,
-        "supports_interleaved": True,
+    # Claude Haiku 3.5 (fast, cost-efficient)
+    "claude-3-5-haiku-20241022": {
+        "alias": "claude-3.5-haiku",
+        "max_thinking_tokens": 0,  # Does not support extended thinking
+        "supports_interleaved": False,
+        "max_output_tokens": 8192,
     },
 }
 
