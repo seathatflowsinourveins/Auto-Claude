@@ -1,25 +1,49 @@
 """
-V36 Test Configuration and Fixtures
+V44 Test Configuration and Fixtures
 
 Shared fixtures and configuration for all test suites.
+Fixes stdlib 'platform' module collision.
 """
+
+import sys
+import os
+from pathlib import Path
+
+# CRITICAL: Fix platform namespace collision BEFORE any other imports.
+# Our package directory is named 'platform' which shadows Python's stdlib
+# 'platform' module. We must ensure stdlib is loaded first.
+_platform_pkg_dir = str(Path(__file__).parent.parent)
+_unleash_root = str(Path(__file__).parent.parent.parent)
+
+# Temporarily remove paths that could resolve to our 'platform' package
+_original_path = sys.path[:]
+sys.path = [p for p in sys.path if os.path.normpath(p) not in (
+    os.path.normpath(_platform_pkg_dir),
+    os.path.normpath(_unleash_root),
+)]
+
+# Force-load stdlib platform module
+import importlib
+if 'platform' in sys.modules:
+    _platform_mod = sys.modules['platform']
+    if not hasattr(_platform_mod, 'python_version'):
+        del sys.modules['platform']
+        import platform  # noqa: F811
+else:
+    import platform  # noqa: F811
+
+# Restore paths
+sys.path = _original_path
+
+# Add platform dir for 'from adapters...' and 'from core...' imports
+if _platform_pkg_dir not in sys.path:
+    sys.path.insert(0, _platform_pkg_dir)
+if _unleash_root not in sys.path:
+    sys.path.insert(0, _unleash_root)
 
 import pytest
 import asyncio
-import sys
-import os
 from typing import Dict, Any, List
-from pathlib import Path
-
-# Add platform to Python path
-platform_path = Path(__file__).parent.parent
-if str(platform_path) not in sys.path:
-    sys.path.insert(0, str(platform_path))
-
-# Also add the parent (unleash root) for absolute imports
-root_path = platform_path.parent
-if str(root_path) not in sys.path:
-    sys.path.insert(0, str(root_path))
 
 
 # =============================================================================
