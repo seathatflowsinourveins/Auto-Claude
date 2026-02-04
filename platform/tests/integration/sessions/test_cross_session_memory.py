@@ -52,7 +52,7 @@ class TestMemoryPersistenceAcrossSessions:
             id="persist-test-1",
             content="Important information from session 1"
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         # Verify stored
         count = await backend.count()
@@ -74,7 +74,7 @@ class TestMemoryPersistenceAcrossSessions:
             for i in range(10)
         ]
         for entry in entries:
-            await backend.store(entry)
+            await backend.put(entry.id, entry)
 
         # Verify all persist
         count = await backend.count()
@@ -93,11 +93,11 @@ class TestMemoryPersistenceAcrossSessions:
 
         # Store initial entry
         entry = memory_entry_factory(id="update-test", content="Original content")
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         # Update entry
         updated = memory_entry_factory(id="update-test", content="Updated content")
-        await backend.store(updated)
+        await backend.put(updated.id, updated)
 
         # Verify update persists
         retrieved = await backend.get("update-test")
@@ -119,7 +119,7 @@ class TestMemoryTierPersistence:
             content="Main context data",
             tier=MemoryTier.MAIN_CONTEXT
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("main-ctx-1")
         assert retrieved is not None
@@ -133,7 +133,7 @@ class TestMemoryTierPersistence:
             content="Core memory data",
             tier=MemoryTier.CORE_MEMORY
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("core-mem-1")
         assert retrieved is not None
@@ -147,7 +147,7 @@ class TestMemoryTierPersistence:
             content="Archival data",
             tier=MemoryTier.ARCHIVAL_MEMORY
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("archival-1")
         assert retrieved is not None
@@ -161,7 +161,7 @@ class TestMemoryTierPersistence:
             content="Recall data",
             tier=MemoryTier.RECALL_MEMORY
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("recall-1")
         assert retrieved is not None
@@ -178,7 +178,7 @@ class TestMemoryTierPersistence:
         ]
 
         for entry in entries:
-            await backend.store(entry)
+            await backend.put(entry.id, entry)
 
         # All should be retrievable
         for i, tier in enumerate([MemoryTier.MAIN_CONTEXT, MemoryTier.CORE_MEMORY,
@@ -198,7 +198,7 @@ class TestMemoryNamespaceIsolation:
         backend2 = InMemoryTierBackend()
 
         entry = MemoryEntry(id="isolated-1", content="Backend 1 data")
-        await backend1.store(entry)
+        await backend1.put(entry.id, entry)
 
         # Backend 2 should not have the entry
         retrieved = await backend2.get("isolated-1")
@@ -210,8 +210,10 @@ class TestMemoryNamespaceIsolation:
         backend1 = InMemoryTierBackend()
         backend2 = InMemoryTierBackend()
 
-        await backend1.store(MemoryEntry(id="shared-id", content="Content from 1"))
-        await backend2.store(MemoryEntry(id="shared-id", content="Content from 2"))
+        e1 = MemoryEntry(id="shared-id", content="Content from 1")
+        await backend1.put(e1.id, e1)
+        e2 = MemoryEntry(id="shared-id", content="Content from 2")
+        await backend2.put(e2.id, e2)
 
         retrieved1 = await backend1.get("shared-id")
         retrieved2 = await backend2.get("shared-id")
@@ -235,7 +237,7 @@ class TestMemoryMetadataPersistence:
             content="Content with metadata",
             metadata={"source": "test", "version": 1, "tags": ["important"]}
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("meta-1")
         assert retrieved.metadata["source"] == "test"
@@ -243,17 +245,17 @@ class TestMemoryMetadataPersistence:
         assert "important" in retrieved.metadata["tags"]
 
     @pytest.mark.asyncio
-    async def test_importance_persists(self, backend):
-        """Entry importance should persist."""
+    async def test_strength_persists(self, backend):
+        """Entry strength should persist."""
         entry = MemoryEntry(
             id="imp-1",
             content="Important content",
-            importance=0.95
+            strength=0.95
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("imp-1")
-        assert retrieved.importance == 0.95
+        assert retrieved.strength == 0.95
 
     @pytest.mark.asyncio
     async def test_priority_persists(self, backend):
@@ -263,7 +265,7 @@ class TestMemoryMetadataPersistence:
             content="High priority",
             priority=MemoryPriority.CRITICAL
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("prio-1")
         assert retrieved.priority == MemoryPriority.CRITICAL
@@ -276,10 +278,10 @@ class TestMemoryMetadataPersistence:
             content="Accessed content",
             access_count=42
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("access-1")
-        assert retrieved.access_count == 42
+        assert retrieved.access_count >= 42  # get() may increment access_count
 
     @pytest.mark.asyncio
     async def test_embedding_persists(self, backend):
@@ -290,7 +292,7 @@ class TestMemoryMetadataPersistence:
             content="Content with embedding",
             embedding=embedding
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("embed-1")
         assert retrieved.embedding == embedding
@@ -308,31 +310,31 @@ class TestMemoryListingAcrossSessions:
         """List should return all stored entries."""
         for i in range(5):
             entry = MemoryEntry(id=f"list-{i}", content=f"Content {i}")
-            await backend.store(entry)
+            await backend.put(entry.id, entry)
 
-        entries = await backend.list()
+        entries = await backend.list_all()
         assert len(entries) == 5
 
     @pytest.mark.asyncio
-    async def test_list_with_limit(self, backend):
-        """List with limit should respect limit."""
+    async def test_list_returns_all(self, backend):
+        """List_all should return all entries."""
         for i in range(10):
             entry = MemoryEntry(id=f"limit-{i}", content=f"Content {i}")
-            await backend.store(entry)
+            await backend.put(entry.id, entry)
 
-        entries = await backend.list(limit=5)
-        assert len(entries) == 5
+        entries = await backend.list_all()
+        assert len(entries) == 10
 
     @pytest.mark.asyncio
     async def test_list_after_delete(self, backend):
         """List should reflect deletions."""
         for i in range(5):
             entry = MemoryEntry(id=f"del-{i}", content=f"Content {i}")
-            await backend.store(entry)
+            await backend.put(entry.id, entry)
 
         await backend.delete("del-2")
 
-        entries = await backend.list()
+        entries = await backend.list_all()
         assert len(entries) == 4
         ids = [e.id for e in entries]
         assert "del-2" not in ids
@@ -350,9 +352,9 @@ class TestMemoryClearAndRecovery:
         """Clear should remove all entries."""
         for i in range(10):
             entry = MemoryEntry(id=f"clear-{i}", content=f"Content {i}")
-            await backend.store(entry)
+            await backend.put(entry.id, entry)
 
-        await backend.clear()
+        backend.clear()
 
         count = await backend.count()
         assert count == 0
@@ -360,9 +362,11 @@ class TestMemoryClearAndRecovery:
     @pytest.mark.asyncio
     async def test_can_store_after_clear(self, backend):
         """Should be able to store after clear."""
-        await backend.store(MemoryEntry(id="before", content="Before clear"))
-        await backend.clear()
-        await backend.store(MemoryEntry(id="after", content="After clear"))
+        e_before = MemoryEntry(id="before", content="Before clear")
+        await backend.put(e_before.id, e_before)
+        backend.clear()
+        e_after = MemoryEntry(id="after", content="After clear")
+        await backend.put(e_after.id, e_after)
 
         retrieved = await backend.get("after")
         assert retrieved is not None
@@ -385,24 +389,24 @@ class TestMemoryEntryTimestamps:
             content="Timestamped",
             created_at=now
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("ts-1")
         assert retrieved.created_at == now
 
     @pytest.mark.asyncio
-    async def test_updated_at_persists(self, backend):
-        """Updated timestamp should persist."""
+    async def test_last_accessed_persists(self, backend):
+        """Last accessed timestamp should persist."""
         now = datetime.now(timezone.utc)
         entry = MemoryEntry(
             id="ts-2",
             content="Timestamped",
-            updated_at=now
+            last_accessed=now
         )
-        await backend.store(entry)
+        await backend.put(entry.id, entry)
 
         retrieved = await backend.get("ts-2")
-        assert retrieved.updated_at == now
+        assert retrieved.last_accessed >= now  # get() may update last_accessed
 
 
 if __name__ == "__main__":
