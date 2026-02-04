@@ -58,7 +58,7 @@ import httpx
 
 # Adaptive timeout integration
 try:
-    from ..core.adaptive_timeout import (
+    from core.adaptive_timeout import (
         AdaptiveTimeout,
         get_adaptive_timeout_sync,
         TimeoutProfile,

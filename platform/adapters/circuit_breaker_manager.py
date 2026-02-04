@@ -25,7 +25,7 @@ import logging
 
 # Import CircuitBreaker from resilience module
 try:
-    from ..core.resilience import CircuitBreaker, CircuitState
+    from core.resilience import CircuitBreaker, CircuitState
 except ImportError:
     # Fallback for direct execution
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

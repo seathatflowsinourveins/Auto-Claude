@@ -522,7 +522,7 @@ async def http_request_with_retry(
 # Import circuit breaker if available
 try:
     from .circuit_breaker_manager import adapter_circuit_breaker, get_adapter_circuit_manager
-    from ..core.resilience import CircuitBreaker, CircuitOpenError
+    from core.resilience import CircuitBreaker, CircuitOpenError
     CIRCUIT_BREAKER_AVAILABLE = True
 except ImportError:
     CIRCUIT_BREAKER_AVAILABLE = False

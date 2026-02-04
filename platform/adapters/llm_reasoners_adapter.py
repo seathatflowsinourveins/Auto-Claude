@@ -577,7 +577,7 @@ class EnhancedReasoningEngine:
 
         if use_internal:
             try:
-                from ..core.unified_thinking_orchestrator import (
+                from core.unified_thinking_orchestrator import (
                     UnifiedThinkingOrchestrator,
                     ThinkingStrategy,
                 )

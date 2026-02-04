@@ -60,9 +60,9 @@ from typing import Any, Dict, List, Optional, AsyncGenerator, Union, Literal, Se
 
 # Structured logging
 try:
-    from ..core.logging_config import get_logger, generate_correlation_id
+    from core.logging_config import get_logger, generate_correlation_id
     _logger = get_logger("adapter.tavily")
-except ImportError:
+except (ImportError, ValueError):
     import logging
     _logger = logging.getLogger(__name__)
     generate_correlation_id = lambda: "corr-fallback"
@@ -95,7 +95,7 @@ except ImportError:
 # Circuit breaker imports
 try:
     from .circuit_breaker_manager import adapter_circuit_breaker, get_adapter_circuit_manager
-    from ..core.resilience import CircuitOpenError
+    from core.resilience import CircuitOpenError
     CIRCUIT_BREAKER_AVAILABLE = True
 except ImportError:
     CIRCUIT_BREAKER_AVAILABLE = False
@@ -109,11 +109,8 @@ except ImportError:
         return None
 
 try:
-    from ..core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
-except ImportError:
-    try:
-        from core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
-    except ImportError:
+    from core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+except (ImportError, ValueError):
         from enum import IntEnum
         from abc import ABC, abstractmethod
 

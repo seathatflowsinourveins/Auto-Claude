@@ -71,7 +71,7 @@ except ImportError:
 # Circuit breaker imports
 try:
     from .circuit_breaker_manager import adapter_circuit_breaker, get_adapter_circuit_manager
-    from ..core.resilience import CircuitOpenError
+    from core.resilience import CircuitOpenError
     CIRCUIT_BREAKER_AVAILABLE = True
 except ImportError:
     CIRCUIT_BREAKER_AVAILABLE = False
@@ -86,7 +86,7 @@ except ImportError:
 
 # SDK imports
 try:
-    from ..core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
+    from core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter
 except ImportError:
     try:
         from core.orchestration.base import SDKAdapter, AdapterResult, AdapterStatus, SDKLayer, register_adapter

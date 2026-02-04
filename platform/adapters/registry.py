@@ -635,7 +635,7 @@ class AdapterRegistry:
         """
         # Import rate limiter
         try:
-            from ..core.rate_limiter import get_rate_limiter, RateLimitExceeded
+            from core.rate_limiter import get_rate_limiter, RateLimitExceeded
         except ImportError:
             # Rate limiter not available, execute without rate limiting
             adapter_cls = self.get_adapter(adapter_name)

@@ -1199,7 +1199,7 @@ __all__.extend([
 # =============================================================================
 
 try:
-    from ..core.rate_limiter import (
+    from core.rate_limiter import (
         RateLimiter,
         RateLimitConfig,
         RateLimitStats,
@@ -1313,7 +1313,7 @@ __all__.extend([
 # =============================================================================
 
 try:
-    from ..core.deduplication import (
+    from core.deduplication import (
         DeduplicationConfig,
         DeduplicationStrategy,
         DeduplicationStats,
@@ -1415,7 +1415,7 @@ __all__.extend([
 # =============================================================================
 
 try:
-    from ..core.adaptive_timeout import (
+    from core.adaptive_timeout import (
         AdaptiveTimeout,
         TimeoutProfile,
         LatencyStats,
