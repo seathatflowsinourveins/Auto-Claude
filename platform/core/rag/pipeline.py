@@ -57,6 +57,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import os
 import time
 import hashlib
 from dataclasses import dataclass, field
@@ -961,7 +962,7 @@ class RAGPipeline:
     def init_graph_rag(
         self,
         graph_rag: Optional[Any] = None,
-        db_path: str = ":memory:",
+        db_path: str = os.path.join("data", "persistence_research", "pipeline_graph_rag.db"),
         embedder: Optional[Any] = None,
     ) -> None:
         """Initialize or configure GraphRAG for entity-relationship retrieval.
@@ -971,7 +972,7 @@ class RAGPipeline:
 
         Args:
             graph_rag: Optional pre-configured GraphRAG instance
-            db_path: Path to SQLite database for graph storage (default: in-memory)
+            db_path: Path to SQLite database for graph storage (default: data/persistence_research/pipeline_graph_rag.db)
             embedder: Optional embedding provider for entity embeddings
 
         Example:
@@ -1536,11 +1537,24 @@ class RAGPipeline:
                         contexts=contexts,
                         answer=response
                     )
-                    evaluation = {
-                        "faithfulness": getattr(eval_result, 'faithfulness', 0),
-                        "answer_relevancy": getattr(eval_result, 'answer_relevancy', 0),
-                        "passed": getattr(eval_result, 'passed', True)
-                    }
+                    # Handle both dict and object results from evaluators
+                    if isinstance(eval_result, dict):
+                        scores = eval_result.get("scores", {})
+                        evaluation = {
+                            "faithfulness": scores.get("faithfulness", 0),
+                            "answer_relevancy": scores.get("answer_relevancy", 0),
+                            "context_precision": scores.get("context_precision", 0),
+                            "passed": eval_result.get("passed", True),
+                            "framework": eval_result.get("framework", "unknown"),
+                        }
+                    else:
+                        evaluation = {
+                            "faithfulness": getattr(eval_result, 'faithfulness', 0),
+                            "answer_relevancy": getattr(eval_result, 'answer_relevancy', 0),
+                            "context_precision": getattr(eval_result, 'context_precision', 0),
+                            "passed": getattr(eval_result, 'passed', True),
+                            "framework": getattr(eval_result, 'framework', 'unknown'),
+                        }
                     stage_metrics.append(StageMetrics(
                         stage=PipelineStage.EVALUATE,
                         latency_ms=(time.time() - stage_start) * 1000,

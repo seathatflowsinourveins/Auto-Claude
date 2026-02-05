@@ -1,0 +1,171 @@
+# UNLEASH Platform Requirements
+# Comprehensive dependency list based on codebase analysis
+# Generated: 2026-02-04
+
+# ==============================================================================
+# Core Dependencies (synced with pyproject.toml 2026-02-04)
+# ==============================================================================
+
+# Async HTTP client - used extensively across adapters
+httpx>=0.28.0
+
+# Data validation and settings management
+pydantic>=2.12.0
+pydantic-settings>=2.1.0
+
+# Structured logging
+structlog>=25.5.0
+
+# Async HTTP
+aiohttp>=3.13.0
+
+# Graph and numerical computing
+networkx>=3.2.0
+scipy>=1.14.0
+
+# CLI and configuration
+click>=8.1.0
+pyyaml>=6.0
+rich>=13.0.0
+python-dotenv>=1.2.0
+
+# Anthropic SDKs (V65)
+anthropic>=0.77.0
+claude-agent-sdk>=0.1.29
+
+# ==============================================================================
+# RAG & Embeddings
+# ==============================================================================
+
+# Sentence embeddings for semantic search
+sentence-transformers>=2.5.0,<3.0.0
+
+# Token counting for context management
+tiktoken>=0.6.0,<1.0.0
+
+# Numerical computing for embeddings and similarity
+numpy>=2.0.0
+
+# HNSW vector index for efficient similarity search
+hnswlib>=0.8.0,<1.0.0
+
+# ==============================================================================
+# Memory & Storage
+# ==============================================================================
+
+# Note: sqlite3 is part of Python standard library (no pip install needed)
+# aiosqlite for async SQLite operations (optional)
+aiosqlite>=0.19.0,<1.0.0
+
+# ==============================================================================
+# Research & Search Adapters
+# ==============================================================================
+
+# Exa AI search (V65 - updated to match pyproject.toml)
+exa-py>=2.3.0
+
+# Tavily search API (V65 - updated to match pyproject.toml)
+tavily-python>=0.7.21
+
+# Firecrawl web scraping (V65 - updated to match pyproject.toml)
+firecrawl-py>=4.14.0
+
+# ==============================================================================
+# Data Processing
+# ==============================================================================
+
+# Data manipulation and analysis
+pandas>=2.1.0,<3.0.0
+
+# ==============================================================================
+# Production & Observability
+# ==============================================================================
+
+# OpenTelemetry for distributed tracing
+opentelemetry-api>=1.22.0,<2.0.0
+opentelemetry-sdk>=1.22.0,<2.0.0
+opentelemetry-exporter-otlp>=1.22.0,<2.0.0
+
+# Prometheus metrics
+prometheus-client>=0.19.0,<1.0.0
+
+# ==============================================================================
+# CLI & Terminal UI (moved to core deps above)
+# ==============================================================================
+
+# ==============================================================================
+# Testing
+# ==============================================================================
+
+# Test framework (V65 - updated to match pyproject.toml)
+pytest>=9.0.0
+
+# Async test support (V65 - updated to match pyproject.toml)
+pytest-asyncio>=1.3.0
+
+# Code coverage (V65 - updated to match pyproject.toml)
+pytest-cov>=7.0.0
+
+# Mock utilities (included with pytest)
+# Note: unittest.mock is part of Python standard library
+
+# ==============================================================================
+# Development & Optional Dependencies
+# ==============================================================================
+
+# System resource monitoring (optional, for benchmarks)
+psutil>=5.9.0,<6.0.0
+
+# ==============================================================================
+# RAG Evaluation (Gap11 - Required for RAG quality metrics)
+# ==============================================================================
+
+# Ragas for faithfulness, relevancy, precision, recall metrics
+ragas>=0.2.8
+
+# DeepEval for hallucination detection, CI/CD integration
+deepeval>=0.21.0
+
+# LangChain OpenAI/Anthropic for LLM-as-judge
+langchain-openai>=0.2.0
+langchain-anthropic>=0.2.0
+
+# ==============================================================================
+# Optional Adapter Dependencies (install as needed)
+# Versions synced with pyproject.toml 2026-02-04
+# ==============================================================================
+
+# DSPy for LLM programming (optional)
+# dspy-ai>=2.6.27
+
+# LangGraph for agent workflows (optional)
+# langgraph>=1.0.7
+
+# Voyage AI embeddings (optional)
+# voyageai>=0.3.0
+
+# OpenAI SDK (optional)
+# openai>=2.15.0
+
+# Cognee for knowledge graphs (optional)
+# cognee>=0.1.0
+
+# Graphiti for temporal knowledge (optional)
+# graphiti-core>=0.25.0
+
+# Letta (MemGPT) for agent memory (optional)
+# letta>=0.6.0
+
+# RAGatouille for ColBERT retrieval (optional)
+# ragatouille>=0.1.0
+
+# Mem0 AI memory (optional)
+# mem0ai>=1.0.0
+
+# Chonkie for document chunking (optional)
+# chonkie>=0.2.0
+
+# ==============================================================================
+# Python Version
+# ==============================================================================
+# Requires Python 3.11+
