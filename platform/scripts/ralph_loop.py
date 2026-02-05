@@ -353,9 +353,25 @@ class ModuleRunner:
             )
 
     async def run_consolidation(self) -> "PhaseResult":
-        """Run sleep-time memory consolidation."""
+        """Run sleep-time memory consolidation with optional Letta sync (V66).
+
+        Consolidation strategy (based on config/ralph_production.yaml):
+        1. Try Letta native sleeptime sync if configured (91% latency reduction)
+        2. Fall back to local consolidation via sleeptime_compute.py
+        3. Both paths use importance scoring (threshold: 0.3) for WORKING->LEARNED
+
+        Benefits of Letta native sleeptime:
+        - Async consolidation doesn't block user interactions
+        - 90% token savings through intelligent summarization
+        - Server-side memory management
+
+        Returns:
+            PhaseResult with consolidation status and metrics
+        """
         start = time.perf_counter()
         script = self.script_dir / "sleeptime_compute.py"
+        letta_sync_enabled = os.environ.get("LETTA_SLEEPTIME_ENABLED", "").lower() == "true"
+        letta_api_key = os.environ.get("LETTA_API_KEY", "")
 
         if not script.exists():
             return PhaseResult(
@@ -365,7 +381,37 @@ class ModuleRunner:
                 duration_ms=0,
             )
 
+        consolidation_details = {"method": "local", "letta_sync": False}
+
         try:
+            # V66: Try Letta native sleeptime sync if configured
+            if letta_sync_enabled and letta_api_key:
+                try:
+                    letta_result = subprocess.run(
+                        [sys.executable, str(script), "letta-sync", "--json"],
+                        capture_output=True,
+                        text=True,
+                        timeout=30,
+                        cwd=str(self.script_dir),
+                    )
+                    if letta_result.returncode == 0:
+                        consolidation_details["method"] = "letta_native"
+                        consolidation_details["letta_sync"] = True
+                        # Parse sync results if available
+                        try:
+                            sync_data = json.loads(letta_result.stdout.strip())
+                            consolidation_details["sync_count"] = sync_data.get("sync_count", 0)
+                            consolidation_details["local_consolidated"] = sync_data.get("local_consolidated", 0)
+                        except (json.JSONDecodeError, ValueError):
+                            pass
+                except subprocess.TimeoutExpired:
+                    # Letta sync timed out, fall back to local
+                    consolidation_details["letta_timeout"] = True
+                except OSError:
+                    # Letta sync failed, fall back to local
+                    pass
+
+            # Local consolidation (always runs, Letta sync is additive)
             result = subprocess.run(
                 [sys.executable, str(script), "consolidate", "--json"],
                 capture_output=True,
@@ -375,11 +421,25 @@ class ModuleRunner:
             )
             duration = (time.perf_counter() - start) * 1000
 
+            # Parse consolidation results
+            try:
+                lines = result.stdout.strip().split("\n")
+                for line in lines:
+                    if "Consolidated" in line:
+                        consolidation_details["message"] = line.strip()
+                        break
+            except (ValueError, IndexError):
+                pass
+
+            method_str = "Letta+local" if consolidation_details["letta_sync"] else "local"
+            message = f"Memory consolidation ({method_str}) {'completed' if result.returncode == 0 else 'skipped'}"
+
             return PhaseResult(
                 phase=IterationPhase.CONSOLIDATION,
                 status=IterationStatus.SUCCESS if result.returncode == 0 else IterationStatus.WARNING,
-                message=f"Memory consolidation {'completed' if result.returncode == 0 else 'skipped'}",
+                message=message,
                 duration_ms=duration,
+                details=consolidation_details,
             )
 
         except subprocess.TimeoutExpired:
@@ -389,6 +449,7 @@ class ModuleRunner:
                 status=IterationStatus.WARNING,
                 message="Consolidation timed out after 60s",
                 duration_ms=duration,
+                details=consolidation_details,
             )
         except OSError as e:
             duration = (time.perf_counter() - start) * 1000
@@ -397,6 +458,7 @@ class ModuleRunner:
                 status=IterationStatus.WARNING,
                 message=str(e),
                 duration_ms=duration,
+                details=consolidation_details,
             )
 
     async def run_session_update(self) -> "PhaseResult":

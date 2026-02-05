@@ -8,8 +8,9 @@ Gap05 addresses the fact that 158 of 160 research iteration scripts in `research
 
 | Status | Count | Description |
 |--------|-------|-------------|
-| Migrated | 15+ | Using base_executor.py |
-| Legacy | ~145 | Still using old patterns |
+| Migrated | 25 | Using base_executor.py (15.7%) |
+| Legacy | ~134 | Still using old patterns |
+| Complex | 1 | deep_research_iterations.py (context-aware SDK features, keep as-is) |
 | Infrastructure | 3 | base_executor.py, legacy_adapter.py, run_iteration.py |
 
 ## Why Migrate?
@@ -304,8 +305,9 @@ except Exception as e:
 ```
 base_executor logs exceptions properly.
 
-## Scripts Already Migrated
+## Scripts Already Migrated (25/159 = 15.7%)
 
+### Batch 1 (V65)
 - `llmops_iterations.py`
 - `advanced_rag_iterations.py`
 - `llm_agents_iterations.py`
@@ -321,6 +323,21 @@ base_executor logs exceptions properly.
 - `prompt_engineering_iterations.py`
 - `evaluation_benchmarking_iterations.py`
 - `agent_memory_iterations.py`
+
+### Batch 2 (V66)
+- `knowledge_graphs_iterations.py`
+- `reasoning_llm_iterations.py`
+- `model_routing_iterations.py`
+- `tool_use_iterations.py`
+- `long_context_iterations.py`
+- `reranking_iterations.py`
+- `rlhf_alignment_iterations.py`
+- `semantic_caching_iterations.py`
+- `code_generation_iterations.py`
+- `structured_output_iterations.py`
+
+### Complex (Not Migrated - Custom Features)
+- `deep_research_iterations.py` - Uses ResearchContext enum with SDK_FEATURES matrix for context-aware SDK selection
 
 ## Anti-Patterns to Avoid
 
@@ -362,6 +379,7 @@ class AdvancedExecutor(BaseResearchExecutor):
 
 ## Metrics
 
-Target: Migrate 50% of scripts (80/160) by V70
-Current: ~15 migrated (9%)
-Remaining: ~145 scripts
+Target: Migrate 50% of scripts (80/159) by V70
+Current: 25 migrated (15.7%)
+Remaining: ~134 scripts
+Complex/Custom: 1 (deep_research_iterations.py - uses context-aware SDK features)
