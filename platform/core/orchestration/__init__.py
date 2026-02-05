@@ -238,6 +238,42 @@ from .cache_warming import (
     set_cache_warmer,
 )
 
+# V65 Modular Decomposition - Domain Layer
+from .domain import (
+    CircuitState,
+    ExecutionPriority,
+    SDKConfig,
+    ExecutionContext,
+    ExecutionResult,
+    ExecutionStartedEvent,
+    ExecutionCompletedEvent,
+    ExecutionFailedEvent,
+    AdapterHealthChangedEvent,
+    ExecutionSession,
+    AdapterAggregate,
+)
+
+# V65 Modular Decomposition - Workers Layer
+from .workers import (
+    WorkerProtocol,
+    SDKAdapterBase,
+    AdapterFactory,
+)
+
+# V65 Modular Decomposition - Coordinator
+from .coordinator import (
+    Coordinator,
+    CoordinatorConfig,
+    get_coordinator,
+)
+
+# V65 Modular Decomposition - Message Bus
+from .message_bus import (
+    MessageBus,
+    MessageBusConfig,
+    get_message_bus,
+)
+
 # Agent Communication (V40 - Memory-based agent-to-agent messaging)
 from .agent_comm import (
     # Constants
@@ -488,4 +524,28 @@ __all__ = [
     "create_agent_comm_system",
     "LARGE_PAYLOAD_THRESHOLD",
     "DEFAULT_MESSAGE_TTL_SECONDS",
+    # V65 Modular Decomposition - Domain Layer
+    "CircuitState",
+    "ExecutionPriority",
+    "SDKConfig",
+    "ExecutionContext",
+    "ExecutionResult",
+    "ExecutionStartedEvent",
+    "ExecutionCompletedEvent",
+    "ExecutionFailedEvent",
+    "AdapterHealthChangedEvent",
+    "ExecutionSession",
+    "AdapterAggregate",
+    # V65 Modular Decomposition - Workers Layer
+    "WorkerProtocol",
+    "SDKAdapterBase",
+    "AdapterFactory",
+    # V65 Modular Decomposition - Coordinator
+    "Coordinator",
+    "CoordinatorConfig",
+    "get_coordinator",
+    # V65 Modular Decomposition - Message Bus
+    "MessageBus",
+    "MessageBusConfig",
+    "get_message_bus",
 ]
