@@ -1,0 +1,14 @@
+{
+  "id": "v65_claude_code_patterns",
+  "type": "learned",
+  "content": "Claude Code 2026 best practices: CLAUDE.md must be <150 lines (bloat causes ignored instructions). Use emphasis patterns (CRITICAL, ALWAYS, NEVER). 12 hook lifecycle events available (SessionStart, UserPromptSubmit, PreToolUse, PermissionRequest, PostToolUse, PostToolUseFailure, Notification, SubagentStart, SubagentStop, Stop, PreCompact, SessionEnd). PreToolUse hooks can modify tool inputs (v2.0.10+). MCP SSE transport DEPRECATED - use Streamable HTTP. Sequential-thinking MCP better than Extended Thinking for multi-path problems.",
+  "created_at": "2026-02-04T12:00:00Z",
+  "metadata": {
+    "topic": "claude_code_patterns",
+    "version": "v65",
+    "source": "code.claude.com/docs, affaan-m/everything-claude-code",
+    "confidence": 0.9
+  },
+  "embedding_hash": "claude_code_patterns_v65",
+  "updated_at": "2026-02-04T12:00:00Z"
+}

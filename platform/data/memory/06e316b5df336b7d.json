@@ -1,0 +1,18 @@
+{
+  "id": "06e316b5df336b7d",
+  "type": "learned",
+  "content": "V63 session: Production loop deadlock fixed, MCP health audit added, async hooks configured, Letta adapter upgraded with hybrid search (RRF + tags + temporal), Opik adapter fixed (duplicate get_status), 193 iterations (25+ consecutive SUCCESS), 76 memory blocks, 177/177 core tests passing. Research: Anthropic SDK v0.1.29 (3 new hooks, get_mcp_status), Letta v0.16.4 (Conversations API, shared memory), MCP v1.26.0 (MCP Apps), Opik v1.10.5 (37 metrics). Crash recovery from Bun segfault - all work recovered.\n---\nV64 session: MCP optimization (32->11 active servers, ~100k tokens recovered), health check 50%->87% (orchestrator fixes for hooks/Letta/MCP), 3 deep research agents completed (Anthropic SDK, Letta/Opik, Production/RAG), cross-session memory hooks enhanced, Ralph Loop #195 SUCCESS, 177/177 core tests, 84+ memory blocks. Key improvements: non-Python hook validation (.ps1/.sh), Letta API-key mode support, tavily+perplexity marked essential, settings.local.json updated.\nV65 iteration: Exhaustive audit (697 files, 347k lines) + critical fixes + research. Fixes applied: requirements.txt aligned, hardcoded path fixed, 13 datetime.utcnow() replaced, 3 demo scripts renamed. 177/177 core tests pass. Research completed: Anthropic SDK v0.77.1, Claude Code patterns, Letta v0.16.4, Claude Flow v3, Opik v1.10.5, Voyage-3-large embeddings. Architecture advancement: CLAUDE.md optimization planned (<150 lines), MCP transport migration needed (SSE->Streamable HTTP), DAG-based agent coordination recommended.",
+  "created_at": "2026-02-05T04:11:22.174636+00:00",
+  "updated_at": "2026-02-05T04:11:22.174636+00:00",
+  "metadata": {
+    "topic": "session_state",
+    "source_count": 3,
+    "source_ids": [
+      "session_v63_2026_02_04",
+      "session_v64_2026_02_04",
+      "session_v65_2026_02_04"
+    ],
+    "importance_score": 0.5048
+  },
+  "embedding_hash": "8c378b75187f5d03221e53c982273f37"
+}

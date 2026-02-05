@@ -1,0 +1,15 @@
+{
+  "id": "v65_anthropic_sdk_2026",
+  "type": "learned",
+  "content": "Anthropic SDK v0.77.1 (Feb 3 2026): BREAKING - output_format renamed to output_config for structured outputs. Enhanced streaming, Message Batches API for bulk processing, token counting for pre-flight context management. Cloud support: AWS Bedrock, Google Vertex AI. Claude Agent SDK: DAG-based task coordination, writer/reviewer pattern, filesystem-based cross-session state.",
+  "created_at": "2026-02-04T12:00:00Z",
+  "metadata": {
+    "topic": "sdk_research",
+    "version": "v65",
+    "source": "github.com/anthropics",
+    "confidence": 0.95,
+    "sdk_version": "0.77.1"
+  },
+  "embedding_hash": "anthropic_sdk_v65_feb2026",
+  "updated_at": "2026-02-04T12:00:00Z"
+}

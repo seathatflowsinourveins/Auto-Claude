@@ -1,0 +1,20 @@
+{
+  "id": "e01d9f37983cfcba",
+  "type": "learned",
+  "content": "Iteration #773 [success]: 4 success, 0 warnings, 0 failed. ",
+  "created_at": "2026-02-05T03:12:24.230856+00:00",
+  "updated_at": "2026-02-05T03:12:49.060029+00:00",
+  "metadata": {
+    "topic": "ralph_loop",
+    "iteration": 773,
+    "status": "success",
+    "summary": {
+      "success": 4,
+      "warnings": 0,
+      "failed": 0,
+      "phases_run": 4
+    },
+    "promoted_from": "working"
+  },
+  "embedding_hash": "ef3b74804ae5392c7d2fa3b79063d415"
+}

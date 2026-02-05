@@ -1,149 +1,201 @@
-# INDEX - Unleash Directory Quick Reference
+# UNLEASH Platform - Documentation Index
 
-> **Updated**: January 17, 2026 | **Latest**: V10.1 OPTIMIZED
+> **Updated**: 2026-02-04 | **Version**: V66
 
 ---
 
-## ⚡ RECOMMENDED: V10.1 OPTIMIZED
+## Quick Start
 
-**The verified, SDK-powered, production-ready architecture.**
+The UNLEASH platform lives in `/platform/`. Configuration is in `CLAUDE.md` at the project root. Modular rules auto-load from `.claude/rules/`.
 
-```powershell
-# Quick install
-cd "Z:\insider\AUTO CLAUDE\unleash\v10_optimized\scripts"
-.\setup_v10.ps1 -Mode standard
+```bash
+# Run tests (from outside project dir to avoid platform module shadowing)
+cd C:\Users\42 && uv run --no-project --with pytest,pytest-asyncio,structlog,httpx,pydantic,rich,aiohttp,numpy python -m pytest "Z:/insider/AUTO CLAUDE/unleash/platform/tests/" -q -k "not hnsw"
 
-# Deploy hooks to ~/.claude/v10 (NEW in V10.1)
-.\deploy_hooks.ps1 -Force -Verify
-
-# Run health check (NEW in V10.1)
-uv run health_check.py
+# Run Ralph Loop
+uv run --no-project --with structlog,httpx,pydantic,rich,aiohttp,python-dotenv,pyyaml python platform/scripts/ralph_loop.py
 ```
 
-| V10.1 Benefits | Details |
-|----------------|---------|
-| ✅ All MCP servers verified | 8/8 working (vs 15/40 in V9) |
-| ✅ Complete hook implementations | 8 production-ready scripts (V2 + original) |
-| ✅ Official Letta SDK | `letta_client` with `SleeptimeManagerUpdate` |
-| ✅ Input modification | PreToolUse MODIFY support (v2.0.10+) |
-| ✅ Health checking | Comprehensive `health_check.py --fix` |
-| ✅ Minimal configuration | 128 lines vs 355 in V9 |
+---
 
-**[→ V10.1 Documentation](v10_optimized/V10_ARCHITECTURE_V2.md)** (NEW)
-**[→ V10.0 Documentation](v10_optimized/V10_ARCHITECTURE.md)**
+## Directory Structure
+
+| Directory | Purpose |
+|-----------|---------|
+| `platform/core/` | Core modules (orchestration, RAG, memory) |
+| `platform/adapters/` | SDK adapters (42 hardened + 9 infrastructure) |
+| `platform/tests/` | Test suite |
+| `platform/scripts/` | Operational scripts (ralph_loop, ecosystem_orchestrator) |
+| `platform/data/` | Runtime data (memory blocks, sessions, insights, reports) |
+| `platform/api/` | API endpoints |
+| `docs/` | Active documentation |
+| `docs/essential/` | Core reference docs |
+| `docs/gap-resolution/` | Gap analysis and resolution guides |
+| `docs/archived/` | Historical docs (architecture, prompts, SDK research, versions, voyage-ai) |
+| `.claude/rules/` | Modular project rules (auto-loaded by Claude Code) |
+| `.claude/agents/` | Custom agent definitions (explorer, code-reviewer, researcher) |
+| `research/iterations/` | Research iteration scripts (155+ topics) |
+| `scripts/` | Utility scripts |
 
 ---
 
-## DIRECTORY STRUCTURE
+## Active Documentation
 
-### `/v10_optimized` - **RECOMMENDED** ⭐
-| Path | Purpose |
-|------|---------|
-| `README.md` | Quick start guide |
-| `V10_ARCHITECTURE_V2.md` | V10.1 architecture documentation (NEW) |
-| `V10_ARCHITECTURE.md` | V10.0 architecture documentation |
-| `MIGRATION_GUIDE.md` | V9 → V10 migration steps |
-| `config/settings.json` | Minimal verified configuration |
-| `config/CLAUDE.md` | Streamlined global instructions |
-| `hooks/hook_utils.py` | Shared utilities library (NEW) |
-| `hooks/letta_sync_v2.py` | SDK-based Letta sync (NEW) |
-| `hooks/mcp_guard_v2.py` | MODIFY support guard (NEW) |
-| `hooks/*.py` | Original hook implementations |
-| `scripts/setup_v10.ps1` | Installation script |
-| `scripts/verify_mcp.py` | Package verification tool |
-| `scripts/health_check.py` | System health verification (NEW) |
-| `scripts/deploy_hooks.ps1` | Hook deployment script (NEW) |
+### Architecture & Configuration
 
-### `/active` - V9 APEX (Previous)
-| Path | Purpose |
-|------|---------|
-| `implementations/model_router_rl.py` | RL model router |
-| `implementations/safety_fortress_v9.py` | 18-layer safety |
-| `config/settings.json` | Complex configuration |
+| File | Description |
+|------|-------------|
+| `CLAUDE.md` | Project instructions and configuration (V65) |
+| `docs/ULTIMATE_UNLEASHED_ARCHITECTURE.md` | Platform architecture overview |
+| `docs/CLAUDE_CODE_CLI_ARCHITECTURE_V2.md` | CLI architecture patterns |
+| `docs/CLAUDE_CODE_ADVANCED_PATTERNS_2026.md` | Advanced Claude Code patterns |
+| `docs/ADR-027-MCP-CONFIGURATION-OPTIMIZATION.md` | MCP server optimization (23 non-essential identified) |
+| `docs/ADR-028-MCP-FLOW-ARCHITECTURE-OPTIMIZATION.md` | MCP flow architecture |
 
-### `/docs/essential` - Documentation
-| File | Content |
-|------|---------|
+### Research (2026)
+
+| File | Description |
+|------|-------------|
+| `docs/RESEARCH_SUMMARY_2026.md` | 2026 ecosystem research (Claude Flow V3, Anthropic SDK, MCP, Letta, RAPTOR/CRAG) |
+| `docs/V66_RESEARCH_SUMMARY.md` | V66 feature research (Jina Reranker v3, RAPTOR, Batches API, Mem0 Graph) |
+| `docs/MULTI_AGENT_ORCHESTRATION_RESEARCH_2026.md` | Multi-agent patterns, RAG, MCP findings |
+| `docs/RESEARCH_STACK_2026.md` | Research tool stack details |
+| `docs/RAG_ARCHITECTURES_2026.md` | Battle-tested RAG patterns and benchmarks |
+| `docs/CLAUDE_FLOW_V3_RESEARCH.md` | Claude Flow V3 swarm patterns |
+| `docs/ANTHROPIC_AGENT_SDK_2026_DEEP_DIVE.md` | Anthropic Agent SDK analysis |
+| `docs/ANTHROPIC_ECOSYSTEM_2026_RESEARCH.md` | Anthropic ecosystem research |
+| `docs/RESEARCH_MISSION_2026_02_04.md` | Current research mission |
+| `docs/MEMORY_ARCHITECTURES_2026.md` | Memory system patterns |
+| `docs/ARCHITECTURE_IMPROVEMENTS_2026.md` | Architecture improvement plans |
+| `docs/ARCHITECTURE_GAP_ANALYSIS_2026.md` | Gap analysis |
+
+### SDK & Integration
+
+| File | Description |
+|------|-------------|
+| `docs/LATEST_SDK_ANALYSIS.md` | Current SDK version analysis |
+| `docs/DEFINITIVE_SDK_REFERENCE_2026.md` | SDK reference guide |
+| `docs/SDK_INTEGRATION_GUIDE.md` | Integration guide |
+| `docs/LETTA_INTEGRATION_GUIDE.md` | Letta memory integration |
+| `docs/AGENT_TO_AGENT_PATTERNS.md` | A2A communication patterns |
+| `docs/AGENTIC_WORKFLOW_PATTERNS.md` | Agentic workflow patterns |
+
+### Memory & RAG
+
+| File | Description |
+|------|-------------|
+| `docs/ADVANCED_MEMORY_PATTERNS.md` | Memory patterns guide |
+| `docs/CROSS_SESSION_MEMORY.md` | Cross-session memory |
+| `docs/GRAPHRAG_ANALYSIS.md` | GraphRAG analysis |
+| `docs/EMBEDDING_MODEL_COMPARISON.md` | Embedding model comparison |
+| `docs/CONTEXT7_COMPLETE_GUIDE.md` | Context7 usage guide |
+| `docs/CONTEXT7_BEST_PRACTICES.md` | Context7 best practices |
+
+### MCP & Tools
+
+| File | Description |
+|------|-------------|
+| `docs/MCP_TOOLS_MANIFEST.md` | MCP tools manifest |
+| `docs/MCP_FLOW_OPTIMIZATION_SUMMARY.md` | MCP optimization summary |
+
+### Testing & Validation
+
+| File | Description |
+|------|-------------|
+| `docs/TEST_PLAN_COMPREHENSIVE.md` | Comprehensive test plan |
+| `docs/API_VALIDATION_RESULTS.md` | API validation results |
+| `docs/INTEGRATION_TEST_RESULTS.md` | Integration test results |
+| `docs/MEMORY_BATTLE_TEST_RESULTS.md` | Memory battle test results |
+| `docs/CONTEXT7_MCP_TEST_RESULTS.md` | Context7 MCP test results |
+| `docs/IMPORT_VALIDATION_REPORT.md` | Import validation report |
+
+### Audits & Reports
+
+| File | Description |
+|------|-------------|
+| `docs/AUDIT_REPORT_V64_EXHAUSTIVE.md` | V64 exhaustive audit |
+| `docs/AUDIT_REPORT_V58.md` | V58 audit report |
+| `docs/MEMORY_SYSTEM_AUDIT_REPORT.md` | Memory system audit |
+| `docs/PERFORMANCE_BOTTLENECK_ANALYSIS.md` | Performance analysis |
+| `docs/ANTHROPIC_SDK_IMPROVEMENT_REPORT.md` | SDK improvement report |
+
+### Swarm & Agents
+
+| File | Description |
+|------|-------------|
+| `docs/SWARM_PATTERNS_CATALOG.md` | Swarm intelligence patterns |
+| `docs/AGENTS.md` | Agent definitions |
+| `docs/AGENT_SELECTION_GUIDE.md` | Agent selection guide |
+
+### Other
+
+| File | Description |
+|------|-------------|
+| `docs/GOALS_TRACKING.md` | Goals tracking |
+| `docs/INTEGRATION_ROADMAP.md` | Integration roadmap |
+| `docs/IMPLEMENTATION_ROADMAP_2026.md` | Implementation roadmap |
+| `docs/QUICK_START_GUIDE.md` | Quick start guide |
+| `docs/UNIFIED_CLAUDE_CONFIG.md` | Unified configuration |
+| `docs/INTEGRATION_STATUS.md` | Integration status |
+
+---
+
+## Gap Resolution Guides (`docs/gap-resolution/`)
+
+| File | Gap | Status |
+|------|-----|--------|
+| `00-INDEX.md` | Index of all gaps | -- |
+| `01-SILENT-API-FAILURES.md` | Gap01: Silent API failures | RESOLVED |
+| `02-FINDINGS-QUALITY.md` | Gap02: Findings quality | RESOLVED |
+| `03-VECTOR-PERSISTENCE.md` | Gap03: Vector persistence | RESOLVED |
+| `04-STATS-INFLATION.md` | Gap04: Stats inflation | RESOLVED |
+| `05-SCRIPT-DUPLICATION.md` | Gap05: Script duplication | PARTIAL |
+| `06-SYNTHESIS-PIPELINE.md` | Gap06: Synthesis pipeline | PARTIAL+ |
+| `07-DEDUPLICATION.md` | Gap07: Deduplication | RESOLVED |
+| `08-ERROR-HANDLING.md` | Gap08: Error handling | RESOLVED |
+| `09-ADAPTIVE-DISCOVERY.md` | Gap09: Adaptive discovery | PARTIAL+ |
+| `10-CROSS-TOPIC-SYNTHESIS.md` | Gap10: Cross-topic synthesis | PARTIAL+ |
+| `11-EVALUATION-INTEGRATION.md` | Gap11: Evaluation integration | PARTIAL+ |
+| `12-UNIFIED-ARCHITECTURE.md` | Gap12: Unified architecture | BLUEPRINT |
+| `13-FIRECRAWL-ADAPTER-GAPS.md` | Gap13: Firecrawl v2 | RESOLVED |
+
+Research supplements in `docs/gap-resolution/`:
+- `ANTHROPIC_AGENT_SDK_PATTERNS.md`, `ANTHROPIC_SDK_2026_DEEP_RESEARCH_PART1.md`
+- `BATTLE_TESTED_PATTERNS_2026.md`, `BATTLE_TESTED_PATTERNS_2026_PART1.md`
+- `CLAUDE_FLOW_V3_PATTERNS.md`, `CLAUDE_FLOW_V3_SWARM_PATTERNS_2026.md`
+- `CONTEXT7_JINA_GAP_ANALYSIS.md`, `LETTA_OPIK_MEMORY_RESEARCH_2026.md`
+- `OPIK_EVALUATION_PATTERNS.md`, `RESEARCH_2026_SUMMARY.md`, `RESEARCH_FINDINGS_2026_FEB_PART1.md`
+
+---
+
+## Essential Reference (`docs/essential/`)
+
+| File | Description |
+|------|-------------|
+| `UNLEASHED_PATTERNS.md` | Production patterns |
 | `ECOSYSTEM_STATUS.md` | System status dashboard |
 | `HONEST_AUDIT.md` | What works vs needs setup |
-| `UNLEASHED_PATTERNS.md` | Production patterns |
-| `V9_APEX_README.md` | V9 documentation |
-
-### `/docs/reference` - Research
-| File | Content |
-|------|---------|
-| `COMPASS_SYNTHESIS.md` | 8 compass artifacts synthesized |
-
-### `/archive` - Historical
-| File | Notes |
-|------|-------|
-| `LETTA_ULTRAMAX_V8_ULTIMATE.md` | Previous version (170KB) |
-| `compass_artifact_*.md` (8) | Original research |
 
 ---
 
-## QUICK DECISIONS
+## Archived Documentation (`docs/archived/`)
 
-| I want to... | Go to |
-|--------------|-------|
-| **Start fresh with working setup** | `v10_optimized/` ⭐ |
-| Deploy V9 (complex) | `active/implementations/` |
-| See what actually works | `docs/essential/HONEST_AUDIT.md` |
-| Research MCP/Skills | `docs/reference/COMPASS_SYNTHESIS.md` |
-| Migrate V9 → V10 | `v10_optimized/MIGRATION_GUIDE.md` |
-| Emergency shutdown | `New-Item ~/.claude/KILL_SWITCH` |
-
----
-
-## VERSION COMPARISON
-
-| Feature | V10.1 OPTIMIZED | V10.0 | V9 APEX |
-|---------|-----------------|-------|---------|
-| MCP Servers | 8 (all verified) | 8 (all verified) | 40+ (15 working) |
-| Hook Implementations | 8 (V2 + original) | 5 complete | ❌ Missing |
-| Letta SDK | Official `letta_client` | httpx raw | ⚠️ Theoretical |
-| Input Modification | ✅ v2.0.10+ | ❌ | ❌ |
-| Health Check | ✅ Comprehensive | Manual | None |
-| Configuration Lines | 128 | 128 | 355 |
-| Non-existent Packages | 0 | 0 | 8+ |
+Historical docs organized by category:
+- `architecture/` - Old architecture docs (2 files)
+- `prompts/` - Phase prompt files (16 files)
+- `sdk-research-old/` - Old SDK research (7 files)
+- `versions/` - Version-specific docs (4 files)
+- `voyage-ai/` - Voyage AI plan iterations (8 files)
+- `legacy/` - Pre-V40 audit and planning docs (30+ files)
 
 ---
 
-## EMERGENCY COMMANDS
+## Modular Rules (`.claude/rules/`)
 
-```powershell
-# KILL SWITCH (blocks ALL operations)
-New-Item -Path ~/.claude/KILL_SWITCH -ItemType File
-
-# RESUME
-Remove-Item ~/.claude/KILL_SWITCH
-```
-
----
-
-## SYSTEM STATS
-
-| Component | V10.1 | V10.0 | V9 |
-|-----------|-------|-------|-----|
-| MCP Working | 8/8 (100%) | 8/8 (100%) | 15/40 (37%) |
-| Hooks Working | 8/8 | 5/5 | 0/4 |
-| Skills | 32 | 32 | 32 |
-| Lines of Config | ~900 | ~900 | 1,500+ |
-| Letta SDK | Official | httpx | None |
-| Health Check | ✅ | Manual | None |
-
----
-
-## V10.1 NEW FILES
-
-| File | Purpose |
-|------|---------|
-| `hooks/hook_utils.py` | Shared utilities (HookInput, HookResponse, HookConfig) |
-| `hooks/letta_sync_v2.py` | Official Letta SDK with fallback |
-| `hooks/mcp_guard_v2.py` | PreToolUse MODIFY support (v2.0.10+) |
-| `scripts/health_check.py` | Comprehensive system verification |
-| `V10_ARCHITECTURE_V2.md` | Updated documentation |
-
----
-
-*Use V10.1 for production. Reference V10.0/V9/archive for historical context.*
+Auto-loaded by Claude Code based on file path context:
+- `memory-patterns.md` - Memory block format, Letta integration
+- `research-tools.md` - Research API priority and error handling
+- `platform-architecture.md` - Module layout, shadowing warnings
+- `testing.md` - Test commands, known issues
+- `adapters.md` - SDK adapter standards (path-scoped: `platform/adapters/`)
+- `research-iterations.md` - Research script standards (path-scoped: `research/iterations/`)

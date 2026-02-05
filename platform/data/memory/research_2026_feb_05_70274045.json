@@ -1,0 +1,34 @@
+{
+  "id": "e7f8a9b0c1d2e3f4",
+  "type": "learned",
+  "topic": "research_deep_dive_2026",
+  "content": "Completed comprehensive research on Claude Flow V3, Anthropic SDK v0.77.1, MCP protocol v1.26, Letta sleeptime compute, RAPTOR/CRAG RAG techniques, Jina Reranker v3, Voyage-3-large embeddings, and Mem0 graph memory for 2026 integration. Key findings: (1) Letta sleeptime offers 91% latency reduction and 90% token savings - HIGH PRIORITY for Ralph Loop. (2) Anthropic SDK v0.77.1 has BREAKING change output_format\u2192output_config but we don't use it (0 instances found). (3) Jina Reranker v3 achieves 61.94 nDCG@10 with 15x faster inference, 33-47% accuracy boost expected. (4) Claude Flow V3 provides 352x WASM speedup and HNSW 150-12,500x faster search but 171 MCP tools may cause context overhead (we use 11 optimized). (5) RAPTOR tree-organized retrieval shows +5.3% F-1 improvement. (6) MCP protocol SSE deprecated\u2192Streamable HTTP (our stdio transport unaffected). Implementation roadmap: V66 priorities include Letta sleeptime integration, Jina Reranker v3, late chunking, and Message Batches API adoption. V67 priorities include RAPTOR, CRAG, and Mem0 graph memory enhancement. Research stored at docs/RESEARCH_SUMMARY_2026.md with 15+ sources consulted across 51,000+ tokens analyzed.",
+  "metadata": {
+    "created_at": "2026-02-05T01:46:00Z",
+    "session_id": "research_session_v65",
+    "researcher": "unleash_research_specialist",
+    "sources_count": 15,
+    "tokens_analyzed": 51000,
+    "findings_count": 8,
+    "priority_implementations": 4,
+    "output_file": "docs/RESEARCH_SUMMARY_2026.md",
+    "tags": [
+      "research",
+      "claude_flow_v3",
+      "anthropic_sdk",
+      "mcp_protocol",
+      "letta",
+      "raptor",
+      "crag",
+      "jina",
+      "voyage",
+      "mem0",
+      "v66_roadmap"
+    ]
+  },
+  "embedding_hash": "a1b2c3d4e5f6g7h8",
+  "importance": 0.95,
+  "confidence": 0.98,
+  "updated_at": "2026-02-05T06:57:06.759894+00:00",
+  "created_at": "2026-02-05T06:57:06.759894+00:00"
+}

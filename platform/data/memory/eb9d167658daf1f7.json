@@ -1,0 +1,16 @@
+{
+  "id": "eb9d167658daf1f7",
+  "type": "learned",
+  "content": "Consolidated 1 iterations (iterations 822-822):\n  Successes: 1/1\n  Success rate: 100%",
+  "created_at": "2026-02-05T03:34:19.270476+00:00",
+  "updated_at": "2026-02-05T03:34:19.270476+00:00",
+  "metadata": {
+    "topic": "ralph_loop",
+    "source_count": 1,
+    "source_ids": [
+      "83b0c4e5a2efb282"
+    ],
+    "importance_score": 0.5101
+  },
+  "embedding_hash": "9cfb51d278657f33f71b54370d8bd205"
+}

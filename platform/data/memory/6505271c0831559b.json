@@ -1,0 +1,17 @@
+{
+  "id": "6505271c0831559b",
+  "type": "learned",
+  "content": "Full integration test: 5/6 systems OK. Research APIs (Exa, Tavily, Perplexity, Firecrawl) + Memory (503 blocks) + RAG pipeline all functional.\n---\nIntegration test: All research APIs (Exa, Tavily, Perplexity, Firecrawl) working. RAG pipeline functional. Memory system active.",
+  "created_at": "2026-02-05T06:57:14.198060+00:00",
+  "updated_at": "2026-02-05T06:57:14.198060+00:00",
+  "metadata": {
+    "topic": "integration_test",
+    "source_count": 2,
+    "source_ids": [
+      "integration_test_20260205_063843",
+      "test_integration_20260205_063433"
+    ],
+    "importance_score": 0.5099
+  },
+  "embedding_hash": "67733094ffb5eee1edb2381e55a8373a"
+}

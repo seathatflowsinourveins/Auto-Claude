@@ -1,0 +1,17 @@
+{
+  "id": "deep_research_20260205_064309",
+  "type": "learned",
+  "content": "Deep research completed: Claude Flow V3, Anthropic SDK, RAG patterns, Memory SDKs. 12 findings collected from Exa, Tavily, Perplexity.",
+  "created_at": "2026-02-05T06:43:09.163182+00:00",
+  "metadata": {
+    "topic": "deep_research",
+    "version": "v65",
+    "sources": [
+      "exa",
+      "tavily",
+      "perplexity"
+    ],
+    "finding_count": 12
+  },
+  "updated_at": "2026-02-05T06:43:09.163182+00:00"
+}

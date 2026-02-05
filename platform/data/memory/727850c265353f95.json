@@ -1,0 +1,31 @@
+{
+  "id": "verified_apis_20260205_064658",
+  "type": "learned",
+  "content": "REAL API verification: 3/4 APIs working. Exa=OK, Tavily=OK, Perplexity=ERR, Firecrawl=OK",
+  "created_at": "2026-02-05T06:46:58.356410+00:00",
+  "metadata": {
+    "topic": "api_verification",
+    "version": "v65",
+    "verified_with": "real_httpx_calls",
+    "results": {
+      "exa": {
+        "status": "OK",
+        "results": 3
+      },
+      "tavily": {
+        "status": "OK",
+        "results": 3
+      },
+      "perplexity": {
+        "status": "ERR",
+        "error": "Client error '400 Bad Request' for url 'https://api.perplexity.ai/chat/completions'\nFor more informa"
+      },
+      "firecrawl": {
+        "status": "OK",
+        "length": 310137
+      }
+    }
+  },
+  "embedding_hash": "727850c265353f95",
+  "updated_at": "2026-02-05T06:46:58.356410+00:00"
+}

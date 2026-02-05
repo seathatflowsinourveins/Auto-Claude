@@ -1,0 +1,291 @@
+# Ralph Loop Production Configuration
+# ====================================
+#
+# This file defines production-ready settings for the Ralph Loop
+# including monitoring, drift detection, and observability integration.
+#
+# Usage:
+#   from platform.core.ralph.production_monitoring import ProductionConfig, create_production_monitor
+#   monitor = create_production_monitor(**config)
+#
+# Environment Variables:
+#   OPIK_API_KEY - Opik API key
+#   LANGFUSE_PUBLIC_KEY - Langfuse public key
+#   LANGFUSE_SECRET_KEY - Langfuse secret key
+#   RALPH_OBSERVABILITY_PROVIDER - Override default provider
+
+# =============================================================================
+# Core Settings
+# =============================================================================
+
+enable_monitoring: true
+observability_provider: opik  # Options: opik, langfuse, phoenix, console
+
+# =============================================================================
+# Drift Detection (Chi-Squared / Statistical Tests)
+# =============================================================================
+
+drift_detection:
+  enabled: true
+  window_size: 100          # Samples per drift window
+  p_value_threshold: 0.05   # Significance level for drift detection
+  zscore_threshold: 3.0     # Z-score threshold for anomaly detection
+
+  # Tests to run
+  tests:
+    chi_squared: true       # Strategy distribution changes
+    ks_test: true           # Fitness distribution (Kolmogorov-Smirnov)
+    jensen_shannon: true    # Distribution divergence
+    zscore: true            # Individual value anomalies
+
+  # Alerting thresholds
+  alert_thresholds:
+    info: 0.10              # p-value for info level
+    warning: 0.05           # p-value for warning level
+    critical: 0.01          # p-value for critical level
+
+# =============================================================================
+# Health Checks
+# =============================================================================
+
+health_check:
+  interval_s: 30            # Seconds between automatic health checks
+  timeout_s: 10             # Health check timeout
+  failure_threshold: 3      # Consecutive failures before unhealthy
+
+  checks:
+    - name: observability_backend
+      enabled: true
+    - name: memory_store
+      enabled: true
+    - name: drift_detector
+      enabled: true
+
+# =============================================================================
+# Metrics Export
+# =============================================================================
+
+metrics:
+  export_interval_s: 60     # Seconds between metrics export
+  trace_sample_rate: 0.1    # Fraction of traces to sample (0.0-1.0)
+
+  # Prometheus settings
+  prometheus:
+    enabled: true
+    port: 9090
+    path: /metrics
+
+  # Custom metrics to track
+  custom_metrics:
+    - name: ralph_fitness_histogram
+      type: histogram
+      buckets: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    - name: ralph_latency_histogram
+      type: histogram
+      buckets: [10, 50, 100, 250, 500, 1000, 2500, 5000, 10000]
+    - name: ralph_strategy_counter
+      type: counter
+      labels: [strategy, outcome]
+
+# =============================================================================
+# Alerting
+# =============================================================================
+
+alerting:
+  enabled: true
+  webhook_url: null         # Optional: webhook URL for alerts
+
+  channels:
+    - type: console         # Always log to console
+      min_severity: warning
+
+    # Uncomment for Slack integration
+    # - type: slack
+    #   webhook_url: ${SLACK_WEBHOOK_URL}
+    #   min_severity: critical
+
+    # Uncomment for PagerDuty integration
+    # - type: pagerduty
+    #   api_key: ${PAGERDUTY_API_KEY}
+    #   min_severity: critical
+
+  # Alert rules
+  rules:
+    - name: fitness_drift
+      metric: fitness
+      condition: drift_detected
+      severity: warning
+      cooldown_minutes: 15
+
+    - name: strategy_imbalance
+      metric: strategy_distribution
+      condition: chi_squared_significant
+      severity: warning
+      cooldown_minutes: 30
+
+    - name: latency_spike
+      metric: latency_ms
+      condition: zscore_anomaly
+      severity: warning
+      cooldown_minutes: 5
+
+    - name: improvement_stall
+      metric: improvement_rate
+      condition: below_threshold
+      threshold: 0.01
+      window_iterations: 50
+      severity: critical
+      cooldown_minutes: 60
+
+# =============================================================================
+# Observability Provider Settings
+# =============================================================================
+
+# Opik (Comet-ML) - Recommended for production
+opik:
+  api_key: ${OPIK_API_KEY}
+  project_name: ralph-loop-production
+  workspace: default
+
+  features:
+    online_evaluation: true
+    guardrails: true
+    agent_optimizer: true
+
+# Langfuse - Open source alternative
+langfuse:
+  public_key: ${LANGFUSE_PUBLIC_KEY}
+  secret_key: ${LANGFUSE_SECRET_KEY}
+  host: https://cloud.langfuse.com
+
+  features:
+    prompt_management: true
+    usage_analytics: true
+
+# Phoenix (Arize) - For RAG-focused observability
+phoenix:
+  endpoint: http://localhost:6006
+
+  features:
+    agent_traces: true
+    rag_evaluation: true
+
+# =============================================================================
+# V4-V13 Feature Monitoring
+# =============================================================================
+
+feature_monitoring:
+  # V4: Reflexion Pattern
+  reflexion:
+    track_reflections: true
+    track_skill_reliability: true
+    alert_on_skill_degradation: true
+
+  # V5: Self-Consistency
+  consistency:
+    track_cove_pass_rate: true
+    track_rise_success_rate: true
+    min_agreement_threshold: 0.6
+
+  # V6: Meta-Iteration
+  meta_iteration:
+    track_strategy_effectiveness: true
+    track_convergence: true
+    alert_on_exploration_collapse: true
+
+  # V7: Curriculum Learning
+  curriculum:
+    track_difficulty_progression: true
+    track_competence_score: true
+    alert_on_difficulty_stagnation: true
+
+  # V8: MCTS
+  mcts:
+    track_tree_depth: true
+    track_simulation_count: true
+    track_self_play_diversity: true
+
+  # V9: ScPO/RLVR
+  rlvr:
+    track_success_rate: true
+    track_contrastive_pairs: true
+    alert_on_reward_regression: true
+
+  # V10: Constitutional AI
+  cai:
+    track_critique_effectiveness: true
+    track_prm_accuracy: true
+    alert_on_principle_violations: true
+
+  # V11: Speculative Decoding
+  speculative:
+    track_acceptance_rate: true
+    track_speedup_factor: true
+    track_reward_hacking_signals: true
+
+  # V12-V13: Advanced Features
+  advanced:
+    track_world_model_accuracy: true
+    track_emergent_communication: true
+    track_compositional_generalization: true
+
+# =============================================================================
+# Production Thresholds
+# =============================================================================
+
+thresholds:
+  # Minimum acceptable fitness
+  min_fitness: 0.3
+
+  # Maximum acceptable latency (ms)
+  max_latency_ms: 10000
+
+  # Minimum improvement rate per 100 iterations
+  min_improvement_rate: 0.01
+
+  # Maximum consecutive failures before circuit break
+  max_consecutive_failures: 5
+
+  # Memory limits
+  max_replay_buffer_size: 1000
+  max_reflection_history: 100
+  max_mcts_nodes: 10000
+
+# =============================================================================
+# Letta Sleeptime Compute (V65)
+# =============================================================================
+# Based on: https://www.letta.com/blog/sleep-time-compute
+# Benefits: 91% latency reduction, 90% token savings via async consolidation
+
+letta_sleeptime:
+  enabled: true                    # Enable sleeptime compute for memory consolidation
+  frequency: 5                     # Steps between sleeptime updates (default: 5)
+  agent_id: uap-sleeptime-agent    # Sleeptime agent identifier
+
+  # Integration with Ralph Loop consolidation phase
+  integration:
+    sync_on_consolidation: true    # Sync with Letta during phase 3
+    trigger_after_iteration: true  # Trigger sleeptime after each iteration
+    preserve_working_blocks: true  # Keep working blocks until promoted
+
+  # Consolidation settings
+  consolidation:
+    importance_threshold: 0.3      # Min importance score for WORKING->LEARNED promotion
+    max_blocks: 500                # Max memory blocks to retain
+    min_retention_score: 0.2       # Min score to retain during cleanup
+
+# =============================================================================
+# Logging
+# =============================================================================
+
+logging:
+  level: INFO
+  format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+
+  # Structured logging for production
+  structured: true
+  include_trace_id: true
+
+  # Log rotation
+  max_size_mb: 100
+  backup_count: 5

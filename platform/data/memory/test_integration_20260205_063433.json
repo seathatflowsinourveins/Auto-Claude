@@ -1,0 +1,26 @@
+{
+  "id": "test_integration_20260205_063433",
+  "type": "learned",
+  "content": "Integration test: All research APIs (Exa, Tavily, Perplexity, Firecrawl) working. RAG pipeline functional. Memory system active.",
+  "created_at": "2026-02-05T06:34:33.370513+00:00",
+  "updated_at": "2026-02-05T06:57:14.198060+00:00",
+  "metadata": {
+    "topic": "integration_test",
+    "version": "v65",
+    "apis_tested": [
+      "exa",
+      "tavily",
+      "perplexity",
+      "firecrawl"
+    ],
+    "rag_modules": [
+      "raptor",
+      "crag",
+      "entity_extractor",
+      "knowledge_graph",
+      "adaptive_rag"
+    ],
+    "promoted_from": "working"
+  },
+  "embedding_hash": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "integration_test_20260205_063843",
+  "type": "learned",
+  "content": "Full integration test: 5/6 systems OK. Research APIs (Exa, Tavily, Perplexity, Firecrawl) + Memory (503 blocks) + RAG pipeline all functional.",
+  "created_at": "2026-02-05T06:38:43.184870+00:00",
+  "updated_at": "2026-02-05T06:57:14.198060+00:00",
+  "metadata": {
+    "topic": "integration_test",
+    "results": {
+      "Exa": {
+        "status": "OK",
+        "count": 5
+      },
+      "Tavily": {
+        "status": "OK",
+        "count": 5
+      },
+      "Perplexity": {
+        "status": "OK",
+        "length": 874
+      },
+      "Firecrawl": {
+        "status": "OK",
+        "length": 310137
+      },
+      "Memory": {
+        "status": "OK",
+        "blocks": 503,
+        "insights": 21,
+        "iteration": 1000
+      },
+      "RAG": {
+        "status": "ERR",
+        "error": "networkx is required for KnowledgeGraph. Install w"
+      }
+    },
+    "promoted_from": "working"
+  },
+  "embedding_hash": null
+}

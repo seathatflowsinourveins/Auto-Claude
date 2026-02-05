@@ -1,0 +1,16 @@
+{
+  "id": "v65_letta_memory_2026",
+  "type": "learned",
+  "content": "Letta v0.16.4 (Jan 29 2026): Conversations API enables shared memory blocks across parallel agents. Sleeptime Compute: background consolidation reduces latency 91%, token costs 90%. Multi-agent patterns: async messaging, sync messaging, supervisor-worker. Claude Flow v3: 352x WASM speedup, 171 MCP tools, HNSW 150x-12500x faster search, 75-80% token reduction. Opik v1.10.5: 37+ RAG metrics, LLM-as-judge evaluation. Voyage-3-large: #1 embeddings across 8 domains, 32K context (4x Jina), binary quantization 200x storage savings.",
+  "created_at": "2026-02-04T12:00:00Z",
+  "metadata": {
+    "topic": "memory_research",
+    "version": "v65",
+    "source": "letta-ai/letta, comet-ml/opik, voyageai.com",
+    "confidence": 0.92,
+    "letta_version": "0.16.4",
+    "opik_version": "1.10.5"
+  },
+  "embedding_hash": "letta_memory_v65_feb2026",
+  "updated_at": "2026-02-04T12:00:00Z"
+}
