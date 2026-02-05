@@ -278,6 +278,91 @@ letta_sleeptime:
 # Logging
 # =============================================================================
 
+# =============================================================================
+# Adaptive Topology Switching (V66)
+# =============================================================================
+# Based on: platform/core/orchestration/topology_manager.py
+# Features: Dynamic reconfiguration, graceful migration, automatic fallback
+
+topology_manager:
+  enabled: true
+  default_topology: hierarchical  # Options: hierarchical, mesh, ring, star
+  evaluation_interval_seconds: 10.0
+  max_switch_history: 100
+
+  # Topology type configurations
+  topologies:
+    hierarchical:
+      expected_response_ms: 200
+      optimal_agent_count: [5, 50]
+      requires_coordinator: true
+      cost_multiplier: 1.2
+      description: "Queen-led coordination for complex tasks"
+
+    mesh:
+      expected_response_ms: 150
+      optimal_agent_count: [3, 20]
+      requires_coordinator: false
+      cost_multiplier: 1.0
+      description: "Peer-to-peer for resilience (no SPOF)"
+
+    ring:
+      expected_response_ms: 250
+      optimal_agent_count: [4, 12]
+      requires_coordinator: false
+      cost_multiplier: 0.8
+      description: "Sequential processing for ordered tasks"
+
+    star:
+      expected_response_ms: 180
+      optimal_agent_count: [2, 10]
+      requires_coordinator: true
+      cost_multiplier: 0.9
+      description: "Central coordinator for simple tasks"
+
+  # Adaptive switching thresholds
+  thresholds:
+    # Health-based switching
+    health_threshold_low: 0.70      # Switch to mesh if health < 70%
+    health_threshold_high: 0.90     # Switch to hierarchical if health > 90%
+
+    # Cost-based switching
+    cost_variance_threshold: 2.0    # Switch if >200% cost variation
+
+    # Load-based switching
+    load_threshold_high: 0.80       # High load -> mesh
+    load_threshold_low: 0.30        # Low load -> hierarchical
+
+    # Failure rate thresholds
+    failure_rate_critical: 0.20     # >20% failure -> mesh for resilience
+    failure_rate_acceptable: 0.05   # <5% failure -> can use hierarchical
+
+    # Agent count thresholds
+    min_agents_for_mesh: 3          # Minimum agents for mesh topology
+    max_agents_for_star: 10         # Maximum agents for star topology
+    optimal_agents_for_ring: 8      # Optimal agent count for ring
+
+    # Task complexity
+    complexity_threshold_simple: 0.3   # Simple tasks -> star
+    complexity_threshold_complex: 0.7  # Complex tasks -> hierarchical
+
+  # Migration settings
+  migration:
+    graceful_timeout_seconds: 30
+    rollback_on_failure: true
+    preserve_agent_state: true
+    fallback_topology: hierarchical
+
+  # Integration with existing swarm
+  swarm_integration:
+    sync_with_extreme_swarm: true
+    inherit_agent_registry: true
+    publish_switch_events: true
+
+# =============================================================================
+# Logging
+# =============================================================================
+
 logging:
   level: INFO
   format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
